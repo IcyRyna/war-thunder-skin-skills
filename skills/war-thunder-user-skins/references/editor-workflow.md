@@ -1,0 +1,24 @@
+# 二次元喷气机的 Photoshop 与 Composa 编辑
+
+使用当前可用的 Photoshop 接口；Composa 可通过 `scripts/composa_mcp.py` 调用 STDIO MCP。先发现实际工具和参数 schema，再组织调用。不要把界面功能当作已存在的 MCP 工具。
+
+Composa 可执行新画布、图像导入、图层变换、文字、形状、选区、调色、保存和渲染等操作，具体以当前 schema 为准。`transform_layer` 的 x/y 表示左上角，`place_image` 的 x/y 表示中心，使用前核对当前接口约定。显式传入需要的文档和图层定位字段。
+
+按设计职责建立底色、大形、人物、主字、辅助字、纹样、结构和配件层。文字使用文字层；复杂图形素材独立保存，栅格化部分保持明确。原图、通道数据和工作预览分别管理。
+
+选区与透明清除用于限制绘制范围；抠图后检查头发、白色衣物、饰物和细边。图层变换后观察人物比例与文字清晰度。曲面或 UV 接缝导致的剪切回到对应表面和素材处理，避免反复缩小主图掩盖问题。
+
+先保存工程，再导出绘制结果。正交投射所用透明覆盖图保持参考画布尺寸、位置和方向，隐藏参考底图及诊断层。直接 UV 编辑保持原 atlas 比例，并按需组装 alpha 或材质通道。
+
+Composa 的 `save_document` 保存 `.cmps`，`export_image` 可导出常用图片格式。DDS/TGA 与打包通道由文件工具衔接。任意 alpha 写入、分组、蒙版或矢量布尔等功能只有当前接口支持时才能使用。
+
+## MCP 客户端
+
+通过 `--exe` 指定可执行文件，或设置 `COMPOSA_EXE`。没有显式路径时，客户端从 PATH 与常见 Windows 安装目录查找。应用的 AI Control 开关按实际状态处理。
+
+```powershell
+python scripts/composa_mcp.py --out output/editor-tools
+python scripts/composa_mcp.py --calls calls.json --out output/editor-session
+```
+
+调用文件是包含 `name` 与 `arguments` 的 JSON 数组。客户端先检查整批工具名和必需字段，顺序执行，在首个错误停止；服务器负责完整 schema 校验。渲染图片写入输出目录。指定 `--launch` 时使用 Composa 自身的启动选项；普通发现操作不启用 AI Control 或修改助手配置。

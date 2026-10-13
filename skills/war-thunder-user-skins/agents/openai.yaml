@@ -1,0 +1,7 @@
+interface:
+
+  display_name: "战雷二次元喷气机痛涂"
+
+  short_description: "为战雷喷气式飞机制作二次元痛涂，完成整机设计、PS 分层编辑与贴图交付"
+
+  default_prompt: "使用 $war-thunder-user-skins 为我指定的战雷喷气式飞机制作二次元角色或动漫/游戏主题痛涂，完成整机设计、PS 分层编辑、模型检查与交付。"
