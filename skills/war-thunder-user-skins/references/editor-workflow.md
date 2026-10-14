@@ -20,6 +20,8 @@ Composa 的 `save_document` 保存 `.cmps`，`export_image` 可导出常用图�
 
 通过 `--exe` 指定可执行文件，或设置 `COMPOSA_EXE`。没有显式路径时，客户端从 PATH 与常见 Windows 安装目录查找。应用的 AI Control 开关按实际状态处理。
 
+工具列表为空时，先确认应用是否已经运行并完成初始化；按已有会话授权打开编辑器，确认就绪后重新发现工具。接口仍受 AI Control 限制时说明具体开关，并接续已获授权的其他制作路径；客户端不会代为启用该开关。
+
 ```powershell
 python scripts/composa_mcp.py --out output/editor-tools
 python scripts/composa_mcp.py --calls calls.json --out output/editor-session
