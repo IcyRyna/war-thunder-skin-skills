@@ -93,15 +93,13 @@ class FinishTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             finish.environment_settings('unknown')
 
-    def test_chrome_brdf_matches_frozen_source_lab_radiance_samples(self):
+    def test_studio_chrome_brdf_matches_frozen_source_lab_radiance_samples(self):
         # Captured independently from the retained source-matched laboratory
         # driver, before substituting this implementation. These are radiance,
-        # before exposure/tone mapping, with identical base/view/light fields.
+        # before exposure/tone mapping. Studio is unchanged; outdoor v2 has
+        # a deliberately different continuous horizon and is checked below.
         base, view = np.array([.12, .24, .4]), np.array([0., 0., 1.])
         samples = [
-            ('outdoor', .25, 0., [0., 0., 1.], [.08523770765796243, .16941801271794593, .3092501291468826]),
-            ('outdoor', .6, .65, [.2, .3, .9], [.0836408238888734, .18163963704344938, .3563328267785026]),
-            ('outdoor', .9, 1., [-.4, .2, .8], [.04500113400192957, .09790943280335024, .18522554439459632]),
             ('studio', .25, 0., [0., 0., 1.], [.029874324793156666, .05438805896897333, .08394025755240267]),
             ('studio', .6, .65, [.2, .3, .9], [.046190821192509134, .08267529004700645, .12125530561450842]),
             ('studio', .9, 1., [-.4, .2, .8], [.02383587142596471, .045147817753351804, .06831683767858097]),
@@ -111,6 +109,48 @@ class FinishTests(unittest.TestCase):
                 eid, lights, powers = finish.environment_settings(name)
                 actual = finish.ggx_ibl(base, np.asarray(normal), view, rough, metal, True, lights, powers, eid)
                 np.testing.assert_allclose(actual, expected, rtol=1e-10, atol=1e-12)
+
+    def test_outdoor_v2_keeps_far_fields_and_has_continuous_horizon_derivative(self):
+        def field(y):
+            return finish.environment_radiance(np.array([math.sqrt(1-y*y), y, 0.]), 0)
+        for y, expected in [(1., [.22, .42, .76]), (.5, [.47, .61, .835]),
+                            (-1., [.12, .105, .085]), (-.5, [.102, .08925, .07225])]:
+            np.testing.assert_allclose(field(y), expected, rtol=0, atol=1e-14)
+        epsilon = 1e-6
+        for y in [-finish.OUTDOOR_HORIZON_SINE, 0., finish.OUTDOOR_HORIZON_SINE]:
+            before, at, after = field(y-epsilon), field(y), field(y+epsilon)
+            np.testing.assert_allclose((at-before)/epsilon, (after-at)/epsilon, rtol=0, atol=.0005)
+            # The blue-channel slope near y=0 is about 5.23 radiance/y;
+            # bound the two-sided change by that finite slope, not zero.
+            self.assertLess(float(np.max(abs(after-before))), 12*epsilon)
+        values = np.array([field(y) for y in np.linspace(-1., 1., 501)])
+        self.assertTrue(np.isfinite(values).all())
+        self.assertTrue(np.all(values >= 0.))
+
+    def test_measured_neutral_AG_perturbation_no_longer_jumps_at_outdoor_horizon(self):
+        # Real fin measurements: identical clean packed RGBA=[72,128,0,128],
+        # with only the 8-bit neutral-normal perturbation. v1's horizon caused
+        # a .0314 blue-radiance step at the first point and not its neighbor.
+        pairs = [
+            ([-.00883931025135684, -.003761804433520531, -.9999538566462375],
+             [-.01276423258517631, .0001562784675138915, -.9999185216524156]),
+            ([-.010558097444202424, -.004465474493030929, -.9999342908991125],
+             [-.014482947161146061, -.0005473568553492321, -.9998949668050142]),
+        ]
+        base = np.array([.3, .4, .5])
+        view = np.array([0., .05989228934049606, -.9982048273086548])
+        eid, lights, powers = finish.environment_settings('outdoor')
+        responses = []
+        for before, after in pairs:
+            before, after = np.asarray(before), np.asarray(after)
+            values = np.array([finish.ggx_ibl(base, before*(1-t)+after*t, view,
+                                             1-72/255., 0., True, lights, powers, eid)
+                               for t in np.linspace(0., 1., 101)])
+            self.assertTrue(np.isfinite(values).all())
+            self.assertLess(float(np.max(abs(values[-1]-values[0]))), .001)
+            self.assertLess(float(np.max(abs(np.diff(values, axis=0)))), 1e-5)
+            responses.append(values[-1]-values[0])
+        np.testing.assert_allclose(responses[0], responses[1], rtol=0, atol=3e-6)
 
     def test_aligned_low_roughness_direct_peak_matches_analytic_ggx(self):
         base = np.array([.12, .24, .4])

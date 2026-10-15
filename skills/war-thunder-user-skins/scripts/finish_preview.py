@@ -26,6 +26,8 @@ import scene_preview as scene_api
 
 PROFILES = ('generic', 'dynamic_masked_chrome_public')
 ENVIRONMENTS = ('outdoor', 'studio')
+ENVIRONMENT_VERSIONS = {'outdoor': 'analytic-outdoor-c1-v2', 'studio': 'analytic-studio-v1'}
+OUTDOOR_HORIZON_SINE = .12  # +/-6.89 degrees; far sky/ground remain unchanged.
 SOURCE_COMMIT = 'd2b87eaf5302e3dc6be8df9a29aa32f303dbd734'
 SOURCE_ROOT = f'https://github.com/GaijinEntertainment/DagorEngine/blob/{SOURCE_COMMIT}/'
 SOURCE_REFERENCES = {
@@ -35,6 +37,7 @@ SOURCE_REFERENCES = {
 LIMITATIONS = [
     'Offline orthographic approximation, not the compiled War Thunder shader or a game validation.',
     '24 deterministic samples integrate analytic environments, not game cubemaps, EnvBRDFApprox or shadows.',
+    'Outdoor v2 smooths its synthetic horizon within +/-6.89 degrees; v1/v2 outdoor images are different light fields.',
     'Fixed exposure 1.0 and fitted ACES then sRGB; actual game exposure and reflections are unverified.',
     'No transparency, masking, extra detail normals, anisotropy, mip/LOD, damage or animation validation.',
     'Normal axes/sign/strength are taken from the scene; the profile does not establish their game correctness.',
@@ -45,11 +48,21 @@ LIMITATIONS = [
 @njit(cache=True)
 def environment_radiance(direction, environment_id):
     """Linear RGB radiance fields, in world coordinates."""
-    y = max(0., min(1., direction[1]))
     if environment_id == 0:
-        if direction[1] >= 0:
-            return np.array([.72, .80, .91])*(1-y) + np.array([.22, .42, .76])*y
-        return np.array([.12, .105, .085])*(.7+.3*abs(direction[1]))
+        y = max(-1., min(1., direction[1]))
+        sky = np.array([.72, .80, .91])*(1-y)+np.array([.22, .42, .76])*y
+        ground = np.array([.12, .105, .085])*(.7-.3*y)
+        if y >= OUTDOOR_HORIZON_SINE:
+            return sky
+        if y <= -OUTDOOR_HORIZON_SINE:
+            return ground
+        # Extend both original linear fields through the finite transition
+        # band. Unlike clamped abs(y) branches, this is C1 also at y=0.
+        # Smoothstep has zero derivative at both ends, matching the untouched
+        # distant fields without a 24-sample horizon threshold artefact.
+        t = (y+OUTDOOR_HORIZON_SINE)/(2*OUTDOOR_HORIZON_SINE)
+        weight = t*t*(3-2*t)
+        return ground*(1-weight)+sky*weight
     ceiling = max(0., direction[1])**10
     panel = max(0., .86*direction[0]+.36*direction[1]-.36*direction[2])**40
     rim = max(0., -.65*direction[0]+.4*direction[1]+.65*direction[2])**28
@@ -267,7 +280,7 @@ def render(scene_path: Path, output: Path, *, profile: str, environment: str = '
         raise ValueError('Renderer source changed after module import; restart the Python process')
     if not isinstance(normal, bool):
         raise ValueError('normal must be boolean')
-    scene = scene_api.load_scene(Path(scene_path))
+    scene = scene_api.load_scene(Path(scene_path), reuse_textures=True)
     flags = profile_flags(scene['raw'], profile)
     environment_id, lights, powers = environment_settings(environment)
     screen, camera, camera_inputs = scaled_camera(scene, view, camera_path, size)
@@ -328,7 +341,11 @@ def render(scene_path: Path, output: Path, *, profile: str, environment: str = '
                                     metal=('1-(1-B)^2' if flags[i] else 'B') if scene['has_packed'][i] else 'scene constant')
                                for i, record in enumerate(records)],
             lighting=dict(directions=lights.tolist(), irradiance=powers.tolist(),
-                          analytic_environment=environment, environment_version='analytic-fields-v1',
+                          analytic_environment=environment, environment_version=ENVIRONMENT_VERSIONS[environment],
+                          outdoor_horizon_transition=(dict(kind='C1 smoothstep of extended original linear fields',
+                                                           sine_half_width=OUTDOOR_HORIZON_SINE,
+                                                           degrees_half_width=math.degrees(math.asin(OUTDOOR_HORIZON_SINE)))
+                                                      if environment == 'outdoor' else None),
                           integration_samples=24, exposure=1.0,
                           tone_map='fixed fitted ACES then sRGB', coordinate_space='world'),
             numerical_safety=dict(roughness_floor=.04, direct_ggx_denominator_floor=1e-20,

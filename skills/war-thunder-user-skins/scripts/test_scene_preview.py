@@ -409,5 +409,119 @@ class SceneTests(unittest.TestCase):
             self.assertEqual(loaded['colors'][0].shape,(1,3,4))
             self.assertEqual(loaded['packed'][0].shape,(1,1,4))
 
+    def shared_texture_fixture(self, root):
+        path, raw, color, packed = self.fixture(root)
+        reference = dict(path=color.name, sha256=scene.file_hash(color))
+        for index, record in enumerate(raw['materials']):
+            record.pop('base_color', None)
+            record.update(color=dict(reference), packed=dict(reference), normal_texture=dict(reference),
+                          normal_convention=['ag_xy', 'ga_xy'][index],
+                          normal_y_sign=[1., -1.][index], normal_strength=[.4, 1.5][index])
+        # The same resolved path through a different valid relative spelling.
+        raw['materials'][1]['color']['path'] = './'+color.name
+        self.rewrite(path, raw)
+        return path, raw, color
+
+    def test_texture_reuse_is_opt_in_and_per_load_not_global(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+            with mock.patch.object(scene, 'read_texture', wraps=scene.read_texture) as decoder:
+                legacy = scene.load_scene(path)
+                self.assertEqual(decoder.call_count, 6)
+            arrays = legacy['colors']+legacy['packed']+legacy['normal_textures']
+            self.assertEqual(len({id(array) for array in arrays}), 6)
+            original = scene.file_hash(color)
+            with mock.patch.object(scene, 'read_texture', wraps=scene.read_texture) as decoder:
+                with mock.patch.object(scene, 'bound_file', wraps=scene.bound_file) as binding:
+                    reused = scene.load_scene(path, reuse_textures=True)
+                    self.assertEqual(decoder.call_count, 1)
+                    self.assertEqual(binding.call_count, 7)  # geometry plus all six explicit refs
+            arrays = reused['colors']+reused['packed']+reused['normal_textures']
+            self.assertEqual(len({id(array) for array in arrays}), 1)
+            with mock.patch.object(scene, 'read_texture', wraps=scene.read_texture) as decoder:
+                another = scene.load_scene(path, reuse_textures=True)
+                self.assertEqual(decoder.call_count, 1)
+            self.assertIsNot(another['colors'][0], reused['colors'][0])
+            self.assertEqual(scene.file_hash(color), original)
+            with self.assertRaises(ValueError): scene.load_scene(path, reuse_textures=1)
+
+    def test_shared_decode_keeps_each_material_and_normal_contract(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+            loaded = scene.load_scene(path, reuse_textures=True)
+            self.assertEqual(loaded['normal_codes'].tolist(), [3, 2])
+            np.testing.assert_allclose(loaded['normal_strengths'], [.4, 1.5])
+            self.assertEqual(loaded['normal_y_signs'].tolist(), [1., -1.])
+            self.assertEqual(loaded['geometry']['material_ids'].tolist(), [0, 1])
+            self.assertEqual([record['id'] for record in loaded['raw']['materials']], [0, 1])
+            self.assertEqual(loaded['inputs'].count(color.resolve()), 6)
+            self.assertEqual(loaded['input_hashes'][color.resolve()], scene.file_hash(color))
+            first = scene.decode_tangent_normal(loaded['normal_textures'][0][0,0]/255., 3, .4, 1.)
+            second = scene.decode_tangent_normal(loaded['normal_textures'][1][0,0]/255., 2, 1.5, -1.)
+            self.assertFalse(np.allclose(first, second))
+
+    def test_reused_reference_cannot_bypass_different_expected_hash(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+            before = scene.file_hash(color)
+            raw['materials'][1]['color']['sha256'] = '0'*64
+            self.rewrite(path, raw)
+            with mock.patch.object(scene, 'read_texture', wraps=scene.read_texture) as decoder:
+                with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                    scene.load_scene(path, reuse_textures=True)
+                self.assertEqual(decoder.call_count, 1)
+            self.assertEqual(scene.file_hash(color), before)
+
+    def test_reused_reference_revalidates_changed_file_after_first_decode(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+            original = scene.read_texture
+            def changed(texture_path, digest):
+                array = original(texture_path, digest)
+                Image.new('RGBA', (8,8), 'blue').save(color)
+                return array
+            with mock.patch.object(scene, 'read_texture', side_effect=changed):
+                with self.assertRaisesRegex(ValueError, 'hash mismatch'):
+                    scene.load_scene(path, reuse_textures=True)
+
+    def test_cache_hit_keeps_snapshot_check_after_reference_validation(self):
+        with tempfile.TemporaryDirectory() as temporary:
+            root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+            original = scene.bound_file
+            def changed(reference, directory, field):
+                result = original(reference, directory, field)
+                if field == 'materials[0].packed':
+                    Image.new('RGBA', (8,8), 'blue').save(color)
+                return result
+            with mock.patch.object(scene, 'bound_file', side_effect=changed):
+                with self.assertRaisesRegex(ValueError, 'texture changed before snapshot'):
+                    scene.load_scene(path, reuse_textures=True)
+
+    def test_one_path_cannot_bind_two_real_versions_in_either_mode(self):
+        for reuse in [False, True]:
+            with self.subTest(reuse_textures=reuse), tempfile.TemporaryDirectory() as temporary:
+                root = Path(temporary); path, raw, color = self.shared_texture_fixture(root)
+                replacement = root/'replacement.png'
+                Image.new('RGBA', (8,8), 'blue').save(replacement)
+                replacement_bytes = replacement.read_bytes()
+                replacement_hash = scene.file_hash(replacement)
+                for index, record in enumerate(raw['materials']):
+                    for field in ('color', 'packed', 'normal_texture'):
+                        if index != 0 or field != 'color':
+                            record[field]['sha256'] = replacement_hash
+                self.rewrite(path, raw)
+                original = scene.read_texture
+                def replace_after_first_snapshot(texture_path, digest):
+                    array = original(texture_path, digest)
+                    color.write_bytes(replacement_bytes)
+                    return array
+                with mock.patch.object(scene, 'read_texture', side_effect=replace_after_first_snapshot) as decoder:
+                    with self.assertRaisesRegex(ValueError, 'conflicting texture snapshots'):
+                        scene.load_scene(path, reuse_textures=reuse)
+                    self.assertEqual(decoder.call_count, 1)
+                self.assertEqual(color.read_bytes(), replacement_bytes)
+                self.assertFalse((root/'out.png').exists())
+                self.assertFalse((root/'out.json').exists())
+
 
 if __name__=='__main__':unittest.main()

@@ -106,7 +106,36 @@ def read_texture(path: Path, expected_sha256: str) -> np.ndarray:
         return np.array(image.convert('RGBA'), dtype=np.uint8, order='C', copy=True)
 
 
-def load_scene(path: Path) -> dict:
+def load_scene(path: Path, *, reuse_textures: bool = False) -> dict:
+    """Load bound resources; opt in to per-call shared read-only-use snapshots.
+
+    The default preserves independent arrays for explicit texture references.
+    Reuse avoids repeated image decoding/allocation, never per-reference source
+    validation. Callers opting in must not mutate the shared texture arrays.
+    """
+    if not isinstance(reuse_textures, bool):
+        raise ValueError('reuse_textures must be boolean')
+    texture_cache: dict[tuple[Path, str], np.ndarray] = {}
+    texture_versions: dict[Path, str] = {}
+
+    def texture_snapshot(texture_path: Path, expected_sha256: str) -> np.ndarray:
+        digest = expected_sha256.lower()
+        previous = texture_versions.setdefault(texture_path, digest)
+        if previous != digest:
+            # One source path cannot bind two snapshots in the same scene.
+            # Otherwise input_hashes would hide the earlier decoded version.
+            raise ValueError(f'conflicting texture snapshots for one resolved path: {texture_path}')
+        if not reuse_textures:
+            return read_texture(texture_path, expected_sha256)
+        key = (texture_path, digest)
+        if key not in texture_cache:
+            texture_cache[key] = read_texture(texture_path, expected_sha256)
+        elif file_hash(texture_path) != key[1]:
+            # bound_file already validated this reference. Keep the second
+            # snapshot check that read_texture performs after that validation.
+            raise ValueError(f'texture changed before snapshot: {texture_path}')
+        return texture_cache[key]
+
     path = path.expanduser().resolve(strict=True)
     scene_bytes = path.read_bytes()
     raw = json.loads(scene_bytes.decode('utf-8-sig'))
@@ -139,7 +168,7 @@ def load_scene(path: Path) -> dict:
             raise ValueError(f'material name mismatch at ID {index}')
         if 'color' in record:
             color_path = bound_file(record['color'], root, f'materials[{index}].color')
-            color = read_texture(color_path, record['color']['sha256'])
+            color = texture_snapshot(color_path, record['color']['sha256'])
             inputs.append(color_path)
             input_hashes[color_path] = record['color']['sha256'].lower()
         else:
@@ -149,7 +178,7 @@ def load_scene(path: Path) -> dict:
             color = np.rint(constant * 255).astype(np.uint8).reshape(1, 1, 4)
         if record.get('packed') is not None:
             packed_path = bound_file(record['packed'], root, f'materials[{index}].packed')
-            data = read_texture(packed_path, record['packed']['sha256'])
+            data = texture_snapshot(packed_path, record['packed']['sha256'])
             # All maps share normalized UVs; each sampler uses its own H/W.
             inputs.append(packed_path)
             input_hashes[packed_path] = record['packed']['sha256'].lower()
@@ -161,7 +190,7 @@ def load_scene(path: Path) -> dict:
             raise ValueError('normal_convention must be none, rg_xy, ga_xy or ag_xy')
         if record.get('normal_texture') is not None:
             normal_path = bound_file(record['normal_texture'], root, f'materials[{index}].normal_texture')
-            normal_data = read_texture(normal_path, record['normal_texture']['sha256'])
+            normal_data = texture_snapshot(normal_path, record['normal_texture']['sha256'])
             inputs.append(normal_path)
             input_hashes[normal_path] = record['normal_texture']['sha256'].lower()
         else:
