@@ -19,6 +19,8 @@ import struct
 import sys
 from typing import Any
 
+from artifact_io import ArtifactError, ArtifactTransaction
+
 MAX_BLK_BYTES = 2 * 1024 * 1024
 MAX_PREVIEW_PIXELS = 8192 * 8192
 TEXTURE_SUFFIXES = {".dds", ".tga"}
@@ -216,7 +218,6 @@ def ensure_external_output(source: Path, output: Path) -> Path:
     forbidden = source if source.is_dir() else source.parent
     if output == forbidden or forbidden in output.parents:
         raise ValueError("Output must be outside the source skin directory")
-    output.mkdir(parents=True, exist_ok=True)
     return output
 
 
@@ -403,7 +404,11 @@ def report_markdown(data: dict[str, Any]) -> str:
         kinds = Counter(m["kind"] for m in config["mappings"])
         targets = {m.get("target_file") for m in config["mappings"] if m.get("target_file")}
         lines.append(f"| {cell(config['file'])} | {kinds['replace_tex']} | {kinds['set_tex']} | {len(targets)} |")
-    lines.extend(["", "## Static inspection findings", "",
+    if "preview_attempted" in summary:
+        lines.extend(["", "## Requested preview validation", "",
+                      f"Attempted {summary['preview_attempted']} selected albedo preview(s); "
+                      f"{summary['preview_decode_errors']} failed. This does not decode every texture or mip."])
+    lines.extend(["", "## Static inspection and requested preview findings", "",
                   "These are package checks; they are not claims about in-game appearance.", "",
                   "| Level | Code | File:line | Finding |", "| --- | --- | --- | --- |"])
     for item in data["issues"]:
@@ -471,7 +476,20 @@ def open_rgba(path: Path):
     return image, meta
 
 
-def channel_preview(path: Path, output: Path, size: int) -> dict[str, Any]:
+def channel_preview_outputs(output: Path) -> list[Path]:
+    return [output / name for name in ("rgb.png", "r.png", "g.png", "b.png", "a.png",
+                                      "channels.png", "texture.json")]
+
+
+def channel_preview(path: Path, output: Path, size: int, *,
+                    transaction: ArtifactTransaction | None = None) -> dict[str, Any]:
+    if transaction is None:
+        with ArtifactTransaction(channel_preview_outputs(output), inputs=[path],
+                                 label="inspect-preview") as tx:
+            meta = channel_preview(path, output, size, transaction=tx)
+            tx.commit()
+            return meta
+    destination = lambda name: transaction.stage(output / name)
     Image, ImageDraw, _, ImageStat = pillow_modules()
     image, meta = open_rgba(path)
     meta["file"] = str(path.resolve())
@@ -481,7 +499,7 @@ def channel_preview(path: Path, output: Path, size: int) -> dict[str, Any]:
     # visible RGB of alpha-zero paint masks and packed material channels.
     rgb = image.convert("RGB")
     rgb.thumbnail((size, size), Image.Resampling.LANCZOS)
-    rgb.save(output / "rgb.png")
+    rgb.save(destination("rgb.png"))
     channels = image.split()
     font = load_font(18)
     tile_width = max(320, rgb.width)
@@ -496,7 +514,7 @@ def channel_preview(path: Path, output: Path, size: int) -> dict[str, Any]:
                                         "mean": round(stats.mean[0], 3),
                                         "stddev": round(stats.stddev[0], 3)}
         channel.thumbnail((size, size), Image.Resampling.LANCZOS)
-        channel.save(output / f"{label.lower()}.png")
+        channel.save(destination(f"{label.lower()}.png"))
         previews.append((label, channel.convert("RGB")))
         channel.close()
     image.close()
@@ -508,15 +526,16 @@ def channel_preview(path: Path, output: Path, size: int) -> dict[str, Any]:
     draw.text((tile_width * 2 + 10, tile_height + 10),
               f"{meta['width']} x {meta['height']}\n{meta['format']}\n{meta['mip_count']} mip level(s)",
               fill=(28, 30, 32), font=font, spacing=10)
-    sheet.save(output / "channels.png")
+    sheet.save(destination("channels.png"))
     sheet.close()
-    write_json(output / "texture.json", meta)
+    write_json(destination("texture.json"), meta)
     return meta
 
 
-def contact_sheet(root: Path, data: dict[str, Any], output: Path, limit: int) -> list[dict[str, Any]]:
-    Image, ImageDraw, _, _ = pillow_modules()
+def preview_textures(data: dict[str, Any], limit: int) -> list[str]:
     selected, used = [], set()
+    if limit <= 0:
+        return selected
     for config in data["configs"]:
         if config["package"] in used:
             continue
@@ -527,29 +546,56 @@ def contact_sheet(root: Path, data: dict[str, Any], output: Path, limit: int) ->
             used.add(config["package"])
         if len(selected) >= limit:
             break
+    return selected
+
+
+def contact_sheet_outputs(data: dict[str, Any], output: Path, limit: int) -> list[Path]:
+    return [output / "contact-sheet.png", output / "previews.json",
+            *[output / "previews" / f"{number + 1:03d}.png"
+              for number in range(len(preview_textures(data, limit)))]]
+
+
+def contact_sheet(root: Path, data: dict[str, Any], output: Path, limit: int, *,
+                  transaction: ArtifactTransaction | None = None) -> list[dict[str, Any]]:
+    if transaction is None:
+        with ArtifactTransaction(contact_sheet_outputs(data, output, limit), inputs=[root],
+                                 label="inspect-contact-sheet") as tx:
+            result = contact_sheet(root, data, output, limit, transaction=tx)
+            tx.commit()
+            return result
+    Image, ImageDraw, _, _ = pillow_modules()
+    selected = preview_textures(data, limit)
     columns, width, height = 4, 420, 370
     rows = max(1, (len(selected) + columns - 1) // columns)
     sheet = Image.new("RGB", (width * columns, height * rows), (242, 240, 236))
     draw, font = ImageDraw.Draw(sheet), load_font(14)
     index = []
-    preview_dir = output / "previews"
-    preview_dir.mkdir(exist_ok=True)
     for number, relative in enumerate(selected):
         x, y = number % columns * width, number // columns * height
+        filename = f"{number + 1:03d}.png"
+        preview_path = transaction.stage(output / "previews" / filename)
         try:
             rgba, meta = open_rgba(root / relative)
             preview = rgba.convert("RGB")
             rgba.close()
             preview.thumbnail((width - 20, height - 95), Image.Resampling.LANCZOS)
-            filename = f"{number + 1:03d}.png"
-            preview.save(preview_dir / filename)
+            preview.save(preview_path)
             sheet.paste(preview, (x + (width - preview.width) // 2, y + 5))
             preview.close()
             item = {"number": number + 1, "texture": relative,
                     "preview": f"previews/{filename}", "width": meta["width"], "height": meta["height"]}
             label = f"{number + 1:02d}  {relative}"
         except (OSError, ValueError, NotImplementedError) as exc:
-            item = {"number": number + 1, "texture": relative, "error": str(exc)}
+            # The declared output exists even for failures, and is unmistakably
+            # an error card rather than a successful image decode.
+            error_card = Image.new("RGB", (width - 20, height - 95), (255, 232, 232))
+            error_draw = ImageDraw.Draw(error_card)
+            error_draw.text((12, 12), "DECODE ERROR", fill=(140, 0, 0), font=font)
+            error_card.save(preview_path)
+            sheet.paste(error_card, (x + 10, y + 5))
+            error_card.close()
+            item = {"number": number + 1, "texture": relative, "error": str(exc),
+                    "preview": f"previews/{filename}", "placeholder": True}
             label = f"{number + 1:02d}  DECODE ERROR: {relative}"
         index.append(item)
         label_lines, current = [], ""
@@ -561,10 +607,23 @@ def contact_sheet(root: Path, data: dict[str, Any], output: Path, limit: int) ->
         label_lines.append(current)
         draw.multiline_text((x + 10, y + height - 88), "\n".join(label_lines[:4]),
                             fill=(28, 30, 32), font=font, spacing=3)
-    sheet.save(output / "contact-sheet.png")
+    sheet.save(transaction.stage(output / "contact-sheet.png"))
     sheet.close()
-    write_json(output / "previews.json", index)
+    write_json(transaction.stage(output / "previews.json"), index)
     return index
+
+
+def record_preview_findings(data: dict[str, Any], previews: list[dict[str, Any]]) -> None:
+    """Make an explicitly requested failed decode a normal strict-mode error."""
+    for item in previews:
+        if "error" in item:
+            data["issues"].append({"level": "error", "code": "preview_decode_failed",
+                                   "file": item["texture"], "message": item["error"]})
+    summary = data["summary"]
+    summary["preview_attempted"] = len(previews)
+    summary["preview_decode_errors"] = sum("error" in item for item in previews)
+    summary["issue_levels"] = dict(Counter(item["level"] for item in data["issues"]))
+    summary["issue_codes"] = dict(Counter(item["code"] for item in data["issues"]))
 
 
 def main() -> int:
@@ -588,12 +647,17 @@ def main() -> int:
                 raise ValueError("--previews must be between 0 and 200")
             output = ensure_external_output(args.root, args.out)
             data = inventory(args.root, args.hash)
-            write_json(output / "inventory.json", data)
-            (output / "report.md").write_text(report_markdown(data), encoding="utf-8")
+            outputs = [output / "inventory.json", output / "report.md"]
             if args.previews:
-                previews = contact_sheet(args.root.resolve(), data, output, args.previews)
-                data["summary"]["preview_decode_errors"] = sum("error" in p for p in previews)
-                write_json(output / "inventory.json", data)
+                outputs.extend(contact_sheet_outputs(data, output, args.previews))
+            with ArtifactTransaction(outputs, inputs=[args.root], label="inspect-scan") as tx:
+                if args.previews:
+                    previews = contact_sheet(args.root.resolve(), data, output, args.previews,
+                                             transaction=tx)
+                    record_preview_findings(data, previews)
+                write_json(tx.stage(output / "inventory.json"), data)
+                tx.stage(output / "report.md").write_text(report_markdown(data), encoding="utf-8")
+                tx.commit()
             print(json.dumps({"output": str(output), "summary": data["summary"]}, ensure_ascii=False, indent=2))
             return 2 if args.strict and data["summary"]["issue_levels"].get("error", 0) else 0
         if not 128 <= args.size <= 2048:
@@ -602,7 +666,7 @@ def main() -> int:
         meta = channel_preview(args.texture, output, args.size)
         print(json.dumps({"output": str(output), "texture": meta}, ensure_ascii=False, indent=2))
         return 0
-    except (OSError, ValueError, NotImplementedError, struct.error) as exc:
+    except (ArtifactError, OSError, ValueError, NotImplementedError, struct.error) as exc:
         print(f"Inspection failed: {exc}", file=sys.stderr)
         return 1
 

@@ -17,6 +17,7 @@ import numpy as np
 from PIL import Image, ImageDraw
 
 from inspect_skins import inventory, open_rgba, load_font, sha256, write_json
+from artifact_io import ArtifactError, ArtifactTransaction
 
 
 def primary_config(folder: Path):
@@ -36,9 +37,10 @@ def texture_mapping(config: dict, source: str, root: Path):
     return target, matches[0]
 
 
-def load_texture(path: Path, size: tuple[int, int]):
+def load_texture(path: Path, size: tuple[int, int], aspect_size: tuple[int, int] | None = None):
     image, meta = open_rgba(path)
-    if image.width * size[1] != image.height * size[0]:
+    aspect_width,aspect_height=aspect_size or size
+    if image.width * aspect_height != image.height * aspect_width:
         image.close()
         raise ValueError('Texture aspect ratio differs from the comparison baseline')
     channels, full_stats = [], {}
@@ -143,7 +145,24 @@ def run(args):
     for source in inputs:
         if output==source or source in output.parents:
             raise ValueError('Comparison output must be outside all source skin directories')
-    output.mkdir(parents=True,exist_ok=True)
+    labels=[source.name for source in inputs[1:]]
+    if len({name.casefold() for name in labels})!=len(labels):
+        raise ValueError('Input leaf folder names must be unique')
+    for path in (args.reference_albedo,args.reference_material,args.uv_mask):
+        if path is not None:
+            inputs.append(path.resolve())
+    outputs=[output/'comparison.json',output/'comparison.png',
+             *(output/(name+'_rgb.png') for name in labels)]
+    with ArtifactTransaction(outputs,inputs=inputs,label='skin-comparison') as transaction:
+        staged={path:transaction.stage(path) for path in outputs}
+        result=_run_staged(args,staged[output/'comparison.json'].parent)
+        transaction.commit()
+    _print_summary(args,result)
+    return result
+
+
+def _run_staged(args,output):
+    inputs=[args.template.resolve(),*[p.resolve() for p in args.skin]]
     template_data,template_config=primary_config(inputs[0])
     color_sources=[m['from'] for m in template_config['mappings'] if m.get('role')=='albedo']
     material_sources=[m['from'] for m in template_config['mappings'] if m.get('role')=='packed_material']
@@ -156,16 +175,19 @@ def run(args):
     original_n_path=args.reference_material or default_n
     base_image,base_meta=open_rgba(original_c_path)
     width,height=base_image.size
-    size=(min(args.size,width),min(args.size,height))
+    scale=min(1.0,args.size/max(width,height))
+    size=(max(1,round(width*scale)),max(1,round(height*scale)))
     base_image.close()
-    original_c,original_c_meta=load_texture(original_c_path,size)
-    original_n,original_n_meta=load_texture(original_n_path,size)
-    template_c,template_c_meta=load_texture(default_c,size)
-    template_n,template_n_meta=load_texture(default_n,size)
+    original_c,original_c_meta=load_texture(original_c_path,size,(width,height))
+    original_n,original_n_meta=load_texture(original_n_path,size,(width,height))
+    template_c,template_c_meta=load_texture(default_c,size,(width,height))
+    template_n,template_n_meta=load_texture(default_n,size,(width,height))
     if original_c_meta['flat_rgba'] and original_n_meta['flat_rgba'] and not (args.reference_albedo and args.reference_material):
         raise ValueError('Flat template is not a structural baseline; supply actual reference textures')
     if args.uv_mask:
         with Image.open(args.uv_mask) as bitmap:
+            if bitmap.width*height != bitmap.height*width:
+                raise ValueError('UV mask aspect ratio differs from the comparison baseline')
             mask=np.asarray(bitmap.convert('L').resize(size,Image.Resampling.NEAREST))>0
     else:
         mask=np.ones((size[1],size[0]),dtype=bool)
@@ -176,7 +198,7 @@ def run(args):
         data,config=primary_config(source)
         c_path,c_map=texture_mapping(config,color_source,source)
         n_path,n_map=texture_mapping(config,material_source,source)
-        c,c_meta=load_texture(c_path,size); n,n_meta=load_texture(n_path,size)
+        c,c_meta=load_texture(c_path,size,(width,height)); n,n_meta=load_texture(n_path,size,(width,height))
         label=source.name
         if label in arrays:
             raise ValueError('Input leaf folder names must be unique')
@@ -205,14 +227,19 @@ def run(args):
     result['cross_skin_pairs']=pairs
     write_json(output/'comparison.json',result)
     overview(output,template_c,original_c,original_n,rows,arrays,mask)
-    print(json.dumps({'output':str(output),'template_flat':template_c_meta['flat_rgba'] and template_n_meta['flat_rgba'],
+    return result
+
+
+def _print_summary(args,result):
+    template=result['template']
+    print(json.dumps({'output':str(args.out.resolve()),'template_flat':template['albedo']['flat_rgba'] and template['material']['flat_rgba'],
                       'measured_percent_of_atlas':result['measured_percent_of_atlas'],
                       'skins':[{'name':r['label'],'size':r['albedo']['width'],
                                 'G_MAE':r['material_difference']['G']['mae_0_255'],
                                 'A_MAE':r['material_difference']['A']['mae_0_255'],
                                 'normal_mean_deg':r['normal_difference']['mean_degrees'],
                                 'R_mean':r['material']['channels']['R']['mean'],
-                                'B_mean':r['material']['channels']['B']['mean']} for r in rows]},ensure_ascii=False,indent=2))
+                                'B_mean':r['material']['channels']['B']['mean']} for r in result['skins']]},ensure_ascii=False,indent=2))
 
 
 def main():
@@ -230,7 +257,7 @@ def main():
             raise ValueError('--size must be 128..2048')
         run(args)
         return 0
-    except (OSError,ValueError,KeyError) as exc:
+    except (OSError,ValueError,KeyError,ArtifactError) as exc:
         print(f'Comparison failed: {exc}',file=__import__('sys').stderr)
         return 1
 
