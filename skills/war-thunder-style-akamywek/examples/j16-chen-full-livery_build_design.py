@@ -1,9 +1,10 @@
-# Example: complete J-16 livery generator (Chen Qianyu, dark base / blue signature), version 9 of the
-# first piece made with this style.  Shows per-side charts in priority order (belly before body,
-# up-facing body chart limited to normal y >= 0.3), mirrored shapes, image/text layers, outer-fin
-# portrait panels with a frame layer, the inner-fin wedge, belly lines on flat zones only, and six
-# different character sources.  Asset paths point to that task; replace them, the node names and the
-# coordinates for a new livery.
+# Example: complete J-16 livery generator (Chen Qianyu, dark base / saturated blue signature), version 10
+# of the first piece made with this style, checked with surface_map.py for visibility.  Shows per-side
+# charts in priority order (belly before body, up-facing body chart limited to normal y >= 0.3),
+# mirrored shapes, image/text layers, outer-fin portrait panels with a frame layer, the inner-fin wedge
+# kept forward of the UV strip the left inner fin shares with the right outer fin, belly and side lines
+# only on visible flat zones, and six different character sources.  Asset paths point to that task;
+# replace them, the node names and the coordinates for a new livery.
 """J-16 Chen Qianyu, Akamywek dark-base branch with a saturated blue signature.
 
 Writes design.json for vector_paint.py.  Coordinates are metres on the
@@ -170,19 +171,15 @@ def build():
             keys.add(f'{ident}-{i}', 'body', 'polygon',
                      [[x, z], [x - length, z + drift * length], [x - length - lean * h, z + drift * length + h], [x - lean * h, z + h]], 'white')
             x -= length + gap
-    key_row('key-a', 3.4, 0.46, [1.55, 1.15, .8, .5, .3], .16, .26, .16, 1.1, .03)
+    # The first key piece (x 1.85-3.4) sat on hidden geometry under the airbrake since v3: dropped.
+    key_row('key-a', 1.69, 0.511, [1.15, .8, .5, .3], .185, .26, .16, 1.1, .03)
     key_row('key-b', 2.2, 0.95, [1.0, .7, .45], .10, .16, .14, 1.1, .05)
-    # Hollow echoes of the key wedge, outboard and forward.
-    for i, (x0, z0, s) in enumerate([(5.4, 0.30, .8), (6.3, 0.26, .62)]):
-        pts = [[x0, z0], [x0 - 1.4 * s, z0 + 0.30 * s], [x0 - 1.15 * s, z0 + 0.30 * s], [x0 + 0.25 * s, z0]]
-        lines.add(f'key-echo-{i}', 'body', 'stroke', pts + [pts[0]], 'white', width=.022)
+    # No hollow echoes: surface_map shows no visible flat pocket for them on the J-16 dorsal.
     # Companion pair along the parent's inner edge.
     for i, off in enumerate([0.14, 0.24]):
-        lines.add(f'companion-{i}', 'body', 'stroke', [[6.0, 0.90 - off], [3.0, 1.24 - off], [0.0, 1.70 - off], [-3.2, 1.86 - off]],
+        lines.add(f'companion-{i}', 'body', 'stroke', [[4.9, 1.025 - off], [3.0, 1.24 - off], [0.0, 1.70 - off], [-3.2, 1.86 - off]],
                   'sig_hi', width=.028, taper='end', taper_length=2.0)
-    # Halftone dissolve at the parent's aft end.
-    halftone.add('parent-dissolve', 'body', 'polygon', [[-3.0, 1.92], [-5.6, 1.94], [-6.6, 2.25], [-5.9, 2.62], [-3.0, 2.72]],
-                 dict(pattern='tri-halftone', color='sig', cell=.11, **{'from': [-3.2, 0], 'to': [-6.3, 0]}))
+    # (The dorsal halftone was on hidden geometry behind the wing root; fin and belly keep theirs.)
 
     # --- wings (top) --------------------------------------------------------
     le = [[2.9, 1.9], [-2.0, 7.5]]
@@ -224,8 +221,7 @@ def build():
              mosaic(cell=.22, jitter=.1, color='sig'))
     lines.add('belly-nacelle-companion', 'belly', 'stroke', [[1.8, 1.50], [-2.0, 1.52], [-6.0, 1.50]], 'sig_hi',
               width=.026, taper='both', taper_length=1.4)
-    branch.add('belly-sweep-dissolve', 'belly', 'polygon', [[-4.6, 1.75], [-7.6, 1.75], [-7.6, 2.4], [-4.6, 2.4]],
-               dict(pattern='tri-halftone', color='sig_hi', cell=.10, **{'from': [-4.8, 0], 'to': [-7.5, 0]}))
+    # (No belly halftone: both the sweep's aft end and its inner edge are hidden on the J-16.)
     # Key comb on the flat forward belly between the nose-gear bay (x 5-7.5) and the intake
     # grilles (x < 2.5): one forward-pointing wedge, mirrored into a V, cut by parallel gaps.
     tip_x, base_x, z_base = 4.95, 2.7, 0.92
@@ -242,8 +238,8 @@ def build():
               width=.026, taper='both', taper_length=1.4)
     # Small arrow trio at the tail cone, pointing aft.
     for i in range(3):
-        x0 = -6.9 - .32 * i
-        branch.add(f'belly-arrow-{i}', 'belly', 'polygon', [[x0, 0.06], [x0 - .32, 0.18], [x0, 0.30], [x0 - .12, 0.18]], 'sig_hi')
+        x0 = -5.2 - .32 * i  # visible flat strip z .22-.46; the tail cone aft of x -6 is mostly hidden
+        branch.add(f'belly-arrow-{i}', 'belly', 'polygon', [[x0, 0.22], [x0 - .32, 0.34], [x0, 0.46], [x0 - .12, 0.34]], 'sig_hi')
 
     # --- sides (right-handed coordinates, copied to the left) ---------------------
     sigf.add('side-crescent', 'side', 'polygon', [[12.9, -0.05], [10.0, 0.20], [7.0, 0.46], [4.2, 0.72], [1.4, 0.90],
@@ -254,8 +250,8 @@ def build():
         lines.add(f'side-companion-{i}', 'side', 'stroke', [[8.4, 0.17 - o], [7.2, 0.30 - o], [4.4, 0.58 - o], [1.6, 0.76 - o]],
                   'sig_hi', width=.026, taper='both', taper_length=1.2)
     for i in range(3):
-        x0 = -5.6 - .36 * i
-        branch.add(f'side-arrow-{i}', 'side', 'polygon', [[x0, -0.34], [x0 - .40, -0.20], [x0, -0.06], [x0 - .15, -0.20]], 'sig_hi')
+        x0 = -3.3 - .36 * i  # visible flat side above the stabiliser root (aft of x -5 is hidden)
+        branch.add(f'side-arrow-{i}', 'side', 'polygon', [[x0, 0.10], [x0 - .40, 0.24], [x0, 0.38], [x0 - .15, 0.24]], 'sig_hi')
 
     # --- fins ----------------------------------------------------------------------
     def fin_band(offset, width):
@@ -280,7 +276,9 @@ def build():
                                                                          'to': [-2.1 - 2.5 * .6 / 2.95 - 1.35, 1.5]}))
     lines.add('fin-in-lance', 'fin-in', 'stroke', [fin_pt(1.15, 1.75), fin_pt(3.35, 0.55)], 'white',
               width=.07, taper='both', taper_length=.8)
-    lines.add('fin-in-companion', 'fin-in', 'stroke', [fin_pt(1.25, 1.95), fin_pt(2.7, 1.15)], 'sig_hi',
+    # Kept forward of the rudder-hinge strip: on the J-16 the left inner fin shares that strip's
+    # texels with the right outer fin, whose portrait wins them (v9 lost this line on the left).
+    lines.add('fin-in-companion', 'fin-in', 'stroke', [fin_pt(1.3, 1.7), fin_pt(2.6, 0.95)], 'sig_hi',
               width=.03, taper='both', taper_length=.6)
     deep.add('fin-out-root-under', 'fin-out', 'polygon', [[-1.9, 0.80], [-5.7, 0.80], [-5.7, 1.4], [-1.9, 1.4]], 'deep')
     # Frame drawn above the portraits: signature leading-edge strip, dark cap and root band.
