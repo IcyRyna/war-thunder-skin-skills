@@ -18,11 +18,13 @@ import colorsys
 import hashlib
 import json
 import math
+import os
 from pathlib import Path
 import re
 import sys
 
-DEFAULT_FONT = 'C:/Windows/Fonts/bahnschrift.ttf'
+# Same default as vector_paint.py; WT_SKIN_FONT overrides it on both.
+DEFAULT_FONT = os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
 # Stock UI faces, script and novelty faces, and thin serif CJK faces that vanish at viewing distance.
 DISCOURAGED_FONTS = {
     'arial': 'stock UI face', 'arialbd': 'stock UI face', 'arialbi': 'stock UI face', 'ariali': 'stock UI face',
@@ -183,7 +185,10 @@ def check_text(design, palette, report):
         if CJK.search(text) and 'font' not in spec:
             report.add('error', 'cjk-without-font', where, 'CJK text on the default Latin font',
                        'Give an explicit CJK font (C:/Windows/Fonts/msyhbd.ttc, Dengb.ttf, simhei.ttf, YuGothB.ttc).')
-        if ImageFont is not None and Path(font_path).is_file():
+        if not Path(font_path).is_file():
+            report.add('error', 'font-not-found', where, f'{font_path} does not exist, so vector_paint.py cannot render this text',
+                       'Point font at an installed .ttf/.ttc (or set WT_SKIN_FONT for the default) and rerun.')
+        elif ImageFont is not None:
             key = (font_path, spec.get('variation'))
             if key not in fonts:
                 fonts[key] = ImageFont.truetype(font_path, 48)

@@ -21,7 +21,7 @@ import numpy as np
 import os
 import tempfile
 # Keep Numba's on-disk cache out of the Skill folder (and any installed copy).
-os.environ.setdefault('NUMBA_CACHE_DIR', os.path.join(tempfile.gettempdir(), 'war-thunder-user-skins-numba'))
+os.environ.setdefault('NUMBA_CACHE_DIR', os.path.join(tempfile.gettempdir(), 'war-thunder-skins-numba'))
 from numba import njit
 from PIL import Image
 
@@ -527,7 +527,7 @@ def render_text(spec, palette, px_per_m):
     height = float(spec.get('height', 0))
     if not 0 < height <= 10:
         raise ValueError('text height must be 0-10 m (cap height)')
-    font_path = spec.get('font', 'C:/Windows/Fonts/bahnschrift.ttf')
+    font_path = spec.get('font', os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf'))
     if not Path(font_path).is_file():
         raise ValueError(f'Font file not found: {font_path}')
     cap = max(24, min(800, int(round(height * px_per_m * 2))))
