@@ -121,6 +121,33 @@ class VectorPaintTests(unittest.TestCase):
             self.run_design([dict(name='x', items=[dict(type='polygon', chart='top', points=[[0, 0], [1, 0], [1, 1]],
                                                          fill=dict(pattern='tri-halftone', color='accent', cell=.1))])], name='bad2')
 
+    def test_image_and_text_layers_place_mirror_fade_and_report(self):
+        art = np.zeros((40, 80, 4), np.uint8)
+        art[:, :40] = (255, 0, 0, 255)      # left half red
+        art[:, 40:] = (0, 0, 255, 255)      # right half blue
+        Image.fromarray(art, 'RGBA').save(self.root / 'art.png')
+        layers = [dict(name='art', images=[
+                      dict(id='panel', chart='top', source='art.png', width=1.6, center=[0, 0]),
+                      dict(id='lost', chart='top', source='art.png', width=.2, center=[9, 9])]),
+                  dict(name='type', images=[dict(id='word', chart='top', text='HI', height=.3, center=[0, .6], color='#ffffff')])]
+        receipt, (image, text) = self.run_design(layers)
+        # u=x runs along atlas columns, v=z along rows (bottom = -1).
+        self.assertGreater(int(image[32, 20, 0]), 200)    # x<0 -> image left -> red
+        self.assertGreater(int(image[32, 44, 2]), 200)    # x>0 -> blue
+        self.assertEqual(int(image[32, 2, 3]), 0)         # outside the 1.6 m panel
+        self.assertGreater(int(text[:, :, 3].sum()), 0)
+        self.assertEqual(receipt['zero_hit_items'], ['lost'])
+        self.assertTrue(any(r['id'] == 'panel' and r['sample_hits'] > 0 for r in receipt['images']))
+        flipped, (image2, _) = self.run_design([dict(name='art', images=[dict(id='p', chart='top', source='art.png', width=1.6, center=[0, 0], flip=True)]),
+                                                dict(name='type', images=[dict(chart='top', text='X', height=.2, center=[0, 0])])], name='flip')
+        self.assertGreater(int(image2[32, 20, 2]), 200)   # mirrored: blue on the left
+        faded, (image3, _) = self.run_design([dict(name='art', images=[dict(chart='top', source='art.png', width=1.6, center=[0, 0],
+                                                                            fade={'from': [-.8, 0], 'to': [.8, 0]})]),
+                                              dict(name='type', images=[dict(chart='top', text='X', height=.2, center=[0, 0])])], name='fade')
+        self.assertGreater(int(image3[32, 12, 3]), int(image3[32, 50, 3]) + 100)
+        with self.assertRaises(ValueError):
+            self.run_design([dict(name='bad', images=[dict(chart='top', source='art.png', text='X', width=1, center=[0, 0])])], name='bad3')
+
 
 if __name__ == '__main__':
     unittest.main()

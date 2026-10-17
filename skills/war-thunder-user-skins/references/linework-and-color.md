@@ -53,6 +53,7 @@ python scripts/vector_paint.py --geometry output/scene/geometry.npz --design des
 - `palette`：颜色名 → `#rrggbb`。
 - `charts`：每个图表定义两根轴（`x`、`y`、`z`，可加 `-` 或 `abs_` 前缀；`abs_z` 让左右自动镜像），以及 `nodes`、`materials`（fnmatch）、`normal`（如 `{"axis":"y","min":0.2}`）、`where`（三角形中心的坐标范围）、`facing` 等筛选。三角形归第一个匹配的图表。
 - `layers`：每层是一组 `polygon` 或 `stroke`。`stroke` 有 `width`、`taper`（`none/start/end/both`）、`taper_length`。
+- 图层也可以是 `images`：每项给 `chart`、`center`（米）、`rotation`、`flip`，以及 `source`（图片，配 `width` 米和可选 `crop`）或 `text`（配 `height` 米字高、`font`、`variation`、`tracking`、`color`）；`opacity`、`fade`（`from` 处不透明、`to` 处消失）、`clip`（多边形）可选。人物和文字因此也能按机体米制直接落到原 UV，与线条同层级管理。镜像的一侧要按图表方向设置 `flip` 才能保持字和人物不反；先用一张带方向标记的试写确认。
 - `fill`：颜色名、`{"gradient":{"from","to","colors"}}`，或 `{"pattern":"tri-mosaic"|"tri-halftone"|"dot-halftone", "cell":米, ...}`。半调需要 `from`、`to`：标记在 `from` 处满尺寸，到 `to` 处消失。
 
 注意：
