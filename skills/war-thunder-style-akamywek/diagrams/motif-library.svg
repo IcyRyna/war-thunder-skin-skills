@@ -1,0 +1,104 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 560" font-family="Microsoft YaHei, Arial, sans-serif">
+  <title>自绘示意：Akamywek 风格图形库</title>
+  <defs>
+    <pattern id="tri" width="24" height="20.8" patternUnits="userSpaceOnUse">
+      <rect width="24" height="20.8" fill="#a52e39"/>
+      <polygon points="0,20.8 12,0 24,20.8" fill="#b23440"/>
+      <polygon points="12,0 24,0 18,10.4" fill="#982a34"/>
+    </pattern>
+    <linearGradient id="needle" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#9fc9ea"/><stop offset="1" stop-color="#b8b2e6"/></linearGradient>
+  </defs>
+  <rect width="960" height="560" fill="#f2f2f2"/>
+  <g fill="#333334">
+    <rect x="16" y="16" width="224" height="236"/><rect x="252" y="16" width="224" height="236"/>
+    <rect x="488" y="16" width="224" height="236"/><rect x="724" y="16" width="220" height="236"/>
+    <rect x="16" y="292" width="224" height="236"/><rect x="252" y="292" width="224" height="236"/>
+    <rect x="488" y="292" width="224" height="236"/><rect x="724" y="292" width="220" height="236"/>
+  </g>
+  <!-- 1 nested V: apex aft (right), signature wedge from nose (left) -->
+  <clipPath id="c1"><rect x="16" y="16" width="224" height="236"/></clipPath>
+  <g clip-path="url(#c1)">
+    <polygon points="16,60 120,134 16,208" fill="url(#tri)"/>
+    <g fill="#f0f0ee">
+      <polygon points="230,134 60,30 88,30 214,134 88,238 60,238"/>
+      <polygon points="200,134 96,58 120,58 186,134 120,210 96,210"/>
+      <polygon points="172,134 128,86 146,86 160,134 146,182 128,182"/>
+    </g>
+    <g fill="none" stroke="#f0f0ee" stroke-width="2">
+      <polygon points="40,22 70,22 52,30 22,30"/><polygon points="40,246 70,246 52,238 22,238"/>
+    </g>
+  </g>
+  <!-- 2 key sequence along one line, lengths decreasing -->
+  <clipPath id="c2"><rect x="252" y="16" width="224" height="236"/></clipPath>
+  <g clip-path="url(#c2)" fill="#f0f0ee">
+    <polygon points="264,150 318,150 318,128 264,141"/>
+    <polygon points="326,150 376,150 376,114 326,126"/>
+    <polygon points="384,150 418,150 418,104 384,112"/>
+    <polygon points="426,150 446,150 446,99 426,102"/>
+    <polygon points="454,150 466,150 466,96 454,97"/>
+    <path d="M262,176 Q370,170 470,120 L470,128 Q372,182 262,182 Z" fill="#a52e39"/>
+    <g fill="#a52e39"><polygon points="300,206 310,206 305,198"/><polygon points="318,206 326,206 322,200"/><polygon points="334,206 340,206 337,201"/><polygon points="348,206 352,206 350,203"/><polygon points="308,220 316,220 312,214"/><polygon points="324,220 330,220 327,215"/></g>
+  </g>
+  <!-- 3 radiating needles -->
+  <clipPath id="c3"><rect x="488" y="16" width="224" height="236"/></clipPath>
+  <g clip-path="url(#c3)">
+    <polygon points="700,134 500,40 500,58" fill="#f0f0ee"/><polygon points="700,134 500,76 500,100" fill="url(#needle)"/>
+    <polygon points="700,134 500,124 500,144" fill="#f0f0ee"/><polygon points="700,134 500,168 500,192" fill="url(#needle)"/>
+    <polygon points="700,134 500,210 500,228" fill="#f0f0ee"/>
+    <g fill="none" stroke="#3a3c3e" stroke-width="1"><polygon points="520,30 536,21 552,30 552,48 536,57 520,48"/><polygon points="552,48 568,39 584,48 584,66 568,75 552,66"/></g>
+  </g>
+  <!-- 4 split bands and companion trio -->
+  <clipPath id="c4"><rect x="724" y="16" width="220" height="236"/></clipPath>
+  <g clip-path="url(#c4)">
+    <polygon points="724,40 944,80 944,124 724,90" fill="url(#tri)"/>
+    <polygon points="800,104 900,121 888,130 800,116" fill="#a52e39"/>
+    <polygon points="800,124 880,138 868,147 800,136" fill="#a52e39"/>
+    <polygon points="800,144 860,155 848,164 800,156" fill="#a52e39"/>
+    <polygon points="736,196 940,176 940,179 736,200" fill="#c33a46"/>
+    <polygon points="736,208 920,190 736,211" fill="#c33a46"/>
+    <polygon points="736,220 900,204 736,222" fill="#c33a46"/>
+  </g>
+  <!-- 5 hollow echoes of a solid wedge -->
+  <clipPath id="c5"><rect x="16" y="292" width="224" height="236"/></clipPath>
+  <g clip-path="url(#c5)">
+    <polygon points="40,460 220,410 220,436 70,470" fill="#f0f0ee"/>
+    <g fill="none" stroke="#f0f0ee" stroke-width="2.5">
+      <polygon points="60,400 200,362 200,380 82,408"/>
+      <polygon points="80,350 190,320 190,334 98,356"/>
+    </g>
+  </g>
+  <!-- 6 counter row and arrows -->
+  <clipPath id="c6"><rect x="252" y="292" width="224" height="236"/></clipPath>
+  <g clip-path="url(#c6)">
+    <g fill="none" stroke="#f0f0ee" stroke-width="2"><rect x="266" y="340" width="34" height="10" rx="5"/><rect x="306" y="340" width="34" height="10" rx="5"/><rect x="346" y="340" width="34" height="10" rx="5"/><rect x="386" y="340" width="34" height="10" rx="5"/><rect x="426" y="340" width="34" height="10" rx="5"/></g>
+    <g fill="#f0f0ee"><circle cx="294" cy="345" r="3"/><circle cx="334" cy="345" r="3"/><circle cx="374" cy="345" r="3"/><circle cx="414" cy="345" r="3"/><circle cx="454" cy="345" r="3"/></g>
+    <g fill="#b73742"><polygon points="290,410 340,424 290,438 316,424"/><polygon points="330,410 380,424 330,438 356,424"/><polygon points="370,410 420,424 370,438 396,424"/></g>
+    <text x="266" y="490" font-size="22" font-weight="bold" fill="#f0f0ee" letter-spacing="2">VIPER</text>
+    <text x="350" y="490" font-size="22" font-weight="bold" fill="#b73742" letter-spacing="2">ZERO</text>
+    <path d="M266,500 h30 m10,0 h30 m10,0 h30" stroke="#f0f0ee" stroke-width="3"/>
+  </g>
+  <!-- 7 wing-tip dark band with two tint stripes -->
+  <clipPath id="c7"><polygon points="488,292 712,292 712,528 488,528"/></clipPath>
+  <g clip-path="url(#c7)">
+    <polygon points="488,292 640,292 560,528 488,528" fill="url(#tri)"/>
+    <polygon points="600,292 618,292 538,528 520,528" fill="#ac5e6e"/>
+    <polygon points="648,292 666,292 586,528 568,528" fill="#ac5e6e"/>
+  </g>
+  <!-- 8 fin parallel bands meeting at a V -->
+  <clipPath id="c8"><rect x="724" y="292" width="220" height="236"/></clipPath>
+  <g clip-path="url(#c8)">
+    <polygon points="740,410 900,300 930,300 770,410 930,520 900,520" fill="#f0f0ee"/>
+    <polygon points="786,410 946,300 972,300 812,410 972,520 946,520" fill="#b73742"/>
+    <polygon points="828,410 988,300 1014,300 854,410 1014,520 988,520" fill="#f0f0ee"/>
+  </g>
+  <g font-size="14" fill="#202020">
+    <text x="16" y="272">① 嵌套 V＋签名色楔形插入</text>
+    <text x="252" y="272">② 琴键序列＋新月长弧＋半调</text>
+    <text x="488" y="272">③ 放射长针＋淡六边形网格</text>
+    <text x="724" y="272">④ 分支带同角度劈出＋伴线组</text>
+    <text x="16" y="548">⑤ 实心楔形的空心回声</text>
+    <text x="252" y="548">⑥ 计数序列、小箭头、双色词</text>
+    <text x="488" y="548">⑦ 翼尖深带内两条淡染条纹</text>
+    <text x="724" y="548">⑧ 垂尾白-签名色-白平行带</text>
+  </g>
+</svg>

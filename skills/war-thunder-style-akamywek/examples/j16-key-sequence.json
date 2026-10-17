@@ -1,0 +1,603 @@
+{
+ "schema_version": 1,
+ "notes": "J-16 example: parent bands with mosaic and gradient, three split bands, white key sequence, triangle halftone dissolve, fin cap. Adapt charts and coordinates for other airframes.",
+ "supersample": 4,
+ "palette": {
+  "base": "#424347",
+  "signature": "#FF1663",
+  "signature_deep": "#C80F4C",
+  "accent": "#E7E7E7",
+  "deep": "#212421"
+ },
+ "charts": [
+  {
+   "id": "fin",
+   "u": "x",
+   "v": "y",
+   "nodes": [
+    "tail",
+    "rudder*"
+   ],
+   "materials": [
+    "j_16_aircraft_normal_detail_lo"
+   ],
+   "where": {
+    "y": [
+     0.9,
+     10
+    ],
+    "abs_z": [
+     1.5,
+     10
+    ]
+   },
+   "normal": {
+    "axis": "abs_z",
+    "min": 0.55
+   },
+   "facing": "abs_z"
+  },
+  {
+   "id": "side",
+   "u": "x",
+   "v": "y",
+   "nodes": [
+    "fuse",
+    "tail",
+    "airbrake_l",
+    "blister1"
+   ],
+   "materials": [
+    "j_16_aircraft_normal_detail_lo"
+   ],
+   "normal": {
+    "axis": "abs_z",
+    "min": 0.7
+   },
+   "facing": "abs_z"
+  },
+  {
+   "id": "body",
+   "u": "x",
+   "v": "abs_z",
+   "nodes": [
+    "fuse",
+    "tail",
+    "airbrake_l",
+    "blister1"
+   ],
+   "materials": [
+    "j_16_aircraft_normal_detail_lo"
+   ],
+   "normal": {
+    "axis": "y",
+    "min": -0.25
+   },
+   "facing": "y"
+  },
+  {
+   "id": "wing",
+   "u": "x",
+   "v": "abs_z",
+   "nodes": [
+    "wing_*",
+    "slat_*",
+    "flaperon*"
+   ],
+   "materials": [
+    "j_16_aircraft_normal_detail_lo"
+   ],
+   "normal": {
+    "axis": "y",
+    "min": 0.2
+   },
+   "facing": "y"
+  },
+  {
+   "id": "stab",
+   "u": "x",
+   "v": "abs_z",
+   "nodes": [
+    "elevator*"
+   ],
+   "materials": [
+    "j_16_aircraft_normal_detail_lo"
+   ],
+   "normal": {
+    "axis": "y",
+    "min": 0.2
+   },
+   "facing": "y"
+  }
+ ],
+ "layers": [
+  {
+   "name": "deep-fields",
+   "items": [
+    {
+     "id": "spine-channel",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       8.1,
+       0
+      ],
+      [
+       8.1,
+       0.12
+      ],
+      [
+       4.5,
+       0.31
+      ],
+      [
+       -6.1,
+       0.44
+      ],
+      [
+       -6.1,
+       0
+      ]
+     ],
+     "fill": "deep"
+    },
+    {
+     "id": "wing-negative-wedge",
+     "type": "polygon",
+     "chart": "wing",
+     "points": [
+      [
+       0.15,
+       2.75
+      ],
+      [
+       -2.65,
+       6.4
+      ],
+      [
+       -3.35,
+       6.4
+      ],
+      [
+       -1.55,
+       3.25
+      ]
+     ],
+     "fill": "deep"
+    }
+   ]
+  },
+  {
+   "name": "signature-fields",
+   "items": [
+    {
+     "id": "shoulder-parent",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       7.3,
+       0.19
+      ],
+      [
+       3.25,
+       0.63
+      ],
+      [
+       1.85,
+       1.16
+      ],
+      [
+       -4.55,
+       1.98
+      ],
+      [
+       -4.75,
+       2.28
+      ],
+      [
+       2.25,
+       1.56
+      ],
+      [
+       3.6,
+       0.98
+      ],
+      [
+       7.3,
+       0.4
+      ]
+     ],
+     "fill": {
+      "pattern": "tri-mosaic",
+      "gradient": {
+       "from": [
+        7.3,
+        0.3
+       ],
+       "to": [
+        -4.7,
+        2.1
+       ],
+       "colors": [
+        "signature",
+        "signature_deep"
+       ]
+      },
+      "cell": 0.16,
+      "jitter": 0.07
+     }
+    },
+    {
+     "id": "shoulder-split-1",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       1.3,
+       1.08
+      ],
+      [
+       1.18,
+       1.18
+      ],
+      [
+       -2.6,
+       1.7
+      ],
+      [
+       -2.48,
+       1.6
+      ]
+     ],
+     "fill": "signature"
+    },
+    {
+     "id": "shoulder-split-2",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       0.95,
+       1.0
+      ],
+      [
+       0.83,
+       1.1
+      ],
+      [
+       -2.2,
+       1.52
+      ],
+      [
+       -2.08,
+       1.42
+      ]
+     ],
+     "fill": "signature"
+    },
+    {
+     "id": "shoulder-split-3",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       0.6,
+       0.92
+      ],
+      [
+       0.48,
+       1.02
+      ],
+      [
+       -1.8,
+       1.34
+      ],
+      [
+       -1.68,
+       1.24
+      ]
+     ],
+     "fill": "signature"
+    },
+    {
+     "id": "shoulder-dissolve",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       0.3,
+       0.55
+      ],
+      [
+       -3.5,
+       1.0
+      ],
+      [
+       -3.5,
+       1.62
+      ],
+      [
+       0.3,
+       1.05
+      ]
+     ],
+     "fill": {
+      "pattern": "tri-halftone",
+      "color": "signature",
+      "cell": 0.07,
+      "from": [
+       0.3,
+       0.9
+      ],
+      "to": [
+       -3.2,
+       0.9
+      ]
+     }
+    },
+    {
+     "id": "wing-parent",
+     "type": "polygon",
+     "chart": "wing",
+     "points": [
+      [
+       2.7,
+       1.9
+      ],
+      [
+       -2.95,
+       7.3
+      ],
+      [
+       -4.25,
+       7.3
+      ],
+      [
+       -1.4,
+       3.5
+      ],
+      [
+       -0.1,
+       2.0
+      ]
+     ],
+     "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.2,
+      "jitter": 0.07
+     }
+    },
+    {
+     "id": "stab-field",
+     "type": "polygon",
+     "chart": "stab",
+     "points": [
+      [
+       -3.5,
+       1.85
+      ],
+      [
+       -6.75,
+       4.9
+      ],
+      [
+       -7.3,
+       4.6
+      ],
+      [
+       -5.1,
+       1.9
+      ]
+     ],
+     "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.16,
+      "jitter": 0.07
+     }
+    },
+    {
+     "id": "fin-cap",
+     "type": "polygon",
+     "chart": "fin",
+     "points": [
+      [
+       -5.4,
+       3.9
+      ],
+      [
+       -1.8,
+       3.9
+      ],
+      [
+       -1.8,
+       2.9
+      ],
+      [
+       -5.4,
+       1.4
+      ]
+     ],
+     "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.16,
+      "jitter": 0.07
+     }
+    }
+   ]
+  },
+  {
+   "name": "accent-cuts",
+   "items": [
+    {
+     "id": "key-1",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       2.4,
+       0.92
+      ],
+      [
+       1.75,
+       0.755
+      ],
+      [
+       1.75,
+       1.03
+      ],
+      [
+       2.4,
+       1.15
+      ]
+     ],
+     "fill": "accent"
+    },
+    {
+     "id": "key-2",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       1.6,
+       0.717
+      ],
+      [
+       1.0,
+       0.565
+      ],
+      [
+       1.0,
+       0.895
+      ],
+      [
+       1.6,
+       1.005
+      ]
+     ],
+     "fill": "accent"
+    },
+    {
+     "id": "key-3",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       0.85,
+       0.527
+      ],
+      [
+       0.3,
+       0.388
+      ],
+      [
+       0.3,
+       0.77
+      ],
+      [
+       0.85,
+       0.87
+      ]
+     ],
+     "fill": "accent"
+    },
+    {
+     "id": "key-4",
+     "type": "polygon",
+     "chart": "body",
+     "points": [
+      [
+       0.15,
+       0.35
+      ],
+      [
+       -0.9,
+       0.08
+      ],
+      [
+       -0.25,
+       0.45
+      ],
+      [
+       0.15,
+       0.65
+      ]
+     ],
+     "fill": "accent"
+    },
+    {
+     "id": "wing-lance",
+     "type": "stroke",
+     "chart": "wing",
+     "points": [
+      [
+       0.05,
+       2.95
+      ],
+      [
+       -1.05,
+       3.55
+      ],
+      [
+       -2.75,
+       6.3
+      ]
+     ],
+     "width": 0.05,
+     "taper": "end",
+     "fill": "accent"
+    },
+    {
+     "id": "wing-companion",
+     "type": "stroke",
+     "chart": "wing",
+     "points": [
+      [
+       -0.2,
+       3.2
+      ],
+      [
+       -1.12,
+       3.65
+      ],
+      [
+       -2.35,
+       5.65
+      ]
+     ],
+     "width": 0.022,
+     "taper": "end",
+     "fill": "accent"
+    },
+    {
+     "id": "fin-edge",
+     "type": "polygon",
+     "chart": "fin",
+     "points": [
+      [
+       -5.25,
+       1.45
+      ],
+      [
+       -2.35,
+       2.8
+      ],
+      [
+       -2.35,
+       2.72
+      ],
+      [
+       -5.25,
+       1.37
+      ]
+     ],
+     "fill": "accent"
+    }
+   ]
+  }
+ ]
+}
