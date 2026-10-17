@@ -62,6 +62,7 @@ python scripts/vector_paint.py --geometry output/scene/geometry.npz --design des
 - **朝上图表只收真正朝上的面**（如 `{"axis":"y","min":0.3}`）。机身侧壁、边条和机背之间的弯折面交给侧面图表或留素底；放宽阈值，色带会在弯折处被拉成一串毛刺碎片。
 - **图表轴必须躺在表面里。** 俯视图表（`x`、`abs_z`）只给朝上的面，垂尾和机身侧面要用（`x`、`y`）的单独图表。工具会对缩短超过 2 倍的面积发出警告，出现警告就按 `normal` 或 `where` 拆开图表。
 - **出血**：色场要越过真实表面边界 5–10 cm，否则岛边纹素只被部分覆盖，会出现暗缝。
+- 出图前跑 `python -B scripts/design_lint.py --design design.json`：它只读设计稿，列出字体、配色、线型上的已知偏向和改法（见 [审美纠偏](taste-corrections.md)）。error 先修；warn 修掉或在设计记录写理由。
 - 收据里 `zero_hit_items` 不为空，说明那个图元没有落到任何纹素，检查坐标和图表。只命中几个纹素的图元也可能实际看不见，以 `surface_map.py` 的结果为准。
 - **后掠面按“前缘后方多少米”定位。** 垂尾、平尾上的形状用“该高度处前缘往后 N 米”取点；沿前缘法线偏移时，靠近根部的点会掉到表面外。
 - 输出每层一张 RGBA、每个图表一份 SVG（图案填充记在 `data-fill`），再加 `composite.png`。把各层导入编辑器作为独立图层；设计稿 JSON 是线条的可编辑源。

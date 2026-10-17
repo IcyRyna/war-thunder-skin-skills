@@ -22,7 +22,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 
 ## 按需读取参考
 
-新作、换底和任何美术修订先读 [审美基线](references/aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。用户点名风格时同时加载对应风格 skill（如 `war-thunder-style-akamywek`），风格数值优先。
+新作、换底和任何美术修订先读 [审美基线](references/aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。同时读 [审美纠偏](references/taste-corrections.md)：模型在字体、配色、布局上的固定偏向和改法；设计稿写好后跑 `scripts/design_lint.py`，交付前过它的闸门。用户点名风格时同时加载对应风格 skill（如 `war-thunder-style-akamywek`），风格数值优先。
 
 - [素材与布局](references/assets-and-layout.md)：找图、来源、有效细节和原图适配。
 - [美术设计](references/art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
@@ -56,6 +56,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
+| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
 | `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住的分区图，并列出压到这些区域的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
 | `scripts/structure_layer.py` | 从原机法线通道提取干净的面板线与铆钉结构层；NumPy、Pillow |
