@@ -1,11 +1,11 @@
 ---
 name: war-thunder-style-akamywek
-description: War Thunder 喷气机痛涂的 Akamywek 风格配方：深炭底、单一签名色几何色场、白色嵌套尖形与序列、三角马赛克、主翼整面人物和军用标识字体系。用户点名 Akamywek 风格、要"像那个作者"、或选定这种深底几何线条风时使用；和 war-thunder-user-skins 一起用，它负责流程、工具和交付。
+description: War Thunder 喷气机痛涂的 Akamywek 风格配方：深炭底、单一签名色几何色场、白色嵌套尖形与序列、三角马赛克、主翼整面人物和军用标识字体系。用户点名 Akamywek 风格、要"像那个作者"、或选定这种深底几何线条风时使用。自带从素材、原 UV 上色、模型检查到 BLK/TGA 交付的完整流程和脚本，单独安装即可。
 ---
 
 # Akamywek 风格配方
 
-本 skill 只管"长成什么样"。素材、UV、工具、打包和验收按 `war-thunder-user-skins` 执行；它的 [审美基线](../war-thunder-user-skins/references/aesthetics.md) 仍是底线，下面的数值在冲突时优先。配方提炼自该作者 17 个公开作品的整机预览和 5 张 8K 颜色贴图（双发侧卫、单发 F-16 系、三角翼），是方法归纳，不是作者授权或复制他的作品；不要照搬他的字、徽记和具体图形。
+本 skill 单独就能做完一架涂装。风格文件（配色、图形、各面布局、字与标识）决定"长成什么样"；素材、原 UV、材质、工具、打包和验收按 [通用制作流程](references/core/overview.md) 执行，它的 [审美基线](references/core/aesthetics.md) 是风格文件没写到时的底线，冲突时以风格文件为准。脚本都在 `scripts/`，先用 `--help` 看参数。配方提炼自该作者 17 个公开作品的整机预览和 5 张 8K 颜色贴图（双发侧卫、单发 F-16 系、三角翼），是方法归纳，不是作者授权或复制他的作品；不要照搬他的字、徽记和具体图形。
 
 ## 先选分支
 
@@ -21,12 +21,29 @@ description: War Thunder 喷气机痛涂的 Akamywek 风格配方：深炭底、
 
 1. 读 [配色](references/palette.md)，从角色原图取签名色、色阶和底色，写出色表和目标面积。
 2. 读 [各面布局](references/surfaces.md)，按机型类别定每个岛的职责：主翼给人物，机身只给图形和字。
-3. 落笔前先对设计稿的图表跑 `surface_map.py`，看每块表面哪里平整、哪里弯折、哪里被别的表面盖住或被前面的图表抢走 UV（见主 skill 的 [线条与配色](../war-thunder-user-skins/references/linework-and-color.md#落笔前先看表面分区)）。
+3. 落笔前先对设计稿的图表跑 `surface_map.py`，看每块表面哪里平整、哪里弯折、哪里被别的表面盖住或被前面的图表抢走 UV（见 [线条与配色](references/core/linework-and-color.md#落笔前先看表面分区)）。
 4. 读 [线条与图形库](references/motifs.md)，给机背选一个主图形（嵌套 V、琴键序列、放射长针或嵌套 V 腹饰），再配分支带、伴线组和空心回声，只放在平整、可见的区域。用 `vector_paint.py` 在原 UV 上直接出图层；示例设计稿在 `examples/`。
 5. 读 [字与标识](references/type-and-decals.md)，排机型名、角色名、阵营名和技术小字。
 6. 加质感：签名色面内三角马赛克，母形末端三角半调，`structure_layer.py` 叠回面板线和铆钉。
-7. 出图前跑 `design_lint.py`，按 [审美纠偏](../war-thunder-user-skins/references/taste-corrections.md) 和下文的[常见跑偏](#常见跑偏)修掉报出的问题。出图后再跑一次 `surface_map.py`，`risky_items` 清空或逐条确认；再给每个区域开近景相机看模型（机头、机背前后段、侧面前后段、机腹前后段、垂尾内外侧、两翼）。
-8. 在编辑器里把我们的展开图和参考展开图并排逐岛对照（方法见基线），用 `atlas_palette.py` 核对色族面积是否落在 [配色](references/palette.md#实测面积) 的区间内，再看整机。最后对照 [不要这样做](references/surfaces.md#不要这样做) 逐条自查。
+7. 出图前跑 `design_lint.py`，按 [审美纠偏](references/core/taste-corrections.md) 和下文的[常见跑偏](#常见跑偏)修掉报出的问题。出图后再跑一次 `surface_map.py`，`risky_items` 清空或逐条确认；再给每个区域开近景相机看模型（机头、机背前后段、侧面前后段、机腹前后段、垂尾内外侧、两翼）。
+8. 在编辑器里把我们的展开图和参考展开图并排逐岛对照（方法见 [审美基线](references/core/aesthetics.md#在编辑器里逐岛看展开图)），用 `atlas_palette.py` 核对色族面积是否落在 [配色](references/palette.md#实测面积) 的区间内，再看整机。最后对照 [不要这样做](references/surfaces.md#不要这样做) 逐条自查。
+9. 材质、打包、安装和验收按 [通用制作流程](references/core/overview.md) 的后半段：[UV 与材质](references/core/materials-and-uv.md)、[打包与验证](references/core/packaging-and-validation.md)。
+
+## 自带的脚本
+
+| 脚本 | 用途 |
+| --- | --- |
+| `scripts/surface_preview.py`、`scripts/scene_preview.py` | 准备机体几何（`geometry.npz`），渲染整机和近景相机 |
+| `scripts/surface_map.py` | 每个图表的平整／弯折／拉伸／机械件／共用 UV／被遮挡分区图，列出压到这些区域的图元 |
+| `scripts/design_lint.py` | 设计稿的字体、配色、线型偏向检查 |
+| `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 上求值：色场、渐尖线、马赛克、半调、立绘和文字 |
+| `scripts/structure_layer.py` | 从原机法线提取面板线与铆钉结构层 |
+| `scripts/atlas_palette.py`、`scripts/style_board.py` | 色族面积对照；整机与参考并排的原色、明暗、眯眼对照板 |
+| `scripts/composa_mcp.py` | Composa 编辑器调用（打开、渲染、取色、存工程） |
+| `scripts/fetch_asset.py` | 下载已选立绘并记录来源 |
+| `scripts/inspect_skins.py`、`scripts/build_skin.py` | BLK 与贴图检查，TGA／BLK 组装 |
+
+其余脚本（`compare_skin.py`、`dds_variant.py`、`finish_preview.py`）的用法见 [通用制作流程](references/core/overview.md#可选工具)。依赖：Python 3.10+、NumPy、Pillow、Numba；运行时加 `-B`，输出写到任务目录，不写进 skill 目录。
 
 ## 一眼识别的特征（自查）
 
@@ -48,7 +65,7 @@ description: War Thunder 喷气机痛涂的 Akamywek 风格配方：深炭底、
 
 ## 常见跑偏
 
-模型做这个风格时最常滑向下面这些做法；通用的字体、配色、布局偏向见主 skill 的 [审美纠偏](../war-thunder-user-skins/references/taste-corrections.md)。
+模型做这个风格时最常滑向下面这些做法；通用的字体、配色、布局偏向见 [审美纠偏](references/core/taste-corrections.md)。
 
 | 跑偏 | 改成 |
 | --- | --- |

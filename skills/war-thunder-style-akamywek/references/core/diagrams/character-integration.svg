@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 470" font-family="Microsoft YaHei, Arial, sans-serif">
+  <title>自绘示意：翼面人物——贴纸与融入</title>
+  <defs>
+    <linearGradient id="down" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2b2d31" stop-opacity="0"/>
+      <stop offset=".8" stop-color="#2b2d31" stop-opacity="1"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="470" fill="#f2f2f2"/>
+  <!-- AVOID: sticker -->
+  <text x="24" y="34" font-size="20" font-weight="bold" fill="#202020">避免：矩形贴纸</text>
+  <polygon points="40,70 440,70 440,110 140,400 40,400" fill="#1f2a36"/>
+  <rect x="300" y="78" width="120" height="96" fill="#d8dde4"/>
+  <circle cx="352" cy="112" r="16" fill="#efd9cc"/><path d="M330,174 Q352,128 380,174 Z" fill="#6f87a6"/>
+  <g font-size="13" fill="#202020">
+    <text x="24" y="430">✗ 人物约占翼面 15%，脸不到当地弦长 1/10</text>
+    <text x="24" y="448">✗ 矩形边可见；四周仍是大片未组织的平涂</text>
+  </g>
+  <!-- GOOD: integrated -->
+  <text x="496" y="34" font-size="20" font-weight="bold" fill="#202020">可用：人物就是翼面</text>
+  <clipPath id="wing"><polygon points="512,70 912,70 912,110 612,400 512,400"/></clipPath>
+  <polygon points="512,70 912,70 912,110 612,400 512,400" fill="#2b2d31"/>
+  <g clip-path="url(#wing)">
+    <!-- ghost echo face, enlarged and low opacity -->
+    <circle cx="590" cy="250" r="110" fill="#efd9cc" opacity=".14"/>
+    <circle cx="560" cy="240" r="14" fill="#2b2d31" opacity=".5"/><circle cx="620" cy="240" r="14" fill="#2b2d31" opacity=".5"/>
+    <!-- hair mass runs off the panel edge -->
+    <path d="M700,52 C620,52 600,140 590,220 C580,300 560,360 540,420 L610,420 C630,340 660,260 690,200 Z" fill="#181c22"/>
+    <path d="M730,52 C800,60 820,140 812,220 L840,180 C850,110 800,40 730,52 Z" fill="#181c22"/>
+    <!-- face and light clothing against the dark field -->
+    <circle cx="716" cy="138" r="44" fill="#efd9cc"/>
+    <path d="M672,128 C668,76 770,64 762,132 C744,100 702,98 672,128 Z" fill="#181c22"/>
+    <circle cx="700" cy="142" r="5" fill="#ff1663"/><circle cx="734" cy="142" r="5" fill="#ff1663"/>
+    <path d="M668,200 C700,184 748,186 786,210 L800,300 L780,420 L640,420 L650,300 Z" fill="#f4f4f4"/>
+    <!-- lower clothing dissolves into the field instead of ending at a box edge -->
+    <rect x="600" y="330" width="240" height="90" fill="url(#down)"/>
+    <!-- hero name on the dark lane, along the leading-edge angle -->
+    <text x="0" y="0" font-size="38" font-weight="bold" fill="#ff1663" transform="translate(842,128) rotate(135.6)" letter-spacing="2">NAME</text>
+    <!-- HUD cluster at one corner -->
+    <g fill="#e7e7e7"><rect x="526" y="300" width="2" height="22"/><rect x="531" y="300" width="1" height="22"/><rect x="535" y="300" width="3" height="22"/><rect x="541" y="300" width="1" height="22"/><rect x="545" y="300" width="2" height="22"/></g>
+    <path d="M530,340 h14 M537,333 v14" stroke="#e7e7e7" stroke-width="1.5"/>
+  </g>
+  <g font-size="13" fill="#202020">
+    <text x="496" y="430">① 人物轮廓覆盖翼面 60% 以上，脸高约当地弦长 1/5–1/4</text>
+    <text x="496" y="448">② 浅脸浅衣落在深场上；发丝出画；边缘渐隐，不留矩形边</text>
+    <text x="496" y="466">③ 背后放大低不透明回声脸；主名沿前缘角度走深色道；HUD 小件只聚一角</text>
+  </g>
+</svg>

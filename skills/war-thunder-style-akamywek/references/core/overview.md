@@ -1,0 +1,65 @@
+# 通用制作流程
+
+> 本目录是喷气机痛涂的通用制作参考，随本 skill 一起分发，单独使用即可。文中的 `scripts/` 指本 skill 根目录下的 `scripts/`；本 skill 的风格文件（[配色](../palette.md)、[图形库](../motifs.md)、[各面布局](../surfaces.md)、[字与标识](../type-and-decals.md)）在冲突时优先于这里的通用数值。
+
+根据当前机型、角色和指定参考完成实际可编辑的成果。自行处理普通素材与设计选择，按任务需要使用已有工具；图像模型是可选路线。
+
+## 先确定本次工作
+
+| 请求 | 执行范围与入口 |
+| --- | --- |
+| 新作 | 素材 → 整机构图 → 分层制作 → UV／材质 → 模型修订 → 交付 |
+| 局部修订 | 保留已接受部分，只修改问题域并复查受影响的表面与输出 |
+| 点评、选型、讨论 | 回答指定问题，按需看参考，不自动制作或采集素材包 |
+| 学习、复刻、审计 | 按 [研究与审计](research-and-audit.md) 确认来源、范围、实验和关闭条件 |
+| 清晰度、发白或质感故障 | 按 [输出与检查](packaging-and-validation.md#模型与实际效果) 追踪实际输入和受影响位置，再查采样或材质 |
+
+有工作区登记时先定位所属项目与任务，再读取相应 `.skin-workshop.json`。需求按“技能默认 → 项目 → 当前任务 → 当前对话明确覆盖”应用，未覆盖项继续继承。历史方案和代理自写配置是资料，不能替代用户要求或淡化未解决缺陷。指定作者、作品或线型时，实际查看对应参考；角色主题不自动授权重选其线条语言。
+
+## 按需读取参考
+
+新作、换底和任何美术修订先读 [审美基线](aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。同时读 [审美纠偏](taste-corrections.md)：模型在字体、配色、布局上的固定偏向和改法；设计稿写好后跑 `scripts/design_lint.py`，交付前过它的闸门。风格数值以本 skill 的风格文件为准。
+
+- [素材与布局](assets-and-layout.md)：找图、来源、有效细节和原图适配。
+- [美术设计](art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
+- [线条与配色](linework-and-color.md)：母形、分支带、序列、伴线的构造顺序，`vector_paint.py` 设计稿与颜色。
+- [UV 与材质](materials-and-uv.md)：干净重涂、完整承载面、结构、通道和受光。
+- [编辑工作流](editor-workflow.md)：原生工程、SVG 导入和 Composa 会话恢复。
+- [图像辅助编辑](image-assisted-editing.md)：任务需要图像模型时的输入、保护域和输出检查。
+- [正交制作](orthographic-workflow.md)：几何、相机、可见性回烘、共享 UV 与模型诊断。
+- [打包与验证](packaging-and-validation.md)：文件保护、TGA/DDS、工程重开和验收状态。
+
+只读取本次需要的分支；直接 UV 编辑不强制投射，普通局部修订不强制全套研究或材质实验。
+
+## 制作中的关键决策
+
+1. **先确定素材和真实承载面。** 保护角色识别与所选动作连接，同时在整机尺度取得足够主视觉重量。按 [美术设计](art-direction.md) 安排表面分工；指定双翼人物、尾面或线条密度逐项落实。
+2. **先大形后细节。** 先用深、中、亮三档色块定大形，眯眼检查通过再放人物、构线、加纹理和字；初稿即看模型和全图粗漏。每轮都在编辑器里打开参考与当前展开图逐岛对照，见 [审美基线](aesthetics.md#在编辑器里逐岛看展开图)。
+3. **保存制作源。** 按 [图层结构](aesthetics.md#图层结构) 分层；线条和色场保存 `vector_paint.py` 设计稿与 SVG，人物保存原图。全部线条合成一张栅格层不算可编辑。
+4. **保留资源契约。** 从 BLK 确认资源和 wildcard；保留原 UV、比例、部件变换与材质分组。RGB、颜色 alpha 与打包材质分别处理。共享纹素通过图案一致性、裁切、位置或来源优先级解决，不重排原 UV。
+5. **用实际输出关闭问题。** atlas 检查形状与采样，模型检查表面、遮挡和构图，材质检查对应受光。每项要求保留通过、失败或未检查及具体证据；必需项能补看就补看，已知缺陷修好再复查。
+6. **交付并保留评价边界。** 原生工程、实际贴图、BLK 和预览相互对应。技术合规、基本识别／构图、用户美术评价分别记录；作品状态与当前版本遵循项目登记，不把文件存在、局部通过或自评分当成整套认可。
+
+原素材与历史证据独立保存。内部配置和研究留在工作区，交付说明聚焦实际结果、用法、来源 credit 与未验证范围。安装、发布和游戏检查按用户授权执行；禁止启动游戏时保持离线。
+
+## 可选工具
+
+先用 `--help` 查看当前参数，工具实现和实时 schema 优先于示例。运行脚本时用 `python -B`；Numba 缓存默认写到系统临时目录（可用 `NUMBA_CACHE_DIR` 改），不要留在 Skill 目录里。输出一律写到当前任务目录，不写进 Skill 目录。依赖缺失时报告具体缺口并使用可行替代入口，不擅自安装服务或修改环境配置。
+
+| 脚本 | 职责／主要依赖 |
+| --- | --- |
+| `scripts/inspect_skins.py` | BLK 与贴图检查；Python 3.10+，预览需 Pillow |
+| `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
+| `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
+| `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
+| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
+| `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住的分区图，并列出压到这些区域的图元；NumPy、Pillow、Numba |
+| `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
+| `scripts/structure_layer.py` | 从原机法线通道提取干净的面板线与铆钉结构层；NumPy、Pillow |
+| `scripts/atlas_palette.py` | 多张展开图同一归一化区域的色族面积对照；NumPy、Pillow |
+| `scripts/style_board.py` | 整机渲染与参考同尺寸并排：原色、明暗、眯眼三行；NumPy、Pillow |
+| `scripts/surface_preview.py` | 单材质原 UV 预览与回烘；NumPy、Pillow、Numba，prepare 需外置解码器 |
+| `scripts/scene_preview.py` | 多材质整机场景与补充相机；NumPy、Pillow、Numba |
+| `scripts/finish_preview.py` | 两环境与法线隔离的近似材质对照；NumPy、Pillow、Numba |
+| `scripts/build_skin.py` | TGA／BLK 组装；Pillow、NumPy |
+| `scripts/dds_variant.py` | DDS 与实际 mip 验证；Pillow、NumPy、受支持的官方 texconv |

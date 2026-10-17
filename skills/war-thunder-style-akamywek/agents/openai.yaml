@@ -4,4 +4,4 @@ interface:
 
   short_description: "深炭底、单一签名色几何色场、白色嵌套尖形与三角马赛克的喷气机痛涂风格配方"
 
-  default_prompt: "使用 $war-thunder-style-akamywek 和 $war-thunder-user-skins，为我指定的战雷喷气机和角色做 Akamywek 风格的痛涂：按角色取签名色，机背用白色嵌套尖形，主翼放大人物，配机型名与角色名字组。"
+  default_prompt: "使用 $war-thunder-style-akamywek 为我指定的战雷喷气机和角色做 Akamywek 风格的痛涂：按角色取签名色，机背用白色嵌套尖形，主翼放大人物，配机型名与角色名字组。"
