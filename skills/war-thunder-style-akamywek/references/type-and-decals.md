@@ -5,6 +5,7 @@
 - 全大写的宽体或方形无衬线（类 Eurostile、Bank Gothic、Microgramma 的气质），粗、细两档。没有授权字体时，用系统里最接近的几何无衬线，加宽字距。
 - Windows 自带的 Bahnschrift（`C:/Windows/Fonts/bahnschrift.ttf`）可直接用：`vector_paint.py` 的文字图层写 `font` 和 `variation`（`Bold` 做主名、`Light` 做副名），`tracking` 0.05–0.12 给主名、0.2–0.3 给副名。
 - 中文、日文字要显式指定字体并渲染确认；这个风格的主字默认用拉丁字母拼写。
+- Light 只给字高 8 cm 以上的副名；更小的技术字用 Regular 或 Bold，否则在游戏距离里消失。字体选择、字号层级和凑数字的通用纠偏见主 skill 的 [审美纠偏](../../war-thunder-user-skins/references/taste-corrections.md#字体)。
 
 ## 字组
 
