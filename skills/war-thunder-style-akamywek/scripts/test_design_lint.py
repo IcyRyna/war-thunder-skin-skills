@@ -65,6 +65,12 @@ class DesignLintTests(unittest.TestCase):
         _, codes = self.lint(design)
         self.assertIn('missing-glyphs', codes)
 
+    def test_absent_font_file_is_an_error(self):
+        design = dict(schema_version=1, charts=[CHART], layers=[dict(name='type', images=[
+            text('gone', 'CHEN', .3, font=str(FONTS / 'no-such-font-file.ttf'), color='#eeeeee')])])
+        _, codes = self.lint(design)
+        self.assertIn('font-not-found', codes)
+
     def test_considered_design_is_quiet(self):
         design = dict(schema_version=1, charts=[CHART], palette=dict(base='#2c2e32', sig='#3f7fc0', sig_deep='#2f639a', hi='#eeeeee'), layers=[
             dict(name='fields', items=[
