@@ -56,7 +56,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
-| `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢的分区图，并列出压到这些区域的图元；NumPy、Pillow |
+| `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住的分区图，并列出压到这些区域的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
 | `scripts/structure_layer.py` | 从原机法线通道提取干净的面板线与铆钉结构层；NumPy、Pillow |
 | `scripts/atlas_palette.py` | 多张展开图同一归一化区域的色族面积对照；NumPy、Pillow |

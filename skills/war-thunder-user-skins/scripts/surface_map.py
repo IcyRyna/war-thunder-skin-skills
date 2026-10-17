@@ -3,8 +3,9 @@
 For every chart of a design JSON, the selected triangles are drawn in the chart's
 own metre coordinates and classed as flat (projection keeps >= 80% of the area),
 curving (50-80%), steep (< 50%: widths and patterns streak there), protected
-(mechanical texels from --protect) or lost (the original UV shares the texel
-with an earlier chart, and the earlier chart wins it, as in vector_paint).  The
+(mechanical texels from --protect), lost (the original UV shares the texel
+with an earlier chart, and the earlier chart wins it, as in vector_paint) or
+hidden (inner faces covered by the skin, canopy or another chart's surface).  The
 design's polygons, strokes and image/text placements are drawn on top and
 scored by item type: colour fields are at risk on steep or lost ground (they
 may bleed past the real edge on purpose); lines, type and portraits also when
@@ -23,15 +24,18 @@ from PIL import Image, ImageDraw
 
 from artifact_io import ArtifactError, ArtifactTransaction
 from inspect_skins import load_font
-from surface_preview import load_geometry
+from surface_preview import load_geometry, rasterize
 from vector_paint import parse_axis, select_charts, stroke_outline
 
 Image.MAX_IMAGE_PIXELS = 8192 * 8192
-OFF, FLAT, CURVING, STEEP, SHARED, PROTECTED = range(6)
-NAMES = ['off-surface', 'flat', 'curving', 'steep', 'lost-to-earlier-chart', 'protected']
-COLORS = [(250, 250, 250), (200, 205, 210), (236, 190, 110), (220, 80, 70), (165, 110, 210), (80, 140, 230)]
-RISKY = {'polygon': (STEEP, SHARED), 'stroke': (OFF, STEEP, SHARED, PROTECTED),
-         'text': (OFF, STEEP, SHARED, PROTECTED), 'image': (STEEP, SHARED, PROTECTED)}
+OFF, FLAT, CURVING, STEEP, SHARED, PROTECTED, HIDDEN = range(7)
+NAMES = ['off-surface', 'flat', 'curving', 'steep', 'lost-to-earlier-chart', 'protected', 'hidden-under-other-surface']
+COLORS = [(250, 250, 250), (200, 205, 210), (236, 190, 110), (220, 80, 70), (165, 110, 210), (80, 140, 230), (70, 72, 80)]
+RISKY = {'polygon': (STEEP, SHARED), 'stroke': (OFF, STEEP, SHARED, PROTECTED, HIDDEN),
+         'text': (OFF, STEEP, SHARED, PROTECTED, HIDDEN), 'image': (STEEP, SHARED, PROTECTED)}
+# Large colour fields may tuck under wing roots or fairings; they count as at risk only when less
+# than this share of them can be seen.  Images are cropped by the surface by design and are not.
+MIN_VISIBLE = .35
 
 
 def chart_coords(points, axes, index):
@@ -73,19 +77,6 @@ def classify(geometry, assignment, axes, protect, atlas=2048):
             if protect[py, px]:
                 classes[tri] = PROTECTED
     return classes
-
-
-def view_depth(triangles, chart):
-    """Distance toward the viewer for each triangle: larger means closer to the outside."""
-    used = {parse_axis(chart['u'])[0], parse_axis(chart['v'])[0]}
-    depth_axis = ({0, 1, 2} - used).pop()
-    centroid = triangles.mean(axis=1)[:, depth_axis]
-    spec = chart.get('facing')
-    if spec:
-        axis, mode = parse_axis(spec)
-        if axis == depth_axis:
-            return np.abs(centroid) if mode == 2 else -centroid if mode == 1 else centroid
-    return np.abs(centroid)
 
 
 def item_shapes(design, chart_ids):
@@ -132,13 +123,49 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
     header = 44  # legend strip above the chart
     width, height = int((hi[0] - lo[0]) * scale) + 1, int((hi[1] - lo[1]) * scale) + 1 + header
     to_px = lambda u, v: ((u - lo[0]) * scale, header + (hi[1] - v) * scale)
-    cls = Image.new('L', (width, height), OFF)
-    draw = ImageDraw.Draw(cls)
-    # Painter's order along the viewing axis: hidden inner surfaces that share the chart
-    # coordinates (e.g. nacelle interiors under a top chart) are covered by the outer skin.
-    for tri in tris[np.argsort(view_depth(world[tris], chart))]:
-        draw.polygon([to_px(*q) for q in pts[np.searchsorted(tris, tri)]], fill=int(classes[tri]))
-    grid = np.asarray(cls)
+    # Real visibility: rasterise the whole airframe orthographically along the chart's viewing axis
+    # with the preview renderer's z-buffer, and keep the nearest front-facing triangle per pixel.
+    # Inner faces that face the viewer (cockpit floors, duct walls) are then covered by the skin,
+    # canopy or another chart's surface, as on the model.  A both-sides chart (abs axis) is done per
+    # side so the far side never covers the near one; the pictures merge keeping the worse class.
+    normal = np.cross(world[:, 1] - world[:, 0], world[:, 2] - world[:, 0])
+    used = {parse_axis(chart['u'])[0], parse_axis(chart['v'])[0]}
+    depth_axis = ({0, 1, 2} - used).pop()
+    centroid = world.mean(axis=1)[:, depth_axis]
+    uv_all = chart_coords(world, axes, index)
+    in_box = ((uv_all[:, :, 0].max(axis=1) >= lo[0]) & (uv_all[:, :, 0].min(axis=1) <= hi[0]) &
+              (uv_all[:, :, 1].max(axis=1) >= lo[1]) & (uv_all[:, :, 1].min(axis=1) <= hi[1]))
+    fixed = chart.get('facing') and parse_axis(chart['facing'])[0] == depth_axis and parse_axis(chart['facing'])[1] != 2
+    groups = [None] if fixed else sorted(set(np.sign(centroid[tris]).astype(int)) - {0}) or [None]
+    rank = np.array([0, 1, 2, 4, 4, 3, 5])
+    grid = None
+    for group in groups:
+        mine = tris if group is None else tris[np.sign(centroid[tris]) == group]
+        if not len(mine):
+            continue
+        view = 1. if normal[mine, depth_axis].mean() >= 0 else -1.  # viewer sits on this side
+        pool = in_box if group is None else in_box & (np.sign(centroid) == group)
+        pool[mine] = True
+        picked = np.flatnonzero(pool)
+        screen = np.empty((len(picked), 3, 3), np.float32)
+        screen[:, :, 0] = (uv_all[picked, :, 0] - lo[0]) * scale
+        screen[:, :, 1] = (hi[1] - uv_all[picked, :, 1]) * scale
+        screen[:, :, 2] = world[picked, :, depth_axis] * view
+        dummy_uv, texture = np.zeros((len(picked), 3, 2), np.float32), np.zeros((1, 1, 4), np.uint8)
+        best_owners, kept = None, -1
+        for handedness in (1., -1.):  # keep the winding under which this chart's own faces survive culling
+            _, _, owners = rasterize(screen, world[picked].astype(np.float32), dummy_uv, texture, width, height - header, handedness)
+            count = int(np.isin(owners, np.flatnonzero(np.isin(picked, mine))).sum())
+            if count > kept:
+                best_owners, kept = owners, count
+        owner_tri = np.where(best_owners >= 0, picked[np.maximum(best_owners, 0)], -1)
+        layer = np.full(best_owners.shape, OFF, np.uint8)
+        visible = owner_tri >= 0
+        own = visible & (assignment[np.maximum(owner_tri, 0)] == index)
+        layer[own] = classes[owner_tri[own]]
+        layer[visible & ~own] = HIDDEN
+        layer = np.vstack([np.full((header, width), OFF, np.uint8), layer])
+        grid = layer if grid is None else np.where(rank[layer] > rank[grid], layer, grid)
     rgb = Image.fromarray(np.asarray(COLORS, np.uint8)[grid], 'RGB')
     pen = ImageDraw.Draw(rgb)
     for u in range(math.ceil(lo[0]), math.floor(hi[0]) + 1):
@@ -155,14 +182,17 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         inside = grid[np.asarray(mask, bool)]
         if not inside.size:
             continue
-        counts = {NAMES[c]: round(float((inside == c).mean()), 3) for c in range(6) if (inside == c).any()}
+        counts = {NAMES[c]: round(float((inside == c).mean()), 3) for c in range(7) if (inside == c).any()}
         risk = float(np.isin(inside, RISKY[kind]).mean())
+        visible = float(np.isin(inside, (FLAT, CURVING, PROTECTED)).mean())
+        if kind == 'polygon' and visible < MIN_VISIBLE:
+            risk = max(risk, 1 - visible)
         scores.append(dict(id=label, kind=kind, risky_share=round(risk, 3), ground=counts))
     pen.text((6, 4), f'chart {chart["id"]}  u={chart["u"]} v={chart["v"]}  (metres)', fill=(0, 0, 0), font=font)
     for i, (name, color) in enumerate(zip(NAMES, COLORS)):
-        pen.rectangle([6 + i * 165, 22, 20 + i * 165, 36], fill=color, outline=(0, 0, 0))
-        pen.text((24 + i * 165, 22), name, fill=(0, 0, 0), font=font)
-    totals = {NAMES[c]: round(float((grid == c).sum() / max(1, (grid != OFF).sum())), 3) for c in range(1, 6)}
+        pen.rectangle([6 + i * 175, 22, 20 + i * 175, 36], fill=color, outline=(0, 0, 0))
+        pen.text((24 + i * 175, 22), name, fill=(0, 0, 0), font=font)
+    totals = {NAMES[c]: round(float((grid == c).sum() / max(1, (grid != OFF).sum())), 3) for c in range(1, 7)}
     return rgb, scores, totals
 
 
@@ -185,8 +215,10 @@ def run(args):
     report = dict(schema_version=1, tool='surface_map.py', design=str(design_path), charts={}, risky_items=[], warnings=warnings,
                   classes=dict(flat='projection keeps >= 80% of area', curving='50-80%', steep='< 50%, lines and patterns streak',
                                **{'lost-to-earlier-chart': 'texel shared with an earlier chart, which wins it; reorder charts or move the item'},
-                               protected='mechanical texels from --protect', **{'off-surface': 'no triangle of this chart'}),
-                  risk_rule={k: [NAMES[c] for c in v] for k, v in RISKY.items()})
+                               protected='mechanical texels from --protect', **{'off-surface': 'no triangle of this chart',
+                  'hidden-under-other-surface': 'covered by skin, canopy or another chart seen from this side: never visible'}),
+                  risk_rule=dict({k: [NAMES[c] for c in v] for k, v in RISKY.items()},
+                                 fields=f'also at risk when less than {MIN_VISIBLE:.0%} is visible'))
     with ArtifactTransaction(outputs, inputs=inputs, label='surface-map') as transaction:
         staged = {p: transaction.stage(p) for p in outputs}
         for chart in charts:

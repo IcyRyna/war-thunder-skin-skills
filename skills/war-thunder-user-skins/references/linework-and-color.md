@@ -72,7 +72,10 @@ python scripts/vector_paint.py --geometry output/scene/geometry.npz --design des
 python -B scripts/surface_map.py --geometry output/scene/geometry.npz --design design/lines.json --protect design/mechanical-mask.png --out output/surface-map-v1
 ```
 
-工具按设计稿的每个图表出一张分区图（米制网格）：灰＝平整可画，橙＝弯曲，红＝会被拉伸，蓝＝机械件，紫＝共用 UV 被前面的图表抢走，白＝没有表面；设计稿里的图元叠在上面。`surface-map.json` 的 `risky_items` 按图元类型判断风险：色场只看拉伸区和被抢区（出血到边外是正常的）；线条、字和立绘还要避开机械件和表面外。
+工具用整机深度缓冲按每个图表的观察方向渲染，出一张分区图（米制网格）：灰＝平整可画，橙＝弯曲，红＝会被拉伸，蓝＝机械件，紫＝共用 UV 被前面的图表抢走，深灰＝被蒙皮、座舱玻璃或别的表面盖住（机身内部朝外的面也会被图表选中，画上去永远看不见），白＝没有表面；设计稿里的图元叠在上面。`surface-map.json` 的 `risky_items` 按图元类型判断风险：线条和字压到拉伸、被抢、机械件、被盖住或表面外都算；色场只看拉伸和被抢，可见部分少于 35% 时也算；立绘本来就被表面裁切，只看拉伸、被抢和机械件。
+
+- 紫色区不一定是错：左右或上下共用 UV 的部位，两边画的是同一个对称内容时，另一边显示的就是同样的图案。放字或不对称内容时才是问题。
+- `vector_paint.py` 收据里命中纹素多，不代表看得见；以分区图的深灰区为准。
 
 - 先看分区图，再定线条、字和人物的位置；改完再跑一次，`risky_items` 清空或逐条确认。
 - 线条和字只放在灰色平整区。格栅、起落架舱门、天线、弯折边上的线和字会碎成几截。

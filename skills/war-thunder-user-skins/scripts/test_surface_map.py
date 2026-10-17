@@ -65,6 +65,22 @@ class SurfaceMapTests(unittest.TestCase):
         self.assertIn('lost-to-earlier-chart', risky['on-shared-top']['ground'])
         self.assertNotIn('on-belly', risky)
 
+    def test_inner_face_under_other_geometry_is_hidden(self):
+        # A lid of another node above part of the top skin hides it from a top chart.
+        g = dict(__import__('numpy').load(self.root / 'g.npz'))
+        lid_t, lid_u = quad(-2, 0, -1, 1, 1.5, True, (.0, .7, .2, .9))
+        g['triangles'] = np.concatenate([g['triangles'], np.asarray(lid_t, np.float32)])
+        g['uvs'] = np.concatenate([g['uvs'], np.asarray(lid_u, np.float32)])
+        g['node_ids'] = np.concatenate([g['node_ids'], np.asarray([1, 1], np.int32)])
+        np.savez(self.root / 'g.npz', **g)
+        charts = [dict(id='top', u='x', v='z', nodes=['body'], normal={'axis': 'y', 'min': .5}, facing='y')]
+        items = [dict(id='under-lid', type='stroke', chart='top', points=[[-1.8, 0], [-0.2, 0]], width=.2, fill='#ffffff'),
+                 dict(id='open', type='stroke', chart='top', points=[[0.3, 0], [1.8, 0]], width=.2, fill='#ffffff')]
+        report, _ = self.run_map(charts, items)
+        risky = {r['id']: r for r in report['risky_items']}
+        self.assertIn('hidden-under-other-surface', risky['under-lid']['ground'])
+        self.assertNotIn('open', risky)
+
     def test_steep_faces_are_classed(self):
         charts = [dict(id='all', u='x', v='z', nodes=['body'])]
         report, _ = self.run_map(charts, [dict(id='f', type='polygon', chart='all', points=[[-2, -1], [2, -1], [2, 1]], fill='#ffffff')])
