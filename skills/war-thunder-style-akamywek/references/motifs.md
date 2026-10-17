@@ -41,7 +41,7 @@
 
 ## 用 vector_paint.py 实现
 
-`examples/j16-nested-chevrons.json` 是双发侧卫的完整示例：深色中线通道、签名色马赛克机头被 4 层白色嵌套 V 刺穿、伴线组、空心回声、翼面马赛克加翼尖淡染条纹、垂尾白红平行带。`examples/j16-key-sequence.json` 是琴键序列加半调的示例。换机型时：
+`examples/j16-nested-chevrons.json` 是双发侧卫的完整示例：深色中线通道、签名色马赛克机头被 4 层白色嵌套 V 刺穿、伴线组、空心回声、翼面马赛克加翼尖淡染条纹、垂尾白红平行带。`examples/j16-key-sequence.json` 是琴键序列加半调的示例。`examples/j16-chen-full-livery_build_design.py` 是一架完整涂装的生成脚本（两翼与两侧外垂尾立绘、回声脸、字组、机腹、侧面），可看各图层和左右镜像怎么写。换机型时：
 
 1. 改 `charts` 里的节点名和材质名，图表轴要躺在表面里（机背 `x/abs_z`，侧面和垂尾 `x/y`）；
 2. 按新机身长度缩放坐标；

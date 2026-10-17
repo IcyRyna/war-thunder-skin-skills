@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose pierced by four nested white V, twin companion lines, hollow echoes, wing mosaic with two tint stripes, fin white/red bands. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes.",
+ "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose pierced by four nested white V, twin companion lines, hollow echoes, wing mosaic with two tint stripes, fin white/red bands. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes. Fin bands here are a colour/line study for inner faces; outer fins take portraits in a full livery (see j16-chen-full-livery_build_design.py).",
  "supersample": 4,
  "palette": {
   "base": "#333334",
