@@ -84,12 +84,15 @@
     <polygon points="600,292 618,292 538,528 520,528" fill="#ac5e6e"/>
     <polygon points="648,292 666,292 586,528 568,528" fill="#ac5e6e"/>
   </g>
-  <!-- 8 fin parallel bands meeting at a V -->
-  <clipPath id="c8"><rect x="724" y="292" width="220" height="236"/></clipPath>
+  <!-- 8 inner fin: leading-edge mosaic wedge, white lance, companion, root halftone -->
+  <clipPath id="c8"><polygon points="758,518 878,304 930,304 936,518"/></clipPath>
+  <polygon points="758,518 878,304 930,304 936,518" fill="#3a3c40"/>
   <g clip-path="url(#c8)">
-    <polygon points="740,410 900,300 930,300 770,410 930,520 900,520" fill="#f0f0ee"/>
-    <polygon points="786,410 946,300 972,300 812,410 972,520 946,520" fill="#b73742"/>
-    <polygon points="828,410 988,300 1014,300 854,410 1014,520 988,520" fill="#f0f0ee"/>
+    <polygon points="748,522 878,298 892,300 826,522" fill="url(#tri)"/>
+    <polygon points="842,506 866,430 890,344 870,432" fill="#f0f0ee"/>
+    <polygon points="858,508 878,448 900,386 882,452" fill="#c33a46"/>
+    <g fill="#a52e39"><polygon points="828,512 838,512 833,503"/><polygon points="842,512 850,512 846,505"/><polygon points="854,512 860,512 857,507"/>
+      <polygon points="832,498 840,498 836,491"/><polygon points="845,498 851,498 848,493"/><polygon points="836,484 842,484 839,479"/></g>
   </g>
   <g font-size="14" fill="#202020">
     <text x="16" y="272">① 嵌套 V＋签名色楔形插入</text>
@@ -99,6 +102,6 @@
     <text x="16" y="548">⑤ 实心楔形的空心回声</text>
     <text x="252" y="548">⑥ 计数序列、小箭头、双色词</text>
     <text x="488" y="548">⑦ 翼尖深带内两条淡染条纹</text>
-    <text x="724" y="548">⑧ 垂尾白-签名色-白平行带</text>
+    <text x="724" y="548">⑧ 垂尾内侧：前缘楔形＋长针</text>
   </g>
 </svg>
