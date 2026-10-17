@@ -1,7 +1,8 @@
 import unittest
 import numpy as np
 from compare_skin import channel_metrics, normal_metrics
-from composa_mcp import McpError, validate_required_arguments
+import io
+from composa_mcp import McpError, tolerant_console, validate_required_arguments
 
 
 class ComparisonTests(unittest.TestCase):
@@ -29,6 +30,15 @@ class ComparisonTests(unittest.TestCase):
         with self.assertRaises(McpError):
             validate_required_arguments(tool,{'name':'UV wire'})
         validate_required_arguments(tool,{'layer':'1239a4d3','name':'UV wire'})
+
+
+    def test_console_progress_survives_legacy_code_page(self):
+        stream=io.TextIOWrapper(io.BytesIO(),encoding='cp950')
+        with self.assertRaises(UnicodeEncodeError):
+            stream.write('岛'); stream.flush()
+        stream=io.TextIOWrapper(io.BytesIO(),encoding='cp950')
+        tolerant_console(stream)
+        stream.write('机背上表面岛'); stream.flush()
 
 
 if __name__=='__main__':

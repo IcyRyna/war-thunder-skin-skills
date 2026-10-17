@@ -22,9 +22,11 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 
 ## 按需读取参考
 
+新作、换底和任何美术修订先读 [审美基线](references/aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。用户点名风格时同时加载对应风格 skill（如 `war-thunder-style-akamywek`），风格数值优先。
+
 - [素材与布局](references/assets-and-layout.md)：找图、来源、有效细节和原图适配。
 - [美术设计](references/art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
-- [线条与配色](references/linework-and-color.md)：色场、宽带、负形、伴线与颜色层级。
+- [线条与配色](references/linework-and-color.md)：母形、分支带、序列、伴线的构造顺序，`vector_paint.py` 设计稿与颜色。
 - [UV 与材质](references/materials-and-uv.md)：干净重涂、完整承载面、结构、通道和受光。
 - [编辑工作流](references/editor-workflow.md)：原生工程、SVG 导入和 Composa 会话恢复。
 - [图像辅助编辑](references/image-assisted-editing.md)：任务需要图像模型时的输入、保护域和输出检查。
@@ -36,8 +38,8 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 ## 制作中的关键决策
 
 1. **先确定素材和真实承载面。** 保护角色识别与所选动作连接，同时在整机尺度取得足够主视觉重量。按 [美术设计](references/art-direction.md) 安排表面分工；指定双翼人物、尾面或线条密度逐项落实。
-2. **先大形后细节。** 组织人物、字、色场与路径，初稿即看模型和全图粗漏。新作或换底先检查新底色、完整表面与必要结构，再进入图文细化。
-3. **保存制作源。** 人物、文字、色场、结构与材质遮罩按职责分层；保存原图及独立 SVG。栅格导入不等于矢量仍可编辑。
+2. **先大形后细节。** 先用深、中、亮三档色块定大形，眯眼检查通过再放人物、构线、加纹理和字；初稿即看模型和全图粗漏。每轮都在编辑器里打开参考与当前展开图逐岛对照，见 [审美基线](references/aesthetics.md#在编辑器里逐岛看展开图)。
+3. **保存制作源。** 按 [图层结构](references/aesthetics.md#图层结构) 分层；线条和色场保存 `vector_paint.py` 设计稿与 SVG，人物保存原图。全部线条合成一张栅格层不算可编辑。
 4. **保留资源契约。** 从 BLK 确认资源和 wildcard；保留原 UV、比例、部件变换与材质分组。RGB、颜色 alpha 与打包材质分别处理。共享纹素通过图案一致性、裁切、位置或来源优先级解决，不重排原 UV。
 5. **用实际输出关闭问题。** atlas 检查形状与采样，模型检查表面、遮挡和构图，材质检查对应受光。每项要求保留通过、失败或未检查及具体证据；必需项能补看就补看，已知缺陷修好再复查。
 6. **交付并保留评价边界。** 原生工程、实际贴图、BLK 和预览相互对应。技术合规、基本识别／构图、用户美术评价分别记录；作品状态与当前版本遵循项目登记，不把文件存在、局部通过或自评分当成整套认可。
@@ -54,6 +56,10 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
+| `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
+| `scripts/structure_layer.py` | 从原机法线通道提取干净的面板线与铆钉结构层；NumPy、Pillow |
+| `scripts/atlas_palette.py` | 多张展开图同一归一化区域的色族面积对照；NumPy、Pillow |
+| `scripts/style_board.py` | 整机渲染与参考同尺寸并排：原色、明暗、眯眼三行；NumPy、Pillow |
 | `scripts/surface_preview.py` | 单材质原 UV 预览与回烘；NumPy、Pillow、Numba，prepare 需外置解码器 |
 | `scripts/scene_preview.py` | 多材质整机场景与补充相机；NumPy、Pillow、Numba |
 | `scripts/finish_preview.py` | 两环境与法线隔离的近似材质对照；NumPy、Pillow、Numba |

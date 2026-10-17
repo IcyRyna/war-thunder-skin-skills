@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520" font-family="Microsoft YaHei, Arial, sans-serif">
+  <title>自绘示意：线条构造——可用与避免</title>
+  <rect width="960" height="520" fill="#f2f2f2"/>
+  <!-- GOOD panel -->
+  <text x="24" y="34" font-size="20" fill="#202020" font-weight="bold">可用：一个母形派生出全部线条</text>
+  <rect x="24" y="48" width="440" height="400" fill="#424347"/>
+  <clipPath id="g"><rect x="24" y="48" width="440" height="400"/></clipPath>
+  <g clip-path="url(#g)">
+    <!-- deep spine channel -->
+    <polygon points="24,232 464,214 464,282 24,264" fill="#212421"/>
+    <!-- parent signature band, tapering wedge -->
+    <polygon points="24,60 464,150 464,196 24,128" fill="#ff1663"/>
+    <polygon points="24,60 464,150 464,166 24,84" fill="#e81459" opacity=".55"/>
+    <!-- three derivative bands split at one shared angle, miter-cut parallel to the parent edge -->
+    <polygon points="150,140 300,171 286,182 150,154" fill="#ff1663"/>
+    <polygon points="150,164 270,189 256,200 150,178" fill="#ff1663"/>
+    <polygon points="150,188 240,207 226,218 150,202" fill="#ff1663"/>
+    <!-- triangle halftone dissolve from parent into base -->
+    <g fill="#ff1663">
+      <polygon points="320,206 330,206 325,198"/><polygon points="336,206 346,206 341,198"/><polygon points="352,206 362,206 357,198"/>
+      <polygon points="370,207 378,207 374,201"/><polygon points="386,207 394,207 390,201"/><polygon points="402,208 408,208 405,203"/>
+      <polygon points="420,208 424,208 422,205"/><polygon points="436,209 439,209 437.5,207"/>
+      <polygon points="328,220 336,220 332,214"/><polygon points="344,220 352,220 348,214"/><polygon points="362,221 368,221 365,216"/>
+      <polygon points="380,221 385,221 382.5,217"/><polygon points="398,222 401,222 399.5,219"/>
+    </g>
+    <!-- piano keys: one triangle cut by equal parallel gaps -->
+    <polygon points="60,300 120,300 120,318" fill="#e7e7e7"/>
+    <polygon points="130,300 190,300 190,339 130,321" fill="#e7e7e7"/>
+    <polygon points="200,300 260,300 260,360 200,342" fill="#e7e7e7"/>
+    <polygon points="270,300 330,300 330,381 270,363" fill="#e7e7e7"/>
+    <!-- companion hairlines tapering to real points -->
+    <polygon points="60,400 420,330 420,333 60,404" fill="#ff1663"/>
+    <polygon points="60,414 380,352 60,416" fill="#ff1663"/>
+    <!-- panel lines and rivets stay on top -->
+    <g stroke="#1b1b1d" stroke-width="1" fill="none" opacity=".7">
+      <path d="M24,290 L464,290"/><path d="M240,48 L240,448"/>
+    </g>
+    <g fill="#1b1b1d" opacity=".7"><circle cx="250" cy="300" r="1.2"/><circle cx="250" cy="310" r="1.2"/><circle cx="250" cy="320" r="1.2"/><circle cx="250" cy="330" r="1.2"/><circle cx="250" cy="340" r="1.2"/></g>
+  </g>
+  <g font-size="13" fill="#202020">
+    <text x="24" y="470">① 宽母形渐尖，内部有轻微明度渐变</text>
+    <text x="24" y="488">② 分支带同角度劈出，端头沿母形边斜切</text>
+    <text x="24" y="506">③ 琴键＝一个三角按等距缝切开；伴线渐尖到真实尖点；半调三角逐级缩小</text>
+  </g>
+  <!-- AVOID panel -->
+  <text x="496" y="34" font-size="20" fill="#202020" font-weight="bold">避免：许多独立的等粗笔画</text>
+  <rect x="496" y="48" width="440" height="400" fill="#424347"/>
+  <clipPath id="b"><rect x="496" y="48" width="440" height="400"/></clipPath>
+  <g clip-path="url(#b)" fill="none" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M510,110 C600,100 660,130 760,120 S880,140 930,128" stroke="#e7e7e7" stroke-width="10"/>
+    <path d="M510,132 C600,122 660,150 760,142 S880,160 930,150" stroke="#c9a14a" stroke-width="7"/>
+    <path d="M510,150 C600,142 660,170 760,160 S880,178 930,168" stroke="#c0392b" stroke-width="7"/>
+    <path d="M510,168 C600,160 660,188 760,180" stroke="#9aa0a6" stroke-width="6"/>
+    <path d="M530,250 L600,236 L640,262 L700,240 L735,270 L800,246 L840,262" stroke="#b8d3e0" stroke-width="7"/>
+    <polygon points="600,330 700,312 800,330 800,370 700,388 600,370" stroke="#f0ece3" stroke-width="6"/>
+    <rect x="850" y="300" width="70" height="90" fill="#b3202f" stroke="none"/>
+    <rect x="880" y="320" width="70" height="90" fill="#8f1a28" stroke="none"/>
+  </g>
+  <g font-size="13" fill="#202020">
+    <text x="496" y="470">✗ 四色等粗平行线、圆头收尾，像马克笔</text>
+    <text x="496" y="488">✗ 与机体无关的折角折线；悬空的描边框</text>
+    <text x="496" y="506">✗ 两种相近红互相发闷；没有面板线，像塑料</text>
+  </g>
+</svg>

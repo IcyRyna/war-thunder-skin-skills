@@ -433,6 +433,17 @@ def validate_required_arguments(tool: dict[str, Any], arguments: dict[str, Any])
         raise McpError(f"Tool {tool['name']} is missing required argument(s): {', '.join(missing)}")
 
 
+def tolerant_console(*streams) -> None:
+    """Keep progress printing from failing on legacy Windows code pages.
+
+    A completed edit must not be reported as failed because the console cannot
+    encode CJK layer names or text returned by the editor.
+    """
+    for stream in streams or (sys.stdout, sys.stderr):
+        if hasattr(stream, "reconfigure"):
+            stream.reconfigure(errors="backslashreplace")
+
+
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("--exe", type=Path, help="Composa executable; defaults to COMPOSA_EXE or discovery")
@@ -441,6 +452,7 @@ def main() -> int:
     parser.add_argument("--calls", type=Path, help="JSON array of tool calls; omitted to list live tools")
     parser.add_argument("--timeout", type=float, default=30, help="Seconds per request (1-60)")
     args = parser.parse_args()
+    tolerant_console()
     client = None
     out = None
     session = None
