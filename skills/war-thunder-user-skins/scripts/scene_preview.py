@@ -18,6 +18,10 @@ from pathlib import Path
 from typing import Any
 
 import numpy as np
+import os
+import tempfile
+# Keep Numba's on-disk cache out of the Skill folder (and any installed copy).
+os.environ.setdefault('NUMBA_CACHE_DIR', os.path.join(tempfile.gettempdir(), 'war-thunder-user-skins-numba'))
 from numba import njit
 from numba.typed import List
 from PIL import Image
