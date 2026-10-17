@@ -22,7 +22,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 
 ## 按需读取参考
 
-新作、换底和任何美术修订先读 [审美基线](references/aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。同时读 [审美纠偏](references/taste-corrections.md)：模型在字体、配色、布局上的固定偏向和改法；设计稿写好后跑 `scripts/design_lint.py`，交付前过它的闸门。用户点名风格时同时加载对应风格 skill（如 `war-thunder-style-akamywek`），风格数值优先。
+新作、换底和任何美术修订先读 [审美基线](references/aesthetics.md)：默认风格、配色面积、线条构造、人物尺度、质感、在编辑器里逐岛看展开图的方法和常见失败表。没有用户指定时按它做。同时读 [审美纠偏](references/taste-corrections.md)：模型在字体、配色、布局上的固定偏向和改法；设计稿写好后跑 `scripts/design_lint.py`，交付前过它的闸门。用户点名某种风格或作者、且装有该风格的独立 skill 时，改用那个 skill：它自带完整流程和工具，不和本 skill 同时加载。
 
 - [素材与布局](references/assets-and-layout.md)：找图、来源、有效细节和原图适配。
 - [美术设计](references/art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
