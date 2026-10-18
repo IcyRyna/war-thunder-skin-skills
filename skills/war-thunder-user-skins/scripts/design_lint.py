@@ -292,7 +292,9 @@ def check_shapes(design, report):
             # Mosaic fields are areas, not lines; only edges of line-like items count toward the angle family.
             if not (isinstance(item.get('fill'), dict) and item['fill'].get('pattern')):
                 by_chart.setdefault(chart, []).extend(segments)
-            if whiteish(item.get('fill'), palette) and 'echo' not in str(where).lower():
+            # Grouped hairlines the reference draws on purpose: echoes of the main white figure and the fin's outline sequence.
+            grouped = any(k in str(where).lower() for k in ('echo', 'sequence'))
+            if whiteish(item.get('fill'), palette) and not grouped:
                 if item.get('type') == 'stroke':
                     length = sum(math.dist(p, q) for p, q in zip(pts, pts[1:]))
                     thin = float(item.get('width', 0)) < .12 and length > 1.0
@@ -305,14 +307,15 @@ def check_shapes(design, report):
                     report.add('warn', 'thin-white-line', where, f'thin white line ({size}) reads as a scratch or a racing pinstripe',
                                'White is for shapes with body (0.15 m or wider at the root) grouped at the main white figure. '
                                'Draw long thin lines in the signature colour along a colour-field edge, or make it an echo of the '
-                               'main white figure (same apex and angle; put "echo" in the id).')
+                               'main white figure (same apex and angle; put "echo" in the id) or part of an outline sequence (put "sequence" in the id).')
             if item.get('type') != 'stroke':
                 continue
             key = (chart, tuple(pts))
             strokes.setdefault(key, []).append(where)
-            if len(pts) > 2 and math.dist(pts[0], pts[-1]) < 1e-6 and 'echo' not in str(where).lower():
+            if len(pts) > 2 and math.dist(pts[0], pts[-1]) < 1e-6 and not grouped:
                 report.add('warn', 'outline-frame', where, 'closed outline on its own reads as a sticker frame',
-                           'Make it a solid wedge or a negative cut, or an echo of a neighbouring solid shape (same angle, smaller; put "echo" in the id).')
+                           'Make it a solid wedge or a negative cut, an echo of a neighbouring solid shape (same angle, smaller; put "echo" in the id), '
+                           'or one of a row of same-shape outlines beside a row of solid shapes (put "sequence" in the id).')
             if float(item.get('width', 0)) >= .06 and item.get('taper', 'none') == 'none':
                 report.add('warn', 'equal-width-band', where, f'{float(item["width"]):.2f} m stroke with no taper looks like a marker line',
                            'Draw wide bands as polygons that widen and narrow, or taper the stroke.')

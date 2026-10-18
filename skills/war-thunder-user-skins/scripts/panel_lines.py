@@ -13,6 +13,10 @@ flat, so the lines read only as fine print, never as dark grooves.
          a dark coat, darker on mid and light paint (or forced with --on-dark).  Texels covered by any
          --exclude layer (character art, type, white shapes) and protected texels are left untouched.
          Writes color.png, lines-mask.png, rivets-mask.png and receipt.json.
+Quality gate: trace measures its lines at 8192 scale (median length, share of short stubs, small kinks per
+1000 px) and writes the verdict into lines.json; apply refuses a trace that failed unless --accept-failed-trace.
+Tracing a weathered 2048 template pixel by pixel gave stubs, stair-stepped diagonals and stain lines on the
+J-10C (Laevatain v3: median 112 px, 55% shorter than 120 px); the user called the result dirty and rough.
 Dependencies: NumPy, Pillow, Numba.
 """
 from __future__ import annotations
@@ -261,6 +265,32 @@ def _join(chains: list[np.ndarray], gap: float) -> list[np.ndarray]:
     return out
 
 
+QUALITY = dict(min_median_px=240, max_short_share=.20, short_px=120, max_kinks_per_1000px=1.0)
+
+
+def quality(polylines: list, size: tuple[int, int]) -> dict:
+    """Line quality in pixels at 8192: long, straight, unbroken lines pass; stubs and wobbly chains fail."""
+    scale = 8192 / size[0]
+    lengths, kinks = [], 0
+    for pl in polylines:
+        pts = np.array(pl) * size * scale
+        seg = np.diff(pts, axis=0)
+        lengths.append(float(np.hypot(*seg.T).sum()))
+        for a, b in zip(seg[:-1], seg[1:]):
+            c = float(a @ b / (np.hypot(*a) * np.hypot(*b) + 1e-12))
+            if 5 < math.degrees(math.acos(max(-1., min(1., c)))) < 40:
+                kinks += 1
+    if not lengths:
+        return dict(passed=False, lines=0, reason='no lines')
+    lengths = np.array(lengths)
+    result = dict(lines=len(lengths), median_px_8192=round(float(np.median(lengths)), 1),
+                  short_share=round(float((lengths < QUALITY['short_px']).mean()), 3),
+                  kinks_per_1000px=round(1000 * kinks / float(lengths.sum()), 2), thresholds=QUALITY)
+    result['passed'] = bool(result['median_px_8192'] >= QUALITY['min_median_px'] and result['short_share'] <= QUALITY['max_short_share']
+                            and result['kinks_per_1000px'] <= QUALITY['max_kinks_per_1000px'])
+    return result
+
+
 def trace(args) -> dict:
     src = Image.open(args.color).convert('RGB')
     w, h = src.size
@@ -318,14 +348,15 @@ def trace(args) -> dict:
         draw.line([(x * w, y * h) for x, y in pl], fill=(255, 0, 0), width=1)
     for x, y in rivets:
         draw.point((x * w, y * h), fill=(0, 255, 255))
+    verdict = quality(polylines, (w, h))
     data = dict(schema_version=1, tool='panel_lines.py', source_size=[w, h], coordinates='normalised UV, origin top-left',
-                lines=polylines, rivets=[[round(x, 6), round(y, 6)] for x, y in rivets])
+                quality=verdict, lines=polylines, rivets=[[round(x, 6), round(y, 6)] for x, y in rivets])
     receipt = dict(schema_version=1, tool='panel_lines.py', mode='trace', source=str(Path(args.color).resolve()),
                    protect=str(Path(args.protect).resolve()) if args.protect else None,
                    settings=dict(threshold=args.threshold, max_fill=args.max_fill, max_rivet=args.max_rivet,
                                  min_length=args.min_length, tolerance=args.tolerance, min_segment=args.min_segment,
                                  join_gap=args.join_gap, rivet_spacing=args.rivet_spacing),
-                   lines=len(polylines), rivets=len(rivets),
+                   lines=len(polylines), rivets=len(rivets), quality=verdict,
                    line_length_px=round(sum(float(np.hypot(*np.diff(np.array(p) * [w, h], axis=0).T).sum()) for p in polylines), 1))
     outputs = [out / 'lines.json', out / 'trace-preview.png', out / 'receipt.json']
     inputs = [Path(args.color)] + ([Path(args.protect)] if args.protect else [])
@@ -357,6 +388,11 @@ def _render(data, size, width_px, rivet_px, ss=2):
 
 def apply(args) -> dict:
     data = json.loads(Path(args.lines).read_text(encoding='utf-8'))
+    verdict = data.get('quality') or {}
+    if not verdict.get('passed') and not args.accept_failed_trace:
+        raise ValueError(f'Traced lines failed the quality gate ({verdict or "no quality record; re-trace"}). Broken, stair-stepped '
+                         'lines read as dirt in game: draw no panel lines, or pass --accept-failed-trace after a 1:1 check '
+                         'next to the reference (detail_sheet.py).')
     color = Image.open(args.color).convert('RGBA')
     W, H = color.size
     scale = W / 8192
@@ -383,6 +419,7 @@ def apply(args) -> dict:
     out[..., :3] = np.clip(c[..., :3] + shift[..., None] * alpha[..., None], 0, 255)
     result = Image.fromarray(np.rint(out).astype(np.uint8), 'RGBA')
     receipt = dict(schema_version=1, tool='panel_lines.py', mode='apply', lines=str(Path(args.lines).resolve()),
+                   trace_quality=verdict, accepted_failed_trace=bool(args.accept_failed_trace),
                    color=str(Path(args.color).resolve()), size=[W, H], exclude=[str(Path(p).resolve()) for p in args.exclude or []],
                    settings=dict(width_px_at_8192=args.width, rivet_px_at_8192=args.rivet_size, rivet_strength=args.rivet_strength,
                                  on_dark=args.on_dark, dark_below=args.dark_below, light_shift=args.light_shift, dark_shift=args.dark_shift),
@@ -428,6 +465,7 @@ def main(argv=None):
     a.add_argument('--dark-below', type=float, default=60, help='Paint luminance below which --on-dark light lightens (default 60)')
     a.add_argument('--light-shift', type=float, default=30, help='Levels added on dark paint (default 30)')
     a.add_argument('--dark-shift', type=float, default=24, help='Levels removed on other paint (default 24)')
+    a.add_argument('--accept-failed-trace', action='store_true', help='Draw a trace that failed the quality gate (only after a 1:1 check)')
     a.add_argument('--out', required=True, help='New or empty output directory')
     args = parser.parse_args(argv)
     receipt = trace(args) if args.mode == 'trace' else apply(args)

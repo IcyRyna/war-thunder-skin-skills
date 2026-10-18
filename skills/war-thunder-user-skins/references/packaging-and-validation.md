@@ -47,6 +47,20 @@ python scripts/inspect_skins.py preview textures/body.tga --out output/texture-c
 
 按用户约定做离线或游戏检查，未实机、未知透明度、活动／损伤状态和运行时过滤明确保留范围。交付说明给实际位置、安装方式、变更、检查与限制；发布与第三方发送按授权。
 
+## 原尺寸检查
+
+8192 的颜色图缩到 1600 px 看，2 px 的线、断线、台阶锯齿、立绘边上的灰雾和原厂贴图碎片都看不出来；莱万汀 v3 就是这样带着脏线交付的。交付前在原尺寸下看每个部位：
+
+```powershell
+python -B scripts/detail_sheet.py --color output/paint/color.png --px-per-m 520 --region spine=3900,3300,480 --region wingtip=1200,5600,480 --auto 4 --ref F-2A=reference/f_2a.dds --ref-px-per-m 550 --ref-region spine=2700,3550,480 --out output/detail-v1
+python -B scripts/composa_mcp.py --calls output/detail-v1/composa-calls.json --out output/composa-detail-v1
+```
+
+- 区域写成 `名字=x,y,宽`（像素，高取宽的 2/3）。每个部位至少一处：主图形、翼面、尾面、侧面细线、字、立绘边缘；`--auto N` 再加 N 处细节最多的地方，那里最先暴露问题。
+- 给了 `--px-per-m` 和 `--ref-px-per-m`，参考截图会缩放到同样的毫米／像素，两边并排时同样宽的线看起来一样宽。贴图密度从几何算：UV 面积乘贴图边长平方，除以表面面积，再开方。
+- `composa-calls.json` 在 Composa 里打开颜色图并按原尺寸渲染每个区域；颜色图是 TGA 或 DDS 时加 `--composa-copy` 先出一张 PNG。
+- 看：边缘是否只有 1–2 px 抗锯齿，同类线是否一样宽，有没有断线、台阶、散点、灰雾、原厂贴图碎片和漏色边。有就回到设计稿或素材改，不靠缩小图交付。
+
 ## 工程可继续编辑
 
 将保存工程复制到新路径，核对复制品身份后重开，保护交付原件。检查关键图层、文字与像素，做一次实际可逆的文字编辑或位置变换并撤销，重新导出比较；无对应能力时说明替代操作与限制。保存／ZIP成功不证明可编辑。

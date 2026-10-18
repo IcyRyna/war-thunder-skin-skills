@@ -59,13 +59,37 @@ class PanelLineTests(unittest.TestCase):
         Image.fromarray(art, 'RGBA').save(self.root / 'art.png')
         args = panel_lines.argparse.Namespace(lines=self.root / 'trace/lines.json', color=self.root / 'c.png', exclude=[str(self.root / 'art.png')],
                                              protect=None, width=8.0, rivet_size=8.0, rivet_strength=.6, on_dark='light', dark_below=60,
-                                             light_shift=30, dark_shift=24, out=self.root / 'apply')
+                                             light_shift=30, dark_shift=24, accept_failed_trace=False, out=self.root / 'apply')
         panel_lines.apply(args)
         out = np.asarray(Image.open(self.root / 'apply/color.png').convert('RGB')).astype(int)
         self.assertGreater(out[80, 150, 0], 46 + 10)        # top edge (y=40 -> 80) over the dark coat: lighter
         self.assertLess(out[80, 350, 0], 180 - 10)          # same edge over light paint: darker
         self.assertEqual(out[240, 150, 0], 46)              # under the art layer: untouched
         self.assertEqual(out[400, 100, 0], 46)              # away from any line: untouched
+
+
+    def test_trace_records_quality_and_apply_refuses_a_failed_trace(self):
+        data = self.trace()
+        self.assertTrue(data['quality']['passed'], data['quality'])     # one long clean panel outline
+        stubs = Image.new('RGB', (1024, 1024), (170, 175, 178))
+        d = ImageDraw.Draw(stubs)
+        for i in range(24):                                             # short broken dashes (~70 px at 8192), like a weathered template
+            x, y = 40 + (i % 6) * 150, 60 + (i // 6) * 200
+            d.line((x, y, x + 8, y + 3), fill=(120, 124, 126), width=1)
+        stubs.save(self.root / 's.png')
+        args = panel_lines.argparse.Namespace(color=self.root / 's.png', protect=None, threshold=6, max_fill=.55, max_rivet=6,
+                                             min_length=6, tolerance=1.0, min_segment=3.0, join_gap=8, rivet_spacing=7,
+                                             out=self.root / 'trace-stubs')
+        panel_lines.trace(args)
+        bad = json.loads((self.root / 'trace-stubs/lines.json').read_text(encoding='utf-8'))
+        self.assertFalse(bad['quality']['passed'], bad['quality'])
+        Image.new('RGBA', (512, 512), (46, 46, 48, 255)).save(self.root / 'c2.png')
+        apply = dict(lines=self.root / 'trace-stubs/lines.json', color=self.root / 'c2.png', exclude=[], protect=None, width=2.0,
+                     rivet_size=2.5, rivet_strength=.6, on_dark='light', dark_below=60, light_shift=30, dark_shift=24)
+        with self.assertRaises(ValueError):
+            panel_lines.apply(panel_lines.argparse.Namespace(**apply, accept_failed_trace=False, out=self.root / 'a1'))
+        receipt = panel_lines.apply(panel_lines.argparse.Namespace(**apply, accept_failed_trace=True, out=self.root / 'a2'))
+        self.assertTrue(receipt['accepted_failed_trace'])
 
 
 if __name__ == '__main__':

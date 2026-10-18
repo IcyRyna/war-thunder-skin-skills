@@ -98,6 +98,19 @@ class DesignLintTests(unittest.TestCase):
         result, codes = self.lint(design)
         self.assertEqual(result['hits'], [], result['hits'])
 
+    def test_outline_sequence_beside_solid_row_is_allowed(self):
+        """F-2A fin: a row of solid parallelograms beside a row of 1 cm white outlines of the same shape."""
+        solid = [dict(id=f'fin-solid-{i}', type='polygon', chart='top', points=[[i, 0], [i + .6, 0], [i + .9, .4], [i + .3, .4]], fill='sig')
+                 for i in range(3)]
+        outline = [dict(id=f'fin-sequence-{i}', type='stroke', chart='top', width=.009, fill='hi',
+                        points=[[i, .6], [i + .6, .6], [i + .9, 1], [i + .3, 1], [i, .6]]) for i in range(3)]
+        lone = dict(id='lone-frame', type='stroke', chart='top', width=.009, fill='hi', points=[[5, 0], [6, 0], [6, 1], [5, 1], [5, 0]])
+        design = dict(schema_version=1, charts=[CHART], palette=dict(hi='#eef0f2', sig='#b7303c'),
+                      layers=[dict(name='fin', items=solid + outline + [lone])])
+        result, _ = self.lint(design)
+        frames = {h['where'] for h in result['hits'] if h['code'] == 'outline-frame'}
+        self.assertEqual(frames, {'lone-frame'})
+
 
 if __name__ == '__main__':
     unittest.main()
