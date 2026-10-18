@@ -5,7 +5,11 @@ own metre coordinates and classed as flat (projection keeps >= 80% of the area),
 curving (50-80%), steep (< 50%: widths and patterns streak there), protected
 (mechanical texels from --protect), lost (the original UV shares the texel
 with an earlier chart, and the earlier chart wins it, as in vector_paint) or
-hidden (inner faces covered by the skin, canopy or another chart's surface).  The
+hidden (inner faces covered by the skin, canopy or another chart's surface).  Seams
+(a narrow sliver between two parts of this chart that this chart does not paint, such
+as the side wall of a raised dorsal strip: another chart or nothing paints it, so it
+breaks the item as a thin line in game) are drawn in magenta, and every item that
+crosses one is listed under seam_items.  The
 design's polygons, strokes and image/text placements are drawn on top and
 scored by item type: colour fields are at risk on steep or lost ground (they
 may bleed past the real edge on purpose); lines, type and portraits also when
@@ -29,8 +33,10 @@ from vector_paint import parse_axis, select_charts, stroke_outline
 
 Image.MAX_IMAGE_PIXELS = 8192 * 8192
 OFF, FLAT, CURVING, STEEP, SHARED, PROTECTED, HIDDEN = range(7)
-NAMES = ['off-surface', 'flat', 'curving', 'steep', 'lost-to-earlier-chart', 'protected', 'hidden-under-other-surface']
-COLORS = [(250, 250, 250), (200, 205, 210), (236, 190, 110), (220, 80, 70), (165, 110, 210), (80, 140, 230), (70, 72, 80)]
+SEAM = 7
+NAMES = ['off-surface', 'flat', 'curving', 'steep', 'lost-to-earlier-chart', 'protected', 'hidden-under-other-surface', 'seam']
+COLORS = [(250, 250, 250), (200, 205, 210), (236, 190, 110), (220, 80, 70), (165, 110, 210), (80, 140, 230), (70, 72, 80), (230, 0, 200)]
+SEAM_REACH = .05   # a visible sliver this chart does not paint, with its own surface this close (m) on both sides
 RISKY = {'polygon': (STEEP, SHARED), 'stroke': (OFF, STEEP, SHARED, PROTECTED, HIDDEN),
          'text': (OFF, STEEP, SHARED, PROTECTED, HIDDEN), 'image': (STEEP, SHARED, PROTECTED)}
 # Large colour fields may tuck under wing roots or fairings; they count as at risk only when less
@@ -113,6 +119,19 @@ def item_shapes(design, chart_ids):
     return shapes
 
 
+def find_seams(wall, own, reach):
+    """Visible faces outside the chart with its own surface on both sides within reach: unpainted seams."""
+    seams = np.zeros(wall.shape, bool)
+    for axis in (0, 1):
+        before = np.zeros(wall.shape, bool)
+        after = np.zeros(wall.shape, bool)
+        for k in range(1, reach + 1):
+            before |= np.roll(own, k, axis=axis)
+            after |= np.roll(own, -k, axis=axis)
+        seams |= wall & before & after
+    return seams
+
+
 def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scale, font):
     world = geometry['triangles'].astype(np.float64)
     tris = np.flatnonzero(assignment == index)
@@ -137,7 +156,7 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
               (uv_all[:, :, 1].max(axis=1) >= lo[1]) & (uv_all[:, :, 1].min(axis=1) <= hi[1]))
     fixed = chart.get('facing') and parse_axis(chart['facing'])[0] == depth_axis and parse_axis(chart['facing'])[1] != 2
     groups = [None] if fixed else sorted(set(np.sign(centroid[tris]).astype(int)) - {0}) or [None]
-    rank = np.array([0, 1, 2, 4, 4, 3, 5])
+    rank = np.array([0, 1, 2, 4, 4, 3, 5, 6])
     grid = None
     for group in groups:
         mine = tris if group is None else tris[np.sign(centroid[tris]) == group]
@@ -154,16 +173,17 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         dummy_uv, texture = np.zeros((len(picked), 3, 2), np.float32), np.zeros((1, 1, 4), np.uint8)
         best_owners, kept = None, -1
         for handedness in (1., -1.):  # keep the winding under which this chart's own faces survive culling
-            _, _, owners = rasterize(screen, world[picked].astype(np.float32), dummy_uv, texture, width, height - header, handedness)
+            _, depth, owners = rasterize(screen, world[picked].astype(np.float32), dummy_uv, texture, width, height - header, handedness)
             count = int(np.isin(owners, np.flatnonzero(np.isin(picked, mine))).sum())
             if count > kept:
-                best_owners, kept = owners, count
+                best_owners, best_depth, kept = owners, depth, count
         owner_tri = np.where(best_owners >= 0, picked[np.maximum(best_owners, 0)], -1)
         layer = np.full(best_owners.shape, OFF, np.uint8)
         visible = owner_tri >= 0
         own = visible & (assignment[np.maximum(owner_tri, 0)] == index)
         layer[own] = classes[owner_tri[own]]
         layer[visible & ~own] = HIDDEN
+        layer[find_seams(visible & ~own, own, max(1, int(round(SEAM_REACH * scale))))] = SEAM
         layer = np.vstack([np.full((header, width), OFF, np.uint8), layer])
         grid = layer if grid is None else np.where(rank[layer] > rank[grid], layer, grid)
     rgb = Image.fromarray(np.asarray(COLORS, np.uint8)[grid], 'RGB')
@@ -182,17 +202,20 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         inside = grid[np.asarray(mask, bool)]
         if not inside.size:
             continue
-        counts = {NAMES[c]: round(float((inside == c).mean()), 3) for c in range(7) if (inside == c).any()}
+        counts = {NAMES[c]: round(float((inside == c).mean()), 3) for c in range(8) if (inside == c).any()}
         risk = float(np.isin(inside, RISKY[kind]).mean())
+        seam_px = int((inside == SEAM).sum())
         visible = float(np.isin(inside, (FLAT, CURVING, PROTECTED)).mean())
         if kind == 'polygon' and visible < MIN_VISIBLE:
             risk = max(risk, 1 - visible)
-        scores.append(dict(id=label, kind=kind, risky_share=round(risk, 3), ground=counts))
+        scores.append(dict(id=label, kind=kind, risky_share=round(risk, 3), ground=counts, seam_length_m=round(seam_px / scale, 2)))
     pen.text((6, 4), f'chart {chart["id"]}  u={chart["u"]} v={chart["v"]}  (metres)', fill=(0, 0, 0), font=font)
-    for i, (name, color) in enumerate(zip(NAMES, COLORS)):
-        pen.rectangle([6 + i * 175, 22, 20 + i * 175, 36], fill=color, outline=(0, 0, 0))
-        pen.text((24 + i * 175, 22), name, fill=(0, 0, 0), font=font)
-    totals = {NAMES[c]: round(float((grid == c).sum() / max(1, (grid != OFF).sum())), 3) for c in range(1, 7)}
+    x = 6
+    for name, color in zip(NAMES, COLORS):
+        pen.rectangle([x, 22, x + 14, 36], fill=color, outline=(0, 0, 0))
+        pen.text((x + 18, 22), name, fill=(0, 0, 0), font=font)
+        x += 34 + int(pen.textlength(name, font=font))
+    totals = {NAMES[c]: round(float((grid == c).sum() / max(1, (grid != OFF).sum())), 3) for c in range(1, 8)}
     return rgb, scores, totals
 
 
@@ -212,11 +235,12 @@ def run(args):
     font = load_font(13)
     charts = [c for c in design['charts'] if not args.chart or c['id'] in args.chart]
     outputs = [out / f'{c["id"]}.png' for c in charts] + [out / 'surface-map.json']
-    report = dict(schema_version=1, tool='surface_map.py', design=str(design_path), charts={}, risky_items=[], warnings=warnings,
+    report = dict(schema_version=1, tool='surface_map.py', design=str(design_path), charts={}, risky_items=[], seam_items=[], warnings=warnings,
                   classes=dict(flat='projection keeps >= 80% of area', curving='50-80%', steep='< 50%, lines and patterns streak',
                                **{'lost-to-earlier-chart': 'texel shared with an earlier chart, which wins it; reorder charts or move the item'},
                                protected='mechanical texels from --protect', **{'off-surface': 'no triangle of this chart',
-                  'hidden-under-other-surface': 'covered by skin, canopy or another chart seen from this side: never visible'}),
+                  'hidden-under-other-surface': 'covered by skin, canopy or another chart seen from this side: never visible',
+                  'seam': 'narrow sliver between two parts of this chart that another chart (or none) paints, e.g. the side wall of a raised dorsal strip; an item crossing it shows a thin break in game: keep motifs off it, end them at it, or make it the dark channel'}),
                   risk_rule=dict({k: [NAMES[c] for c in v] for k, v in RISKY.items()},
                                  fields=f'also at risk when less than {MIN_VISIBLE:.0%} is visible'))
     with ArtifactTransaction(outputs, inputs=inputs, label='surface-map') as transaction:
@@ -228,6 +252,8 @@ def run(args):
             image.save(staged[out / f'{chart["id"]}.png'])
             report['charts'][chart['id']] = dict(area_share=totals, items=scores, **quality[chart['id']])
             report['risky_items'] += [dict(chart=chart['id'], **s) for s in scores if s['risky_share'] > args.threshold]
+            report['seam_items'] += [dict(chart=chart['id'], id=s['id'], kind=s['kind'], seam_length_m=s['seam_length_m'])
+                                     for s in scores if s['seam_length_m'] >= getattr(args, 'seam_report', .1) and s['kind'] != 'image']
         report['risky_items'].sort(key=lambda s: -s['risky_share'])
         staged[out / 'surface-map.json'].write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         transaction.commit()
@@ -242,10 +268,14 @@ def main(argv=None):
     parser.add_argument('--chart', action='append', default=[], help='Only these chart ids (repeatable)')
     parser.add_argument('--scale', type=float, default=60, help='Pixels per metre (default 60)')
     parser.add_argument('--threshold', type=float, default=.15, help='Report items with more risky ground than this share (default 0.15)')
+    parser.add_argument('--seam-report', type=float, default=.1,
+                        help='List non-image items crossing at least this many metres of seam (default 0.1)')
     parser.add_argument('--out', type=Path, required=True, help='New or empty output directory')
     report = run(parser.parse_args(argv))
     for item in report['risky_items']:
         print(f"RISK {item['chart']:12} {item['id']:28} {item['risky_share']:.0%} on {item['ground']}")
+    for item in report['seam_items']:
+        print(f"SEAM {item['chart']:12} {item['id']:28} crosses {item['seam_length_m']:.2f} m of seam")
     if not report['risky_items']:
         print('No item over the risk threshold.')
 

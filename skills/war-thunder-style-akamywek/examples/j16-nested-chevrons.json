@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose pierced by four nested white V, twin companion lines, one hollow echo, wing mosaic with two tint stripes, inner-fin wedge. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with two signature companion lines (white stays on the wide nested V); outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes. Only one outline echo is kept: further echoes ran off the body edge onto nothing (surface_map off-surface). Revision 10: the V arms were twisted (inner edge offset the wrong way at the top, so each arm rendered as two crossing needles); fixed so every arm widens toward the nose.",
+ "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose, three nested white V whose arms are tapered spikes (12 degrees to the axis, widest end about 10% of the arm length, sharp tip at the centreline) and two staggered lozenge spikes beside them, twin companion lines, wing mosaic with two tint stripes, inner-fin wedge. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with two signature companion lines (white stays on the wide nested V); outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes. Revision 10: the V arms were twisted (inner edge offset the wrong way at the top, so each arm rendered as two crossing needles); fixed so every arm widens toward the nose. Revision 11: the V arms are now tapered spikes measured from the author's Mirage 2000 dorsal (the earlier constant-width 16-degree bars read as blunt road arrows), plus staggered lozenge spikes; the echo outline was dropped with them.",
  "supersample": 4,
  "palette": {
   "base": "#333334",
@@ -472,131 +472,114 @@
    ]
   },
   {
-   "name": "accent-chevrons",
+   "name": "accent-spikes",
    "items": [
     {
-     "id": "chevron-1",
+     "id": "vee-1",
      "type": "polygon",
      "chart": "body",
      "points": [
       [
-       -4.6,
+       -4.4,
        -0.05
       ],
       [
-       0.8,
-       1.55
+       -1.27,
+       0.665
       ],
       [
-       1.358,
-       1.55
-      ],
-      [
-       -3.9799999999999995,
-       -0.05
+       -1.203,
+       0.352
       ]
      ],
      "fill": "accent"
     },
     {
-     "id": "chevron-2",
+     "id": "vee-2",
      "type": "polygon",
      "chart": "body",
      "points": [
       [
-       -3.7,
+       -2.7,
        -0.05
       ],
       [
-       1.2,
-       1.32
+       -0.352,
+       0.499
       ],
       [
-       1.668,
-       1.32
-      ],
-      [
-       -3.18,
-       -0.05
+       -0.303,
+       0.264
       ]
      ],
      "fill": "accent"
     },
     {
-     "id": "chevron-3",
+     "id": "vee-3",
      "type": "polygon",
      "chart": "body",
      "points": [
       [
-       -2.85,
+       -1.4,
        -0.05
       ],
       [
-       1.55,
-       1.1
+       0.263,
+       0.353
       ],
       [
-       1.946,
-       1.1
-      ],
-      [
-       -2.41,
-       -0.05
+       0.298,
+       0.187
       ]
      ],
      "fill": "accent"
     },
     {
-     "id": "chevron-4",
+     "id": "side-spike-1",
      "type": "polygon",
      "chart": "body",
      "points": [
       [
-       -2.05,
-       -0.05
+       -3.2,
+       0.95
       ],
       [
-       1.85,
-       0.88
+       -2.172,
+       1.177
       ],
       [
-       2.174,
-       0.88
+       -0.6,
+       1.22
       ],
       [
-       -1.69,
-       -0.05
+       -2.148,
+       0.939
       ]
      ],
      "fill": "accent"
     },
     {
-     "id": "echo-1",
-     "type": "stroke",
+     "id": "side-spike-2",
+     "type": "polygon",
      "chart": "body",
      "points": [
       [
-       1.4,
-       1.62
+       -1.9,
+       1.25
       ],
       [
-       2.9,
-       2.04
+       -0.991,
+       1.449
       ],
       [
-       2.5999999999999996,
-       2.04
+       0.4,
+       1.5
       ],
       [
-       1.0999999999999999,
-       1.62
-      ],
-      [
-       1.4,
-       1.62
+       -0.969,
+       1.251
       ]
      ],
-     "width": 0.03,
      "fill": "accent"
     },
     {

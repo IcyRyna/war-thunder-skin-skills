@@ -87,5 +87,36 @@ class SurfaceMapTests(unittest.TestCase):
         self.assertGreater(report['charts']['all']['foreshortened_area_fraction'], 0)
 
 
+class SeamTests(unittest.TestCase):
+    """A raised strip down the middle of a top plate: its side walls are not painted by a top chart."""
+
+    def test_item_crossing_a_raised_strip_wall_is_listed(self):
+        with tempfile.TemporaryDirectory() as temp:
+            root = Path(temp)
+            tris, uvs = [], []
+            for x0, x1, z0, z1, y, box in ((-3, 3, -1, -.1, 1.0, (0, 0, .3, .3)), (-3, 3, .1, 1, 1.0, (.3, 0, .6, .3)),
+                                            (-3, 3, -.08, .08, 1.05, (.6, 0, .9, .3))):
+                t, u = quad(x0, x1, z0, z1, y, True, box)
+                tris += t; uvs += u
+            # steep walls (about 68 degrees) 5 cm tall between the plate and the strip, winding as the plates
+            for (za, ya), (zb, yb) in (((-.1, 1.0), (-.08, 1.05)), ((.08, 1.05), (.1, 1.0))):
+                c = [[-3, ya, za], [3, ya, za], [3, yb, zb], [-3, yb, zb]]
+                tris += [[c[0], c[2], c[1]], [c[0], c[3], c[2]]]
+                uvs += [[(0, .5), (.1, .6), (.1, .5)], [(0, .5), (0, .6), (.1, .6)]]
+            np.savez(root / 'g.npz', triangles=np.asarray(tris, np.float32), uvs=np.asarray(uvs, np.float32),
+                     node_ids=np.zeros(len(tris), np.int32), names=np.asarray(['body']))
+            charts = [dict(id='top', u='x', v='z', nodes=['body'], normal={'axis': 'y', 'min': .5}, facing='y')]
+            items = [dict(id='across', type='polygon', chart='top', points=[[-1, -.6], [0, -.6], [0, .6], [-1, .6]], fill='#ffffff'),
+                     dict(id='beside', type='polygon', chart='top', points=[[-1, .3], [0, .3], [0, .8], [-1, .8]], fill='#ffffff')]
+            design = dict(schema_version=1, charts=charts, layers=[dict(name='l', items=items)])
+            (root / 'd.json').write_text(json.dumps(design), encoding='utf-8')
+            report = surface_map.run(surface_map.argparse.Namespace(geometry=root / 'g.npz', design=root / 'd.json', protect=None,
+                                                                    chart=[], scale=100., threshold=.15, seam_report=.1, out=root / 'o'))
+            listed = {s['id'] for s in report['seam_items']}
+            self.assertIn('across', listed)
+            self.assertNotIn('beside', listed)
+            self.assertGreater(report['charts']['top']['area_share']['seam'], 0)
+
+
 if __name__ == '__main__':
     unittest.main()
