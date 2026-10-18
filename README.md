@@ -4,8 +4,8 @@
 
 | Skill | 类型 | 内容 | 当前版本 | 更新记录 |
 | --- | --- | --- | --- | --- |
-| `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.8](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.8) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
-| `war-thunder-style-akamywek` | Akamywek 风格 | 深炭底、单一签名色、白色尖形、三角马赛克；自带通用脚本和制作参考，可单独安装 | [1.8](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.8) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
+| `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.9](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.9) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
+| `war-thunder-style-akamywek` | Akamywek 风格 | 深炭底、单一签名色、白色尖形、三角马赛克；自带通用脚本和制作参考，可单独安装 | [1.9](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.9) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
 
 ## 目录
 
@@ -16,7 +16,7 @@
 ## 版本与标签
 
 - 每条线独立编号，主版本号表示阶段：通用 Skill 的 1.x 只有规则文档，2.x 加入公共脚本，3.x 是审美体系重写之后；风格 Skill 从 1.0 开始。
-- 标签是 `<skill>/v<版本>`，例如 `war-thunder-user-skins/v3.8`；查看某条线的提交历史，打开对应 `skills/<skill>/` 目录的 History。
+- 标签是 `<skill>/v<版本>`，例如 `war-thunder-user-skins/v3.9`；查看某条线的提交历史，打开对应 `skills/<skill>/` 目录的 History。
 - 每个版本的安装包在 Releases 里，文件名 `<skill>-v<版本>.skill.zip`。通用 Skill 的 1.x 和 2.x 各合成一个归档 Release。
 
 ## 安装
