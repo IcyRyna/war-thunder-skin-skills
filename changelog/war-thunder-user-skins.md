@@ -6,6 +6,7 @@
 
 | 版本 | 日期 | 研究修订 | 改了什么 | 下载 |
 | --- | --- | --- | --- | --- |
+| 3.10 | 2026-10-18 23:07 | rev 12 | 原尺寸检查与面板线闸门：新增 detail_sheet.py（8192 颜色图按 1:1 和参考同米制比例并排，出 Composa 调用清单）；panel_lines.py 加质量闸门、描线不合格拒绝画，面板线默认不画；立绘改为干净抠图；design_lint 允许垂尾描边序列 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.10) |
 | 3.9 | 2026-10-18 18:27 | rev 11 | 面板发丝线与接缝：新增 panel_lines.py（照原厂贴图描面板分块线和铆钉排，画成干净的发丝线）；surface_map.py 标出凸起背鳍条之类的接缝；白色规则允许成组的渐尖尖片 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.9) |
 | 3.8 | 2026-10-18 15:59 | rev 10 | 漆面与白线：整机一层亮漆 coat_material.py、thin-white-line 检查、颜色图 8192、修正交叉的嵌套 V 示例 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.8) |
 | 3.7 | 2026-10-18 03:57 | rev 9 | 审计跟进（Sonnet 5.5）：缓存目录改中性名、缺字体报错、WT_SKIN_FONT | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.7) |

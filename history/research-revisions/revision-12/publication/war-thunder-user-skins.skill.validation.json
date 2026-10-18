@@ -1,0 +1,457 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-18T15:06:18.305850+00:00",
+  "state": "validated_skill_revision",
+  "skill": "war-thunder-user-skins",
+  "revision": 12,
+  "effective_files": 56,
+  "files": {
+    "SKILL.md": "b807ba91bc732e3e486ccb88d573f4821d510a9c7bf608311531c394a1449716",
+    "agents/openai.yaml": "8c6a89ff95a413c52c614113ec6e9e59f2316b62edd01c9d766e78ee51af82c7",
+    "references/aesthetics.md": "5382fca4ff08f3aefec2713077c2a2d215ce92141838c49b97bbfff49e7d40fc",
+    "references/art-direction.md": "32457b4263fb52e412ba45582953ca4311bd99ad97fb98571b286ac7215097fe",
+    "references/assets-and-layout.md": "95a95b4a7a80f32a73d29a3e3ba5de5257a9cee8570b6346b2cb6828a4c6375c",
+    "references/diagrams/character-integration.svg": "9d68b96259a60016810411a744de6e2ee3344bb6be62f9e755801b9cb4472d6a",
+    "references/diagrams/continuous-coverage.svg": "2d4ee1969975b8bd41005be53a068cce410c50fa9ccbacb399079cac657917b3",
+    "references/diagrams/coupled-shapes.svg": "6ef288cd8a8348cda43ca3766e4f9c77444fd43123175bf09b0e6c8a9ed6898e",
+    "references/diagrams/line-construction.svg": "0b8b470f071ca3ac60a22eff46b198958f59673fb731e9c6342437a57ce03265",
+    "references/diagrams/structure-toggle.svg": "048328413c49972515e34651e783f8b91d522210312544d63312d2d49aaa3074",
+    "references/diagrams/top-view-zoning.svg": "3a85677d26216d1914f1fb76e62b7706e206d92eaedbd8c2c3afbd52072efc64",
+    "references/editor-workflow.md": "61a45f35dbfd91abc094fda50c16c101522d5bdb1a15b9409801a3828a6a9e61",
+    "references/image-assisted-editing.md": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543",
+    "references/linework-and-color.md": "a3686ccec1f100c11d1a3f6498fe7b7f51f826d78cfbc3eb7f06ec6eae0e9584",
+    "references/materials-and-uv.md": "b630b7bf4eaa776646d5281a6afec8e4a0b764c91180013afb65fce4be91cede",
+    "references/orthographic-workflow.md": "8d56ddc78cb461bd106fd98b16619365e7e1b19c2d7c850c5cc63422c5793ab4",
+    "references/packaging-and-validation.md": "485e2f747d770eaecf126ac32357b9c24cb3aabe1a6b5382c7da9491e90de267",
+    "references/research-and-audit.md": "d0594883ea6f9077f0bdbebbd44f0325fbdd4e7d3230058753ff4d52a94ed0d6",
+    "references/taste-corrections.md": "3ac5c08ba5999553c4e3231b553a50560e875280fbc03c87613cd2421cd7ed98",
+    "scripts/artifact_io.py": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+    "scripts/atlas_palette.py": "a2e2fca0ef66ac98ae448835383ed9ca2c95105e5684b47aac0aa837ad50a667",
+    "scripts/build_skin.py": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a",
+    "scripts/coat_material.py": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f",
+    "scripts/compare_skin.py": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61",
+    "scripts/composa_mcp.py": "24fa2c75b6ef1cf724c10eb6dca34dced1cf50e5e6d261106ae1ff0511105d4a",
+    "scripts/dds_variant.py": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03",
+    "scripts/design_lint.py": "e5eb17b1cf084d216c6d95ef4cd997e6c49f2131cc463004a5c46b06172a8792",
+    "scripts/detail_sheet.py": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599",
+    "scripts/fetch_asset.py": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924",
+    "scripts/finish_preview.py": "108a9e618d27668ed4eb52a51b06a2ab6b98f42f7d783128499b0a1b5ed7be64",
+    "scripts/inspect_skins.py": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe",
+    "scripts/panel_lines.py": "ef14d1a61906276c78effc3d051639f3f9395c8db0d02ef20b1e6d327756145d",
+    "scripts/scene_preview.py": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c",
+    "scripts/structure_layer.py": "26440530f59c9ddfbb63b756748c6a77b37dbdbd40a21436b4a05c3c00c9e530",
+    "scripts/style_board.py": "d3bc243e71007464e0e4de50c20e77093149631abdc1c1637b52a103fd91a702",
+    "scripts/surface_map.py": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1",
+    "scripts/surface_preview.py": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214",
+    "scripts/test_artifact_io.py": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5",
+    "scripts/test_atlas_palette.py": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994",
+    "scripts/test_cli_gates.py": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22",
+    "scripts/test_coat_material.py": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611",
+    "scripts/test_comparison.py": "d63f3e3d30c617345273f46c7f5d59a59d62654c907cb0f5d85fe0c7a71281a8",
+    "scripts/test_dds_variant.py": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542",
+    "scripts/test_design_lint.py": "bcee7563e374ff754726b4ecb91527ec1197bb7e4148073b2a093288c2f059d3",
+    "scripts/test_detail_sheet.py": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00",
+    "scripts/test_finish_preview.py": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932",
+    "scripts/test_io_tools.py": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa",
+    "scripts/test_panel_lines.py": "2a8cf9a155fa2082067289e8f303a3a225f997d552d79e127cdf2aad676b6f2b",
+    "scripts/test_projection_contract.py": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc",
+    "scripts/test_scene_preview.py": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351",
+    "scripts/test_structure_layer.py": "ee6e284eeb0015ac1e0726fc8cd2ea39e4c256742636bd7e678a02d87a236a7c",
+    "scripts/test_style_board.py": "7c9ec3d6c60547562530998628b4185bc4a2899e3af4bcb35444e97a9728b7c4",
+    "scripts/test_surface_map.py": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc",
+    "scripts/test_surface_workflow.py": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994",
+    "scripts/test_vector_paint.py": "4af551fb2d11e4027811f7df0a403eee5c68cf9d2201b8800e8f3b39c254f9a5",
+    "scripts/vector_paint.py": "ab1c72b48c8f6f3408b987cd4f8d67c03ca2189989be9fbfc3e09ffb7c3a3e5f"
+  },
+  "package_sha256": "6f27a85d570c94db3e3ce1b5caaafab6725e00d7333216e7bfc687df95b9eef4",
+  "package_bytes": 535305,
+  "source_installed_staged_zip_equal": true,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "references/research-and-audit.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/packaging-and-validation.md#模型与实际效果",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/taste-corrections.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/assets-and-layout.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/art-direction.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/linework-and-color.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/materials-and-uv.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/editor-workflow.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/image-assisted-editing.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/orthographic-workflow.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/packaging-and-validation.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/art-direction.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/aesthetics.md#在编辑器里逐岛看展开图",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/aesthetics.md#图层结构",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "taste-corrections.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "diagrams/line-construction.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "materials-and-uv.md#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "diagrams/character-integration.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "taste-corrections.md#字体",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "diagrams/top-view-zoning.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/aesthetics.md",
+      "link": "taste-corrections.md#交付前闸门",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "aesthetics.md#人物人物就是翼面",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "assets-and-layout.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "orthographic-workflow.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "aesthetics.md#一眼看懂的结构",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "linework-and-color.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "packaging-and-validation.md#验收状态",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "research-and-audit.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "art-direction.md#用人物动作选择布局",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "image-assisted-editing.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "aesthetics.md#图层结构",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "assets-and-layout.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "image-assisted-editing.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "aesthetics.md#在编辑器里逐岛看展开图",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "packaging-and-validation.md#工程可继续编辑",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "assets-and-layout.md#原图适配与边缘",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "editor-workflow.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "materials-and-uv.md#通道与格式",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "diagrams/line-construction.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "diagrams/coupled-shapes.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "orthographic-workflow.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "taste-corrections.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "aesthetics.md#各面默认分工",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "aesthetics.md#配色一个签名色",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "materials-and-uv.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "#面板发丝线",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "diagrams/structure-toggle.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "orthographic-workflow.md#多材质整机场景与补充相机",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/orthographic-workflow.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/orthographic-workflow.md",
+      "link": "materials-and-uv.md#质感检查",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "materials-and-uv.md#质感检查",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "orthographic-workflow.md#人物-uv-遮罩诊断",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "linework-and-color.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "materials-and-uv.md#原-uv-与基底",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "diagrams/continuous-coverage.svg",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "#交付前闸门",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "aesthetics.md#审美流程",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "aesthetics.md#配色一个签名色",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "materials-and-uv.md#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "references/taste-corrections.md",
+      "link": "packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-user-skins"
+    }
+  ],
+  "changed": [
+    "SKILL.md",
+    "references/aesthetics.md",
+    "references/art-direction.md",
+    "references/linework-and-color.md",
+    "references/materials-and-uv.md",
+    "references/packaging-and-validation.md",
+    "references/taste-corrections.md",
+    "scripts/design_lint.py",
+    "scripts/panel_lines.py",
+    "scripts/test_design_lint.py",
+    "scripts/test_panel_lines.py"
+  ],
+  "added": [
+    "scripts/detail_sheet.py",
+    "scripts/test_detail_sheet.py"
+  ],
+  "removed": [],
+  "code_changed": true,
+  "trigger": "User in-game review of Laevatain J-10C v3 next to Akamywek F-2A: finish looked different, lines dirty and rough; asked for an editor-based analysis, then to learn the F-2A_M4_SOPMOD_II_NA livery first and its basic layout before any character art. Diagnosis (1:1 crops in Composa): traced panel hairlines were broken, stair-stepped and traced stains; the wing art kept a light background and faded into a grey haze. Added the F-2A base layout reference (measured on the author map applied to the decoded F-2A model), a two-stage order (base layout, then art), detail_sheet.py for full-size checks, a quality gate in panel_lines.py (apply refuses failed traces), the sequence exemption in design_lint, clean cut-out art rules, and corrected the stab/fin mix-up. Evidence: evidence/rev12-f2a-base-layout/evidence.json and assignments/j10c-laevatain-akamywek-20261018/evidence/v3-ingame-review/diagnosis.json.",
+  "validation_scope": "Frontmatter, local links/anchors, exact source/installed/ZIP sync; unit tests run separately (197 each, 4 skipped for missing texconv). detail_sheet.py was run on the v3 colour map against the F-2A map; the panel_lines quality gate rejects the v3 J-10C trace (median 112 px, 55% short, 4.6 kinks per 1000 px). No new livery was built; delivered skins untouched."
+}

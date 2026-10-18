@@ -6,6 +6,7 @@ Akamywek 风格：深炭底、单一签名色、白色尖形、三角马赛克�
 
 | 版本 | 日期 | 研究修订 | 改了什么 | 下载 |
 | --- | --- | --- | --- | --- |
+| 1.10 | 2026-10-18 23:07 | rev 12 | 先学 F-2A 基本布局：新增 base-layout.md（作者 F-2A 贴回模型实测：两大块面积、各部位职责、四档线宽、字阶、马赛克、验收）；制作分两阶段，基本布局认可后再放立绘；改正平尾与垂尾混淆；不画面板线 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.10) |
 | 1.9 | 2026-10-18 18:27 | rev 11 | 学作者的线条：机背嵌套 V 改成实测比例的渐尖尖片组、中线凸条做深色通道、鸭翼尖片箭头加机型名、三角翼不用前缘色带框人物、面板发丝线；重做嵌套 V 示例 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.9) |
 | 1.8 | 2026-10-18 15:59 | rev 10 | 漆面与白线：整机一层亮漆、白色只做有体量的形、修正交叉的嵌套 V 示例 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.8) |
 | 1.7 | 2026-10-18 03:57 | rev 9 | 审计跟进（Sonnet 5.5）：缓存目录改中性名、缺字体报错、WT_SKIN_FONT | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.7) |
