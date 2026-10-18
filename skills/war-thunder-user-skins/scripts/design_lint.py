@@ -3,8 +3,8 @@
 Models drift to the same defaults: stock or decorative fonts, missing CJK glyphs,
 filler English, text sizes that are almost but not quite the same, pure black and
 white, neon primaries, several saturated hues, hue-shifting gradients, equal-width
-lines, floating outline frames, glow made of stacked strokes, too many line angles
-and repeated character art.  This reads the design JSON only (no geometry) and lists
+lines, thin white pinstripes, floating outline frames, glow made of stacked strokes,
+too many line angles and repeated character art.  This reads the design JSON only (no geometry) and lists
 each hit with the item, the reason and the fix; see references/taste-corrections.md.
 
 It is a gate for known mistakes, not an art score: a clean report does not mean the
@@ -262,8 +262,27 @@ def direction_families(segments):
     return [(a, w / total) for a, w in families] if total else []
 
 
+def whiteish(fill, palette):
+    colors = fill_colors(fill)
+    if not colors:
+        return False
+    for c in colors:
+        rgb = hex_rgb(c, palette)
+        if min(rgb) < 200 or hsv(rgb)[1] > .12:
+            return False
+    return True
+
+
+def polygon_span(pts):
+    """(longest point-to-point distance, area / that length = mean width) of a polygon."""
+    area = abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(pts, pts[1:] + pts[:1]))) / 2
+    length = max((math.dist(p, q) for i, p in enumerate(pts) for q in pts[i + 1:]), default=0.)
+    return length, (area / length if length else 0.)
+
+
 def check_shapes(design, report):
     by_chart, strokes = {}, {}
+    palette = design.get('palette', {})
     for layer in design.get('layers', []):
         for item in layer.get('items', []):
             pts = [tuple(map(float, p)) for p in item.get('points', [])]
@@ -273,6 +292,20 @@ def check_shapes(design, report):
             # Mosaic fields are areas, not lines; only edges of line-like items count toward the angle family.
             if not (isinstance(item.get('fill'), dict) and item['fill'].get('pattern')):
                 by_chart.setdefault(chart, []).extend(segments)
+            if whiteish(item.get('fill'), palette) and 'echo' not in str(where).lower():
+                if item.get('type') == 'stroke':
+                    length = sum(math.dist(p, q) for p, q in zip(pts, pts[1:]))
+                    thin = float(item.get('width', 0)) < .12 and length > 1.0
+                    size = f'{float(item.get("width", 0)):.2f} m wide, {length:.1f} m long'
+                else:
+                    length, mean_width = polygon_span(pts)
+                    thin = length > 1.5 and mean_width < .06
+                    size = f'mean {mean_width:.2f} m wide, {length:.1f} m long'
+                if thin:
+                    report.add('warn', 'thin-white-line', where, f'thin white line ({size}) reads as a scratch or a racing pinstripe',
+                               'White is for shapes with body (0.15 m or wider at the root) grouped at the main white figure. '
+                               'Draw long thin lines in the signature colour along a colour-field edge, or make it an echo of the '
+                               'main white figure (same apex and angle; put "echo" in the id).')
             if item.get('type') != 'stroke':
                 continue
             key = (chart, tuple(pts))
