@@ -71,6 +71,17 @@ class DesignLintTests(unittest.TestCase):
         _, codes = self.lint(design)
         self.assertIn('font-not-found', codes)
 
+    def test_thin_white_pinstripes_are_flagged(self):
+        design = dict(schema_version=1, charts=[CHART], palette=dict(hi='#eef0f2', sig='#3f7fc0'), layers=[dict(name='lines', items=[
+            dict(id='spine-needle', type='stroke', chart='top', points=[[0, 0], [6, 0]], width=.06, taper='both', fill='hi'),
+            dict(id='le-sliver', type='polygon', chart='top', points=[[0, 1], [4, 1], [4, 1.035], [0, 1.035]], fill='hi'),
+            dict(id='main-v-echo-1', type='stroke', chart='top', points=[[0, 2], [2, 2.5], [0, 3]], width=.03, fill='hi'),
+            dict(id='blade', type='polygon', chart='top', points=[[0, 4], [1.6, 4.1], [0, 4.3]], fill='hi'),
+            dict(id='sig-companion', type='stroke', chart='top', points=[[0, 5], [6, 5]], width=.03, taper='end', fill='sig')])])
+        result, _ = self.lint(design)
+        flagged = {h['where'] for h in result['hits'] if h['code'] == 'thin-white-line'}
+        self.assertEqual(flagged, {'spine-needle', 'le-sliver'})
+
     def test_considered_design_is_quiet(self):
         design = dict(schema_version=1, charts=[CHART], palette=dict(base='#2c2e32', sig='#3f7fc0', sig_deep='#2f639a', hi='#eeeeee'), layers=[
             dict(name='fields', items=[
@@ -78,7 +89,8 @@ class DesignLintTests(unittest.TestCase):
                      fill=dict(pattern='tri-mosaic', cell=.2, jitter=.1, gradient={'from': [0, 0], 'to': [6, 0], 'colors': ['sig_deep', 'sig']})),
                 dict(id='split', type='polygon', chart='top', points=[[1, 0.6], [5, 0.86], [5, 0.95], [1, 0.7]], fill='sig')]),
             dict(name='lines', items=[
-                dict(id='lance', type='stroke', chart='top', points=[[0.5, 1.2], [5.5, 1.53]], width=.06, taper='both', fill='hi'),
+                dict(id='lance', type='stroke', chart='top', points=[[0.5, 1.2], [5.5, 1.53]], width=.03, taper='both', fill='sig'),
+                dict(id='white-wedge', type='polygon', chart='top', points=[[1, 1.6], [3.5, 1.76], [1, 1.95]], fill='hi'),
                 dict(id='echo-1', type='stroke', chart='top', points=[[1, 2], [3, 2.13], [3, 2.4], [1, 2.27], [1, 2]], width=.03, fill='hi')]),
             dict(name='type', images=[
                 text('name', 'CHEN QIANYU', .3, variation='Bold', tracking=.08, color='hi'),

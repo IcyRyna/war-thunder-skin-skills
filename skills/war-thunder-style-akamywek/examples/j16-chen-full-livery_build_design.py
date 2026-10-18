@@ -3,7 +3,8 @@
 # charts in priority order (belly before body, up-facing body chart limited to normal y >= 0.3),
 # mirrored shapes, image/text layers, outer-fin portrait panels with a frame layer, the inner-fin wedge
 # kept forward of the UV strip the left inner fin shares with the right outer fin, belly and side lines
-# only on visible flat zones, and six different character sources.  Asset paths point to that task;
+# only on visible flat zones, and six different character sources.  Since the Skill's revision 10 the
+# thin lines that v10 drew in white (belly needle, inner-fin lance, outer-fin edge) are signature colour.  Asset paths point to that task;
 # replace them, the node names and the coordinates for a new livery.
 """J-16 Chen Qianyu, Akamywek dark-base branch with a saturated blue signature.
 
@@ -208,8 +209,8 @@ def build():
     # --- belly -----------------------------------------------------------------
     # Organised like the author's Flanker bellies: quiet dark centre, signature mosaic sweeping in
     # from the intake/chine edges and tapering to long spears aft, one white key-comb arrow
-    # (a wedge cut by parallel gaps, mirrored into a forward-pointing V) and a long white needle
-    # pair with companion slivers running the whole length.  Every end is a real point.
+    # (a wedge cut by parallel gaps, mirrored into a forward-pointing V) and a long needle pair in
+    # the signature colour (white stays on the wide comb: thin white lines read as scratches).  Every end is a real point.
     belly_grad = dict({'from': [12.5, 0.5], 'to': [-7.0, 1.6], 'colors': ['sig_deep', 'sig']})
     sigf.add('belly-chine-sweep', 'belly', 'polygon',
              [[12.9, 0.02], [11.0, 0.42], [8.0, 0.86], [5.0, 1.30], [3.2, 1.95], [2.4, 2.35], [0.0, 2.35], [-2.6, 2.35],
@@ -232,7 +233,7 @@ def build():
         keys.add(f'belly-comb-{i}', 'belly', 'polygon',
                  [[x0, 0.0], [x0 - lean * edge(x0), edge(x0)], [x1 - lean * edge(x1), edge(x1)], [x1, 0.0]], 'white')
     # Centre needle in the flat tunnel between the nacelles, tapered at both ends.
-    lines.add('belly-needle-0', 'belly', 'stroke', [[2.2, 0.36], [-2.0, 0.36], [-6.8, 0.32]], 'white',
+    lines.add('belly-needle-0', 'belly', 'stroke', [[2.2, 0.36], [-2.0, 0.36], [-6.8, 0.32]], 'sig_hi',
               width=.06, taper='both', taper_length=2.2)
     lines.add('belly-needle-1', 'belly', 'stroke', [[1.4, 0.48], [-1.8, 0.48], [-4.6, 0.46]], 'sig_hi',
               width=.026, taper='both', taper_length=1.4)
@@ -263,7 +264,7 @@ def build():
         p = lambda q, o: [q[0] + nx * o, q[1] + ny * o]
         return [p(a, offset), p(b, offset), p(b, offset + width), p(a, offset + width)]
     # Inner faces: the dorsal language instead of flag stripes.  A signature mosaic wedge hugs the
-    # leading edge, wide at the root and tapering to the tip; a white lance and a companion run
+    # leading edge, wide at the root and tapering to the tip; two signature companions run
     # inside it, converging toward the tip; a halftone dissolves the wedge into the dark field.
     def fin_pt(y, aft):  # `aft` metres behind the leading edge at height y
         return [-2.1 - 2.5 * (y - 0.9) / 2.95 - aft, y]
@@ -274,8 +275,8 @@ def build():
                  [fin_pt(0.75, 1.3), fin_pt(2.4, 0.6), fin_pt(2.4, 0.95), fin_pt(0.75, 1.65)],
                  dict(pattern='tri-halftone', color='sig', cell=.07, **{'from': [-2.1 - 2.5 * .6 / 2.95 - 0.95, 1.5],
                                                                          'to': [-2.1 - 2.5 * .6 / 2.95 - 1.35, 1.5]}))
-    lines.add('fin-in-lance', 'fin-in', 'stroke', [fin_pt(1.15, 1.75), fin_pt(3.35, 0.55)], 'white',
-              width=.07, taper='both', taper_length=.8)
+    lines.add('fin-in-lance', 'fin-in', 'stroke', [fin_pt(1.15, 1.75), fin_pt(3.35, 0.55)], 'sig_hi',
+              width=.04, taper='both', taper_length=.8)
     # Kept forward of the rudder-hinge strip: on the J-16 the left inner fin shares that strip's
     # texels with the right outer fin, whose portrait wins them (v9 lost this line on the left).
     lines.add('fin-in-companion', 'fin-in', 'stroke', [fin_pt(1.3, 1.7), fin_pt(2.6, 0.95)], 'sig_hi',
@@ -283,7 +284,7 @@ def build():
     deep.add('fin-out-root-under', 'fin-out', 'polygon', [[-1.9, 0.80], [-5.7, 0.80], [-5.7, 1.4], [-1.9, 1.4]], 'deep')
     # Frame drawn above the portraits: signature leading-edge strip, dark cap and root band.
     fin_frame.add('fin-out-le-strip', 'fin-out', 'polygon', fin_band(-0.20, 0.30), 'sig')
-    fin_frame.add('fin-out-le-white', 'fin-out', 'polygon', fin_band(0.13, 0.035), 'white')
+    fin_frame.add('fin-out-le-white', 'fin-out', 'polygon', fin_band(0.13, 0.035), 'sig_hi')  # id kept from v10; was white
     fin_frame.add('fin-out-cap', 'fin-out', 'polygon', [[-3.9, 3.15], [-5.7, 3.15], [-5.7, 4.1], [-3.9, 4.1]], 'deep')
     fin_frame.add('fin-out-cap-line', 'fin-out', 'polygon', [[-3.9, 3.10], [-5.7, 3.10], [-5.7, 3.15], [-3.9, 3.15]], 'sig_hi')
     fin_frame.add('fin-out-root', 'fin-out', 'polygon', [[-1.9, 0.80], [-5.7, 0.80], [-5.7, 1.16], [-1.9, 1.16]], 'deep')

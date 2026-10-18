@@ -23,7 +23,7 @@
 - [素材与布局](assets-and-layout.md)：找图、来源、有效细节和原图适配。
 - [美术设计](art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
 - [线条与配色](linework-and-color.md)：母形、分支带、序列、伴线的构造顺序，`vector_paint.py` 设计稿与颜色。
-- [UV 与材质](materials-and-uv.md)：干净重涂、完整承载面、结构、通道和受光。
+- [UV 与材质](materials-and-uv.md)：干净重涂、整机一层涂层、完整承载面、结构、通道和受光。
 - [编辑工作流](editor-workflow.md)：原生工程、SVG 导入和 Composa 会话恢复。
 - [图像辅助编辑](image-assisted-editing.md)：任务需要图像模型时的输入、保护域和输出检查。
 - [正交制作](orthographic-workflow.md)：几何、相机、可见性回烘、共享 UV 与模型诊断。
@@ -36,7 +36,7 @@
 1. **先确定素材和真实承载面。** 保护角色识别与所选动作连接，同时在整机尺度取得足够主视觉重量。按 [美术设计](art-direction.md) 安排表面分工；指定双翼人物、尾面或线条密度逐项落实。
 2. **先大形后细节。** 先用深、中、亮三档色块定大形，眯眼检查通过再放人物、构线、加纹理和字；初稿即看模型和全图粗漏。每轮都在编辑器里打开参考与当前展开图逐岛对照，见 [审美基线](aesthetics.md#在编辑器里逐岛看展开图)。
 3. **保存制作源。** 按 [图层结构](aesthetics.md#图层结构) 分层；线条和色场保存 `vector_paint.py` 设计稿与 SVG，人物保存原图。全部线条合成一张栅格层不算可编辑。
-4. **保留资源契约。** 从 BLK 确认资源和 wildcard；保留原 UV、比例、部件变换与材质分组。RGB、颜色 alpha 与打包材质分别处理。共享纹素通过图案一致性、裁切、位置或来源优先级解决，不重排原 UV。
+4. **保留资源契约。** 从 BLK 确认资源和 wildcard；保留原 UV、比例、部件变换与材质分组。RGB、颜色 alpha 与打包材质分别处理；完整重涂的材质默认是整机一层光滑均匀的涂层（`coat_material.py`），颜色里不压面板线。共享纹素通过图案一致性、裁切、位置或来源优先级解决，不重排原 UV。
 5. **用实际输出关闭问题。** atlas 检查形状与采样，模型检查表面、遮挡和构图，材质检查对应受光。每项要求保留通过、失败或未检查及具体证据；必需项能补看就补看，已知缺陷修好再复查。
 6. **交付并保留评价边界。** 原生工程、实际贴图、BLK 和预览相互对应。技术合规、基本识别／构图、用户美术评价分别记录；作品状态与当前版本遵循项目登记，不把文件存在、局部通过或自评分当成整套认可。
 
@@ -52,10 +52,11 @@
 | `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
-| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
+| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
 | `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住的分区图，并列出压到这些区域的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
-| `scripts/structure_layer.py` | 从原机法线通道提取干净的面板线与铆钉结构层；NumPy、Pillow |
+| `scripts/coat_material.py` | 完整重涂的整机一层涂层材质：常量光滑度与金属度、法线压平，可保留少量凹槽只在反光里出现；NumPy、Pillow |
+| `scripts/structure_layer.py` | 从原机法线通道提取模糊的面板线与铆钉结构层，只用于用户要的旧化或写实机械感；NumPy、Pillow |
 | `scripts/atlas_palette.py` | 多张展开图同一归一化区域的色族面积对照；NumPy、Pillow |
 | `scripts/style_board.py` | 整机渲染与参考同尺寸并排：原色、明暗、眯眼三行；NumPy、Pillow |
 | `scripts/surface_preview.py` | 单材质原 UV 预览与回烘；NumPy、Pillow、Numba，prepare 需外置解码器 |

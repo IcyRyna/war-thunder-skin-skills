@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose pierced by four nested white V, twin companion lines, one hollow echo, wing mosaic with two tint stripes, inner-fin wedge. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with lance and companion; outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes. Only one outline echo is kept: further echoes ran off the body edge onto nothing (surface_map off-surface).",
+ "notes": "J-16 example (dark warm branch): deep spine channel, signature mosaic nose pierced by four nested white V, twin companion lines, one hollow echo, wing mosaic with two tint stripes, inner-fin wedge. Node and material names are J-16 specific; adapt charts and scale coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with two signature companion lines (white stays on the wide nested V); outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes. Only one outline echo is kept: further echoes ran off the body edge onto nothing (surface_map off-surface). Revision 10: the V arms were twisted (inner edge offset the wrong way at the top, so each arm rendered as two crossing needles); fixed so every arm widens toward the nose.",
  "supersample": 4,
  "palette": {
   "base": "#333334",
@@ -484,11 +484,11 @@
        -0.05
       ],
       [
-       0.8000000000000007,
+       0.8,
        1.55
       ],
       [
-       0.24200000000000066,
+       1.358,
        1.55
       ],
       [
@@ -508,11 +508,11 @@
        -0.05
       ],
       [
-       1.2000000000000002,
+       1.2,
        1.32
       ],
       [
-       0.7320000000000002,
+       1.668,
        1.32
       ],
       [
@@ -532,11 +532,11 @@
        -0.05
       ],
       [
-       1.5500000000000003,
+       1.55,
        1.1
       ],
       [
-       1.1540000000000004,
+       1.946,
        1.1
       ],
       [
@@ -560,7 +560,7 @@
        0.88
       ],
       [
-       1.526,
+       2.174,
        0.88
       ],
       [
@@ -613,10 +613,10 @@
        3.35
       ]
      ],
-     "width": 0.07,
+     "width": 0.04,
      "taper": "both",
      "taper_length": 0.8,
-     "fill": "accent"
+     "fill": "signature_hi"
     },
     {
      "id": "fin-in-companion-r",
@@ -651,10 +651,10 @@
        3.35
       ]
      ],
-     "width": 0.07,
+     "width": 0.04,
      "taper": "both",
      "taper_length": 0.8,
-     "fill": "accent"
+     "fill": "signature_hi"
     },
     {
      "id": "fin-in-companion-l",

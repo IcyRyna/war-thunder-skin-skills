@@ -1,6 +1,6 @@
 {
  "schema_version": 1,
- "notes": "J-16 example: parent bands with mosaic and gradient, three split bands, white key sequence, triangle halftone dissolve, inner-fin wedge. Adapt charts and coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with lance and companion; outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes.",
+ "notes": "J-16 example: parent bands with mosaic and gradient, three split bands, white key sequence, triangle halftone dissolve, inner-fin wedge. Adapt charts and coordinates for other airframes. Inner fin faces carry a leading-edge mosaic wedge with lance and companion; outer fins are left free for portraits. Body chart takes only faces with normal y >= 0.3. Check with surface_map.py before and after changes. Revision 10: long thin lines on wings and inner fins are signature colour; white stays on the wide key pieces.",
  "supersample": 4,
  "palette": {
   "base": "#424347",
@@ -631,7 +631,7 @@
      ],
      "width": 0.05,
      "taper": "end",
-     "fill": "accent"
+     "fill": "signature"
     },
     {
      "id": "wing-companion",
@@ -653,7 +653,7 @@
      ],
      "width": 0.022,
      "taper": "end",
-     "fill": "accent"
+     "fill": "signature"
     },
     {
      "id": "fin-in-lance-r",
@@ -669,10 +669,10 @@
        3.35
       ]
      ],
-     "width": 0.07,
+     "width": 0.04,
      "taper": "both",
      "taper_length": 0.8,
-     "fill": "accent"
+     "fill": "signature"
     },
     {
      "id": "fin-in-companion-r",
@@ -707,10 +707,10 @@
        3.35
       ]
      ],
-     "width": 0.07,
+     "width": 0.04,
      "taper": "both",
      "taper_length": 0.8,
-     "fill": "accent"
+     "fill": "signature"
     },
     {
      "id": "fin-in-companion-l",
