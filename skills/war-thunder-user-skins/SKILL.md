@@ -57,9 +57,10 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
 | `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
-| `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住的分区图，并列出压到这些区域的图元；NumPy、Pillow、Numba |
+| `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住／接缝（如凸起背鳍条侧壁）的分区图，并列出压到这些区域或跨过接缝的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
 | `scripts/coat_material.py` | 完整重涂的整机一层涂层材质：常量光滑度与金属度、法线压平，可保留少量凹槽只在反光里出现；NumPy、Pillow |
+| `scripts/panel_lines.py` | 从原厂颜色贴图描出面板分块线和铆钉排，按目标尺寸画成干净的发丝线和淡点（深底提亮、亮色压暗，人物和字处跳过）；NumPy、Pillow、Numba |
 | `scripts/structure_layer.py` | 从原机法线通道提取模糊的面板线与铆钉结构层，只用于用户要的旧化或写实机械感；NumPy、Pillow |
 | `scripts/atlas_palette.py` | 多张展开图同一归一化区域的色族面积对照；NumPy、Pillow |
 | `scripts/style_board.py` | 整机渲染与参考同尺寸并排：原色、明暗、眯眼三行；NumPy、Pillow |
