@@ -1,0 +1,219 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T06:28:53.753850+00:00",
+  "state": "validated_instruction_revision",
+  "effective_files": 33,
+  "files": {
+    "SKILL.md": "c83ee1b34c0ae48efcac3c8769ee09e816dcfc35077f9fa19a0c860c6969af37",
+    "agents/openai.yaml": "8c6a89ff95a413c52c614113ec6e9e59f2316b62edd01c9d766e78ee51af82c7",
+    "references/art-direction.md": "cf0074e53c61180d3d1c1a14e54bb70890771737fb7f5cba718c4e8b194cd209",
+    "references/assets-and-layout.md": "ad00b3be0967b4515ca0d784dde8ccffbc5f6e8e421e33ad1dfc6890e2e59ddb",
+    "references/diagrams/continuous-coverage.svg": "2d4ee1969975b8bd41005be53a068cce410c50fa9ccbacb399079cac657917b3",
+    "references/diagrams/coupled-shapes.svg": "6ef288cd8a8348cda43ca3766e4f9c77444fd43123175bf09b0e6c8a9ed6898e",
+    "references/diagrams/structure-toggle.svg": "048328413c49972515e34651e783f8b91d522210312544d63312d2d49aaa3074",
+    "references/editor-workflow.md": "5e2a841ad212fee480d6daa26a46591b1d0f74423aa34c9974fcd11f9e2340ac",
+    "references/image-assisted-editing.md": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543",
+    "references/linework-and-color.md": "db307d9b1aa0ea68cfb31725bfaa66ee28e65407c327db1687bf71ea55c40237",
+    "references/materials-and-uv.md": "733e8d028dd1dfd140c12216aed53aa9f5ba6f5923a16e6298828632d40d0ccf",
+    "references/orthographic-workflow.md": "8d56ddc78cb461bd106fd98b16619365e7e1b19c2d7c850c5cc63422c5793ab4",
+    "references/packaging-and-validation.md": "6d01e9fa9821eb52e56c1ad32cf128c1b37745c49c0e74f23a24d44c3125a32f",
+    "references/research-and-audit.md": "d0594883ea6f9077f0bdbebbd44f0325fbdd4e7d3230058753ff4d52a94ed0d6",
+    "scripts/artifact_io.py": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+    "scripts/build_skin.py": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a",
+    "scripts/compare_skin.py": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61",
+    "scripts/composa_mcp.py": "0053a5c64d59d555e2c91db1a57717abae42ecf03263206a1cdd1318ad635040",
+    "scripts/dds_variant.py": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03",
+    "scripts/fetch_asset.py": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924",
+    "scripts/finish_preview.py": "125d40ed2fda3023ef7362f0b4d66075ae674e13454d82ac0e67e36bd32faea9",
+    "scripts/inspect_skins.py": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe",
+    "scripts/scene_preview.py": "30feb2c2da829f36299d93d5d177707d20ede3330e3acfea17b66b4165adb3ad",
+    "scripts/surface_preview.py": "689e806fa2880860062ed850cbb37e4d2a54fca6165f5236b5be27f99822c964",
+    "scripts/test_artifact_io.py": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5",
+    "scripts/test_cli_gates.py": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22",
+    "scripts/test_comparison.py": "59a9abccd54b8978f9f6de01ae4dccbab8b6ea3e2b6a9706c05ad75c220fdfe1",
+    "scripts/test_dds_variant.py": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542",
+    "scripts/test_finish_preview.py": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932",
+    "scripts/test_io_tools.py": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa",
+    "scripts/test_projection_contract.py": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc",
+    "scripts/test_scene_preview.py": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351",
+    "scripts/test_surface_workflow.py": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994"
+  },
+  "package_sha256": "7f56b087ead8cbb5cdb291c38f174cf9f2c73b9d4fbba9194d9cf653c5d1bf3d",
+  "package_bytes": 436785,
+  "source_installed_staged_zip_equal": true,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "references/research-and-audit.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/packaging-and-validation.md#模型与实际效果"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/assets-and-layout.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/art-direction.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/linework-and-color.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/materials-and-uv.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/editor-workflow.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/image-assisted-editing.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/orthographic-workflow.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/packaging-and-validation.md"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/art-direction.md"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "orthographic-workflow.md"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "linework-and-color.md"
+    },
+    {
+      "source": "references/art-direction.md",
+      "link": "packaging-and-validation.md#验收状态"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "research-and-audit.md"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "art-direction.md#用人物动作选择布局"
+    },
+    {
+      "source": "references/assets-and-layout.md",
+      "link": "image-assisted-editing.md"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "assets-and-layout.md"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "image-assisted-editing.md"
+    },
+    {
+      "source": "references/editor-workflow.md",
+      "link": "packaging-and-validation.md#工程可继续编辑"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "assets-and-layout.md#原图适配与边缘"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "editor-workflow.md"
+    },
+    {
+      "source": "references/image-assisted-editing.md",
+      "link": "materials-and-uv.md#通道与格式"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "diagrams/coupled-shapes.svg"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "art-direction.md#垂尾与机腹"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "materials-and-uv.md"
+    },
+    {
+      "source": "references/linework-and-color.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "diagrams/structure-toggle.svg"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip"
+    },
+    {
+      "source": "references/materials-and-uv.md",
+      "link": "orthographic-workflow.md#多材质整机场景与补充相机"
+    },
+    {
+      "source": "references/orthographic-workflow.md",
+      "link": "art-direction.md"
+    },
+    {
+      "source": "references/orthographic-workflow.md",
+      "link": "materials-and-uv.md#质感检查"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "art-direction.md"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "materials-and-uv.md#质感检查"
+    },
+    {
+      "source": "references/packaging-and-validation.md",
+      "link": "orthographic-workflow.md#人物-uv-遮罩诊断"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "linework-and-color.md"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "materials-and-uv.md#原-uv-与基底"
+    },
+    {
+      "source": "references/research-and-audit.md",
+      "link": "diagrams/continuous-coverage.svg"
+    }
+  ],
+  "changed": [
+    "SKILL.md",
+    "references/art-direction.md",
+    "references/assets-and-layout.md",
+    "references/editor-workflow.md",
+    "references/image-assisted-editing.md",
+    "references/linework-and-color.md",
+    "references/materials-and-uv.md",
+    "references/orthographic-workflow.md",
+    "references/packaging-and-validation.md",
+    "references/research-and-audit.md"
+  ],
+  "removed": [
+    "references/image-provider-openai.md"
+  ],
+  "code_changed": false,
+  "markdown_chars_before": 50414,
+  "markdown_chars_after": 22383,
+  "validation_scope": "Frontmatter, local references, instruction audit and exact file synchronization. No new independent reconstruction or art-capability pass.",
+  "five_case_art_state": "paused_incomplete_unchanged",
+  "official_release_adoption": "Root adopts ZIP and receipt separately with release-add and verifies final bytes."
+}

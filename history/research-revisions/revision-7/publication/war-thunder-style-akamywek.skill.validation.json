@@ -1,0 +1,119 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T19:29:45.476603+00:00",
+  "state": "validated_skill_revision",
+  "skill": "war-thunder-style-akamywek",
+  "revision": 7,
+  "effective_files": 10,
+  "files": {
+    "SKILL.md": "82197617bfca54d5c69ab5f41780fc3ada537e66413b0c4818727f3a0d6f0903",
+    "agents/openai.yaml": "95e1e17d6b46c28ea40ae9c0ab7e4571d6b7cb9344ccc058bf982969e6148eed",
+    "diagrams/motif-library.svg": "7db5df44e55174e72ceb9bd51e4656dce17392d02b8d6edb2139f0351423f8ed",
+    "examples/j16-chen-full-livery_build_design.py": "68f4b0081eb7294864d0874a239c91d07a32fe172cfa6c4de5b2d4d553fd04b7",
+    "examples/j16-key-sequence.json": "a5562f4ff3f00c5b6ef9ac87e31bdc8977d697371edd4d24f5ede0789177bfee",
+    "examples/j16-nested-chevrons.json": "7a48febd1adbdeb11bdc19f5241f31b6d0cb92a785293e5f55975315122d8a0a",
+    "references/motifs.md": "8f515258ce2a73b7f81a07d69a667231d6da7aa75dbeb5dfd60ddfbfdc1317a7",
+    "references/palette.md": "951e2f4706584ecbbae1da3b60e682ccff283fb66bad5bd7a280c26d10254678",
+    "references/surfaces.md": "3198185a586f6fcdcb71481056a6f8e23407d878f0c50e89891f2e55fedddf0a",
+    "references/type-and-decals.md": "82d082bb3eab4c417df77d5264e938d930b1f1da435d8ae519bb09424748c63f"
+  },
+  "package_sha256": "9528ccba8141d891b8c45ddb113a8a2579f6025c80b3b55b5d047ecf7e567294",
+  "package_bytes": 28020,
+  "source_installed_staged_zip_equal": true,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/linework-and-color.md#落笔前先看表面分区",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/taste-corrections.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "#常见跑偏",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md#不要这样做",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/taste-corrections.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "../diagrams/motif-library.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/type-and-decals.md",
+      "link": "../../war-thunder-user-skins/references/taste-corrections.md#字体",
+      "skill": "war-thunder-user-skins"
+    }
+  ],
+  "changed": [
+    "SKILL.md",
+    "references/type-and-decals.md"
+  ],
+  "added": [],
+  "removed": [],
+  "code_changed": false,
+  "trigger": "User request: write taste corrections for the known model weaknesses in type, colour and layout into both Skills (references/taste-corrections.md, scripts/design_lint.py, Akamywek drift table).",
+  "validation_scope": "Frontmatter, local links/anchors, exact source/installed/ZIP sync; unit tests run separately. No new art acceptance."
+}

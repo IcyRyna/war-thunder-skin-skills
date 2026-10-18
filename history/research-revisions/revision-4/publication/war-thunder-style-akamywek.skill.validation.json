@@ -1,0 +1,82 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T18:28:37.230031+00:00",
+  "state": "validated_skill_revision",
+  "skill": "war-thunder-style-akamywek",
+  "revision": 4,
+  "effective_files": 10,
+  "files": {
+    "SKILL.md": "08b441f9e9a1732d6aeac1112f25faeb91d450bf919aa95d9d76b865913c6427",
+    "agents/openai.yaml": "95e1e17d6b46c28ea40ae9c0ab7e4571d6b7cb9344ccc058bf982969e6148eed",
+    "diagrams/motif-library.svg": "7db5df44e55174e72ceb9bd51e4656dce17392d02b8d6edb2139f0351423f8ed",
+    "examples/j16-chen-full-livery_build_design.py": "527b710449dddf8b856c2ed8df79ffae1c95f01cf0d08030394234a3b8e22975",
+    "examples/j16-key-sequence.json": "2e29971bec2f808bb1e45ef25926c8294017e80b23aa0ecf4855573e23e3df83",
+    "examples/j16-nested-chevrons.json": "8d0e76a371d690a03ac9660a68a97e3ff5ccdc7c27611efdd90ebdff10038146",
+    "references/motifs.md": "a07633626974ef14ac941b01beebf877e45920c7d8689ece34a05e16578d58fd",
+    "references/palette.md": "dbf97037748cc9834481731f05e5bc1027570e515d4370f1fe1b944e93834d9e",
+    "references/surfaces.md": "f11ffe3e33cae8ad2e974405bfa54c5529b02ef2c3f41a06ac8dcd04e07f6907",
+    "references/type-and-decals.md": "8362bb28f721ede595355a1c97d71659bf7aa91e5fed8face67d74de7f393540"
+  },
+  "package_sha256": "8816488be4db410e8af6035c182b1a16ddef7a9b70c2312839850798446dbe5f",
+  "package_bytes": 24098,
+  "source_installed_staged_zip_equal": true,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "../diagrams/motif-library.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    }
+  ],
+  "changed": [
+    "diagrams/motif-library.svg",
+    "examples/j16-chen-full-livery_build_design.py",
+    "references/motifs.md",
+    "references/palette.md",
+    "references/surfaces.md"
+  ],
+  "added": [],
+  "removed": [],
+  "code_changed": true,
+  "trigger": "User request: distil the J-16 Chen v5-v9 lessons into the Skills (shared-UV chart order, up-facing chart threshold, flat-zone placement, inner-fin wedge) and add surface_map.py.",
+  "validation_scope": "Frontmatter, local links/anchors, exact source/installed/ZIP sync; unit tests run separately. No new art acceptance."
+}

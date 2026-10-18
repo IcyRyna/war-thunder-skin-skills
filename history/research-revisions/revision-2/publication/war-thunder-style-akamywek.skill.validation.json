@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "checked_at_utc": "2026-10-17T14:24:21.207294+00:00",
+  "state": "validated_skill_revision",
+  "skill": "war-thunder-style-akamywek",
+  "revision": 2,
+  "effective_files": 10,
+  "files": {
+    "SKILL.md": "08b441f9e9a1732d6aeac1112f25faeb91d450bf919aa95d9d76b865913c6427",
+    "agents/openai.yaml": "95e1e17d6b46c28ea40ae9c0ab7e4571d6b7cb9344ccc058bf982969e6148eed",
+    "diagrams/motif-library.svg": "bc046b867228eba4318280ffdda1f30aa988e14ff48789eb75a117659e236ed7",
+    "examples/j16-chen-full-livery_build_design.py": "959c256cbe73df55080b16669246c72cdb55a2d6108c8a1857d621b50583ff84",
+    "examples/j16-key-sequence.json": "2e29971bec2f808bb1e45ef25926c8294017e80b23aa0ecf4855573e23e3df83",
+    "examples/j16-nested-chevrons.json": "8d0e76a371d690a03ac9660a68a97e3ff5ccdc7c27611efdd90ebdff10038146",
+    "references/motifs.md": "561efe459c02c8e724721679aa9b0babc18931627278c9a02534829bf7fce3ff",
+    "references/palette.md": "58dc5cc707c7b3b14b1306196d276f2c9b0bfa49beb9bcd850b0452563b6e85f",
+    "references/surfaces.md": "421fb3670d7aa3f39494436f80747ded9fdcee001cfe41945c41cc5c5638aa6b",
+    "references/type-and-decals.md": "8362bb28f721ede595355a1c97d71659bf7aa91e5fed8face67d74de7f393540"
+  },
+  "package_sha256": "ed4ad04939c0dd4dbe7e1b29dc32c35fc99b9fa2c0fd923608ad6dbcd220ccc9",
+  "package_bytes": 22652,
+  "source_installed_staged_zip_equal": true,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "../war-thunder-user-skins/references/aesthetics.md",
+      "skill": "war-thunder-user-skins"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "../diagrams/motif-library.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    }
+  ],
+  "changed": [
+    "SKILL.md",
+    "examples/j16-nested-chevrons.json",
+    "references/motifs.md",
+    "references/surfaces.md"
+  ],
+  "added": [
+    "examples/j16-chen-full-livery_build_design.py"
+  ],
+  "removed": [],
+  "code_changed": true,
+  "trigger": "User feedback on the first Akamywek-style production: outer fins must carry portraits, not lines; character sources must not repeat.",
+  "validation_scope": "Frontmatter, local links/anchors, exact source/installed/ZIP sync; unit tests run separately. No new art acceptance."
+}
