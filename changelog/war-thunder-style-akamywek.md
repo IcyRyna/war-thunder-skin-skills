@@ -6,6 +6,7 @@ Akamywek 风格：深炭底、单一签名色、白色尖形、三角马赛克�
 
 | 版本 | 日期 | 研究修订 | 改了什么 | 下载 |
 | --- | --- | --- | --- | --- |
+| 1.14 | 2026-10-14 18:15 |  | 垂尾外侧立绘与素材多样性 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v1.x) |
 | 1.13 | 2026-10-19 19:40 | rev 16 | 游戏反馈“白色线条”：机背白色焦点一律用构造线切格（region + cuts），按 F-2A 原图改正嵌套 V（等宽臂、空心回声）、加游戏距离下限（白件 ≥8 cm、切缝 ≥7 cm、描边 ≥1.2–1.5 cm）和近景检查；base-layout 的 J-10C 一节换成 v5；随附通用脚本和制作参考同步到 3.13 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.13) |
 | 1.12 | 2026-10-19 17:49 | rev 15 | J-10C 实测：base-layout.md 加新机型上的部位做法、面积和五条经验；motifs.md 加角度族内排嵌套尖片；制作顺序加新机型准备和面积比测量；随附通用脚本和制作参考同步到 3.12 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.12) |
 | 1.11 | 2026-10-19 15:14 | rev 14 | base-layout.md 按 F-2A 整机逐组实测补充（各部位马赛克格距与方向、缝翼万花筒箭头、机腹平色红环、SOPMOD 标签、共用渐变 22%/77%、游戏图标与投影、原厂红保留）；随附通用脚本和制作参考同步到 3.11 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.11) |
