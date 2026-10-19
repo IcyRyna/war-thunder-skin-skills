@@ -92,6 +92,18 @@ class DesignLintTests(unittest.TestCase):
         flagged = {h['where'] for h in result['hits'] if h['code'] == 'thin-white-line'}
         self.assertEqual(flagged, {f'echo-{i}-l' for i in range(4)})
 
+    def test_one_picture_spanning_several_island_charts_is_not_a_repeat(self):
+        """J-10C v6: the wing picture is placed on the wing and both elevon charts with the same placement."""
+        (self.root / 'w.png').write_bytes(b'wing art')
+        same = dict(source='w.png', width=5, center=[-1, -2.2], rotation=0, flip=True, clip=[[0, 0], [1, 0], [1, 1]])
+        design = dict(schema_version=1, charts=[CHART], palette=dict(hi='#eef0f2'),
+                      layers=[dict(name='art', images=[dict(same, id=f'art-{c}', chart='top') for c in ('wing', 'elevon', 'elevon1')])])
+        _, codes = self.lint(design)
+        self.assertNotIn('repeated-art', codes)
+        design['layers'][0]['images'][2]['center'] = [-1, 2.2]          # a second placement of the same picture
+        _, codes = self.lint(design)
+        self.assertIn('repeated-art', codes)
+
     def test_outlines_under_1_2_cm_are_flagged_for_game_distance(self):
         def frame(id_, band):
             return dict(id=id_, type='polygon', chart='top', fill='hi', points=[[0, 0], [1, 0], [1, .3], [0, .3]],

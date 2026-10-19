@@ -361,9 +361,13 @@ def check_images(design, design_dir, report):
                 continue
             path = (design_dir / spec['source']).resolve()
             key = hashlib.sha256(path.read_bytes()).hexdigest() if path.is_file() else str(path)
-            seen.setdefault(key, []).append(spec.get('id', spec['source']))
-    for key, wheres in seen.items():
-        if len(wheres) > 1:
+            # One picture spanning several UV islands of the same surface (a wing and its elevons) is placed once per
+            # island chart with identical placement: that is one placement, not a repeat.
+            placement = json.dumps([spec.get(k) for k in ('center', 'width', 'rotation', 'flip', 'crop', 'clip')], sort_keys=True)
+            seen.setdefault(key, {}).setdefault(placement, []).append(spec.get('id', spec['source']))
+    for key, placements in seen.items():
+        wheres = [w for ids in placements.values() for w in ids]
+        if len(placements) > 1:
             report.add('error', 'repeated-art', ', '.join(wheres), 'one character image is placed more than once (mirroring or recropping counts too)',
                        'Give every portrait position its own source image; find more official art if needed.')
 
