@@ -70,10 +70,10 @@ def point(value, name):
 
 def compile_fill(spec, palette):
     """Return (meta[4], floats[16]) for one fill: kind, seed, gradient flag, invert."""
-    meta, values = [0, 0, 0, 0], [0.] * 16
+    meta, values = [0, 0, 0, 0], [0.] * 63
     if not isinstance(spec, dict):
         spec = {'color': spec}
-    unknown = set(spec) - {'color', 'opacity', 'gradient', 'pattern', 'cell', 'jitter', 'angle', 'seed', 'from', 'to', 'gamma', 'invert'}
+    unknown = set(spec) - {'color', 'opacity', 'gradient', 'shade', 'pattern', 'cell', 'jitter', 'levels', 'contrast', 'inset', 'offset', 'angle', 'seed', 'from', 'to', 'gamma', 'invert', 'mirror'}
     if unknown:
         raise ValueError(f'Unknown fill keys: {sorted(unknown)}')
     kind = spec.get('pattern', 'solid')
@@ -93,6 +93,23 @@ def compile_fill(spec, palette):
             raise ValueError('Use either color or gradient in one fill')
     else:
         values[0:3] = values[3:6] = parse_color(spec.get('color'), palette)
+    if 'shade' in spec:
+        # Brightness multiplier across the shape, piecewise linear between 2-6 stops along from -> to: the tube
+        # shading of Akamywek's pinstripes (full at the top third, down to x0.73 at the bottom edge).
+        shade = spec['shade']
+        if not isinstance(shade, dict) or set(shade) != {'from', 'to', 'stops'}:
+            raise ValueError('shade needs from, to and stops')
+        start, end = point(shade['from'], 'shade.from'), point(shade['to'], 'shade.to')
+        stops = shade['stops']
+        if start == end or not isinstance(stops, list) or not 2 <= len(stops) <= 6 or any(
+                not isinstance(s, (list, tuple)) or len(s) != 2 for s in stops):
+            raise ValueError('shade needs different endpoints and 2-6 [position, factor] stops')
+        ts = [float(t) for t, _ in stops]
+        if ts != sorted(ts) or ts[0] < 0 or ts[-1] > 1 or any(not 0 <= float(f) <= 1.5 for _, f in stops):
+            raise ValueError('shade stop positions rise within 0..1 and factors are 0..1.5')
+        values[16], values[17:19], values[19:21] = len(stops), start, end
+        for n, (t, f) in enumerate(stops):
+            values[46 + 2 * n], values[47 + 2 * n] = float(t), float(f)
     opacity = float(spec.get('opacity', 1))
     if not 0 < opacity <= 1:
         raise ValueError('opacity must be in (0, 1]')
@@ -106,6 +123,56 @@ def compile_fill(spec, palette):
         if not 0 <= values[12] <= 0.5:
             raise ValueError('jitter must be 0-0.5')
         meta[1] = int(spec.get('seed', 1)) & 0x7fffffff
+        if 'levels' in spec:
+            # Discrete shade steps instead of continuous jitter: [[factor, weight], ...], up to 6.  A factor below 1
+            # darkens by multiplying; above 1 it lightens toward white by (factor - 1), so light triangles turn paler,
+            # not more saturated (Akamywek's F-2A: dark steps x0.84-0.97, light steps 3-13 % toward white).
+            levels = spec['levels']
+            if kind != 'tri-mosaic' or 'jitter' in spec:
+                raise ValueError('levels apply to tri-mosaic fills and replace jitter')
+            if not isinstance(levels, list) or not 1 <= len(levels) <= 6 or any(not isinstance(l, (list, tuple)) or len(l) != 2 for l in levels):
+                raise ValueError('levels is a list of 1-6 [factor, weight] pairs')
+            total = sum(float(w) for _, w in levels)
+            if not math.isfinite(total) or total <= 0 or any(not 0.5 <= float(f) <= 1.5 or float(w) < 0 for f, w in levels):
+                raise ValueError('level factors are 0.5-1.5 and weights are nonnegative with a positive sum')
+            values[15] = len(levels)
+            acc = 0.
+            for n, (factor, weight) in enumerate(levels):
+                acc += float(weight) / total
+                values[34 + n], values[40 + n] = float(factor), acc
+            values[12] = 0.
+        if 'contrast' in spec:
+            # Pattern strength along a ramp: 1 keeps the levels or jitter, 0 flattens them to the fill colour.
+            # Akamywek's F-2A nose fades the mosaic out towards the tip.
+            ramp = spec['contrast']
+            if kind != 'tri-mosaic' or not isinstance(ramp, dict) or set(ramp) != {'from', 'to', 'values'}:
+                raise ValueError('contrast needs tri-mosaic and {from, to, values}')
+            start, end = point(ramp['from'], 'contrast.from'), point(ramp['to'], 'contrast.to')
+            weights = ramp['values']
+            if start == end or not isinstance(weights, (list, tuple)) or len(weights) != 2 or any(
+                    not isinstance(v, (int, float)) or not math.isfinite(v) or not 0 <= v <= 1 for v in weights):
+                raise ValueError('contrast needs different endpoints and two values in 0..1')
+            values[24:31] = [1., *start, *end, *weights]
+        if 'inset' in spec:
+            # A gap of the fill colour between triangles, as a barycentric fraction of the triangle (0..1/3).
+            inset = float(spec['inset'])
+            if kind != 'tri-mosaic' or not math.isfinite(inset) or not 0 <= inset < 1 / 3:
+                raise ValueError('inset needs tri-mosaic and a fraction in 0..1/3')
+            values[31] = inset
+        if 'offset' in spec:
+            # Where a lattice vertex sits, in design units, so the grid can be aligned to a reference or a panel edge.
+            values[32:34] = point(spec['offset'], 'offset')
+        if 'mirror' in spec:
+            # Kaleidoscope: points left of the line from -> to are reflected across it before the lattice lookup, so
+            # both halves show the same triangles and shades mirrored (Akamywek's F-2A slats mirror the mosaic about
+            # the centre line of each arrow).
+            mirror = spec['mirror']
+            if kind != 'tri-mosaic' or not isinstance(mirror, dict) or set(mirror) != {'from', 'to'}:
+                raise ValueError('mirror needs tri-mosaic and {from, to}')
+            start, end = point(mirror['from'], 'mirror.from'), point(mirror['to'], 'mirror.to')
+            if start == end:
+                raise ValueError('mirror needs different endpoints')
+            values[58:62], values[62] = [*start, *end], 1.
         if kind != 'tri-mosaic':
             if 'from' not in spec or 'to' not in spec:
                 raise ValueError(f'{kind} needs from and to: full-size marks at from, vanished at to')
@@ -117,7 +184,7 @@ def compile_fill(spec, palette):
                 raise ValueError('gamma must be 0.2-5')
             meta[3] = 1 if spec.get('invert') else 0
             return meta, values, (start, end)
-    elif any(key in spec for key in ('cell', 'jitter', 'angle', 'seed', 'from', 'to', 'gamma', 'invert')):
+    elif any(key in spec for key in ('cell', 'jitter', 'levels', 'contrast', 'inset', 'offset', 'angle', 'seed', 'from', 'to', 'gamma', 'invert', 'mirror')):
         raise ValueError('Pattern parameters require a pattern fill')
     return meta, values, None
 
@@ -147,7 +214,7 @@ def load_design(path):
     return design, palette, ss
 
 
-def select_charts(design, geometry):
+def select_charts(design, geometry, size=None):
     """Assign each triangle to the first matching chart, or -1."""
     world = geometry['triangles']
     names = np.asarray(geometry['names']).astype(str)
@@ -164,7 +231,7 @@ def select_charts(design, geometry):
     facing = np.zeros(len(world), np.float32)
     quality, warnings = {}, []
     for index, chart in enumerate(design['charts']):
-        unknown = set(chart) - {'id', 'u', 'v', 'nodes', 'materials', 'normal', 'facing', 'where'}
+        unknown = set(chart) - {'id', 'u', 'v', 'nodes', 'materials', 'normal', 'facing', 'where', 'frame', 'atlas_box', 'island'}
         if unknown:
             raise ValueError(f'Unknown chart keys in {chart["id"]}: {sorted(unknown)}')
         (ua, um), (va, vm) = parse_axis(chart.get('u', '')), parse_axis(chart.get('v', ''))
@@ -200,6 +267,23 @@ def select_charts(design, geometry):
                 component = centroid[:, axis]
                 component = np.abs(component) if sign == 2 else -component if sign == 1 else component
                 mask &= (component >= lo) & (component <= hi)
+        if 'atlas_box' in chart:
+            # Triangles whose atlas centroid lies in [u0, v0, u1, v1] (fractions of the atlas, top-left origin): the
+            # natural way to pick one UV island when a design is drawn on the unwrapped map.
+            u0, v0, u1, v1 = (float(v) for v in chart['atlas_box'])
+            if not (0 <= u0 < u1 <= 1 and 0 <= v0 < v1 <= 1):
+                raise ValueError(f'Chart {chart["id"]}: atlas_box is [u0, v0, u1, v1] in 0..1 with u0 < u1, v0 < v1')
+            centre_uv = geometry['uvs'].mean(axis=1)
+            cu, cv = centre_uv[:, 0], 1 - centre_uv[:, 1]
+            mask &= (cu >= u0) & (cu <= u1) & (cv >= v0) & (cv <= v1)
+        if 'island' in chart:
+            # Keep only the UV islands (triangles connected through shared UV vertices) that contain the given
+            # atlas points [[u, v], ...] in pixels (top-left origin): one painted island, not its neighbours.
+            # Seeds are atlas pixels of the real map: --base size, else design.atlas, else 8192.
+            if size is None:
+                atlas = design.get('atlas', {})
+                size = (int(atlas.get('width', MAX_ATLAS)), int(atlas.get('height', MAX_ATLAS)))
+            mask &= uv_islands(geometry['uvs'], mask, chart['island'], chart['id'], size)
         if 'facing' in chart:
             axis, sign = parse_axis(chart['facing'])
             component = normal[:, axis]
@@ -230,6 +314,71 @@ def select_charts(design, geometry):
     return assignment, axes, facing, quality, warnings
 
 
+def uv_islands(uvs, candidates, seeds, chart_id, size=(8192, 8192)):
+    """Mask of the candidate triangles in the UV islands that contain the seed atlas pixels."""
+    idx = np.flatnonzero(candidates)
+    if not len(idx):
+        return candidates
+    keys = np.round(uvs[idx].reshape(-1, 2) * (1 << 20)).astype(np.int64)
+    _, vid = np.unique(keys[:, 0] * (1 << 22) + keys[:, 1], return_inverse=True)
+    vid = vid.reshape(-1, 3)
+    parent = np.arange(vid.max() + 1)
+
+    def find(a):
+        while parent[a] != a:
+            parent[a] = parent[parent[a]]
+            a = parent[a]
+        return a
+    for a, b, c in vid:
+        ra, rb, rc = find(a), find(b), find(c)
+        parent[rb] = ra
+        parent[find(rc)] = ra
+    roots = np.array([find(v) for v in vid[:, 0]])
+    pix = np.stack([uvs[idx][..., 0] * (size[0] - 1), (1 - uvs[idx][..., 1]) * (size[1] - 1)], axis=-1)
+    chosen = set()
+    if not isinstance(seeds, list) or not seeds:
+        raise ValueError(f'Chart {chart_id}: island needs a list of [u, v] atlas pixels')
+    for s in seeds:
+        su, sv = (float(v) for v in s)
+        p0, p1, p2 = pix[:, 0], pix[:, 1], pix[:, 2]
+        d = (p1[:, 1] - p2[:, 1]) * (p0[:, 0] - p2[:, 0]) + (p2[:, 0] - p1[:, 0]) * (p0[:, 1] - p2[:, 1])
+        with np.errstate(divide='ignore', invalid='ignore'):
+            w0 = ((p1[:, 1] - p2[:, 1]) * (su - p2[:, 0]) + (p2[:, 0] - p1[:, 0]) * (sv - p2[:, 1])) / d
+            w1 = ((p2[:, 1] - p0[:, 1]) * (su - p2[:, 0]) + (p0[:, 0] - p2[:, 0]) * (sv - p2[:, 1])) / d
+        hit = np.flatnonzero((w0 >= 0) & (w1 >= 0) & (w0 + w1 <= 1))
+        if not len(hit):
+            raise ValueError(f'Chart {chart_id}: island seed {s} is not on any candidate triangle')
+        chosen.update(roots[hit].tolist())
+    keep = np.zeros_like(candidates)
+    keep[idx[np.isin(roots, list(chosen))]] = True
+    return keep
+
+
+def chart_frames(design):
+    """Per chart [mode, origin_u, origin_v, a, b, c, d]: design (x, y) = M (atlas pixel - origin).
+
+    A chart with a "frame" is evaluated on the atlas itself: its shapes stay straight lines in the original UV,
+    as a painter working on the unwrapped map draws them.  The frame says where design (0, 0) sits in atlas
+    pixels (top-left origin, texel centres at integers) and which atlas displacement one metre of design x and
+    one metre of design y make.  Fit it to the island with uv_frame.py.  Charts without a frame keep the world
+    axes, which bend straight UV edges wherever the unwrap follows a curved surface.
+    """
+    frames = np.zeros((len(design['charts']), 7), np.float64)
+    for index, chart in enumerate(design['charts']):
+        frame = chart.get('frame')
+        if frame is None:
+            continue
+        if not isinstance(frame, dict) or set(frame) - {'origin', 'x', 'y', 'note'} or not {'origin', 'x', 'y'} <= set(frame):
+            raise ValueError(f'Chart {chart["id"]}: frame needs origin, x and y (atlas pixels; x and y per metre)')
+        o, ex, ey = (point(frame[k], f'{chart["id"]} frame {k}') for k in ('origin', 'x', 'y'))
+        det = ex[0] * ey[1] - ex[1] * ey[0]
+        if not abs(det) > 1e-9:
+            raise ValueError(f'Chart {chart["id"]}: frame x and y must not be parallel')
+        # Inverse of [[ex.u, ey.u], [ex.v, ey.v]] maps an atlas displacement back to metres.
+        frames[index] = 1, o[0], o[1], ey[1] / det, -ey[0] / det, -ex[1] / det, ex[0] / det
+    return frames
+
+
 def compile_items(design, palette):
     chart_index = {c['id']: i for i, c in enumerate(design['charts'])}
     meta, floats, points, lengths, fill_meta, fill_values, boxes, labels = [], [], [], [], [], [], [], []
@@ -249,6 +398,19 @@ def compile_items(design, palette):
             if item.get('chart') not in chart_index:
                 raise ValueError(f'{label}: unknown chart {item.get("chart")}')
             pts = [point(p, f'{label} point') for p in item.get('points', [])]
+            holes = item.get('holes', [])
+            if holes:
+                # Even-odd fill: walk out and back along the same bridge from the outer ring's first point to each hole,
+                # so the two bridge edges cancel and only the rings count.
+                if kind != 'polygon' or not isinstance(holes, list):
+                    raise ValueError(f'{label}: holes apply to polygons (a list of point rings)')
+                outer = pts + [pts[0]]
+                for ring in holes:
+                    ring = [point(q, f'{label} hole point') for q in ring]
+                    if len(ring) < 3:
+                        raise ValueError(f'{label}: a hole needs at least 3 points')
+                    outer += ring + [ring[0], pts[0]]
+                pts = outer
             if len(pts) < (3 if kind == 'polygon' else 2):
                 raise ValueError(f'{label}: too few points')
             fm, fv, halftone = compile_fill(item.get('fill'), palette)
@@ -288,7 +450,7 @@ def compile_items(design, palette):
     if not meta:
         # Raster-only design: keep array shapes valid for the vector pass.
         meta, floats, points, lengths = [[-1, -1, 0, 0, 0, 0]], [[0., 0., 0., 0.]], [(0., 0.)], [0.]
-        fill_meta, fill_values, boxes = [[0, 0, 0, 0]], [[0.] * 16], [[1e30, 1e30, -1e30, -1e30]]
+        fill_meta, fill_values, boxes = [[0, 0, 0, 0]], [[0.] * 63], [[1e30, 1e30, -1e30, -1e30]]
     return dict(meta=np.asarray(meta, np.int32), floats=np.asarray(floats, np.float64),
                 points=np.asarray(points, np.float64), lengths=np.asarray(lengths, np.float64),
                 fill_meta=np.asarray(fill_meta, np.int32), fill_values=np.asarray(fill_values, np.float64),
@@ -354,14 +516,39 @@ def _fill(x, y, fm, fv, out):
     for c in range(3):
         out[c] = fv[c] * (1 - t) + fv[3 + c] * t
     out[3] = fv[6]
+    if fv[16] > 0:
+        dx, dy = fv[19] - fv[17], fv[20] - fv[18]
+        r = min(1., max(0., ((x - fv[17]) * dx + (y - fv[18]) * dy) / (dx * dx + dy * dy)))
+        n = int(fv[16])
+        f = fv[47 + 2 * (n - 1)]
+        if r <= fv[46]:
+            f = fv[47]
+        else:
+            for k in range(n - 1):
+                t0, t1 = fv[46 + 2 * k], fv[48 + 2 * k]
+                if r <= t1:
+                    w = (r - t0) / (t1 - t0) if t1 > t0 else 1.
+                    f = fv[47 + 2 * k] * (1 - w) + fv[49 + 2 * k] * w
+                    break
+        for c in range(3):
+            out[c] = min(255., out[c] * f)
     kind = fm[0]
     if kind == 0:
         return
     upper = 0
     l0 = l1 = l2 = 0.
     cell, angle = fv[11], fv[13]
+    if fv[62] > 0:
+        dx, dy = fv[60] - fv[58], fv[61] - fv[59]
+        side = dx * (y - fv[59]) - dy * (x - fv[58])
+        if side > 0:
+            d2 = dx * dx + dy * dy
+            t = ((x - fv[58]) * dx + (y - fv[59]) * dy) / d2
+            fx, fy = fv[58] + t * dx, fv[59] + t * dy
+            x, y = 2 * fx - x, 2 * fy - y
     ca, sa = math.cos(-angle), math.sin(-angle)
-    px, py = (x * ca - y * sa) / cell, (x * sa + y * ca) / cell
+    qx, qy = x - fv[32], y - fv[33]
+    px, py = (qx * ca - qy * sa) / cell, (qx * sa + qy * ca) / cell
     if kind == 4:
         i, j = int(math.floor(px)), int(math.floor(py))
         cx, cy = i + .5, j + .5
@@ -381,12 +568,31 @@ def _fill(x, y, fm, fv, out):
         cx = ga + cy / root3
     if kind == 2:
         k = 1. + fv[12] * _hash(i, j, upper, fm[1])
+        tint = 0
+        if fv[15] > 0:
+            tint = 1
+            pick = (_hash(i, j, upper, fm[1]) + 1.) * .5
+            k = fv[34 + int(fv[15]) - 1]
+            for n in range(int(fv[15])):
+                if pick <= fv[40 + n]:
+                    k = fv[34 + n]
+                    break
+        if l0 < fv[31] or l1 < fv[31] or l2 < fv[31]:
+            k = 1.
+        if fv[24] > 0:
+            dx, dy = fv[27] - fv[25], fv[28] - fv[26]
+            r = min(1., max(0., ((x - fv[25]) * dx + (y - fv[26]) * dy) / (dx * dx + dy * dy)))
+            k = 1 + (k - 1) * (fv[29] * (1 - r) + fv[30] * r)
         for c in range(3):
-            out[c] = min(255., max(0., out[c] * k))
+            if tint and k > 1:
+                out[c] = min(255., out[c] + (255. - out[c]) * (k - 1))
+            else:
+                out[c] = min(255., max(0., out[c] * k))
         return
     # Halftone scale from the mark's own centre, so every mark keeps one size.
     gx, gy = cx * cell, cy * cell
-    ux, uy = gx * math.cos(angle) - gy * math.sin(angle), gx * math.sin(angle) + gy * math.cos(angle)
+    ux = gx * math.cos(angle) - gy * math.sin(angle) + fv[32]
+    uy = gx * math.sin(angle) + gy * math.cos(angle) + fv[33]
     dx, dy = fv[9] - fv[7], fv[10] - fv[8]
     ramp = min(1., max(0., ((ux - fv[7]) * dx + (uy - fv[8]) * dy) / (dx * dx + dy * dy)))
     size = (1. - ramp) ** fv[14]
@@ -417,7 +623,89 @@ def _design(xyz, axes, chart):
 
 
 @njit(cache=True)
-def _paint(world, uvs, assignment, facing, axes, protect, meta, floats, pts, arc, fill_meta, fill_values, boxes,
+def _used(uvs, width, height, used):
+    """Mark every atlas texel that any triangle of the model samples (with the painter's 0.75 px margin)."""
+    for tri in range(uvs.shape[0]):
+        p = np.empty((3, 2), np.float64)
+        for k in range(3):
+            p[k, 0] = uvs[tri, k, 0] * (width - 1)
+            p[k, 1] = (1 - uvs[tri, k, 1]) * (height - 1)
+        den = (p[1, 1] - p[2, 1]) * (p[0, 0] - p[2, 0]) + (p[2, 0] - p[1, 0]) * (p[0, 1] - p[2, 1])
+        if abs(den) < 1e-12:
+            continue
+        scale = np.empty(3, np.float64)
+        for k in range(3):
+            a, b = p[(k + 1) % 3], p[(k + 2) % 3]
+            scale[k] = abs(den) / max(math.hypot(a[0] - b[0], a[1] - b[1]), 1e-12)
+        x0, x1 = max(0, int(math.floor(min(p[0, 0], p[1, 0], p[2, 0]))) - 1), min(width - 1, int(math.ceil(max(p[0, 0], p[1, 0], p[2, 0]))) + 1)
+        y0, y1 = max(0, int(math.floor(min(p[0, 1], p[1, 1], p[2, 1]))) - 1), min(height - 1, int(math.ceil(max(p[0, 1], p[1, 1], p[2, 1]))) + 1)
+        for yy in range(y0, y1 + 1):
+            for xx in range(x0, x1 + 1):
+                a = ((p[1, 1] - p[2, 1]) * (xx - p[2, 0]) + (p[2, 0] - p[1, 0]) * (yy - p[2, 1])) / den
+                b = ((p[2, 1] - p[0, 1]) * (xx - p[2, 0]) + (p[0, 0] - p[2, 0]) * (yy - p[2, 1])) / den
+                if min(a * scale[0], b * scale[1], (1 - a - b) * scale[2]) >= -.75:
+                    used[yy, xx] = True
+    return 0
+
+
+def same_texture_triangles(design, geometry):
+    """Triangles whose material samples the colour texture of the materials the charts paint (all if unknown)."""
+    names, resources, ids = (geometry.get(k) for k in ('material_names', 'material_resources', 'material_ids'))
+    count = len(geometry['uvs'])
+    if names is None or resources is None or ids is None:
+        return np.ones(count, bool)
+    patterns = [p for chart in design['charts'] for p in chart.get('materials', ['*'])] or ['*']
+    colour = []
+    for res in resources:
+        try:
+            slots = json.loads(str(res))
+        except (TypeError, ValueError):
+            slots = []
+        colour.append(slots[0] if slots else None)
+    target = {colour[i] for i, n in enumerate(names) if any(fnmatch.fnmatchcase(str(n), p) for p in patterns) and colour[i]}
+    if not target:
+        return np.ones(count, bool)
+    keep = np.array([c in target for c in colour])
+    return keep[np.asarray(ids)]
+
+
+def bleed(layer, used, steps):
+    """Extend a layer's colour into atlas texels no triangle uses, so filtering at island edges never mixes in
+    whatever lies outside the island (a dark rim along every UV seam otherwise).  Texels of other islands stay put."""
+    if steps <= 0:
+        return layer
+    alpha = layer[:, :, 3] > 0
+    if not alpha.any():
+        return layer
+    ys, xs = np.nonzero(alpha)
+    y0, y1, x0, x1 = max(ys.min() - steps, 0), min(ys.max() + steps + 1, layer.shape[0]), max(xs.min() - steps, 0), min(xs.max() + steps + 1, layer.shape[1])
+    sub = layer[y0:y1, x0:x1].copy()
+    free = ~used[y0:y1, x0:x1]
+    for _ in range(steps):
+        filled = sub[:, :, 3] > 0
+        grow = free & ~filled
+        best = np.zeros_like(sub)
+        for dy, dx in ((0, 1), (0, -1), (1, 0), (-1, 0), (1, 1), (1, -1), (-1, 1), (-1, -1)):
+            src = np.roll(np.roll(sub, dy, axis=0), dx, axis=1)
+            take = grow & (src[:, :, 3] > best[:, :, 3])
+            best[take] = src[take]
+        sub[grow & (best[:, :, 3] > 0)] = best[grow & (best[:, :, 3] > 0)]
+    out = layer.copy()
+    out[y0:y1, x0:x1] = sub
+    return out
+
+
+@njit(cache=True)
+def _coords(xyz, px, py, axes, frames, chart):
+    """Design coordinates of one sample: world axes, or a linear frame on the atlas pixel itself."""
+    if frames[chart, 0] > 0:
+        du, dv = px - frames[chart, 1], py - frames[chart, 2]
+        return du * frames[chart, 3] + dv * frames[chart, 4], du * frames[chart, 5] + dv * frames[chart, 6]
+    return _design(xyz, axes, chart)
+
+
+@njit(cache=True)
+def _paint(world, uvs, assignment, facing, axes, frames, protect, meta, floats, pts, arc, fill_meta, fill_values, boxes,
            layer_count, ss, width, height, layers, best, hits):
     n_items = meta.shape[0]
     candidates = np.empty(n_items, np.int64)
@@ -445,7 +733,7 @@ def _paint(world, uvs, assignment, facing, axes, protect, meta, floats, pts, arc
         for k in range(3):
             for c in range(3):
                 xyz[c] = world[tri, k, c]
-            u, v = _design(xyz, axes, chart)
+            u, v = _coords(xyz, p[k, 0], p[k, 1], axes, frames, chart)
             lo_u, lo_v, hi_u, hi_v = min(lo_u, u), min(lo_v, v), max(hi_u, u), max(hi_v, v)
         margin = max(hi_u - lo_u, hi_v - lo_v) + 1e-6
         count = 0
@@ -477,7 +765,7 @@ def _paint(world, uvs, assignment, facing, axes, protect, meta, floats, pts, arc
                         bb = ((p[2, 1] - p[0, 1]) * (ox - p[2, 0]) + (p[0, 0] - p[2, 0]) * (oy - p[2, 1])) / den
                         for k in range(3):
                             xyz[k] = aa * world[tri, 0, k] + bb * world[tri, 1, k] + (1 - aa - bb) * world[tri, 2, k]
-                        u, v = _design(xyz, axes, chart)
+                        u, v = _coords(xyz, ox, oy, axes, frames, chart)
                         layer = -1
                         for n in range(count):
                             item = candidates[n]
@@ -518,7 +806,21 @@ def _paint(world, uvs, assignment, facing, axes, protect, meta, floats, pts, arc
     return 0
 
 
-def render_text(spec, palette, px_per_m):
+FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
+
+
+def resolve_font(value, design_dir=None):
+    """Font path as written, relative to the design file, or a file name bundled in the Skill's assets/fonts."""
+    value = value or os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
+    path = Path(value)
+    candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), FONT_DIR / path, path]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    raise ValueError(f'Font file not found: {value} (looked beside the design and in {FONT_DIR})')
+
+
+def render_text(spec, palette, px_per_m, design_dir=None):
     """Rasterise a text placement to straight RGBA; returns (array, width_m, height_m)."""
     from PIL import ImageDraw, ImageFont
     text = spec.get('text')
@@ -527,9 +829,7 @@ def render_text(spec, palette, px_per_m):
     height = float(spec.get('height', 0))
     if not 0 < height <= 10:
         raise ValueError('text height must be 0-10 m (cap height)')
-    font_path = spec.get('font', os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf'))
-    if not Path(font_path).is_file():
-        raise ValueError(f'Font file not found: {font_path}')
+    font_path = resolve_font(spec.get('font'), design_dir)
     cap = max(24, min(800, int(round(height * px_per_m * 2))))
     font = ImageFont.truetype(str(font_path), cap)
     if spec.get('variation'):
@@ -594,7 +894,7 @@ def compile_images(design, palette, design_dir, px_per_m):
                 height = width * rgba.shape[0] / rgba.shape[1]
                 source = str(path)
             else:
-                rgba, width, height = render_text(spec, palette, px_per_m)
+                rgba, width, height = render_text(spec, palette, px_per_m, design_dir)
                 source = None
             center = point(spec.get('center'), f'{label} center')
             opacity = float(spec.get('opacity', 1))
@@ -638,7 +938,7 @@ def _image_sample(img, x, y, out):
 
 
 @njit(cache=True)
-def _paint_image(world, uvs, assignment, facing, axes, protect, chart, img, center, size, angle, flip, opacity,
+def _paint_image(world, uvs, assignment, facing, axes, frames, protect, chart, img, center, size, angle, flip, opacity,
                  fade, clip, ss, width, height, layer):
     """Composite one placement over a premultiplied float layer; returns covered samples."""
     best = np.full((height, width), -1e30, np.float32)
@@ -656,7 +956,7 @@ def _paint_image(world, uvs, assignment, facing, axes, protect, chart, img, cent
         for k in range(3):
             for c in range(3):
                 xyz[c] = world[tri, k, c]
-            u, v = _design(xyz, axes, chart)
+            u, v = _coords(xyz, uvs[tri, k, 0] * (width - 1), (1 - uvs[tri, k, 1]) * (height - 1), axes, frames, chart)
             lo_u, lo_v, hi_u, hi_v = min(lo_u, u), min(lo_v, v), max(hi_u, u), max(hi_v, v)
         if hi_u < center[0] - radius or lo_u > center[0] + radius or hi_v < center[1] - radius or lo_v > center[1] + radius:
             continue
@@ -694,7 +994,7 @@ def _paint_image(world, uvs, assignment, facing, axes, protect, chart, img, cent
                         bb = ((p[2, 1] - p[0, 1]) * (ox - p[2, 0]) + (p[0, 0] - p[2, 0]) * (oy - p[2, 1])) / den
                         for k in range(3):
                             xyz[k] = aa * world[tri, 0, k] + bb * world[tri, 1, k] + (1 - aa - bb) * world[tri, 2, k]
-                        u, v = _design(xyz, axes, chart)
+                        u, v = _coords(xyz, ox, oy, axes, frames, chart)
                         if clip_n and not _inside(u, v, clip, 0, clip_n):
                             continue
                         du, dv = u - center[0], v - center[1]
@@ -763,6 +1063,11 @@ def write_svg(path, design, palette, chart_id):
             note = json.dumps({k: v for k, v in fill.items() if k != 'color'}, ensure_ascii=False) if len(fill) > 1 else ''
             attr = f' data-fill="{note.replace(chr(34), "&quot;")}"' if note else ''
             ident = item.get('id', '')
+            if item.get('holes'):
+                rings = [item['points']] + item['holes']
+                d = ' '.join('M ' + ' L '.join(f'{x:.5f},{y:.5f}' for x, y in ring) + ' Z' for ring in rings)
+                group.append(f'    <path id="{ident}" fill="{hex_color}" fill-rule="evenodd"{attr} d="{d}"/>')
+                continue
             group.append(f'    <polygon id="{ident}" fill="{hex_color}"{attr} points="' + ' '.join(f'{x:.5f},{y:.5f}' for x, y in pts) + '"/>')
         if group:
             parts.append(f'  <g id="{layer["name"]}">\n' + '\n'.join(group) + '\n  </g>')
@@ -802,14 +1107,15 @@ def run(args):
         if mask.size != size:
             raise ValueError('Protect mask must match the atlas size')
         protect = np.asarray(mask) > 0
-    assignment, axes, facing, chart_counts, warnings = select_charts(design, geometry)
+    assignment, axes, facing, chart_counts, warnings = select_charts(design, geometry, size)
+    frames = chart_frames(design)
     items = compile_items(design, palette)
     layer_count = len(design['layers'])
     layers = np.zeros((layer_count, size[1], size[0], 4), np.uint8)
     best = np.full((size[1], size[0]), -1e30, np.float32)
     hits = np.zeros(len(items['labels']), np.int64)
     _paint(np.ascontiguousarray(geometry['triangles'], np.float64), np.ascontiguousarray(geometry['uvs'], np.float64),
-           assignment, facing, axes, protect, items['meta'], items['floats'], items['points'], items['lengths'],
+           assignment, facing, axes, frames, protect, items['meta'], items['floats'], items['points'], items['lengths'],
            items['fill_meta'], items['fill_values'], items['boxes'], layer_count, ss, size[0], size[1], layers, best, hits)
     raster_layers = compile_images(design, palette, design_path.parent, float(design.get('text_pixels_per_metre', 400)))
     image_records = []
@@ -818,7 +1124,7 @@ def run(args):
     for layer_index, placements in raster_layers:
         buffer = np.zeros((size[1], size[0], 4), np.float32)
         for placement in placements:
-            covered = _paint_image(world64, uv64, assignment, facing, axes, protect, placement['chart'], placement['image'],
+            covered = _paint_image(world64, uv64, assignment, facing, axes, frames, protect, placement['chart'], placement['image'],
                                    placement['center'], placement['size'], placement['angle'], placement['flip'],
                                    placement['opacity'], placement['fade'], placement['clip'], ss, size[0], size[1], buffer)
             image_records.append(dict(id=placement['id'], layer=design['layers'][layer_index]['name'], source=placement['source'],
@@ -828,6 +1134,16 @@ def run(args):
         straight = np.where(alpha[:, :, None] > 0, buffer[:, :, :3] / np.maximum(alpha[:, :, None], 1e-6), 0)
         layers[layer_index, :, :, :3] = np.clip(straight * 255 + .5, 0, 255).astype(np.uint8)
         layers[layer_index, :, :, 3] = np.clip(alpha * 255 + .5, 0, 255).astype(np.uint8)
+    bleed_px = int(design.get('bleed_px', 4))
+    if not 0 <= bleed_px <= 16:
+        raise ValueError('bleed_px must be 0-16 atlas pixels')
+    if bleed_px:
+        # Texels count as taken only when a triangle samples this same colour map: glass, cockpit interior and
+        # other materials may overlap the atlas area but read other textures.
+        used = np.zeros((size[1], size[0]), np.bool_)
+        _used(uv64[same_texture_triangles(design, geometry)], size[0], size[1], used)
+        for index in range(layer_count):
+            layers[index] = bleed(layers[index], used, bleed_px)
     names = [f'{i + 1:02d}-{layer["name"]}' for i, layer in enumerate(design['layers'])]
     outputs = [out / 'layers' / f'{n}.png' for n in names] + [out / 'charts' / f'{c["id"]}.svg' for c in design['charts']]
     outputs += [out / 'composite.png', out / 'chart-coverage.png', out / 'receipt.json']

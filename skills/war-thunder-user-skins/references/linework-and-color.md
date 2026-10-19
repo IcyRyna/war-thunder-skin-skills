@@ -52,16 +52,20 @@ python scripts/vector_paint.py --geometry output/scene/geometry.npz --design des
 
 - `palette`：颜色名 → `#rrggbb`。
 - `charts`：每个图表定义两根轴（`x`、`y`、`z`，可加 `-` 或 `abs_` 前缀；`abs_z` 让左右自动镜像），以及 `nodes`、`materials`（fnmatch）、`normal`（如 `{"axis":"y","min":0.2}`）、`where`（三角形中心的坐标范围）、`facing` 等筛选。三角形归第一个匹配的图表。
-- `layers`：每层是一组 `polygon` 或 `stroke`。`stroke` 有 `width`、`taper`（`none/start/end/both`）、`taper_length`。
+- 图表还可以写 `island`：atlas 像素种子点列表，只取沿共享 UV 顶点与种子相连的整块岛。写 `frame`（`origin` atlas 像素，`x`、`y` 每设计单位的 atlas 像素向量）时，设计坐标直接按 atlas 像素线性换算，图形在展开图上保持笔直，用于作者在 UV 上作画的情况；框架由 `scripts/uv_frame.py` 拟合，做法见 [原 UV 作画与逐组复刻](uv-native-replica.md)。
+- `bleed_px`（默认 4）：图层颜色向外扩这么多像素，只扩进没有任何同贴图三角使用的空白像素，避免岛边接缝露出底色。
+- `layers`：每层是一组 `polygon` 或 `stroke`。`polygon` 可加 `holes`（点环列表，按奇偶规则挖空，用于描边形）。`stroke` 有 `width`、`taper`（`none/start/end/both`）、`taper_length`。
 - 图层也可以是 `images`：每项给 `chart`、`center`（米）、`rotation`、`flip`，以及 `source`（图片，配 `width` 米和可选 `crop`）或 `text`（配 `height` 米字高、`font`、`variation`、`tracking`、`color`）；`opacity`、`fade`（`from` 处不透明、`to` 处消失）、`clip`（多边形）可选。人物和文字因此也能按机体米制直接落到原 UV，与线条同层级管理。镜像的一侧要按图表方向设置 `flip` 才能保持字和人物不反；先用一张带方向标记的试写确认。
 - `fill`：颜色名、`{"gradient":{"from","to","colors"}}`，或 `{"pattern":"tri-mosaic"|"tri-halftone"|"dot-halftone", "cell":米, ...}`。半调需要 `from`、`to`：标记在 `from` 处满尺寸，到 `to` 处消失。
+- `shade`（任何填充都可加）：`{"from","to","stops":[[位置, 系数], ...]}`，2–6 个节点，沿 from→to 分段线性地乘明暗系数，用来做管状、斜面的明暗（例如上三分之一保持原色、往下渐暗到 0.73）。它和 `gradient` 方向可以不同，所以能同时做横向渐变和纵向明暗。
+- `tri-mosaic` 的其余参数：`levels`（1–6 个 `[系数, 权重]`；系数小于 1 按比例变暗，大于 1 按超出部分往白色混合，替代 `jitter`）、`contrast`（`{"from","to","values":[a,b]}`，马赛克强度沿方向渐变，0 时变成纯色）、`inset`（三角之间的缝，重心坐标比例 0–1/3，缝里是填充本色）、`offset`（格点相位，设计单位）、`angle`（格子方向）、`mirror`（`{"from","to"}` 一条轴线：轴线右侧的点先翻折到左侧再取格子，两侧三角和明暗逐一镜像，用于沿图形中线镜像的“万花筒”马赛克）。
 
 注意：
 
 - **图表顺序决定共用 UV 归谁。** 三角形归第一个匹配的图表；原 UV 里多块表面共用同一纹素时，排在前面的图表赢。机腹、主翼这类大面排在小部件和上表面之前，否则大面图案会被抢成零碎色块。
 - **朝上图表只收真正朝上的面**（如 `{"axis":"y","min":0.3}`）。机身侧壁、边条和机背之间的弯折面交给侧面图表或留素底；放宽阈值，色带会在弯折处被拉成一串毛刺碎片。
 - **图表轴必须躺在表面里。** 俯视图表（`x`、`abs_z`）只给朝上的面，垂尾和机身侧面要用（`x`、`y`）的单独图表。工具会对缩短超过 2 倍的面积发出警告，出现警告就按 `normal` 或 `where` 拆开图表。
-- **出血**：色场要越过真实表面边界 5–10 cm，否则岛边纹素只被部分覆盖，会出现暗缝。
+- **出血**：色场要越过真实表面边界 5–10 cm，否则岛边纹素只被部分覆盖，会出现暗缝；岛外的空白像素由 `bleed_px` 补色。
 - 出图前跑 `python -B scripts/design_lint.py --design design.json`：它只读设计稿，列出字体、配色、线型上的已知偏向和改法（见 [审美纠偏](taste-corrections.md)）。error 先修；warn 修掉或在设计记录写理由。
 - 收据里 `zero_hit_items` 不为空，说明那个图元没有落到任何纹素，检查坐标和图表。只命中几个纹素的图元也可能实际看不见，以 `surface_map.py` 的结果为准。
 - **后掠面按“前缘后方多少米”定位。** 垂尾、平尾上的形状用“该高度处前缘往后 N 米”取点；沿前缘法线偏移时，靠近根部的点会掉到表面外。
