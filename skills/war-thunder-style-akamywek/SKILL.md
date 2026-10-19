@@ -27,9 +27,9 @@ description: War Thunder 喷气机痛涂的 Akamywek 风格配方：先照作者
 1. 读 [基本布局](references/base-layout.md)，把 F-2A 的部位职责对应到本机型：签名色两大块在哪里、白色焦点放哪里、翼尖条纹、平尾或鸭翼前缘带、垂尾序列、侧面文字道。
 2. 读 [配色](references/palette.md)，从角色原图取签名色、色阶和底色，写出色表；面积按 [基本布局](references/base-layout.md#整机只有两大块) 的俯视比例定。
 3. 落笔前先对设计稿的图表跑 `surface_map.py`，看每块表面哪里平整、哪里弯折、哪里被别的表面盖住或被前面的图表抢走 UV（见 [线条与配色](references/core/linework-and-color.md#落笔前先看表面分区)）。
-4. 按顺序落笔：先两大块色场，再白色焦点（[线条与图形库](references/motifs.md) 的嵌套 V），再翼尖条纹、前缘带、垂尾序列，最后细线和字（[字与标识](references/type-and-decals.md)）。每个元素的宽度取 [尺寸阶梯](references/base-layout.md#尺寸阶梯) 的一档。用 `vector_paint.py` 在原 UV 上直接出图层；示例设计稿在 `examples/`。作者是在原 UV 展开图上画直线的：机背这类展开的蒙皮岛先用 `uv_frame.py` 建框架，图表写 `frame` 和 `island`，图形用 `arrangement.py` 的构造线切出来；学作者、复刻图形前先读 [原 UV 作画与逐组复刻](references/core/uv-native-replica.md)。
+4. 按顺序落笔：先两大块色场，再白色焦点（[线条与图形库](references/motifs.md) 的切格 V：**必须用 `arrangement.py` 的 `region` + `cuts` 写**，先铺一整块白色再用等宽深色切缝切开，不要一片片手写尖片），再翼尖条纹、前缘带、垂尾序列，最后细线和字（[字与标识](references/type-and-decals.md)）。每个元素的宽度取 [尺寸阶梯](references/base-layout.md#尺寸阶梯) 的一档。用 `vector_paint.py` 在原 UV 上直接出图层；示例设计稿在 `examples/`。作者是在原 UV 展开图上画直线的：机背这类展开的蒙皮岛先用 `uv_frame.py` 建框架，图表写 `frame` 和 `island`，图形用 `arrangement.py` 的构造线切出来；学作者、复刻图形前先读 [原 UV 作画与逐组复刻](references/core/uv-native-replica.md)。
 5. 质感只有签名色面内的三角马赛克。不画面板线和铆钉（F-2A 没有）。漆面用 `coat_material.py` 做整机一层亮漆（深底 R 173、B 0，白底 R 228、B 56，法线压平）；主体颜色图 8192²。见 [漆面](#漆面)。
-6. 出图前跑 `design_lint.py`，按 [审美纠偏](references/core/taste-corrections.md) 和下文的[常见跑偏](#常见跑偏)修掉报出的问题。出图后再跑一次 `surface_map.py`，`risky_items` 和 `seam_items` 清空或逐条确认（有 `frame` 的图表只信接缝项，遮挡看渲染）；俯视、仰视、侧视面积比用 `airframe_setup.py shares` 量；再给每个区域开近景相机看模型。
+6. 出图前跑 `design_lint.py`，按 [审美纠偏](references/core/taste-corrections.md) 和下文的[常见跑偏](#常见跑偏)修掉报出的问题。出图后再跑一次 `surface_map.py`，`risky_items` 和 `seam_items` 清空或逐条确认（有 `frame` 的图表只信接缝项，遮挡看渲染）；俯视、仰视、侧视面积比用 `airframe_setup.py shares` 量；再给每个区域开近景相机看模型。**游戏距离检查**：用约 100 px/m 的近景相机（`scene_preview.py render --camera`，`eye` 取从上略偏后，`zoom` 让机背约 4 m 占 400 px）渲染机背和垂尾，看白色会不会断成一像素的细线、切缝会不会读成鱼骨；1:1 只能看边缘干不干净，看不出这些（J-10C v4 在游戏里就是这样被指出“白色线条依然是你的薄弱点”）。
 7. **原尺寸检查**：在 Composa 里打开 8192 颜色图，用 `detail_sheet.py` 按 1:1 截取每个部位，和作者 F-2A 同样米制比例的截图并排看（方法见 [原尺寸检查](references/core/packaging-and-validation.md#原尺寸检查)）。边缘不干脆、粗细不一、有锯齿或断线，就回到设计稿改，不能只看缩小的预览图。
 8. 按 [基本布局验收](references/base-layout.md#验收基本布局阶段) 逐条对，交给用户看。
 

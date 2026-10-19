@@ -23,6 +23,19 @@ their slope).  A cell is the intersection of the half-planes of all lines on the
 convex, and neighbouring cells share edges exactly: filling both leaves no seam.  "outline" keeps only a
 band of that width inside the cell's edges (the same lines moved inward), with straight mitred corners.
 "using" limits a fill to the named lines (mirrors included), so other lines of the group do not cut it.
+"halves": "separate" (with "mirror": "y") cuts each half only by its own lines: a mirrored line that crosses into
+the other half (any line not through y = 0, e.g. "through" a point on a spine edge) would otherwise cut the cells
+there too and the two halves come out different.
+
+Region and cuts (the F-2A dorsal logic: one white area cut by equal dark bands, so every arm and step shares the
+same lines):
+  "region": [{"line": {...}, "keep": [x, y]}, ...]       # lines bounding the white area, a point on the kept side
+  "cuts":   [{"deg": 12, "through": [x, y], "toward": [x2, y2], "width": 0.09}, ...]
+            # a dark band of that width from the line toward the given point; "limit": [{"line", "keep"}] bounds it
+  "cut_fill": "white"                                     # fill of the cells that remain
+Given for the half y > 0, every cell of the region that lies outside all cuts becomes a fill; with "mirror": "y"
+the other half is built from mirrored lines only ("halves" is set to "separate").  Keep each remaining piece at
+least 8 cm wide and each cut at least 7 cm: thinner reads as scratches at the in-game viewing distance.
 Writes vector_paint.py polygon items (outlines use "holes"); --design/--layer append them to a design.
 Dependencies: none beyond the standard library.
 """
@@ -50,6 +63,18 @@ def line_of(spec):
         raise ValueError(f'line {spec.get("id")} needs apex, at or through')
     n = (-d[1], d[0])
     return n[0], n[1], n[0] * p[0] + n[1] * p[1]
+
+
+def on_axis(spec):
+    """True for the line y = 0 itself (its mirror is itself).  A horizontal line given by "through" is on the axis
+    only when its point has y = 0; checking only "at" (missing "at" read as 0) left such lines unmirrored."""
+    if abs(float(spec['deg'])) > 1e-12:
+        return False
+    if 'at' in spec:
+        return abs(float(spec['at'])) < 1e-12
+    if 'through' in spec:
+        return abs(float(spec['through'][1])) < 1e-12
+    return False
 
 
 def mirrored(spec):
@@ -106,11 +131,83 @@ def area(poly):
     return .5 * abs(sum(a[0] * b[1] - b[0] * a[1] for a, b in zip(poly, poly[1:] + poly[:1])))
 
 
+def offset_line(line, dist, toward):
+    """The same line moved `dist` metres toward the point `toward`, written with "through"."""
+    n0, n1, c = line_of(line)
+    s = -1 if n0 * toward[0] + n1 * toward[1] - c < 0 else 1
+    if 'apex' in line:
+        p = (float(line['apex']), 0.)
+    elif 'at' in line:
+        p = (0., float(line['at']))
+    else:
+        p = tuple(map(float, line['through']))
+    return dict(deg=line['deg'], through=[round(p[0] + s * n0 * dist, 6), round(p[1] + s * n1 * dist, 6)])
+
+
+def _side(line, p):
+    n0, n1, c = line_of(line)
+    return n0 * p[0] + n1 * p[1] - c
+
+
+def expand_cuts(spec, step=.01):
+    """Turn "region" + "cuts" into lines and fills: the cells of the region (half y > 0) outside every cut band."""
+    spec = dict(spec)
+    lines, region, bands = list(spec.get('lines', [])), [], []
+    for k, r in enumerate(spec['region']):
+        l = dict(r['line'], id=r['line'].get('id', f'region{k}'))
+        lines.append(l); region.append((l, r['keep']))
+    for k, cut in enumerate(spec.get('cuts', [])):
+        if float(cut.get('width', 0)) <= 0:
+            raise ValueError(f'cut {k}: width must be positive')
+        a = {kk: cut[kk] for kk in ('deg', 'apex', 'at', 'through') if kk in cut}
+        a['id'] = cut.get('id', f'cut{k}') + '-a'
+        b = dict(offset_line(a, float(cut['width']), cut['toward']), id=cut.get('id', f'cut{k}') + '-b')
+        lim = []
+        for j, m in enumerate(cut.get('limit', [])):
+            ml = dict(m['line'], id=m['line'].get('id', f'cut{k}-limit{j}'))
+            lines.append(ml); lim.append((ml, m['keep']))
+        lines += [a, b]; bands.append((a, b, lim))
+
+    def inside(p):
+        return all(_side(l, p) * _side(l, k) > 0 for l, k in region)
+
+    def in_band(p, band):
+        a, b, lim = band
+        return _side(a, p) * _side(b, p) < 0 and all(_side(l, p) * _side(l, k) > 0 for l, k in lim)
+    x0, x1, y0, y1 = (float(v) for v in spec['clip'])
+    cells = {}
+    y = max(y0, 0.) + step / 2
+    while y < y1:
+        x = x0 + step / 2
+        while x < x1:
+            p = (x, y)
+            if inside(p) and not any(in_band(p, band) for band in bands):
+                cells.setdefault(tuple(_side(l, p) > 0 for l in lines), []).append(p)
+            x += step
+        y += step
+    names = [l['id'] for l in lines]
+    fills = list(spec.get('fills', []))
+    for n, pts in enumerate(sorted(cells.values(), key=len, reverse=True)):
+        if len(pts) < 3:
+            continue
+        cx = sum(p[0] for p in pts) / len(pts); cy = sum(p[1] for p in pts) / len(pts)
+        seed = min(pts, key=lambda p: (p[0] - cx) ** 2 + (p[1] - cy) ** 2)
+        fills.append(dict(id=f'cut-cell-{n}', seed=[round(seed[0], 5), round(seed[1], 5)], fill=spec.get('cut_fill', 'white'), using=names))
+    spec['lines'], spec['fills'] = lines, fills
+    if spec.get('mirror') == 'y':
+        spec['halves'] = 'separate'
+    for k in ('region', 'cuts'):
+        spec.pop(k, None)
+    return spec
+
+
 def build(spec) -> list:
+    if 'region' in spec:
+        spec = expand_cuts(spec)
     raw = list(spec['lines'])
     seeds = list(spec['fills'])
     if spec.get('mirror') == 'y':
-        raw += [mirrored(l) for l in raw if not (abs(float(l['deg'])) < 1e-12 and float(l.get('at', 0)) == 0)]
+        raw += [mirrored(l) for l in raw if not on_axis(l)]
         seeds += [dict(f, id=f'{f["id"]}~', seed=[f['seed'][0], -f['seed'][1]]) for f in seeds if abs(f['seed'][1]) > 1e-12]
     elif spec.get('mirror') not in (None, 'none'):
         raise ValueError('mirror is "y" or absent')
@@ -119,6 +216,10 @@ def build(spec) -> list:
         raise ValueError('line ids must be unique')
     lines = [line_of(l) for l in raw]
     clip = [float(v) for v in spec['clip']]
+    separate = spec.get('halves') == 'separate'
+    if separate and spec.get('mirror') != 'y':
+        raise ValueError('halves "separate" needs mirror "y"')
+    shared = {l.get('id') for l in spec['lines'] if on_axis(l)}
     items = []
     for f in seeds:
         use = lines
@@ -130,6 +231,12 @@ def build(spec) -> list:
             if unknown:
                 raise ValueError(f'fill {f["id"]}: unknown lines {sorted(unknown)}')
             use = [ln for ln, i in zip(lines, ids) if i in names]
+        if separate:
+            # each half only by its own lines (an unmirrored line through y = 0 belongs to both)
+            mirrored_seed = str(f['id']).endswith('~')
+            mine = {i for i in ids if str(i).endswith('~') == mirrored_seed} | shared
+            pick = [ln for ln, i in zip(lines, ids) if i in mine and ('using' not in f or i in names)]
+            use = pick
         outer = cell(use, f['seed'], clip)
         if not outer:
             raise ValueError(f'fill {f["id"]}: empty cell')

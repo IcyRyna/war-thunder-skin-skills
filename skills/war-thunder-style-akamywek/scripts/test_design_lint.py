@@ -80,7 +80,28 @@ class DesignLintTests(unittest.TestCase):
             dict(id='sig-companion', type='stroke', chart='top', points=[[0, 5], [6, 5]], width=.03, taper='end', fill='sig')])])
         result, _ = self.lint(design)
         flagged = {h['where'] for h in result['hits'] if h['code'] == 'thin-white-line'}
-        self.assertEqual(flagged, {'spine-needle', 'le-sliver'})
+        # an open 3 cm stroke is a hairline even when named "echo"; only closed outlines are exempt (rev 16)
+        self.assertEqual(flagged, {'spine-needle', 'le-sliver', 'main-v-echo-1'})
+
+    def test_parallel_echo_strips_are_a_comb_not_an_echo(self):
+        """J-10C v4: four parallel 1 cm white strips named echo read as a comb of scratches in game."""
+        comb = [dict(id=f'echo-{i}-l', type='polygon', chart='top', fill='hi',
+                     points=[[0, .1 * i], [1.2, .1 * i + .25], [1.2, .1 * i + .26], [0, .1 * i + .01]]) for i in range(4)]
+        design = dict(schema_version=1, charts=[CHART], palette=dict(hi='#eef0f2'), layers=[dict(name='white', items=comb)])
+        result, _ = self.lint(design)
+        flagged = {h['where'] for h in result['hits'] if h['code'] == 'thin-white-line'}
+        self.assertEqual(flagged, {f'echo-{i}-l' for i in range(4)})
+
+    def test_outlines_under_1_2_cm_are_flagged_for_game_distance(self):
+        def frame(id_, band):
+            return dict(id=id_, type='polygon', chart='top', fill='hi', points=[[0, 0], [1, 0], [1, .3], [0, .3]],
+                        holes=[[[band, band], [1 - band, band], [1 - band, .3 - band], [band, .3 - band]]])
+        design = dict(schema_version=1, charts=[CHART], palette=dict(hi='#eef0f2'),
+                      layers=[dict(name='fin', items=[frame('fin-sequence-thin', .009), frame('fin-sequence-ok', .015)])])
+        result, _ = self.lint(design)
+        flagged = {h['where'] for h in result['hits'] if h['code'] == 'thin-outline'}
+        self.assertEqual(flagged, {'fin-sequence-thin'})
+        self.assertFalse([h for h in result['hits'] if h['code'] == 'thin-white-line'])
 
     def test_considered_design_is_quiet(self):
         design = dict(schema_version=1, charts=[CHART], palette=dict(base='#2c2e32', sig='#3f7fc0', sig_deep='#2f639a', hi='#eeeeee'), layers=[
