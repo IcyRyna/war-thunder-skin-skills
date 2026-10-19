@@ -109,8 +109,9 @@ def main():
     model=load_obj(args.model/'assembly.obj',args.out/'geometry.npz')
     mats=json.loads((args.model/'materials.json').read_text(encoding='utf-8'))['materials']
     bindings=config.get('textures',{})
+    material_bindings=config.get('material_bindings',{})
     if args.bounds:config['framing_bounds']=[args.bounds[:3],args.bounds[3:]]
-    for binding in bindings.values():
+    for binding in list(bindings.values())+list(material_bindings.values()):
         if isinstance(binding,dict):
             for key in ['color','normal','ao']:
                 if binding.get(key) and not Path(binding[key]).is_absolute():binding[key]=str((args.config.resolve().parent/binding[key]).resolve())
@@ -140,7 +141,7 @@ def main():
         material=lookup.get(str(name),{})
         slots=material.get('texture_slots',[])
         resource=(slots[0] or '').rstrip('*') if slots else ''
-        binding=bindings.get(resource,{})
+        binding=material_bindings.get(str(name),bindings.get(resource,{}))
         if isinstance(binding,str):binding={'color':binding}
         is_glass='glass' in str(name)
         default=(28,38,41,255) if is_glass else ((32,32,31,255) if 'track' in str(name) else (43,43,43,255))
@@ -196,6 +197,6 @@ def main():
         img=Image.frombytes('RGB',size,resolved.read(components=3,alignment=1)).transpose(Image.Transpose.FLIP_TOP_BOTTOM)
         img.save(args.out/(name+'.png'))
         print('rendered',name,flush=True)
-    write_json(args.out/'preview-report.json',{'renderer':'Independent OpenGL preview; approximate lighting, not the game engine','gpu':ctx.info.get('GL_RENDERER'),'texture_bindings':bindings,'missing_stock_preview_materials':missing,'bounds':[lo.tolist(),hi.tolist()],'views':args.views})
+    write_json(args.out/'preview-report.json',{'renderer':'Independent OpenGL preview; approximate lighting, not the game engine','gpu':ctx.info.get('GL_RENDERER'),'texture_bindings':bindings,'material_bindings':material_bindings,'missing_stock_preview_materials':missing,'bounds':[lo.tolist(),hi.tolist()],'views':args.views})
     ctx.release()
 if __name__=='__main__':main()

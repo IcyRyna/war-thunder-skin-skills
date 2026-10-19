@@ -22,9 +22,9 @@
 
 用于现代坦克的终末地工业风涂装，包含黑白黄分区、工业标志、路线节点和设备标签的布局方法，以及车型之间的 UV 与材质适配。
 
-安装包约 61 MB，带有 4 张原尺寸 UV、22 组元素裁片、标志 SVG / PNG 和提取工程。素材随包提供。支持相关车型逐纹素表面转移，并检查清洁漆面、目标结构法线与粗糙度。
+安装包约 61 MB，带有 4 张原尺寸 UV、22 组元素裁片、标志 SVG / PNG 和提取工程。素材随包提供。支持相关车型逐纹素表面转移、混合载具的分资源适配和独立布局，并检查清洁漆面、目标结构法线与粗糙度。
 
-[下载 1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.1) · [详细说明](docs/skills/endfield-tanks.md) · [更新记录](docs/changelog/war-thunder-tank-style-endfield.md)
+[下载 1.2](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.2) · [详细说明](docs/skills/endfield-tanks.md) · [更新记录](docs/changelog/war-thunder-tank-style-endfield.md)
 
 ## 安装
 

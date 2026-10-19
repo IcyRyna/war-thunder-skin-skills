@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "skill": "war-thunder-tank-style-endfield",
-  "revision": "v1.1",
+  "revision": "v1.2",
   "original_author": "HK416の午夜福音",
   "original_post": "https://live.warthunder.com/post/1162771/en/",
   "original_archive_sha256": "e1cc23b473a1707573e60c4d9776657d41421318ab48a5052b34f4758bfb2f10",
@@ -681,5 +681,5 @@
       "use": "Research visualization or source catalog; not paint pixels"
     }
   ],
-  "skill_version": "1.1"
+  "skill_version": "1.2"
 }

@@ -2,22 +2,23 @@
 
 用于 War Thunder 现代坦克的终末地工业风涂装。结合 A7V / A7HU / A6HEL 的适配方法，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
 
-Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.1
+Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.2
 
-[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.1) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
+[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.2) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
 ## 能做什么
 
 - 安排灰白装甲面、深色机械区、黄色路径与主次标志。
-- 分开处理车体、炮塔、炮管、附加装甲和武器站的实际 UV。
+- 分开处理车体、炮塔、炮管、附加装甲和武器站的实际 UV，识别混用图集的载具并分别选择保留或重画。
 - 检查字标阅读方向、接缝、孔口、共享 UV 和细墙采样。
 - 相关车型在确认表面对应后，逐纹素转入目标原生 UV，处理平铺小件与共享纹素的写入归属。
 - 分开处理颜色、结构法线、AO 与粗糙度；清洁涂层保留目标车的螺钉和接缝，消除旧车结构残影。
-- 从最终 DDS 生成七视图与同相机细节对照，核对小字、线条、漆面和材质。
+- 从目标承载面重新布局，限制图形投射范围，检查圆筒文字、字体层级与设备遮挡。
+- 从最终 DDS 生成七视图与同相机细节对照，核对小字、线条、漆面和材质；按材质保留网格裁切轮廓。
 
 ## 随包素材
 
-安装包约 61 MB，共 52 个文件，其中 35 项为素材与参考：
+安装包约 61 MB，共 53 个文件，其中 35 项为素材与参考：
 
 | 内容 | 尺寸或数量 |
 | --- | --- |
