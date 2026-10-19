@@ -1,0 +1,50 @@
+{
+  "schema_version": 1,
+  "skills": [
+    {
+      "id": "war-thunder-user-skins",
+      "category": "aircraft",
+      "title": "喷气机涂装工作流",
+      "version": "3.14",
+      "page": "jet-liveries",
+      "summary": "用于二次元固定翼喷气机涂装的制作与修改，包含 UV、素材、材质和模型检查工具。",
+      "source": "skills/aircraft/war-thunder-user-skins",
+      "documentation": "docs/skills/jet-liveries.md",
+      "changelog": "docs/changelog/war-thunder-user-skins.md",
+      "release": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14",
+      "package": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.14/war-thunder-user-skins-v3.14.skill.zip",
+      "package_bytes": 628414,
+      "package_sha256": "7e3736f5b8b5ce0e865f304aed04501ad422ec89908cc9a830a65408cf092644"
+    },
+    {
+      "id": "war-thunder-style-akamywek",
+      "category": "aircraft",
+      "title": "Akamywek 风格飞机涂装",
+      "version": "1.14",
+      "page": "akamywek",
+      "summary": "Akamywek 风格飞机涂装，包含制作脚本、风格参考和设计示例。",
+      "source": "skills/aircraft/war-thunder-style-akamywek",
+      "documentation": "docs/skills/akamywek.md",
+      "changelog": "docs/changelog/war-thunder-style-akamywek.md",
+      "release": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14",
+      "package": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.14/war-thunder-style-akamywek-v1.14.skill.zip",
+      "package_bytes": 673113,
+      "package_sha256": "6e2b8018ead45d1d9ee3d0b5f0acf4a04df300822f4c1da6052697a0c9e73bf1"
+    },
+    {
+      "id": "war-thunder-tank-style-endfield",
+      "category": "ground",
+      "title": "终末地风格坦克涂装",
+      "version": "1.0",
+      "page": "endfield-tanks",
+      "summary": "终末地工业风坦克涂装，包含车型 UV 与材质适配方法和参考素材。",
+      "source": "skills/ground/war-thunder-tank-style-endfield",
+      "documentation": "docs/skills/endfield-tanks.md",
+      "changelog": "docs/changelog/war-thunder-tank-style-endfield.md",
+      "release": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0",
+      "package": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.0/war-thunder-tank-style-endfield-v1.0.skill.zip",
+      "package_bytes": 61056957,
+      "package_sha256": "579296162952ec9b202efa4e7d771bd57b4b0637e76b06162f92a48f9f85b2cc"
+    }
+  ]
+}

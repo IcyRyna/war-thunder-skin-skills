@@ -1,25 +1,37 @@
-# 战雷涂装 Skill
+# War Thunder 涂装 Skills
 
-这里存放全部痛涂 Skill。每个 Skill 是一条独立的版本线，各自编号、各自发布；以后新增别的涂装类型 Skill，就加一条新线。
+用于制作 War Thunder 用户涂装的三个独立 Skill，支持 Codex 和 Claude Code。飞机部分面向二次元固定翼喷气机痛涂；坦克部分目前提供终末地工业风。
 
-| Skill | 类型 | 内容 | 当前版本 | 更新记录 |
-| --- | --- | --- | --- | --- |
-| `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
-| `war-thunder-style-akamywek` | Akamywek 风格 | 先照作者 F-2A 学基本布局（深炭底和签名色两大块、白色焦点、三角马赛克），再放立绘；自带通用脚本和制作参考，可单独安装 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
-| `war-thunder-tank-style-endfield` | 终末地风格坦克涂装 | 坦克黑白黄工业构图、原生 UV、标志与材质适配；完整包自带原作 UV、官方标志和元素素材 | [1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0) | [changelog/war-thunder-tank-style-endfield.md](changelog/war-thunder-tank-style-endfield.md) |
+## 飞机涂装
 
-## 目录
+### 喷气机涂装工作流
 
-- `skills/<skill>/`：每个 Skill 的当前源码、清单与小素材；已有文件与最新发布包保持原字节一致。包含大图的 Skill 使用完整 Release 包安装，达到 1 MiB 的大图仅存于 Release 附件，文件清单记录在 `history/<skill>/v<版本>/publication.json`。
-- `changelog/<skill>.md`：该版本线的全部版本、日期和改动。
-- `history/`：研究修订的发布收据和发布脚本，只作记录。
+用于新作和已有涂装的修改，包含立绘裁切、机身与机翼布局、原生 UV 作画、线条配色、材质和模型检查工具。可输出分层设计源、DDS / TGA 贴图和 BLK 配置。
 
-## 版本与标签
+[下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) · [详细说明](docs/skills/jet-liveries.md) · [更新记录](docs/changelog/war-thunder-user-skins.md)
 
-- 每条线独立编号，主版本号表示阶段：通用 Skill 的 1.x 只有规则文档，2.x 加入公共脚本，3.x 是审美体系重写之后；风格 Skill 从 1.0 开始。
-- 标签是 `<skill>/v<版本>`，例如 `war-thunder-user-skins/v3.9`；查看某条线的提交历史，打开对应 `skills/<skill>/` 目录的 History。
-- 每个版本的安装包在 Releases 里，文件名 `<skill>-v<版本>.skill.zip`。通用 Skill 的 1.x 和 2.x 各合成一个归档 Release。
+### Akamywek 风格飞机涂装
+
+按 Akamywek 的公开涂装整理，主要特征是深炭底、单一签名色、锐利几何和三角马赛克。先完成色块与几何布局，再放人物。包内自带制作工具和参考资料，可单独安装。
+
+[下载 1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) · [详细说明](docs/skills/akamywek.md) · [更新记录](docs/changelog/war-thunder-style-akamywek.md)
+
+## 坦克涂装
+
+### 终末地风格坦克涂装
+
+用于现代坦克的终末地工业风涂装，包含黑白黄分区、工业标志、路线节点和设备标签的布局方法，以及车型之间的 UV 与材质适配。
+
+安装包约 61 MB，带有 4 张原尺寸 UV、22 组元素裁片、标志 SVG / PNG 和提取工程。素材随包提供。
+
+[下载 1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0) · [详细说明](docs/skills/endfield-tanks.md) · [更新记录](docs/changelog/war-thunder-tank-style-endfield.md)
 
 ## 安装
 
-下载对应 Release 的 `.skill.zip`，解压后把 `<skill>/` 文件夹放进 Codex 的 `~/.codex/skills/` 或 Claude 的 skills 目录。
+在对应 Release 的 **Assets** 中下载 `.skill.zip`，解压后把整个 Skill 文件夹放入 Codex 或 Claude Code 的 Skills 目录。目录位置和工具依赖见[安装说明](docs/installation.md)。
+
+## 目录
+
+- [`skills/aircraft/`](skills/aircraft/)：飞机涂装 Skill。
+- [`skills/ground/`](skills/ground/)：地面载具涂装 Skill。
+- [`docs/`](docs/)：功能说明、安装、版本记录和[素材来源](docs/credits.md)。
