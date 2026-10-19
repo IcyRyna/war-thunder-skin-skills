@@ -1,0 +1,4 @@
+interface:
+  display_name: "终末地风格坦克涂装"
+  short_description: "制作战雷坦克的终末地工业风涂装，检查黑白黄构图、原生UV、字标和材质"
+  default_prompt: "使用 $war-thunder-tank-style-endfield，按选定参考为这辆坦克制作终末地工业风涂装。"

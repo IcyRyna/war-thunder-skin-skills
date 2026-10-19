@@ -1,0 +1,303 @@
+{
+  "skill": "war-thunder-tank-style-endfield",
+  "version": "1.0",
+  "tag": "war-thunder-tank-style-endfield/v1.0",
+  "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0",
+  "created_at": "2026-10-20T04:07:54+08:00",
+  "package_name": "war-thunder-tank-style-endfield-v1.0.skill.zip",
+  "package_bytes": 61056957,
+  "package_sha256": "579296162952ec9b202efa4e7d771bd57b4b0637e76b06162f92a48f9f85b2cc",
+  "file_count": 48,
+  "bundled_asset_records": 35,
+  "git_large_file_threshold_bytes": 1048576,
+  "files": [
+    {
+      "path": "agents/openai.yaml",
+      "bytes": 309,
+      "sha256": "25d45847fcfa63f8cb7f02810a8c78d650c05f79417df4599fe6b535395a185a",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/decals/emblem-extraction.cmps",
+      "bytes": 37673,
+      "sha256": "45fc06a58c0b7e1fbdb18fd3748af0f4122b4b73c4c16ba6517f305dfecfbace",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/decals/endfield-industries-en-native.png",
+      "bytes": 2847,
+      "sha256": "852ba24a66ceb04f78a1fd6537f79c975a91c99d077d16fdae69b684472c05de",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/manifest.json",
+      "bytes": 23097,
+      "sha256": "9ce364ed7c5bd62d4a827fd364ed4cd6c1be073cae3cd90a1b6ce9f5b3b06a02",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/official/endfield-industries-cn.png",
+      "bytes": 64868,
+      "sha256": "724fbf04a4a661c5c16688c49febb68b2be0bd8fbfe7c83895350876d115be04",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/official/endfield-title-en.png",
+      "bytes": 33074,
+      "sha256": "307dc277774046f03f2072119eb7f1feebf8865d2d81a20ee90c902748fc0d17",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/official/endfield-title-en.svg",
+      "bytes": 3910,
+      "sha256": "cb3b7342129919c9254acb46d16259d7ee866d8480f2afeada64b4f4695c034f",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/official/site-color-bar.png",
+      "bytes": 381,
+      "sha256": "c3442edfbe3194b18d65d57d5eae45f54f849a25d46bfa34fc2812b5ffae6dda",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B01.png",
+      "bytes": 378049,
+      "sha256": "5174b5f46d6e00c0c01eeca5ebb27f05a22eee2f05f768005eea79604ff7a4b8",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B02.png",
+      "bytes": 693245,
+      "sha256": "e654f662f8e36cc19ab96d13af802b228be79b5cbe1c3074b674037771aa79f6",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B03.png",
+      "bytes": 748455,
+      "sha256": "74e8124aff316eea46682bc4588507216b332443fabfc81f7fdaef4b50e2803c",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B04.png",
+      "bytes": 167357,
+      "sha256": "66a09f5227acb79e33e8c1286322b33a68bf0532f8618638608aa59b1fcac4e4",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B05.png",
+      "bytes": 153273,
+      "sha256": "6ceccced1c9fbbec23de579a3588db2a11c76060e494cea696a44a6a6ecc8351",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B06.png",
+      "bytes": 210593,
+      "sha256": "32a428546e856e160af58886bc7474e49d374ac2fe8c542d1fd9cce5f01da7d2",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B07.png",
+      "bytes": 352576,
+      "sha256": "8bbd442d0272c5a6f639cbd11b4aa988ff7bc7e0af6cd3a3b387a15156752dcd",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B08.png",
+      "bytes": 416591,
+      "sha256": "88b7e00e2c976ef857e8df5637e0c22d53dd1fb5e9162bdfda721849d19c4716",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B09.png",
+      "bytes": 300363,
+      "sha256": "260b0b912946590f61406f137676e3d87c4b88b42e7f1e03e5b2b34112af8ed7",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B10.png",
+      "bytes": 675620,
+      "sha256": "29f63046c6540a8548f85f3ced935e953cbb6d06c76ebc7208ee3cc8c4b833f8",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/G01.png",
+      "bytes": 612045,
+      "sha256": "3989b4d979d74a674b295d3d3547ba4aaae89882de5b230d3af1fb4c183848e9",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/G02.png",
+      "bytes": 171870,
+      "sha256": "fe9571f8fb423c209da5092a468abb7a7ad88dc007f8a7bda4a1558cd7922138",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/M01.png",
+      "bytes": 237725,
+      "sha256": "f640dfd5235048b1a9cdc225e263aa25d723ceb9a7b286243cd028491400d1a7",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T01.png",
+      "bytes": 129328,
+      "sha256": "7f6c191d0005e14a73c6e46cc5f9cce8e7f9184517142e5311f6ddb992a93c48",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T02.png",
+      "bytes": 280703,
+      "sha256": "8943317ffa1615c8cdcef140cd87c3a41b696dd7e15fe14085b6b3761e2dbeb3",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T03.png",
+      "bytes": 208489,
+      "sha256": "e6e84a8151cd4522faaa8428e3514b689f2a61d16dc542f718655d67580e8cb5",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T04.png",
+      "bytes": 240109,
+      "sha256": "4a04d1da129b533f342e90c04b374bf96f9e26b76514d99c1d341de32981011f",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T05.png",
+      "bytes": 33617,
+      "sha256": "373f787ad14e7710cbe5f43d1acd8f84287f23ddb233c5421ae9b43e5eae1dab",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T06.png",
+      "bytes": 61412,
+      "sha256": "4114f287f8b1bef68788b5a71f4a4903ca6d41d260a7423ca79be7b91a5d2d93",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T07.png",
+      "bytes": 29560,
+      "sha256": "380e12c471032117b705932826a8df606d02a8485217adf538f1484790b71c20",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T08.png",
+      "bytes": 177952,
+      "sha256": "8ef07ab74db4c900ec7c664fd7ffff0dbbfb10dd3e2ad967778365971d996ddb",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/crops/T09.png",
+      "bytes": 126692,
+      "sha256": "5a1abf32ae05096d1f0b7db3cac4a2f6ef7ee6776690bb259a7715edd306f619",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/element-catalog.json",
+      "bytes": 23679,
+      "sha256": "1d297da1b54e4312b8ba2d53294dcc9bda81e2eca0902b8e1f1e2dd008652554",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/reference-a7v/uv/leopard_2a7v_body.png",
+      "bytes": 25232574,
+      "sha256": "3eb893af0ca78c7f7ad0585bf0380cca2412f19d309cd969dbefb7039a20615e",
+      "git_storage": "release-attachment-only"
+    },
+    {
+      "path": "assets/reference-a7v/uv/leopard_2a7v_gun.png",
+      "bytes": 3284320,
+      "sha256": "0fcf97891f9237282b6748042092cd955cb0b6fcf7777ce9af807c85781107db",
+      "git_storage": "release-attachment-only"
+    },
+    {
+      "path": "assets/reference-a7v/uv/leopard_2a7v_turret.png",
+      "bytes": 21138418,
+      "sha256": "f8442309c8f0d7ee76969ac1200855d30477b66f86e64c192140dd005ecc6dfd",
+      "git_storage": "release-attachment-only"
+    },
+    {
+      "path": "assets/reference-a7v/uv/mg_mount_leopard_2a7v.png",
+      "bytes": 255654,
+      "sha256": "2bc7a03a985e75e7086f1f535f31a403beff228cda993ea2cec99c965215c614",
+      "git_storage": "source"
+    },
+    {
+      "path": "assets/study/element-vocabulary.png",
+      "bytes": 1967893,
+      "sha256": "81c7a4860e7cf740be84bbf05df6ca7fcef7f34f9d7b994565eed59d0cc50f99",
+      "git_storage": "release-attachment-only"
+    },
+    {
+      "path": "assets/study/UV-study-overview.png",
+      "bytes": 2725843,
+      "sha256": "0f1e9354b938d9c791972ae158040a31b067829c481a259fe0da591497de2bd5",
+      "git_storage": "release-attachment-only"
+    },
+    {
+      "path": "references/a7v-uv-elements.md",
+      "bytes": 7539,
+      "sha256": "22158ffea6059c821026b0af034fceb6c08687505f178d0b7a77fadee47c40dd",
+      "git_storage": "source"
+    },
+    {
+      "path": "references/assets.md",
+      "bytes": 2919,
+      "sha256": "b46b2212d71071d2f79d3da7c89c344835cc46a82c90c45b180126c639cfbb00",
+      "git_storage": "source"
+    },
+    {
+      "path": "references/editor-and-extraction.md",
+      "bytes": 3068,
+      "sha256": "33031323c021d977995c71d5e8ec7bcd3c0c7c362e462e411e17398c38265873",
+      "git_storage": "source"
+    },
+    {
+      "path": "references/endfield-style.md",
+      "bytes": 3288,
+      "sha256": "f2cededd91e943313fdb8f451f4b2c0c53bb90e2b1e1f00a2403c57fb274a37d",
+      "git_storage": "source"
+    },
+    {
+      "path": "references/formats.md",
+      "bytes": 2509,
+      "sha256": "bc78bf1432c98bb47b188be5f27d298039f281a41684b980d6fa1ca74083eb15",
+      "git_storage": "source"
+    },
+    {
+      "path": "scripts/composa_mcp.py",
+      "bytes": 31217,
+      "sha256": "726ba00eff5405f17b8d4391c2dbeec2b21a72f2e5c1b57a66c0df746bc6c345",
+      "git_storage": "source"
+    },
+    {
+      "path": "scripts/export_uv_reference.py",
+      "bytes": 2681,
+      "sha256": "fc48b617c78894ba599c481912c4ca7a30b4bc9f79baa9bd183346eeff699cc3",
+      "git_storage": "source"
+    },
+    {
+      "path": "scripts/inspect_skin.py",
+      "bytes": 3042,
+      "sha256": "53a43264d29948a03c57ab1178f0705c21f3962c1cc09f03f2d5dbb48ceb7ab7",
+      "git_storage": "source"
+    },
+    {
+      "path": "scripts/tank_core.py",
+      "bytes": 5247,
+      "sha256": "87ac9523bae1eff823277c2befd18c0b008bfde11e6b3308fbb6ab6ad68a6bb1",
+      "git_storage": "source"
+    },
+    {
+      "path": "scripts/tank_preview.py",
+      "bytes": 11122,
+      "sha256": "a1e290361861dbc0d96181f389fbf549e5b904c324ade4b39ad0f6ae0c1d55b0",
+      "git_storage": "source"
+    },
+    {
+      "path": "SKILL.md",
+      "bytes": 6037,
+      "sha256": "a3550a6719a496660ce3e254daf07296077b988524b0824b728ddaee073485b1",
+      "git_storage": "source"
+    }
+  ]
+}

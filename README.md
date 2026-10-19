@@ -1,4 +1,4 @@
-# 战雷二次元喷气机痛涂 Skill
+# 战雷涂装 Skill
 
 这里存放全部痛涂 Skill。每个 Skill 是一条独立的版本线，各自编号、各自发布；以后新增别的涂装类型 Skill，就加一条新线。
 
@@ -6,10 +6,11 @@
 | --- | --- | --- | --- | --- |
 | `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
 | `war-thunder-style-akamywek` | Akamywek 风格 | 先照作者 F-2A 学基本布局（深炭底和签名色两大块、白色焦点、三角马赛克），再放立绘；自带通用脚本和制作参考，可单独安装 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
+| `war-thunder-tank-style-endfield` | 终末地风格坦克涂装 | 坦克黑白黄工业构图、原生 UV、标志与材质适配；完整包自带原作 UV、官方标志和元素素材 | [1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0) | [changelog/war-thunder-tank-style-endfield.md](changelog/war-thunder-tank-style-endfield.md) |
 
 ## 目录
 
-- `skills/<skill>/`：每个 Skill 的当前源码，和最新发布包内容一致。
+- `skills/<skill>/`：每个 Skill 的当前源码、清单与小素材；已有文件与最新发布包保持原字节一致。包含大图的 Skill 使用完整 Release 包安装，达到 1 MiB 的大图仅存于 Release 附件，文件清单记录在 `history/<skill>/v<版本>/publication.json`。
 - `changelog/<skill>.md`：该版本线的全部版本、日期和改动。
 - `history/`：研究修订的发布收据和发布脚本，只作记录。
 

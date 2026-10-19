@@ -1,0 +1,923 @@
+{
+  "schema_version": 1,
+  "author": "HK416の午夜福音",
+  "source_post": "https://live.warthunder.com/post/1162771/en/",
+  "coordinates": "bbox_px=[x0,y0,x1,y1], half-open crop in original unflipped RGB image; reading_rotation_ccw is for the separate crop only. UV bbox uses bottom-left origin with v=1-y/H. No universal coordinates for other tanks.",
+  "official_symbol_url": "https://web-static.hg-cdn.com/endfield/official-v4/_next/static/media/endfield.bcc6fe39.png",
+  "official_page": "https://endfield.gryphline.com/en-us",
+  "elements": [
+    {
+      "id": "B01",
+      "atlas": "body",
+      "bbox_px": [
+        5520,
+        4200,
+        6430,
+        4940
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "双侧裙板工业徽记",
+      "role": "主识别 / 两个相反阅读方向",
+      "provenance": "官方图形已对应；英文组合未找到同版母版",
+      "short_note": "两侧 UV 紧邻排列；先按岛拆看|等高线与倒三角组成工业徽记",
+      "classification": "official-symbol-author-composition",
+      "uv_bbox_bottom_left": [
+        0.6738281,
+        0.3969727,
+        0.7849121,
+        0.4873047
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "ex_armor_r_12",
+          "triangles": 63
+        },
+        {
+          "node": "ex_armor_l_12",
+          "triangles": 59
+        },
+        {
+          "node": "ex_armor_r_10",
+          "triangles": 58
+        },
+        {
+          "node": "ex_armor_l_10",
+          "triangles": 58
+        },
+        {
+          "node": "ex_armor_r_13",
+          "triangles": 10
+        },
+        {
+          "node": "ex_armor_l_13",
+          "triangles": 2
+        }
+      ]
+    },
+    {
+      "id": "B02",
+      "atlas": "body",
+      "bbox_px": [
+        0,
+        3150,
+        1530,
+        3930
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "ARKNIGHTS 与三角连线",
+      "role": "前翼板 / 中层辅助信息",
+      "provenance": "官方品牌文字；该组合来源待确认",
+      "short_note": "小字标配节点网络，沿白色装甲留白|序号与坐标只在近看时读取",
+      "classification": "brand-text-source-layout-unverified",
+      "uv_bbox_bottom_left": [
+        0.0,
+        0.5202637,
+        0.1867676,
+        0.6154785
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 236
+        },
+        {
+          "node": "ex_lantern_r",
+          "triangles": 80
+        },
+        {
+          "node": "ex_lantern_l",
+          "triangles": 80
+        },
+        {
+          "node": "ex_decor_07",
+          "triangles": 48
+        },
+        {
+          "node": "ex_armor_r_07",
+          "triangles": 36
+        },
+        {
+          "node": "ex_armor_r_09",
+          "triangles": 36
+        }
+      ]
+    },
+    {
+      "id": "B03",
+      "atlas": "body",
+      "bbox_px": [
+        6190,
+        3400,
+        8192,
+        4070
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "反侧前翼板与 EF10 标签",
+      "role": "前翼板 / 对称但按模型定阅读方向",
+      "provenance": "品牌文字与技术标签混排，来源未全证实",
+      "short_note": "EF10 AUTOMATIC ASSEMBLY LINE|方向由承载构件决定，不镜像文字",
+      "classification": "mixed-source-unverified",
+      "uv_bbox_bottom_left": [
+        0.7556152,
+        0.5031738,
+        1.0,
+        0.5849609
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 166
+        },
+        {
+          "node": "ex_armor_body_01",
+          "triangles": 143
+        },
+        {
+          "node": "ex_armor_l_04",
+          "triangles": 36
+        },
+        {
+          "node": "ex_armor_l_08",
+          "triangles": 35
+        },
+        {
+          "node": "ex_armor_l_05",
+          "triangles": 32
+        },
+        {
+          "node": "ex_armor_l_06",
+          "triangles": 32
+        }
+      ]
+    },
+    {
+      "id": "B04",
+      "atlas": "body",
+      "bbox_px": [
+        7190,
+        2540,
+        7800,
+        3070
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "CAUTION 警告模块",
+      "role": "车体外板 / 小比例识别块",
+      "provenance": "原作存在；未找到相同官方母版",
+      "short_note": "CAUTION 下方有部门小字|黑字配黄斜纹，边缘留安全距离",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.8776855,
+        0.6252441,
+        0.9521484,
+        0.6899414
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 70
+        },
+        {
+          "node": "wheel_r_01",
+          "triangles": 16
+        },
+        {
+          "node": "wheel_r_02",
+          "triangles": 16
+        },
+        {
+          "node": "wheel_r_03",
+          "triangles": 16
+        },
+        {
+          "node": "wheel_r_04",
+          "triangles": 16
+        },
+        {
+          "node": "wheel_r_05",
+          "triangles": 16
+        }
+      ]
+    },
+    {
+      "id": "B05",
+      "atlas": "body",
+      "bbox_px": [
+        3510,
+        4790,
+        4330,
+        5120
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "LEOPARD2A7 设备铭牌",
+      "role": "车体侧面 / 车辆身份",
+      "provenance": "车型名称是本涂装的载具适配内容",
+      "short_note": "圆角黑底铭牌 + 白色车型字|上方配任务载荷接口小标签",
+      "classification": "vehicle-specific-adaptation",
+      "uv_bbox_bottom_left": [
+        0.4284668,
+        0.375,
+        0.5285645,
+        0.4152832
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 109
+        },
+        {
+          "node": "ex_armor_r_05",
+          "triangles": 4
+        },
+        {
+          "node": "ex_armor_l_05",
+          "triangles": 4
+        },
+        {
+          "node": "ex_armor_r_07",
+          "triangles": 4
+        },
+        {
+          "node": "ex_armor_r_09",
+          "triangles": 4
+        },
+        {
+          "node": "ex_armor_l_09",
+          "triangles": 4
+        }
+      ]
+    },
+    {
+      "id": "B06",
+      "atlas": "body",
+      "bbox_px": [
+        1450,
+        3030,
+        2950,
+        3570
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "十字阵列、斜纹块与箭头",
+      "role": "黑色装甲分区 / 方向与节奏",
+      "provenance": "通用工业图形；未证实特定官方资产",
+      "short_note": "大块黑底只放小面积白符号|十字阵列形成方向，不铺满整车",
+      "classification": "generic-graphics-source-unverified",
+      "uv_bbox_bottom_left": [
+        0.177002,
+        0.564209,
+        0.3601074,
+        0.630127
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 240
+        },
+        {
+          "node": "ex_decor_r_08",
+          "triangles": 46
+        },
+        {
+          "node": "ex_decor_l_06",
+          "triangles": 46
+        },
+        {
+          "node": "ex_decor_r_09",
+          "triangles": 34
+        },
+        {
+          "node": "ex_armor_07",
+          "triangles": 10
+        },
+        {
+          "node": "ex_armor_r_05",
+          "triangles": 5
+        }
+      ]
+    },
+    {
+      "id": "B07",
+      "atlas": "body",
+      "bbox_px": [
+        4630,
+        7220,
+        5900,
+        7890
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "车首三角徽记与机械区",
+      "role": "车首 / 图形与真实结构错开",
+      "provenance": "工业徽记图形已对应，UV裁片含机械遮挡",
+      "short_note": "徽记在前部重复，尺寸低于侧裙主标|机械格栅、螺栓不是可复用装饰层",
+      "classification": "official-symbol-author-composition",
+      "uv_bbox_bottom_left": [
+        0.5651855,
+        0.0368652,
+        0.7202148,
+        0.1186523
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 59
+        },
+        {
+          "node": "ex_lantern_r",
+          "triangles": 8
+        },
+        {
+          "node": "ex_lantern_l",
+          "triangles": 8
+        },
+        {
+          "node": "ex_armor_l_03",
+          "triangles": 2
+        },
+        {
+          "node": "ex_armor_r_03",
+          "triangles": 2
+        },
+        {
+          "node": "ex_armor_07",
+          "triangles": 2
+        }
+      ]
+    },
+    {
+      "id": "B08",
+      "atlas": "body",
+      "bbox_px": [
+        4830,
+        4220,
+        5530,
+        4810
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "黄底方向面与 ARKNIGHTS",
+      "role": "侧裙 / 主动势",
+      "provenance": "品牌文字与斜线几何的原作组合",
+      "short_note": "大斜面建立车身前后方向|细排线作为中层纹理，避免抢主标",
+      "classification": "brand-text-source-layout-unverified",
+      "uv_bbox_bottom_left": [
+        0.5895996,
+        0.4128418,
+        0.6750488,
+        0.4848633
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 24
+        },
+        {
+          "node": "ex_armor_r_14",
+          "triangles": 3
+        },
+        {
+          "node": "ex_armor_l_14",
+          "triangles": 3
+        }
+      ]
+    },
+    {
+      "id": "B09",
+      "atlas": "body",
+      "bbox_px": [
+        6520,
+        4200,
+        7480,
+        4910
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "青绿、品红与黄色细线",
+      "role": "侧裙 / 极小面积彩色点睛",
+      "provenance": "官网另有彩条资源；原作同版构图未证实",
+      "short_note": "彩色细线沿大斜边走向连续|黄色折箭头位于黑白色块内部",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.7958984,
+        0.4006348,
+        0.9130859,
+        0.4873047
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "ex_armor_r_11",
+          "triangles": 10
+        },
+        {
+          "node": "ex_armor_r_12",
+          "triangles": 5
+        },
+        {
+          "node": "ex_armor_l_11",
+          "triangles": 2
+        },
+        {
+          "node": "ex_armor_l_12",
+          "triangles": 1
+        }
+      ]
+    },
+    {
+      "id": "B10",
+      "atlas": "body",
+      "bbox_px": [
+        1460,
+        5480,
+        3030,
+        6440
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "车体粗黄路线与圆节点",
+      "role": "车体上表面 / 贯穿路线",
+      "provenance": "原作设计语汇；未找到同版官方母版",
+      "short_note": "先连续路径，再用圆端与断点收尾|跨盖板延续方向，孔壁另行着色",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.1782227,
+        0.2138672,
+        0.369873,
+        0.3310547
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "root",
+          "triangles": 870
+        },
+        {
+          "node": "ex_armor_r_16",
+          "triangles": 108
+        },
+        {
+          "node": "ex_armor_l_16",
+          "triangles": 108
+        },
+        {
+          "node": "ex_armor_r_04",
+          "triangles": 34
+        },
+        {
+          "node": "ex_armor_r_06",
+          "triangles": 34
+        },
+        {
+          "node": "ex_armor_l_04",
+          "triangles": 34
+        }
+      ]
+    },
+    {
+      "id": "T01",
+      "atlas": "turret",
+      "bbox_px": [
+        3540,
+        3500,
+        4380,
+        3960
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "VISUALIZE ENDFIELD 模块",
+      "role": "炮塔顶装甲 / 中层品牌模块",
+      "provenance": "原作存在，尚未找到相同官方图形",
+      "short_note": "黑黄倒三角嵌套 + 双行文字|必须保留为待核实来源",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.4321289,
+        0.5166016,
+        0.534668,
+        0.5727539
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 7
+        },
+        {
+          "node": "ex_armor_r_18",
+          "triangles": 2
+        },
+        {
+          "node": "ex_armor_l_18",
+          "triangles": 2
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "atlas": "turret",
+      "bbox_px": [
+        4340,
+        3750,
+        5480,
+        4520
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "平行黄路线与圆形节点",
+      "role": "炮塔顶 / 构图主线",
+      "provenance": "原作语汇；未证实某个官方独立贴花",
+      "short_note": "宽黄带配细黄线，旁边再置黑线|各层有宽度差，沿装甲折面转折",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.5297852,
+        0.4482422,
+        0.6689453,
+        0.5422363
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 1167
+        },
+        {
+          "node": "hatch_07",
+          "triangles": 64
+        },
+        {
+          "node": "hatch_06",
+          "triangles": 64
+        },
+        {
+          "node": "hatch_05",
+          "triangles": 48
+        },
+        {
+          "node": "hatch_04",
+          "triangles": 32
+        },
+        {
+          "node": "ex_armor_l_17",
+          "triangles": 26
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "atlas": "turret",
+      "bbox_px": [
+        2040,
+        2230,
+        3100,
+        2740
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "圆头长条、短条和圆点",
+      "role": "炮塔侧前装甲 / 大小节奏",
+      "provenance": "原作语汇；未证实官方独立资产",
+      "short_note": "一根粗黄长条配少量黑胶囊与圆点|不等宽、不等长，保留大片白灰",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.2490234,
+        0.6655273,
+        0.378418,
+        0.7277832
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 8
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "atlas": "turret",
+      "bbox_px": [
+        4040,
+        6650,
+        5000,
+        7150
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "END FIELD 分行字与斜纹章",
+      "role": "炮塔侧面 / 次级品牌识别",
+      "provenance": "终末地名称已知；同版字标未找到母版",
+      "short_note": "紧凑字标贴在黑路线圆端附近|黄带与黑线同向但不重叠成一块",
+      "classification": "brand-text-source-layout-unverified",
+      "uv_bbox_bottom_left": [
+        0.4931641,
+        0.1271973,
+        0.6103516,
+        0.1882324
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 522
+        },
+        {
+          "node": "ex_decor_01",
+          "triangles": 58
+        },
+        {
+          "node": "optic_commander",
+          "triangles": 35
+        },
+        {
+          "node": "ex_decor_r_04",
+          "triangles": 32
+        },
+        {
+          "node": "ex_decor_l_04",
+          "triangles": 32
+        },
+        {
+          "node": "ex_decor_r_05",
+          "triangles": 10
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "atlas": "turret",
+      "bbox_px": [
+        1850,
+        3750,
+        2430,
+        3980
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "终末地工业中文字与彩条",
+      "role": "炮塔黑顶 / 微型身份标识",
+      "provenance": "官方中文工业字标可对应；彩条组合另排",
+      "short_note": "中文字保留官方几何字形|青绿、品红、黄彩条只作小面积点睛",
+      "classification": "official-wordmark-author-composition",
+      "uv_bbox_bottom_left": [
+        0.2258301,
+        0.5141602,
+        0.2966309,
+        0.5422363
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 1
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "atlas": "turret",
+      "bbox_px": [
+        980,
+        6600,
+        1640,
+        6950
+      ],
+      "reading_rotation_ccw": 180,
+      "name": "ARKNIGHTS / ENDFIELD 字标",
+      "role": "炮塔附件外板 / 单色品牌",
+      "provenance": "官方英文游戏名；具体排版未找到同版母版",
+      "short_note": "白色两级字标，保持字重和字距|深色顶面有等高线，但对比低于文字",
+      "classification": "brand-text-source-layout-unverified",
+      "uv_bbox_bottom_left": [
+        0.1196289,
+        0.1516113,
+        0.2001953,
+        0.1943359
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 89
+        },
+        {
+          "node": "hatch_06",
+          "triangles": 30
+        },
+        {
+          "node": "ex_decor_r_04",
+          "triangles": 16
+        },
+        {
+          "node": "ex_armor_l_17",
+          "triangles": 8
+        },
+        {
+          "node": "hatch_07",
+          "triangles": 4
+        },
+        {
+          "node": "ex_armor_r_17",
+          "triangles": 2
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "atlas": "turret",
+      "bbox_px": [
+        640,
+        7200,
+        950,
+        7390
+      ],
+      "reading_rotation_ccw": 90,
+      "name": "完整英文工业徽记",
+      "role": "炮塔附件 / 小尺寸完整徽记",
+      "provenance": "倒三角、塔形、等高线与官网对应",
+      "short_note": "完整小徽记可用于识别结构|原始有效图案约 122 px，不等于高清母版",
+      "classification": "official-symbol-author-composition",
+      "uv_bbox_bottom_left": [
+        0.078125,
+        0.0979004,
+        0.1159668,
+        0.1210938
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 6
+        },
+        {
+          "node": "hatch_06",
+          "triangles": 4
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "atlas": "turret",
+      "bbox_px": [
+        4880,
+        4910,
+        5730,
+        5490
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "装甲边缘螺栓与阴影",
+      "role": "结构底图 / 与涂装图形分开",
+      "provenance": "真实机械结构，不是字标",
+      "short_note": "曾在缩略图中像重复文字|放大可见是螺栓与装甲包边",
+      "classification": "mechanical-structure",
+      "uv_bbox_bottom_left": [
+        0.5957031,
+        0.329834,
+        0.6994629,
+        0.4006348
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "bone_turret",
+          "triangles": 98
+        },
+        {
+          "node": "optic_commander",
+          "triangles": 18
+        },
+        {
+          "node": "ex_decor_l_05",
+          "triangles": 16
+        },
+        {
+          "node": "hatch_02",
+          "triangles": 15
+        },
+        {
+          "node": "ex_armor_r_18",
+          "triangles": 15
+        },
+        {
+          "node": "ex_armor_r_17",
+          "triangles": 13
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "atlas": "turret",
+      "bbox_px": [
+        1570,
+        4090,
+        2350,
+        4710
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "暗灰等高线底纹",
+      "role": "黑色顶盖 / 低对比背景",
+      "provenance": "徽记内等高线已见官方；全车铺法为原作构图",
+      "short_note": "细线退到背景，不与主字标等强|穿过结构时保留正常机械层次",
+      "classification": "official-motif-author-composition",
+      "uv_bbox_bottom_left": [
+        0.1916504,
+        0.4250488,
+        0.2868652,
+        0.5007324
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "antenna_01",
+          "triangles": 16
+        },
+        {
+          "node": "antenna_02",
+          "triangles": 16
+        },
+        {
+          "node": "bone_turret",
+          "triangles": 13
+        }
+      ]
+    },
+    {
+      "id": "G01",
+      "atlas": "gun",
+      "bbox_px": [
+        2240,
+        1310,
+        3900,
+        2030
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "炮管黄带与 ENDFIELD 字标",
+      "role": "炮管外覆板 / 长向识别",
+      "provenance": "官方品牌名称；此包覆排版来源待确认",
+      "short_note": "相反方向字标分别服务绕管可见面|黄带渐宽，黑线与孔点沿轴线重复",
+      "classification": "brand-text-source-layout-unverified",
+      "uv_bbox_bottom_left": [
+        0.546875,
+        0.0087891,
+        0.9521484,
+        0.3603516
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "gun_barrel",
+          "triangles": 77
+        },
+        {
+          "node": "bone_gun",
+          "triangles": 56
+        }
+      ]
+    },
+    {
+      "id": "G02",
+      "atlas": "gun",
+      "bbox_px": [
+        0,
+        1540,
+        930,
+        2048
+      ],
+      "reading_rotation_ccw": 90,
+      "name": "05 ENDFIELD CONSTRUCTIONS",
+      "role": "炮管暗面 / 微型工程文本",
+      "provenance": "原作存在；未找到相同官方母版",
+      "short_note": "低对比灰字，仅近看时读取|与大黄带分开，不把全部文字提亮",
+      "classification": "source-unverified",
+      "uv_bbox_bottom_left": [
+        0.0,
+        0.0,
+        0.2270508,
+        0.2480469
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "gun_barrel",
+          "triangles": 288
+        },
+        {
+          "node": "bone_gun",
+          "triangles": 58
+        }
+      ]
+    },
+    {
+      "id": "M01",
+      "atlas": "mount",
+      "bbox_px": [
+        0,
+        0,
+        1024,
+        512
+      ],
+      "reading_rotation_ccw": 0,
+      "name": "机枪座暗底与结构细节",
+      "role": "机枪座 / 低视觉权重",
+      "provenance": "原作的机械底图和低对比线纹",
+      "short_note": "没有照搬侧裙的大徽记与粗黄带|不同部件承担不同的信息量",
+      "classification": "mechanical-and-low-contrast-pattern",
+      "uv_bbox_bottom_left": [
+        0.0,
+        0.0,
+        1.0,
+        1.0
+      ],
+      "model_centroid_hits": [
+        {
+          "node": "mg_aa_mount_v",
+          "triangles": 1248
+        },
+        {
+          "node": "bone_turret_01",
+          "triangles": 1210
+        },
+        {
+          "node": "mg_aa_mount_h",
+          "triangles": 985
+        }
+      ]
+    }
+  ],
+  "model_hit_method": "Triangle UV centroids inside the crop and matching material. Hits indicate possible sampled parts, not exact island ownership; seams and overlapping UV require model review."
+}
