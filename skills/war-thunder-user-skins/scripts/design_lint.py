@@ -280,6 +280,14 @@ def polygon_span(pts):
     return length, (area / length if length else 0.)
 
 
+def outline_band(pts, holes):
+    """Approximate width of an outline: (outer area - hole areas) / outer perimeter."""
+    area = lambda q: abs(sum(x0 * y1 - x1 * y0 for (x0, y0), (x1, y1) in zip(q, q[1:] + q[:1]))) / 2
+    outer = area(pts); inner = sum(area([tuple(map(float, h)) for h in ring]) for ring in holes)
+    perim = sum(math.dist(p, q) for p, q in zip(pts, pts[1:] + pts[:1]))
+    return (outer - inner) / perim if perim else 0.
+
+
 def check_shapes(design, report):
     by_chart, strokes = {}, {}
     palette = design.get('palette', {})
@@ -292,17 +300,28 @@ def check_shapes(design, report):
             # Mosaic fields are areas, not lines; only edges of line-like items count toward the angle family.
             if not (isinstance(item.get('fill'), dict) and item['fill'].get('pattern')):
                 by_chart.setdefault(chart, []).extend(segments)
-            # Grouped hairlines the reference draws on purpose: echoes of the main white figure and the fin's outline sequence.
-            grouped = any(k in str(where).lower() for k in ('echo', 'sequence'))
+            # Grouped hairlines the reference draws on purpose: echoes of the main white figure and the fin's outline
+            # sequence.  Only real outlines (a polygon with a hole, a closed stroke) are exempt: an open strip named
+            # "echo" is still a hairline (J-10C v4: four parallel 1 cm "echo" strips read as a comb of scratches in game).
+            outline = bool(item.get('holes')) or (item.get('type') == 'stroke' and len(pts) > 2 and math.dist(pts[0], pts[-1]) < 1e-6)
+            grouped = outline and any(k in str(where).lower() for k in ('echo', 'sequence'))
+            if whiteish(item.get('fill'), palette) and outline and item.get('type') == 'polygon':
+                band = outline_band(pts, item['holes'])
+                if band < .012:
+                    report.add('warn', 'thin-outline', where, f'white outline {band * 100:.1f} cm wide drops to a broken 1 px line at the in-game '
+                               'viewing distance (about 100 px/m)',
+                               'Make outlines at least 1.2-1.5 cm, or leave them out where the surface is curved or seen at a slant.')
             if whiteish(item.get('fill'), palette) and not grouped:
                 if item.get('type') == 'stroke':
                     length = sum(math.dist(p, q) for p, q in zip(pts, pts[1:]))
                     thin = float(item.get('width', 0)) < .12 and length > 1.0
                     size = f'{float(item.get("width", 0)):.2f} m wide, {length:.1f} m long'
-                else:
+                elif not outline:
                     length, mean_width = polygon_span(pts)
-                    thin = length > 1.5 and mean_width < .06
+                    thin = (length > 1.5 and mean_width < .06) or (length > .4 and mean_width < .03)
                     size = f'mean {mean_width:.2f} m wide, {length:.1f} m long'
+                else:
+                    thin = False
                 if thin:
                     report.add('warn', 'thin-white-line', where, f'thin white line ({size}) reads as a scratch or a racing pinstripe',
                                'White is for shapes with body (0.15 m or wider at the root) grouped at the main white figure. '

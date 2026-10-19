@@ -59,12 +59,12 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/compare_skin.py` | 通道与 UV 覆盖区比较；Pillow、NumPy |
 | `scripts/composa_mcp.py` | Composa 工具发现与顺序调用；Python 标准库 |
 | `scripts/fetch_asset.py` | 下载已选图片与来源记录；requests、Pillow |
-| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
+| `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线（开放细条即使叫 echo 也查）、游戏距离下过细的白描边、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
 | `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住／接缝（如凸起背鳍条侧壁）的分区图，并列出压到这些区域或跨过接缝的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
 | `scripts/airframe_setup.py` | 新机型准备：岛地图与每纹素机体坐标（map）、每块 UV 连通岛的米制 frame 与残差（frames）、按岛的干净底色和机械件遮罩（clean）、渲染图的深底／签名色／淡染／白面积比（shares）；NumPy、Pillow、SciPy、Numba |
 | `scripts/uv_frame.py` | 给一块 UV 岛拟合直线框架（atlas 上笔直的设计坐标），写进图表的 `frame`，并检查展开误差；NumPy |
-| `scripts/arrangement.py` | 构造线切格：少数几条直线把图表切成格子，图形是格子或格子的描边（`holes`），可镜像；Python 标准库 |
+| `scripts/arrangement.py` | 构造线切格：少数几条直线把图表切成格子，图形是格子或格子的描边（`holes`），可镜像（`halves: separate` 两半各用本半边的线）；`region` + `cuts` 把一整块白色用等宽深色切缝切开，自动得到白块（机背焦点的默认写法）；Python 标准库 |
 | `scripts/replica_measure.py` | 学习参考涂装时在展开图上逐组测量：描直边轮廓、按元素测渐变、拟合马赛克（格距、方向、相位、缝、明暗档、边缘证据）、高通放大读格子、游戏图标配准、整区自动测量并跳过原厂部件；NumPy、Pillow、SciPy、OpenCV |
 | `scripts/replica_check.py` | 实际使用纹素掩膜（多张颜色贴图时 `--texture` 指名）、计划编辑（马赛克、镜像轴）、计划转 atlas 框架设计稿（马赛克可直接写参数，`--provenance` 写明来源）、一组一验（同相机、1:1 对照）、整机组装对照；NumPy、Pillow、SciPy |
 | `scripts/coat_material.py` | 完整重涂的整机一层涂层材质：常量光滑度与金属度、法线压平，可保留少量凹槽只在反光里出现；NumPy、Pillow |
