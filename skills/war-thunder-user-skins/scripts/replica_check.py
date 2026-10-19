@@ -47,14 +47,40 @@ def font(size):
     return ImageFont.load_default()
 
 
-def skin_materials(scene_path):
-    """Every material of the scene that samples a colour map: the author painted the atlas, so marks drawn over any
-    island of them (retained mechanics included) land on the model."""
+def colour_maps(scene):
+    """Colour-map path -> names of the scene materials sampling it, in scene order."""
+    groups = {}
+    for m in scene['materials']:
+        if m.get('color'):
+            groups.setdefault(str(Path(m['color']['path']).resolve()).lower(), []).append(m.get('name') or m.get('id'))
+    return groups
+
+
+def skin_texture(scene_path, texture=None):
+    """The colour map the skin replaces and every material sampling it: the author painted that whole atlas, so
+    marks drawn over any island of it (retained mechanics included) land on the model.  Materials with another
+    colour map (a nozzle or a cockpit with its own texture) are not part of the atlas and never count.  With several
+    colour maps in the scene, name the one the skin replaces (`texture`: a substring of its file name or of one of
+    its material names); the tool does not guess."""
     scene = json.loads(Path(scene_path).read_text(encoding='utf-8'))
-    names = [m.get('name') or m.get('id') for m in scene['materials'] if m.get('color')]
-    if not names:
+    groups = colour_maps(scene)
+    if not groups:
         raise SystemExit('scene has no material with a colour map')
-    return names
+    listing = lambda: json.dumps({Path(k).name: v for k, v in groups.items()})
+    if texture:
+        t = texture.lower()
+        hit = [k for k, names in groups.items() if t in Path(k).name or any(t in str(n).lower() for n in names)]
+        if len(hit) != 1:
+            raise SystemExit(f'texture {texture!r} matches {len(hit)} colour maps: ' + listing())
+        return hit[0], groups[hit[0]]
+    if len(groups) > 1:
+        raise SystemExit('scene has several colour maps; name the one the skin replaces with --texture: ' + listing())
+    key = next(iter(groups))
+    return key, groups[key]
+
+
+def skin_materials(scene_path, texture=None):
+    return skin_texture(scene_path, texture)[1]
 
 
 # ---------------------------------------------------------------- used texels
@@ -62,7 +88,7 @@ def used_mask(geometry_path, materials, size):
     import vector_paint
     from surface_preview import load_geometry
     geometry = load_geometry(geometry_path, allow_repeat_uv=True)
-    tris = vector_paint.same_texture_triangles({'charts': [{'materials': list(materials)}]}, geometry)
+    tris = vector_paint.sampling_triangles({'charts': [{'materials': list(materials)}]}, geometry)
     used = np.zeros((size[1], size[0]), np.bool_)
     vector_paint._used(np.asarray(geometry['uvs'], np.float64)[tris], size[0], size[1], used)
     return used
@@ -161,8 +187,14 @@ def _fill(spec, base, S):
     else:
         raise ValueError(f'fill needs color, ramp or ramp_px: {spec}')
     if 'mosaic' in spec:
-        p = Path(spec['mosaic'])
-        fit = json.loads((p if p.is_absolute() else base / p).read_text(encoding='utf-8'))
+        if isinstance(spec['mosaic'], dict):
+            # written directly (an original design, nothing measured): cell_px, angle_deg, origin_px, inset, levels
+            m = spec['mosaic']
+            fit = dict(lattice=dict(cell_px=float(m['cell_px']), angle_deg=float(m.get('angle_deg', 30.)), origin=m.get('origin_px', [0., 0.])),
+                       gap=dict(inset=float(m.get('inset', .041))), levels=m.get('levels', [[.84, .134], [.94, .17], [.965, .277], [1.02, .188], [1.06, .143], [1.1, .089]]))
+        else:
+            p = Path(spec['mosaic'])
+            fit = json.loads((p if p.is_absolute() else base / p).read_text(encoding='utf-8'))
         lat = fit['lattice']
         out.update(pattern='tri-mosaic', cell=round(lat['cell_px'] / S, 6), angle=lat['angle_deg'], offset=d(lat['origin']),
                    inset=round(min(fit['gap']['inset'], .3), 4), seed=int(spec.get('mosaic_seed', 1)),
@@ -230,7 +262,10 @@ def _seeds(polys, geometry_path, materials, size, per_shape=30):
     return seeds
 
 
-def plan_design(plans, geometry, materials, size=(8192, 8192), S=553.8, extra_seeds=()):
+REPLICA = 'measured reconstruction of a reference livery from its map (replica study, not an original design)'
+
+
+def plan_design(plans, geometry, materials, size=(8192, 8192), S=553.8, extra_seeds=(), provenance=REPLICA):
     layers, polys = [], []
     for plan_path in plans:
         plan_path = Path(plan_path)
@@ -252,7 +287,7 @@ def plan_design(plans, geometry, materials, size=(8192, 8192), S=553.8, extra_se
     if materials:
         chart['materials'] = list(materials)
     return dict(schema_version=1, supersample=4, bleed_px=4, palette={}, charts=[chart], layers=layers,
-                provenance='measured reconstruction of a reference livery from its map (replica study, not an original design)')
+                provenance=provenance)
 
 
 # ---------------------------------------------------------------- check
@@ -323,12 +358,13 @@ def _views(a, out, author_path, ours_path, label):
     if not a.views:
         return
     scene = json.loads(Path(a.scene).read_text(encoding='utf-8'))
+    key = skin_texture(a.scene, a.texture)[0]
     f = font(24)
     for tag, path in (('author', author_path), ('ours', ours_path)):
         s = json.loads(json.dumps(scene))
         h = hashlib.sha256(Path(path).read_bytes()).hexdigest()
         for m in s['materials']:
-            if m.get('color'):
+            if m.get('color') and str(Path(m['color']['path']).resolve()).lower() == key:
                 m['color'] = dict(path=str(Path(path).resolve()), sha256=h)
         (out / f'scene-{tag}.json').write_text(json.dumps(s, indent=1), encoding='utf-8')
         (out / 'views' / tag).mkdir(parents=True, exist_ok=True)
@@ -499,6 +535,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest='cmd', required=True)
     p = sub.add_parser('used'); p.add_argument('--geometry', required=True); p.add_argument('--scene', required=True)
     p.add_argument('--size', type=int, nargs=2, default=[8192, 8192]); p.add_argument('--out', required=True)
+    p.add_argument('--texture', help='colour map the skin replaces (file or material name part); required when the scene has several')
     p = sub.add_parser('edit'); p.add_argument('--plan', required=True); p.add_argument('--out', required=True)
     p.add_argument('--drop', nargs='*', default=[]); p.add_argument('--mosaic', nargs=2, action='append', default=[], metavar=('ID', 'FIT'))
     p.add_argument('--mirror', nargs=5, action='append', default=[], metavar=('ID', 'U0', 'V0', 'U1', 'V1'),
@@ -507,15 +544,17 @@ def main(argv=None):
     p.add_argument('--straighten', nargs=5, action='append', default=[], metavar=('ID', 'U0', 'V0', 'U1', 'V1'),
                    help='join the outline vertices nearest U0,V0 and U1,V1 by one straight edge (measured straight in the reference)')
     p = sub.add_parser('plan'); p.add_argument('--plan', action='append', required=True); p.add_argument('--geometry', required=True)
-    p.add_argument('--scene', required=True, help='materials with a colour map become the chart materials')
+    p.add_argument('--scene', required=True, help='materials sampling the skin colour map become the chart materials')
     p.add_argument('--size', type=int, nargs=2, default=[8192, 8192]); p.add_argument('--px-per-unit', type=float, default=553.8)
     p.add_argument('--extra-seed', type=float, nargs=2, action='append', default=[]); p.add_argument('--out', required=True)
+    p.add_argument('--provenance', help='what the design is, e.g. "independent construction" (default: measured replica)')
+    p.add_argument('--texture', help='colour map the skin replaces (file or material name part); required when the scene has several')
     for name in ('check', 'assemble'):
         p = sub.add_parser(name)
         p.add_argument('--author', required=True); p.add_argument('--geometry', required=True); p.add_argument('--scene', required=True)
         p.add_argument('--cameras', required=True); p.add_argument('--views', nargs='*', default=['top', 'bottom', 'left', 'right', 'front', 'rear', 'iso'])
         p.add_argument('--coat', type=int, nargs=3, default=[51, 51, 52]); p.add_argument('--used', help='used-texel mask from the used subcommand')
-        p.add_argument('--out', required=True)
+        p.add_argument('--out', required=True); p.add_argument('--texture', help='colour map the skin replaces (file or material name part); required when the scene has several')
         if name == 'check':
             p.add_argument('--design', required=True); p.add_argument('--region', type=int, nargs=4, required=True)
             p.add_argument('--clear', default='redall+white'); p.add_argument('--keep', type=int, nargs=4, action='append', default=[])
@@ -527,14 +566,15 @@ def main(argv=None):
             p.add_argument('--plan', action='append', default=[], help='replica plans: a component under any of their shapes is design')
     a = ap.parse_args(argv)
     if a.cmd == 'used':
-        used = used_mask(a.geometry, skin_materials(a.scene), a.size)
+        used = used_mask(a.geometry, skin_materials(a.scene, a.texture), a.size)
         Image.fromarray((used * 255).astype(np.uint8), 'L').save(a.out)
         print(json.dumps(dict(used_texels=int(used.sum()), share=round(float(used.mean()), 4))))
     elif a.cmd == 'edit':
         plan = edit(a.plan, a.out, a.drop, a.mosaic, a.mirror, a.base_from_fit, a.seed_start, a.note, a.straighten)
         print(json.dumps(dict(elements=len(plan['elements']))))
     elif a.cmd == 'plan':
-        design = plan_design(a.plan, a.geometry, skin_materials(a.scene), tuple(a.size), a.px_per_unit, a.extra_seed)
+        design = plan_design(a.plan, a.geometry, skin_materials(a.scene, a.texture), tuple(a.size), a.px_per_unit, a.extra_seed,
+                             a.provenance or REPLICA)
         out = Path(a.out); out.parent.mkdir(parents=True, exist_ok=True)
         out.write_text(json.dumps(design, indent=1), encoding='utf-8')
         print(json.dumps(dict(layers={l['name']: len(l['items']) for l in design['layers']}, seeds=len(design['charts'][0]['island']))))

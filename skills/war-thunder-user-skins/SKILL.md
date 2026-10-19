@@ -11,7 +11,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 
 | 请求 | 执行范围与入口 |
 | --- | --- |
-| 新作 | 素材 → 整机构图 → 分层制作 → UV／材质 → 模型修订 → 交付 |
+| 新作 | 素材 → 整机构图 → 分层制作 → UV／材质 → 模型修订 → 交付；没做过的机型先按 [新机型上手](references/new-airframe.md) 走一遍 |
 | 局部修订 | 保留已接受部分，只修改问题域并复查受影响的表面与输出 |
 | 点评、选型、讨论 | 回答指定问题，按需看参考，不自动制作或采集素材包 |
 | 学习、复刻、审计 | 按 [研究与审计](references/research-and-audit.md) 确认来源、范围、实验和关闭条件；复刻作者图形、要求线条和作者一样干净时，先读 [原 UV 作画与逐组复刻](references/uv-native-replica.md) |
@@ -27,6 +27,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 - [素材与布局](references/assets-and-layout.md)：找图、来源、有效细节和原图适配。
 - [美术设计](references/art-direction.md)：人物动作、尺度、各面职责、尾面及图文嵌合。
 - [从真实资源制作飞机标记](references/resource-markings.md)：机型资源 ID、只读检索游戏 UI 包、和参考作品的图标配准（位图复用）、找不到同款时如实记录或标为游戏模型派生、放到原 UV。
+- [新机型上手](references/new-airframe.md)：从模型到第一版基本布局的可复刻清单：已用纹素里的两种假覆盖（别的贴图、UV 铺满整图的辅助件），岛地图和每纹素机体坐标，左右共用的岛，每块 UV 连通岛的米制 frame（残差判断能否当平面画）与展开机身的站位 × 周长坐标，按岛的干净底色和机械件遮罩，平面形与法向宽度，每岛一个图表的设计稿，试画循环（面积比、lint、1:1），窄圆机背；数字来自 J-10C。
 - [原 UV 作画与逐组复刻](references/uv-native-replica.md)：判断作者在 UV 上还是在模型上作画，岛、材质与实际使用纹素，构造线，参数拟合，按元素测颜色与马赛克（逐块相位、边缘证据、镜像），区分原厂部件，字样和图标，一次只验证一组与整机组装，工具流程，诚实区分测量重建和独立构形，以及前几轮失败的原因。
 - [线条与配色](references/linework-and-color.md)：母形、分支带、序列、伴线的构造顺序，`vector_paint.py` 设计稿与颜色。
 - [UV 与材质](references/materials-and-uv.md)：干净重涂、整机一层涂层、完整承载面、结构、通道和受光。
@@ -61,10 +62,11 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
 | `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住／接缝（如凸起背鳍条侧壁）的分区图，并列出压到这些区域或跨过接缝的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
+| `scripts/airframe_setup.py` | 新机型准备：岛地图与每纹素机体坐标（map）、每块 UV 连通岛的米制 frame 与残差（frames）、按岛的干净底色和机械件遮罩（clean）、渲染图的深底／签名色／淡染／白面积比（shares）；NumPy、Pillow、SciPy、Numba |
 | `scripts/uv_frame.py` | 给一块 UV 岛拟合直线框架（atlas 上笔直的设计坐标），写进图表的 `frame`，并检查展开误差；NumPy |
 | `scripts/arrangement.py` | 构造线切格：少数几条直线把图表切成格子，图形是格子或格子的描边（`holes`），可镜像；Python 标准库 |
 | `scripts/replica_measure.py` | 学习参考涂装时在展开图上逐组测量：描直边轮廓、按元素测渐变、拟合马赛克（格距、方向、相位、缝、明暗档、边缘证据）、高通放大读格子、游戏图标配准、整区自动测量并跳过原厂部件；NumPy、Pillow、SciPy、OpenCV |
-| `scripts/replica_check.py` | 实际使用纹素掩膜、计划编辑（马赛克、镜像轴）、计划转 atlas 框架设计稿、一组一验（同相机、1:1 对照）、整机组装对照；NumPy、Pillow、SciPy |
+| `scripts/replica_check.py` | 实际使用纹素掩膜（多张颜色贴图时 `--texture` 指名）、计划编辑（马赛克、镜像轴）、计划转 atlas 框架设计稿（马赛克可直接写参数，`--provenance` 写明来源）、一组一验（同相机、1:1 对照）、整机组装对照；NumPy、Pillow、SciPy |
 | `scripts/coat_material.py` | 完整重涂的整机一层涂层材质：常量光滑度与金属度、法线压平，可保留少量凹槽只在反光里出现；NumPy、Pillow |
 | `scripts/detail_sheet.py` | 原尺寸检查：从最终颜色图按 1:1 截取各部位（或自动挑细节最多的区域），和参考贴图按同样的米制比例并排，另出 Composa 调用清单；NumPy、Pillow |
 | `scripts/panel_lines.py` | 面板发丝线，默认不用。从原厂颜色贴图描出分块线和铆钉排；描线质量不过闸门（短线、台阶、折角）时 `apply` 拒绝画；NumPy、Pillow、Numba |
