@@ -26,7 +26,7 @@ description: War Thunder 喷气机痛涂的 Akamywek 风格配方：先照作者
 1. 读 [基本布局](references/base-layout.md)，把 F-2A 的部位职责对应到本机型：签名色两大块在哪里、白色焦点放哪里、翼尖条纹、平尾或鸭翼前缘带、垂尾序列、侧面文字道。
 2. 读 [配色](references/palette.md)，从角色原图取签名色、色阶和底色，写出色表；面积按 [基本布局](references/base-layout.md#整机只有两大块) 的俯视比例定。
 3. 落笔前先对设计稿的图表跑 `surface_map.py`，看每块表面哪里平整、哪里弯折、哪里被别的表面盖住或被前面的图表抢走 UV（见 [线条与配色](references/core/linework-and-color.md#落笔前先看表面分区)）。
-4. 按顺序落笔：先两大块色场，再白色焦点（[线条与图形库](references/motifs.md) 的嵌套 V），再翼尖条纹、前缘带、垂尾序列，最后细线和字（[字与标识](references/type-and-decals.md)）。每个元素的宽度取 [尺寸阶梯](references/base-layout.md#尺寸阶梯) 的一档。用 `vector_paint.py` 在原 UV 上直接出图层；示例设计稿在 `examples/`。
+4. 按顺序落笔：先两大块色场，再白色焦点（[线条与图形库](references/motifs.md) 的嵌套 V），再翼尖条纹、前缘带、垂尾序列，最后细线和字（[字与标识](references/type-and-decals.md)）。每个元素的宽度取 [尺寸阶梯](references/base-layout.md#尺寸阶梯) 的一档。用 `vector_paint.py` 在原 UV 上直接出图层；示例设计稿在 `examples/`。作者是在原 UV 展开图上画直线的：机背这类展开的蒙皮岛先用 `uv_frame.py` 建框架，图表写 `frame` 和 `island`，图形用 `arrangement.py` 的构造线切出来；学作者、复刻图形前先读 [原 UV 作画与逐组复刻](references/core/uv-native-replica.md)。
 5. 质感只有签名色面内的三角马赛克。不画面板线和铆钉（F-2A 没有）。漆面用 `coat_material.py` 做整机一层亮漆（深底 R 173、B 0，白底 R 228、B 56，法线压平）；主体颜色图 8192²。见 [漆面](#漆面)。
 6. 出图前跑 `design_lint.py`，按 [审美纠偏](references/core/taste-corrections.md) 和下文的[常见跑偏](#常见跑偏)修掉报出的问题。出图后再跑一次 `surface_map.py`，`risky_items` 和 `seam_items` 清空或逐条确认；再给每个区域开近景相机看模型。
 7. **原尺寸检查**：在 Composa 里打开 8192 颜色图，用 `detail_sheet.py` 按 1:1 截取每个部位，和作者 F-2A 同样米制比例的截图并排看（方法见 [原尺寸检查](references/core/packaging-and-validation.md#原尺寸检查)）。边缘不干脆、粗细不一、有锯齿或断线，就回到设计稿改，不能只看缩小的预览图。
@@ -47,6 +47,9 @@ description: War Thunder 喷气机痛涂的 Akamywek 风格配方：先照作者
 | `scripts/surface_map.py` | 每个图表的平整／弯折／拉伸／机械件／共用 UV／被遮挡分区图，列出压到这些区域的图元 |
 | `scripts/design_lint.py` | 设计稿的字体、配色、线型偏向检查 |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 上求值：色场、渐尖线、马赛克、半调、立绘和文字 |
+| `scripts/uv_frame.py` | 给展开的 UV 岛拟合直线框架，让图形在展开图上保持笔直（作者的画法） |
+| `scripts/arrangement.py` | 构造线切格：几条直线切出图形和描边形，可镜像 |
+| `scripts/replica_measure.py`、`scripts/replica_check.py` | 学作者时在展开图上逐组测量（轮廓、渐变、马赛克、图标配准、跳过原厂部件），再逐组同相机核对、整机组装对照；只用于学习和核对，不用来搬作者的图形 |
 | `scripts/coat_material.py` | 整机一层亮漆的材质贴图（作者的做法） |
 | `scripts/detail_sheet.py` | 原尺寸检查：从 8192 颜色图按 1:1 截取各部位，和参考贴图同米制比例并排，另出 Composa 调用清单 |
 | `scripts/panel_lines.py` | 面板发丝线；基本布局不用（F-2A 没有），只在用户点名要时用，而且必须过原尺寸检查 |
