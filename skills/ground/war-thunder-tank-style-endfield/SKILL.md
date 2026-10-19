@@ -13,6 +13,10 @@ description: 制作、适配和修订 War Thunder 坦克的终末地 / ENDFIELD 
 
 设计前阅读 [终末地坦克风格配方](references/endfield-style.md)。本包携带官网标志、A7V 原生 RGB 图集、22 个元素裁片和透明徽记；先看 [素材选择与来源](references/assets.md)，分析标识与布局时再读 [A7V 原作 UV 研究](references/a7v-uv-elements.md)。先确认大块布局和线条，再加入字标与微小技术细节。当前内置工具提供 DDS/BLK 检查与基础模型排错预览，展示图的材质和灯光需要另外对照参考校准。
 
+## 选择适配方式
+
+先看 [跨车型适配与出厂检查](references/surface-adaptation.md)。相近车辆可先试套并按实际表面转移；结构不同的车辆按本车承载面重新构图。把这套风格用于勒克莱尔等其他坦克时，复用标志、路径语汇、信息层级与材料判断，重新建立 UV 和构件对应。A7 的坐标、节点名与色块位置不是跨车模板。
+
 ## 确认输入
 
 先查看目标车的实际 BLK、原生颜色图和材质，再定位对应模型。车名相近、文件同前缀或节点同名，都不能证明 UV 或物件功能相同。列清车体、炮塔、炮管、附加装甲、武器站及其他实际使用的图集。
@@ -37,6 +41,12 @@ description: 制作、适配和修订 War Thunder 坦克的终末地 / ENDFIELD 
 
 共用 UV 只能承载一份颜色。确认可见表面、隐藏面与优先级；不要让隐藏面在 UV 烘焙中把已修好的颜色覆盖回去。材质与颜色的优先级一致核对，不能用平均色或覆盖率证明外观正确。
 
+## 出厂细节与材料
+
+用户要求清洁出厂状态时，分别检查颜色残影、结构法线和材料响应。旧车的黑孔、螺钉阴影、掉漆与噪点可能随颜色图转移；即使 N/AO 已保留新车，也要清除颜色层里的旧结构。精细度通过原尺寸图、清晰字形和正确接缝验证，不能靠全图模糊或放大分辨率代替。
+
+白漆、黄漆、裸露金属、橡胶与软质附件各按承载材料核对。更换颜色不代表整个部件都应改成相同粗糙度。按 [材料与检查清单](references/surface-adaptation.md) 核对最终 DDS，并保留用户指出区域的同相机近景。
+
 ## 核对实际输出
 
 先看全图和原尺寸局部，再用目标模型看侧面、顶部、前后、两个斜视和新增部件近景。比较参考时固定相机、比例、灯光与背景。把图案错位、模型姿态、结构阴影和反光差异分别定位。
@@ -47,6 +57,9 @@ description: 制作、适配和修订 War Thunder 坦克的终末地 / ENDFIELD 
 
 ## 工具
 
+- `scripts/reproject_surface.py --config CONFIG --part NAME`：通过最近三维表面逐纹素转移到目标原 UV，支持图集写入归属、部件标签、结构法线差值和独立涂层规则。仅适合已确认有对应关系的表面，配置与限制见 [工具契约](references/reprojection-tool.md)。
+- `scripts/check_uv_reprojection.py`：运行小件平铺 UV 覆盖主装甲的 GPU 回归检查。
+
 - `scripts/export_uv_reference.py DDS... --out DIRECTORY`：从 DDS 导出原尺寸 RGB 查看副本，逐像素核对导出，不改游戏文件或原 Alpha。
 - `scripts/composa_mcp.py --out SESSION_DIRECTORY`：连接 Composa 分层编辑器并读取实时工具列表。需要编辑器时按 [可视化与素材提取](references/editor-and-extraction.md) 新建本任务文档，再导入原图与独立标注层。
 
@@ -54,8 +67,12 @@ description: 制作、适配和修订 War Thunder 坦克的终末地 / ENDFIELD 
 - `scripts/tank_preview.py --model MODEL --config CONFIG --out OUTPUT`：离线模型预览。MODEL 包含 assembly.obj 和 materials.json；CONFIG 结构见 [材质与 UV 契约](references/formats.md)。
 - `scripts/tank_core.py`：快速查看未压缩 DDS、保留 RGBA 写 DDS，以及读取 OBJ。写出的 DDS 只含顶层；需要 mip 时用验证过的转换器另行生成并复查。
 
-检查器需要 Pillow、NumPy；预览还需要 ModernGL 和 OpenGL 3.3。使用已有环境，不为普通制作擅自安装服务。
+检查器需要 Pillow、NumPy；预览还需要 ModernGL 和 OpenGL 3.3。表面转移工具另需 OpenCV、Numba 和 OpenGL 4.3。使用已有环境，不为普通制作擅自安装服务。
 
 ## 交付
 
 实际贴图与 BLK 一一对应，保存来源 credit、制作源和预览。新版本使用新目录。状态按用户反馈记录；技术检查、图形匹配和用户美术认可分别说明。
+
+## 按实际反馈迭代
+
+用户要求总结或更新 Skill 时，记录问题触发条件、定位证据、有效修正与适用边界。将可复用判断和已运行的工具纳入本包；车型坐标、参数调试过程、机器环境与用户评价留在当前任务。技术验证通过与美术认可分别记录。

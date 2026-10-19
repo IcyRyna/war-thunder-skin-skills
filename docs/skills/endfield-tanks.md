@@ -1,21 +1,23 @@
 # 终末地风格坦克涂装
 
-用于 War Thunder 现代坦克的终末地工业风涂装。以 A7V / A7HU 适配为案例，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
+用于 War Thunder 现代坦克的终末地工业风涂装。结合 A7V / A7HU / A6HEL 的适配方法，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
 
-Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.0
+Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.1
 
-[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.0) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
+[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.1) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
 ## 能做什么
 
 - 安排灰白装甲面、深色机械区、黄色路径与主次标志。
 - 分开处理车体、炮塔、炮管、附加装甲和武器站的实际 UV。
 - 检查字标阅读方向、接缝、孔口、共享 UV 和细墙采样。
-- 处理颜色、结构法线与 AO，用原尺寸图和离线模型检查结果。
+- 相关车型在确认表面对应后，逐纹素转入目标原生 UV，处理平铺小件与共享纹素的写入归属。
+- 分开处理颜色、结构法线、AO 与粗糙度；清洁涂层保留目标车的螺钉和接缝，消除旧车结构残影。
+- 从最终 DDS 生成七视图与同相机细节对照，核对小字、线条、漆面和材质。
 
 ## 随包素材
 
-安装包约 61 MB，共 48 个文件，其中 35 项为素材与参考：
+安装包约 61 MB，共 52 个文件，其中 35 项为素材与参考：
 
 | 内容 | 尺寸或数量 |
 | --- | --- |
@@ -31,6 +33,8 @@ Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.0
 
 换车时需要重新确认构件、UV 和采样关系。车名接近，不代表贴图可以直接套用；新增武器站、观瞄和附加装甲也需要单独安排。离线预览用于检查构图和贴图，最终显示效果仍需在游戏中确认。
 
-随附工具包括 DDS RGB 展开、贴图检查、Composa 连接和离线模型预览。参考涂装与官方素材见[来源说明](../credits.md)。
+跨到勒克莱尔等不同车系时，按主徽记、装甲分区、黄色路线和技术标注的职责重新布局。A7 系坐标不作为其他车型的模板。
+
+随附工具包括 DDS RGB 展开、贴图检查、Composa 连接、离线模型预览，以及相关车型的逐纹素表面转移与回归检查。后者按需使用 OpenGL 4.3、OpenCV 和 Numba。参考涂装与官方素材见[来源说明](../credits.md)。
 
 [源码](../../skills/ground/war-thunder-tank-style-endfield/) · [返回首页](../../README.md)

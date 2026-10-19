@@ -25,6 +25,14 @@ def load_image(path: Path | str) -> Image.Image:
         image.load()
         return image.convert('RGBA')
 
+def resize_data_image(image: Image.Image, size: tuple[int, int], resample=Image.Resampling.BILINEAR) -> Image.Image:
+    """Resample RGBA data bands independently; A can be a normal or paint component."""
+    if len(size) != 2 or any(not isinstance(n, int) or n < 1 for n in size):
+        raise ValueError('Output dimensions must be positive integers')
+    rgba = image.convert('RGBA')
+    return Image.merge('RGBA', tuple(band.resize(size, resample) for band in rgba.split()))
+
+
 def save_dds(image: Image.Image, path: Path | str) -> None:
     """Lossless legacy BGRA DDS top level; mip policy belongs to the caller."""
     path = Path(path)

@@ -5,7 +5,7 @@ from pathlib import Path
 import moderngl
 import numpy as np
 from PIL import Image,ImageDraw,ImageFont
-from tank_core import load_image,load_obj,unit,write_json
+from tank_core import load_image,load_obj,unit,write_json,resize_data_image
 
 VS = """#version 330
 in vec3 p; in vec3 n; in vec2 uv;
@@ -18,7 +18,7 @@ in vec3 pos; in vec3 normal; in vec2 tc; in vec4 shadow_pos;
 out vec4 frag;
 uniform sampler2D color_tex; uniform sampler2D packed_tex; uniform sampler2D ao_tex;
 uniform sampler2DShadow shadow_tex;
-uniform vec3 eye; uniform vec3 key_light; uniform int flip_v;uniform int cutout;
+uniform vec3 eye; uniform vec3 key_light; uniform int flip_v;uniform int cutout;uniform int is_floor;
 uniform float bump_strength;uniform float exposure;
 const float PI=3.14159265359;
 vec3 film(vec3 c){return clamp((c*(2.51*c+.03))/(c*(2.43*c+.59)+.14),0.,1.);}
@@ -45,6 +45,7 @@ void main(){
   xy*=min(1.,.98/max(length(xy),.001));
   N=normalize(mat3(T,B,N)*vec3(xy,sqrt(max(.01,1.-dot(xy,xy)))));
  }
+ if(is_floor==1){frag=vec4(vec3(.695)*shadow(),1);return;}
  vec3 base=pow(max(c.rgb,vec3(0)),vec3(2.2));
  float rough=clamp(1.-packed_value.r,.2,.96),metal=clamp(packed_value.b,0.,1.);
  float ao=texture(ao_tex,t).r;
@@ -66,8 +67,8 @@ void main(){
  frag=vec4(pow(film(lighting*exposure),vec3(1./2.2)),1);
 }
 """
-DEPTH_VS="#version 330\nin vec3 p;uniform mat4 mvp;void main(){gl_Position=mvp*vec4(p,1);}"
-DEPTH_FS="#version 330\nvoid main(){}"
+DEPTH_VS="#version 330\nin vec3 p;in vec2 uv;uniform mat4 mvp;out vec2 tc;void main(){tc=uv;gl_Position=mvp*vec4(p,1);}"
+DEPTH_FS="#version 330\nin vec2 tc;uniform sampler2D color_tex;uniform int cutout;uniform int flip_v;void main(){vec2 t=vec2(tc.x,flip_v==1?1.-tc.y:tc.y);if(cutout==1 && texture(color_tex,t).a<.45)discard;}"
 
 def look_at(eye,target,up):
     f=unit(np.asarray(target)-eye);s=unit(np.cross(f,up));u=np.cross(s,f)
@@ -123,7 +124,9 @@ def main():
         if key not in texture_cache:
             if path:
                 img=load_image(path)
-                if max(img.size)>8192:img.thumbnail((8192,8192))
+                if max(img.size)>8192:
+                    scale=8192/max(img.size)
+                    img=resize_data_image(img,(max(1,round(img.width*scale)),max(1,round(img.height*scale))))
             else:img=Image.new('RGBA',(2,2),default)
             tex=ctx.texture(img.size,4,img.tobytes(),alignment=1)
             tex.build_mipmaps();tex.filter=(moderngl.LINEAR_MIPMAP_LINEAR,moderngl.LINEAR)
@@ -148,8 +151,8 @@ def main():
         packed_value=np.concatenate([model['positions'][select],model['normals'][select],model['uvs'][select]],axis=2).reshape(-1,8).astype('f4')
         vb=ctx.buffer(packed_value.tobytes())
         vao=ctx.vertex_array(prog,[(vb,'3f 3f 2f','p','n','uv')])
-        db=ctx.buffer(model['positions'][select].astype('f4').tobytes())
-        dvao=ctx.vertex_array(depth_prog,[(db,'3f','p')])
+        db=ctx.buffer(np.concatenate([model['positions'][select],model['uvs'][select]],axis=2).astype('f4').tobytes())
+        dvao=ctx.vertex_array(depth_prog,[(db,'3f 2f','p','uv')])
         batches.append((vao,dvao,c,n,ao,int(binding.get('alpha_test',False))))
     positions=model['positions'];lo=positions.min((0,1));hi=positions.max((0,1))
     floor_y=float(lo[1]-.025)
@@ -165,7 +168,9 @@ def main():
     shadow=ctx.framebuffer(depth_attachment=depth_tex);shadow.use();shadow.clear(depth=1.0)
     ctx.enable(moderngl.DEPTH_TEST);ctx.disable(moderngl.CULL_FACE)
     depth_prog['mvp'].write(light_mvp.T.tobytes())
-    for _,vao,*_ in batches:vao.render()
+    depth_prog['color_tex'].value=0;depth_prog['flip_v'].value=int(config.get('flip_v',False))
+    for _,vao,c,_,_,cutout in batches:
+        c.use(0);depth_prog['cutout'].value=cutout;vao.render()
     size=(args.width,args.height)
     target=ctx.framebuffer([ctx.renderbuffer(size,4,samples=4)],ctx.depth_renderbuffer(size,samples=4))
     resolved=ctx.simple_framebuffer(size,components=4)
@@ -181,10 +186,10 @@ def main():
             lo_f,hi_f=np.asarray(config['framing_bounds'])
             frame_positions=np.asarray([[lo_f[0] if i&1==0 else hi_f[0],lo_f[1] if i&2==0 else hi_f[1],lo_f[2] if i&4==0 else hi_f[2]] for i in range(8)],dtype='f4')[None,:,:]
         mvp,eye=frame(frame_positions,direction,size)
-        target.use();target.clear(.39,.395,.39,1,depth=1)
+        target.use();target.clear(.695,.695,.695,1,depth=1)
         prog['mvp'].write(mvp.T.tobytes());prog['eye'].value=tuple(eye)
         depth_tex.use(3)
-        fc.use(0);fn.use(1);fa.use(2);prog['cutout'].value=0;floor_vao.render()
+        fc.use(0);fn.use(1);fa.use(2);prog['cutout'].value=0;prog['is_floor'].value=1;floor_vao.render();prog['is_floor'].value=0
         for vao,_,c,n,ao,cutout in batches:
             c.use(0);n.use(1);ao.use(2);prog['cutout'].value=cutout;vao.render()
         ctx.copy_framebuffer(resolved,target)
