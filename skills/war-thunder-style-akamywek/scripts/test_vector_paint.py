@@ -236,6 +236,24 @@ class VectorPaintTests(unittest.TestCase):
         self.assertEqual(int(left[32, 28, 3]), 255)
         self.assertEqual(int(left[32, 34, 3]), 0)
 
+    def test_helper_box_with_whole_atlas_uvs_is_never_taken_by_a_chart(self):
+        # two plates, one chart and one layer each; a 1 cm helper square maps 0-1 UVs over the whole atlas (J-10C tail)
+        boxes = [(-1, 0, -1, 1, 0., .45, 0., 1.), (.2, 1.2, -1, 1, .55, 1., 0., 1.), (2, 2.01, 0, .01, 0., 1., 0., 1.)]
+        islands(self.root / 'h.npz', boxes)
+        frame = dict(origin=[0., 0.], x=[1., 0.], y=[0., 1.])
+        charts = [dict(id='a', u='x', v='z', island=[[16, 32]], frame=frame), dict(id='b', u='x', v='z', island=[[48, 32]], frame=frame)]
+        square = lambda x0, x1: [[x0, 4], [x1, 4], [x1, 60], [x0, 60]]
+        layers = [dict(name='one', items=[dict(id='p', type='polygon', chart='a', points=square(2, 30), fill='#ff0000')]),
+                  dict(name='two', items=[dict(id='q', type='polygon', chart='b', points=square(34, 62), fill='#00ff00')])]
+        design = dict(schema_version=1, supersample=2, atlas=dict(width=64, height=64), palette={}, charts=charts, layers=layers)
+        (self.root / 'h.json').write_text(json.dumps(design), encoding='utf-8')
+        vector_paint.main(['--geometry', str(self.root / 'h.npz'), '--design', str(self.root / 'h.json'), '--out', str(self.root / 'h')])
+        one = np.asarray(Image.open(self.root / 'h/layers/01-one.png'))
+        two = np.asarray(Image.open(self.root / 'h/layers/02-two.png'))
+        self.assertGreater(int(one[32, 16, 3]), 200)
+        self.assertGreater(int(two[32, 48, 3]), 200)
+        self.assertEqual(int(one[32, 48, 3]), 0)
+
 
 if __name__ == '__main__':
     unittest.main()

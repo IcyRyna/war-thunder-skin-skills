@@ -94,6 +94,44 @@ class ReplicaCheckTests(unittest.TestCase):
         keep, listed = rc.mechanical_mask(img, (51, 51, 52), None)
         self.assertFalse(keep.any())
 
+    def test_skin_materials_keep_only_the_colour_map_the_skin_replaces(self):
+        main, nozzle = self.root / 'main_c.tga', self.root / 'nozzle_rgb.png'
+        mat = lambda name, path: dict(name=name, color=dict(path=str(path), sha256='0')) if path else dict(name=name)
+        scene = dict(materials=[mat('skin', main), mat('glass', None), mat('mechanics', main), mat('nozzle', nozzle)])
+        (self.root / 's.json').write_text(json.dumps(scene), encoding='utf-8')
+        with self.assertRaises(SystemExit):             # two colour maps: the tool does not guess
+            rc.skin_materials(self.root / 's.json')
+        self.assertEqual(rc.skin_materials(self.root / 's.json', 'main_c'), ['skin', 'mechanics'])
+        self.assertEqual(rc.skin_materials(self.root / 's.json', 'skin'), ['skin', 'mechanics'])
+        self.assertEqual(rc.skin_materials(self.root / 's.json', 'nozzle'), ['nozzle'])
+        with self.assertRaises(SystemExit):
+            rc.skin_materials(self.root / 's.json', '.')    # matches both
+        scene['materials'].pop()
+        (self.root / 's.json').write_text(json.dumps(scene), encoding='utf-8')
+        self.assertEqual(rc.skin_materials(self.root / 's.json'), ['skin', 'mechanics'])
+
+    def test_used_mask_ignores_a_helper_box_with_whole_atlas_uvs(self):
+        # skin plates cover the left half of the atlas; a 1 cm helper square maps 0-1 UVs like the J-10C tail cube
+        boxes = [(-1, 0, -1, 1, 0., .25, 0., 1.), (0, 1, -1, 1, .25, .5, 0., 1.), (2, 2.01, 0, .01, 0., 1., 0., 1.)]
+        islands(self.root / 'h.npz', boxes)
+        used = rc.used_mask(self.root / 'h.npz', ['*'], (64, 64))
+        self.assertLess(used.mean(), .6)
+        self.assertTrue(used[:, :30].all() and not used[:, 36:].any())
+
+    def test_plan_takes_a_mosaic_written_directly_and_its_own_provenance(self):
+        islands(self.root / 'g.npz', [(-1, 1, -1, 1, 0., 1., 0., 1.)])
+        polys = dict(shapes=[dict(index=0, vertices=[[8, 8], [56, 8], [56, 56], [8, 56]], holes=[])])
+        (self.root / 'sq.json').write_text(json.dumps(polys), encoding='utf-8')
+        plan = dict(layer='d', elements=[dict(id='m', polygon='sq.json:0', fill=dict(color='#b23532', mosaic=dict(cell_px=16, angle_deg=90)))])
+        (self.root / 'dplan.json').write_text(json.dumps(plan), encoding='utf-8')
+        design = rc.plan_design([self.root / 'dplan.json'], self.root / 'g.npz', None, size=(64, 64), S=8., provenance='independent construction')
+        fill = design['layers'][0]['items'][0]['fill']
+        self.assertEqual(fill['pattern'], 'tri-mosaic')
+        self.assertAlmostEqual(fill['cell'], 2.0)
+        self.assertEqual(fill['angle'], 90.)
+        self.assertEqual(len(fill['levels']), 6)
+        self.assertEqual(design['provenance'], 'independent construction')
+
 
 if __name__ == '__main__':
     unittest.main()

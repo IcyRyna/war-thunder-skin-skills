@@ -230,6 +230,7 @@ def select_charts(design, geometry, size=None):
     axes = np.zeros((len(design['charts']), 5), np.int32)
     facing = np.zeros(len(world), np.float32)
     quality, warnings = {}, []
+    helper = helper_triangles(geometry)          # never painted: whole-atlas helper boxes
     for index, chart in enumerate(design['charts']):
         unknown = set(chart) - {'id', 'u', 'v', 'nodes', 'materials', 'normal', 'facing', 'where', 'frame', 'atlas_box', 'island'}
         if unknown:
@@ -238,7 +239,7 @@ def select_charts(design, geometry, size=None):
         if ua == va:
             raise ValueError(f'Chart {chart["id"]} needs two different axes')
         axes[index, :4] = ua, um, va, vm
-        mask = assignment < 0
+        mask = (assignment < 0) & ~helper
         if 'nodes' in chart:
             patterns = chart['nodes']
             if not isinstance(patterns, list) or not patterns:
@@ -309,7 +310,12 @@ def select_charts(design, geometry, size=None):
         stretched = float(area[mask][ratio < .5].sum() / weight) if weight > 0 else 0.
         quality[chart['id']] = dict(triangles=int(mask.sum()), world_area_m2=round(float(weight), 4),
                                     foreshortened_area_fraction=round(stretched, 4))
-        if stretched > .05:
+        if 'frame' in chart:
+            # A frame chart takes its coordinates from the atlas pixel, not from the u/v world axes, so their
+            # foreshortening says nothing (a developed fuselage band reads 36 % "foreshortened").  Widths follow
+            # the island's own texel density; check them with airframe_setup.py frames residuals and 1:1 crops.
+            quality[chart['id']]['frame'] = True
+        elif stretched > .05:
             warnings.append(f'Chart {chart["id"]}: {stretched:.1%} of its area is foreshortened over 2x; patterns and line widths will streak there. Split it by normal/where or use a chart whose axes lie in that surface.')
     return assignment, axes, facing, quality, warnings
 
@@ -667,6 +673,48 @@ def same_texture_triangles(design, geometry):
         return np.ones(count, bool)
     keep = np.array([c in target for c in colour])
     return keep[np.asarray(ids)]
+
+
+def helper_triangles(geometry, outlier=8.):
+    """Helper boxes and caps whose UVs span the whole atlas (J-10C `tail` holds a 10 cm cube with 0-1 UVs on every
+    face).  They sample every texel at about 150 times the skin's texel density and are not a paintable surface.
+    Counted as used they stop bleed everywhere; left in a chart, every island seed lands on them (their triangles
+    cover the whole atlas), the first chart takes them, and their top priority repaints every texel of the atlas
+    from that one chart.  A triangle is a helper when its texels per metre exceed `outlier` times the
+    area-weighted median of the triangles sampling the same colour map."""
+    uv = np.asarray(geometry['uvs'], np.float64); xyz = np.asarray(geometry['triangles'], np.float64)
+    e1, e2 = uv[:, 1] - uv[:, 0], uv[:, 2] - uv[:, 0]
+    uv_area = np.abs(e1[:, 0] * e2[:, 1] - e1[:, 1] * e2[:, 0]) / 2
+    surface = np.linalg.norm(np.cross(xyz[:, 1] - xyz[:, 0], xyz[:, 2] - xyz[:, 0]), axis=1) / 2
+    density = np.sqrt(uv_area / np.maximum(surface, 1e-12))
+    group = np.zeros(len(uv), np.int64)
+    names, resources, ids = (geometry.get(k) for k in ('material_names', 'material_resources', 'material_ids'))
+    if names is not None and resources is not None and ids is not None:
+        colour = []
+        for res in resources:
+            try:
+                slots = json.loads(str(res))
+            except (TypeError, ValueError):
+                slots = []
+            colour.append(slots[0] if slots else None)
+        keys = {c: k for k, c in enumerate(dict.fromkeys(colour))}
+        group = np.array([keys[c] for c in colour])[np.asarray(ids)]
+    helper = np.zeros(len(uv), bool)
+    for g in np.unique(group):
+        idx = np.flatnonzero((group == g) & (surface > 1e-12))
+        if idx.size < 3:
+            continue
+        order = idx[np.argsort(density[idx])]
+        weight = np.cumsum(surface[order]); weight /= weight[-1]
+        median = density[order][min(np.searchsorted(weight, .5), order.size - 1)]
+        if median > 0:
+            helper[idx[density[idx] > outlier * median]] = True
+    return helper
+
+
+def sampling_triangles(design, geometry, outlier=8.):
+    """same_texture_triangles minus helper boxes (helper_triangles): the texels a model really samples."""
+    return same_texture_triangles(design, geometry) & ~helper_triangles(geometry, outlier)
 
 
 def bleed(layer, used, steps):
@@ -1139,9 +1187,10 @@ def run(args):
         raise ValueError('bleed_px must be 0-16 atlas pixels')
     if bleed_px:
         # Texels count as taken only when a triangle samples this same colour map: glass, cockpit interior and
-        # other materials may overlap the atlas area but read other textures.
+        # other materials may overlap the atlas area but read other textures.  Helper boxes with whole-atlas UVs
+        # do not count either (sampling_triangles).
         used = np.zeros((size[1], size[0]), np.bool_)
-        _used(uv64[same_texture_triangles(design, geometry)], size[0], size[1], used)
+        _used(uv64[sampling_triangles(design, geometry)], size[0], size[1], used)
         for index in range(layer_count):
             layers[index] = bleed(layers[index], used, bleed_px)
     names = [f'{i + 1:02d}-{layer["name"]}' for i, layer in enumerate(design['layers'])]
