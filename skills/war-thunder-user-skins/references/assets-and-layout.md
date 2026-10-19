@@ -24,6 +24,25 @@
 
 高低清输出从原素材及可编辑源层重建；放大成图不增加独立细节。入选素材进入实际工程，避免只留下搜索链接。
 
+## 官方图不够时：抠图和 GPT 生图
+
+J-10C 莱万汀 v6 的做法（4 个人物位置，官方高清图只有 1 张立绘加 3 张截图）：
+
+1. **先清点官方图**：作品维基的图库页和文件搜索（MediaWiki 的 `api.php?action=query&prop=imageinfo` 可直接查尺寸和字节数）。宣传图、表情、图标大多太小（256–943 px），不能用在翼面上。下载前先列文件名、来源和大小，经用户同意。
+2. **不用模型抠图去复杂背景**：Composa 的 `filter_remove_background` / `select_subject`（`person`、`any`）在白底、光效、半透明裙摆的图上会留下一层灰雾和软边，正是深底上最显脏的东西。
+3. **让 GPT 把背景换成纯灰**（官方图保留人物，只换背景），或**按官方图生成新姿态**（纯灰底）。本机 Codex CLI 的 `image_generation` 功能可以调用 GPT 生图，用的是用户已登录的 ChatGPT 账号：
+   - `codex exec --skip-git-repo-check -C <临时目录> -i 参考图1 -i 参考图2 - < prompt.txt`；
+   - **提示词从标准输入给**：`-i` 会吞掉后面所有参数，把提示词写在 `-i` 后面，它会被当成图片路径，Codex 会一直卡在等标准输入；
+   - 生成图在 `~/.codex/generated_images/<会话>/` 下，需要自己复制进任务 `assets/derived/`，并记录提示词、参考图、原路径、尺寸和 SHA-256；
+   - 提示词写清：“matching the attached official reference images exactly”、要哪些特征、“Plain flat solid mid-grey background (#808080), no scenery, no particles, no text”、横竖尺寸（1024×1536 或 1536×1024）。
+4. **纯色底用 `scripts/art_cutout.py` 抠**：
+   - 所有够大的近灰色块都当背景，包括被人物围住的；
+   - 边缘按颜色距离算抗锯齿，紧贴背景的一圈按邻域取参照色算透明度；
+   - 再把边缘颜色里混进的灰反混掉。
+   - Composa `plain` 只擦和画面边缘相连的背景，手臂和身体之间的灰色会留下。
+5. **放大**：生成图约 1–1.5k px。铺满 4–5 m 的翼面时每米只有约 300 px，低于 8192 贴图的 541 px/m。抠图前用 Composa `image_size`（`resample: enhance`，本机模型）放大 2 倍。
+6. 在深底上看抠图（工具会输出 `-on-coat.png`），再在 Composa 里 1:1 看脸和发丝。
+
 ## 可选下载辅助
 
 `scripts/fetch_asset.py` 可下载已选的直接图片 URL，或从已检查页面按文件名选择图片，并记录来源。需 requests、Pillow；`--max-mb` 限制单素材大小。它不替代检索与观察，参数以 `--help` 为准。

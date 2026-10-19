@@ -62,6 +62,7 @@ description: 设计、制作、修订和研究 War Thunder 二次元固定翼喷
 | `scripts/design_lint.py` | 只读设计稿，查默认或装饰字体、缺字、凑数英文、字号太接近、纯黑纯白、屏幕原色、多个饱和色族、色相渐变、等粗宽线、白色细长线（开放细条即使叫 echo 也查）、游戏距离下过细的白描边、孤立描边框、叠线发光、角度太多、立绘重复；Python 标准库，查缺字需 Pillow |
 | `scripts/surface_map.py` | 按设计稿的每个图表画平整／弯曲／拉伸／机械件／共用 UV 被抢／被别的表面盖住／接缝（如凸起背鳍条侧壁）的分区图，并列出压到这些区域或跨过接缝的图元；NumPy、Pillow、Numba |
 | `scripts/vector_paint.py` | 机体米制设计稿直接在原 UV 子纹素上求值：色场、渐尖线、马赛克与半调；NumPy、Pillow、Numba |
+| `scripts/art_cutout.py` | 纯色底人物图的干净抠图：被围住的背景也去掉，边缘按颜色距离抗锯齿并反混灰边，输出深底检查图；NumPy、Pillow、SciPy |
 | `scripts/airframe_setup.py` | 新机型准备：岛地图与每纹素机体坐标（map）、每块 UV 连通岛的米制 frame 与残差（frames）、按岛的干净底色和机械件遮罩（clean）、渲染图的深底／签名色／淡染／白面积比（shares）；NumPy、Pillow、SciPy、Numba |
 | `scripts/uv_frame.py` | 给一块 UV 岛拟合直线框架（atlas 上笔直的设计坐标），写进图表的 `frame`，并检查展开误差；NumPy |
 | `scripts/arrangement.py` | 构造线切格：少数几条直线把图表切成格子，图形是格子或格子的描边（`holes`），可镜像（`halves: separate` 两半各用本半边的线）；`region` + `cuts` 把一整块白色用等宽深色切缝切开，自动得到白块（机背焦点的默认写法）；Python 标准库 |
