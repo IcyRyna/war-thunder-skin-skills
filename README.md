@@ -4,8 +4,8 @@
 
 | Skill | 类型 | 内容 | 当前版本 | 更新记录 |
 | --- | --- | --- | --- | --- |
-| `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.11](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.11) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
-| `war-thunder-style-akamywek` | Akamywek 风格 | 先照作者 F-2A 学基本布局（深炭底和签名色两大块、白色焦点、三角马赛克），再放立绘；自带通用脚本和制作参考，可单独安装 | [1.11](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.11) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
+| `war-thunder-user-skins` | 通用制作流程 | 素材、原 UV、材质、工具、打包和验收；不带特定画风 | [3.12](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.12) | [changelog/war-thunder-user-skins.md](changelog/war-thunder-user-skins.md) |
+| `war-thunder-style-akamywek` | Akamywek 风格 | 先照作者 F-2A 学基本布局（深炭底和签名色两大块、白色焦点、三角马赛克），再放立绘；自带通用脚本和制作参考，可单独安装 | [1.12](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.12) | [changelog/war-thunder-style-akamywek.md](changelog/war-thunder-style-akamywek.md) |
 
 ## 目录
 

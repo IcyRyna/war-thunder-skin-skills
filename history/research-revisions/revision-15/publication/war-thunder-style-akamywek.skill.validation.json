@@ -1,0 +1,832 @@
+{
+  "schema_version": 1,
+  "revision": 15,
+  "version": "1.12",
+  "skill": "war-thunder-style-akamywek",
+  "checked_at_utc": "2026-10-19T09:48:42.728890+00:00",
+  "state": "validated_skill_revision",
+  "effective_files": 78,
+  "files": {
+    "SKILL.md": "899509017cf342981681f916b078e12f31cadf547efa207e6fc08b0d63287383",
+    "agents/openai.yaml": "557665c79310db580481d9828e77d7cd46f6f5d400337eae1fec060c59076c02",
+    "diagrams/motif-library.svg": "7db5df44e55174e72ceb9bd51e4656dce17392d02b8d6edb2139f0351423f8ed",
+    "examples/j16-chen-full-livery_build_design.py": "1b3959b95ab1f307d1f6320c0aee710fcff4f8c589a6e11fc935be2851254aa2",
+    "examples/j16-key-sequence.json": "f3fc5491de132e70804170c388c85052dcea84b5f9151ca58206523af299a175",
+    "examples/j16-nested-chevrons.json": "2cfb001af8d91af596da802a1c6b0a8261a68fff7f12399557477230cfa77271",
+    "references/base-layout.md": "a49a55b174e5214410e3c93500a0d6db8c3585dd83762778a8c24c16b813c777",
+    "references/core/aesthetics.md": "e9688de07c3861230cbbfa96a634fa78eedf69bf4f49efef20f47e0f24ca1180",
+    "references/core/art-direction.md": "32457b4263fb52e412ba45582953ca4311bd99ad97fb98571b286ac7215097fe",
+    "references/core/assets-and-layout.md": "95a95b4a7a80f32a73d29a3e3ba5de5257a9cee8570b6346b2cb6828a4c6375c",
+    "references/core/diagrams/character-integration.svg": "9d68b96259a60016810411a744de6e2ee3344bb6be62f9e755801b9cb4472d6a",
+    "references/core/diagrams/continuous-coverage.svg": "2d4ee1969975b8bd41005be53a068cce410c50fa9ccbacb399079cac657917b3",
+    "references/core/diagrams/coupled-shapes.svg": "6ef288cd8a8348cda43ca3766e4f9c77444fd43123175bf09b0e6c8a9ed6898e",
+    "references/core/diagrams/line-construction.svg": "0b8b470f071ca3ac60a22eff46b198958f59673fb731e9c6342437a57ce03265",
+    "references/core/diagrams/structure-toggle.svg": "048328413c49972515e34651e783f8b91d522210312544d63312d2d49aaa3074",
+    "references/core/diagrams/top-view-zoning.svg": "3a85677d26216d1914f1fb76e62b7706e206d92eaedbd8c2c3afbd52072efc64",
+    "references/core/editor-workflow.md": "61a45f35dbfd91abc094fda50c16c101522d5bdb1a15b9409801a3828a6a9e61",
+    "references/core/image-assisted-editing.md": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543",
+    "references/core/linework-and-color.md": "3825befabf06013afa54ade3ed3880919f8c83634a40bd7033ce27c3f20af827",
+    "references/core/materials-and-uv.md": "b630b7bf4eaa776646d5281a6afec8e4a0b764c91180013afb65fce4be91cede",
+    "references/core/new-airframe.md": "3d527ae55d16ce8b805b2e6d709026b8b381d679fe611ca81e4e2990b96275f6",
+    "references/core/orthographic-workflow.md": "8d56ddc78cb461bd106fd98b16619365e7e1b19c2d7c850c5cc63422c5793ab4",
+    "references/core/overview.md": "68e76c5fa389e91f59c6331cc0d8ca410b3e64264c859a8158f1951a72ef9653",
+    "references/core/packaging-and-validation.md": "485e2f747d770eaecf126ac32357b9c24cb3aabe1a6b5382c7da9491e90de267",
+    "references/core/research-and-audit.md": "c5210e9b35f5cc5819b1dae857b1870600e2efb2d7dfee29c30ae8050850e46c",
+    "references/core/resource-markings.md": "d5018e76dc4b55bc9ca16c3248c9ded09da9893036e66b91085b7885b1c16ba1",
+    "references/core/taste-corrections.md": "1949ad199d9062d81be935d2bbaa4456ed457bbb22e2de934dfcc990db3f9bf5",
+    "references/core/uv-native-replica.md": "d2918b82013b771048df0eba3eb95121a239e9a8f084a2240bf12974c1037344",
+    "references/motifs.md": "a6e9d750ab9e4746e585b9883bcca94edf844ab887657be340f9febbd117842c",
+    "references/palette.md": "0c6be7a4650ef43456c36520e8d833bc019049d6b09fd004cf3ece6a64fc6949",
+    "references/surfaces.md": "d02a2a82cfba54c4058b1101677e2937c14c6e8852a0561714269832980bde78",
+    "references/type-and-decals.md": "b5b0df3feb87fe4ed61959d33db6368c146a4aac253159591dda9f253c5372e1",
+    "scripts/airframe_setup.py": "a4f95d19c51b17d362fcd579a19e73a4c8c14fcdc066f8ecfb6b196baba8c7c0",
+    "scripts/arrangement.py": "5299e8c396a47b3f4b947b06a12785a97811d803c68c5106ca9355875caca81f",
+    "scripts/artifact_io.py": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+    "scripts/atlas_palette.py": "a2e2fca0ef66ac98ae448835383ed9ca2c95105e5684b47aac0aa837ad50a667",
+    "scripts/build_skin.py": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a",
+    "scripts/coat_material.py": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f",
+    "scripts/compare_skin.py": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61",
+    "scripts/composa_mcp.py": "24fa2c75b6ef1cf724c10eb6dca34dced1cf50e5e6d261106ae1ff0511105d4a",
+    "scripts/dds_variant.py": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03",
+    "scripts/design_lint.py": "e5eb17b1cf084d216c6d95ef4cd997e6c49f2131cc463004a5c46b06172a8792",
+    "scripts/detail_sheet.py": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599",
+    "scripts/fetch_asset.py": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924",
+    "scripts/finish_preview.py": "108a9e618d27668ed4eb52a51b06a2ab6b98f42f7d783128499b0a1b5ed7be64",
+    "scripts/inspect_skins.py": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe",
+    "scripts/panel_lines.py": "ef14d1a61906276c78effc3d051639f3f9395c8db0d02ef20b1e6d327756145d",
+    "scripts/replica_check.py": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919",
+    "scripts/replica_measure.py": "97f3b881afa935bc097c609a65015e2b07dbe427538b3435904c10365976b03b",
+    "scripts/scene_preview.py": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c",
+    "scripts/structure_layer.py": "26440530f59c9ddfbb63b756748c6a77b37dbdbd40a21436b4a05c3c00c9e530",
+    "scripts/style_board.py": "d3bc243e71007464e0e4de50c20e77093149631abdc1c1637b52a103fd91a702",
+    "scripts/surface_map.py": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1",
+    "scripts/surface_preview.py": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214",
+    "scripts/test_airframe_setup.py": "0021f9fef15b6b1ebfc4709411c97506dd9a2a484a47f0191e344461c758ad9b",
+    "scripts/test_arrangement.py": "a1b85000cdd27133d62fb8c27df76b1a45561098b8a0114a5b8f98f46c12d2a1",
+    "scripts/test_artifact_io.py": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5",
+    "scripts/test_atlas_palette.py": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994",
+    "scripts/test_cli_gates.py": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22",
+    "scripts/test_coat_material.py": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611",
+    "scripts/test_comparison.py": "d63f3e3d30c617345273f46c7f5d59a59d62654c907cb0f5d85fe0c7a71281a8",
+    "scripts/test_dds_variant.py": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542",
+    "scripts/test_design_lint.py": "bcee7563e374ff754726b4ecb91527ec1197bb7e4148073b2a093288c2f059d3",
+    "scripts/test_detail_sheet.py": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00",
+    "scripts/test_finish_preview.py": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932",
+    "scripts/test_io_tools.py": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa",
+    "scripts/test_panel_lines.py": "2a8cf9a155fa2082067289e8f303a3a225f997d552d79e127cdf2aad676b6f2b",
+    "scripts/test_projection_contract.py": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc",
+    "scripts/test_replica_check.py": "0669de38b8478f8ca5da3a18be5ee27a9e5aa73f123f4029af7db116d5b604cd",
+    "scripts/test_replica_measure.py": "f4fefc2b40dfa11a34dd98fdaf95d5aa0c0090f2ad7b91010451acf374a8ffc9",
+    "scripts/test_scene_preview.py": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351",
+    "scripts/test_structure_layer.py": "ee6e284eeb0015ac1e0726fc8cd2ea39e4c256742636bd7e678a02d87a236a7c",
+    "scripts/test_style_board.py": "7c9ec3d6c60547562530998628b4185bc4a2899e3af4bcb35444e97a9728b7c4",
+    "scripts/test_surface_map.py": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc",
+    "scripts/test_surface_workflow.py": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994",
+    "scripts/test_vector_paint.py": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba",
+    "scripts/uv_frame.py": "d55870280bab95cfe208fa962b5bcc2a99dfc7eb65924f192c8025b5d4b521ae",
+    "scripts/vector_paint.py": "fd8f682dbd98899292cf92cd0ec5b478201a3e0cc4830c1b3e584ec0c40dd466"
+  },
+  "changed": [
+    "SKILL.md",
+    "references/base-layout.md",
+    "references/core/linework-and-color.md",
+    "references/core/overview.md",
+    "references/core/uv-native-replica.md",
+    "references/motifs.md",
+    "scripts/replica_check.py",
+    "scripts/test_replica_check.py",
+    "scripts/test_vector_paint.py",
+    "scripts/vector_paint.py"
+  ],
+  "added": [
+    "references/core/new-airframe.md",
+    "scripts/airframe_setup.py",
+    "scripts/test_airframe_setup.py"
+  ],
+  "removed": [],
+  "source_installed_staged_zip_equal": true,
+  "package_sha256": "35bfdd08374b15945512618631f6243ac8671dfc2b380a4a2bc46fd0a0c353e6",
+  "package_bytes": 660925,
+  "local_links": [
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/overview.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/aesthetics.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/new-airframe.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md#整机只有两大块",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/linework-and-color.md#落笔前先看表面分区",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md#尺寸阶梯",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "#漆面",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/taste-corrections.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "#常见跑偏",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md#验收基本布局阶段",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/surfaces.md#人物处理",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/overview.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/materials-and-uv.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/packaging-and-validation.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/overview.md#可选工具",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/taste-corrections.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/motifs.md#鸭翼",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "#漆面",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "#漆面",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/materials-and-uv.md#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "SKILL.md",
+      "link": "references/core/materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/base-layout.md",
+      "link": "surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/base-layout.md",
+      "link": "core/uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/base-layout.md",
+      "link": "motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/base-layout.md",
+      "link": "core/new-airframe.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "../diagrams/motif-library.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/motifs.md",
+      "link": "palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/palette.md",
+      "link": "base-layout.md#整机只有两大块",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md#鸭翼",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "motifs.md#白色怎么用",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/surfaces.md",
+      "link": "base-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/type-and-decals.md",
+      "link": "core/taste-corrections.md#字体",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "taste-corrections.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "../palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "../motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "../surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "../type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "diagrams/line-construction.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "materials-and-uv.md#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "diagrams/character-integration.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "taste-corrections.md#字体",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "diagrams/top-view-zoning.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/aesthetics.md",
+      "link": "taste-corrections.md#交付前闸门",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "aesthetics.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "aesthetics.md#人物人物就是翼面",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "assets-and-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "orthographic-workflow.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "aesthetics.md#一眼看懂的结构",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "linework-and-color.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/art-direction.md",
+      "link": "packaging-and-validation.md#验收状态",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/assets-and-layout.md",
+      "link": "research-and-audit.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/assets-and-layout.md",
+      "link": "art-direction.md#用人物动作选择布局",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/assets-and-layout.md",
+      "link": "image-assisted-editing.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/editor-workflow.md",
+      "link": "aesthetics.md#图层结构",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/editor-workflow.md",
+      "link": "assets-and-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/editor-workflow.md",
+      "link": "image-assisted-editing.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/editor-workflow.md",
+      "link": "aesthetics.md#在编辑器里逐岛看展开图",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/editor-workflow.md",
+      "link": "packaging-and-validation.md#工程可继续编辑",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/image-assisted-editing.md",
+      "link": "assets-and-layout.md#原图适配与边缘",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/image-assisted-editing.md",
+      "link": "editor-workflow.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/image-assisted-editing.md",
+      "link": "materials-and-uv.md#通道与格式",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "aesthetics.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "diagrams/line-construction.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "diagrams/coupled-shapes.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "orthographic-workflow.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "taste-corrections.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "new-airframe.md#1-已用纹素先排除两种假覆盖",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "aesthetics.md#各面默认分工",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "aesthetics.md#配色一个签名色",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "materials-and-uv.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/linework-and-color.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "#面板发丝线",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "diagrams/structure-toggle.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "packaging-and-validation.md#dds-与实际-mip",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/materials-and-uv.md",
+      "link": "orthographic-workflow.md#多材质整机场景与补充相机",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/orthographic-workflow.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/orthographic-workflow.md",
+      "link": "materials-and-uv.md#质感检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "../palette.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "../motifs.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "../surfaces.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "../type-and-decals.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "new-airframe.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "research-and-audit.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "packaging-and-validation.md#模型与实际效果",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "aesthetics.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "taste-corrections.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "assets-and-layout.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "resource-markings.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "new-airframe.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "linework-and-color.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "materials-and-uv.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "editor-workflow.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "image-assisted-editing.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "orthographic-workflow.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "packaging-and-validation.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "aesthetics.md#在编辑器里逐岛看展开图",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "aesthetics.md#图层结构",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/overview.md",
+      "link": "packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/packaging-and-validation.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/packaging-and-validation.md",
+      "link": "materials-and-uv.md#质感检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/packaging-and-validation.md",
+      "link": "orthographic-workflow.md#人物-uv-遮罩诊断",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/research-and-audit.md",
+      "link": "uv-native-replica.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/research-and-audit.md",
+      "link": "uv-native-replica.md#9-必须如实区分的做法",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/research-and-audit.md",
+      "link": "linework-and-color.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/research-and-audit.md",
+      "link": "materials-and-uv.md#原-uv-与基底",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/research-and-audit.md",
+      "link": "diagrams/continuous-coverage.svg",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "#交付前闸门",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "art-direction.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "aesthetics.md#审美流程",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "../surfaces.md#不要这样做",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "aesthetics.md#配色一个签名色",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "materials-and-uv.md#完整重涂默认整机一层涂层",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "materials-and-uv.md#面板发丝线",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "packaging-and-validation.md#原尺寸检查",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/taste-corrections.md",
+      "link": "../palette.md#实测面积",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/uv-native-replica.md",
+      "link": "new-airframe.md",
+      "skill": "war-thunder-style-akamywek"
+    },
+    {
+      "source": "references/core/uv-native-replica.md",
+      "link": "resource-markings.md",
+      "skill": "war-thunder-style-akamywek"
+    }
+  ],
+  "tests": {
+    "tests": 228,
+    "skipped": 4,
+    "log_sha256": "a6ef10c77f3047a70996acb9a35a250df3d5b545e73176ec75880836c41844ff"
+  },
+  "study_review_sha256": "ab63b5030b51e22e954a47688a2fc0f39dd11fce8b117c006d096c9cb1261862",
+  "trigger": "User asked for an Akamywek-style Laevatain J-10C built on the rev 14 Skill from scratch (no v1-v3 material, base layout only, no character art), to record the process and put the lessons into the Skill as a reproducible workflow.",
+  "validation_scope": "Applied to the J-10C: skin colour map selection (--texture), helper boxes with whole-atlas UVs dropped from used texels, bleed and chart assignment (they had made the first chart repaint the whole atlas), airframe_setup.py (island map and per-texel coordinates, metre frame per UV-connected island with outlier-trimmed fit, per-island clean base and mechanical mask, render area shares), replica_check plan with directly written mosaic and provenance, no foreshortening warning on frame charts; new reference new-airframe.md and the style base-layout J-10C section. Each change has a test; the J-10C design was checked with renders, design_lint, area shares and Composa 1:1 against the F-2A map. No in-game validation or user art acceptance inferred.",
+  "user_art_review": "pending",
+  "existing_livery_products_modified": false
+}

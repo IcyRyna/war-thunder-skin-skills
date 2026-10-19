@@ -6,6 +6,7 @@ Akamywek 风格：深炭底、单一签名色、白色尖形、三角马赛克�
 
 | 版本 | 日期 | 研究修订 | 改了什么 | 下载 |
 | --- | --- | --- | --- | --- |
+| 1.12 | 2026-10-19 17:49 | rev 15 | J-10C 实测：base-layout.md 加新机型上的部位做法、面积和五条经验；motifs.md 加角度族内排嵌套尖片；制作顺序加新机型准备和面积比测量；随附通用脚本和制作参考同步到 3.12 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.12) |
 | 1.11 | 2026-10-19 15:14 | rev 14 | base-layout.md 按 F-2A 整机逐组实测补充（各部位马赛克格距与方向、缝翼万花筒箭头、机腹平色红环、SOPMOD 标签、共用渐变 22%/77%、游戏图标与投影、原厂红保留）；随附通用脚本和制作参考同步到 3.11 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.11) |
 | 1.10 | 2026-10-18 23:07 | rev 12 | 先学 F-2A 基本布局：新增 base-layout.md（作者 F-2A 贴回模型实测：两大块面积、各部位职责、四档线宽、字阶、马赛克、验收）；制作分两阶段，基本布局认可后再放立绘；改正平尾与垂尾混淆；不画面板线 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.10) |
 | 1.9 | 2026-10-18 18:27 | rev 11 | 学作者的线条：机背嵌套 V 改成实测比例的渐尖尖片组、中线凸条做深色通道、鸭翼尖片箭头加机型名、三角翼不用前缘色带框人物、面板发丝线；重做嵌套 V 示例 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.9) |

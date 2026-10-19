@@ -6,6 +6,7 @@
 
 | 版本 | 日期 | 研究修订 | 改了什么 | 下载 |
 | --- | --- | --- | --- | --- |
+| 3.12 | 2026-10-19 17:49 | rev 15 | 新机型上手：新增 airframe_setup.py（岛地图与每纹素机体坐标、每块 UV 连通岛的米制 frame、按岛的干净底色和机械件遮罩、渲染面积比）和 new-airframe.md（J-10C 实测的可复刻清单）；修复别的颜色贴图混入已用纹素（--texture 指名）和 UV 铺满整图的辅助件（让第一个图表重画整张图）；plan 可直接写马赛克和来源；frame 图表不再误报压缩 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.12) |
 | 3.11 | 2026-10-19 15:14 | rev 14 | 原 UV 逐组复刻：新增 replica_measure.py（描直边轮廓、按元素测渐变、马赛克拟合含边缘证据与固定格距、放大读格、游戏图标配准、整区自动测量并跳过原厂部件）和 replica_check.py（实际使用纹素、计划编辑含镜像轴与按测量拉直、计划转设计、一组一验、整机组装）；vector_paint 马赛克加 mirror；uv-native-replica.md 写入完整流程清单和 F-2A 整机复刻经验；新增 resource-markings.md | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.11) |
 | 3.10 | 2026-10-18 23:07 | rev 12 | 原尺寸检查与面板线闸门：新增 detail_sheet.py（8192 颜色图按 1:1 和参考同米制比例并排，出 Composa 调用清单）；panel_lines.py 加质量闸门、描线不合格拒绝画，面板线默认不画；立绘改为干净抠图；design_lint 允许垂尾描边序列 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.10) |
 | 3.9 | 2026-10-18 18:27 | rev 11 | 面板发丝线与接缝：新增 panel_lines.py（照原厂贴图描面板分块线和铆钉排，画成干净的发丝线）；surface_map.py 标出凸起背鳍条之类的接缝；白色规则允许成组的渐尖尖片 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.9) |
