@@ -2,9 +2,9 @@
 
 用于 War Thunder 现代坦克的终末地工业风涂装。结合 A7V / A7HU / A6HEL 的适配方法，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
 
-Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.3
+Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.4
 
-[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.3) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
+[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
 ## 能做什么
 
@@ -18,21 +18,23 @@ Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.3
 
 ## 原作复刻与材质
 
-相关车型的对应表面可转移原作颜色、完整法线和 AO，并保留实际材质响应。结构不同的附件单独适配。原生法线里的表面噪点与机械结构需要区分，不能把通道一致当作清洁漆面的证据。
+结构确实对应且要保留原作材质时，可转移颜色、完整法线和 AO。清洁漆面分别检查颜色中的旧机械印记，并按目标结构核对法线与 AO。结构不同的附件单独适配。原生法线里的表面噪点与机械结构需要区分，不能把通道一致当作清洁漆面的证据。
 
 ## 随包素材
 
-安装包约 61 MB，共 53 个文件，其中 35 项为素材与参考：
+安装包约 62 MB，共 58 个文件，其中 39 项为素材、参考与来源记录：
 
 | 内容 | 尺寸或数量 |
 | --- | --- |
 | 车体与炮塔 UV | 各 8192 × 8192 |
 | 炮管 UV | 4096 × 2048 |
 | 机枪座 UV | 1024 × 512 |
-| 原作局部裁片 | 22 组，附坐标与阅读方向 |
+| 原作局部裁片 | 22 组图形元素，另加 3 组车首分板 UV，附坐标与来源 |
 | 标志与提取资料 | SVG / PNG、透明徽记、分层提取工程与元素图板 |
 
 完整素材包含在 Release 的 `.skill.zip` 中。来源与处理方式见包内 `assets/manifest.json`，选用说明见 `references/assets.md`。
+
+跨板图案先在完整 UV 中定位各片，包含窄倒角，按承载面直接复用原像素。生图可辅助实际缺损的候选修复；原作复刻保留该位置的字形与副标题。
 
 ## 车型适配
 

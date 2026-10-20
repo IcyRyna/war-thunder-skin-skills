@@ -12,11 +12,13 @@
 | `assets/official/site-color-bar.png` | 官网原彩条资源，18×113 | 参考官方配色语汇；不能据此断言原作者的彩线来自同一文件 |
 | `assets/decals/endfield-industries-en-native.png` | 原 DDS 小徽记在 Composa 中按白色印刷层提取，400×400 透明画布 | 实际有效徽记约 122×122；可供小标或结构核对，不能冒充高清官方英文母版 |
 | `assets/reference-a7v/uv/*.png` | 车体、炮塔、炮管和机枪座的完整原尺寸 RGB 图集 | 查原作构图与裁片；仍含机械结构、磨损与烘焙阴影；不是可直接套用的目标车贴图 |
-| `assets/reference-a7v/crops/B01.png` 等 | 22 个原图裁片，部分为便于阅读旋转 | 看具体标识和配色关系；裁片里螺钉、边框、孔口需要与图形分离 |
+| `assets/reference-a7v/crops/B01.png` 等 | 25 个原图裁片，部分为便于阅读旋转 | 看具体标识和配色关系；裁片里螺钉、边框、孔口需要与图形分离 |
 | `assets/study/UV-study-overview.png` | 四张图集与来源对应总览 | 快速定位，不作为最终贴图输入 |
 | `assets/study/element-vocabulary.png` | 12 组代表性元素板 | 看视觉层级，不把板上的研究标题当作涂装文字 |
 
 四张 RGB 图集的每个像素都与原 DDS 的 RGB 核对过，总计 143,130,624 像素，差异为 0。原 DDS 的 Alpha 全零；查看副本只显示 RGB，不代表游戏 Alpha 应改为不透明。
+
+B11、B12、B13 是同一车首徽记的分板 UV 参考，包含主面和窄倒角。拼合方式见 [分板 UV 原像素适配](native-panel-transfer.md)，来源在 `assets/reference-a7v/front-panel-map.json`。
 
 ## 选用次序
 

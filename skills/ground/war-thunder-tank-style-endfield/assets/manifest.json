@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "skill": "war-thunder-tank-style-endfield",
-  "revision": "v1.3",
+  "revision": "v1.4",
   "original_author": "HK416の午夜福音",
   "original_post": "https://live.warthunder.com/post/1162771/en/",
   "original_archive_sha256": "e1cc23b473a1707573e60c4d9776657d41421318ab48a5052b34f4758bfb2f10",
@@ -574,8 +574,8 @@
     },
     {
       "path": "assets/reference-a7v/element-catalog.json",
-      "bytes": 23679,
-      "sha256": "1d297da1b54e4312b8ba2d53294dcc9bda81e2eca0902b8e1f1e2dd008652554",
+      "bytes": 25003,
+      "sha256": "41d0c3dbbc093ac23025070e67da91cad1ca0be2e73ab1c2b31ea5e25b772469",
       "kind": "study-index",
       "source": "This UV study",
       "use": "Research visualization or source catalog; not paint pixels"
@@ -679,7 +679,69 @@
       "kind": "study-index",
       "source": "This UV study",
       "use": "Research visualization or source catalog; not paint pixels"
+    },
+    {
+      "path": "assets/reference-a7v/crops/B11.png",
+      "bytes": 479438,
+      "sha256": "16fb0edb2aa9c2f0d734b194451b4576f759ccfb3cb347dfe5522852b66fc8a1",
+      "width": 1715,
+      "height": 683,
+      "mode": "RGB",
+      "kind": "original-panel-fragment",
+      "source": "WT Live 1162771 / HK416の午夜福音",
+      "bbox_px": [
+        4514,
+        7098,
+        6229,
+        7781
+      ],
+      "derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+      "use": "Original panel fragment including material base; not an independent clean decal."
+    },
+    {
+      "path": "assets/reference-a7v/crops/B12.png",
+      "bytes": 169088,
+      "sha256": "0d3dc6940a3c737fde594b834da0f72a414d20ead6c9e744b5ce18a0d4f693ea",
+      "width": 538,
+      "height": 517,
+      "mode": "RGB",
+      "kind": "original-panel-fragment",
+      "source": "WT Live 1162771 / HK416の午夜福音",
+      "bbox_px": [
+        7620,
+        2000,
+        8158,
+        2517
+      ],
+      "derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+      "use": "Original panel fragment including material base; not an independent clean decal."
+    },
+    {
+      "path": "assets/reference-a7v/crops/B13.png",
+      "bytes": 53542,
+      "sha256": "9bb6b9e9a2a2d4e2d68502cb73355f15d59a2a4fe517bb6de9407d7e777d15db",
+      "width": 103,
+      "height": 1039,
+      "mode": "RGB",
+      "kind": "original-panel-fragment",
+      "source": "WT Live 1162771 / HK416の午夜福音",
+      "bbox_px": [
+        5226,
+        6678,
+        5329,
+        7717
+      ],
+      "derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+      "use": "Original panel fragment including material base; not an independent clean decal."
+    },
+    {
+      "path": "assets/reference-a7v/front-panel-map.json",
+      "bytes": 1237,
+      "sha256": "3148c9fe0236dc7b0616af3278fb6752e7502639eb1dd8a8ed38dd3cb518930e",
+      "kind": "panel-uv-source-index",
+      "source": "Original A7V body atlas and native UV study",
+      "use": "Source fragment positions, spelling and transfer limits; no universal vehicle coordinates."
     }
   ],
-  "skill_version": "1.3"
+  "skill_version": "1.4"
 }

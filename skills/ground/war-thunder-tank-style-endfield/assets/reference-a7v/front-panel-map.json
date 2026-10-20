@@ -1,0 +1,50 @@
+{
+  "source_post": "https://live.warthunder.com/post/1162771/en/",
+  "author": "HK416の午夜福音",
+  "source_atlas_sha256": "3eb893af0ca78c7f7ad0585bf0380cca2412f19d309cd969dbefb7039a20615e",
+  "source_size": [
+    8192,
+    8192
+  ],
+  "coordinate_origin": "top-left; half-open pixel rectangles",
+  "parts": [
+    {
+      "id": "B11",
+      "bbox_px": [
+        4514,
+        7098,
+        6229,
+        7781
+      ],
+      "name": "车首底板与原作徽记底层",
+      "source_node": "root"
+    },
+    {
+      "id": "B12",
+      "bbox_px": [
+        7620,
+        2000,
+        8158,
+        2517
+      ],
+      "name": "车首附加板主面与窄倒角",
+      "source_node": "ex_armor_body_06"
+    },
+    {
+      "id": "B13",
+      "bbox_px": [
+        5226,
+        6678,
+        5329,
+        7717
+      ],
+      "name": "车首连接条与跨板纹样",
+      "source_node": "root"
+    }
+  ],
+  "large_title": "ENDFIELD",
+  "subtitle": "INDUSTRIES",
+  "source_scope": "A7V reference only; establish new panel and UV ownership for each target vehicle.",
+  "complete_carrier_rule": "Include the attached panel bevels and walls; exclude disconnected bolt geometry from the colour transfer.",
+  "generated_art_used": false
+}
