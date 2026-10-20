@@ -2,7 +2,9 @@
 
 按 Akamywek 公开涂装整理的飞机痛涂 Skill，主要参考深炭底、单一签名色、白色几何焦点和三角马赛克的组合方式。
 
-Skill ID：`war-thunder-style-akamywek` · 当前版本：1.14
+Skill ID：`war-thunder-style-akamywek` · 已发布版本：1.14
+
+本页描述 1.14 正式包。仓库中的风格源码与飞机公共工具分开维护，通过构建器装配；原 Release 安装包仍可独立使用。
 
 [下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-style-akamywek.md)
 
@@ -19,4 +21,4 @@ Skill ID：`war-thunder-style-akamywek` · 当前版本：1.14
 
 安装包自带制作脚本、参考资料和设计示例，可独立使用。目标机型与人物素材按项目准备，来源说明见[素材与参考](../credits.md)。
 
-[源码](../../skills/aircraft/war-thunder-style-akamywek/) · [返回首页](../../README.md)
+[风格源码](../../src/styles/aircraft/war-thunder-style-akamywek/) · [候选构建](../maintaining.md) · [返回首页](../../README.md)

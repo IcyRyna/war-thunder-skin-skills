@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "supersample": 4,
+  "atlas": {
+    "width": 64,
+    "height": 64
+  },
+  "palette": {
+    "test_color": "#558fb2"
+  },
+  "charts": [
+    {
+      "id": "primary_side",
+      "u": "x",
+      "v": "z",
+      "normal": {
+        "axis": "y",
+        "min": 0.5
+      }
+    }
+  ],
+  "layers": [
+    {
+      "name": "rectangle",
+      "items": [
+        {
+          "type": "polygon",
+          "chart": "primary_side",
+          "points": [
+            [
+              -0.4,
+              -0.4
+            ],
+            [
+              0.4,
+              -0.4
+            ],
+            [
+              0.4,
+              0.4
+            ],
+            [
+              -0.4,
+              0.4
+            ]
+          ],
+          "fill": "test_color"
+        }
+      ]
+    }
+  ]
+}

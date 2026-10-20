@@ -1,39 +1,97 @@
-# War Thunder 涂装 Skills
+# War Thunder 涂装 Skill 研发工作区
 
-用于制作 War Thunder 用户涂装的三个独立 Skill，支持 Codex 和 Claude Code。飞机部分面向二次元固定翼喷气机痛涂；坦克部分目前提供终末地工业风。
+把原作观察、UV 与材质实验整理成可追溯的制作规则，再通过固定评测和人工审查，装配为可独立使用的 Skill。仓库同时维护飞机与地面载具的风格源码、工程工具、评测契约，以及已有版本的下载入口。
 
-## 飞机涂装
+**[研发流程](docs/workflow/README.md) · [源码与职责](#源码与职责) · [检查与构建](#检查与构建) · [已发布下载](#已发布下载) · [文档导航](docs/README.md)**
 
-### 喷气机涂装工作流
+```mermaid
+flowchart LR
+    A[研究] --> B[实验]
+    B --> C[规则]
+    C --> D[候选]
+    D --> E[评测]
+    E --> F[审查]
+    F --> G[发布]
+    E -->|失败与反例| B
+```
 
-用于新作和已有涂装的修改，包含立绘裁切、机身与机翼布局、原生 UV 作画、线条配色、材质和模型检查工具。可输出分层设计源、DDS / TGA 贴图和 BLK 配置。
+每条规则要能说明来源、适用条件和验证方法。技术检查、视觉评价、游戏验证与跨任务复现分别记录；候选通过代码检查后，仍需对具体结果和变更范围作出审查决定。
 
-[下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) · [详细说明](docs/skills/jet-liveries.md) · [更新记录](docs/changelog/war-thunder-user-skins.md)
+## 当前状态
 
-### Akamywek 风格飞机涂装
+| 模块 | 仓库中的实际内容 | 使用状态 |
+| --- | --- | --- |
+| 研究 `wt-skin-study` | 证据、实验、规则提炼与独立评测的候选工作流 | 开发候选；尚无正式版本 |
+| 工程 `wt-skin-build` | 输入契约、原生 UV、通道、导出与交付检查的候选工作流 | 开发候选；领域工具按包配置装配 |
+| 飞机风格 | Akamywek 1.14 内容及其参考资料 | 已发布基线；源码通过构建器装配 |
+| 地面风格 | ENDFIELD 1.4 内容、领域工具及素材清单 | 已发布基线；完整素材从原 Release 补齐 |
+| 飞机兼容包 | `war-thunder-user-skins` 3.14 内容 | 保留旧调用入口与既有版本线 |
+| 载具配置 | profile schema 与合成示例 | 尚无已验证的真实载具 profile |
+| 评测 | 工作流契约、记录检查器与回归测试 | 验证结构和证据关联；视觉与游戏结果另行记录 |
 
-按 Akamywek 的公开涂装整理，主要特征是深炭底、单一签名色、锐利几何和三角马赛克。先完成色块与几何布局，再放人物。包内自带制作工具和参考资料，可单独安装。
+这次仓库重构建立了可执行的源码与构建入口。新研究、工程模块仍处于候选阶段；已有正式版本号和下载附件保持原样。“已发布基线”说明内容的来源版本，不代表其中所有设计已获美术认可。
 
-[下载 1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) · [详细说明](docs/skills/akamywek.md) · [更新记录](docs/changelog/war-thunder-style-akamywek.md)
+## 已发布下载
 
-## 坦克涂装
+直接使用已有工作流时，从以下 Release 的 **Assets** 下载 `.skill.zip`。每个包自带所需脚本和参考资料，可以单独安装。
 
-### 终末地风格坦克涂装
+| 用途 | 已发布版本 | 说明与历史 |
+| --- | --- | --- |
+| 二次元固定翼喷气机涂装 | **[下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14)** | [功能说明](docs/skills/jet-liveries.md) · [完整更新记录](docs/changelog/war-thunder-user-skins.md) |
+| Akamywek 风格飞机涂装 | **[下载 1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14)** | [风格说明](docs/skills/akamywek.md) · [完整更新记录](docs/changelog/war-thunder-style-akamywek.md) |
+| 终末地风格坦克涂装 | **[下载 1.4](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4)** | [能力与素材](docs/skills/endfield-tanks.md) · [完整更新记录](docs/changelog/war-thunder-tank-style-endfield.md) |
 
-用于现代坦克的终末地工业风涂装，包含黑白黄分区、工业标志、路线节点和设备标签的布局方法，以及车型之间的 UV 与材质适配。
+**[安装与运行环境](docs/installation.md) · [下载说明与版本索引](releases/README.md) · [全部历史 Releases](https://github.com/IcyRyna/war-thunder-skin-skills/releases)**
 
-安装包约 62 MB，带有 4 张原尺寸 UV、22 组元素裁片、标志 SVG / PNG 和提取工程。另附车首分板 UV 参考与倒角拼接说明，素材随包提供。支持相关车型逐纹素表面转移、混合载具的分资源适配和独立布局，并检查清洁漆面、目标结构法线与粗糙度。
+## 源码与职责
 
-[下载 1.4](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [详细说明](docs/skills/endfield-tanks.md) · [更新记录](docs/changelog/war-thunder-tank-style-endfield.md)
+```text
+src/
+  study/wt-skin-study/                        研究与规则候选
+  build/wt-skin-build/                        中性工程候选
+  styles/aircraft/war-thunder-style-akamywek/  飞机风格源码
+  styles/ground/war-thunder-tank-style-endfield/  地面风格源码
+  legacy/war-thunder-user-skins/              3.14 兼容源码
+toolkits/aircraft/scripts/                    飞机公共工具单一源码
+profiles/                                    载具配置契约与合成示例
+evals/                                       评测契约、检查器与测试
+tools/repository.py                          列表、检查与独立包构建
+catalog.json                                 构建输入与装配关系
+releases/                                    既有发布索引
+docs/                                        流程、安装、维护与版本记录
+.github/workflows/                           仓库自动检查
+```
 
-## 安装
+研究模块处理“规则从哪里来、如何证伪”；工程模块处理“如何正确落到目标 UV 与交付格式”；风格模块表达配色、图形、字标和构图关系；载具 profile 描述具体资源与表面的约束。飞机公共脚本集中维护，地面专用工具保留自己的适用范围。
 
-在对应 Release 的 **Assets** 中下载 `.skill.zip`，解压后把整个 Skill 文件夹放入 Codex 或 Claude Code 的 Skills 目录。目录位置和工具依赖见[安装说明](docs/installation.md)。
+`src/` 是创作源码。构建器按根目录 [`catalog.json`](catalog.json) 将公共工具和必要参考装入单个 Skill，保留包内的 `scripts/` 等运行路径。安装应使用 Release 附件，或经过审查的构建产物。完整目录约定见[仓库结构](docs/workflow/repository-layout.md)。
 
-## 目录
+## 检查与构建
 
-- [`skills/aircraft/`](skills/aircraft/)：飞机涂装 Skill。
-- [`skills/ground/`](skills/ground/)：地面载具涂装 Skill。
-- [`docs/`](docs/)：功能说明、安装、版本记录和[素材来源](docs/credits.md)。
+在仓库根目录使用 Python 3.10 或更新版本：
 
-[Skill 研发流程提案（待审查）](docs/workflow/README.md)
+```bash
+python -B tools/repository.py list
+python -B tools/repository.py check
+python -B tools/repository.py build wt-skin-study
+```
+
+最后一条命令生成 `dist/wt-skin-study-candidate.zip`，供候选审查使用。其他包用 `list` 输出的 ID 构建。候选构建不会创建正式版本、上传 Release 或安装 Skill。
+
+ENDFIELD 的完整构建需要原 1.4 Release 中的素材补充包；下载、校验和 `--asset-archive` 用法见[维护指南](docs/maintaining.md)。默认仓库检查与完整素材检查的范围不同，缺失的外部素材必须在完整构建前补齐。
+
+## 一轮研发如何推进
+
+| 阶段 | 要形成的结果 | 下一步依据 |
+| --- | --- | --- |
+| 研究 | 来源身份、文件摘要、原尺寸观察、适用范围 | 事实与假设可区分，观察可复查 |
+| 实验 | 固定输入、基线、变量与全部运行结果 | 能复现差异，能定位失败 |
+| 规则 | 触发条件、动作、理由、例外与验证方式 | 可执行、可证伪，并关联证据 |
+| 候选 | 选定规则、源码、profile 与装配清单 | 变更边界清楚，文件身份固定 |
+| 评测 | 并排图、技术检查、视觉评价与迁移记录 | 明确通过项、退步和未执行项 |
+| 审查 | 对具体结果、规则差异和发布范围的决定 | 采用范围与产物哈希对应 |
+| 发布 | 独立包、版本记录、清单与下载核验 | 包可独立使用，上传内容与核验一致 |
+
+现有规则与目标载具条件匹配时，可直接制作。新风格、新表面、规则失效或需要改进复现能力时，再开启研发轮次。原作品、完整制作工程和未公开评价留在各自制作任务；仓库保存可复用的源码、契约与适合分发的资料。
+
+[证据与评测细则](docs/workflow/evidence-and-evaluation.md) · [检查器契约](evals/CONTRACT.md) · [维护与发布](docs/maintaining.md) · [素材来源](docs/credits.md)

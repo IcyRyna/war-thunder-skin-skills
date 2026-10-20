@@ -2,7 +2,9 @@
 
 用于 War Thunder 现代坦克的终末地工业风涂装。结合 A7V / A7HU / A6HEL 的适配方法，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
 
-Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.4
+Skill ID：`war-thunder-tank-style-endfield` · 已发布版本：1.4
+
+本页描述 1.4 正式包。风格源码与领域工具现位于 `src/styles/ground/`；完整大型素材仍随原 Release 提供，源码候选构建需按清单补齐。
 
 [下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
@@ -44,4 +46,4 @@ Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.4
 
 随附工具包括 DDS RGB 展开、贴图检查、Composa 连接、离线模型预览，以及相关车型的逐纹素表面转移与回归检查。后者按需使用 OpenGL 4.3、OpenCV 和 Numba。参考涂装与官方素材见[来源说明](../credits.md)。
 
-[源码](../../skills/ground/war-thunder-tank-style-endfield/) · [返回首页](../../README.md)
+[风格源码](../../src/styles/ground/war-thunder-tank-style-endfield/) · [候选构建与素材补齐](../maintaining.md) · [返回首页](../../README.md)

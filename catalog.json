@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "repository": "IcyRyna/war-thunder-skin-skills",
+  "packages": [
+    {
+      "id": "wt-skin-study",
+      "kind": "study",
+      "status": "development",
+      "description": "参考研究、受控实验、规则提炼与独立评测；研发候选，未获真实涂装稳定性验证。",
+      "source": "src/study/wt-skin-study",
+      "includes": [],
+      "supplements": []
+    },
+    {
+      "id": "wt-skin-build",
+      "kind": "build",
+      "status": "development",
+      "description": "中性工程流程候选；内置飞机工具，地面需要独立适配器。",
+      "source": "src/build/wt-skin-build",
+      "includes": [
+        {
+          "source": "toolkits/aircraft/scripts",
+          "target": "scripts"
+        },
+        {
+          "source": "profiles/schema/vehicle-profile.schema.json",
+          "target": "references/vehicle-profile.schema.json"
+        },
+        {
+          "source": "profiles/examples/synthetic",
+          "target": "examples/synthetic"
+        }
+      ],
+      "supplements": []
+    },
+    {
+      "id": "war-thunder-user-skins",
+      "kind": "compatibility",
+      "status": "released_baseline",
+      "description": "用于二次元固定翼喷气机涂装的制作与修改，包含 UV、素材、材质和模型检查工具。",
+      "source": "src/legacy/war-thunder-user-skins",
+      "includes": [
+        {
+          "source": "toolkits/aircraft/scripts",
+          "target": "scripts"
+        }
+      ],
+      "supplements": [],
+      "baseline": {
+        "version": "3.14",
+        "tag": "war-thunder-user-skins/v3.14",
+        "package_sha256": "7e3736f5b8b5ce0e865f304aed04501ad422ec89908cc9a830a65408cf092644",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.14/war-thunder-user-skins-v3.14.skill.zip",
+        "package_bytes": 628414
+      },
+      "documentation": "docs/skills/jet-liveries.md",
+      "changelog": "docs/changelog/war-thunder-user-skins.md"
+    },
+    {
+      "id": "war-thunder-style-akamywek",
+      "kind": "style",
+      "status": "released_baseline",
+      "description": "Akamywek 风格飞机涂装，包含制作脚本、风格参考和设计示例。",
+      "source": "src/styles/aircraft/war-thunder-style-akamywek",
+      "includes": [
+        {
+          "source": "toolkits/aircraft/scripts",
+          "target": "scripts"
+        }
+      ],
+      "supplements": [],
+      "baseline": {
+        "version": "1.14",
+        "tag": "war-thunder-style-akamywek/v1.14",
+        "package_sha256": "6e2b8018ead45d1d9ee3d0b5f0acf4a04df300822f4c1da6052697a0c9e73bf1",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.14/war-thunder-style-akamywek-v1.14.skill.zip",
+        "package_bytes": 673113
+      },
+      "documentation": "docs/skills/akamywek.md",
+      "changelog": "docs/changelog/war-thunder-style-akamywek.md"
+    },
+    {
+      "id": "war-thunder-tank-style-endfield",
+      "kind": "style",
+      "status": "released_baseline",
+      "description": "终末地工业风坦克涂装，包含车型 UV 与材质适配方法和参考素材。",
+      "source": "src/styles/ground/war-thunder-tank-style-endfield",
+      "includes": [],
+      "supplements": [
+        {
+          "archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+          "archive_member": "war-thunder-tank-style-endfield/assets/reference-a7v/uv/leopard_2a7v_body.png",
+          "target": "assets/reference-a7v/uv/leopard_2a7v_body.png",
+          "sha256": "3eb893af0ca78c7f7ad0585bf0380cca2412f19d309cd969dbefb7039a20615e",
+          "bytes": 25232574
+        },
+        {
+          "archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+          "archive_member": "war-thunder-tank-style-endfield/assets/reference-a7v/uv/leopard_2a7v_gun.png",
+          "target": "assets/reference-a7v/uv/leopard_2a7v_gun.png",
+          "sha256": "0fcf97891f9237282b6748042092cd955cb0b6fcf7777ce9af807c85781107db",
+          "bytes": 3284320
+        },
+        {
+          "archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+          "archive_member": "war-thunder-tank-style-endfield/assets/reference-a7v/uv/leopard_2a7v_turret.png",
+          "target": "assets/reference-a7v/uv/leopard_2a7v_turret.png",
+          "sha256": "f8442309c8f0d7ee76969ac1200855d30477b66f86e64c192140dd005ecc6dfd",
+          "bytes": 21138418
+        },
+        {
+          "archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+          "archive_member": "war-thunder-tank-style-endfield/assets/study/element-vocabulary.png",
+          "target": "assets/study/element-vocabulary.png",
+          "sha256": "81c7a4860e7cf740be84bbf05df6ca7fcef7f34f9d7b994565eed59d0cc50f99",
+          "bytes": 1967893
+        },
+        {
+          "archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+          "archive_member": "war-thunder-tank-style-endfield/assets/study/UV-study-overview.png",
+          "target": "assets/study/UV-study-overview.png",
+          "sha256": "0f1e9354b938d9c791972ae158040a31b067829c481a259fe0da591497de2bd5",
+          "bytes": 2725843
+        }
+      ],
+      "baseline": {
+        "version": "1.4",
+        "tag": "war-thunder-tank-style-endfield/v1.4",
+        "package_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.4/war-thunder-tank-style-endfield-v1.4.skill.zip",
+        "package_bytes": 61780595
+      },
+      "documentation": "docs/skills/endfield-tanks.md",
+      "changelog": "docs/changelog/war-thunder-tank-style-endfield.md"
+    }
+  ],
+  "profiles": {
+    "schema": "profiles/schema/vehicle-profile.schema.json",
+    "example": "profiles/examples/synthetic/profile.json",
+    "validated_real_vehicles": []
+  },
+  "evaluation": {
+    "checker": "evals/checks/workflow_check.py",
+    "contract": "evals/CONTRACT.md",
+    "empirical_repeated_livery_runs": "not_run"
+  },
+  "release_history": "releases/index.json"
+}

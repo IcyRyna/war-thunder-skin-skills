@@ -2,7 +2,9 @@
 
 用于 War Thunder 二次元固定翼喷气机痛涂，可以制作新涂装，也可以修改已有贴图。
 
-Skill ID：`war-thunder-user-skins` · 当前版本：3.14
+Skill ID：`war-thunder-user-skins` · 已发布版本：3.14
+
+本页描述 3.14 正式包。仓库将其作为兼容工作流保留；新研究与工程候选的职责见[研发流程](../workflow/README.md)，正式下载仍使用下面的原 Release。
 
 [下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-user-skins.md)
 
@@ -19,4 +21,4 @@ Skill ID：`war-thunder-user-skins` · 当前版本：3.14
 
 机型模型、原始纹理与角色素材按项目准备。这个 Skill 的范围是二次元固定翼喷气机；指定 Akamywek 画风时，可直接使用[对应风格包](akamywek.md)。
 
-[源码](../../skills/aircraft/war-thunder-user-skins/) · [返回首页](../../README.md)
+[兼容源码](../../src/legacy/war-thunder-user-skins/) · [候选构建](../maintaining.md) · [返回首页](../../README.md)

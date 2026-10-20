@@ -1,0 +1,275 @@
+{
+  "schema_version": 1,
+  "document_kind": "synthetic_example",
+  "profile_id": "synthetic-plate",
+  "profile_version": "candidate-1",
+  "identity": {
+    "vehicle_id": "not-a-game-vehicle",
+    "variant": "synthetic plane",
+    "category": "synthetic",
+    "platform": "offline fixture only",
+    "template_id": "synthetic-byte-preservation"
+  },
+  "adapter": {
+    "kind": "synthetic_fixture",
+    "package_id": "wt-skin-build",
+    "version": "unreleased-candidate",
+    "snapshot_sha256": "5c85ee1264050020c78478843661d2555fbe1ac7d472697a6d171c6a67af2629",
+    "capabilities": [
+      "plane_uv_vector",
+      "tga_blk_assembly",
+      "static_scan"
+    ],
+    "verified_scope": "Synthetic plate only; this is not a game adapter.",
+    "evidence_file_ids": [
+      "readme",
+      "geometry"
+    ]
+  },
+  "files": [
+    {
+      "id": "readme",
+      "path": "README.md",
+      "sha256": "e56a7de5bbe659b3999bf1bad942bb1c3dcf57b89a6c96a4b120e9513ec83617",
+      "role": "synthetic construction definition"
+    },
+    {
+      "id": "geometry",
+      "path": "geometry.npz",
+      "sha256": "ac73e2c0a1bafba88bd531f2b11e64177dd77102032d11ca85b57b4827d88346",
+      "role": "synthetic original UV plane"
+    },
+    {
+      "id": "design",
+      "path": "design.json",
+      "sha256": "31fd4953af71d0ddbd4792e4a14f8b1b67e5ed0839128edd8e401bc28ac1aef8",
+      "role": "synthetic editable vector source"
+    },
+    {
+      "id": "mask",
+      "path": "region-mask.png",
+      "sha256": "3c6a535ef8e7c91add89ecf414bfbaf5be4d485ffc8c943bafaacf0c1c76472a",
+      "role": "semantic region selection"
+    },
+    {
+      "id": "blk",
+      "path": "template/synthetic.blk",
+      "sha256": "50c54ffaa813610ee6cda6bf7d7ca7d75b58faa6f8a78db0f3d6cef070658618",
+      "role": "synthetic resource mapping"
+    },
+    {
+      "id": "color",
+      "path": "template/color.tga",
+      "sha256": "0e7c5727379cc38a10c778e0cfbdcf66632e172e26100357138d44079a9f8ed0",
+      "role": "synthetic color and alpha"
+    },
+    {
+      "id": "data",
+      "path": "template/material.tga",
+      "sha256": "3776fd5854c398f8f732a26d881d16ada8e4de2232464bd20543c4f56647b8f4",
+      "role": "synthetic packed byte preservation"
+    }
+  ],
+  "textures": [
+    {
+      "resource_id": "synthetic_plate_c*",
+      "file_id": "color",
+      "role": "color",
+      "width": 64,
+      "height": 64,
+      "color_space": "srgb",
+      "channels": {
+        "R": {
+          "semantic": "synthetic_R",
+          "interpretation_state": "synthetic_only",
+          "operation": "explicit_edit",
+          "evidence_file_ids": [
+            "readme",
+            "color"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "G": {
+          "semantic": "synthetic_G",
+          "interpretation_state": "synthetic_only",
+          "operation": "explicit_edit",
+          "evidence_file_ids": [
+            "readme",
+            "color"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "B": {
+          "semantic": "synthetic_B",
+          "interpretation_state": "synthetic_only",
+          "operation": "explicit_edit",
+          "evidence_file_ids": [
+            "readme",
+            "color"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "A": {
+          "semantic": "synthetic_A",
+          "interpretation_state": "synthetic_only",
+          "operation": "preserve",
+          "evidence_file_ids": [
+            "readme",
+            "color"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        }
+      }
+    },
+    {
+      "resource_id": "synthetic_plate_n*",
+      "file_id": "data",
+      "role": "data",
+      "width": 64,
+      "height": 64,
+      "color_space": "linear",
+      "channels": {
+        "R": {
+          "semantic": "synthetic_R",
+          "interpretation_state": "synthetic_only",
+          "operation": "preserve",
+          "evidence_file_ids": [
+            "readme",
+            "data"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "G": {
+          "semantic": "synthetic_G",
+          "interpretation_state": "synthetic_only",
+          "operation": "preserve",
+          "evidence_file_ids": [
+            "readme",
+            "data"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "B": {
+          "semantic": "synthetic_B",
+          "interpretation_state": "synthetic_only",
+          "operation": "preserve",
+          "evidence_file_ids": [
+            "readme",
+            "data"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        },
+        "A": {
+          "semantic": "synthetic_A",
+          "interpretation_state": "synthetic_only",
+          "operation": "preserve",
+          "evidence_file_ids": [
+            "readme",
+            "data"
+          ],
+          "scope_note": "Arbitrary fixture channel; no War Thunder material meaning."
+        }
+      }
+    }
+  ],
+  "regions": [
+    {
+      "semantic_id": "primary_side",
+      "resource_id": "synthetic_plate_c*",
+      "mask_file_id": "mask",
+      "mask_contract": "0 excluded; 255 selected. Integer pixel centers, top-left origin.",
+      "coordinate_space": "world_metres",
+      "chart_id": "primary_side",
+      "axes": {
+        "u": "world +X",
+        "v": "world +Z",
+        "orientation_evidence_file_ids": [
+          "readme",
+          "geometry"
+        ]
+      },
+      "transform": {
+        "kind": "identity",
+        "direction": "semantic metre coordinates to chart metre coordinates",
+        "matrix_row_major": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ]
+        ]
+      },
+      "allowed_operations": [
+        "color_edit",
+        "geometry_pattern"
+      ],
+      "shared_with": [],
+      "verification": {
+        "id": "synthetic_construction",
+        "state": "passed",
+        "evidence_file_ids": [
+          "readme",
+          "geometry",
+          "mask"
+        ],
+        "reason": "File identity and synthetic geometry can be checked; no real vehicle claim."
+      }
+    }
+  ],
+  "topology": {
+    "shared": [],
+    "mirrored": [],
+    "seams": [],
+    "stretched": [],
+    "protected": [],
+    "coverage_note": "Single synthetic plane only. No claim about any aircraft or ground vehicle."
+  },
+  "export": {
+    "blk_file_id": "blk",
+    "format": "tga32",
+    "dimension_policy": "64x64 for both fixture textures",
+    "alpha_policy": "Preserve original color alpha exactly",
+    "mip_policy": "Not generated in this fixture",
+    "resource_binding_policy": "Exact from strings including wildcard; target files remain within package",
+    "evidence_file_ids": [
+      "readme",
+      "blk",
+      "color",
+      "data"
+    ]
+  },
+  "validation": {
+    "checks": [
+      {
+        "id": "synthetic_construction",
+        "state": "passed",
+        "evidence_file_ids": [
+          "readme",
+          "geometry",
+          "mask"
+        ],
+        "reason": "File identity and synthetic geometry can be checked; no real vehicle claim."
+      },
+      {
+        "id": "real_vehicle",
+        "state": "not_applicable",
+        "evidence_file_ids": [],
+        "reason": "All input files are synthetic."
+      }
+    ],
+    "remaining_issues": [],
+    "game_state": "not_applicable",
+    "style_state": "not_requested",
+    "scope_note": "Synthetic example only. It cannot establish channel mapping or game compatibility."
+  }
+}

@@ -1,0 +1,45 @@
+name: Check source and candidate packages
+
+on:
+  push:
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  source:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+        python: ["3.11", "3.12"]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python }}
+      - name: Repository tooling regression tests
+        run: python -B -m unittest discover -s tests -v
+      - name: Evaluation contract regression tests
+        run: python -B -m unittest discover -s evals/tests -v
+      - name: Check package sources and declared asset requirements
+        run: python -B tools/repository.py check
+
+  complete-packages:
+    # Fork PRs cannot read private release assets. Source checks still run there.
+    if: github.event_name != 'pull_request' || github.event.pull_request.head.repo.full_name == github.repository
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Fetch existing release assets and reconstruct all candidates
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: python -B tools/ci_packages.py
+      - name: Verify released baseline file bytes
+        run: python -B tools/verify_release_content.py --dist dist

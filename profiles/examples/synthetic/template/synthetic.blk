@@ -1,0 +1,3 @@
+name:t="user"
+replace_tex{from:t="synthetic_plate_c*" to:t="color.tga"}
+replace_tex{from:t="synthetic_plate_n*" to:t="material.tga"}

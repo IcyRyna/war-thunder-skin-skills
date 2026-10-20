@@ -1,0 +1,786 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:wt-skin-build:vehicle-profile:1",
+  "title": "War Thunder semantic vehicle profile candidate contract",
+  "type": "object",
+  "properties": {
+    "schema_version": {
+      "const": 1
+    },
+    "document_kind": {
+      "enum": [
+        "production_profile",
+        "candidate_profile",
+        "synthetic_example"
+      ]
+    },
+    "profile_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "profile_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "identity": {
+      "type": "object",
+      "properties": {
+        "vehicle_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variant": {
+          "type": "string",
+          "minLength": 1
+        },
+        "category": {
+          "enum": [
+            "aircraft",
+            "ground",
+            "synthetic"
+          ]
+        },
+        "platform": {
+          "type": "string",
+          "minLength": 1
+        },
+        "template_id": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "vehicle_id",
+        "variant",
+        "category",
+        "platform",
+        "template_id"
+      ],
+      "additionalProperties": false
+    },
+    "adapter": {
+      "type": "object",
+      "properties": {
+        "kind": {
+          "enum": [
+            "bundled_aircraft_tools",
+            "external_required",
+            "external_pinned",
+            "synthetic_fixture"
+          ]
+        },
+        "package_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        },
+        "snapshot_sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "capabilities": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "verified_scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_file_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "kind",
+        "package_id",
+        "version",
+        "snapshot_sha256",
+        "capabilities",
+        "verified_scope",
+        "evidence_file_ids"
+      ],
+      "additionalProperties": false
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/file"
+      },
+      "minItems": 1
+    },
+    "textures": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/texture"
+      },
+      "minItems": 1
+    },
+    "regions": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/region"
+      },
+      "minItems": 1
+    },
+    "topology": {
+      "type": "object",
+      "properties": {
+        "shared": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "mirrored": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "seams": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "stretched": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "protected": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/relationship"
+          }
+        },
+        "coverage_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "shared",
+        "mirrored",
+        "seams",
+        "stretched",
+        "protected",
+        "coverage_note"
+      ],
+      "additionalProperties": false
+    },
+    "export": {
+      "type": "object",
+      "properties": {
+        "blk_file_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "format": {
+          "enum": [
+            "tga32",
+            "dds_rgba8",
+            "dds_bc3",
+            "external_profile"
+          ]
+        },
+        "dimension_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alpha_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mip_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resource_binding_policy": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_file_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "blk_file_id",
+        "format",
+        "dimension_policy",
+        "alpha_policy",
+        "mip_policy",
+        "resource_binding_policy",
+        "evidence_file_ids"
+      ],
+      "additionalProperties": false
+    },
+    "validation": {
+      "type": "object",
+      "properties": {
+        "checks": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/check"
+          },
+          "minItems": 1
+        },
+        "remaining_issues": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "game_state": {
+          "enum": [
+            "not_run",
+            "passed",
+            "failed",
+            "not_applicable"
+          ]
+        },
+        "style_state": {
+          "enum": [
+            "not_requested",
+            "not_run",
+            "approved",
+            "partially_approved",
+            "rejected"
+          ]
+        },
+        "scope_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "checks",
+        "remaining_issues",
+        "game_state",
+        "style_state",
+        "scope_note"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "required": [
+    "schema_version",
+    "document_kind",
+    "profile_id",
+    "profile_version",
+    "identity",
+    "adapter",
+    "files",
+    "textures",
+    "regions",
+    "topology",
+    "export",
+    "validation"
+  ],
+  "additionalProperties": false,
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "category": {
+                "const": "ground"
+              }
+            }
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "adapter": {
+            "properties": {
+              "kind": {
+                "enum": [
+                  "external_required",
+                  "external_pinned"
+                ]
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "document_kind": {
+            "const": "synthetic_example"
+          }
+        }
+      },
+      "then": {
+        "properties": {
+          "identity": {
+            "properties": {
+              "category": {
+                "const": "synthetic"
+              }
+            }
+          },
+          "validation": {
+            "properties": {
+              "game_state": {
+                "const": "not_applicable"
+              },
+              "style_state": {
+                "const": "not_requested"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "$defs": {
+    "file": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "path": {
+          "type": "string",
+          "minLength": 1,
+          "pattern": "^(?![/\\\\])(?![A-Za-z]:)(?!.*(?:^|[/\\\\])\\.\\.(?:[/\\\\]|$)).+$"
+        },
+        "sha256": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "role": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "id",
+        "path",
+        "sha256",
+        "role"
+      ],
+      "additionalProperties": false
+    },
+    "channel": {
+      "type": "object",
+      "properties": {
+        "semantic": {
+          "type": "string",
+          "minLength": 1
+        },
+        "interpretation_state": {
+          "enum": [
+            "verified_for_profile",
+            "unknown",
+            "synthetic_only"
+          ]
+        },
+        "operation": {
+          "enum": [
+            "preserve",
+            "explicit_edit"
+          ]
+        },
+        "evidence_file_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "scope_note": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "semantic",
+        "interpretation_state",
+        "operation",
+        "evidence_file_ids",
+        "scope_note"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "interpretation_state": {
+                "const": "unknown"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "semantic": {
+                "const": "unknown"
+              },
+              "operation": {
+                "const": "preserve"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "interpretation_state": {
+                "const": "verified_for_profile"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_file_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "texture": {
+      "type": "object",
+      "properties": {
+        "resource_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "file_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "role": {
+          "enum": [
+            "color",
+            "data"
+          ]
+        },
+        "width": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        },
+        "height": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 8192
+        },
+        "color_space": {
+          "enum": [
+            "srgb",
+            "linear",
+            "unknown"
+          ]
+        },
+        "channels": {
+          "type": "object",
+          "properties": {
+            "R": {
+              "$ref": "#/$defs/channel"
+            },
+            "G": {
+              "$ref": "#/$defs/channel"
+            },
+            "B": {
+              "$ref": "#/$defs/channel"
+            },
+            "A": {
+              "$ref": "#/$defs/channel"
+            }
+          },
+          "required": [
+            "R",
+            "G",
+            "B",
+            "A"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "resource_id",
+        "file_id",
+        "role",
+        "width",
+        "height",
+        "color_space",
+        "channels"
+      ],
+      "additionalProperties": false
+    },
+    "region": {
+      "type": "object",
+      "properties": {
+        "semantic_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "resource_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mask_file_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "mask_contract": {
+          "type": "string",
+          "minLength": 1
+        },
+        "coordinate_space": {
+          "enum": [
+            "world_metres",
+            "atlas_pixels",
+            "normalised_uv"
+          ]
+        },
+        "chart_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "axes": {
+          "type": "object",
+          "properties": {
+            "u": {
+              "type": "string",
+              "minLength": 1
+            },
+            "v": {
+              "type": "string",
+              "minLength": 1
+            },
+            "orientation_evidence_file_ids": {
+              "type": "array",
+              "items": {
+                "type": "string",
+                "minLength": 1
+              },
+              "minItems": 1
+            }
+          },
+          "required": [
+            "u",
+            "v",
+            "orientation_evidence_file_ids"
+          ],
+          "additionalProperties": false
+        },
+        "transform": {
+          "type": "object",
+          "properties": {
+            "kind": {
+              "enum": [
+                "identity",
+                "affine_2d"
+              ]
+            },
+            "direction": {
+              "type": "string",
+              "minLength": 1
+            },
+            "matrix_row_major": {
+              "type": "array",
+              "items": {
+                "type": "array",
+                "items": {
+                  "type": "number"
+                },
+                "minItems": 3,
+                "maxItems": 3
+              },
+              "minItems": 3,
+              "maxItems": 3
+            }
+          },
+          "required": [
+            "kind",
+            "direction",
+            "matrix_row_major"
+          ],
+          "additionalProperties": false
+        },
+        "allowed_operations": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "color_edit",
+              "text",
+              "art",
+              "geometry_pattern",
+              "material_edit"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "shared_with": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "verification": {
+          "$ref": "#/$defs/check"
+        }
+      },
+      "required": [
+        "semantic_id",
+        "resource_id",
+        "mask_file_id",
+        "mask_contract",
+        "coordinate_space",
+        "chart_id",
+        "axes",
+        "transform",
+        "allowed_operations",
+        "shared_with",
+        "verification"
+      ],
+      "additionalProperties": false
+    },
+    "relationship": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "regions": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        },
+        "description": {
+          "type": "string",
+          "minLength": 1
+        },
+        "evidence_file_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "state": {
+          "enum": [
+            "verified_for_profile",
+            "unknown",
+            "synthetic_only"
+          ]
+        }
+      },
+      "required": [
+        "id",
+        "regions",
+        "description",
+        "evidence_file_ids",
+        "state"
+      ],
+      "additionalProperties": false
+    },
+    "check": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "state": {
+          "enum": [
+            "passed",
+            "failed",
+            "not_run",
+            "unknown",
+            "not_applicable"
+          ]
+        },
+        "evidence_file_ids": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "state",
+        "evidence_file_ids",
+        "reason"
+      ],
+      "additionalProperties": false,
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "passed"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "evidence_file_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "state": {
+                "const": "not_applicable"
+              }
+            }
+          },
+          "then": {
+            "properties": {
+              "reason": {
+                "minLength": 1
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

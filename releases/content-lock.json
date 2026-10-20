@@ -1,0 +1,1067 @@
+{
+  "schema_version": 1,
+  "scope": "Existing release content lock for verifying source-only reorganization; not a new version or art review.",
+  "packages": [
+    {
+      "id": "war-thunder-user-skins",
+      "tag": "war-thunder-user-skins/v3.14",
+      "original_archive_sha256": "7e3736f5b8b5ce0e865f304aed04501ad422ec89908cc9a830a65408cf092644",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 11919,
+          "sha256": "7b9eb6eaf8091c6aeeb859376c639a0537dfafe2455bc6ba6407520a7ac7d2b6"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "bytes": 476,
+          "sha256": "8c6a89ff95a413c52c614113ec6e9e59f2316b62edd01c9d766e78ee51af82c7"
+        },
+        {
+          "path": "references/aesthetics.md",
+          "bytes": 16610,
+          "sha256": "5382fca4ff08f3aefec2713077c2a2d215ce92141838c49b97bbfff49e7d40fc"
+        },
+        {
+          "path": "references/art-direction.md",
+          "bytes": 6684,
+          "sha256": "32457b4263fb52e412ba45582953ca4311bd99ad97fb98571b286ac7215097fe"
+        },
+        {
+          "path": "references/assets-and-layout.md",
+          "bytes": 5613,
+          "sha256": "eb54775134fea140795ce2a262ea3521f2c18bf1c9f81cd6ef4de9b3742ea37b"
+        },
+        {
+          "path": "references/diagrams/character-integration.svg",
+          "bytes": 3502,
+          "sha256": "9d68b96259a60016810411a744de6e2ee3344bb6be62f9e755801b9cb4472d6a"
+        },
+        {
+          "path": "references/diagrams/continuous-coverage.svg",
+          "bytes": 311580,
+          "sha256": "2d4ee1969975b8bd41005be53a068cce410c50fa9ccbacb399079cac657917b3"
+        },
+        {
+          "path": "references/diagrams/coupled-shapes.svg",
+          "bytes": 253943,
+          "sha256": "6ef288cd8a8348cda43ca3766e4f9c77444fd43123175bf09b0e6c8a9ed6898e"
+        },
+        {
+          "path": "references/diagrams/line-construction.svg",
+          "bytes": 4593,
+          "sha256": "0b8b470f071ca3ac60a22eff46b198958f59673fb731e9c6342437a57ce03265"
+        },
+        {
+          "path": "references/diagrams/structure-toggle.svg",
+          "bytes": 286427,
+          "sha256": "048328413c49972515e34651e783f8b91d522210312544d63312d2d49aaa3074"
+        },
+        {
+          "path": "references/diagrams/top-view-zoning.svg",
+          "bytes": 3097,
+          "sha256": "3a85677d26216d1914f1fb76e62b7706e206d92eaedbd8c2c3afbd52072efc64"
+        },
+        {
+          "path": "references/editor-workflow.md",
+          "bytes": 4012,
+          "sha256": "61a45f35dbfd91abc094fda50c16c101522d5bdb1a15b9409801a3828a6a9e61"
+        },
+        {
+          "path": "references/image-assisted-editing.md",
+          "bytes": 2312,
+          "sha256": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543"
+        },
+        {
+          "path": "references/linework-and-color.md",
+          "bytes": 13685,
+          "sha256": "3825befabf06013afa54ade3ed3880919f8c83634a40bd7033ce27c3f20af827"
+        },
+        {
+          "path": "references/materials-and-uv.md",
+          "bytes": 13165,
+          "sha256": "b630b7bf4eaa776646d5281a6afec8e4a0b764c91180013afb65fce4be91cede"
+        },
+        {
+          "path": "references/new-airframe.md",
+          "bytes": 14859,
+          "sha256": "dc5f3bf69ef4e1c8bcac448ce713c241558e6dc8f41981aa223ce50bb411f53f"
+        },
+        {
+          "path": "references/orthographic-workflow.md",
+          "bytes": 7763,
+          "sha256": "8d56ddc78cb461bd106fd98b16619365e7e1b19c2d7c850c5cc63422c5793ab4"
+        },
+        {
+          "path": "references/packaging-and-validation.md",
+          "bytes": 7604,
+          "sha256": "485e2f747d770eaecf126ac32357b9c24cb3aabe1a6b5382c7da9491e90de267"
+        },
+        {
+          "path": "references/research-and-audit.md",
+          "bytes": 5992,
+          "sha256": "c5210e9b35f5cc5819b1dae857b1870600e2efb2d7dfee29c30ae8050850e46c"
+        },
+        {
+          "path": "references/resource-markings.md",
+          "bytes": 3664,
+          "sha256": "d5018e76dc4b55bc9ca16c3248c9ded09da9893036e66b91085b7885b1c16ba1"
+        },
+        {
+          "path": "references/taste-corrections.md",
+          "bytes": 12101,
+          "sha256": "3ac5c08ba5999553c4e3231b553a50560e875280fbc03c87613cd2421cd7ed98"
+        },
+        {
+          "path": "references/uv-native-replica.md",
+          "bytes": 27765,
+          "sha256": "d2918b82013b771048df0eba3eb95121a239e9a8f084a2240bf12974c1037344"
+        },
+        {
+          "path": "scripts/airframe_setup.py",
+          "bytes": 23042,
+          "sha256": "a4f95d19c51b17d362fcd579a19e73a4c8c14fcdc066f8ecfb6b196baba8c7c0"
+        },
+        {
+          "path": "scripts/arrangement.py",
+          "bytes": 13072,
+          "sha256": "003e3c03e98d5f42fd353a6f9e412fa143c9da6cc1c8bf229a2623801a025820"
+        },
+        {
+          "path": "scripts/art_cutout.py",
+          "bytes": 4747,
+          "sha256": "4625ac2e817d7e6a29aaffa3fe29d9fa10bf31225f3b6f4ea03e2a74b854cb4a"
+        },
+        {
+          "path": "scripts/artifact_io.py",
+          "bytes": 16341,
+          "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2"
+        },
+        {
+          "path": "scripts/atlas_palette.py",
+          "bytes": 10098,
+          "sha256": "a2e2fca0ef66ac98ae448835383ed9ca2c95105e5684b47aac0aa837ad50a667"
+        },
+        {
+          "path": "scripts/build_skin.py",
+          "bytes": 11004,
+          "sha256": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a"
+        },
+        {
+          "path": "scripts/coat_material.py",
+          "bytes": 5171,
+          "sha256": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f"
+        },
+        {
+          "path": "scripts/compare_skin.py",
+          "bytes": 13766,
+          "sha256": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61"
+        },
+        {
+          "path": "scripts/composa_mcp.py",
+          "bytes": 32315,
+          "sha256": "24fa2c75b6ef1cf724c10eb6dca34dced1cf50e5e6d261106ae1ff0511105d4a"
+        },
+        {
+          "path": "scripts/dds_variant.py",
+          "bytes": 24140,
+          "sha256": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03"
+        },
+        {
+          "path": "scripts/design_lint.py",
+          "bytes": 23592,
+          "sha256": "3fa4e2d16f5722abddb1210e2d0892f2a6e60230e4f7355c0be4e3345f82b3ef"
+        },
+        {
+          "path": "scripts/detail_sheet.py",
+          "bytes": 11154,
+          "sha256": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599"
+        },
+        {
+          "path": "scripts/fetch_asset.py",
+          "bytes": 6618,
+          "sha256": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924"
+        },
+        {
+          "path": "scripts/finish_preview.py",
+          "bytes": 22833,
+          "sha256": "108a9e618d27668ed4eb52a51b06a2ab6b98f42f7d783128499b0a1b5ed7be64"
+        },
+        {
+          "path": "scripts/inspect_skins.py",
+          "bytes": 34547,
+          "sha256": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe"
+        },
+        {
+          "path": "scripts/panel_lines.py",
+          "bytes": 23879,
+          "sha256": "ef14d1a61906276c78effc3d051639f3f9395c8db0d02ef20b1e6d327756145d"
+        },
+        {
+          "path": "scripts/replica_check.py",
+          "bytes": 35824,
+          "sha256": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919"
+        },
+        {
+          "path": "scripts/replica_measure.py",
+          "bytes": 42388,
+          "sha256": "97f3b881afa935bc097c609a65015e2b07dbe427538b3435904c10365976b03b"
+        },
+        {
+          "path": "scripts/scene_preview.py",
+          "bytes": 47159,
+          "sha256": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c"
+        },
+        {
+          "path": "scripts/structure_layer.py",
+          "bytes": 7795,
+          "sha256": "26440530f59c9ddfbb63b756748c6a77b37dbdbd40a21436b4a05c3c00c9e530"
+        },
+        {
+          "path": "scripts/style_board.py",
+          "bytes": 7857,
+          "sha256": "d3bc243e71007464e0e4de50c20e77093149631abdc1c1637b52a103fd91a702"
+        },
+        {
+          "path": "scripts/surface_map.py",
+          "bytes": 17648,
+          "sha256": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1"
+        },
+        {
+          "path": "scripts/surface_preview.py",
+          "bytes": 49931,
+          "sha256": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214"
+        },
+        {
+          "path": "scripts/test_airframe_setup.py",
+          "bytes": 6835,
+          "sha256": "0021f9fef15b6b1ebfc4709411c97506dd9a2a484a47f0191e344461c758ad9b"
+        },
+        {
+          "path": "scripts/test_arrangement.py",
+          "bytes": 6311,
+          "sha256": "dde8c21d27af1458dfa18e80e4ec67e780d37397d362892b50ab321334649912"
+        },
+        {
+          "path": "scripts/test_art_cutout.py",
+          "bytes": 1872,
+          "sha256": "8cd2fe1ee9eaca186e22803124754c5ab325620052c0dbf3bf28496edc062221"
+        },
+        {
+          "path": "scripts/test_artifact_io.py",
+          "bytes": 17327,
+          "sha256": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5"
+        },
+        {
+          "path": "scripts/test_atlas_palette.py",
+          "bytes": 2141,
+          "sha256": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994"
+        },
+        {
+          "path": "scripts/test_cli_gates.py",
+          "bytes": 9607,
+          "sha256": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22"
+        },
+        {
+          "path": "scripts/test_coat_material.py",
+          "bytes": 2798,
+          "sha256": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611"
+        },
+        {
+          "path": "scripts/test_comparison.py",
+          "bytes": 1934,
+          "sha256": "d63f3e3d30c617345273f46c7f5d59a59d62654c907cb0f5d85fe0c7a71281a8"
+        },
+        {
+          "path": "scripts/test_dds_variant.py",
+          "bytes": 11029,
+          "sha256": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542"
+        },
+        {
+          "path": "scripts/test_design_lint.py",
+          "bytes": 9942,
+          "sha256": "6d6c3020177a595391c474e4bb709411760faa0f2bc05b9b9701ccebdf70416c"
+        },
+        {
+          "path": "scripts/test_detail_sheet.py",
+          "bytes": 2785,
+          "sha256": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00"
+        },
+        {
+          "path": "scripts/test_finish_preview.py",
+          "bytes": 19885,
+          "sha256": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932"
+        },
+        {
+          "path": "scripts/test_io_tools.py",
+          "bytes": 10098,
+          "sha256": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa"
+        },
+        {
+          "path": "scripts/test_panel_lines.py",
+          "bytes": 5654,
+          "sha256": "2a8cf9a155fa2082067289e8f303a3a225f997d552d79e127cdf2aad676b6f2b"
+        },
+        {
+          "path": "scripts/test_projection_contract.py",
+          "bytes": 38578,
+          "sha256": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc"
+        },
+        {
+          "path": "scripts/test_replica_check.py",
+          "bytes": 9066,
+          "sha256": "0669de38b8478f8ca5da3a18be5ee27a9e5aa73f123f4029af7db116d5b604cd"
+        },
+        {
+          "path": "scripts/test_replica_measure.py",
+          "bytes": 9694,
+          "sha256": "f4fefc2b40dfa11a34dd98fdaf95d5aa0c0090f2ad7b91010451acf374a8ffc9"
+        },
+        {
+          "path": "scripts/test_scene_preview.py",
+          "bytes": 36142,
+          "sha256": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351"
+        },
+        {
+          "path": "scripts/test_structure_layer.py",
+          "bytes": 1998,
+          "sha256": "ee6e284eeb0015ac1e0726fc8cd2ea39e4c256742636bd7e678a02d87a236a7c"
+        },
+        {
+          "path": "scripts/test_style_board.py",
+          "bytes": 2283,
+          "sha256": "7c9ec3d6c60547562530998628b4185bc4a2899e3af4bcb35444e97a9728b7c4"
+        },
+        {
+          "path": "scripts/test_surface_map.py",
+          "bytes": 7814,
+          "sha256": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc"
+        },
+        {
+          "path": "scripts/test_surface_workflow.py",
+          "bytes": 8315,
+          "sha256": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994"
+        },
+        {
+          "path": "scripts/test_vector_paint.py",
+          "bytes": 17492,
+          "sha256": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba"
+        },
+        {
+          "path": "scripts/uv_frame.py",
+          "bytes": 9921,
+          "sha256": "d55870280bab95cfe208fa962b5bcc2a99dfc7eb65924f192c8025b5d4b521ae"
+        },
+        {
+          "path": "scripts/vector_paint.py",
+          "bytes": 68494,
+          "sha256": "fd8f682dbd98899292cf92cd0ec5b478201a3e0cc4830c1b3e584ec0c40dd466"
+        }
+      ]
+    },
+    {
+      "id": "war-thunder-style-akamywek",
+      "tag": "war-thunder-style-akamywek/v1.14",
+      "original_archive_sha256": "6e2b8018ead45d1d9ee3d0b5f0acf4a04df300822f4c1da6052697a0c9e73bf1",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 15418,
+          "sha256": "d1f4c2a6705bd294e88902950cbebff9616bb054fdae888c15a7d29cbdc0569d"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "bytes": 435,
+          "sha256": "557665c79310db580481d9828e77d7cd46f6f5d400337eae1fec060c59076c02"
+        },
+        {
+          "path": "diagrams/motif-library.svg",
+          "bytes": 7179,
+          "sha256": "7db5df44e55174e72ceb9bd51e4656dce17392d02b8d6edb2139f0351423f8ed"
+        },
+        {
+          "path": "examples/j16-chen-full-livery_build_design.py",
+          "bytes": 23934,
+          "sha256": "1b3959b95ab1f307d1f6320c0aee710fcff4f8c589a6e11fc935be2851254aa2"
+        },
+        {
+          "path": "examples/j16-key-sequence.json",
+          "bytes": 11083,
+          "sha256": "f3fc5491de132e70804170c388c85052dcea84b5f9151ca58206523af299a175"
+        },
+        {
+          "path": "examples/j16-nested-chevrons.json",
+          "bytes": 10714,
+          "sha256": "2cfb001af8d91af596da802a1c6b0a8261a68fff7f12399557477230cfa77271"
+        },
+        {
+          "path": "references/base-layout.md",
+          "bytes": 15537,
+          "sha256": "c3bbc0837f5b0ed1290cbd9d48d3411b88ffe579df04d3618a54bcb4a3ba8fd6"
+        },
+        {
+          "path": "references/core/aesthetics.md",
+          "bytes": 16584,
+          "sha256": "e9688de07c3861230cbbfa96a634fa78eedf69bf4f49efef20f47e0f24ca1180"
+        },
+        {
+          "path": "references/core/art-direction.md",
+          "bytes": 6684,
+          "sha256": "32457b4263fb52e412ba45582953ca4311bd99ad97fb98571b286ac7215097fe"
+        },
+        {
+          "path": "references/core/assets-and-layout.md",
+          "bytes": 5613,
+          "sha256": "eb54775134fea140795ce2a262ea3521f2c18bf1c9f81cd6ef4de9b3742ea37b"
+        },
+        {
+          "path": "references/core/diagrams/character-integration.svg",
+          "bytes": 3502,
+          "sha256": "9d68b96259a60016810411a744de6e2ee3344bb6be62f9e755801b9cb4472d6a"
+        },
+        {
+          "path": "references/core/diagrams/continuous-coverage.svg",
+          "bytes": 311580,
+          "sha256": "2d4ee1969975b8bd41005be53a068cce410c50fa9ccbacb399079cac657917b3"
+        },
+        {
+          "path": "references/core/diagrams/coupled-shapes.svg",
+          "bytes": 253943,
+          "sha256": "6ef288cd8a8348cda43ca3766e4f9c77444fd43123175bf09b0e6c8a9ed6898e"
+        },
+        {
+          "path": "references/core/diagrams/line-construction.svg",
+          "bytes": 4593,
+          "sha256": "0b8b470f071ca3ac60a22eff46b198958f59673fb731e9c6342437a57ce03265"
+        },
+        {
+          "path": "references/core/diagrams/structure-toggle.svg",
+          "bytes": 286427,
+          "sha256": "048328413c49972515e34651e783f8b91d522210312544d63312d2d49aaa3074"
+        },
+        {
+          "path": "references/core/diagrams/top-view-zoning.svg",
+          "bytes": 3097,
+          "sha256": "3a85677d26216d1914f1fb76e62b7706e206d92eaedbd8c2c3afbd52072efc64"
+        },
+        {
+          "path": "references/core/editor-workflow.md",
+          "bytes": 4012,
+          "sha256": "61a45f35dbfd91abc094fda50c16c101522d5bdb1a15b9409801a3828a6a9e61"
+        },
+        {
+          "path": "references/core/image-assisted-editing.md",
+          "bytes": 2312,
+          "sha256": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543"
+        },
+        {
+          "path": "references/core/linework-and-color.md",
+          "bytes": 13685,
+          "sha256": "3825befabf06013afa54ade3ed3880919f8c83634a40bd7033ce27c3f20af827"
+        },
+        {
+          "path": "references/core/materials-and-uv.md",
+          "bytes": 13165,
+          "sha256": "b630b7bf4eaa776646d5281a6afec8e4a0b764c91180013afb65fce4be91cede"
+        },
+        {
+          "path": "references/core/new-airframe.md",
+          "bytes": 14859,
+          "sha256": "dc5f3bf69ef4e1c8bcac448ce713c241558e6dc8f41981aa223ce50bb411f53f"
+        },
+        {
+          "path": "references/core/orthographic-workflow.md",
+          "bytes": 7763,
+          "sha256": "8d56ddc78cb461bd106fd98b16619365e7e1b19c2d7c850c5cc63422c5793ab4"
+        },
+        {
+          "path": "references/core/overview.md",
+          "bytes": 11470,
+          "sha256": "c66696f1f80e2c2f8802ef4265c11504ac0937c2e634f272f80337a56b0ea599"
+        },
+        {
+          "path": "references/core/packaging-and-validation.md",
+          "bytes": 7604,
+          "sha256": "485e2f747d770eaecf126ac32357b9c24cb3aabe1a6b5382c7da9491e90de267"
+        },
+        {
+          "path": "references/core/research-and-audit.md",
+          "bytes": 5992,
+          "sha256": "c5210e9b35f5cc5819b1dae857b1870600e2efb2d7dfee29c30ae8050850e46c"
+        },
+        {
+          "path": "references/core/resource-markings.md",
+          "bytes": 3664,
+          "sha256": "d5018e76dc4b55bc9ca16c3248c9ded09da9893036e66b91085b7885b1c16ba1"
+        },
+        {
+          "path": "references/core/taste-corrections.md",
+          "bytes": 12174,
+          "sha256": "1949ad199d9062d81be935d2bbaa4456ed457bbb22e2de934dfcc990db3f9bf5"
+        },
+        {
+          "path": "references/core/uv-native-replica.md",
+          "bytes": 27765,
+          "sha256": "d2918b82013b771048df0eba3eb95121a239e9a8f084a2240bf12974c1037344"
+        },
+        {
+          "path": "references/motifs.md",
+          "bytes": 13378,
+          "sha256": "54e0d08caa5cfa8b2fb1f76d4cafd8dc1a5f10f4da9794c59cfee638ca71d16e"
+        },
+        {
+          "path": "references/palette.md",
+          "bytes": 3192,
+          "sha256": "0c6be7a4650ef43456c36520e8d833bc019049d6b09fd004cf3ece6a64fc6949"
+        },
+        {
+          "path": "references/surfaces.md",
+          "bytes": 8774,
+          "sha256": "970ea02c73df14ebc7a86ca5274d4f0853cb0d977c5b836629f6a11a7d6beba3"
+        },
+        {
+          "path": "references/type-and-decals.md",
+          "bytes": 2871,
+          "sha256": "b5b0df3feb87fe4ed61959d33db6368c146a4aac253159591dda9f253c5372e1"
+        },
+        {
+          "path": "scripts/airframe_setup.py",
+          "bytes": 23042,
+          "sha256": "a4f95d19c51b17d362fcd579a19e73a4c8c14fcdc066f8ecfb6b196baba8c7c0"
+        },
+        {
+          "path": "scripts/arrangement.py",
+          "bytes": 13072,
+          "sha256": "003e3c03e98d5f42fd353a6f9e412fa143c9da6cc1c8bf229a2623801a025820"
+        },
+        {
+          "path": "scripts/art_cutout.py",
+          "bytes": 4747,
+          "sha256": "4625ac2e817d7e6a29aaffa3fe29d9fa10bf31225f3b6f4ea03e2a74b854cb4a"
+        },
+        {
+          "path": "scripts/artifact_io.py",
+          "bytes": 16341,
+          "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2"
+        },
+        {
+          "path": "scripts/atlas_palette.py",
+          "bytes": 10098,
+          "sha256": "a2e2fca0ef66ac98ae448835383ed9ca2c95105e5684b47aac0aa837ad50a667"
+        },
+        {
+          "path": "scripts/build_skin.py",
+          "bytes": 11004,
+          "sha256": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a"
+        },
+        {
+          "path": "scripts/coat_material.py",
+          "bytes": 5171,
+          "sha256": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f"
+        },
+        {
+          "path": "scripts/compare_skin.py",
+          "bytes": 13766,
+          "sha256": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61"
+        },
+        {
+          "path": "scripts/composa_mcp.py",
+          "bytes": 32315,
+          "sha256": "24fa2c75b6ef1cf724c10eb6dca34dced1cf50e5e6d261106ae1ff0511105d4a"
+        },
+        {
+          "path": "scripts/dds_variant.py",
+          "bytes": 24140,
+          "sha256": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03"
+        },
+        {
+          "path": "scripts/design_lint.py",
+          "bytes": 23592,
+          "sha256": "3fa4e2d16f5722abddb1210e2d0892f2a6e60230e4f7355c0be4e3345f82b3ef"
+        },
+        {
+          "path": "scripts/detail_sheet.py",
+          "bytes": 11154,
+          "sha256": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599"
+        },
+        {
+          "path": "scripts/fetch_asset.py",
+          "bytes": 6618,
+          "sha256": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924"
+        },
+        {
+          "path": "scripts/finish_preview.py",
+          "bytes": 22833,
+          "sha256": "108a9e618d27668ed4eb52a51b06a2ab6b98f42f7d783128499b0a1b5ed7be64"
+        },
+        {
+          "path": "scripts/inspect_skins.py",
+          "bytes": 34547,
+          "sha256": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe"
+        },
+        {
+          "path": "scripts/panel_lines.py",
+          "bytes": 23879,
+          "sha256": "ef14d1a61906276c78effc3d051639f3f9395c8db0d02ef20b1e6d327756145d"
+        },
+        {
+          "path": "scripts/replica_check.py",
+          "bytes": 35824,
+          "sha256": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919"
+        },
+        {
+          "path": "scripts/replica_measure.py",
+          "bytes": 42388,
+          "sha256": "97f3b881afa935bc097c609a65015e2b07dbe427538b3435904c10365976b03b"
+        },
+        {
+          "path": "scripts/scene_preview.py",
+          "bytes": 47159,
+          "sha256": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c"
+        },
+        {
+          "path": "scripts/structure_layer.py",
+          "bytes": 7795,
+          "sha256": "26440530f59c9ddfbb63b756748c6a77b37dbdbd40a21436b4a05c3c00c9e530"
+        },
+        {
+          "path": "scripts/style_board.py",
+          "bytes": 7857,
+          "sha256": "d3bc243e71007464e0e4de50c20e77093149631abdc1c1637b52a103fd91a702"
+        },
+        {
+          "path": "scripts/surface_map.py",
+          "bytes": 17648,
+          "sha256": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1"
+        },
+        {
+          "path": "scripts/surface_preview.py",
+          "bytes": 49931,
+          "sha256": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214"
+        },
+        {
+          "path": "scripts/test_airframe_setup.py",
+          "bytes": 6835,
+          "sha256": "0021f9fef15b6b1ebfc4709411c97506dd9a2a484a47f0191e344461c758ad9b"
+        },
+        {
+          "path": "scripts/test_arrangement.py",
+          "bytes": 6311,
+          "sha256": "dde8c21d27af1458dfa18e80e4ec67e780d37397d362892b50ab321334649912"
+        },
+        {
+          "path": "scripts/test_art_cutout.py",
+          "bytes": 1872,
+          "sha256": "8cd2fe1ee9eaca186e22803124754c5ab325620052c0dbf3bf28496edc062221"
+        },
+        {
+          "path": "scripts/test_artifact_io.py",
+          "bytes": 17327,
+          "sha256": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5"
+        },
+        {
+          "path": "scripts/test_atlas_palette.py",
+          "bytes": 2141,
+          "sha256": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994"
+        },
+        {
+          "path": "scripts/test_cli_gates.py",
+          "bytes": 9607,
+          "sha256": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22"
+        },
+        {
+          "path": "scripts/test_coat_material.py",
+          "bytes": 2798,
+          "sha256": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611"
+        },
+        {
+          "path": "scripts/test_comparison.py",
+          "bytes": 1934,
+          "sha256": "d63f3e3d30c617345273f46c7f5d59a59d62654c907cb0f5d85fe0c7a71281a8"
+        },
+        {
+          "path": "scripts/test_dds_variant.py",
+          "bytes": 11029,
+          "sha256": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542"
+        },
+        {
+          "path": "scripts/test_design_lint.py",
+          "bytes": 9942,
+          "sha256": "6d6c3020177a595391c474e4bb709411760faa0f2bc05b9b9701ccebdf70416c"
+        },
+        {
+          "path": "scripts/test_detail_sheet.py",
+          "bytes": 2785,
+          "sha256": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00"
+        },
+        {
+          "path": "scripts/test_finish_preview.py",
+          "bytes": 19885,
+          "sha256": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932"
+        },
+        {
+          "path": "scripts/test_io_tools.py",
+          "bytes": 10098,
+          "sha256": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa"
+        },
+        {
+          "path": "scripts/test_panel_lines.py",
+          "bytes": 5654,
+          "sha256": "2a8cf9a155fa2082067289e8f303a3a225f997d552d79e127cdf2aad676b6f2b"
+        },
+        {
+          "path": "scripts/test_projection_contract.py",
+          "bytes": 38578,
+          "sha256": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc"
+        },
+        {
+          "path": "scripts/test_replica_check.py",
+          "bytes": 9066,
+          "sha256": "0669de38b8478f8ca5da3a18be5ee27a9e5aa73f123f4029af7db116d5b604cd"
+        },
+        {
+          "path": "scripts/test_replica_measure.py",
+          "bytes": 9694,
+          "sha256": "f4fefc2b40dfa11a34dd98fdaf95d5aa0c0090f2ad7b91010451acf374a8ffc9"
+        },
+        {
+          "path": "scripts/test_scene_preview.py",
+          "bytes": 36142,
+          "sha256": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351"
+        },
+        {
+          "path": "scripts/test_structure_layer.py",
+          "bytes": 1998,
+          "sha256": "ee6e284eeb0015ac1e0726fc8cd2ea39e4c256742636bd7e678a02d87a236a7c"
+        },
+        {
+          "path": "scripts/test_style_board.py",
+          "bytes": 2283,
+          "sha256": "7c9ec3d6c60547562530998628b4185bc4a2899e3af4bcb35444e97a9728b7c4"
+        },
+        {
+          "path": "scripts/test_surface_map.py",
+          "bytes": 7814,
+          "sha256": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc"
+        },
+        {
+          "path": "scripts/test_surface_workflow.py",
+          "bytes": 8315,
+          "sha256": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994"
+        },
+        {
+          "path": "scripts/test_vector_paint.py",
+          "bytes": 17492,
+          "sha256": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba"
+        },
+        {
+          "path": "scripts/uv_frame.py",
+          "bytes": 9921,
+          "sha256": "d55870280bab95cfe208fa962b5bcc2a99dfc7eb65924f192c8025b5d4b521ae"
+        },
+        {
+          "path": "scripts/vector_paint.py",
+          "bytes": 68494,
+          "sha256": "fd8f682dbd98899292cf92cd0ec5b478201a3e0cc4830c1b3e584ec0c40dd466"
+        }
+      ]
+    },
+    {
+      "id": "war-thunder-tank-style-endfield",
+      "tag": "war-thunder-tank-style-endfield/v1.4",
+      "original_archive_sha256": "68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "bytes": 8526,
+          "sha256": "9d22719da4b6e3bb622670508edbdf6d02830088e5b37e87ecd88a1325dce365"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "bytes": 309,
+          "sha256": "25d45847fcfa63f8cb7f02810a8c78d650c05f79417df4599fe6b535395a185a"
+        },
+        {
+          "path": "assets/decals/emblem-extraction.cmps",
+          "bytes": 37673,
+          "sha256": "45fc06a58c0b7e1fbdb18fd3748af0f4122b4b73c4c16ba6517f305dfecfbace"
+        },
+        {
+          "path": "assets/decals/endfield-industries-en-native.png",
+          "bytes": 2847,
+          "sha256": "852ba24a66ceb04f78a1fd6537f79c975a91c99d077d16fdae69b684472c05de"
+        },
+        {
+          "path": "assets/manifest.json",
+          "bytes": 24592,
+          "sha256": "1fbf554e0a8283349335b5ce476c248dfa4feadb487f390b779a448acb63133c"
+        },
+        {
+          "path": "assets/official/endfield-industries-cn.png",
+          "bytes": 64868,
+          "sha256": "724fbf04a4a661c5c16688c49febb68b2be0bd8fbfe7c83895350876d115be04"
+        },
+        {
+          "path": "assets/official/endfield-title-en.png",
+          "bytes": 33074,
+          "sha256": "307dc277774046f03f2072119eb7f1feebf8865d2d81a20ee90c902748fc0d17"
+        },
+        {
+          "path": "assets/official/endfield-title-en.svg",
+          "bytes": 3910,
+          "sha256": "cb3b7342129919c9254acb46d16259d7ee866d8480f2afeada64b4f4695c034f"
+        },
+        {
+          "path": "assets/official/site-color-bar.png",
+          "bytes": 381,
+          "sha256": "c3442edfbe3194b18d65d57d5eae45f54f849a25d46bfa34fc2812b5ffae6dda"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B01.png",
+          "bytes": 378049,
+          "sha256": "5174b5f46d6e00c0c01eeca5ebb27f05a22eee2f05f768005eea79604ff7a4b8"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B02.png",
+          "bytes": 693245,
+          "sha256": "e654f662f8e36cc19ab96d13af802b228be79b5cbe1c3074b674037771aa79f6"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B03.png",
+          "bytes": 748455,
+          "sha256": "74e8124aff316eea46682bc4588507216b332443fabfc81f7fdaef4b50e2803c"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B04.png",
+          "bytes": 167357,
+          "sha256": "66a09f5227acb79e33e8c1286322b33a68bf0532f8618638608aa59b1fcac4e4"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B05.png",
+          "bytes": 153273,
+          "sha256": "6ceccced1c9fbbec23de579a3588db2a11c76060e494cea696a44a6a6ecc8351"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B06.png",
+          "bytes": 210593,
+          "sha256": "32a428546e856e160af58886bc7474e49d374ac2fe8c542d1fd9cce5f01da7d2"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B07.png",
+          "bytes": 352576,
+          "sha256": "8bbd442d0272c5a6f639cbd11b4aa988ff7bc7e0af6cd3a3b387a15156752dcd"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B08.png",
+          "bytes": 416591,
+          "sha256": "88b7e00e2c976ef857e8df5637e0c22d53dd1fb5e9162bdfda721849d19c4716"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B09.png",
+          "bytes": 300363,
+          "sha256": "260b0b912946590f61406f137676e3d87c4b88b42e7f1e03e5b2b34112af8ed7"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B10.png",
+          "bytes": 675620,
+          "sha256": "29f63046c6540a8548f85f3ced935e953cbb6d06c76ebc7208ee3cc8c4b833f8"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B11.png",
+          "bytes": 479438,
+          "sha256": "16fb0edb2aa9c2f0d734b194451b4576f759ccfb3cb347dfe5522852b66fc8a1"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B12.png",
+          "bytes": 169088,
+          "sha256": "0d3dc6940a3c737fde594b834da0f72a414d20ead6c9e744b5ce18a0d4f693ea"
+        },
+        {
+          "path": "assets/reference-a7v/crops/B13.png",
+          "bytes": 53542,
+          "sha256": "9bb6b9e9a2a2d4e2d68502cb73355f15d59a2a4fe517bb6de9407d7e777d15db"
+        },
+        {
+          "path": "assets/reference-a7v/crops/G01.png",
+          "bytes": 612045,
+          "sha256": "3989b4d979d74a674b295d3d3547ba4aaae89882de5b230d3af1fb4c183848e9"
+        },
+        {
+          "path": "assets/reference-a7v/crops/G02.png",
+          "bytes": 171870,
+          "sha256": "fe9571f8fb423c209da5092a468abb7a7ad88dc007f8a7bda4a1558cd7922138"
+        },
+        {
+          "path": "assets/reference-a7v/crops/M01.png",
+          "bytes": 237725,
+          "sha256": "f640dfd5235048b1a9cdc225e263aa25d723ceb9a7b286243cd028491400d1a7"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T01.png",
+          "bytes": 129328,
+          "sha256": "7f6c191d0005e14a73c6e46cc5f9cce8e7f9184517142e5311f6ddb992a93c48"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T02.png",
+          "bytes": 280703,
+          "sha256": "8943317ffa1615c8cdcef140cd87c3a41b696dd7e15fe14085b6b3761e2dbeb3"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T03.png",
+          "bytes": 208489,
+          "sha256": "e6e84a8151cd4522faaa8428e3514b689f2a61d16dc542f718655d67580e8cb5"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T04.png",
+          "bytes": 240109,
+          "sha256": "4a04d1da129b533f342e90c04b374bf96f9e26b76514d99c1d341de32981011f"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T05.png",
+          "bytes": 33617,
+          "sha256": "373f787ad14e7710cbe5f43d1acd8f84287f23ddb233c5421ae9b43e5eae1dab"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T06.png",
+          "bytes": 61412,
+          "sha256": "4114f287f8b1bef68788b5a71f4a4903ca6d41d260a7423ca79be7b91a5d2d93"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T07.png",
+          "bytes": 29560,
+          "sha256": "380e12c471032117b705932826a8df606d02a8485217adf538f1484790b71c20"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T08.png",
+          "bytes": 177952,
+          "sha256": "8ef07ab74db4c900ec7c664fd7ffff0dbbfb10dd3e2ad967778365971d996ddb"
+        },
+        {
+          "path": "assets/reference-a7v/crops/T09.png",
+          "bytes": 126692,
+          "sha256": "5a1abf32ae05096d1f0b7db3cac4a2f6ef7ee6776690bb259a7715edd306f619"
+        },
+        {
+          "path": "assets/reference-a7v/element-catalog.json",
+          "bytes": 25003,
+          "sha256": "41d0c3dbbc093ac23025070e67da91cad1ca0be2e73ab1c2b31ea5e25b772469"
+        },
+        {
+          "path": "assets/reference-a7v/front-panel-map.json",
+          "bytes": 1237,
+          "sha256": "3148c9fe0236dc7b0616af3278fb6752e7502639eb1dd8a8ed38dd3cb518930e"
+        },
+        {
+          "path": "assets/reference-a7v/uv/leopard_2a7v_body.png",
+          "bytes": 25232574,
+          "sha256": "3eb893af0ca78c7f7ad0585bf0380cca2412f19d309cd969dbefb7039a20615e"
+        },
+        {
+          "path": "assets/reference-a7v/uv/leopard_2a7v_gun.png",
+          "bytes": 3284320,
+          "sha256": "0fcf97891f9237282b6748042092cd955cb0b6fcf7777ce9af807c85781107db"
+        },
+        {
+          "path": "assets/reference-a7v/uv/leopard_2a7v_turret.png",
+          "bytes": 21138418,
+          "sha256": "f8442309c8f0d7ee76969ac1200855d30477b66f86e64c192140dd005ecc6dfd"
+        },
+        {
+          "path": "assets/reference-a7v/uv/mg_mount_leopard_2a7v.png",
+          "bytes": 255654,
+          "sha256": "2bc7a03a985e75e7086f1f535f31a403beff228cda993ea2cec99c965215c614"
+        },
+        {
+          "path": "assets/study/UV-study-overview.png",
+          "bytes": 2725843,
+          "sha256": "0f1e9354b938d9c791972ae158040a31b067829c481a259fe0da591497de2bd5"
+        },
+        {
+          "path": "assets/study/element-vocabulary.png",
+          "bytes": 1967893,
+          "sha256": "81c7a4860e7cf740be84bbf05df6ca7fcef7f34f9d7b994565eed59d0cc50f99"
+        },
+        {
+          "path": "references/a7v-uv-elements.md",
+          "bytes": 7539,
+          "sha256": "22158ffea6059c821026b0af034fceb6c08687505f178d0b7a77fadee47c40dd"
+        },
+        {
+          "path": "references/assets.md",
+          "bytes": 3135,
+          "sha256": "fa411b2b8d20a9103dece301605801a077095d4a584be1825441cb3b4c2221a3"
+        },
+        {
+          "path": "references/editor-and-extraction.md",
+          "bytes": 3068,
+          "sha256": "33031323c021d977995c71d5e8ec7bcd3c0c7c362e462e411e17398c38265873"
+        },
+        {
+          "path": "references/endfield-style.md",
+          "bytes": 3288,
+          "sha256": "f2cededd91e943313fdb8f451f4b2c0c53bb90e2b1e1f00a2403c57fb274a37d"
+        },
+        {
+          "path": "references/formats.md",
+          "bytes": 3611,
+          "sha256": "cdc391075dba0353dc0de0da8aa792c511470b8c2ac2a99becd1224520eaa266"
+        },
+        {
+          "path": "references/independent-layout.md",
+          "bytes": 3884,
+          "sha256": "60bea84de4e864a92e9ba8bd7517f3d2f203115617d5d60923f7b86e1de9a8b1"
+        },
+        {
+          "path": "references/native-panel-transfer.md",
+          "bytes": 2339,
+          "sha256": "809a327801626b2b7db12d5f5e0e51c91227050426f53759c3d065f62e6f2cd8"
+        },
+        {
+          "path": "references/reprojection-tool.md",
+          "bytes": 6052,
+          "sha256": "15b4534485545211a98acc9ee1cf1fffbad4c7dd04718ee2c9aa25729d0d9520"
+        },
+        {
+          "path": "references/surface-adaptation.md",
+          "bytes": 7040,
+          "sha256": "9c45581accb4b5f71a5525599c1eb92c5d1c57d6a0086c2dc4e57843e0ead317"
+        },
+        {
+          "path": "scripts/check_uv_reprojection.py",
+          "bytes": 7727,
+          "sha256": "ed2eb53c8fefb2d7f2ba95467525d48c9927b2aa4804197a10d9ece568270d2a"
+        },
+        {
+          "path": "scripts/composa_mcp.py",
+          "bytes": 31217,
+          "sha256": "726ba00eff5405f17b8d4391c2dbeec2b21a72f2e5c1b57a66c0df746bc6c345"
+        },
+        {
+          "path": "scripts/export_uv_reference.py",
+          "bytes": 2681,
+          "sha256": "fc48b617c78894ba599c481912c4ca7a30b4bc9f79baa9bd183346eeff699cc3"
+        },
+        {
+          "path": "scripts/inspect_skin.py",
+          "bytes": 3042,
+          "sha256": "53a43264d29948a03c57ab1178f0705c21f3962c1cc09f03f2d5dbb48ceb7ab7"
+        },
+        {
+          "path": "scripts/reproject_surface.py",
+          "bytes": 17927,
+          "sha256": "bef119770efedfbd12fb5841a2a55c215d1ff3b7d867f529d6e65dcfb9a1e706"
+        },
+        {
+          "path": "scripts/tank_core.py",
+          "bytes": 5843,
+          "sha256": "d7b26a85401645629cb2d1f10b2b4d11d1c578b5040f2b9cfb8938d049dd403c"
+        },
+        {
+          "path": "scripts/tank_preview.py",
+          "bytes": 11983,
+          "sha256": "bcd3aacd0d9ab7c2a96a8219dd3326b9032a0eaad8575c9b90912ba734c1b0aa"
+        }
+      ]
+    }
+  ]
+}
