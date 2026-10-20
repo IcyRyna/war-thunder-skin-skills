@@ -32,7 +32,13 @@ uniform sampler2D source_c,source_n,source_base_n,target_c,target_n,design_logo;
 uniform vec3 source_offset;
 uniform float radius;
 uniform int material_role;
+uniform int normal_mode;
+#ifdef TRANSFER_AO
+uniform sampler2D source_ao,target_ao;
+layout(location=3) out vec4 out_ao;
+#endif
 float owner_depth_override=-1.;
+float source_ao_weight=1.;
 float boxDist(vec3 p,vec3 lo,vec3 hi){vec3 q=max(max(lo-p,p-hi),vec3(0));return dot(q,q);}
 vec3 baryClosest(vec3 p,vec3 a,vec3 b,vec3 c){
  vec3 ab=b-a,ac=c-a,ap=p-a;float d1=dot(ab,ap),d2=dot(ac,ap);
@@ -85,6 +91,9 @@ vec3 normalValue(vec4 value){vec2 xy=value.ga*2.-1.;xy*=min(1.,.995/max(length(x
 void main(){
  vec3 N=normalize(norm);vec4 stock=texture(target_c,target_tc),pbr=texture(target_n,target_tc);
  float paint=smoothstep(.10,.70,stock.a);
+ #ifdef TRANSFER_AO
+ vec4 transferred_ao=texture(target_ao,target_tc);
+ #endif
  vec3 bare=stock.rgb;
  vec3 fallback=mix(bare,N.y>.4?vec3(.165):vec3(.73,.735,.72),paint);
  vec4 color=vec4(fallback,1);float dist,align;vec3 weights;bool matched=false;
@@ -94,6 +103,9 @@ void main(){
   vec2 u0=vec2(tris[q].w,1.-tris[q+3].w),u1=vec2(tris[q+1].w,1.-tris[q+4].w),u2=vec2(tris[q+2].w,1.-tris[q+5].w);
   vec2 st=u0*weights.x+u1*weights.y+u2*weights.z;
   color=vec4(texture(source_c,st).rgb,1);
+  #ifdef TRANSFER_AO
+  transferred_ao=texture(source_ao,st);
+  #endif
   vec4 authored=texture(source_n,st),old_base=texture(source_base_n,st);
   vec3 sn=normalize(tris[q+3].xyz*weights.x+tris[q+4].xyz*weights.y+tris[q+5].xyz*weights.z);
   mat3 sf=tangentFrame(sn,tris[q+1].xyz-tris[q].xyz,tris[q+2].xyz-tris[q].xyz,u1-u0,u2-u0);
@@ -102,13 +114,17 @@ void main(){
   float trust=(1.-smoothstep(.003,.035,dist))*smoothstep(.85,.99,align);
   vec3 world=normalize(tf*normalValue(pbr)+delta*trust);
   vec3 tn=transpose(tf)*world;
-  pbr.ga=clamp(tn.xy*.5+.5,0.,1.);
+  if(normal_mode==1)tn=transpose(tf)*(sf*normalValue(authored));
+  if(normal_mode!=2)pbr.ga=clamp(tn.xy*.5+.5,0.,1.);
   pbr.rb=authored.rb;
  }
  bool recoated=false;
  applyCoating(pos,N,stock,paint,matched,color,pbr,recoated);
  out_c=vec4(color.rgb,1);out_n=pbr;
  out_debug=vec4(matched?1.:0.,clamp(dist/radius,0.,1.),align,1.);
+ #ifdef TRANSFER_AO
+ out_ao=mix(texture(target_ao,target_tc),transferred_ao,clamp(source_ao_weight,0.,1.));
+ #endif
  gl_FragDepth=owner_depth_override>=0.?owner_depth_override:(recoated?.02:(matched?.15+.20*clamp(dist/radius,0.,1.):.8));
 }
 '''
@@ -196,6 +212,10 @@ def main():
     sys.path.insert(0,str(resolve(runtime_scripts) if runtime_scripts else Path(__file__).resolve().parent))
     from tank_core import load_obj,load_image,write_json
     part=cfg['parts'][a.part];paths={k:resolve(v) for k,v in part['inputs'].items()}
+    normal_modes={'delta':0,'source':1,'target':2}
+    if part.get('normal_mode','delta') not in normal_modes:raise ValueError('normal_mode must be delta, source or target')
+    transfer_ao='source_ao' in paths or 'target_ao' in paths
+    if transfer_ao and not {'source_ao','target_ao'}<=paths.keys():raise ValueError('AO transfer requires both source_ao and target_ao')
     required={'source_model','target_model','source_c','source_n','source_base_n','target_c','target_n','coating_shader'}
     missing=required-paths.keys()
     if missing:raise ValueError('Missing input fields: '+', '.join(sorted(missing)))
@@ -235,7 +255,9 @@ def main():
         paintable=component_coating(inverse.reshape(-1,3),face_area,len(vertices),minimum_component_area)
     shader=paths['coating_shader'].read_text(encoding='utf-8')
     ctx=moderngl.create_standalone_context(require=430)
-    prog=ctx.program(vertex_shader=VS,fragment_shader=FS.replace('// COATING_HOOK',shader))
+    fragment=FS.replace('// COATING_HOOK',shader)
+    if transfer_ao:fragment=fragment.replace('#version 430','#version 430\n#define TRANSFER_AO')
+    prog=ctx.program(vertex_shader=VS,fragment_shader=fragment)
     boxes,triangles=bvh(source,sf)
     buffers=[ctx.buffer(boxes.tobytes()),ctx.buffer(triangles.tobytes())]
     for i,b in enumerate(buffers):b.bind_to_storage_buffer(i)
@@ -246,7 +268,7 @@ def main():
         if name in prog:attributes.append(name)
     vb=ctx.buffer(vertices.tobytes());vao=ctx.vertex_array(prog,[(vb,' '.join(fields),*attributes)])
     textures=[]
-    for i,name in enumerate(['source_c','source_n','source_base_n','target_c','target_n','design_logo']):
+    for i,name in enumerate(['source_c','source_n','source_base_n','target_c','target_n','design_logo','source_ao','target_ao']):
         if name not in prog:continue
         image=load_image(paths[name]) if name in paths else Image.new('RGBA',(1,1),(0,0,0,0))
         t=ctx.texture(image.size,4,image.tobytes(),alignment=1)
@@ -255,7 +277,8 @@ def main():
     prog['radius'].value=part.get('radius',.18)
     prog['source_offset'].value=tuple(part.get('source_offset',[0,0,0]))
     if 'material_role' in prog:prog['material_role'].value=part['role']
-    w,h=part['size'];images=[ctx.texture((w,h),4) for _ in range(3)]
+    if 'normal_mode' in prog:prog['normal_mode'].value=normal_modes[part.get('normal_mode','delta')]
+    w,h=part['size'];images=[ctx.texture((w,h),4) for _ in range(4 if transfer_ao else 3)]
     fbo=ctx.framebuffer(images,ctx.depth_renderbuffer((w,h)));fbo.use();fbo.clear(0,0,0,0,depth=1.)
     ctx.enable(moderngl.DEPTH_TEST);ctx.disable(moderngl.CULL_FACE)
     for y in range(0,h,512):
@@ -263,8 +286,9 @@ def main():
             ctx.scissor=(x,y,min(512,w-x),min(512,h-y));vao.render();ctx.finish()
         print(a.part,'row',min(y+512,h),'/',h,flush=True)
     ctx.scissor=None
-    arrays=[np.frombuffer(fbo.read(attachment=i,components=4,alignment=1),dtype='u1').reshape(h,w,4)[::-1].copy() for i in range(3)]
-    color,normal,debug=arrays
+    arrays=[np.frombuffer(fbo.read(attachment=i,components=4,alignment=1),dtype='u1').reshape(h,w,4)[::-1].copy() for i in range(4 if transfer_ao else 3)]
+    color,normal,debug=arrays[:3]
+    ao=arrays[3] if transfer_ao else None
     used=(color[:,:,3]>0).astype('u1')
     # Explicit masks are case data. Include collapsed walls' bilinear sampling footprint.
     e1=uvs[:,1]-uvs[:,0];e2=uvs[:,2]-uvs[:,0]
@@ -289,7 +313,9 @@ def main():
     original_used=used.copy()
     for _ in range(8):
         expanded=cv2.dilate(used,np.ones((3,3),dtype='u1'));ys,xs=np.where((expanded>0)&(used==0))
-        bleed_ring(color,normal,used,ys,xs);used=expanded
+        bleed_ring(color,normal,used,ys,xs)
+        if transfer_ao:bleed_ring(ao,ao,used,ys,xs)
+        used=expanded
     color[used==0]=[42,42,42,0];normal[used==0]=[125,128,6,128]
     color[:,:,3]=0
     Image.fromarray(color).save(output/'color.png',compress_level=3)
@@ -297,6 +323,9 @@ def main():
     Image.fromarray(normal).save(output/'normal.png',compress_level=3)
     Image.fromarray(original_used*255).save(output/'used.png')
     Image.fromarray(debug[:,:,:3]).save(output/'mapping-diagnostic.png')
+    if transfer_ao:
+        ao[used==0]=255
+        Image.fromarray(ao).save(output/'ao.png',compress_level=3)
     matched=(debug[:,:,0]>200)&(original_used>0)
     write_json(output/'bake-report.json',dict(part=a.part,size=[w,h],used_texels=int(original_used.sum()),
                matched_texels=int(matched.sum()),matched_used_fraction=float(matched.sum()/max(1,original_used.sum())),
@@ -304,7 +333,8 @@ def main():
                non_owner_tiled_faces_excluded=excluded_faces,minimum_uv_owner_density=density_limit,
                coating_component_min_area=minimum_component_area,paintable_faces=int(paintable.sum()),
                method='Per-texel closest surface BVH; original source UV interpolation per hit, no cross-island vertex UV extrapolation.',
-               normal_method='Source author minus source native GA normal delta, transformed between tangent frames; target structural normal retained with distance/alignment trust.',
+               normal_mode=part.get('normal_mode','delta'),ao_transferred=transfer_ao,
+               normal_method=('Source authored normal transformed between tangent frames' if part.get('normal_mode')=='source' else 'Target normal with optional source-minus-base delta'),
                caveat='Mapping coverage is diagnostic and does not establish visual correctness; inspect target model views.'))
     ctx.release()
     print('BAKED',a.part,flush=True)

@@ -77,6 +77,33 @@ if(p.y>.15){color.rgb=vec3(.1);pbr=texture(target_n,target_tc);recoated=true;}
             with Image.open(root/name/'normal.png') as im:
                 normal=im.getpixel((24,32))
                 assert normal[1]==128 and normal[3]==128,normal
+        Image.new('RGBA',(16,16),(128,160,102,100)).save(root/'authored-normal.png')
+        Image.new('RGBA',(16,16),(60,88,20,151)).save(root/'target-normal.png')
+        Image.new('RGBA',(16,16),(73,91,47,255)).save(root/'source-ao.png')
+        Image.new('RGBA',(16,16),(211,211,211,255)).save(root/'target-ao.png')
+        (root/'copy.glsl').write_text('void applyCoating(vec3 p,vec3 N,vec4 stock,float paint,bool matched,inout vec4 color,inout vec4 pbr,inout bool recoated){}',encoding='utf-8')
+        direct=json.loads(json.dumps(cfg));panel=direct['parts']['panel']
+        panel['normal_mode']='source';panel['output']='source-mode'
+        panel['inputs'].update(source_n='authored-normal.png',target_n='target-normal.png',coating_shader='copy.glsl',source_ao='source-ao.png',target_ao='target-ao.png')
+        path=root/'source-mode.json';path.write_text(json.dumps(direct),encoding='utf-8')
+        cp=subprocess.run([sys.executable,'-B',str(script),'--config',str(path),'--part','panel'],capture_output=True,text=True)
+        if cp.returncode:raise RuntimeError(cp.stdout+'\n'+cp.stderr)
+        with Image.open(root/'source-mode/normal.png') as im:
+            source_normal=im.getpixel((24,32))
+            assert source_normal==(128,160,102,100),source_normal
+        with Image.open(root/'source-mode/ao.png') as im:
+            source_ao=im.getpixel((24,32))
+            assert source_ao==(73,91,47,255),source_ao
+        (root/'native-ao.glsl').write_text('void applyCoating(vec3 p,vec3 N,vec4 stock,float paint,bool matched,inout vec4 color,inout vec4 pbr,inout bool recoated){source_ao_weight=0.;}',encoding='utf-8')
+        panel['normal_mode']='target';panel['output']='target-mode'
+        panel['inputs']['coating_shader']='native-ao.glsl'
+        path=root/'target-mode.json';path.write_text(json.dumps(direct),encoding='utf-8')
+        cp=subprocess.run([sys.executable,'-B',str(script),'--config',str(path),'--part','panel'],capture_output=True,text=True)
+        if cp.returncode:raise RuntimeError(cp.stdout+'\n'+cp.stderr)
+        with Image.open(root/'target-mode/normal.png') as im:
+            target_normal=im.getpixel((24,32));assert target_normal==(128,88,102,151),target_normal
+        with Image.open(root/'target-mode/ao.png') as im:
+            target_ao=im.getpixel((24,32));assert target_ao==(211,211,211,255),target_ao
         assert max(results['unrestricted'][:3])<40,results
         assert min(results['owned'][:3])>220,results
         assert results['owned'][3]==0,results
@@ -85,7 +112,7 @@ if(p.y>.15){color.rgb=vec3(.1);pbr=texture(target_n,target_tc);recoated=true;}
         report={'status':'PASS','actual_pixel_rgba':results,'checks':['Reproduces full-panel contamination by a tiny tiled helper',
                 'UV ownership filter restores the intended white main panel','Material resources resolved through materials.json, not object-name guessing',
                 'Hooks with optimized-out optional uniforms and attributes work','Source models unchanged; caches stay in output',
-                'Color alpha remains zero; target GA normal components remain intact','Packed RGBA resampling preserves raw bands and zero-alpha RGB']}
+                'Color alpha remains zero; target GA normal components remain intact','Packed RGBA resampling preserves raw bands and zero-alpha RGB','Source normal mode transfers authored tangent normal and R/B exactly on identical geometry','Optional AO transfers raw RGBA and produces a filled target atlas','Target normal mode and geometry-specific target AO fallback preserve native data'], 'source_mode_normal_rgba':source_normal,'source_ao_rgba':source_ao}
     if args.out:
         args.out.parent.mkdir(parents=True,exist_ok=True)
         args.out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

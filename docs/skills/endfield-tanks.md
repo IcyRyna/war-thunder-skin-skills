@@ -2,9 +2,9 @@
 
 用于 War Thunder 现代坦克的终末地工业风涂装。结合 A7V / A7HU / A6HEL 的适配方法，整理了黑白黄分区、工业标志、粗细路线和设备标签的摆放方法。
 
-Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.2
+Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.3
 
-[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.2) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
+[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.3) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
 ## 能做什么
 
@@ -15,6 +15,10 @@ Skill ID：`war-thunder-tank-style-endfield` · 当前版本：1.2
 - 分开处理颜色、结构法线、AO 与粗糙度；清洁涂层保留目标车的螺钉和接缝，消除旧车结构残影。
 - 从目标承载面重新布局，限制图形投射范围，检查圆筒文字、字体层级与设备遮挡。
 - 从最终 DDS 生成七视图与同相机细节对照，核对小字、线条、漆面和材质；按材质保留网格裁切轮廓。
+
+## 原作复刻与材质
+
+相关车型的对应表面可转移原作颜色、完整法线和 AO，并保留实际材质响应。结构不同的附件单独适配。原生法线里的表面噪点与机械结构需要区分，不能把通道一致当作清洁漆面的证据。
 
 ## 随包素材
 

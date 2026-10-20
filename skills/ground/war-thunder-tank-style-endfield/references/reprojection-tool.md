@@ -55,6 +55,7 @@ python -B scripts/check_uv_reprojection.py
 
 | 字段 | 含义与边界 |
 |---|---|
+| `normal_mode` | `delta`（默认）转移来源作者减原皮的法线差值；`source` 将原作完整法线转到目标切线框架，供已确认对应的表面复刻；`target` 保留目标 G/A。三种模式仍按来源 R/B 迁移材料，涂层规则可单独控制 |
 | `radius` | 模型坐标单位中的最大搜索距离；先核实导出单位与实际对应关系 |
 | `minimum_uv_owner_density` | 非零时过滤三维面积/UV面积过低的回绘面；默认不启用，不作为跨车型固定阈值 |
 | `coating_component_min_area` | 非零时按连通组件三维面积标记可涂的大面；阈值由当前模型确定 |
@@ -97,3 +98,9 @@ void applyCoating(vec3 p, vec3 N, vec4 stock, float paint,
 输出包括 `color.png`、`color-view.png`、`normal.png`、使用范围、匹配诊断和报告。`color.png` 保留零 Alpha 供固定 `replace_tex` 使用；`color-view.png` 用于编辑器查看。工具不改写来源图像、OBJ 或材质清单，输出目录必须是新版本。
 
 报告的命中比例、过滤面数和零面积 UV 面数仅作诊断。仍需检查真实模型、字标、图形接缝和材料，再打包 DDS。此工具不替代最终游戏内确认。
+
+## 对应表面的原作法线与 AO
+
+需要复刻指定原作且已核实表面对应时，设置 `normal_mode: source`。该模式直接变换原作法线，不把另一辆车的表面噪点叠回去。几何或零件不同的区域用本车结构适配，不能跨车型无条件启用。
+
+可在 `inputs` 同时提供 `source_ao` 和 `target_ao`。工具会按实际命中转移完整 RGBA 数据，输出 `ao.png`，并对未占用纹素扩色。涂层规则可令 `source_ao_weight=0.` 保留本车某个改动构件的 AO，默认 1 使用来源。输出分辨率与颜色图一致；交付时可按 AO 语义独立缩放通道。
