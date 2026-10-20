@@ -8,6 +8,8 @@ Skill ID：`war-thunder-tank-style-endfield` · 已发布版本：1.4
 
 [下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md)
 
+新的布局方法与演示见 [A7V 范本、部件分区和五车型方向](endfield-layout-guide.md)。该页解释候选的新方向，不改变本页对应的 1.4 正式下载。
+
 ## 能做什么
 
 - 安排灰白装甲面、深色机械区、黄色路径与主次标志。
