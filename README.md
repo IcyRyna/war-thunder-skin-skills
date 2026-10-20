@@ -35,3 +35,5 @@
 - [`skills/aircraft/`](skills/aircraft/)：飞机涂装 Skill。
 - [`skills/ground/`](skills/ground/)：地面载具涂装 Skill。
 - [`docs/`](docs/)：功能说明、安装、版本记录和[素材来源](docs/credits.md)。
+
+[Skill 研发流程提案（待审查）](docs/workflow/README.md)
