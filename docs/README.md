@@ -11,6 +11,7 @@
 | 查找源码、工具和配置 | [目录与装配关系](workflow/repository-layout.md) |
 | 整理证据或开展对比实验 | [证据与评测](workflow/evidence-and-evaluation.md) → [检查器契约](../evals/CONTRACT.md) |
 | 检查仓库、构建候选包 | [维护指南](maintaining.md) |
+| 查看终末地0.1.0完整内容 | [规则、分区、五车型、预设与素材全览](skills/wt-style-endfield-0.1.0.md) |
 | 理解终末地布局与跨车型方向 | [A7V 范本、部件分区与五车型图解](skills/endfield-layout-guide.md) |
 | 查看历史版本与来源 | [历史兼容归档](history/README.md) · [版本记录](changelog/README.md) · [素材与参考](credits.md) |
 
