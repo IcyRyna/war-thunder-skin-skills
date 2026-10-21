@@ -32,22 +32,9 @@ python -B tools/repository.py build war-thunder-style-akamywek
 
 候选 ZIP 用于检查和审查。构建操作不安装 Skill，不创建正式版本，不上传 Release。
 
-## 补齐 ENDFIELD 的发布素材
+## 历史兼容包的素材与构建
 
-地面风格的大型素材通过原 1.4 安装包提供。先从[固定 Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4)下载 `.skill.zip` 到 `.cache/releases/`，也可使用已登录且有仓库读取权限的 GitHub CLI：
-
-```bash
-gh release download 'war-thunder-tank-style-endfield/v1.4' --repo IcyRyna/war-thunder-skin-skills --pattern '*.skill.zip' --dir .cache/releases
-```
-
-然后把下载文件作为素材来源传给检查器和构建器：
-
-```bash
-python -B tools/repository.py check war-thunder-tank-style-endfield --asset-archive .cache/releases/war-thunder-tank-style-endfield-v1.4.skill.zip --require-assets
-python -B tools/repository.py build war-thunder-tank-style-endfield --asset-archive .cache/releases/war-thunder-tank-style-endfield-v1.4.skill.zip
-```
-
-素材以仓库清单记录的身份进行核验。不能用其他版本的相似文件补齐，也不能以一份缺素材的包替代完整候选。`.cache/` 与 `dist/` 留在本地，不进入 Git 历史。
+ENDFIELD 历史基线所需的固定素材、下载命令与 `--asset-archive` 用法已集中到[历史版本资料](history/war-thunder-tank-style-endfield-v1.4.md)。原发布索引、标签与附件保留，CI 继续按固定身份核对旧包。
 
 ## 修改与评测
 

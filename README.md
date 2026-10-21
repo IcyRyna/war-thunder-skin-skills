@@ -2,7 +2,7 @@
 
 把原作观察、UV 与材质实验整理成可追溯的制作规则，再通过固定评测和人工审查，装配为可独立使用的 Skill。仓库同时维护飞机与地面载具的风格源码、工程工具、评测契约，以及已有版本的下载入口。
 
-**[研发流程](docs/workflow/README.md) · [终末地布局图解](docs/skills/endfield-layout-guide.md) · [源码与职责](#源码与职责) · [检查与构建](#检查与构建) · [已发布下载](#已发布下载) · [文档导航](docs/README.md)**
+**[研发流程](docs/workflow/README.md) · [终末地布局图解](docs/skills/endfield-layout-guide.md) · [源码与职责](#源码与职责) · [检查与构建](#检查与构建) · [当前推荐下载](#当前推荐下载) · [文档导航](docs/README.md)**
 
 ```mermaid
 flowchart LR
@@ -24,7 +24,7 @@ flowchart LR
 | 研究 `wt-skin-study` | 证据、实验、规则提炼与独立评测的候选工作流 | 开发候选；尚无正式版本 |
 | 工程 `wt-skin-build` | 输入契约、原生 UV、通道、导出与交付检查的候选工作流 | 开发候选；领域工具按包配置装配 |
 | 飞机风格 | Akamywek 1.14 内容及其参考资料 | 已发布基线；源码通过构建器装配 |
-| 地面风格 | ENDFIELD 1.4 内容、领域工具及素材清单 | 已发布基线；完整素材从原 Release 补齐 |
+| 地面风格 | ENDFIELD 布局说明、车型方向与既有兼容源码 | 新执行包处于候选阶段；兼容包归入历史版本 |
 | 飞机兼容包 | `war-thunder-user-skins` 3.14 内容 | 保留旧调用入口与既有版本线 |
 | 载具配置 | profile schema 与合成示例 | 尚无已验证的真实载具 profile |
 | 评测 | 工作流契约、记录检查器与回归测试 | 验证结构和证据关联；视觉与游戏结果另行记录 |
@@ -35,17 +35,16 @@ flowchart LR
 
 [终末地布局：A7V 范本、部件分区与五车型方向](docs/skills/endfield-layout-guide.md) 提供原作关系、侧前后顶示意和可选兜底。演示图供读者理解，执行 Skill 通过规则、结构化资料及必要素材表达同一套方法；车型方向可以改写，预设可以不用。
 
-## 已发布下载
+## 当前推荐下载
 
-直接使用已有工作流时，从以下 Release 的 **Assets** 下载 `.skill.zip`。每个包自带所需脚本和参考资料，可以单独安装。
+以下是当前推荐的正式安装包。从对应 Release 的 **Assets** 下载 `.skill.zip`，各包自带所需脚本和参考资料，可以单独安装。终末地新执行包仍处于候选阶段，既有兼容包放在[历史版本](docs/history/README.md)。
 
 | 用途 | 已发布版本 | 说明与历史 |
 | --- | --- | --- |
 | 二次元固定翼喷气机涂装 | **[下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14)** | [功能说明](docs/skills/jet-liveries.md) · [完整更新记录](docs/changelog/war-thunder-user-skins.md) |
 | Akamywek 风格飞机涂装 | **[下载 1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14)** | [风格说明](docs/skills/akamywek.md) · [完整更新记录](docs/changelog/war-thunder-style-akamywek.md) |
-| 终末地风格坦克涂装 | **[下载 1.4](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4)** | [能力与素材](docs/skills/endfield-tanks.md) · [完整更新记录](docs/changelog/war-thunder-tank-style-endfield.md) |
 
-**[安装与运行环境](docs/installation.md) · [下载说明与版本索引](releases/README.md) · [全部历史 Releases](https://github.com/IcyRyna/war-thunder-skin-skills/releases)**
+**[安装与运行环境](docs/installation.md) · [历史版本](docs/history/README.md) · [下载说明与发布档案](releases/README.md) · [全部历史 Releases](https://github.com/IcyRyna/war-thunder-skin-skills/releases)**
 
 ## 源码与职责
 
@@ -82,7 +81,7 @@ python -B tools/repository.py build wt-skin-study
 
 最后一条命令生成 `dist/wt-skin-study-candidate.zip`，供候选审查使用。其他包用 `list` 输出的 ID 构建。候选构建不会创建正式版本、上传 Release 或安装 Skill。
 
-ENDFIELD 的完整构建需要原 1.4 Release 中的素材补充包；下载、校验和 `--asset-archive` 用法见[维护指南](docs/maintaining.md)。默认仓库检查与完整素材检查的范围不同，缺失的外部素材必须在完整构建前补齐。
+ENDFIELD 兼容源码的历史资源补齐与构建方法保存在[历史版本](docs/history/README.md)。默认源码检查与完整素材检查的范围不同；构建历史基线时仍须提供清单固定的资源。
 
 ## 一轮研发如何推进
 

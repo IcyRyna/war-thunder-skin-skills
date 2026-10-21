@@ -4,7 +4,7 @@
 
 | 目的 | 获取方式 |
 | --- | --- |
-| 使用已有正式工作流 | 从[下载索引](../releases/README.md)进入对应 Release，下载 `.skill.zip` |
+| 使用已有正式工作流 | 从[当前推荐下载](../releases/README.md)进入对应 Release，下载 `.skill.zip` |
 | 检查新研究、工程模块或源码改动 | 按[维护指南](maintaining.md)构建 `dist/<skill-id>-candidate.zip`，先检查和审查完整包 |
 
 仓库中的 `src/` 保存创作源码，公共脚本与部分大型素材由构建器装配。直接复制某个源码子目录可能缺少运行依赖。GitHub 自动提供的 Source code ZIP 用于获取源码；正式安装使用 Release 的独立附件。
@@ -13,10 +13,10 @@
 
 ## 下载正式安装包
 
-从[下载索引](../releases/README.md)选择工作流，进入对应 Release，在 **Assets** 中下载以 `.skill.zip` 结尾的独立安装包。解压后保留整个 Skill 文件夹，`SKILL.md`、`references/`、`scripts/` 和已有的 `assets/` 保持在同一层级。
+从[当前推荐下载](../releases/README.md)选择工作流，进入对应 Release，在 **Assets** 中下载以 `.skill.zip` 结尾的独立安装包。解压后保留整个 Skill 文件夹，`SKILL.md`、`references/`、`scripts/` 和已有的 `assets/` 保持在同一层级。
 
 ```text
-war-thunder-tank-style-endfield/
+war-thunder-user-skins/
 ├── SKILL.md
 ├── agents/
 ├── references/
@@ -45,11 +45,11 @@ Codex 的本地发现路径依据 [OpenAI 官方 Skills 文档](https://learn.ch
 使用 $war-thunder-user-skins，为指定喷气机制作角色主题涂装。
 ```
 
-Claude Code 可用 `/war-thunder-user-skins` 调用，或在对话中说明需要使用的工作流。三个已发布 Skill 的 ID 分别是：
+Claude Code 可用 `/war-thunder-user-skins` 调用，或在对话中说明需要使用的工作流。当前推荐正式包的 Skill ID 为：
 
 - `war-thunder-user-skins`
 - `war-thunder-style-akamywek`
-- `war-thunder-tank-style-endfield`
+历史兼容包另见[历史版本](history/README.md)；旧包仍按其原 Skill ID 识别。
 
 提供目标载具、原始模板或 DDS、参考图片与期望输出，会帮助助手选择对应的制作分支。
 

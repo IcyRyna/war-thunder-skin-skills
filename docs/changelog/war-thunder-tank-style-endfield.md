@@ -2,7 +2,7 @@
 
 面向现代坦克的终末地工业风涂装，结合黑白黄构图、工业标志、路线节点与原生 UV 适配，附完整参考素材。
 
-[当前版本 1.4](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [功能介绍](../skills/endfield-tanks.md)
+[历史兼容版 1.4](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [历史说明](../history/war-thunder-tank-style-endfield-v1.4.md)
 
 | 版本 | 更新内容 | 下载 |
 | --- | --- | --- |
