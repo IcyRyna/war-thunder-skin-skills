@@ -14,4 +14,4 @@
 - 官方视觉参考：[Arknights: Endfield](https://endfield.gryphline.com/en-us)。
 - 随包保留图集、裁片和标志的来源、处理方式与尺寸信息，见 `assets/manifest.json` 与 `references/a7v-uv-elements.md`。
 
-官方标志、角色与游戏资源的权利属于相应权利人；参考涂装的原创图形编排属于其作者。来源标注与制作方法说明随素材保留。
+上述链接用于标注视觉参考与素材来源；临摹研究、制作方法及处理记录随对应资料保留。代码与文档的开源许可及参考素材范围见[许可说明](licensing.md)。

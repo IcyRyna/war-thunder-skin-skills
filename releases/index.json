@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "IcyRyna/war-thunder-skin-skills",
-  "scope": "Existing official releases retained; source reorganization does not create or replace releases.",
+  "scope": "Official releases and their distributable source/material supplements; internal backups are retained only in a private draft release.",
   "releases": [
     {
       "tag": "wt-style-endfield/v0.1.0",
@@ -101,12 +101,6 @@
       "prerelease": false,
       "assets": [
         {
-          "name": "research-revision-16-backup-20261019.zip",
-          "bytes": 5160403,
-          "digest": "sha256:155eb3c1dc3b344385505510df0d69bed1aa51fa0cff264a2f2a63c40598d5f0",
-          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.13/research-revision-16-backup-20261019.zip"
-        },
-        {
           "name": "war-thunder-user-skins-v3.13.skill.zip",
           "bytes": 622988,
           "digest": "sha256:f5f42c6a7a89f678d0c62e3310adaecceb7ccd98c7a19a17ee5deca4b8aec4b3",
@@ -121,12 +115,6 @@
       "draft": false,
       "prerelease": false,
       "assets": [
-        {
-          "name": "research-revision-15-backup-20261019.zip",
-          "bytes": 5050159,
-          "digest": "sha256:99b171371d50b8edcee1e5b9bce5568e10b85de36a60df28fbfe395a5df997c7",
-          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.12/research-revision-15-backup-20261019.zip"
-        },
         {
           "name": "war-thunder-user-skins-v3.12.skill.zip",
           "bytes": 618346,
@@ -310,12 +298,6 @@
       "draft": false,
       "prerelease": false,
       "assets": [
-        {
-          "name": "research-revision-12-backup-20261019.zip",
-          "bytes": 4395155,
-          "digest": "sha256:7ac35e85220c62358dea9243bb9a0a5195db1de2e25d152506c00b90eab657d1",
-          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.10/research-revision-12-backup-20261019.zip"
-        },
         {
           "name": "war-thunder-user-skins-v3.10.skill.zip",
           "bytes": 535305,
