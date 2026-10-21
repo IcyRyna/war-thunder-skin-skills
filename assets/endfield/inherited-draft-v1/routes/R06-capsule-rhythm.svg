@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="850" height="300" viewBox="0 0 850 300">
+<title>R06 capsule-rhythm</title><desc>长短胶囊与圆点组成的节奏模块。</desc>
+<style>text{text-rendering:geometricPrecision} .hair{vector-effect:non-scaling-stroke}</style>
+<g id="main-capsule" ><rect x="36" y="50" width="760" height="70" rx="35" fill="#F2E74D" stroke="none" stroke-width="1"/></g><g id="support-capsules" ><rect x="110" y="180" width="250" height="36" rx="18" fill="#222625" stroke="none" stroke-width="1"/><circle cx="440" cy="198" r="18" fill="#222625" stroke="none" stroke-width="1"/><rect x="515" y="180" width="210" height="36" rx="18" fill="#222625" stroke="none" stroke-width="1"/></g></svg>

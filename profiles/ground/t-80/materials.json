@@ -1,0 +1,530 @@
+{
+  "materials": [
+    {
+      "index": 0,
+      "name": "t_80u_body_ussr_camo_green",
+      "obj_name": "t_80u_body_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_body_c*",
+        "ussr_camo_green*",
+        "t_80u_body_n*",
+        "t_80u_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 1,
+      "name": "era_kontakt_5_t_80u_ussr_camo_green",
+      "obj_name": "era_kontakt_5_t_80u_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "era_kontakt_5_t_80u_c*",
+        "ussr_camo_green*",
+        "era_kontakt_5_t_80u_n*",
+        "era_kontakt_5_t_80u_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 2,
+      "name": "net_b",
+      "obj_name": "net_b",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_b_c*",
+        null,
+        "net_b_n*",
+        "net_b_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 3,
+      "name": "net_f",
+      "obj_name": "net_f",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_f_c*",
+        null,
+        "net_f_n*",
+        "net_f_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 4,
+      "name": "t_80u_turret_ussr_camo_green",
+      "obj_name": "t_80u_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_turret_c*",
+        "ussr_camo_green*",
+        "t_80u_turret_n*",
+        "t_80u_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 5,
+      "name": "headlight_glass",
+      "obj_name": "headlight_glass",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 6,
+      "name": "headlight_glass_006",
+      "obj_name": "headlight_glass_006",
+      "shader": "dynamic_pbr_glass",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 7,
+      "name": "us_turret_glass",
+      "obj_name": "us_turret_glass",
+      "shader": "dynamic_pbr_glass",
+      "texture_slots": [
+        "us_turret_glass_c*",
+        null,
+        "us_turret_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 8,
+      "name": "t_80u_gun_ussr_camo_green",
+      "obj_name": "t_80u_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_gun_c*",
+        "ussr_camo_green*",
+        "t_80u_gun_n*",
+        "t_80u_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 9,
+      "name": "mg_pkt",
+      "obj_name": "mg_pkt",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_pkt_c*",
+        null,
+        "mg_pkt_n*",
+        "mg_pkt_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 10,
+      "name": "smooth_barrel_a_smooth_barrel_a",
+      "obj_name": "smooth_barrel_a_smooth_barrel_a",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 11,
+      "name": "t_80u_tpv_ussr_camo_green",
+      "obj_name": "t_80u_tpv_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_tpv_c*",
+        "ussr_camo_green*",
+        "t_80u_tpv_n*",
+        "t_80u_tpv_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 12,
+      "name": "dynamic_glass_chrome",
+      "obj_name": "dynamic_glass_chrome",
+      "shader": "dynamic_glass_chrome",
+      "texture_slots": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "opacity=1\nreal_two_sided=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 13,
+      "name": "mg_mount_nsvt_t_80u_ussr_camo_green",
+      "obj_name": "mg_mount_nsvt_t_80u_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "mg_mount_nsvt_t_80u_c*",
+        "ussr_camo_green*",
+        "mg_mount_nsvt_t_80u_n*",
+        "mg_mount_nsvt_t_80u_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 14,
+      "name": "mg_nsvt",
+      "obj_name": "mg_nsvt",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "mg_nsvt_c*",
+        null,
+        "mg_nsvt_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 15,
+      "name": "t_80u_decor",
+      "obj_name": "t_80u_decor",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "t_80u_decor_c*",
+        null,
+        "t_80u_decor_n*",
+        "t_80u_decor_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 16,
+      "name": "ussr_t_80b_track",
+      "obj_name": "ussr_t_80b_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "ussr_t_80b_track_c*",
+        null,
+        "ussr_t_80b_track_n*",
+        "ussr_t_80b_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=127\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 17,
+      "name": "ussr_t_80b_track_017",
+      "obj_name": "ussr_t_80b_track_017",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "ussr_t_80b_track_c*",
+        null,
+        "ussr_t_80b_track_n*",
+        "ussr_t_80b_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=127\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 18,
+      "name": "era_kontakt_5_t_80u_ussr_camo_green",
+      "obj_name": "era_kontakt_5_t_80u_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "era_kontakt_5_t_80u_c*",
+        "ussr_camo_green*",
+        "era_kontakt_5_t_80u_n*",
+        "era_kontakt_5_t_80u_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 19,
+      "name": "ussr_t_80b_track",
+      "obj_name": "ussr_t_80b_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "ussr_t_80b_track_c*",
+        null,
+        "ussr_t_80b_track_n*",
+        "ussr_t_80b_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=127\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 20,
+      "name": "ussr_t_80b_track_002",
+      "obj_name": "ussr_t_80b_track_002",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "ussr_t_80b_track_c*",
+        null,
+        "ussr_t_80b_track_n*",
+        "ussr_t_80b_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=127\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 21,
+      "name": "t_80u_gun_ussr_camo_green",
+      "obj_name": "t_80u_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_gun_c*",
+        "ussr_camo_green*",
+        "t_80u_gun_n*",
+        "t_80u_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 22,
+      "name": "t_80u_turret_ussr_camo_green",
+      "obj_name": "t_80u_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_80u_turret_c*",
+        "ussr_camo_green*",
+        "t_80u_turret_n*",
+        "t_80u_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 23,
+      "name": "mg_mount_nsvt_t_80u_ussr_camo_green",
+      "obj_name": "mg_mount_nsvt_t_80u_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "mg_mount_nsvt_t_80u_c*",
+        "ussr_camo_green*",
+        "mg_mount_nsvt_t_80u_n*",
+        "mg_mount_nsvt_t_80u_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 24,
+      "name": "mg_nsvt",
+      "obj_name": "mg_nsvt",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "mg_nsvt_c*",
+        null,
+        "mg_nsvt_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    }
+  ],
+  "template_textures": []
+}

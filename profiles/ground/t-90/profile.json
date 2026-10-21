@@ -1,0 +1,1911 @@
+{
+  "family": "t-90",
+  "representative": "T-90M",
+  "unit": "ussr_t_90m",
+  "views": {
+    "side": "profiles/ground/t-90/views/side.png",
+    "front": "profiles/ground/t-90/views/front.png",
+    "rear": "profiles/ground/t-90/views/rear.png",
+    "top": "profiles/ground/t-90/views/top.png"
+  },
+  "source_obj_sha256": "9f271168fb716cd3a86946b02b09020cb476788dff28200433ccb4dc513eabc6",
+  "source_materials_sha256": "264346c98d08936a7873d2e254028cf8632a984f2b86a650f076f6620e9c527a",
+  "source_materials": "profiles/ground/t-90/materials.json",
+  "source_pack": "game-resource:ussr_t_90m.grp",
+  "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+  "hidden_nodes": [
+    "ammo",
+    "antenna_01"
+  ],
+  "major_group_counts": {
+    "H": 154259,
+    "T": 75497,
+    "G": 10274,
+    "M": 9321,
+    "A": 22289,
+    "R": 46482,
+    "P": 945,
+    "U": 0
+  },
+  "members": [
+    {
+      "node": "root",
+      "material": "t_90m_body_ussr_camo_green",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 6948
+    },
+    {
+      "node": "root",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 55320
+    },
+    {
+      "node": "root",
+      "material": "dynamic_glass_chrome_007",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 96
+    },
+    {
+      "node": "root",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 3320
+    },
+    {
+      "node": "root",
+      "material": "dynamic_glass_chrome_008",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 96
+    },
+    {
+      "node": "root",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 120
+    },
+    {
+      "node": "root",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 2
+    },
+    {
+      "node": "root",
+      "material": "dynamic_glass_chrome",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 48
+    },
+    {
+      "node": "wheel_r_front",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 2959
+    },
+    {
+      "node": "wheel_r_top_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_r_top_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_r_top_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_r_drive",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 5786
+    },
+    {
+      "node": "wheel_l_front",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 2959
+    },
+    {
+      "node": "wheel_l_top_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_l_top_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_l_top_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 124
+    },
+    {
+      "node": "wheel_l_drive",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 5786
+    },
+    {
+      "node": "hatch_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 768
+    },
+    {
+      "node": "hatch_08",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 326
+    },
+    {
+      "node": "hatch_09",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 452
+    },
+    {
+      "node": "ex_armor_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1920
+    },
+    {
+      "node": "ex_armor_01_mount",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 176
+    },
+    {
+      "node": "ex_armor_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1576
+    },
+    {
+      "node": "ex_armor_05",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 962
+    },
+    {
+      "node": "ex_armor_06",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1168
+    },
+    {
+      "node": "ex_armor_07",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 962
+    },
+    {
+      "node": "ex_armor_08",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 172
+    },
+    {
+      "node": "ex_armor_08",
+      "material": "ussr_t_90m_phys_track_ussr_camo_green",
+      "texture": "ussr_t_90m_phys_track_c*",
+      "major_part": "R",
+      "triangles": 392
+    },
+    {
+      "node": "ex_armor_09",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 214
+    },
+    {
+      "node": "ex_armor_09",
+      "material": "ussr_t_90m_phys_track_ussr_camo_green",
+      "texture": "ussr_t_90m_phys_track_c*",
+      "major_part": "R",
+      "triangles": 392
+    },
+    {
+      "node": "ex_armor_body_l_11",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 918
+    },
+    {
+      "node": "ex_armor_body_l_12",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 815
+    },
+    {
+      "node": "ex_armor_body_l_13",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 815
+    },
+    {
+      "node": "ex_armor_body_l_14",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 833
+    },
+    {
+      "node": "ex_armor_body_l_15",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 795
+    },
+    {
+      "node": "ex_armor_body_l_16",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 833
+    },
+    {
+      "node": "ex_armor_body_l_07",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1582
+    },
+    {
+      "node": "ex_armor_body_l_08",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1075
+    },
+    {
+      "node": "ex_armor_body_l_09",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 162
+    },
+    {
+      "node": "ex_armor_body_l_10",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1064
+    },
+    {
+      "node": "ex_armor_body_l_10",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 46
+    },
+    {
+      "node": "ex_armor_body_r_11",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 918
+    },
+    {
+      "node": "ex_armor_body_r_12",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 843
+    },
+    {
+      "node": "ex_armor_body_r_13",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 797
+    },
+    {
+      "node": "ex_armor_body_r_14",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 833
+    },
+    {
+      "node": "ex_armor_body_r_15",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 837
+    },
+    {
+      "node": "ex_armor_body_r_16",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 861
+    },
+    {
+      "node": "ex_armor_body_r_07",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 836
+    },
+    {
+      "node": "ex_armor_body_r_08",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 244
+    },
+    {
+      "node": "ex_armor_body_r_09",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 766
+    },
+    {
+      "node": "ex_armor_body_r_10",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1064
+    },
+    {
+      "node": "ex_armor_body_r_10",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 46
+    },
+    {
+      "node": "ex_armor_l_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2068
+    },
+    {
+      "node": "ex_armor_l_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2698
+    },
+    {
+      "node": "ex_armor_l_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2796
+    },
+    {
+      "node": "ex_armor_r_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 934
+    },
+    {
+      "node": "ex_armor_r_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 822
+    },
+    {
+      "node": "ex_armor_r_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 776
+    },
+    {
+      "node": "ex_armor_r_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 846
+    },
+    {
+      "node": "ex_armor_r_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1393
+    },
+    {
+      "node": "ex_decor_15",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 200
+    },
+    {
+      "node": "ex_decor_16",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 1133
+    },
+    {
+      "node": "ex_decor_16",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 24
+    },
+    {
+      "node": "ex_decor_16",
+      "material": "dynamic_glass_chrome",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 48
+    },
+    {
+      "node": "ex_decor_17",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 706
+    },
+    {
+      "node": "ex_decor_18",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 706
+    },
+    {
+      "node": "ex_decor_l_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 204
+    },
+    {
+      "node": "ex_decor_r_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "A",
+      "triangles": 204
+    },
+    {
+      "node": "ex_era_hull_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 100
+    },
+    {
+      "node": "ex_era_hull_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_hull_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_hull_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_hull_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_hull_06",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 100
+    },
+    {
+      "node": "ex_era_hull_07",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_08",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 234
+    },
+    {
+      "node": "ex_era_hull_09",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 234
+    },
+    {
+      "node": "ex_era_hull_10",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 234
+    },
+    {
+      "node": "ex_era_hull_11",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 234
+    },
+    {
+      "node": "ex_era_hull_12",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_13",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1422
+    },
+    {
+      "node": "ex_era_hull_14",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1422
+    },
+    {
+      "node": "ex_era_hull_15",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1726
+    },
+    {
+      "node": "ex_era_hull_16",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1582
+    },
+    {
+      "node": "ex_era_hull_17",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_18",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1710
+    },
+    {
+      "node": "ex_era_hull_19",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1660
+    },
+    {
+      "node": "ex_era_hull_20",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_21",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1666
+    },
+    {
+      "node": "ex_era_hull_22",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1764
+    },
+    {
+      "node": "ex_era_hull_23",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1664
+    },
+    {
+      "node": "ex_era_hull_24",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_25",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1650
+    },
+    {
+      "node": "ex_era_hull_26",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1422
+    },
+    {
+      "node": "ex_era_hull_27",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1422
+    },
+    {
+      "node": "ex_era_hull_28",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1726
+    },
+    {
+      "node": "ex_era_hull_29",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1582
+    },
+    {
+      "node": "ex_era_hull_30",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_31",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1710
+    },
+    {
+      "node": "ex_era_hull_32",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1660
+    },
+    {
+      "node": "ex_era_hull_33",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_34",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1666
+    },
+    {
+      "node": "ex_era_hull_35",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1764
+    },
+    {
+      "node": "ex_era_hull_36",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1664
+    },
+    {
+      "node": "ex_era_hull_37",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_era_hull_38",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "H",
+      "triangles": 1650
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 1961
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 140
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "headlight_glass_010",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 11
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2268
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 140
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "dynamic_glass_chrome_011",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 20
+    },
+    {
+      "node": "suspension_l_01_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "bone_turret",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 12
+    },
+    {
+      "node": "bone_turret",
+      "material": "dynamic_glass_chrome_011",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 12
+    },
+    {
+      "node": "bone_turret",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 38955
+    },
+    {
+      "node": "bone_turret",
+      "material": "t_90m_turret_ussr_camo_green_014",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 2013
+    },
+    {
+      "node": "gun_barrel",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 4460
+    },
+    {
+      "node": "gun_barrel",
+      "material": "smooth_barrel_a_smooth_barrel_a",
+      "texture": "smooth_barrel_a_c*",
+      "major_part": "G",
+      "triangles": 118
+    },
+    {
+      "node": "mg_twin",
+      "material": "mg_pkt",
+      "texture": "mg_pkt_c*",
+      "major_part": "M",
+      "triangles": 1424
+    },
+    {
+      "node": "ex_decor_turret_02",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 656
+    },
+    {
+      "node": "ex_armor_02",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 732
+    },
+    {
+      "node": "gun_mask",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 2124
+    },
+    {
+      "node": "ex_armor_03",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 68
+    },
+    {
+      "node": "bone_mg_aa_h_01",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 6
+    },
+    {
+      "node": "bone_mg_aa_h_01",
+      "material": "dynamic_glass_chrome_011",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "bone_mg_aa_h_01",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "M",
+      "triangles": 4154
+    },
+    {
+      "node": "mg_aa_mount_v",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "M",
+      "triangles": 1712
+    },
+    {
+      "node": "mg_aa",
+      "material": "mg_6p49_kord",
+      "texture": "mg_6p49_kord_c*",
+      "major_part": "M",
+      "triangles": 2031
+    },
+    {
+      "node": "hatch_07",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 326
+    },
+    {
+      "node": "hatch_05",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 326
+    },
+    {
+      "node": "hatch_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 418
+    },
+    {
+      "node": "hatch_02",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1144
+    },
+    {
+      "node": "hatch_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 260
+    },
+    {
+      "node": "hatch_04",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1888
+    },
+    {
+      "node": "ex_lantern_b_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 120
+    },
+    {
+      "node": "ex_lantern_b_01",
+      "material": "dynamic_glass_chrome",
+      "texture": "None",
+      "major_part": "P",
+      "triangles": 24
+    },
+    {
+      "node": "ex_lantern_b_01",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1291
+    },
+    {
+      "node": "ex_era_turret_45",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 54
+    },
+    {
+      "node": "ex_era_turret_43",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 54
+    },
+    {
+      "node": "ex_decor_08",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 252
+    },
+    {
+      "node": "ex_era_turret_41",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 54
+    },
+    {
+      "node": "ex_era_turret_39",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_era_turret_17",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_16",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_decor_l_03",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "ex_decor_l_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 941
+    },
+    {
+      "node": "ex_decor_14",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 212
+    },
+    {
+      "node": "ex_decor_r_03",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "ex_decor_r_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 879
+    },
+    {
+      "node": "ex_decor_turret_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 808
+    },
+    {
+      "node": "ex_decor_turret_04",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 2444
+    },
+    {
+      "node": "ex_era_turret_01",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 350
+    },
+    {
+      "node": "ex_era_turret_02",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 350
+    },
+    {
+      "node": "ex_era_turret_11",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 364
+    },
+    {
+      "node": "ex_era_turret_12",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 262
+    },
+    {
+      "node": "ex_era_turret_13",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_14",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 386
+    },
+    {
+      "node": "ex_era_turret_15",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 370
+    },
+    {
+      "node": "ex_decor_12",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 3052
+    },
+    {
+      "node": "ex_decor_11",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 2439
+    },
+    {
+      "node": "ex_era_turret_18",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 192
+    },
+    {
+      "node": "ex_era_turret_19",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 358
+    },
+    {
+      "node": "ex_era_turret_21",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_22",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 208
+    },
+    {
+      "node": "ex_era_turret_23",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_24",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_25",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 70
+    },
+    {
+      "node": "ex_era_turret_26",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 70
+    },
+    {
+      "node": "ex_era_turret_27",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_era_turret_28",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_era_turret_29",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_era_turret_30",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_era_turret_31",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_32",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_33",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_34",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_35",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_36",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 74
+    },
+    {
+      "node": "ex_era_turret_37",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_38",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 112
+    },
+    {
+      "node": "ex_decor_10",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 2690
+    },
+    {
+      "node": "ex_era_turret_40",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 160
+    },
+    {
+      "node": "ex_decor_09",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 1133
+    },
+    {
+      "node": "ex_era_turret_42",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 160
+    },
+    {
+      "node": "ex_decor_07",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 344
+    },
+    {
+      "node": "ex_era_turret_44",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 160
+    },
+    {
+      "node": "ex_decor_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 212
+    },
+    {
+      "node": "ex_era_turret_46",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 160
+    },
+    {
+      "node": "ex_decor_05",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 360
+    },
+    {
+      "node": "ex_armor_turret_r_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 210
+    },
+    {
+      "node": "ex_armor_turret_l_07",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 204
+    },
+    {
+      "node": "ex_armor_turret_l_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 340
+    },
+    {
+      "node": "ex_armor_turret_01",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 444
+    },
+    {
+      "node": "ex_decor_l_02",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 7
+    },
+    {
+      "node": "ex_decor_l_02",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 738
+    },
+    {
+      "node": "ex_decor_r_02",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 7
+    },
+    {
+      "node": "ex_decor_r_02",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 692
+    },
+    {
+      "node": "ex_era_turret_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 350
+    },
+    {
+      "node": "ex_era_turret_04",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 338
+    },
+    {
+      "node": "ex_era_turret_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 346
+    },
+    {
+      "node": "ex_era_turret_07",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 352
+    },
+    {
+      "node": "ex_era_turret_09",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 422
+    },
+    {
+      "node": "ex_era_turret_10",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 448
+    },
+    {
+      "node": "ex_era_turret_20",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 210
+    },
+    {
+      "node": "ex_decor_04",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 82
+    },
+    {
+      "node": "ex_decor_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "A",
+      "triangles": 146
+    },
+    {
+      "node": "ex_era_turret_08",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 228
+    },
+    {
+      "node": "ex_era_turret_05",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 260
+    },
+    {
+      "node": "suspension_l_01_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_l_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "suspension_r_01_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_r_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "suspension_l_02_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_l_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "wheel_l_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "wheel_l_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "wheel_l_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "suspension_l_06_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_l_06",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_l_06",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "suspension_r_02_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_r_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "wheel_r_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_03",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "wheel_r_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_04",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "wheel_r_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_05",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 122
+    },
+    {
+      "node": "suspension_r_06_01",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 68
+    },
+    {
+      "node": "wheel_r_06",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "R",
+      "triangles": 1292
+    },
+    {
+      "node": "suspension_r_06",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 144
+    },
+    {
+      "node": "suspension_r_01_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "suspension_r_02_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "suspension_r_06_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 138
+    },
+    {
+      "node": "suspension_l_02_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "suspension_l_06_02",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 138
+    },
+    {
+      "node": "ex_decor_19",
+      "material": "t_90m_add_body_ussr_camo_green",
+      "texture": "t_90m_add_body_c*",
+      "major_part": "A",
+      "triangles": 1712
+    },
+    {
+      "node": "ex_armor_body_64",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2
+    },
+    {
+      "node": "ex_armor_body_63",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 11
+    },
+    {
+      "node": "ex_armor_body_61",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 2
+    },
+    {
+      "node": "ex_armor_body_62",
+      "material": "t_90m_body_ussr_camo_green_001",
+      "texture": "t_90m_body_c*",
+      "major_part": "H",
+      "triangles": 11
+    },
+    {
+      "node": "ex_composite_armor_10",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1182
+    },
+    {
+      "node": "ex_composite_armor_11",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1700
+    },
+    {
+      "node": "ex_composite_armor_12",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1074
+    },
+    {
+      "node": "ex_composite_armor_05",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 932
+    },
+    {
+      "node": "ex_composite_armor_04",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 950
+    },
+    {
+      "node": "ex_composite_armor_03",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1134
+    },
+    {
+      "node": "ex_decor_turret_01",
+      "material": "t_90m_gun_ussr_camo_green",
+      "texture": "t_90m_gun_c*",
+      "major_part": "G",
+      "triangles": 2116
+    },
+    {
+      "node": "ex_composite_armor_02",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1730
+    },
+    {
+      "node": "ex_composite_armor_14",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1600
+    },
+    {
+      "node": "ex_composite_armor_13",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1300
+    },
+    {
+      "node": "ex_composite_armor_01",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 1836
+    },
+    {
+      "node": "ex_composite_armor_06",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 860
+    },
+    {
+      "node": "ex_composite_armor_07",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 808
+    },
+    {
+      "node": "ex_composite_armor_08",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 2092
+    },
+    {
+      "node": "ex_composite_armor_09",
+      "material": "t_90m_turret_ussr_camo_green",
+      "texture": "t_90m_turret_c*",
+      "major_part": "T",
+      "triangles": 722
+    },
+    {
+      "node": "track_r",
+      "material": "ussr_t_90m_track",
+      "texture": "ussr_t_90m_track_c*",
+      "major_part": "R",
+      "triangles": 5980
+    },
+    {
+      "node": "track_l",
+      "material": "ussr_t_90m_track",
+      "texture": "ussr_t_90m_track_c*",
+      "major_part": "R",
+      "triangles": 5980
+    }
+  ],
+  "classification_method": "Derived from actual node and material resource names; major-part hints, not hand-verified native UV masks. Attachments can be regrouped after inspection.",
+  "subzone_mapping": "Apply the semantic zone tree to actual structure; no per-family paint coordinates supplied.",
+  "validation": {
+    "model_views": "observed",
+    "classification": "node/material-derived hints",
+    "native_uv_paint_masks": "not_run",
+    "new_livery_dds": "not_run",
+    "game": "not_run"
+  },
+  "view_meaning": "Major-part diagnostic colours, not a livery or exact subzone mask. Orthographic static bind pose; side front points right, top front points up."
+}

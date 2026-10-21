@@ -1,0 +1,76 @@
+{
+  "scope": "Historical real MCP research and review-board source preservation, not a new production claim",
+  "records": [
+    {
+      "passed": true,
+      "tool": "Composa 1.4.0 STDIO MCP; no UI automation",
+      "layer_count": 10,
+      "default_vehicle": "leopard-2",
+      "other_vehicle_layers_and_fallback_hidden_by_default": true,
+      "original_transparent_logo_rgba_preserved": true,
+      "editable_global_intent_text": true,
+      "source_sha256": "1253c38942791897ac6e2bc28702bfe01a0870f7b246267f892f4feac99caa80",
+      "verification_copy_sha256": "1253c38942791897ac6e2bc28702bfe01a0870f7b246267f892f4feac99caa80",
+      "scope": "Reference diagram display and file integrity; subzones are semantic work regions, not validated UV masks; visual acceptance pending.",
+      "source_receipt_sha256": "3661ddf8318f421f6cabf9212eb87210a18121f3764a4e36989cfa9b148c7368",
+      "reopen_checks_pixel_exact": true,
+      "native_vehicle_crops": [
+        {
+          "family": "t-80",
+          "pixel_exact": true
+        },
+        {
+          "family": "t-90",
+          "pixel_exact": true
+        },
+        {
+          "family": "type-99",
+          "pixel_exact": true
+        },
+        {
+          "family": "leclerc",
+          "pixel_exact": true
+        }
+      ]
+    },
+    {
+      "passed": true,
+      "method": "Composa MCP only, real rendering and copied CMPS reopened",
+      "cmps_sha256": "ba2e8847837fccc1dded48f53dbc11e62a1c20243b84f7590fccddd8e8823e9f",
+      "copy_sha256": "ba2e8847837fccc1dded48f53dbc11e62a1c20243b84f7590fccddd8e8823e9f",
+      "layers": 9,
+      "editable_text_layers": 3,
+      "original_source_png_size": [
+        400,
+        400
+      ],
+      "original_source_png_alpha_equal": true,
+      "original_source_png_rgba_equal": true,
+      "original_source_png_is_hidden_by_default": true,
+      "scope": "Review source integrity and editor rendering; visual approval remains pending.",
+      "source_receipt_sha256": "7ab63cac259c0e5de9b2a1481682b6bc7342c491baacb9babd864f77a4de70b6",
+      "reopen_checks_pixel_exact": true,
+      "native_vehicle_crops": []
+    }
+  ],
+  "captures": [
+    {
+      "sha256": "ba0605bdc4a585dfd3bc8f6335777b99260a87e1c23275feccff1ea4c33655e5",
+      "source_evidence_path": "assets/reference/editor-proof/parts-mcp.png"
+    },
+    {
+      "sha256": "367f0a13dcc12119cd198ef7b663f16609a697b4d2845a20f1aafa962dbe7dcd",
+      "source_evidence_path": "assets/reference/editor-proof/fallback-mcp.png"
+    },
+    {
+      "sha256": "cf78ec880a0fae00c77e1e230de5c7c8ed5ee98f9a84ff8cad198d0a5552e436",
+      "source_evidence_path": "assets/reference/editor-proof/editable-comparison-mcp.png"
+    },
+    {
+      "sha256": "ab8250d7ff29101da1d68fc51ab271203a68f13fe0c4f8b8a6132fd6eb86b0e2",
+      "source_evidence_path": "assets/reference/editor-proof/reference-study-mcp.png"
+    }
+  ],
+  "captures_in_core": false,
+  "raw_capture_location": "historical sealed review v4/source archive; not needed by runtime"
+}

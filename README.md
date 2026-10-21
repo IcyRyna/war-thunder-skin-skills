@@ -24,25 +24,26 @@ flowchart LR
 | 研究 `wt-skin-study` | 证据、实验、规则提炼与独立评测的候选工作流 | 开发候选；尚无正式版本 |
 | 工程 `wt-skin-build` | 输入契约、原生 UV、通道、导出与交付检查的候选工作流 | 开发候选；领域工具按包配置装配 |
 | 飞机风格 | Akamywek 1.14 内容及其参考资料 | 已发布基线；源码通过构建器装配 |
-| 地面风格 | ENDFIELD 布局说明、车型方向与既有兼容源码 | 新执行包处于候选阶段；兼容包归入历史版本 |
+| 地面风格 | `wt-style-endfield` 0.1.0：A7V 解析、五车型方向、可编辑素材与独立工具 | 已发布；旧 1.4 仅保留在历史版本 |
 | 飞机兼容包 | `war-thunder-user-skins` 3.14 内容 | 保留旧调用入口与既有版本线 |
-| 载具配置 | profile schema 与合成示例 | 尚无已验证的真实载具 profile |
+| 载具配置 | 通用 schema、合成示例、五个地面家族参考及 A7V 资源契约 | 地面四视与资源已核对；跨车型生产 UV／DDS 和游戏验证另行执行 |
 | 评测 | 工作流契约、记录检查器与回归测试 | 验证结构和证据关联；视觉与游戏结果另行记录 |
 
 这次仓库重构建立了可执行的源码与构建入口。新研究、工程模块仍处于候选阶段；已有正式版本号和下载附件保持原样。“已发布基线”说明内容的来源版本，不代表其中所有设计已获美术认可。
 
 ## 风格说明与演示
 
-**[wt-style-endfield 0.1.0 完整展示](docs/skills/wt-style-endfield-0.1.0.md)**：当前候选包的 A7V 八条解析、五车型四向建议、部件与子区、三套兜底、全部制作素材预览、工具及验证范围汇总。
+**[wt-style-endfield 0.1.0 完整展示](docs/skills/wt-style-endfield-0.1.0.md)**：已发布 0.1.0 的 A7V 八条解析、五车型四向建议、部件与子区、三套兜底、全部制作素材预览、工具及验证范围汇总。
 
 [终末地布局：A7V 范本、部件分区与五车型方向](docs/skills/endfield-layout-guide.md) 提供原作关系、侧前后顶示意和可选兜底。演示图供读者理解，执行 Skill 通过规则、结构化资料及必要素材表达同一套方法；车型方向可以改写，预设可以不用。
 
 ## 当前推荐下载
 
-以下是当前推荐的正式安装包。从对应 Release 的 **Assets** 下载 `.skill.zip`，各包自带所需脚本和参考资料，可以单独安装。终末地新执行包仍处于候选阶段，既有兼容包放在[历史版本](docs/history/README.md)。
+以下是当前推荐的正式安装包。从对应 Release 的 **Assets** 下载 `.skill.zip`，各包自带所需脚本和参考资料，可以单独安装。终末地 0.1.0 是新的独立版本线，既有兼容包只放在[历史版本](docs/history/README.md)。
 
 | 用途 | 已发布版本 | 说明与历史 |
 | --- | --- | --- |
+| 终末地风格坦克布局与制作 | **[下载 0.1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0)** | [完整图文展示](docs/skills/wt-style-endfield-0.1.0.md) · [更新记录](docs/changelog/wt-style-endfield.md) |
 | 二次元固定翼喷气机涂装 | **[下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14)** | [功能说明](docs/skills/jet-liveries.md) · [完整更新记录](docs/changelog/war-thunder-user-skins.md) |
 | Akamywek 风格飞机涂装 | **[下载 1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14)** | [风格说明](docs/skills/akamywek.md) · [完整更新记录](docs/changelog/war-thunder-style-akamywek.md) |
 
@@ -55,10 +56,13 @@ src/
   study/wt-skin-study/                        研究与规则候选
   build/wt-skin-build/                        中性工程候选
   styles/aircraft/war-thunder-style-akamywek/  飞机风格源码
-  styles/ground/war-thunder-tank-style-endfield/  地面风格源码
+  styles/ground/wt-style-endfield/            终末地 0.1.0 风格源码
+  styles/ground/war-thunder-tank-style-endfield/  旧 1.4 冻结兼容源
   legacy/war-thunder-user-skins/              3.14 兼容源码
 toolkits/aircraft/scripts/                    飞机公共工具单一源码
-profiles/                                    载具配置契约与合成示例
+toolkits/ground/scripts/                      地面公共工具单一源码
+assets/endfield/                              运行包必需的精选素材
+profiles/                                    契约、合成示例与地面家族参考
 evals/                                       评测契约、检查器与测试
 tools/repository.py                          列表、检查与独立包构建
 catalog.json                                 构建输入与装配关系

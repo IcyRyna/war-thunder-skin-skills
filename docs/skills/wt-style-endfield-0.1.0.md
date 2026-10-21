@@ -1,6 +1,10 @@
 # wt-style-endfield 0.1.0 · 完整展示
 
-这是 **0.1.0 本地审查候选包的完整图文展示**：规则、车型方向、部件分区、三套可选兜底、制作素材、工具和验证范围都在本页。运行包为 **201 文件、约 15.7 MiB**，目前尚未正式安装或创建 Release。
+这是 **已发布的 wt-style-endfield 0.1.0 完整图文展示**：规则、车型方向、部件分区、三套可选兜底、制作素材、工具和验证范围都在本页。独立运行包为 **201 文件、约 15.7 MiB**。
+
+**[下载独立 Skill](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.skill.zip) · [Release 全部附件](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0) · [源码](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.source.zip) · [可选旧素材库](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.legacy-assets.zip) · [更新记录](../changelog/wt-style-endfield.md)**
+
+安装 `.skill.zip` 即可；可选素材库保留旧 40 项原文件。源码附件可重建运行包；发布不自动替换本机已安装 Skill。
 
 这里展示的是一套让 AI 为不同坦克重新设计的工作方法与资源，不是已经完成并通过游戏验收的整车涂装。
 
@@ -406,7 +410,7 @@ H04 是长侧面的整体任务，H07 是进一步按单板细分的方式，不
 
 ### 旧素材保留与原作参考
 
-完整旧素材组 **40 文件、61,905,979 字节** 以原字节保存在完整源码和可选素材库；其中 32 个精选文件随运行包。其余大型原 UV、研究板和提取源按需查阅，正常执行不依赖旧 Skill 安装。
+完整旧素材组 **40 文件、61,905,979 字节** 以原字节保存在可选素材库；其中 32 个精选文件随运行包。其余大型原 UV、研究板和提取源按需查阅，正常执行不依赖旧 Skill 安装。
 
 25 个原作局部用于观察字形、路径、板边和信息层级，带有原车材料、阴影与结构；它们是参考，不直接当另一辆车的透明贴花。
 
@@ -415,9 +419,9 @@ H04 是长侧面的整体任务，H07 是进一步按单板细分的方式，不
 
 | 资源 | 运行包／资料库 | 大小 |
 |---|---|---|
-| `decals/emblem-extraction.cmps` | 完整源码／可选资料库 | 37,673 B |
+| `decals/emblem-extraction.cmps` | 可选旧素材库 | 37,673 B |
 | `decals/endfield-industries-en-native.png` | 运行包＋完整资料库 | 2,847 B |
-| `manifest.json` | 完整源码／可选资料库 | 24,592 B |
+| `manifest.json` | 可选旧素材库 | 24,592 B |
 | `official/endfield-industries-cn.png` | 运行包＋完整资料库 | 64,868 B |
 | `official/endfield-title-en.png` | 运行包＋完整资料库 | 33,074 B |
 | `official/endfield-title-en.svg` | 运行包＋完整资料库 | 3,910 B |
@@ -449,12 +453,12 @@ H04 是长侧面的整体任务，H07 是进一步按单板细分的方式，不
 | [reference-a7v/crops/T09.png](../images/endfield-skill-0.1.0/assets/legacy/reference-a7v/crops/T09.png) | 运行包＋完整资料库 | 126,692 B |
 | `reference-a7v/element-catalog.json` | 运行包＋完整资料库 | 25,003 B |
 | `reference-a7v/front-panel-map.json` | 运行包＋完整资料库 | 1,237 B |
-| `reference-a7v/uv/leopard_2a7v_body.png` | 完整源码／可选资料库 | 25,232,574 B |
-| `reference-a7v/uv/leopard_2a7v_gun.png` | 完整源码／可选资料库 | 3,284,320 B |
-| `reference-a7v/uv/leopard_2a7v_turret.png` | 完整源码／可选资料库 | 21,138,418 B |
-| `reference-a7v/uv/mg_mount_leopard_2a7v.png` | 完整源码／可选资料库 | 255,654 B |
-| `study/element-vocabulary.png` | 完整源码／可选资料库 | 1,967,893 B |
-| `study/UV-study-overview.png` | 完整源码／可选资料库 | 2,725,843 B |
+| `reference-a7v/uv/leopard_2a7v_body.png` | 可选旧素材库 | 25,232,574 B |
+| `reference-a7v/uv/leopard_2a7v_gun.png` | 可选旧素材库 | 3,284,320 B |
+| `reference-a7v/uv/leopard_2a7v_turret.png` | 可选旧素材库 | 21,138,418 B |
+| `reference-a7v/uv/mg_mount_leopard_2a7v.png` | 可选旧素材库 | 255,654 B |
+| `study/element-vocabulary.png` | 可选旧素材库 | 1,967,893 B |
+| `study/UV-study-overview.png` | 可选旧素材库 | 2,725,843 B |
 
 </details>
 
@@ -511,7 +515,7 @@ A7V 作者包的 C4／N4／AO3 是该参考资源范围，不是任意坦克固�
 | 五家族 | 真实模型四视、来源身份与方向研究；不等于五车生产 UV 均已适配 |
 | 新整车默认样例 | 未运行；不拿旧临摹修复充当新设计成功样例 |
 | 游戏／独立冷启动 | 未运行；技术检查不提升为美术或游戏认可 |
-| 正式安装／发布 | 未执行；当前为待审候选 |
+| Skill 发布 | 0.1.0 已获用户放行并发布；不自动替换本机安装 |
 
 本页的展示图帮助人理解，执行 Skill 同时通过文字、JSON、图例与少量有明确读取任务的图片表达这些知识。预设是建议，图片不代替实际载具的 UV 和材质检查。
 
@@ -740,6 +744,6 @@ wt-style-endfield/
 
 </details>
 
-当前候选尚无正式 Release 下载。实际执行包和完整维护源码在本地审查；本页展示与其同一份冻结内容，不把展示资料、旧兼容版本或历史审查包冒充当前运行包。
+从 [0.1.0 Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0) 下载独立运行包、可重复构建的源码、可选旧素材库、文件清单和检查报告。运行包保留本页已展示的规则、素材和工具；只作发布状态及分发位置说明的调整。演示图属于本文档，不进入安装包。
 
 [布局图解与演示](endfield-layout-guide.md) · [历史兼容版本](../history/README.md) · [文档导航](../README.md) · [仓库首页](../../README.md)

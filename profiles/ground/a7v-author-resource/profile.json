@@ -1,0 +1,174 @@
+{
+  "texture_counts": {
+    "color": 4,
+    "normal": 4,
+    "ao": 3
+  },
+  "texture_alpha_semantics": {
+    "color": "fixed_rgb",
+    "normal": "packed_data",
+    "ao": "scalar_data"
+  },
+  "texture_color_space": {
+    "color": "srgb",
+    "normal": "linear",
+    "ao": "linear"
+  },
+  "source_names": {
+    "body": "leopard_2a7v_body-rgb-native.png",
+    "turret": "leopard_2a7v_turret-rgb-native.png",
+    "gun": "leopard_2a7v_gun-rgb-native.png",
+    "mg_mount": "mg_mount_leopard_2a7v-rgb-native.png"
+  },
+  "id": "a7v-author-resource-reference",
+  "source_kind": "original author skin, not verified factory material",
+  "texture_manifest": "texture-manifest.json",
+  "scope": "Inspect frozen A7V source resource identities only; not a paint layout, reconstruction recipe or cross-vehicle default.",
+  "atlases": {
+    "body": {
+      "color": "leopard_2a7v_body.dds",
+      "normal": "leopard_2a7v_body_n.dds",
+      "ao": "leopard_2a7v_body_ao.dds",
+      "color_size": [
+        8192,
+        8192
+      ],
+      "normal_size": [
+        8192,
+        8192
+      ],
+      "ao_size": [
+        4096,
+        4096
+      ],
+      "resource": "leopard_2a7v_body_c",
+      "normal_resource": "leopard_2a7v_body_n",
+      "ao_resource": "leopard_2a7v_body_ao",
+      "source_color_sha256": "00ab398c8d51f0fa76de6ee8ce47088b08f96bfffbdb46e48803b603723950ef"
+    },
+    "turret": {
+      "color": "leopard_2a7v_turret.dds",
+      "normal": "leopard_2a7v_turret_n.dds",
+      "ao": "leopard_2a7v_turret_ao.dds",
+      "color_size": [
+        8192,
+        8192
+      ],
+      "normal_size": [
+        8192,
+        8192
+      ],
+      "ao_size": [
+        4096,
+        4096
+      ],
+      "resource": "leopard_2a7v_turret_c",
+      "normal_resource": "leopard_2a7v_turret_n",
+      "ao_resource": "leopard_2a7v_turret_ao",
+      "source_color_sha256": "7d1f99e98f4a2d372fd239965e0a9b9c2842a6b2e7d68caff73dc09132b9debf"
+    },
+    "gun": {
+      "color": "leopard_2a7v_gun.dds",
+      "normal": "leopard_2a7v_gun_n.dds",
+      "ao": "leopard_2a7v_gun_ao.dds",
+      "color_size": [
+        4096,
+        2048
+      ],
+      "normal_size": [
+        4096,
+        2048
+      ],
+      "ao_size": [
+        4096,
+        2048
+      ],
+      "resource": "leopard_2a7v_gun_c",
+      "normal_resource": "leopard_2a7v_gun_n",
+      "ao_resource": "leopard_2a7v_gun_ao",
+      "source_color_sha256": "60820808deaa5b30c3e5937e5e805e0c6f9e1a6d5c8981cc10707569671397c1"
+    },
+    "mg_mount": {
+      "color": "mg_mount_leopard_2a7v.dds",
+      "normal": "mg_mount_leopard_2a7v_n.dds",
+      "ao": null,
+      "color_size": [
+        1024,
+        512
+      ],
+      "normal_size": [
+        1024,
+        512
+      ],
+      "ao_size": null,
+      "resource": "mg_mount_leopard_2a7v_c",
+      "normal_resource": "mg_mount_leopard_2a7v_n",
+      "ao_resource": "mg_mount_leopard_2a7v_ao",
+      "source_color_sha256": "98c043f6fc4a044fa53aa13087cdb3048be35d6ca31e245aaf5d2dcf1091d636"
+    }
+  },
+  "additional_uv_ownership_samples": {
+    "evidence_id": "priority-point-mapping",
+    "sha256": "ef1dcc359e537079e9559f6913afbfd2a41e58b7191ea28cb10d5196d14faf73",
+    "source_id": "source-original-a7v",
+    "method": "Material-matched nondegenerate UV triangles at pixel centers; all containing hits retained without visibility culling",
+    "points": [
+      {
+        "atlas": "turret",
+        "pixel": [
+          3100,
+          2800
+        ],
+        "hit_count": 1,
+        "node": "optic_commander",
+        "triangle_index_zero_based": 181060,
+        "world_xyz": [
+          -0.55191,
+          2.75706,
+          0.22692
+        ]
+      },
+      {
+        "atlas": "body",
+        "pixel": [
+          1800,
+          400
+        ],
+        "hit_count": 1,
+        "node": "ex_armor_l_08",
+        "triangle_index_zero_based": 89201,
+        "world_xyz": [
+          1.91583,
+          1.55673,
+          -1.69283
+        ]
+      },
+      {
+        "atlas": "body",
+        "pixel": [
+          2700,
+          1600
+        ],
+        "hit_count": 6,
+        "shared_uv_owners": [
+          "wheel_r_01",
+          "wheel_r_03",
+          "wheel_r_05",
+          "wheel_l_01",
+          "wheel_l_03",
+          "wheel_l_05"
+        ],
+        "triangle_indices_zero_based": [
+          114812,
+          117912,
+          120825,
+          125443,
+          128338,
+          131538
+        ],
+        "unique_physical_owner": false
+      }
+    ],
+    "limitation": "Coordinates are not part identities. A unique point hit does not prove whole-crop ownership; the shared wheel texel affects all six physical owners. No exact paint mask is established."
+  }
+}

@@ -1,0 +1,840 @@
+{
+  "family": "leclerc",
+  "representative": "Leclerc S2",
+  "unit": "fr_leclerc_s2",
+  "views": {
+    "side": "profiles/ground/leclerc/views/side.png",
+    "front": "profiles/ground/leclerc/views/front.png",
+    "rear": "profiles/ground/leclerc/views/rear.png",
+    "top": "profiles/ground/leclerc/views/top.png"
+  },
+  "source_obj_sha256": "9275ebc6ad7d482d76505ca014ca34b1873ed0abfa7871e50c6724d5f4d2e5f1",
+  "source_materials_sha256": "2dfb196f4350eeb6d6f0ae50d60fe2a5f316263b831bbdb333669e59bc74aa58",
+  "source_materials": "profiles/ground/leclerc/materials.json",
+  "source_pack": "game-resource:fr_leclerc_s2.grp",
+  "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+  "hidden_nodes": [
+    "antenna_01",
+    "antenna_02"
+  ],
+  "major_group_counts": {
+    "H": 67584,
+    "T": 41738,
+    "G": 7735,
+    "M": 1707,
+    "A": 8479,
+    "R": 48420,
+    "P": 592,
+    "U": 0
+  },
+  "members": [
+    {
+      "node": "root",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 41758
+    },
+    {
+      "node": "wheel_l_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_l_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_l_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_l_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_l_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_l_06",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_l_06",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "wheel_r_06",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1938
+    },
+    {
+      "node": "suspension_r_06",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "bone_turret",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 19271
+    },
+    {
+      "node": "bone_gun",
+      "material": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_gun_c*",
+      "major_part": "G",
+      "triangles": 2976
+    },
+    {
+      "node": "bone_mg_twin_01",
+      "material": "mg_browning_m2hb",
+      "texture": "mg_browning_m2hb_c*",
+      "major_part": "M",
+      "triangles": 1707
+    },
+    {
+      "node": "gun_barrel",
+      "material": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_gun_c*",
+      "major_part": "G",
+      "triangles": 1691
+    },
+    {
+      "node": "gun_barrel",
+      "material": "smooth_barrel_a",
+      "texture": "smooth_barrel_a_c*",
+      "major_part": "G",
+      "triangles": 96
+    },
+    {
+      "node": "hatch_02",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 590
+    },
+    {
+      "node": "ex_decor_04",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "A",
+      "triangles": 628
+    },
+    {
+      "node": "ex_mortar_r_01",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 882
+    },
+    {
+      "node": "ex_armor_turret_r_07",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 818
+    },
+    {
+      "node": "ex_armor_turret_r_06",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 220
+    },
+    {
+      "node": "ex_armor_turret_l_05",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 176
+    },
+    {
+      "node": "ex_armor_turret_l_04",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 976
+    },
+    {
+      "node": "ex_armor_turret_l_03",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 900
+    },
+    {
+      "node": "ex_mortar_l_01",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 882
+    },
+    {
+      "node": "ex_armor_turret_l_06",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 830
+    },
+    {
+      "node": "hatch_01",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 586
+    },
+    {
+      "node": "ex_armor_turret_r_05",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 648
+    },
+    {
+      "node": "ex_armor_turret_l_09",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 158
+    },
+    {
+      "node": "ex_armor_turret_r_10",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 668
+    },
+    {
+      "node": "ex_armor_turret_l_07",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 328
+    },
+    {
+      "node": "ex_armor_turret_l_02",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 336
+    },
+    {
+      "node": "ex_armor_turret_l_01",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 726
+    },
+    {
+      "node": "ex_armor_turret_r_08",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 324
+    },
+    {
+      "node": "ex_armor_turret_l_08",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 1452
+    },
+    {
+      "node": "ex_armor_turret_r_09",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 8759
+    },
+    {
+      "node": "ex_armor_turret_r_04",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 394
+    },
+    {
+      "node": "ex_armor_turret_r_03",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 468
+    },
+    {
+      "node": "ex_armor_turret_r_02",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 108
+    },
+    {
+      "node": "ex_armor_turret_r_01",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 108
+    },
+    {
+      "node": "bone_commander_sight_h",
+      "material": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_turret_c*",
+      "major_part": "T",
+      "triangles": 1130
+    },
+    {
+      "node": "ex_decor_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 583
+    },
+    {
+      "node": "wheel_l_drive",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 4934
+    },
+    {
+      "node": "wheel_r_drive",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 4934
+    },
+    {
+      "node": "hatch_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 2458
+    },
+    {
+      "node": "ex_decor_r_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 1962
+    },
+    {
+      "node": "ex_decor_l_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 722
+    },
+    {
+      "node": "ex_decor_l_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 722
+    },
+    {
+      "node": "ex_decor_r_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 1298
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 763
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "headlight_glass_008",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 176
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 120
+    },
+    {
+      "node": "ex_decor_06",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 1628
+    },
+    {
+      "node": "ex_lantern_b_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 512
+    },
+    {
+      "node": "wheel_r_top_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_r_top_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_r_top_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_r_top_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_r_front",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1610
+    },
+    {
+      "node": "wheel_r_top_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "hatch_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 972
+    },
+    {
+      "node": "ex_lantern_b_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 512
+    },
+    {
+      "node": "ex_decor_r_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 762
+    },
+    {
+      "node": "ex_decor_r_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "A",
+      "triangles": 174
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "H",
+      "triangles": 763
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "headlight_glass_008",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 176
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 120
+    },
+    {
+      "node": "wheel_l_top_05",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_l_top_04",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_l_top_03",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_l_top_02",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "wheel_l_front",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 1610
+    },
+    {
+      "node": "wheel_l_top_01",
+      "material": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_body_c*",
+      "major_part": "R",
+      "triangles": 398
+    },
+    {
+      "node": "ex_armor_body_l_01",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 962
+    },
+    {
+      "node": "ex_armor_body_l_02",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1450
+    },
+    {
+      "node": "ex_armor_body_l_03",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1184
+    },
+    {
+      "node": "ex_armor_body_l_04",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1388
+    },
+    {
+      "node": "ex_armor_body_l_05",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 846
+    },
+    {
+      "node": "ex_armor_body_l_06",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 686
+    },
+    {
+      "node": "ex_armor_body_l_07",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 686
+    },
+    {
+      "node": "ex_armor_body_l_08",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 726
+    },
+    {
+      "node": "ex_armor_body_l_09",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 104
+    },
+    {
+      "node": "ex_armor_body_l_10",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "ex_armor_body_r_10",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 168
+    },
+    {
+      "node": "ex_armor_body_r_09",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 104
+    },
+    {
+      "node": "ex_armor_body_r_08",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 726
+    },
+    {
+      "node": "ex_armor_body_r_07",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 686
+    },
+    {
+      "node": "ex_armor_body_r_06",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 686
+    },
+    {
+      "node": "ex_armor_body_r_05",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 846
+    },
+    {
+      "node": "ex_armor_body_r_04",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1420
+    },
+    {
+      "node": "ex_armor_body_r_03",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1192
+    },
+    {
+      "node": "ex_armor_body_r_02",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 1458
+    },
+    {
+      "node": "ex_armor_body_r_01",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 962
+    },
+    {
+      "node": "ex_armor_r_08",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 186
+    },
+    {
+      "node": "ex_armor_body_r_11",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 584
+    },
+    {
+      "node": "ex_armor_body_l_11",
+      "material": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_dz_c*",
+      "major_part": "H",
+      "triangles": 612
+    },
+    {
+      "node": "ex_decor_02",
+      "material": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_gun_c*",
+      "major_part": "G",
+      "triangles": 614
+    },
+    {
+      "node": "ex_decor_01",
+      "material": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "texture": "leclerc_s2_gun_c*",
+      "major_part": "G",
+      "triangles": 2358
+    },
+    {
+      "node": "track_l",
+      "material": "fr_leclerc_s1_track",
+      "texture": "fr_leclerc_s1_track_c*",
+      "major_part": "R",
+      "triangles": 4048
+    },
+    {
+      "node": "track_r",
+      "material": "fr_leclerc_s1_track_003",
+      "texture": "fr_leclerc_s1_track_c*",
+      "major_part": "R",
+      "triangles": 4048
+    }
+  ],
+  "classification_method": "Derived from actual node and material resource names; major-part hints, not hand-verified native UV masks. Attachments can be regrouped after inspection.",
+  "subzone_mapping": "Apply the semantic zone tree to actual structure; no per-family paint coordinates supplied.",
+  "validation": {
+    "model_views": "observed",
+    "classification": "node/material-derived hints",
+    "native_uv_paint_masks": "not_run",
+    "new_livery_dds": "not_run",
+    "game": "not_run"
+  },
+  "view_meaning": "Major-part diagnostic colours, not a livery or exact subzone mask. Orthographic static bind pose; side front points right, top front points up."
+}

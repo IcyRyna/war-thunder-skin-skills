@@ -6,10 +6,11 @@
 
 | Skill | 推荐正式版本 | 使用说明 | 更新记录 |
 |---|---|---|---|
+| `wt-style-endfield` | **[0.1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0)** | [完整展示](../docs/skills/wt-style-endfield-0.1.0.md) | [历史](../docs/changelog/wt-style-endfield.md) |
 | `war-thunder-user-skins` | **[3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14)** | [喷气机涂装](../docs/skills/jet-liveries.md) | [历史](../docs/changelog/war-thunder-user-skins.md) |
 | `war-thunder-style-akamywek` | **[1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14)** | [Akamywek 风格](../docs/skills/akamywek.md) | [历史](../docs/changelog/war-thunder-style-akamywek.md) |
 
-终末地新执行包仍为候选，尚无正式推荐安装版。既有兼容包已移到[历史版本与归档下载](../docs/history/README.md)，原 Release、标签、附件和地址继续保留。
+终末地 0.1.0 已正式发布，独立安装不依赖旧 1.4。既有兼容包已移到[历史版本与归档下载](../docs/history/README.md)，原 Release、标签、附件和地址继续保留。
 
 ## 历史版本
 

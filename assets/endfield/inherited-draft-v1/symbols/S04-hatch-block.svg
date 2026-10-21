@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="700" height="300" viewBox="0 0 700 300">
+<title>S04 hatch-block</title><desc>独立斜纹块；尺寸与密度可改。</desc>
+<style>text{text-rendering:geometricPrecision} .hair{vector-effect:non-scaling-stroke}</style>
+<defs><clipPath id="hatch-clip"><path d="M35 40 H665 V260 H35 Z"/></clipPath></defs><g id="stripes" ><g clip-path="url(#hatch-clip)"><path d="M-100 260 L60 40" stroke="#F2E74D" stroke-width="38"/><path d="M10 260 L170 40" stroke="#F2E74D" stroke-width="38"/><path d="M120 260 L280 40" stroke="#F2E74D" stroke-width="38"/><path d="M230 260 L390 40" stroke="#F2E74D" stroke-width="38"/><path d="M340 260 L500 40" stroke="#F2E74D" stroke-width="38"/><path d="M450 260 L610 40" stroke="#F2E74D" stroke-width="38"/><path d="M560 260 L720 40" stroke="#F2E74D" stroke-width="38"/><path d="M670 260 L830 40" stroke="#F2E74D" stroke-width="38"/></g></g></svg>

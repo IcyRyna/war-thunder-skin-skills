@@ -1,0 +1,6 @@
+interface:
+  display_name: "终末地坦克风格"
+  short_description: "以 A7V 范本研究指导跨车型部件布局，提供透明素材与可选预设"
+  default_prompt: "使用 $wt-style-endfield 先分析 A7V 范本关系，再为目标坦克分部件提出自由布局和素材方案。"
+policy:
+  allow_implicit_invocation: true

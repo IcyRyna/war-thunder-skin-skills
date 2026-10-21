@@ -1,0 +1,488 @@
+{
+  "materials": [
+    {
+      "index": 0,
+      "name": "t_90m_body_ussr_camo_green",
+      "obj_name": "t_90m_body_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_body_c*",
+        "ussr_camo_green*",
+        "t_90m_body_n*",
+        "t_90m_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 1,
+      "name": "t_90m_body_ussr_camo_green_001",
+      "obj_name": "t_90m_body_ussr_camo_green_001",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_body_c*",
+        "ussr_camo_green*",
+        "t_90m_body_n*",
+        "t_90m_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 2,
+      "name": "t_90m_add_body_ussr_camo_green",
+      "obj_name": "t_90m_add_body_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_add_body_c*",
+        "ussr_camo_green*",
+        "t_90m_add_body_n*",
+        "t_90m_add_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 3,
+      "name": "us_turret_glass",
+      "obj_name": "us_turret_glass",
+      "shader": "dynamic_masked_glass_chrome",
+      "texture_slots": [
+        "us_turret_glass_c*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 4,
+      "name": "net_f",
+      "obj_name": "net_f",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_f_c*",
+        null,
+        "net_f_n*",
+        "net_f_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 5,
+      "name": "headlight_glass",
+      "obj_name": "headlight_glass",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 6,
+      "name": "dynamic_glass_chrome",
+      "obj_name": "dynamic_glass_chrome",
+      "shader": "dynamic_glass_chrome",
+      "texture_slots": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "opacity=1\nreal_two_sided=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 7,
+      "name": "dynamic_glass_chrome_007",
+      "obj_name": "dynamic_glass_chrome_007",
+      "shader": "dynamic_glass_chrome",
+      "texture_slots": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "opacity=1\nreal_two_sided=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 8,
+      "name": "dynamic_glass_chrome_008",
+      "obj_name": "dynamic_glass_chrome_008",
+      "shader": "dynamic_glass_chrome",
+      "texture_slots": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "opacity=1\nreal_two_sided=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 9,
+      "name": "ussr_t_90m_phys_track_ussr_camo_green",
+      "obj_name": "ussr_t_90m_phys_track_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ussr_t_90m_phys_track_c*",
+        "ussr_camo_green*",
+        "ussr_t_90m_phys_track_n*",
+        "ussr_t_90m_phys_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 10,
+      "name": "headlight_glass_010",
+      "obj_name": "headlight_glass_010",
+      "shader": "dynamic_pbr_glass",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 11,
+      "name": "dynamic_glass_chrome_011",
+      "obj_name": "dynamic_glass_chrome_011",
+      "shader": "dynamic_glass_chrome",
+      "texture_slots": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "opacity=1\nreal_two_sided=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 12,
+      "name": "t_90m_turret_ussr_camo_green",
+      "obj_name": "t_90m_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_turret_c*",
+        "ussr_camo_green*",
+        "t_90m_turret_n*",
+        "t_90m_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 13,
+      "name": "net_h",
+      "obj_name": "net_h",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_h_c*",
+        null,
+        "net_h_n*",
+        "net_h_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 14,
+      "name": "t_90m_turret_ussr_camo_green_014",
+      "obj_name": "t_90m_turret_ussr_camo_green_014",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_turret_c*",
+        "ussr_camo_green*",
+        "t_90m_turret_n*",
+        "t_90m_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 15,
+      "name": "t_90m_gun_ussr_camo_green",
+      "obj_name": "t_90m_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_gun_c*",
+        "ussr_camo_green*",
+        "t_90m_gun_n*",
+        "t_90m_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 16,
+      "name": "smooth_barrel_a_smooth_barrel_a",
+      "obj_name": "smooth_barrel_a_smooth_barrel_a",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 17,
+      "name": "mg_pkt",
+      "obj_name": "mg_pkt",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_pkt_c*",
+        null,
+        "mg_pkt_n*",
+        "mg_pkt_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 18,
+      "name": "mg_6p49_kord",
+      "obj_name": "mg_6p49_kord",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_6p49_kord_c*",
+        null,
+        "mg_6p49_kord_n*",
+        "mg_6p49_kord_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=127",
+      "albedo_proxy": null
+    },
+    {
+      "index": 19,
+      "name": "mg_6p49_kord_ammo",
+      "obj_name": "mg_6p49_kord_ammo",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_6p49_kord_ammo_c*",
+        null,
+        "mg_6p49_kord_ammo_n*",
+        "mg_6p49_kord_ammo_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 20,
+      "name": "t_90m_turret_ussr_camo_green",
+      "obj_name": "t_90m_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_turret_c*",
+        "ussr_camo_green*",
+        "t_90m_turret_n*",
+        "t_90m_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\ncamo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 21,
+      "name": "t_90m_gun_ussr_camo_green",
+      "obj_name": "t_90m_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "t_90m_gun_c*",
+        "ussr_camo_green*",
+        "t_90m_gun_n*",
+        "t_90m_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\ncamo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 22,
+      "name": "ussr_t_90m_track",
+      "obj_name": "ussr_t_90m_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "ussr_t_90m_track_c*",
+        null,
+        "ussr_t_90m_track_n*",
+        "ussr_t_90m_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=128\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    }
+  ],
+  "template_textures": []
+}

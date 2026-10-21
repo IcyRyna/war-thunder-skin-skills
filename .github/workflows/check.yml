@@ -43,3 +43,15 @@ jobs:
         run: python -B tools/ci_packages.py
       - name: Verify released baseline file bytes
         run: python -B tools/verify_release_content.py --dist dist
+
+  ground-tools:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned CPU texture dependencies
+        run: python -m pip install -r toolkits/ground/requirements.txt
+      - name: Ground tools and independent package behavior
+        run: python -B -m unittest discover -s toolkits/ground/tests -v

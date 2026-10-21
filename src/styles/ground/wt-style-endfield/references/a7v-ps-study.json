@@ -1,0 +1,200 @@
+{
+  "scope": "Original-author style-layout research only; no replica repair, no production artwork approval.",
+  "tool": "Actual Composa STDIO MCP render, original-author native UV",
+  "source_receipt_sha256": "96b920410e99d7514c4ba67a6cb2ee4697a7a4c6e37a1855a4bb98d657c76a83",
+  "regions": [
+    {
+      "step": 1,
+      "id": "B01",
+      "name": "双侧裙板工业徽记",
+      "bbox": [
+        5520,
+        4200,
+        6430,
+        4940
+      ],
+      "rotation_reading_ccw": 180,
+      "atlas": "body",
+      "mcp_render_sha256": "e9bfda8500e5beafa1aba22c22a0ea664ce1ffe1ddf32fc77e43bab90eedbefe",
+      "native_size": [
+        910,
+        740
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/B01.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 2,
+      "id": "B02",
+      "name": "ARKNIGHTS 与三角连线",
+      "bbox": [
+        0,
+        3150,
+        1530,
+        3930
+      ],
+      "rotation_reading_ccw": 0,
+      "atlas": "body",
+      "mcp_render_sha256": "dffc1288b74b28f3d01d1e992a2b34a6138fc6e7c9c9d629b36964eb1740c615",
+      "native_size": [
+        1530,
+        780
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/B02.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 3,
+      "id": "B04",
+      "name": "CAUTION 警告模块",
+      "bbox": [
+        7190,
+        2540,
+        7800,
+        3070
+      ],
+      "rotation_reading_ccw": 0,
+      "atlas": "body",
+      "mcp_render_sha256": "6511907efac43c032ee481da0c0b0c2dc83ea069842e7fda7e150bd31ecf6807",
+      "native_size": [
+        610,
+        530
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/B04.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 4,
+      "id": "B09",
+      "name": "青绿、品红与黄色细线",
+      "bbox": [
+        6520,
+        4200,
+        7480,
+        4910
+      ],
+      "rotation_reading_ccw": 180,
+      "atlas": "body",
+      "mcp_render_sha256": "e5cd486f3a3b4190f8b6de7d9d5e56b0c625e68dc978d7c9feb278bbe745a6e1",
+      "native_size": [
+        960,
+        710
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/B09.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 5,
+      "id": "B12",
+      "name": "车首附加板主面与窄倒角",
+      "bbox": [
+        7620,
+        2000,
+        8158,
+        2517
+      ],
+      "rotation_reading_ccw": 0,
+      "atlas": "body",
+      "mcp_render_sha256": "37a276d6314b1fe4bf84f505a0c29a4d893378ba9cb3330dea5e7e46dc116d5c",
+      "native_size": [
+        538,
+        517
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/B12.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 1,
+      "id": "T01",
+      "name": "VISUALIZE ENDFIELD 模块",
+      "bbox": [
+        3540,
+        3500,
+        4380,
+        3960
+      ],
+      "rotation_reading_ccw": 180,
+      "atlas": "turret",
+      "mcp_render_sha256": "0cd2964c48322da0ca47cc109770cc7e8bc479d779968fb6335ce2b361182c56",
+      "native_size": [
+        840,
+        460
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/T01.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 2,
+      "id": "T02",
+      "name": "平行黄路线与圆形节点",
+      "bbox": [
+        4340,
+        3750,
+        5480,
+        4520
+      ],
+      "rotation_reading_ccw": 0,
+      "atlas": "turret",
+      "mcp_render_sha256": "634f014935b03bfe4d337d6817b701a13223d85567beae12e048462c320cd611",
+      "native_size": [
+        1140,
+        770
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/T02.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 3,
+      "id": "T03",
+      "name": "圆头长条、短条和圆点",
+      "bbox": [
+        2040,
+        2230,
+        3100,
+        2740
+      ],
+      "rotation_reading_ccw": 0,
+      "atlas": "turret",
+      "mcp_render_sha256": "d6e0012d5bf5617f49ecee527002a7a0efa038a4b8de655c8a4122869d9fb518",
+      "native_size": [
+        1060,
+        510
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/T03.png",
+      "availability": "complete_source_and_historical_review"
+    },
+    {
+      "step": 4,
+      "id": "T05",
+      "name": "终末地工业中文字与彩条",
+      "bbox": [
+        1850,
+        3750,
+        2430,
+        3980
+      ],
+      "rotation_reading_ccw": 180,
+      "atlas": "turret",
+      "mcp_render_sha256": "7e8868c4979a05ac4365fba6be0fa18b5549cf73bfbb452f94ebabec76c15beb",
+      "native_size": [
+        580,
+        230
+      ],
+      "pixel_exact": true,
+      "source_evidence_path": "assets/reference/a7v/ps-native/T05.png",
+      "availability": "complete_source_and_historical_review"
+    }
+  ],
+  "all_original_pixels_exact": true,
+  "native_region_count": 9,
+  "new_production_validation": "not_run",
+  "runtime_use": "Source-study evidence metadata; use the corresponding focused crop in assets/legacy/reference-a7v/crops when designing. Raw proof captures stay in research."
+}

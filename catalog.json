@@ -135,6 +135,496 @@
       },
       "documentation": "docs/skills/endfield-tanks.md",
       "changelog": "docs/changelog/war-thunder-tank-style-endfield.md"
+    },
+    {
+      "baseline": {
+        "package_bytes": 16458528,
+        "package_sha256": "a3bb58656522ab0835ca228489bc20be89f44f8d178c2eb08e46b51ca76f8837",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.skill.zip",
+        "tag": "wt-style-endfield/v0.1.0",
+        "version": "0.1.0"
+      },
+      "changelog": "docs/changelog/wt-style-endfield.md",
+      "documentation": "docs/skills/wt-style-endfield-0.1.0.md",
+      "id": "wt-style-endfield",
+      "includes": [
+        {
+          "source": "toolkits/ground/scripts",
+          "target": "scripts"
+        },
+        {
+          "source": "profiles/ground",
+          "target": "profiles/ground"
+        },
+        {
+          "source": "assets/endfield/current-identity.json",
+          "target": "assets/current-identity.json"
+        },
+        {
+          "source": "assets/endfield/identity/ENDFIELD-industries-complete-dark.png",
+          "target": "assets/identity/ENDFIELD-industries-complete-dark.png"
+        },
+        {
+          "source": "assets/endfield/identity/ENDFIELD-industries-complete-dark.svg",
+          "target": "assets/identity/ENDFIELD-industries-complete-dark.svg"
+        },
+        {
+          "source": "assets/endfield/identity/ENDFIELD-industries-complete-light.png",
+          "target": "assets/identity/ENDFIELD-industries-complete-light.png"
+        },
+        {
+          "source": "assets/endfield/identity/ENDFIELD-industries-complete-light.svg",
+          "target": "assets/identity/ENDFIELD-industries-complete-light.svg"
+        },
+        {
+          "source": "assets/endfield/identity/community/LICENSE",
+          "target": "assets/identity/community/LICENSE"
+        },
+        {
+          "source": "assets/endfield/identity/community/endfield-icon-en.svg",
+          "target": "assets/identity/community/endfield-icon-en.svg"
+        },
+        {
+          "source": "assets/endfield/identity/community/endfield-industries.svg",
+          "target": "assets/identity/community/endfield-industries.svg"
+        },
+        {
+          "source": "assets/endfield/identity/community/endfield-logo-en.svg",
+          "target": "assets/identity/community/endfield-logo-en.svg"
+        },
+        {
+          "source": "assets/endfield/identity/community/sources.json",
+          "target": "assets/identity/community/sources.json"
+        },
+        {
+          "source": "assets/endfield/identity/endfield-industries-en-original-transparent.png",
+          "target": "assets/identity/endfield-industries-en-original-transparent.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A01-long-panel.png",
+          "target": "assets/inherited-draft-v1/assemblies/A01-long-panel.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A01-long-panel.svg",
+          "target": "assets/inherited-draft-v1/assemblies/A01-long-panel.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A02-compact-panel.png",
+          "target": "assets/inherited-draft-v1/assemblies/A02-compact-panel.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A02-compact-panel.svg",
+          "target": "assets/inherited-draft-v1/assemblies/A02-compact-panel.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A03-vertical-panel.png",
+          "target": "assets/inherited-draft-v1/assemblies/A03-vertical-panel.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/assemblies/A03-vertical-panel.svg",
+          "target": "assets/inherited-draft-v1/assemblies/A03-vertical-panel.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/identity/I01-industrial-ink.png",
+          "target": "assets/inherited-draft-v1/identity/I01-industrial-ink.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/identity/I01-industrial-ink.svg",
+          "target": "assets/inherited-draft-v1/identity/I01-industrial-ink.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/identity/I02-industrial-light.png",
+          "target": "assets/inherited-draft-v1/identity/I02-industrial-light.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/identity/I02-industrial-light.svg",
+          "target": "assets/inherited-draft-v1/identity/I02-industrial-light.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L01-equipment-id.png",
+          "target": "assets/inherited-draft-v1/labels/L01-equipment-id.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L01-equipment-id.svg",
+          "target": "assets/inherited-draft-v1/labels/L01-equipment-id.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L02-warning-stencil.png",
+          "target": "assets/inherited-draft-v1/labels/L02-warning-stencil.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L02-warning-stencil.svg",
+          "target": "assets/inherited-draft-v1/labels/L02-warning-stencil.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L03-vehicle-nameplate.png",
+          "target": "assets/inherited-draft-v1/labels/L03-vehicle-nameplate.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L03-vehicle-nameplate.svg",
+          "target": "assets/inherited-draft-v1/labels/L03-vehicle-nameplate.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L04-technical-coordinates.png",
+          "target": "assets/inherited-draft-v1/labels/L04-technical-coordinates.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L04-technical-coordinates.svg",
+          "target": "assets/inherited-draft-v1/labels/L04-technical-coordinates.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L05-vertical-id.png",
+          "target": "assets/inherited-draft-v1/labels/L05-vertical-id.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/labels/L05-vertical-id.svg",
+          "target": "assets/inherited-draft-v1/labels/L05-vertical-id.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P01-topographic-flow.png",
+          "target": "assets/inherited-draft-v1/patterns/P01-topographic-flow.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P01-topographic-flow.svg",
+          "target": "assets/inherited-draft-v1/patterns/P01-topographic-flow.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P02-quiet-node-field.png",
+          "target": "assets/inherited-draft-v1/patterns/P02-quiet-node-field.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P02-quiet-node-field.svg",
+          "target": "assets/inherited-draft-v1/patterns/P02-quiet-node-field.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P03-diagonal-microgrid.png",
+          "target": "assets/inherited-draft-v1/patterns/P03-diagonal-microgrid.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/patterns/P03-diagonal-microgrid.svg",
+          "target": "assets/inherited-draft-v1/patterns/P03-diagonal-microgrid.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R01-long-route.png",
+          "target": "assets/inherited-draft-v1/routes/R01-long-route.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R01-long-route.svg",
+          "target": "assets/inherited-draft-v1/routes/R01-long-route.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R02-folded-double-route.png",
+          "target": "assets/inherited-draft-v1/routes/R02-folded-double-route.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R02-folded-double-route.svg",
+          "target": "assets/inherited-draft-v1/routes/R02-folded-double-route.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R03-slot-terminal.png",
+          "target": "assets/inherited-draft-v1/routes/R03-slot-terminal.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R03-slot-terminal.svg",
+          "target": "assets/inherited-draft-v1/routes/R03-slot-terminal.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R04-direction-plane.png",
+          "target": "assets/inherited-draft-v1/routes/R04-direction-plane.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R04-direction-plane.svg",
+          "target": "assets/inherited-draft-v1/routes/R04-direction-plane.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R05-ring-node.png",
+          "target": "assets/inherited-draft-v1/routes/R05-ring-node.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R05-ring-node.svg",
+          "target": "assets/inherited-draft-v1/routes/R05-ring-node.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R06-capsule-rhythm.png",
+          "target": "assets/inherited-draft-v1/routes/R06-capsule-rhythm.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/routes/R06-capsule-rhythm.svg",
+          "target": "assets/inherited-draft-v1/routes/R06-capsule-rhythm.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S01-triangle-network.png",
+          "target": "assets/inherited-draft-v1/symbols/S01-triangle-network.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S01-triangle-network.svg",
+          "target": "assets/inherited-draft-v1/symbols/S01-triangle-network.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S02-hollow-triangles.png",
+          "target": "assets/inherited-draft-v1/symbols/S02-hollow-triangles.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S02-hollow-triangles.svg",
+          "target": "assets/inherited-draft-v1/symbols/S02-hollow-triangles.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S03-crosshair.png",
+          "target": "assets/inherited-draft-v1/symbols/S03-crosshair.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S03-crosshair.svg",
+          "target": "assets/inherited-draft-v1/symbols/S03-crosshair.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S04-hatch-block.png",
+          "target": "assets/inherited-draft-v1/symbols/S04-hatch-block.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S04-hatch-block.svg",
+          "target": "assets/inherited-draft-v1/symbols/S04-hatch-block.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S05-calibration-strip.png",
+          "target": "assets/inherited-draft-v1/symbols/S05-calibration-strip.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S05-calibration-strip.svg",
+          "target": "assets/inherited-draft-v1/symbols/S05-calibration-strip.svg"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S06-tick-ruler.png",
+          "target": "assets/inherited-draft-v1/symbols/S06-tick-ruler.png"
+        },
+        {
+          "source": "assets/endfield/inherited-draft-v1/symbols/S06-tick-ruler.svg",
+          "target": "assets/inherited-draft-v1/symbols/S06-tick-ruler.svg"
+        },
+        {
+          "source": "assets/endfield/legacy/decals/endfield-industries-en-native.png",
+          "target": "assets/legacy/decals/endfield-industries-en-native.png"
+        },
+        {
+          "source": "assets/endfield/legacy/official/endfield-industries-cn.png",
+          "target": "assets/legacy/official/endfield-industries-cn.png"
+        },
+        {
+          "source": "assets/endfield/legacy/official/endfield-title-en.png",
+          "target": "assets/legacy/official/endfield-title-en.png"
+        },
+        {
+          "source": "assets/endfield/legacy/official/endfield-title-en.svg",
+          "target": "assets/legacy/official/endfield-title-en.svg"
+        },
+        {
+          "source": "assets/endfield/legacy/official/site-color-bar.png",
+          "target": "assets/legacy/official/site-color-bar.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B01.png",
+          "target": "assets/legacy/reference-a7v/crops/B01.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B02.png",
+          "target": "assets/legacy/reference-a7v/crops/B02.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B03.png",
+          "target": "assets/legacy/reference-a7v/crops/B03.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B04.png",
+          "target": "assets/legacy/reference-a7v/crops/B04.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B05.png",
+          "target": "assets/legacy/reference-a7v/crops/B05.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B06.png",
+          "target": "assets/legacy/reference-a7v/crops/B06.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B07.png",
+          "target": "assets/legacy/reference-a7v/crops/B07.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B08.png",
+          "target": "assets/legacy/reference-a7v/crops/B08.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B09.png",
+          "target": "assets/legacy/reference-a7v/crops/B09.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B10.png",
+          "target": "assets/legacy/reference-a7v/crops/B10.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B11.png",
+          "target": "assets/legacy/reference-a7v/crops/B11.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B12.png",
+          "target": "assets/legacy/reference-a7v/crops/B12.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/B13.png",
+          "target": "assets/legacy/reference-a7v/crops/B13.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/G01.png",
+          "target": "assets/legacy/reference-a7v/crops/G01.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/G02.png",
+          "target": "assets/legacy/reference-a7v/crops/G02.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/M01.png",
+          "target": "assets/legacy/reference-a7v/crops/M01.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T01.png",
+          "target": "assets/legacy/reference-a7v/crops/T01.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T02.png",
+          "target": "assets/legacy/reference-a7v/crops/T02.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T03.png",
+          "target": "assets/legacy/reference-a7v/crops/T03.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T04.png",
+          "target": "assets/legacy/reference-a7v/crops/T04.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T05.png",
+          "target": "assets/legacy/reference-a7v/crops/T05.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T06.png",
+          "target": "assets/legacy/reference-a7v/crops/T06.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T07.png",
+          "target": "assets/legacy/reference-a7v/crops/T07.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T08.png",
+          "target": "assets/legacy/reference-a7v/crops/T08.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/crops/T09.png",
+          "target": "assets/legacy/reference-a7v/crops/T09.png"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/element-catalog.json",
+          "target": "assets/legacy/reference-a7v/element-catalog.json"
+        },
+        {
+          "source": "assets/endfield/legacy/reference-a7v/front-panel-map.json",
+          "target": "assets/legacy/reference-a7v/front-panel-map.json"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D02-shoulder-brace.png",
+          "target": "assets/reference-derived/D02-shoulder-brace.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D02-shoulder-brace.svg",
+          "target": "assets/reference-derived/D02-shoulder-brace.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D03-crew-roof-fields.png",
+          "target": "assets/reference-derived/D03-crew-roof-fields.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D03-crew-roof-fields.svg",
+          "target": "assets/reference-derived/D03-crew-roof-fields.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D04-offset-deck-route.png",
+          "target": "assets/reference-derived/D04-offset-deck-route.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D04-offset-deck-route.svg",
+          "target": "assets/reference-derived/D04-offset-deck-route.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D05-quiet-aft-markers.png",
+          "target": "assets/reference-derived/D05-quiet-aft-markers.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D05-quiet-aft-markers.svg",
+          "target": "assets/reference-derived/D05-quiet-aft-markers.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D06-equipment-type-hierarchy.png",
+          "target": "assets/reference-derived/D06-equipment-type-hierarchy.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D06-equipment-type-hierarchy.svg",
+          "target": "assets/reference-derived/D06-equipment-type-hierarchy.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D07-quiet-contour-network.png",
+          "target": "assets/reference-derived/D07-quiet-contour-network.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D07-quiet-contour-network.svg",
+          "target": "assets/reference-derived/D07-quiet-contour-network.svg"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D08-sparse-colour-accent.png",
+          "target": "assets/reference-derived/D08-sparse-colour-accent.png"
+        },
+        {
+          "source": "assets/endfield/reference-derived/D08-sparse-colour-accent.svg",
+          "target": "assets/reference-derived/D08-sparse-colour-accent.svg"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/author-01.jpeg",
+          "target": "assets/reference/a7v/author-01.jpeg"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/author-02.jpeg",
+          "target": "assets/reference/a7v/author-02.jpeg"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/front.png",
+          "target": "assets/reference/a7v/front.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/iso.png",
+          "target": "assets/reference/a7v/iso.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/iso_right.png",
+          "target": "assets/reference/a7v/iso_right.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/left.png",
+          "target": "assets/reference/a7v/left.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/rear.png",
+          "target": "assets/reference/a7v/rear.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/right.png",
+          "target": "assets/reference/a7v/right.png"
+        },
+        {
+          "source": "assets/endfield/reference/a7v/top.png",
+          "target": "assets/reference/a7v/top.png"
+        }
+      ],
+      "kind": "style",
+      "source": "src/styles/ground/wt-style-endfield",
+      "status": "released_baseline",
+      "supplements": []
     }
   ],
   "profiles": {

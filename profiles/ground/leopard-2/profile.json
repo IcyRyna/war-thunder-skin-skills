@@ -1,0 +1,1086 @@
+{
+  "family": "leopard-2",
+  "representative": "Leopard 2A7V",
+  "unit": "germ_leopard_2a7v",
+  "views": {
+    "side": "profiles/ground/leopard-2/views/side.png",
+    "front": "profiles/ground/leopard-2/views/front.png",
+    "rear": "profiles/ground/leopard-2/views/rear.png",
+    "top": "profiles/ground/leopard-2/views/top.png"
+  },
+  "source_obj_sha256": "4f540b9211a68c0a1546557c2785793babcf5e53d5124e276baa86d599b3bb7f",
+  "source_materials_sha256": "dd95858dd6e666779a76d14a4f650b37bd7366db0e03e9a86c72acbd4c300f97",
+  "source_materials": "profiles/ground/leopard-2/materials.json",
+  "source_pack": "game-resource:germ_leopard_2a7v.grp",
+  "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+  "hidden_nodes": [
+    "ammo",
+    "antenna_01",
+    "antenna_02"
+  ],
+  "major_group_counts": {
+    "H": 103213,
+    "T": 67196,
+    "G": 5887,
+    "M": 7501,
+    "A": 23257,
+    "R": 39738,
+    "P": 329,
+    "U": 0
+  },
+  "members": [
+    {
+      "node": "root",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 68001
+    },
+    {
+      "node": "root",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 6
+    },
+    {
+      "node": "hatch_09",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 643
+    },
+    {
+      "node": "hatch_10",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 494
+    },
+    {
+      "node": "wheel_r_front",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1338
+    },
+    {
+      "node": "wheel_r_top_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_r_top_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_r_top_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_r_top_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_r_drive",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 2392
+    },
+    {
+      "node": "wheel_l_front",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1338
+    },
+    {
+      "node": "wheel_l_top_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_l_top_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_l_top_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_l_top_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 236
+    },
+    {
+      "node": "wheel_l_drive",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 2392
+    },
+    {
+      "node": "ex_armor_r_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 340
+    },
+    {
+      "node": "ex_decor_r_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 894
+    },
+    {
+      "node": "ex_decor_l_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 894
+    },
+    {
+      "node": "ex_armor_l_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 340
+    },
+    {
+      "node": "ex_armor_l_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 466
+    },
+    {
+      "node": "ex_decor_l_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 866
+    },
+    {
+      "node": "ex_decor_r_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 866
+    },
+    {
+      "node": "ex_armor_r_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 466
+    },
+    {
+      "node": "ex_armor_r_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 738
+    },
+    {
+      "node": "ex_armor_l_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 738
+    },
+    {
+      "node": "ex_armor_r_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 462
+    },
+    {
+      "node": "ex_armor_r_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 480
+    },
+    {
+      "node": "ex_armor_r_08",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 458
+    },
+    {
+      "node": "ex_armor_r_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 568
+    },
+    {
+      "node": "ex_armor_r_09",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 568
+    },
+    {
+      "node": "ex_decor_08",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 382
+    },
+    {
+      "node": "ex_armor_l_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 462
+    },
+    {
+      "node": "ex_armor_l_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 480
+    },
+    {
+      "node": "ex_armor_l_08",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 458
+    },
+    {
+      "node": "ex_armor_l_09",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 568
+    },
+    {
+      "node": "ex_armor_l_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 568
+    },
+    {
+      "node": "ex_armor_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 1539
+    },
+    {
+      "node": "ex_armor_07",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "ex_armor_body_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 343
+    },
+    {
+      "node": "ex_armor_body_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 317
+    },
+    {
+      "node": "ex_armor_body_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 479
+    },
+    {
+      "node": "ex_armor_body_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 442
+    },
+    {
+      "node": "ex_armor_body_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 455
+    },
+    {
+      "node": "ex_armor_l_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 1833
+    },
+    {
+      "node": "ex_armor_r_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 1833
+    },
+    {
+      "node": "ex_lantern_r",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 2194
+    },
+    {
+      "node": "ex_lantern_r",
+      "material": "headlight_glass_004",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 132
+    },
+    {
+      "node": "ex_lantern_r",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 6
+    },
+    {
+      "node": "ex_lantern_l",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 2501
+    },
+    {
+      "node": "ex_lantern_l",
+      "material": "headlight_glass_004",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 132
+    },
+    {
+      "node": "ex_lantern_l",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 6
+    },
+    {
+      "node": "ex_armor_body_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 4593
+    },
+    {
+      "node": "ex_armor_body_01",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "hatch_08",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 404
+    },
+    {
+      "node": "ex_decor_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 1116
+    },
+    {
+      "node": "ex_decor_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 310
+    },
+    {
+      "node": "ex_decor_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 1410
+    },
+    {
+      "node": "ex_armor_r_16",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 796
+    },
+    {
+      "node": "ex_armor_r_16",
+      "material": "ger_leopard_2a5_phys_track",
+      "texture": "ger_leopard_2a5_phys_track_c*",
+      "major_part": "R",
+      "triangles": 422
+    },
+    {
+      "node": "ex_armor_l_16",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 796
+    },
+    {
+      "node": "ex_armor_l_16",
+      "material": "ger_leopard_2a5_phys_track",
+      "texture": "ger_leopard_2a5_phys_track_c*",
+      "major_part": "R",
+      "triangles": 422
+    },
+    {
+      "node": "ex_armor_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 132
+    },
+    {
+      "node": "hatch_11",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 350
+    },
+    {
+      "node": "wheel_r_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_r_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_r_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_01",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_03",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_04",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_05",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "wheel_l_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "R",
+      "triangles": 1300
+    },
+    {
+      "node": "suspension_l_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 212
+    },
+    {
+      "node": "bone_turret",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 21
+    },
+    {
+      "node": "bone_turret",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 40236
+    },
+    {
+      "node": "bone_gun",
+      "material": "leopard_2a7v_gun_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_gun_c*",
+      "major_part": "G",
+      "triangles": 2532
+    },
+    {
+      "node": "turret_cap",
+      "material": "leopard_2a7v_gun_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_gun_c*",
+      "major_part": "G",
+      "triangles": 146
+    },
+    {
+      "node": "gun_barrel",
+      "material": "leopard_2a7v_gun_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_gun_c*",
+      "major_part": "G",
+      "triangles": 3139
+    },
+    {
+      "node": "gun_barrel",
+      "material": "smooth_barrel_a_smooth_barrel_a",
+      "texture": "smooth_barrel_a_c*",
+      "major_part": "G",
+      "triangles": 70
+    },
+    {
+      "node": "optic_commander",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 18
+    },
+    {
+      "node": "optic_commander",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 3875
+    },
+    {
+      "node": "bone_turret_01",
+      "material": "mg_mount_leopard_2a7v_ger_camo_bronzegruen",
+      "texture": "mg_mount_leopard_2a7v_c*",
+      "major_part": "M",
+      "triangles": 1210
+    },
+    {
+      "node": "bone_mg_aa_v",
+      "material": "mg_mg_42",
+      "texture": "mg_mg_42_c*",
+      "major_part": "M",
+      "triangles": 4058
+    },
+    {
+      "node": "mg_aa_mount_v",
+      "material": "mg_mount_leopard_2a7v_ger_camo_bronzegruen",
+      "texture": "mg_mount_leopard_2a7v_c*",
+      "major_part": "M",
+      "triangles": 1248
+    },
+    {
+      "node": "mg_aa_mount_h",
+      "material": "mg_mount_leopard_2a7v_ger_camo_bronzegruen",
+      "texture": "mg_mount_leopard_2a7v_c*",
+      "major_part": "M",
+      "triangles": 985
+    },
+    {
+      "node": "hatch_07",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 1782
+    },
+    {
+      "node": "hatch_03",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 2408
+    },
+    {
+      "node": "ex_decor_01",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 965
+    },
+    {
+      "node": "hatch_02",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 2274
+    },
+    {
+      "node": "ex_decor_02",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 2272
+    },
+    {
+      "node": "ex_decor_03",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 1020
+    },
+    {
+      "node": "ex_decor_r_04",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 2552
+    },
+    {
+      "node": "ex_decor_r_05",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 2638
+    },
+    {
+      "node": "hatch_04",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 1147
+    },
+    {
+      "node": "hatch_06",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 2136
+    },
+    {
+      "node": "ex_armor_r_17",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 3146
+    },
+    {
+      "node": "ex_armor_l_17",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 2806
+    },
+    {
+      "node": "ex_decor_l_05",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 2118
+    },
+    {
+      "node": "ex_armor_r_18",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 895
+    },
+    {
+      "node": "ex_armor_l_18",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 901
+    },
+    {
+      "node": "ex_armor_04",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 768
+    },
+    {
+      "node": "ex_armor_06",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 1324
+    },
+    {
+      "node": "ex_armor_02",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 844
+    },
+    {
+      "node": "ex_armor_03",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 768
+    },
+    {
+      "node": "hatch_05",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 1650
+    },
+    {
+      "node": "ex_decor_04",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 1368
+    },
+    {
+      "node": "ex_decor_l_04",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "A",
+      "triangles": 1940
+    },
+    {
+      "node": "bone_roll_engine_01",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 118
+    },
+    {
+      "node": "bone_roll_engine_02",
+      "material": "leopard_2a7v_turret_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_turret_c*",
+      "major_part": "T",
+      "triangles": 118
+    },
+    {
+      "node": "ex_armor_body_09",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 220
+    },
+    {
+      "node": "ex_decor_l_07",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 64
+    },
+    {
+      "node": "ex_decor_r_09",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 122
+    },
+    {
+      "node": "ex_armor_r_14",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 96
+    },
+    {
+      "node": "ex_armor_r_13",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 140
+    },
+    {
+      "node": "ex_armor_r_12",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 440
+    },
+    {
+      "node": "ex_armor_r_11",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 140
+    },
+    {
+      "node": "ex_armor_r_10",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 440
+    },
+    {
+      "node": "ex_armor_l_14",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 96
+    },
+    {
+      "node": "ex_armor_l_12",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 440
+    },
+    {
+      "node": "ex_armor_l_13",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 140
+    },
+    {
+      "node": "ex_armor_l_11",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 140
+    },
+    {
+      "node": "ex_armor_l_10",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 440
+    },
+    {
+      "node": "ex_armor_l_15",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 604
+    },
+    {
+      "node": "ex_armor_r_15",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "H",
+      "triangles": 604
+    },
+    {
+      "node": "track_r",
+      "material": "ger_leopard_2a4_track",
+      "texture": "ger_leopard_2a4_track_c*",
+      "major_part": "R",
+      "triangles": 5734
+    },
+    {
+      "node": "track_l",
+      "material": "ger_leopard_2a4_track_001",
+      "texture": "ger_leopard_2a4_track_c*",
+      "major_part": "R",
+      "triangles": 5612
+    },
+    {
+      "node": "ex_decor_r_08",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 386
+    },
+    {
+      "node": "ex_decor_l_06",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 386
+    },
+    {
+      "node": "ex_decor_l_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 344
+    },
+    {
+      "node": "ex_decor_r_02",
+      "material": "leopard_2a7v_body_ger_camo_bronzegruen",
+      "texture": "leopard_2a7v_body_c*",
+      "major_part": "A",
+      "triangles": 344
+    }
+  ],
+  "classification_method": "Derived from actual node and material resource names; major-part hints, not hand-verified native UV masks. Attachments can be regrouped after inspection.",
+  "subzone_mapping": "Apply the semantic zone tree to actual structure; no per-family paint coordinates supplied.",
+  "validation": {
+    "model_views": "observed",
+    "classification": "node/material-derived hints",
+    "native_uv_paint_masks": "not_run",
+    "new_livery_dds": "not_run",
+    "game": "not_run"
+  },
+  "view_meaning": "Major-part diagnostic colours, not a livery or exact subzone mask. Orthographic static bind pose; side front points right, top front points up."
+}

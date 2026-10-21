@@ -1,0 +1,181 @@
+{
+  "scope": "Earlier first-batch components retained as editable source, not mandatory templates",
+  "component_count": 25,
+  "items": [
+    {
+      "svg": "assets/inherited-draft-v1/assemblies/A01-long-panel.svg",
+      "png": "assets/inherited-draft-v1/assemblies/A01-long-panel.png",
+      "name": "A01 long-panel",
+      "sha256": "46f16d7f19e145621774e0f05b90640401bb1db2bfff127d1762ef57eb4eae28",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/assemblies/A02-compact-panel.svg",
+      "png": "assets/inherited-draft-v1/assemblies/A02-compact-panel.png",
+      "name": "A02 compact-panel",
+      "sha256": "d83879c0d51f6e78bf0c3e6b6a6d131402ebf763dab902026b76bfdece52ad1e",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/assemblies/A03-vertical-panel.svg",
+      "png": "assets/inherited-draft-v1/assemblies/A03-vertical-panel.png",
+      "name": "A03 vertical-panel",
+      "sha256": "1129dbae35572a5f47faf9ec3bfb1b64fa23a51695e6356073d5a2aa972ba1b3",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/identity/I01-industrial-ink.svg",
+      "png": "assets/inherited-draft-v1/identity/I01-industrial-ink.png",
+      "name": "I01 industrial-ink",
+      "sha256": "2a99cf12f6f7acd007dbc878f9ec833ca5bac9195d5d4c6251c79c34c996278e",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/identity/I02-industrial-light.svg",
+      "png": "assets/inherited-draft-v1/identity/I02-industrial-light.png",
+      "name": "I02 industrial-light",
+      "sha256": "881aa5cda85c7f0ccd62643b75a34955c417a89a1a680515dc5bafc909e55bd1",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/labels/L01-equipment-id.svg",
+      "png": "assets/inherited-draft-v1/labels/L01-equipment-id.png",
+      "name": "L01 equipment-id",
+      "sha256": "2b22c57db5485acedc563840862ba4ff0b0e8117b39ed8986af802d85267fd52",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/labels/L02-warning-stencil.svg",
+      "png": "assets/inherited-draft-v1/labels/L02-warning-stencil.png",
+      "name": "L02 warning-stencil",
+      "sha256": "b879a55fc91286c2a8645e6a7c72013e51c77794e0ceed9b851201715eeea11a",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/labels/L03-vehicle-nameplate.svg",
+      "png": "assets/inherited-draft-v1/labels/L03-vehicle-nameplate.png",
+      "name": "L03 vehicle-nameplate",
+      "sha256": "288f6bc737bd3cd23bd752fc8aae8beade62dd2eab752b6bb0a05120c587728c",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/labels/L04-technical-coordinates.svg",
+      "png": "assets/inherited-draft-v1/labels/L04-technical-coordinates.png",
+      "name": "L04 technical-coordinates",
+      "sha256": "c88f55db1f99012b795b04939cb16eae84017d97faa280d323766bf72e63a38b",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/labels/L05-vertical-id.svg",
+      "png": "assets/inherited-draft-v1/labels/L05-vertical-id.png",
+      "name": "L05 vertical-id",
+      "sha256": "706e3dd777e38e0885879f2fb1c036b3d60889a0a68925b00947ab55c8332490",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/patterns/P01-topographic-flow.svg",
+      "png": "assets/inherited-draft-v1/patterns/P01-topographic-flow.png",
+      "name": "P01 topographic-flow",
+      "sha256": "1f7587d667db73c9cb3df41ae3a8e7918c200b86b935e3a189bf5ceddbe45d4e",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/patterns/P02-quiet-node-field.svg",
+      "png": "assets/inherited-draft-v1/patterns/P02-quiet-node-field.png",
+      "name": "P02 quiet-node-field",
+      "sha256": "09ee40e063373efbf3fd15c96e0a1eb372cb9773303edc65037f9b30e1f52259",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/patterns/P03-diagonal-microgrid.svg",
+      "png": "assets/inherited-draft-v1/patterns/P03-diagonal-microgrid.png",
+      "name": "P03 diagonal-microgrid",
+      "sha256": "b6f91db73542cb3711fe7bf513cabbc7f0cc4d2dd4ea9d792905d6b286b65dbc",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R01-long-route.svg",
+      "png": "assets/inherited-draft-v1/routes/R01-long-route.png",
+      "name": "R01 long-route",
+      "sha256": "021c54682865341fc06cefe2d0b924702cb8c1f5aa31ad807342e723174553f1",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R02-folded-double-route.svg",
+      "png": "assets/inherited-draft-v1/routes/R02-folded-double-route.png",
+      "name": "R02 folded-double-route",
+      "sha256": "45fa44c90a8b0405bbb006f1e6c3f61d6cd94355d400cce443f57ec363882a21",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R03-slot-terminal.svg",
+      "png": "assets/inherited-draft-v1/routes/R03-slot-terminal.png",
+      "name": "R03 slot-terminal",
+      "sha256": "d9dd9af4a9e198d4a15902a5965c2bbe304d7c7a2a21d94d54875813d1c2f66e",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R04-direction-plane.svg",
+      "png": "assets/inherited-draft-v1/routes/R04-direction-plane.png",
+      "name": "R04 direction-plane",
+      "sha256": "570974f0552e3a54365cbb79440332dda24add9fee98cc5c0432a8517c603206",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R05-ring-node.svg",
+      "png": "assets/inherited-draft-v1/routes/R05-ring-node.png",
+      "name": "R05 ring-node",
+      "sha256": "160211031cf7c800f85936cd0b1bcb6db4ed6cfe644fbd80d9253847e6f842a0",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/routes/R06-capsule-rhythm.svg",
+      "png": "assets/inherited-draft-v1/routes/R06-capsule-rhythm.png",
+      "name": "R06 capsule-rhythm",
+      "sha256": "f42a64034d2b730263bb6cb8dee06ae6abca749682990a4d62872b28e788b890",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S01-triangle-network.svg",
+      "png": "assets/inherited-draft-v1/symbols/S01-triangle-network.png",
+      "name": "S01 triangle-network",
+      "sha256": "38d38c9a6b885734bd54099c3a2fb6320ea3fdd20d1c472c47383f0ea8db11c5",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S02-hollow-triangles.svg",
+      "png": "assets/inherited-draft-v1/symbols/S02-hollow-triangles.png",
+      "name": "S02 hollow-triangles",
+      "sha256": "ed764d3253912c30c7a0d7eb02e8b5521ce90cad84f4e7d175d925369688218e",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S03-crosshair.svg",
+      "png": "assets/inherited-draft-v1/symbols/S03-crosshair.png",
+      "name": "S03 crosshair",
+      "sha256": "ea75c9da1b44ac44105e90276abf1b61bca147da4938e418d0b3ef5b66864305",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S04-hatch-block.svg",
+      "png": "assets/inherited-draft-v1/symbols/S04-hatch-block.png",
+      "name": "S04 hatch-block",
+      "sha256": "72b201389c383eb8084801bf31c95461bacbc054a88402158ebb663c71e7e8d0",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S05-calibration-strip.svg",
+      "png": "assets/inherited-draft-v1/symbols/S05-calibration-strip.png",
+      "name": "S05 calibration-strip",
+      "sha256": "b103beb17734f9926f76fb13bb185082b364a19b4194cfc68acf6810febe3a69",
+      "status": "retained editable draft, optional, not a required layout"
+    },
+    {
+      "svg": "assets/inherited-draft-v1/symbols/S06-tick-ruler.svg",
+      "png": "assets/inherited-draft-v1/symbols/S06-tick-ruler.png",
+      "name": "S06 tick-ruler",
+      "sha256": "8feedf82a0dbe74c977ca4a70b14bea98736bcb1a8aac68b511a0a03f35f67cc",
+      "status": "retained editable draft, optional, not a required layout"
+    }
+  ]
+}

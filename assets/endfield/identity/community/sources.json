@@ -1,0 +1,30 @@
+{
+  "repository": "https://github.com/Yue-plus/endfield_icons",
+  "classification": "community-distributed vector; not claimed original A7V author master",
+  "files": [
+    {
+      "url": "https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-industries.svg",
+      "file": "endfield-industries.svg",
+      "bytes": 23091,
+      "sha256": "3e2af120ec6c86d2132448e7fbd4264b50e7258276c1beabb2bf3fa666200025"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-logo-en.svg",
+      "file": "endfield-logo-en.svg",
+      "bytes": 5405,
+      "sha256": "b1addab97d454bd029c1fa0b6b6535ec5855734f6efade13036853f78fa0efea"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/svg/endfield-icon-en.svg",
+      "file": "endfield-icon-en.svg",
+      "bytes": 4980,
+      "sha256": "5decd563a970c1e2fa681b6c54c1b23ff3d2932ba83e2bc7453e7b808f35774c"
+    },
+    {
+      "url": "https://raw.githubusercontent.com/Yue-plus/endfield_icons/main/LICENSE",
+      "file": "LICENSE",
+      "bytes": 1065,
+      "sha256": "3518c52f8ab8da775793e1836bc403e64235cba8ef1c57e6ae53b34e6c3d5161"
+    }
+  ]
+}

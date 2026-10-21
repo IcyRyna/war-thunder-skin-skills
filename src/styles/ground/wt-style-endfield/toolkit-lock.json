@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "toolkit": "ground",
+  "version": "0.1.0",
+  "status": "released; runtime installation is a separate operation",
+  "python": "3.12",
+  "python_packages": {
+    "pillow": "12.2.0",
+    "numpy": "2.3.5",
+    "moderngl": "5.12.0"
+  },
+  "package_dependencies": {
+    "image_and_dds": [
+      "pillow",
+      "numpy"
+    ],
+    "preview": [
+      "moderngl",
+      "OpenGL 3.3"
+    ],
+    "composa_client": [
+      "Python standard library",
+      "installed Composa with AI Control enabled"
+    ]
+  },
+  "external_tools": {
+    "texconv": {
+      "version": "2026.5.8.1",
+      "sha256": "dcfdec10244e02cf5037fba089c55fb7e1326b1c8181742d77d15fa5cb5eef06",
+      "binary_included": false
+    },
+    "composa": {
+      "observed_version": "1.4.0",
+      "binary_included": false,
+      "schema_policy": "query live schema; do not assume historical capabilities"
+    }
+  },
+  "scripts": [
+    {
+      "path": "scripts/artifact_io.py",
+      "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2"
+    },
+    {
+      "path": "scripts/composa_mcp.py",
+      "sha256": "776a4c0805954fccd3885fd2bb9fa1db8007f4cd1252f3d3530108f6d3221f39"
+    },
+    {
+      "path": "scripts/dds_variant.py",
+      "sha256": "99151e2f1e161c4826f162bebf340d670682df2e22f1ec061a92e15ff94f5b86"
+    },
+    {
+      "path": "scripts/export_uv_reference.py",
+      "sha256": "d5f67c3ef26f8bca2d9a285f53739aa6c87d126d2717eba0f292dc1434a295f3"
+    },
+    {
+      "path": "scripts/ground_dds.py",
+      "sha256": "948ceb344d703d9b0b996eab6699fb8b5ce634c6dc08d81f52eacab5cc2adf7a"
+    },
+    {
+      "path": "scripts/inspect_skin.py",
+      "sha256": "b7fea2e55cfefa89c31ab0bffb32d2f5f5a8b75b015b5b4d047d00418dbed9f4"
+    },
+    {
+      "path": "scripts/tank_core.py",
+      "sha256": "947af0cdd32bc33d57854d71a7167f3f434a7146015162b81d5976a6f36ae306"
+    },
+    {
+      "path": "scripts/tank_preview.py",
+      "sha256": "5a1dafff3283fbcfafe4537e97ff8030306a5f6fff31ef8e40612d757109cd67"
+    },
+    {
+      "path": "scripts/texture_semantics.py",
+      "sha256": "9ba5dde3869e232e8ec6978ce99ee4aad86dde25a9e61b5ca2f33e5e69262750"
+    },
+    {
+      "path": "scripts/layout_brief.py",
+      "sha256": "f5f279659b48234e291d37c9e32880cf3329d0e39089fe68eaed96ba7383aae3"
+    }
+  ],
+  "excluded_old_repair_entrypoints": [
+    "build_a7v_design.py",
+    "stage_a7v_skin.py"
+  ]
+}

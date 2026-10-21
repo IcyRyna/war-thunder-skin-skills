@@ -1,0 +1,404 @@
+{
+  "materials": [
+    {
+      "index": 0,
+      "name": "ztz_99a_body_ussr_camo_green",
+      "obj_name": "ztz_99a_body_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_body_c*",
+        "ussr_camo_green*",
+        "ztz_99a_body_n*",
+        "ztz_99a_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 1,
+      "name": "headlight_glass",
+      "obj_name": "headlight_glass",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 2,
+      "name": "headlight_glass_002",
+      "obj_name": "headlight_glass_002",
+      "shader": "dynamic_pbr_glass",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 3,
+      "name": "ztz_99a_gun_ussr_camo_green",
+      "obj_name": "ztz_99a_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_gun_c*",
+        "ussr_camo_green*",
+        "ztz_99a_gun_n*",
+        "ztz_99a_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 4,
+      "name": "smooth_barrel_a_smooth_barrel_a",
+      "obj_name": "smooth_barrel_a_smooth_barrel_a",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_c*",
+        "smooth_barrel_a_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 5,
+      "name": "mg_pkt",
+      "obj_name": "mg_pkt",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_pkt_c*",
+        null,
+        "mg_pkt_n*",
+        "mg_pkt_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 6,
+      "name": "ztz_99a_turret_ussr_camo_green",
+      "obj_name": "ztz_99a_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_turret_c*",
+        "ussr_camo_green*",
+        "ztz_99a_turret_n*",
+        "ztz_99a_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 7,
+      "name": "ztz_99a_mg_ussr_camo_green",
+      "obj_name": "ztz_99a_mg_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_mg_c*",
+        "ussr_camo_green*",
+        "ztz_99a_mg_n*",
+        "ztz_99a_mg_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "camo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 8,
+      "name": "us_turret_glass",
+      "obj_name": "us_turret_glass",
+      "shader": "dynamic_masked_glass_chrome",
+      "texture_slots": [
+        "us_turret_glass_c*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 9,
+      "name": "mg_qjc88_ussr_camo_green",
+      "obj_name": "mg_qjc88_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "mg_qjc88_c*",
+        "ussr_camo_green*",
+        "mg_qjc88_n*",
+        "mg_qjc88_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 10,
+      "name": "mg_dshkm_ammo",
+      "obj_name": "mg_dshkm_ammo",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_dshkm_ammo_c*",
+        null,
+        "mg_dshkm_ammo_n*",
+        "mg_dshkm_ammo_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 11,
+      "name": "cn_ztz_99_phys_track_cn_ztz_99_phys_track",
+      "obj_name": "cn_ztz_99_phys_track_cn_ztz_99_phys_track",
+      "shader": "dynamic_masked_track",
+      "texture_slots": [
+        "cn_ztz_99_phys_track_c*",
+        "cn_ztz_99_phys_track_c*",
+        "cn_ztz_99_phys_track_n*",
+        "cn_ztz_99_phys_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "metalness_dirt_removal_start=0.5\nmetalness_dirt_removal_end=0.01",
+      "albedo_proxy": null
+    },
+    {
+      "index": 12,
+      "name": "cn_ztz_99a_track",
+      "obj_name": "cn_ztz_99a_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "cn_ztz_99a_track_c*",
+        null,
+        "cn_ztz_99a_track_n*",
+        "cn_ztz_99a_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 13,
+      "name": "cn_ztz_99a_track_013",
+      "obj_name": "cn_ztz_99a_track_013",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "cn_ztz_99a_track_c*",
+        null,
+        "cn_ztz_99a_track_n*",
+        "cn_ztz_99a_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 14,
+      "name": "cn_ztz_99a_track",
+      "obj_name": "cn_ztz_99a_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "cn_ztz_99a_track_c*",
+        null,
+        "cn_ztz_99a_track_n*",
+        "cn_ztz_99a_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=128\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 15,
+      "name": "cn_ztz_99a_track_001",
+      "obj_name": "cn_ztz_99a_track_001",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "cn_ztz_99a_track_c*",
+        null,
+        "cn_ztz_99a_track_n*",
+        "cn_ztz_99a_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=128\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 16,
+      "name": "ztz_99a_mg_ussr_camo_green",
+      "obj_name": "ztz_99a_mg_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_mg_c*",
+        "ussr_camo_green*",
+        "ztz_99a_mg_n*",
+        "ztz_99a_mg_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\ncamo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 17,
+      "name": "ztz_99a_turret_ussr_camo_green",
+      "obj_name": "ztz_99a_turret_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_turret_c*",
+        "ussr_camo_green*",
+        "ztz_99a_turret_n*",
+        "ztz_99a_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\ncamo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 18,
+      "name": "ztz_99a_gun_ussr_camo_green",
+      "obj_name": "ztz_99a_gun_ussr_camo_green",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "ztz_99a_gun_c*",
+        "ussr_camo_green*",
+        "ztz_99a_gun_n*",
+        "ztz_99a_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\ncamo_smoothness_influence=0\ncamo_metalness_influence=0\ncamo_tile_tank=0\ncamo_amplitude_tank=4",
+      "albedo_proxy": null
+    }
+  ],
+  "template_textures": []
+}

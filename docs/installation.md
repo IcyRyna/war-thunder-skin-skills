@@ -26,6 +26,8 @@ war-thunder-user-skins/
 
 Release 的独立安装包包含该版本的工具与素材，安装后不需要克隆本仓库或另装其他 Skill。
 
+`wt-style-endfield` 0.1.0 的 `.skill.zip` 已含正常生产所需资源；同页 `.legacy-assets.zip` 另存全部 40 份旧素材，不必解压进 Skill。`.source.zip` 用于重建与开发，不是安装包。地面脚本依赖与固定工具身份见包内 `toolkit-lock.json`。
+
 ## 放入 Skills 目录
 
 | 平台 | 个人使用 | 项目内使用 |
@@ -49,6 +51,8 @@ Claude Code 可用 `/war-thunder-user-skins` 调用，或在对话中说明需�
 
 - `war-thunder-user-skins`
 - `war-thunder-style-akamywek`
+- `wt-style-endfield`
+
 历史兼容包另见[历史版本](history/README.md)；旧包仍按其原 Skill ID 识别。
 
 提供目标载具、原始模板或 DDS、参考图片与期望输出，会帮助助手选择对应的制作分支。

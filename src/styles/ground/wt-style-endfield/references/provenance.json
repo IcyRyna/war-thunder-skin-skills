@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "package": "wt-style-endfield",
+  "primary": {
+    "author": "HK416の午夜福音",
+    "url": "https://live.warthunder.com/post/1162771/en/",
+    "archive_sha256": "e1cc23b473a1707573e60c4d9776657d41421318ab48a5052b34f4758bfb2f10",
+    "source_role": "visual authority, not supplied editable author project"
+  },
+  "r11": {
+    "archive_sha256": "74ea8023d1be5ea33c924d438a923f4c30bd0d6d169fbfc2159795d3c06d7299",
+    "entry": "Leopard2A7V_ENDFIELD_handdrawn/临摹总结.md",
+    "entry_sha256": "9034968965a95f2446e13653fae90038d4056268a1608f63d8ae710f2466c2fd",
+    "use": "仅作为按区域学习、保留可编辑图形、分开比较构图与细节的学习输入；其制作过程与数值是作者声明。",
+    "not_use": "不作为视觉权威、固定色板、面积比例、全车布局模板或继续修复r11的任务。"
+  },
+  "frozen_research": [
+    {
+      "name": "layout-observations.json",
+      "sha256": "af2ae752b414c88a504dacc1653b6987c95b8d08ae10c051ee5774879206eb58"
+    },
+    {
+      "name": "assets-and-lessons.json",
+      "sha256": "46b55607c304602a9bbaca643512e2d38c8b43929ff317dace099a42a5acc078"
+    },
+    {
+      "name": "style-system-draft.json",
+      "sha256": "768cb3af9738f64c544190392e4edf98e9afa8646c71928d9f7db4861f454d5e"
+    },
+    {
+      "name": "composa-original-study.json",
+      "sha256": "96b920410e99d7514c4ba67a6cb2ee4697a7a4c6e37a1855a4bb98d657c76a83"
+    }
+  ],
+  "legacy": {
+    "skill": "war-thunder-tank-style-endfield",
+    "version": "1.4",
+    "files": 40,
+    "bytes": 61905979,
+    "new_formal_install": false
+  },
+  "community_vector": {
+    "repository": "https://github.com/Yue-plus/endfield_icons",
+    "license": "MIT",
+    "classification": "community distributed; not A7V author master",
+    "file": "assets/identity/community/endfield-industries.svg",
+    "sha256": "3e2af120ec6c86d2132448e7fbd4264b50e7258276c1beabb2bf3fa666200025"
+  },
+  "game_models": {
+    "distribution": "Only diagnostic renders and metadata included; model binaries and game textures not bundled",
+    "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3"
+  },
+  "new_artwork": "Editable component arrangements and illustrative compositions are proposals, not original-author files or approved whole-vehicle skins.",
+  "runtime_boundary": {
+    "human_presentation_in_core": false,
+    "whole_legacy_files_preserved": 40,
+    "selected_legacy_in_core": 32,
+    "optional_legacy_library": "wt-style-endfield-v0.1.0.legacy-assets.zip",
+    "optional_library_required_for_execution": false,
+    "complete_study_and_review_sources": "Full research and editor records remain local; repository docs contain human presentations; source attachment reproduces the runtime package."
+  },
+  "version": "0.1.0",
+  "release": {
+    "tag": "wt-style-endfield/v0.1.0",
+    "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0",
+    "scope": "Reusable layout knowledge, editable assets and tools; not a completed vehicle skin or game validation"
+  }
+}

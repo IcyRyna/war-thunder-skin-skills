@@ -1,0 +1,58 @@
+[
+  {
+    "id": "D02",
+    "svg": "assets/reference-derived/D02-shoulder-brace.svg",
+    "png": "assets/reference-derived/D02-shoulder-brace.png",
+    "role": "炮塔白肩的宽黄底、黑色圆头折线、透明/浅色负形与次级文字；不是全车通用双黄线。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D03",
+    "svg": "assets/reference-derived/D03-crew-roof-fields.svg",
+    "png": "assets/reference-derived/D03-crew-roof-fields.png",
+    "role": "炮塔前肩浅色、后部安静深色；黄线止于前肩，不纵贯后盖和舱口。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D04",
+    "svg": "assets/reference-derived/D04-offset-deck-route.svg",
+    "png": "assets/reference-derived/D04-offset-deck-route.png",
+    "role": "车首偏置黄带与另一侧小徽记、设备文字分工；中心为观瞄和炮口留空。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D05",
+    "svg": "assets/reference-derived/D05-quiet-aft-markers.svg",
+    "png": "assets/reference-derived/D05-quiet-aft-markers.png",
+    "role": "尾面留给机械结构；只给小铭牌和两端斜纹，不加大 U 形黄线或大徽记。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D06",
+    "svg": "assets/reference-derived/D06-equipment-type-hierarchy.svg",
+    "png": "assets/reference-derived/D06-equipment-type-hierarchy.png",
+    "role": "主编号、中级设备说明、小级辅助信息。普通文字可改，不能冒充原作品牌母版。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D07",
+    "svg": "assets/reference-derived/D07-quiet-contour-network.svg",
+    "png": "assets/reference-derived/D07-quiet-contour-network.png",
+    "role": "低对比等高线与稀疏符号；这是新画的底纹，原作裁图另存为参考，不能高反差铺满。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  },
+  {
+    "id": "D08",
+    "svg": "assets/reference-derived/D08-sparse-colour-accent.svg",
+    "png": "assets/reference-derived/D08-sparse-colour-accent.png",
+    "role": "辅助彩条只作极小面积点睛，不能与主黄面抢层级。",
+    "state": "proposed / editable geometry and generic type",
+    "source_relationship": "informed by original author A7V, newly arranged; brand vector from credited community source"
+  }
+]

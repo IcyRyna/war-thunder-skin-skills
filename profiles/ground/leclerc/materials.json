@@ -1,0 +1,341 @@
+{
+  "materials": [
+    {
+      "index": 0,
+      "name": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_body_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_body_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_body_n*",
+        "leclerc_s2_body_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 1,
+      "name": "net_f",
+      "obj_name": "net_f",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_f_c*",
+        null,
+        "net_f_n*",
+        "net_f_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 2,
+      "name": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_turret_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_turret_n*",
+        "leclerc_s2_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 3,
+      "name": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_gun_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_gun_n*",
+        "leclerc_s2_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 4,
+      "name": "mg_browning_m2hb",
+      "obj_name": "mg_browning_m2hb",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "mg_browning_m2hb_c*",
+        null,
+        "mg_browning_m2hb_n*",
+        "mg_browning_m2hb_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=128",
+      "albedo_proxy": null
+    },
+    {
+      "index": 5,
+      "name": "smooth_barrel_a",
+      "obj_name": "smooth_barrel_a",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "smooth_barrel_a_c*",
+        null,
+        "smooth_barrel_a_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 6,
+      "name": "net_l",
+      "obj_name": "net_l",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "net_l_c*",
+        null,
+        "net_l_n*",
+        "net_l_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 7,
+      "name": "headlight_glass",
+      "obj_name": "headlight_glass",
+      "shader": "dynamic_pbr_glass",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 8,
+      "name": "headlight_glass_008",
+      "obj_name": "headlight_glass_008",
+      "shader": "dynamic_masked_chrome_bump",
+      "texture_slots": [
+        "headlight_glass_c*",
+        null,
+        "headlight_glass_n*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 9,
+      "name": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_dz_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_dz_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_dz_n*",
+        "leclerc_s2_dz_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "",
+      "albedo_proxy": null
+    },
+    {
+      "index": 10,
+      "name": "fr_leclerc_s1_track",
+      "obj_name": "fr_leclerc_s1_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "fr_leclerc_s1_track_c*",
+        null,
+        "fr_leclerc_s1_track_n*",
+        "fr_leclerc_s1_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=127\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 11,
+      "name": "fr_leclerc_s1_track_011",
+      "obj_name": "fr_leclerc_s1_track_011",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "fr_leclerc_s1_track_c*",
+        null,
+        "fr_leclerc_s1_track_n*",
+        "fr_leclerc_s1_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "atest=127\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 12,
+      "name": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_gun_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_gun_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_gun_n*",
+        "leclerc_s2_gun_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 13,
+      "name": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "obj_name": "leclerc_s2_turret_fr_camo_vert_olive_arme",
+      "shader": "dynamic_masked_tank",
+      "texture_slots": [
+        "leclerc_s2_turret_c*",
+        "fr_camo_vert_olive_arme*",
+        "leclerc_s2_turret_n*",
+        "leclerc_s2_turret_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4",
+      "albedo_proxy": null
+    },
+    {
+      "index": 14,
+      "name": "fr_leclerc_s1_track",
+      "obj_name": "fr_leclerc_s1_track",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "fr_leclerc_s1_track_c*",
+        null,
+        "fr_leclerc_s1_track_n*",
+        "fr_leclerc_s1_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=127\ntexcoord_anim=1",
+      "albedo_proxy": null
+    },
+    {
+      "index": 15,
+      "name": "fr_leclerc_s1_track_003",
+      "obj_name": "fr_leclerc_s1_track_003",
+      "shader": "dynamic_tank_atest",
+      "texture_slots": [
+        "fr_leclerc_s1_track_c*",
+        null,
+        "fr_leclerc_s1_track_n*",
+        "fr_leclerc_s1_track_ao*",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "parameters": "num_bones=4\natest=127\ntexcoord_anim=-1",
+      "albedo_proxy": null
+    }
+  ],
+  "template_textures": []
+}

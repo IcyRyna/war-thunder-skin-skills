@@ -1,0 +1,1445 @@
+{
+  "family": "type-99",
+  "representative": "ZTZ99A · 无后置油桶",
+  "unit": "cn_ztz_99a",
+  "views": {
+    "side": "profiles/ground/type-99/views/side.png",
+    "front": "profiles/ground/type-99/views/front.png",
+    "rear": "profiles/ground/type-99/views/rear.png",
+    "top": "profiles/ground/type-99/views/top.png"
+  },
+  "source_obj_sha256": "f168e6dfeacf77db3176556ebf6121991a3ad7ff40bcdffaa4e9d4b436141c20",
+  "source_materials_sha256": "c0c054242acd233c55f669bce9e6e60a49c75347d21bbad71e6392c004f2df64",
+  "source_materials": "profiles/ground/type-99/materials.json",
+  "source_pack": "game-resource:cn_ztz_99a.grp",
+  "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+  "hidden_nodes": [
+    "ex_decor_l_05",
+    "ex_decor_r_05",
+    "ammo",
+    "antenna_01",
+    "antenna_02"
+  ],
+  "major_group_counts": {
+    "H": 73427,
+    "T": 44135,
+    "G": 15762,
+    "M": 14655,
+    "A": 12534,
+    "R": 49314,
+    "P": 211,
+    "U": 0
+  },
+  "members": [
+    {
+      "node": "root",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 34205
+    },
+    {
+      "node": "hatch_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1186
+    },
+    {
+      "node": "hatch_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 818
+    },
+    {
+      "node": "wheel_r_drive",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 3572
+    },
+    {
+      "node": "wheel_r_front",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 2982
+    },
+    {
+      "node": "wheel_r_top_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 440
+    },
+    {
+      "node": "wheel_r_top_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 354
+    },
+    {
+      "node": "wheel_l_front",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 2982
+    },
+    {
+      "node": "wheel_l_drive",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 3572
+    },
+    {
+      "node": "wheel_l_top_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 354
+    },
+    {
+      "node": "wheel_l_top_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 440
+    },
+    {
+      "node": "ex_armor_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 2304
+    },
+    {
+      "node": "ex_armor_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 3213
+    },
+    {
+      "node": "ex_armor_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 3671
+    },
+    {
+      "node": "ex_armor_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1614
+    },
+    {
+      "node": "ex_armor_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1798
+    },
+    {
+      "node": "ex_armor_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1221
+    },
+    {
+      "node": "ex_armor_07",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1180
+    },
+    {
+      "node": "ex_armor_08",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1268
+    },
+    {
+      "node": "ex_armor_09",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1280
+    },
+    {
+      "node": "ex_armor_11",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 920
+    },
+    {
+      "node": "ex_armor_body_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 756
+    },
+    {
+      "node": "ex_armor_body_l_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_l_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_l_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_l_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_l_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_l_07",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1183
+    },
+    {
+      "node": "ex_armor_body_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 701
+    },
+    {
+      "node": "ex_armor_body_r_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_r_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_r_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_r_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_r_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 728
+    },
+    {
+      "node": "ex_armor_body_r_07",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1183
+    },
+    {
+      "node": "ex_decor_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 412
+    },
+    {
+      "node": "ex_decor_body_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 144
+    },
+    {
+      "node": "ex_decor_body_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 144
+    },
+    {
+      "node": "ex_decor_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 396
+    },
+    {
+      "node": "ex_decor_l_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 1274
+    },
+    {
+      "node": "ex_decor_l_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 2972
+    },
+    {
+      "node": "ex_decor_l_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 376
+    },
+    {
+      "node": "ex_decor_l_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 86
+    },
+    {
+      "node": "ex_decor_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 396
+    },
+    {
+      "node": "ex_decor_r_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 1224
+    },
+    {
+      "node": "ex_decor_r_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 2016
+    },
+    {
+      "node": "ex_decor_r_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 376
+    },
+    {
+      "node": "ex_decor_r_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "A",
+      "triangles": 86
+    },
+    {
+      "node": "ex_era_hull_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_07",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_08",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_09",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_10",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_hull_11",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_12",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_13",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_14",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_15",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_16",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_17",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_18",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_19",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_20",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_hull_21",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_hull_22",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_hull_23",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_hull_24",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_hull_25",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_hull_26",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 20
+    },
+    {
+      "node": "ex_lantern_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1134
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1150
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "headlight_glass",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 167
+    },
+    {
+      "node": "ex_lantern_r_01",
+      "material": "headlight_glass_002",
+      "texture": "headlight_glass_c*",
+      "major_part": "P",
+      "triangles": 34
+    },
+    {
+      "node": "suspension_r_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "suspension_l_02_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "suspension_l_02_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "wheel_l_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_l_06_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "suspension_l_06_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "wheel_l_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_r_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_06_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "suspension_r_06_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "wheel_r_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_r_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_02_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "suspension_r_02_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 120
+    },
+    {
+      "node": "wheel_r_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_r_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_01_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "suspension_r_01_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 138
+    },
+    {
+      "node": "wheel_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_r_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "suspension_l_06",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "suspension_l_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_l_05",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_l_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_l_04",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_l_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_l_03",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "suspension_l_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "suspension_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "gun_barrel",
+      "material": "ztz_99a_gun_ussr_camo_green",
+      "texture": "ztz_99a_gun_c*",
+      "major_part": "G",
+      "triangles": 10065
+    },
+    {
+      "node": "gun_barrel",
+      "material": "smooth_barrel_a_smooth_barrel_a",
+      "texture": "smooth_barrel_a_c*",
+      "major_part": "G",
+      "triangles": 94
+    },
+    {
+      "node": "mg_twin",
+      "material": "mg_pkt",
+      "texture": "mg_pkt_c*",
+      "major_part": "M",
+      "triangles": 1424
+    },
+    {
+      "node": "mg_mask",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "M",
+      "triangles": 64
+    },
+    {
+      "node": "gun_mask",
+      "material": "ztz_99a_gun_ussr_camo_green",
+      "texture": "ztz_99a_gun_c*",
+      "major_part": "G",
+      "triangles": 1803
+    },
+    {
+      "node": "mg_aa",
+      "material": "mg_qjc88_ussr_camo_green",
+      "texture": "mg_qjc88_c*",
+      "major_part": "M",
+      "triangles": 4413
+    },
+    {
+      "node": "mg_aa_mount_v",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 5139
+    },
+    {
+      "node": "roll_01",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 102
+    },
+    {
+      "node": "roll_02",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 136
+    },
+    {
+      "node": "mg_drive_v",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 620
+    },
+    {
+      "node": "ex_era_turret_01",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 44
+    },
+    {
+      "node": "ex_era_turret_02",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_03",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_04",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_05",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_06",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_07",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 48
+    },
+    {
+      "node": "ex_era_turret_08",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 44
+    },
+    {
+      "node": "ex_era_turret_10",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_22",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_turret_24",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 28
+    },
+    {
+      "node": "ex_era_turret_28",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 30
+    },
+    {
+      "node": "ex_era_turret_36",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 52
+    },
+    {
+      "node": "ex_era_turret_37",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 20
+    },
+    {
+      "node": "ex_era_turret_38",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_39",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_40",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 36
+    },
+    {
+      "node": "ex_era_turret_41",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 28
+    },
+    {
+      "node": "ex_era_turret_42",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_turret_43",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_44",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 36
+    },
+    {
+      "node": "ex_era_turret_45",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_46",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 56
+    },
+    {
+      "node": "ex_decor_turret_04",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "A",
+      "triangles": 424
+    },
+    {
+      "node": "ex_decor_turret_02",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "A",
+      "triangles": 1310
+    },
+    {
+      "node": "ex_decor_turret_03",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "A",
+      "triangles": 898
+    },
+    {
+      "node": "turret_inside",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 1885
+    },
+    {
+      "node": "turret",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 18968
+    },
+    {
+      "node": "turret",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 534
+    },
+    {
+      "node": "turret",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 6
+    },
+    {
+      "node": "hatch_04",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 2076
+    },
+    {
+      "node": "hatch_03",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 408
+    },
+    {
+      "node": "turret_01",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 13512
+    },
+    {
+      "node": "ex_armor_turret_01",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 1392
+    },
+    {
+      "node": "ex_armor_turret_02",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 1807
+    },
+    {
+      "node": "hatch_02",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 1680
+    },
+    {
+      "node": "optic_commander",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 796
+    },
+    {
+      "node": "optic_commander",
+      "material": "us_turret_glass",
+      "texture": "us_turret_glass_c*",
+      "major_part": "P",
+      "triangles": 4
+    },
+    {
+      "node": "ex_era_turret_48",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 52
+    },
+    {
+      "node": "ex_era_turret_47",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 129
+    },
+    {
+      "node": "ex_era_turret_30",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_turret_12",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 30
+    },
+    {
+      "node": "ex_era_turret_35",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 16
+    },
+    {
+      "node": "ex_era_turret_34",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_turret_29",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 98
+    },
+    {
+      "node": "ex_era_turret_27",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_26",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_25",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_33",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 16
+    },
+    {
+      "node": "ex_era_turret_32",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 16
+    },
+    {
+      "node": "ex_era_turret_31",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 22
+    },
+    {
+      "node": "ex_era_turret_09",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_13",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 12
+    },
+    {
+      "node": "ex_era_turret_15",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_14",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_17",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 26
+    },
+    {
+      "node": "ex_era_turret_16",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_18",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 40
+    },
+    {
+      "node": "ex_era_turret_19",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_20",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_21",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 32
+    },
+    {
+      "node": "ex_era_turret_23",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "ex_era_turret_11",
+      "material": "ztz_99a_turret_ussr_camo_green",
+      "texture": "ztz_99a_turret_c*",
+      "major_part": "T",
+      "triangles": 24
+    },
+    {
+      "node": "suspension_l_01_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 128
+    },
+    {
+      "node": "suspension_l_01_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 138
+    },
+    {
+      "node": "wheel_l_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 1600
+    },
+    {
+      "node": "ex_armor_10_mount",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 160
+    },
+    {
+      "node": "ex_armor_10",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 1494
+    },
+    {
+      "node": "ex_armor_13",
+      "material": "cn_ztz_99_phys_track_cn_ztz_99_phys_track",
+      "texture": "cn_ztz_99_phys_track_c*",
+      "major_part": "R",
+      "triangles": 524
+    },
+    {
+      "node": "ex_armor_12",
+      "material": "cn_ztz_99_phys_track_cn_ztz_99_phys_track",
+      "texture": "cn_ztz_99_phys_track_c*",
+      "major_part": "R",
+      "triangles": 524
+    },
+    {
+      "node": "suspension_r_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "H",
+      "triangles": 142
+    },
+    {
+      "node": "wheel_r_top_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 354
+    },
+    {
+      "node": "wheel_r_top_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 440
+    },
+    {
+      "node": "wheel_l_top_02",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 440
+    },
+    {
+      "node": "wheel_l_top_01",
+      "material": "ztz_99a_body_ussr_camo_green",
+      "texture": "ztz_99a_body_c*",
+      "major_part": "R",
+      "triangles": 354
+    },
+    {
+      "node": "track_r",
+      "material": "cn_ztz_99a_track",
+      "texture": "cn_ztz_99a_track_c*",
+      "major_part": "R",
+      "triangles": 6468
+    },
+    {
+      "node": "track_l",
+      "material": "cn_ztz_99a_track_001",
+      "texture": "cn_ztz_99a_track_c*",
+      "major_part": "R",
+      "triangles": 6314
+    },
+    {
+      "node": "mg_aa_mount_h",
+      "material": "ztz_99a_mg_ussr_camo_green",
+      "texture": "ztz_99a_mg_c*",
+      "major_part": "M",
+      "triangles": 2223
+    },
+    {
+      "node": "ex_decor_turret_01",
+      "material": "ztz_99a_gun_ussr_camo_green",
+      "texture": "ztz_99a_gun_c*",
+      "major_part": "G",
+      "triangles": 2134
+    },
+    {
+      "node": "ex_decor_turret",
+      "material": "ztz_99a_gun_ussr_camo_green",
+      "texture": "ztz_99a_gun_c*",
+      "major_part": "G",
+      "triangles": 1666
+    }
+  ],
+  "classification_method": "Derived from actual node and material resource names; major-part hints, not hand-verified native UV masks. Attachments can be regrouped after inspection.",
+  "subzone_mapping": "Apply the semantic zone tree to actual structure; no per-family paint coordinates supplied.",
+  "validation": {
+    "model_views": "observed",
+    "classification": "node/material-derived hints",
+    "native_uv_paint_masks": "not_run",
+    "new_livery_dds": "not_run",
+    "game": "not_run"
+  },
+  "view_meaning": "Major-part diagnostic colours, not a livery or exact subzone mask. Orthographic static bind pose; side front points right, top front points up."
+}

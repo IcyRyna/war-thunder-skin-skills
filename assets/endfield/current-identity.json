@@ -1,0 +1,16 @@
+{
+  "asset": "assets/identity/endfield-industries-en-original-transparent.png",
+  "sha256": "852ba24a66ceb04f78a1fd6537f79c975a91c99d077d16fdae69b684472c05de",
+  "canvas_size": [
+    400,
+    400
+  ],
+  "visible_alpha_bbox": [
+    118,
+    212,
+    240,
+    334
+  ],
+  "placement": "Use the visible content bounds for positioning while preserving the entire original transparent image. Uniform scale and translation only; no cropping, letter splitting or separate opaque logo backing.",
+  "current_example_use": "all three hull composition examples reference these exact original PNG bytes"
+}

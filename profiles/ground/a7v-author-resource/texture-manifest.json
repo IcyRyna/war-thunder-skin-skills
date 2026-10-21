@@ -1,0 +1,20 @@
+{
+  "schema_version": 1,
+  "profile_id": "ground/leopard2a7v",
+  "production_input_source_id": "source-original-a7v",
+  "material_source_status": "Original-author N4/AO3 and C.A retained; body/turret/gun C cleanup only; whole MG C.RGB passthrough without grain/weathering; factory classification incomplete",
+  "blk": "germ_leopard_2a7v.blk",
+  "textures": [
+    {"file":"leopard_2a7v_body.dds","role":"color","alpha_semantics":"fixed_rgb","color_space":"srgb"},
+    {"file":"leopard_2a7v_turret.dds","role":"color","alpha_semantics":"fixed_rgb","color_space":"srgb"},
+    {"file":"leopard_2a7v_gun.dds","role":"color","alpha_semantics":"fixed_rgb","color_space":"srgb"},
+    {"file":"mg_mount_leopard_2a7v.dds","role":"color","alpha_semantics":"fixed_rgb","color_space":"srgb"},
+    {"file":"leopard_2a7v_body_n.dds","role":"normal","alpha_semantics":"packed_data","color_space":"linear"},
+    {"file":"leopard_2a7v_turret_n.dds","role":"normal","alpha_semantics":"packed_data","color_space":"linear"},
+    {"file":"leopard_2a7v_gun_n.dds","role":"normal","alpha_semantics":"packed_data","color_space":"linear"},
+    {"file":"mg_mount_leopard_2a7v_n.dds","role":"normal","alpha_semantics":"packed_data","color_space":"linear"},
+    {"file":"leopard_2a7v_body_ao.dds","role":"ao","alpha_semantics":"scalar_data","color_space":"linear"},
+    {"file":"leopard_2a7v_turret_ao.dds","role":"ao","alpha_semantics":"scalar_data","color_space":"linear"},
+    {"file":"leopard_2a7v_gun_ao.dds","role":"ao","alpha_semantics":"scalar_data","color_space":"linear"}
+  ]
+}

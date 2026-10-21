@@ -1,0 +1,87 @@
+{
+  "purpose": "Machine-readable family/view guidance; no poster or mandatory paint shape",
+  "families": [
+    {
+      "family": "leopard-2",
+      "reference": "references/vehicles/leopard-2.md",
+      "views": {
+        "side": "profiles/ground/leopard-2/views/side.png",
+        "front": "profiles/ground/leopard-2/views/front.png",
+        "rear": "profiles/ground/leopard-2/views/rear.png",
+        "top": "profiles/ground/leopard-2/views/top.png"
+      },
+      "direction_by_view": {
+        "side": "侧面：连续长裙板可承载完整工业主徽记；主标、较宽黄方向面与安静色场有主次，不把原作缩成两条细线。可随本车板缝改变位置与尺寸。",
+        "front": "前面：以车首偏置黄面／小图形和设备信息的分工为起点；光学、灯组、炮盾及附加装甲让出真实结构。不是强制对称 V。",
+        "rear": "后面：动力与机械密度高，深浅收束和小编号／警告可用；不把后部变成第二张大标海报或大 U 路线。",
+        "top": "顶部：理解前肩浅、后顶较暗的关系；前肩次级图文、短路线，乘员／动力区安静。避开舱盖、观瞄和旋转界面。"
+      }
+    },
+    {
+      "family": "t-80",
+      "reference": "references/vehicles/t-80.md",
+      "views": {
+        "side": "profiles/ground/t-80/views/side.png",
+        "front": "profiles/ground/t-80/views/front.png",
+        "rear": "profiles/ground/t-80/views/rear.png",
+        "top": "profiles/ground/t-80/views/top.png"
+      },
+      "direction_by_view": {
+        "side": "侧面：从实际连续侧裙寻找完整主识别面；裙板和 ERA 的节奏与豹 2 不同，黄方向可分段或转为较宽块，不横跨挂点硬画同一长线。",
+        "front": "前面：圆形炮塔与密集 ERA 先分块看明暗，短方向面随块走；不要把豹 2 楔形前肩直接盖上去。",
+        "rear": "后面：发动机／排气、缆索与附件保持可读，少量局部标识收尾；附件状态改变后重判承载面。",
+        "top": "顶部：围绕圆形炮塔、舱口和观瞄安排低密度次级模块；不能为了拼成某路线而填掉设备。"
+      }
+    },
+    {
+      "family": "t-90",
+      "reference": "references/vehicles/t-90.md",
+      "views": {
+        "side": "profiles/ground/t-90/views/side.png",
+        "front": "profiles/ground/t-90/views/front.png",
+        "rear": "profiles/ground/t-90/views/rear.png",
+        "top": "profiles/ground/t-90/views/top.png"
+      },
+      "direction_by_view": {
+        "side": "侧面：在真实实心车体／裙板选完整主标区；顶部细管、网架和侧装甲分清，标志不能印到透明网孔上再称完整。",
+        "front": "前面：按 T-90M 实际楔形与 ERA 块面分明暗、方向与留白，不沿用 T-90A 轮廓或排法。",
+        "rear": "后面：尾舱／网架是结构，不能视为大块实心画布；小编号与设备信息可落在真实实体上。",
+        "top": "顶部：先标舱口、观瞄、武器站与长管，前肩／后顶各选层级，黄路线在实际实体内终止或转向。"
+      }
+    },
+    {
+      "family": "type-99",
+      "reference": "references/vehicles/type-99.md",
+      "views": {
+        "side": "profiles/ground/type-99/views/side.png",
+        "front": "profiles/ground/type-99/views/front.png",
+        "rear": "profiles/ground/type-99/views/rear.png",
+        "top": "profiles/ground/type-99/views/top.png"
+      },
+      "direction_by_view": {
+        "side": "侧面：较高侧裙可容完整工业徽记和较宽明暗组织；按裙板长度与挂点重排，不复用 A7V 像素边界。",
+        "front": "前面：前部楔形装甲、驾驶员视区与炮塔下沿共同决定可画区；方向面可偏置，避让孔壁／观瞄。",
+        "rear": "后面：当前指定无两只外置后油桶，尾部按真实排气、散热、牵引和尾灯设计；不能凭印象添两桶或用大标封满。",
+        "top": "顶部：楔形前颊与后顶／发动机甲板分层，舱盖和设备上方留出结构阅读；纹样可少用或不用。"
+      }
+    },
+    {
+      "family": "leclerc",
+      "reference": "references/vehicles/leclerc.md",
+      "views": {
+        "side": "profiles/ground/leclerc/views/side.png",
+        "front": "profiles/ground/leclerc/views/front.png",
+        "rear": "profiles/ground/leclerc/views/rear.png",
+        "top": "profiles/ground/leclerc/views/top.png"
+      },
+      "direction_by_view": {
+        "side": "侧面：按当前用户要求主工业徽记在车体／侧裙。先决定车体色块与完整标志空间，再决定黄面在前、中或后，不能挪到炮塔凑空间。",
+        "front": "前面：短车体前甲、楔形炮塔、炮盾与驾驶员区域分别判断，车首可用偏置方向或较安静组织，不把侧图强投影成对称图。",
+        "rear": "后面：车尾与炮塔尾舱分开，机械／散热区保持低信息量，局部铭牌随实体板面选。",
+        "top": "顶部：炮塔布局另行设计，当前三个例子只设计车体；顶部仍需舱盖、观瞄和尾舱结构检查，不把中性色参考图当已完成涂装。"
+      }
+    }
+  ],
+  "human_illustrations": "Retained in complete source and preceding review; not required at runtime",
+  "is_fixed_layout": false
+}

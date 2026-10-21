@@ -1,0 +1,1532 @@
+{
+  "scope": "Inherited source roles and limitations, not mandatory usage",
+  "source_audit_sha256": "46b55607c304602a9bbaca643512e2d38c8b43929ff317dace099a42a5acc078",
+  "files": [
+    {
+      "path": "assets/legacy/decals/emblem-extraction.cmps",
+      "bytes": 37673,
+      "sha256": "45fc06a58c0b7e1fbdb18fd3748af0f4122b4b73c4c16ba6517f305dfecfbace",
+      "provenance": {
+        "recorded_source": "T07 crop / WT Live 1162771",
+        "source_kind": "native-ink-separation",
+        "recorded_derivation": "Composa Color Range white fuzziness 95; fill selected area on transparent layer; rotate -90 degrees",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "category": "editable_extraction_reference",
+      "decision": "reference_only",
+      "design_role": "小徽记提取工程与派生来源",
+      "production_use": "若需复查提取层，只在复制的验证工程中打开；本次未打开或修改。",
+      "limits": "不是原作者工程，也不是新车布局模板；不能补足原小图缺失的高清细节。",
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/decals/endfield-industries-en-native.png",
+      "bytes": 2847,
+      "sha256": "852ba24a66ceb04f78a1fd6537f79c975a91c99d077d16fdae69b684472c05de",
+      "provenance": {
+        "recorded_source": "T07 crop / WT Live 1162771",
+        "source_kind": "native-ink-separation",
+        "recorded_derivation": "Composa Color Range white fuzziness 95; fill selected area on transparent layer; rotate -90 degrees",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": true,
+      "dimensions": [
+        400,
+        400
+      ],
+      "mode": "RGBA",
+      "alpha_ink_bbox": [
+        118,
+        212,
+        240,
+        334
+      ],
+      "category": "limited_native_decal",
+      "decision": "reuse_limited",
+      "design_role": "原作小英文工业徽记的单色提取",
+      "production_use": "仅小尺寸标识或结构核对；图案有效bbox122x122。",
+      "limits": "400x400是画布；实际122x122，Alpha为二值提取且原生细节有限，不是高清矢量母版，不能放大后称原精度。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/manifest.json",
+      "bytes": 24592,
+      "sha256": "1fbf554e0a8283349335b5ce476c248dfa4feadb487f390b779a448acb63133c",
+      "provenance": {
+        "recorded_source": "self-index of legacy assets",
+        "source_kind": "provenance-manifest",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "category": "provenance_metadata",
+      "decision": "reuse_as_provenance",
+      "design_role": "来源/元素/分板索引",
+      "production_use": "随参考保留路径、哈希、裁框、旋转与来源；不是上车像素。",
+      "limits": "坐标仅属于原作A7V；研究节点或矩形范围不等于新车承载面或精确图形mask。",
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/official/endfield-industries-cn.png",
+      "bytes": 64868,
+      "sha256": "724fbf04a4a661c5c16688c49febb68b2be0bd8fbfe7c83895350876d115be04",
+      "provenance": {
+        "recorded_source": "https://web-static.hg-cdn.com/endfield/official-v4/_next/static/media/endfield.bcc6fe39.png",
+        "source_kind": "official-brand-asset",
+        "recorded_derivation": "Official PNG, original bytes",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": true,
+      "dimensions": [
+        430,
+        372
+      ],
+      "mode": "RGBA",
+      "alpha_ink_bbox": [
+        0,
+        0,
+        430,
+        372
+      ],
+      "category": "production_master",
+      "decision": "reuse_existing",
+      "design_role": "官方中文工业徽记/字标组合",
+      "production_use": "原尺寸430x372范围内作为清晰透明印刷图；大尺寸优先寻找同版官方矢量，否则另作标明来源的测量重建。",
+      "limits": "仅有栅格母版；英文工业组合不能由更换文字便称为同版官方母版。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/official/endfield-title-en.png",
+      "bytes": 33074,
+      "sha256": "307dc277774046f03f2072119eb7f1feebf8865d2d81a20ee90c902748fc0d17",
+      "provenance": {
+        "recorded_source": "https://endfield.gryphline.com/en-us",
+        "source_kind": "official-brand-asset",
+        "recorded_derivation": "Composa raster rendering of included official SVG",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": true,
+      "dimensions": [
+        1483,
+        740
+      ],
+      "mode": "RGBA",
+      "alpha_ink_bbox": [
+        0,
+        0,
+        1483,
+        740
+      ],
+      "category": "production_master",
+      "decision": "reuse_existing",
+      "design_role": "同一官方英文游戏标题的栅格派生母版",
+      "production_use": "Pillow/编辑器位图工作流可在有效尺寸内直接用；需要更大尺寸从对应SVG重渲染。",
+      "limits": "与SVG是同一母版的两种格式，不应计成两个独立品牌系统；不是通用字体。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/official/endfield-title-en.svg",
+      "bytes": 3910,
+      "sha256": "cb3b7342129919c9254acb46d16259d7ee866d8480f2afeada64b4f4695c034f",
+      "provenance": {
+        "recorded_source": "https://endfield.gryphline.com/en-us",
+        "source_kind": "official-brand-asset",
+        "recorded_derivation": "Official header inline SVG paths; normalized XML attribute names and explicit display dimensions, white currentColor",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": true,
+      "category": "production_master",
+      "decision": "reuse_existing",
+      "design_role": "官方英文游戏标题锁定图形",
+      "production_use": "优先以原SVG在目标尺寸栅格化；保持原字形/负形及组合。",
+      "limits": "这是游戏标题，不是所有ENDFIELD INDUSTRIES英文组合，也不是可输入任意文字的字体。",
+      "vector_facts": {
+        "path_nodes": 1,
+        "text_nodes": 0,
+        "embedded_image_nodes": 0
+      },
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/official/site-color-bar.png",
+      "bytes": 381,
+      "sha256": "c3442edfbe3194b18d65d57d5eae45f54f849a25d46bfa34fc2812b5ffae6dda",
+      "provenance": {
+        "recorded_source": "https://web-static.hg-cdn.com/endfield/official-v4/_next/static/media/color-bar.1f0aa038.png",
+        "source_kind": "official-brand-asset",
+        "recorded_derivation": "Official PNG, original bytes",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        18,
+        113
+      ],
+      "mode": "P",
+      "category": "auxiliary_color_reference",
+      "decision": "reference_only",
+      "design_role": "官网窄彩条及配色语汇",
+      "production_use": "作为青绿/品红/黄色等点缀角色参考；需要生产彩条时用独立几何重新建立尺寸/分段。",
+      "limits": "18x113窄栅格不是完整风格色板；不证明原作者使用了同一文件，也不提供材料/PBR参数。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B01.png",
+      "bytes": 378049,
+      "sha256": "5174b5f46d6e00c0c01eeca5ebb27f05a22eee2f05f768005eea79604ff7a4b8",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "official-symbol-author-composition"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        910,
+        740
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "主工业徽记与长侧板层级",
+      "rebuild_or_new_kit_targets": [
+        "industrial-en-lockup",
+        "layout-role-guides"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "两个相反阅读方向的侧裙图案，不是一个可整体粘贴的双徽记；图内还有机械边。",
+      "catalog_id": "B01",
+      "catalog_bbox_px": [
+        5520,
+        4200,
+        6430,
+        4940
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B02.png",
+      "bytes": 693245,
+      "sha256": "e654f662f8e36cc19ab96d13af802b228be79b5cbe1c3074b674037771aa79f6",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "brand-text-source-layout-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1530,
+        780
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "品牌小字、三角节点、灰弧网络与坐标信息",
+      "rebuild_or_new_kit_targets": [
+        "topographic-patterns",
+        "technical-number-modules"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "借鉴节点/连线/灰弧和信息密度；不带走白条磨损、结构阴影或这辆车的坐标排版。",
+      "catalog_id": "B02",
+      "catalog_bbox_px": [
+        0,
+        3150,
+        1530,
+        3930
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B03.png",
+      "bytes": 748455,
+      "sha256": "74e8124aff316eea46682bc4588507216b332443fabfc81f7fdaef4b50e2803c",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "mixed-source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        2002,
+        670
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "EF编号技术模块、反向阅读、前翼板图形",
+      "rebuild_or_new_kit_targets": [
+        "technical-number-modules",
+        "topographic-patterns"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "EF10等是原作可见模块而非已确认官方独立贴花；新车选择设备语义和编号，不复用A7V像素坐标。",
+      "catalog_id": "B03",
+      "catalog_bbox_px": [
+        6190,
+        3400,
+        8192,
+        4070
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B04.png",
+      "bytes": 167357,
+      "sha256": "66a09f5227acb79e33e8c1286322b33a68bf0532f8618638608aa59b1fcac4e4",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        610,
+        530
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "CAUTION及部门小字、警示斜纹",
+      "rebuild_or_new_kit_targets": [
+        "warning-stencils",
+        "hatch-blocks"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "需要独立的清晰字形/副标题和斜纹几何；RGB裁片底色、暗点和板边不能成为贴花背景。",
+      "catalog_id": "B04",
+      "catalog_bbox_px": [
+        7190,
+        2540,
+        7800,
+        3070
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B05.png",
+      "bytes": 153273,
+      "sha256": "6ceccced1c9fbbec23de579a3588db2a11c76060e494cea696a44a6a6ecc8351",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "vehicle-specific-adaptation"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        820,
+        330
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "载具身份铭牌和接口小标签",
+      "rebuild_or_new_kit_targets": [
+        "vehicle-nameplate",
+        "technical-number-modules"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "LEOPARD2A7是本车身份，换车改文字；圆角黑底容器可重建，螺钉/结构不复制。",
+      "catalog_id": "B05",
+      "catalog_bbox_px": [
+        3510,
+        4790,
+        4330,
+        5120
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B06.png",
+      "bytes": 210593,
+      "sha256": "32a428546e856e160af58886bc7474e49d374ac2fe8c542d1fd9cce5f01da7d2",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "generic-graphics-source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1500,
+        540
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "十字阵列、箭头、斜纹章及低密度节奏",
+      "rebuild_or_new_kit_targets": [
+        "primitive-geometry",
+        "hatch-blocks"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "可参数化重建简单符号；原图黑色装甲面、焊缝和黄边不随符号带入。",
+      "catalog_id": "B06",
+      "catalog_bbox_px": [
+        1450,
+        3030,
+        2950,
+        3570
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B07.png",
+      "bytes": 352576,
+      "sha256": "8bbd442d0272c5a6f639cbd11b4aa988ff7bc7e0af6cd3a3b387a15156752dcd",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "official-symbol-author-composition"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1270,
+        670
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "次级车首徽记和机械区的相让关系",
+      "rebuild_or_new_kit_targets": [
+        "industrial-en-lockup",
+        "layout-role-guides"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "徽记需从机械基底分离，车首格栅、孔口、螺栓不是通用工业装饰。",
+      "catalog_id": "B07",
+      "catalog_bbox_px": [
+        4630,
+        7220,
+        5900,
+        7890
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B08.png",
+      "bytes": 416591,
+      "sha256": "88b7e00e2c976ef857e8df5637e0c22d53dd1fb5e9162bdfda721849d19c4716",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "brand-text-source-layout-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        700,
+        590
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "黄方向楔面、品牌小字和细排线",
+      "rebuild_or_new_kit_targets": [
+        "direction-planes",
+        "hatch-blocks"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "重建可调整的方向面和斜纹；不固定到原车翼板尺寸。",
+      "catalog_id": "B08",
+      "catalog_bbox_px": [
+        4830,
+        4220,
+        5530,
+        4810
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B09.png",
+      "bytes": 300363,
+      "sha256": "260b0b912946590f61406f137676e3d87c4b88b42e7f1e03e5b2b34112af8ed7",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        960,
+        710
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "稀疏青绿/品红彩边、黄色折箭和细线",
+      "rebuild_or_new_kit_targets": [
+        "micro-accent-strips",
+        "primitive-geometry"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "点缀是低面积高彩度层；重画向量，不能把机械拼缝和原作者整块黑底一起搬。",
+      "catalog_id": "B09",
+      "catalog_bbox_px": [
+        6520,
+        4200,
+        7480,
+        4910
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B10.png",
+      "bytes": 675620,
+      "sha256": "29f63046c6540a8548f85f3ced935e953cbb6d06c76ebc7208ee3cc8c4b833f8",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1570,
+        960
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "粗黄路径与圆节点",
+      "rebuild_or_new_kit_targets": [
+        "route-path-system"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "学习路径宽度/端点/断点关系；本车孔壁、盖板和UV布局只作为参考。",
+      "catalog_id": "B10",
+      "catalog_bbox_px": [
+        1460,
+        5480,
+        3030,
+        6440
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B11.png",
+      "bytes": 479438,
+      "sha256": "16fb0edb2aa9c2f0d734b194451b4576f759ccfb3cb347dfe5522852b66fc8a1",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-panel-fragment",
+        "recorded_derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1715,
+        683
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "车首底板与徽记的分板关系",
+      "rebuild_or_new_kit_targets": [
+        "industrial-en-lockup"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "A7V面板片含结构和烘焙底，不是通用徽记贴花；只用于理解遮挡和图案分层。",
+      "catalog_id": "B11",
+      "catalog_bbox_px": [
+        4514,
+        7098,
+        6229,
+        7781
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B12.png",
+      "bytes": 169088,
+      "sha256": "0d3dc6940a3c737fde594b834da0f72a414d20ead6c9e744b5ce18a0d4f693ea",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-panel-fragment",
+        "recorded_derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        538,
+        517
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "车首附加板与徽记的主面/窄边关系",
+      "rebuild_or_new_kit_targets": [
+        "industrial-en-lockup"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "A7V面板片含基底；只作为徽记组成和承载面切分参考，不复制矩形块到新车。",
+      "catalog_id": "B12",
+      "catalog_bbox_px": [
+        7620,
+        2000,
+        8158,
+        2517
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/B13.png",
+      "bytes": 53542,
+      "sha256": "9bb6b9e9a2a2d4e2d68502cb73355f15d59a2a4fe517bb6de9407d7e777d15db",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-panel-fragment",
+        "recorded_derivation": "Unmodified RGB crop of the original 8192x8192 body atlas",
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        103,
+        1039
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "连接条与跨板图案关系",
+      "rebuild_or_new_kit_targets": [
+        "layout-role-guides"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "细长UV结构片只作承载参考，不制作成通用装饰条。",
+      "catalog_id": "B13",
+      "catalog_bbox_px": [
+        5226,
+        6678,
+        5329,
+        7717
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/G01.png",
+      "bytes": 612045,
+      "sha256": "3989b4d979d74a674b295d3d3547ba4aaae89882de5b230d3af1fb4c183848e9",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "brand-text-source-layout-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1660,
+        720
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "长轴黄带、绕管双向可读字标、轴向细节",
+      "rebuild_or_new_kit_targets": [
+        "layout-role-guides",
+        "brand-wordmark-lockups",
+        "hatch-blocks"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "复用长轴组织法而非原炮管展开UV；文字为不同可见面各定方向。",
+      "catalog_id": "G01",
+      "catalog_bbox_px": [
+        2240,
+        1310,
+        3900,
+        2030
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/G02.png",
+      "bytes": 171870,
+      "sha256": "fe9571f8fb423c209da5092a468abb7a7ad88dc007f8a7bda4a1558cd7922138",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        508,
+        930
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "低对比工程文字和等高线",
+      "rebuild_or_new_kit_targets": [
+        "technical-number-modules",
+        "topographic-patterns"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "是低层级近看信息，需独立清晰图形；不要把所有灰字提到主标强度。",
+      "catalog_id": "G02",
+      "catalog_bbox_px": [
+        0,
+        1540,
+        930,
+        2048
+      ],
+      "catalog_reading_rotation_ccw": 90,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/M01.png",
+      "bytes": 237725,
+      "sha256": "f640dfd5235048b1a9cdc225e263aa25d723ceb9a7b286243cd028491400d1a7",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "mechanical-and-low-contrast-pattern"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1024,
+        512
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "机枪座低信息密度与材料差异",
+      "rebuild_or_new_kit_targets": [],
+      "production_use": "仅用于材料/结构与信息密度判断，不转成贴花。",
+      "limits": "只借鉴附属硬件低视觉权重；暗底梯度、细纹和机械结构不是可直接复用的干净材质。",
+      "catalog_id": "M01",
+      "catalog_bbox_px": [
+        0,
+        0,
+        1024,
+        512
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T01.png",
+      "bytes": 129328,
+      "sha256": "7f6c191d0005e14a73c6e46cc5f9cce8e7f9184517142e5311f6ddb992a93c48",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        840,
+        460
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "VISUALIZE ENDFIELD嵌套三角和双层字标",
+      "rebuild_or_new_kit_targets": [
+        "visualize-lockup"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "需要按原物保留比例/字形/负形的独立矢量组合；同版官方母版未证实，不以随意字体替代。",
+      "catalog_id": "T01",
+      "catalog_bbox_px": [
+        3540,
+        3500,
+        4380,
+        3960
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T02.png",
+      "bytes": 280703,
+      "sha256": "8943317ffa1615c8cdcef140cd87c3a41b696dd7e15fe14085b6b3761e2dbeb3",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1140,
+        770
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "宽细平行路线、圆环和节点",
+      "rebuild_or_new_kit_targets": [
+        "route-path-system"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "可测量成参数化路径/环节点；源图的拉手、螺钉投影和装甲折面不能成为新车图案。",
+      "catalog_id": "T02",
+      "catalog_bbox_px": [
+        4340,
+        3750,
+        5480,
+        4520
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T03.png",
+      "bytes": 208489,
+      "sha256": "e6e84a8151cd4522faaa8428e3514b689f2a61d16dc542f718655d67580e8cb5",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "source-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1060,
+        510
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "胶囊长条、短条、圆点及负形圆环",
+      "rebuild_or_new_kit_targets": [
+        "primitive-geometry"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "适合用原生SVG/几何重建，不需要生图；不要把宽度、间距和每种端头做成同一强度。",
+      "catalog_id": "T03",
+      "catalog_bbox_px": [
+        2040,
+        2230,
+        3100,
+        2740
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T04.png",
+      "bytes": 240109,
+      "sha256": "4a04d1da129b533f342e90c04b374bf96f9e26b76514d99c1d341de32981011f",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "brand-text-source-layout-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        960,
+        500
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "分行品牌标题、斜纹章、圆端黑路径",
+      "rebuild_or_new_kit_targets": [
+        "brand-wordmark-lockups",
+        "route-path-system"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "现有官方游戏标题可作为字形母版之一；作者锁定排布另核对，板面污迹/阴影不属于文字。",
+      "catalog_id": "T04",
+      "catalog_bbox_px": [
+        4040,
+        6650,
+        5000,
+        7150
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T05.png",
+      "bytes": 33617,
+      "sha256": "373f787ad14e7710cbe5f43d1acd8f84287f23ddb233c5421ae9b43e5eae1dab",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "official-wordmark-author-composition"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        580,
+        230
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "中文工业标识与小面积彩条",
+      "rebuild_or_new_kit_targets": [
+        "micro-accent-strips",
+        "industrial-cn-mark"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "中文标志优先复用官方PNG；彩条重建成独立可缩放条形，不复制周围黑顶纹理。",
+      "catalog_id": "T05",
+      "catalog_bbox_px": [
+        1850,
+        3750,
+        2430,
+        3980
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T06.png",
+      "bytes": 61412,
+      "sha256": "4114f287f8b1bef68788b5a71f4a4903ca6d41d260a7423ca79be7b91a5d2d93",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "brand-text-source-layout-unverified"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        660,
+        350
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "ARKNIGHTS / ENDFIELD两级白色字标",
+      "rebuild_or_new_kit_targets": [
+        "brand-wordmark-lockups"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "字重/字距/上下级需要锁定；源图暗面等高线和结构边不能合为字标背景。",
+      "catalog_id": "T06",
+      "catalog_bbox_px": [
+        980,
+        6600,
+        1640,
+        6950
+      ],
+      "catalog_reading_rotation_ccw": 180,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T07.png",
+      "bytes": 29560,
+      "sha256": "380e12c471032117b705932826a8df606d02a8485217adf538f1484790b71c20",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "official-symbol-author-composition"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        190,
+        310
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "小尺寸英文工业徽记完整结构",
+      "rebuild_or_new_kit_targets": [
+        "industrial-en-lockup"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "有效图形约122px，适合结构核对或小尺寸；不能凭400px画布当高清母版。",
+      "catalog_id": "T07",
+      "catalog_bbox_px": [
+        640,
+        7200,
+        950,
+        7390
+      ],
+      "catalog_reading_rotation_ccw": 90,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T08.png",
+      "bytes": 177952,
+      "sha256": "8ef07ab74db4c900ec7c664fd7ffff0dbbfb10dd3e2ad967778365971d996ddb",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "mechanical-structure"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        850,
+        580
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "装甲包边、螺栓与阴影的识别反例",
+      "rebuild_or_new_kit_targets": [],
+      "production_use": "仅用于材料/结构与信息密度判断，不转成贴花。",
+      "limits": "属于结构参考，不收入字标/符号库，不把像重复文字的螺栓排画成品牌元素。",
+      "catalog_id": "T08",
+      "catalog_bbox_px": [
+        4880,
+        4910,
+        5730,
+        5490
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/crops/T09.png",
+      "bytes": 126692,
+      "sha256": "5a1abf32ae05096d1f0b7db3cac4a2f6ef7ee6776690bb259a7715edd306f619",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "original-uv-crop",
+        "recorded_derivation": null,
+        "legacy_classification": "official-motif-author-composition"
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        780,
+        620
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "低对比暗面等高线底纹",
+      "rebuild_or_new_kit_targets": [
+        "topographic-patterns"
+      ],
+      "production_use": "先分离/重建对应独立图形，再按新车承载面原创布局；不能直接复制该RGB裁片。",
+      "limits": "可创建同语法的新曲线纹样或测量派生矢量，明确新作/派生来源；不要提取源板面磨损当通用材质。",
+      "catalog_id": "T09",
+      "catalog_bbox_px": [
+        1570,
+        4090,
+        2350,
+        4710
+      ],
+      "catalog_reading_rotation_ccw": 0,
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/element-catalog.json",
+      "bytes": 25003,
+      "sha256": "41d0c3dbbc093ac23025070e67da91cad1ca0be2e73ab1c2b31ea5e25b772469",
+      "provenance": {
+        "recorded_source": "This UV study",
+        "source_kind": "study-index",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "category": "provenance_metadata",
+      "decision": "reuse_as_provenance",
+      "design_role": "来源/元素/分板索引",
+      "production_use": "随参考保留路径、哈希、裁框、旋转与来源；不是上车像素。",
+      "limits": "坐标仅属于原作A7V；研究节点或矩形范围不等于新车承载面或精确图形mask。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/front-panel-map.json",
+      "bytes": 1237,
+      "sha256": "3148c9fe0236dc7b0616af3278fb6752e7502639eb1dd8a8ed38dd3cb518930e",
+      "provenance": {
+        "recorded_source": "Original A7V body atlas and native UV study",
+        "source_kind": "panel-uv-source-index",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "category": "provenance_metadata",
+      "decision": "reuse_as_provenance",
+      "design_role": "来源/元素/分板索引",
+      "production_use": "随参考保留路径、哈希、裁框、旋转与来源；不是上车像素。",
+      "limits": "坐标仅属于原作A7V；研究节点或矩形范围不等于新车承载面或精确图形mask。",
+      "availability": "core_skill"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/uv/leopard_2a7v_body.png",
+      "bytes": 25232574,
+      "sha256": "3eb893af0ca78c7f7ad0585bf0380cca2412f19d309cd969dbefb7039a20615e",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "native-rgb-reference",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "原作全局构图、配色、字标密度、图形与机械底关系",
+      "production_use": "查找元素与大块语法；新车重新布局并使用自身结构。",
+      "limits": "全图为RGB平面成品，含结构、AO/阴影、磨损和A7V专属UV；不是独立贴花或可迁移材质图。",
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/uv/leopard_2a7v_gun.png",
+      "bytes": 3284320,
+      "sha256": "0fcf97891f9237282b6748042092cd955cb0b6fcf7777ce9af807c85781107db",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "native-rgb-reference",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        4096,
+        2048
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "原作全局构图、配色、字标密度、图形与机械底关系",
+      "production_use": "查找元素与大块语法；新车重新布局并使用自身结构。",
+      "limits": "全图为RGB平面成品，含结构、AO/阴影、磨损和A7V专属UV；不是独立贴花或可迁移材质图。",
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/uv/leopard_2a7v_turret.png",
+      "bytes": 21138418,
+      "sha256": "f8442309c8f0d7ee76969ac1200855d30477b66f86e64c192140dd005ecc6dfd",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "native-rgb-reference",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "原作全局构图、配色、字标密度、图形与机械底关系",
+      "production_use": "查找元素与大块语法；新车重新布局并使用自身结构。",
+      "limits": "全图为RGB平面成品，含结构、AO/阴影、磨损和A7V专属UV；不是独立贴花或可迁移材质图。",
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/reference-a7v/uv/mg_mount_leopard_2a7v.png",
+      "bytes": 255654,
+      "sha256": "2bc7a03a985e75e7086f1f535f31a403beff228cda993ea2cec99c965215c614",
+      "provenance": {
+        "recorded_source": "WT Live 1162771 / HK416の午夜福音",
+        "source_kind": "native-rgb-reference",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        1024,
+        512
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "原作全局构图、配色、字标密度、图形与机械底关系",
+      "production_use": "查找元素与大块语法；新车重新布局并使用自身结构。",
+      "limits": "全图为RGB平面成品，含结构、AO/阴影、磨损和A7V专属UV；不是独立贴花或可迁移材质图。",
+      "source_contains_baked_structure_or_surface": true,
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/study/element-vocabulary.png",
+      "bytes": 1967893,
+      "sha256": "81c7a4860e7cf740be84bbf05df6ca7fcef7f34f9d7b994565eed59d0cc50f99",
+      "provenance": {
+        "recorded_source": "This UV study",
+        "source_kind": "study-index",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        3000,
+        2600
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "研究总览/视觉层级索引",
+      "production_use": "用于风格讨论和选材，不把研究标题、图板排版带入车辆。",
+      "limits": "是研究合成板，不是可编辑生产模板或独立元素集。",
+      "availability": "optional_legacy_library"
+    },
+    {
+      "path": "assets/legacy/study/UV-study-overview.png",
+      "bytes": 2725843,
+      "sha256": "0f1e9354b938d9c791972ae158040a31b067829c481a259fe0da591497de2bd5",
+      "provenance": {
+        "recorded_source": "This UV study",
+        "source_kind": "study-index",
+        "recorded_derivation": null,
+        "legacy_classification": null
+      },
+      "direct_as_vehicle_decal": false,
+      "dimensions": [
+        3200,
+        2360
+      ],
+      "mode": "RGB",
+      "category": "visual_reference",
+      "decision": "reference_only",
+      "design_role": "研究总览/视觉层级索引",
+      "production_use": "用于风格讨论和选材，不把研究标题、图板排版带入车辆。",
+      "limits": "是研究合成板，不是可编辑生产模板或独立元素集。",
+      "availability": "optional_legacy_library"
+    }
+  ],
+  "style_grammar": [
+    {
+      "id": "GRAMMAR-HIERARCHY",
+      "principle": "以大色面/主识别/次级模块/近看信息建立分层，不把每块板都做成同等强度海报。",
+      "evidence": [
+        "B01",
+        "T01",
+        "T05",
+        "G02",
+        "M01"
+      ],
+      "new_vehicle_use": "先选主要可读承载面，再分配标识和微标，部件信息量随角色改变。"
+    },
+    {
+      "id": "GRAMMAR-FLOW",
+      "principle": "黄方向面和路线先形成连续主流向，端点、转折和断点有意安排；细线、圆点和圆环作为相关语汇。",
+      "evidence": [
+        "B08",
+        "B10",
+        "T02",
+        "T03"
+      ],
+      "new_vehicle_use": "用可调路径/楔面组件重新组合，跟随新车结构，不复制A7V走线。"
+    },
+    {
+      "id": "GRAMMAR-TYPE",
+      "principle": "工业徽记、游戏标题、技术编号、车辆身份和操作微字分工；字形/负形准确性与可换内容分开。",
+      "evidence": [
+        "B03",
+        "B04",
+        "B05",
+        "T01",
+        "T04",
+        "T06",
+        "T07",
+        "G02"
+      ],
+      "new_vehicle_use": "品牌锁定组合保持，设备名/编号按新车重排；当前没有可输入任意字的源字体。"
+    },
+    {
+      "id": "GRAMMAR-SPARSE-ACCENT",
+      "principle": "青绿/品红等高彩度只在少量边界或微条上点睛；主黄色与硬件橙红的用途不同。",
+      "evidence": [
+        "B09",
+        "T05",
+        "official/site-color-bar.png"
+      ],
+      "new_vehicle_use": "彩色细条做辅助，避免与主徽记/方向面竞争。"
+    },
+    {
+      "id": "GRAMMAR-QUIET-PATTERN",
+      "principle": "暗面等高线/灰弧网络提供低对比背景层，信息密度低于文字和主路径。",
+      "evidence": [
+        "B02",
+        "T09",
+        "G02"
+      ],
+      "new_vehicle_use": "可重新创作同语法曲线，保留大块空白，不把原作磨损当纹样。"
+    },
+    {
+      "id": "GRAMMAR-MATERIAL-ROLE",
+      "principle": "白/黄/炭黑漆、金属、橡胶、玻璃和软包具有不同角色；图形语法不等于全车同一种粗糙度。",
+      "evidence": [
+        "T08",
+        "M01",
+        "original full RGB references"
+      ],
+      "new_vehicle_use": "新车保留自身机械结构与材质身份，材质试样另做；原RGB裁片不是PBR母版。"
+    },
+    {
+      "id": "GRAMMAR-CARRIER",
+      "principle": "长侧板、紧凑顶板、轴向长件和小型附件需要不同构图密度及阅读方向。",
+      "evidence": [
+        "B01",
+        "T01",
+        "G01",
+        "M01"
+      ],
+      "new_vehicle_use": "设计原创承载角色模板，车辆专属UV只在新车任务中建立。"
+    },
+    {
+      "id": "GRAMMAR-PROVENANCE",
+      "principle": "官方原件、作者编排、测量派生和新作分别标明；已存在像素不等于可直接复用的清洁资产。",
+      "evidence": [
+        "assets/manifest.json",
+        "assets/reference-a7v/element-catalog.json"
+      ],
+      "new_vehicle_use": "每个生产件附来源、母版、可编辑格式、适用尺寸与衍生说明。"
+    }
+  ],
+  "previous_gap_roadmap": [
+    {
+      "id": "industrial-cn-mark",
+      "priority": "P0",
+      "choice": "reuse_existing_then_optional_rebuild",
+      "existing_sources": [
+        "assets/official/endfield-industries-cn.png"
+      ],
+      "deliverable": "保留官方原PNG；如需大侧裙尺寸，核实同版官方SVG或制作标明派生来源的矢量重建。",
+      "decision_reason": "已有干净母版，但栅格尺寸有限；无需生图重画官方字形。",
+      "provenance_rule": "官方原件与人工重建分开，重建不标成官方原文件。"
+    },
+    {
+      "id": "industrial-en-lockup",
+      "priority": "P0",
+      "choice": "rebuild_from_verified_reference",
+      "existing_sources": [
+        "assets/decals/endfield-industries-en-native.png",
+        "assets/reference-a7v/crops/B01.png",
+        "assets/reference-a7v/crops/T07.png"
+      ],
+      "deliverable": "独立透明英文ENDFIELD INDUSTRIES锁定组合：外三角、塔形/等高线、中央负形、主词和副标题；SVG及目标尺寸PNG。",
+      "decision_reason": "当前只有122px小提取与带基底的裁片，没有可放大生产的同版英文工业徽记母版。",
+      "provenance_rule": "先核实可取得的同版官方母版；如按原作测量重建，标记作者编排/派生推断，不把第三方链接名当官方证明。"
+    },
+    {
+      "id": "brand-wordmark-lockups",
+      "priority": "P0",
+      "choice": "reuse_existing_and_rebuild_specific_lockups",
+      "existing_sources": [
+        "assets/official/endfield-title-en.svg",
+        "assets/reference-a7v/crops/T04.png",
+        "assets/reference-a7v/crops/T06.png",
+        "assets/reference-a7v/crops/G01.png"
+      ],
+      "deliverable": "官方游戏标题原件；另分作者风格的两级ARKNIGHTS/ENDFIELD、横排/分行锁定组合和用法卡。",
+      "decision_reason": "现有标题SVG不是字体，也不涵盖原作每一种锁定排版。",
+      "provenance_rule": "保留精确字形/负形；作者排列单独标来源，不用任意字体冒充同版。"
+    },
+    {
+      "id": "visualize-lockup",
+      "priority": "P1",
+      "choice": "rebuild_from_measured_reference",
+      "existing_sources": [
+        "assets/reference-a7v/crops/T01.png"
+      ],
+      "deliverable": "嵌套黑黄三角 + VISUALIZE/ENDFIELD两级字标，几何和文字可独立编辑；透明SVG/PNG。",
+      "decision_reason": "原图可见但没有独立清洁母版，具体官方来源未证实。",
+      "provenance_rule": "标为原作可见编排的测量派生；不宣称官方贴花。"
+    },
+    {
+      "id": "technical-number-modules",
+      "priority": "P1",
+      "choice": "rebuild_as_editable_template",
+      "existing_sources": [
+        "assets/reference-a7v/crops/B03.png"
+      ],
+      "deliverable": "EF编号+副标题、序列/坐标标签的可编辑布局模板；编号与内容可换，不绑定A7V位置。",
+      "decision_reason": "新车需要自己的设备语义、编号和阅读方向。",
+      "provenance_rule": "形状/层级从原作研究，文本内容和新车应用为新设计；没有字体母版时不声称源字体。"
+    },
+    {
+      "id": "vehicle-nameplate",
+      "priority": "P1",
+      "choice": "new_original_asset_using_reference_grammar",
+      "existing_sources": [
+        "assets/reference-a7v/crops/B05.png"
+      ],
+      "deliverable": "圆角黑底铭牌容器、车辆名/序号/接口描述的编辑模板与留白说明。",
+      "decision_reason": "LEOPARD2A7不能直接成为新车通用文字；可复用的是容器和信息层级。",
+      "provenance_rule": "新车文字为原创适配；原作图案只作角色和比例参考。"
+    },
+    {
+      "id": "warning-stencils",
+      "priority": "P1",
+      "choice": "rebuild_as_editable_template",
+      "existing_sources": [
+        "assets/reference-a7v/crops/B04.png",
+        "assets/reference-a7v/crops/B06.png"
+      ],
+      "deliverable": "CAUTION标题/部门副标题、箭头、十字、坐标十字和小型设备标签；文字与几何分组。",
+      "decision_reason": "裁片含基底，现无通用清洁SVG/字体和小字版式。",
+      "provenance_rule": "通用几何新绘；原作特定文字/排布标记来源，同版官方性不自动成立。"
+    },
+    {
+      "id": "route-path-system",
+      "priority": "P0",
+      "choice": "new_parametric_vector_assets",
+      "existing_sources": [
+        "assets/reference-a7v/crops/T02.png",
+        "assets/reference-a7v/crops/T03.png",
+        "assets/reference-a7v/crops/B10.png"
+      ],
+      "deliverable": "可调中心线的粗/细双路线、主次宽度、平行间隙、圆头/方头、实心圆/空心环、断点/转折SVG组件。",
+      "decision_reason": "原作最可迁移的是路径语法；现有只有位图参考，不能重新适配形状和承载面。",
+      "provenance_rule": "基础几何为新制参数化组件，比例关系来自原作研究；不固定A7V路径或UV。"
+    },
+    {
+      "id": "primitive-geometry",
+      "priority": "P0",
+      "choice": "new_parametric_vector_assets",
+      "existing_sources": [
+        "assets/reference-a7v/crops/T03.png",
+        "assets/reference-a7v/crops/B06.png",
+        "assets/reference-a7v/crops/B09.png"
+      ],
+      "deliverable": "胶囊、短条、圆点、圆环、实/空三角、方向箭、十字阵列与斜纹章，提供可调线重/间距和负形。",
+      "decision_reason": "这些适合确定性SVG绘制，不需要用生图猜几何。",
+      "provenance_rule": "简单几何新制并注明参考语汇；不把整块裁片机械边界描成装饰。"
+    },
+    {
+      "id": "direction-planes",
+      "priority": "P1",
+      "choice": "new_original_vector_assets",
+      "existing_sources": [
+        "assets/reference-a7v/crops/B08.png",
+        "assets/reference-a7v/crops/B09.png"
+      ],
+      "deliverable": "收尖楔面、宽斜带、分段箭形黄面与留白窄带，按新车长轴/装甲折转重新组合。",
+      "decision_reason": "形状逻辑可迁移，原车大色块位置不能当新车模板。",
+      "provenance_rule": "新车构图为原创；不复制A7V整板纹理。"
+    },
+    {
+      "id": "hatch-blocks",
+      "priority": "P1",
+      "choice": "new_parametric_vector_assets",
+      "existing_sources": [
+        "assets/reference-a7v/crops/B04.png",
+        "assets/reference-a7v/crops/B06.png",
+        "assets/reference-a7v/crops/B08.png",
+        "assets/reference-a7v/crops/G01.png"
+      ],
+      "deliverable": "斜纹角度/节距/线宽可调的警示块、细排线网、虚线、轴向点阵；可留中央负形。",
+      "decision_reason": "现有斜纹与网纹都混在原作RGB中，缺独立可编辑生产元件。",
+      "provenance_rule": "图案新制；不得把噪点、划痕或旧结构当作图案参数。"
+    },
+    {
+      "id": "topographic-patterns",
+      "priority": "P1",
+      "choice": "new_original_vector_or_procedural_pattern",
+      "existing_sources": [
+        "assets/reference-a7v/crops/T09.png",
+        "assets/reference-a7v/crops/G02.png",
+        "assets/reference-a7v/crops/B02.png"
+      ],
+      "deliverable": "低对比等高线、弧线网络与局部层叠曲线的可编辑矢量/平铺纹样，线密度和对比可调。",
+      "decision_reason": "借鉴背景层的语法，重新创作适合新车的纹样；不从原作整板搬污迹。",
+      "provenance_rule": "明确区分新创纹样和按原作测量派生的曲线；推断部分不是恢复作者Alpha。"
+    },
+    {
+      "id": "micro-accent-strips",
+      "priority": "P2",
+      "choice": "new_vector_assets_from_role_reference",
+      "existing_sources": [
+        "assets/official/site-color-bar.png",
+        "assets/reference-a7v/crops/B09.png",
+        "assets/reference-a7v/crops/T05.png"
+      ],
+      "deliverable": "青绿/品红/黄的稀疏分段彩条及端部，和主黄色路线分开；附面积/层级用法示意。",
+      "decision_reason": "18x113官网条只是窄资源，不足以成为可调生产套件。",
+      "provenance_rule": "官方条与作者彩边分别记来源，不因配色相近就声称同源。"
+    },
+    {
+      "id": "role-palette-and-material-cards",
+      "priority": "P0",
+      "choice": "new_authored_specification_and_test_swatches",
+      "existing_sources": [
+        "assets/official/site-color-bar.png",
+        "assets/reference-a7v/uv/leopard_2a7v_body.png",
+        "assets/reference-a7v/uv/leopard_2a7v_turret.png"
+      ],
+      "deliverable": "深炭/灰白阅读面/主黄/低对比灰线/稀疏彩条/硬件角色色卡；白漆、黄漆、炭黑漆、金属、橡胶、软包的材料角色与目标车试样。",
+      "decision_reason": "旧40资产没有独立干净材料/PBR图、校准参数或材料遮罩；RGB成品不是无光照反照率或材质母版。",
+      "provenance_rule": "原作颜色观察、r11学习色板与新车材料参数分别标注；不从RGB推定通用法线/粗糙度。"
+    },
+    {
+      "id": "layout-role-guides",
+      "priority": "P0",
+      "choice": "new_original_design_templates",
+      "existing_sources": [
+        "assets/study/element-vocabulary.png",
+        "assets/study/UV-study-overview.png",
+        "assets/reference-a7v/element-catalog.json"
+      ],
+      "deliverable": "长侧板、紧凑顶板、轴向长件和小型硬件四种承载角色示意；层级、主流向、标识尺度、留白和禁用结构区可编辑。",
+      "decision_reason": "用户要的是可在新车型上原创组合的版式语法；研究总览不是生产模板。",
+      "provenance_rule": "模板示意不绑定A7V UV/坐标；实际构件语义由新车确认。"
+    },
+    {
+      "id": "negative-examples-and-optical-size-cards",
+      "priority": "P1",
+      "choice": "assemble_from_supplied_normal_references",
+      "existing_sources": [
+        "assets/reference-a7v/crops/T01.png",
+        "assets/reference-a7v/crops/T07.png",
+        "assets/reference-a7v/crops/G01.png"
+      ],
+      "additional_normal_source": "supplied r11 DDS/summary, not current candidate outputs",
+      "deliverable": "原作/r11同模块的笔画边缘、负形、字距和纹样权重对照；原尺寸/正常视距/小尺寸三尺度卡。",
+      "decision_reason": "旧40没有系统的正反例卡或最小可用尺寸证明。",
+      "provenance_rule": "只用已提供的正常参考，标示可见差异，不用总分、不提供当前候选最佳答案、不推断制作过程或游戏效果。"
+    }
+  ],
+  "roadmap_status": "Historical gap analysis; current supplied optional components are indexed separately. Not every roadmap item is claimed complete."
+}
