@@ -31,7 +31,13 @@ NEW_STAGE_DIR 只放本次新设计的颜色和已核实的材料贴图及对应
 
 `rgba8` 为精确像素基线，`bc3` 为有损候选，转换后须重新做视觉检查。配置的 `texconv.path` 相对配置文件，sha256 必须为 `dcfdec10244e02cf5037fba089c55fb7e1326b1c8181742d77d15fa5cb5eef06`；使用已登记 2026.5.8.1 二进制，不下载或静默换版本。输出包括 `skin/`、`package.zip`、`mips.zip` 与报告，逐层读回检查到 1×1。未知材质／缺 AO 不能靠空图补齐而宣称保留。
 
-## 模型预览与 PS
+## Blender 模型与 PS 原尺寸 UV 对照
+
+实际方法见[双向对照](model-uv-cross-check.md)。Blender为外部工具，不随本包分发；优先使用可用的Blender连接或工作区已登记的预览入口，先查询实际能力，不能编造MCP工具名。保护源几何、材质和UV，确认对象/选面与图集对应，再进入PS类MCP看1:1局部；最后明确重载交付贴图复查。展示用缩图及图像缓存须记录，不能代替原尺寸检查。
+
+下面的 `tank_preview.py` 使用ModernGL，可作快速排错；它不提供Blender选面/UV联动，执行成功不计作Blender检查。Composa接口以实时schema为准。
+
+### 包内辅助命令
 
 ```text
 python -B scripts/tank_preview.py --model MODEL_DIR --config PREVIEW.json --profile RESOURCE_PROFILE.json --out NEW_PREVIEW_DIR

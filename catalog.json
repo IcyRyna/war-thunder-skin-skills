@@ -138,14 +138,15 @@
     },
     {
       "baseline": {
-        "package_bytes": 16458528,
-        "package_sha256": "a3bb58656522ab0835ca228489bc20be89f44f8d178c2eb08e46b51ca76f8837",
-        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.skill.zip",
-        "tag": "wt-style-endfield/v0.1.0",
-        "version": "0.1.0"
+        "package_bytes": 16467225,
+        "package_sha256": "36b0a1c6308aeeb70d87ef550591c926db0f015b77f314df6113ae9b3d36d3ae",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.1/wt-style-endfield-v0.1.1.skill.zip",
+        "tag": "wt-style-endfield/v0.1.1",
+        "version": "0.1.1",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1"
       },
       "changelog": "docs/changelog/wt-style-endfield.md",
-      "documentation": "docs/skills/wt-style-endfield-0.1.0.md",
+      "documentation": "docs/skills/wt-style-endfield-0.1.1.md",
       "id": "wt-style-endfield",
       "includes": [
         {
@@ -624,7 +625,8 @@
       "kind": "style",
       "source": "src/styles/ground/wt-style-endfield",
       "status": "released_baseline",
-      "supplements": []
+      "supplements": [],
+      "description": "终末地黑白黄工业构图、可编辑素材与部件分区；Blender模型定位和PS原尺寸UV双向核对。"
     }
   ],
   "profiles": {

@@ -1,12 +1,12 @@
 # 终末地布局：从 A7V 范本到不同坦克
 
-**[查看 wt-style-endfield 0.1.0 完整展示](wt-style-endfield-0.1.0.md)**：规则、车型、分区、预设、素材与验证范围的统一入口。
+**[查看 wt-style-endfield 0.1.1 完整展示](wt-style-endfield-0.1.1.md)**：规则、车型、分区、预设、素材与验证范围的统一入口。
 
 以 HK416の午夜福音的 [A7V 原作](https://live.warthunder.com/post/1162771/en/) 理解黑白分区、黄色方向、完整工业标识、信息层级和留白，再根据目标坦克的真实结构重新布局。原作提供关系与语汇，车型示例提供承载方向，具体图形由本车的部件、UV 和设计意图决定。
 
 本页图板供读者理解风格与方法。独立 Skill 的执行知识应写在 `SKILL.md`、Markdown／JSON 规则和部件／车型资料中；透明素材与少量实际有用的分区／预设图按需读取。无需把带长篇说明的展示图板装进运行包。
 
-**版本状态：** `wt-style-endfield` 0.1.0 已正式发布。[完整展示](wt-style-endfield-0.1.0.md) · [下载独立包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0)。本页配图用于理解布局关系，不表示车型涂装已通过游戏验收。既有兼容包仅在[历史版本](../history/README.md)提供追溯入口。
+**版本状态：** `wt-style-endfield` 0.1.1 已正式发布。[完整展示](wt-style-endfield-0.1.1.md) · [下载独立包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1)。本页配图用于理解布局关系，不表示车型涂装已通过游戏验收。既有兼容包仅在[历史版本](../history/README.md)提供追溯入口。
 
 ## 先理解 A7V 的布局关系
 
@@ -135,6 +135,6 @@ PS／Composa 检查使用实时 MCP，关键局部以原尺寸检查并对应到
 
 主要视觉参考：[HK416の午夜福音 / A7V / WT Live 1162771](https://live.warthunder.com/post/1162771/en/)。原作显示图、局部研究和真实游戏模型的静态解码视图用于解释布局；新的示意编排不是原作者工程，不证明原作者采用某种工序。社区分发标志与其他素材继续分别标明来源，见[素材来源](../credits.md)。
 
-本页展示图位于 `docs/images/endfield-layout/`，用于 GitHub 说明。0.1.0 的执行规则、素材和工具通过独立包分发；既有包的下载与兼容信息集中在[历史版本](../history/README.md)。
+本页展示图位于 `docs/images/endfield-layout/`，用于 GitHub 说明。0.1.1 的执行规则、素材和工具通过独立包分发；既有包的下载与兼容信息集中在[历史版本](../history/README.md)。
 
 [历史兼容资料](../history/README.md) · [文档导航](../README.md) · [仓库首页](../../README.md)

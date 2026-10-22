@@ -8,7 +8,7 @@
 
 | 中文名称 | 适合做什么 | 正式下载 | 中文解读 |
 | --- | --- | --- | --- |
-| 终末地风格 · 地面载具 | 黑白黄工业构图、部件分区、原生 UV 与材质制作 | [0.1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0) | [图文介绍](docs/skills/endfield-tanks.md) |
+| 终末地风格 · 地面载具 | 黑白黄工业构图、部件分区、原生 UV 与材质制作 | [0.1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1) | [图文介绍](docs/skills/endfield-tanks.md) |
 | 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
 | Akamywek 风格 · 飞机 | 深炭底、签名色、白色几何焦点与三角马赛克 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [风格与顺序](docs/skills/akamywek.md) |
 
@@ -28,7 +28,7 @@
 
 先理解明暗分区、黄色路径、工业标识和图形密度，再根据目标车辆的实际表面重新构图。布局资料包含五个车型家族的方向建议与可选预设，使用时仍需核对目标车的 UV 和材质。
 
-[风格概览](docs/skills/endfield-tanks.md) · [A7V 与五车型图解](docs/skills/endfield-layout-guide.md) · [0.1.0 完整素材与工具](docs/skills/wt-style-endfield-0.1.0.md)
+[风格概览](docs/skills/endfield-tanks.md) · [A7V 与五车型图解](docs/skills/endfield-layout-guide.md) · [0.1.1 完整素材与工具](docs/skills/wt-style-endfield-0.1.1.md)
 
 ## 它会怎样完成一套涂装
 

@@ -1,6 +1,6 @@
 interface:
   display_name: "终末地坦克风格"
-  short_description: "以 A7V 范本研究指导跨车型部件布局，提供透明素材与可选预设"
-  default_prompt: "使用 $wt-style-endfield 先分析 A7V 范本关系，再为目标坦克分部件提出自由布局和素材方案。"
+  short_description: "以 A7V 范本指导布局，并将 Blender 模型与 PS 原尺寸 UV 成对检查"
+  default_prompt: "使用 $wt-style-endfield 分析 A7V 范本并为目标坦克自由布局，在 Blender 确认构件与 UV 对应，再用 PS/Composa 原尺寸检查，修改后双向复查。"
 policy:
   allow_implicit_invocation: true

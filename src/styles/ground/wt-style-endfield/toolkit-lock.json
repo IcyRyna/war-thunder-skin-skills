@@ -80,5 +80,16 @@
   "excluded_old_repair_entrypoints": [
     "build_a7v_design.py",
     "stage_a7v_skin.py"
-  ]
+  ],
+  "workflow_review_tools": {
+    "blender": {
+      "external": true,
+      "binary_included": false,
+      "capability_policy": "Inspect actual model, material binding and UV layer; keep the registered working runtime. No Blender MCP client is bundled or assumed."
+    },
+    "ps_class_editor": {
+      "external": true,
+      "access": "MCP with live schema; use original-resolution texture inspections"
+    }
+  }
 }

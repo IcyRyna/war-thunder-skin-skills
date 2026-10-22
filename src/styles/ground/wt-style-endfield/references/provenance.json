@@ -55,14 +55,15 @@
     "human_presentation_in_core": false,
     "whole_legacy_files_preserved": 40,
     "selected_legacy_in_core": 32,
-    "optional_legacy_library": "wt-style-endfield-v0.1.0.legacy-assets.zip",
+    "optional_legacy_library": "wt-style-endfield-v0.1.1.legacy-assets.zip",
     "optional_library_required_for_execution": false,
     "complete_study_and_review_sources": "Full research and editor records remain local; repository docs contain human presentations; source attachment reproduces the runtime package."
   },
-  "version": "0.1.0",
-  "release": {
+  "version": "0.1.1",
+  "base_release": {
     "tag": "wt-style-endfield/v0.1.0",
     "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0",
     "scope": "Reusable layout knowledge, editable assets and tools; not a completed vehicle skin or game validation"
-  }
+  },
+  "revision_scope": "Model-to-UV and UV-to-model inspection workflow; style assets, vehicle profiles and production script bytes unchanged."
 }

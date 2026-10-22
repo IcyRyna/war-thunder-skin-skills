@@ -18,7 +18,7 @@
 | [通用飞机痛涂](skills/jet-liveries.md) | 人物、UV、材质与飞机交付 |
 | [Akamywek 风格飞机](skills/akamywek.md) | 深炭底、签名色和几何图形的组合 |
 | [五车型布局图解](skills/endfield-layout-guide.md) | 参考关系、部件分区与方向建议 |
-| [终末地 0.1.0 全览](skills/wt-style-endfield-0.1.0.md) | 逐条规则、可选预设和全部素材 |
+| [终末地 0.1.1 全览](skills/wt-style-endfield-0.1.1.md) | 逐条规则、可选预设和全部素材 |
 
 ## 开发与维护
 
