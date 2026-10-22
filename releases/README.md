@@ -1,30 +1,32 @@
-# 下载与历史索引
+# 下载中心
 
-## 当前推荐下载
+## 正式安装包
 
-从对应 Release 的 **Assets** 下载 `.skill.zip`；安装包自带运行所需的脚本与参考资料，可单独安装。
+进入发布页，在 **Assets（附件）** 中下载 `.skill.zip`。完整包自带所需说明、脚本和参考资料，可独立使用。
 
-| Skill | 推荐正式版本 | 使用说明 | 更新记录 |
-|---|---|---|---|
-| `wt-style-endfield` | **[0.1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0)** | [完整展示](../docs/skills/wt-style-endfield-0.1.0.md) | [历史](../docs/changelog/wt-style-endfield.md) |
-| `war-thunder-user-skins` | **[3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14)** | [喷气机涂装](../docs/skills/jet-liveries.md) | [历史](../docs/changelog/war-thunder-user-skins.md) |
-| `war-thunder-style-akamywek` | **[1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14)** | [Akamywek 风格](../docs/skills/akamywek.md) | [历史](../docs/changelog/war-thunder-style-akamywek.md) |
+| 中文名称 | Skill ID | 正式版本 | 使用说明 |
+| --- | --- | --- | --- |
+| 终末地风格 · 地面载具 | `wt-style-endfield` | [0.1.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.0) | [中文介绍](../docs/skills/endfield-tanks.md) |
+| 通用飞机痛涂 | `war-thunder-user-skins` | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [中文介绍](../docs/skills/jet-liveries.md) |
+| Akamywek 风格 · 飞机 | `war-thunder-style-akamywek` | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [中文介绍](../docs/skills/akamywek.md) |
 
-终末地 0.1.0 已正式发布，独立安装不依赖旧 1.4。既有兼容包已移到[历史版本与归档下载](../docs/history/README.md)，原 Release、标签、附件和地址继续保留。
+每条 Skill 版本线独立编号。终末地 0.1.0 是独立工作流，安装时不依赖旧终末地 1.4。
 
-## 历史版本
+## 其他附件怎么选
 
-**[历史兼容版本与下载](../docs/history/README.md) · [全部历史 Releases](https://github.com/IcyRyna/war-thunder-skin-skills/releases) · [机器可读发布档案](index.json)**
+| 附件 | 用途 |
+| --- | --- |
+| `.skill.zip` | 正式安装使用 |
+| `.source.zip` | 查看源码、开发或重新装配 |
+| `.legacy-assets.zip` | 历史素材，按对应说明使用 |
+| Source code (zip / tar.gz) | GitHub 自动生成的仓库快照 |
 
-历史入口用于追溯、素材取用与兼容检查，不列入当前推荐。每条 Skill 独立编号，各条版本线的编号互不比较。
+[第一次使用](../docs/quick-start.md) · [安装与运行环境](../docs/installation.md)
 
-## 文件用途
+## 历史与开发
 
-- 正式使用：选择当前推荐的 `.skill.zip`，保留顶层 Skill 文件夹中的说明、脚本、参考和素材。
-- 历史追溯：按历史页面、发布档案或原标签定位保留的安装附件。
-- 研究源码：查看 `src/`、`toolkits/`、`profiles/` 和 `evals/`；GitHub 的 Source code ZIP 是源码快照。
-- 候选审查：按[维护指南](../docs/maintaining.md)构建独立候选，检查和审查完整内容后再决定采用范围。
+[历史版本与归档下载](../docs/history/README.md) · [逐版更新记录](../docs/changelog/README.md) · [机器可读发布索引](index.json)
 
-候选构建不创建正式版本，不安装或上传 Skill，也不改变既有安装附件。
+`wt-skin-study` 和 `wt-skin-build` 是研发候选。检查与构建方法见[维护指南](../docs/maintaining.md)，候选没有正式安装版。
 
-[安装步骤](../docs/installation.md) · [版本记录导航](../docs/changelog/README.md) · [仓库首页](../README.md)
+[返回首页](../README.md) · [中文文档中心](../docs/README.md)

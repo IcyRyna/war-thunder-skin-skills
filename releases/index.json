@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "repository": "IcyRyna/war-thunder-skin-skills",
-  "scope": "Official releases and their distributable source/material supplements; internal backups are retained only in a private draft release.",
+  "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
       "tag": "wt-style-endfield/v0.1.0",

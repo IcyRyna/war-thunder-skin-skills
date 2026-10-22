@@ -67,7 +67,7 @@ Claude Code 可用 `/war-thunder-user-skins` 调用，或在对话中说明需�
 | 纹理读取、裁切、比较与绘制 | Pillow、NumPy |
 | 飞机几何、UV 运算和离线渲染 | Numba，并按脚本说明准备模型资源 |
 | 坦克离线预览 | ModernGL、可用的 OpenGL 3.3 上下文 |
-| 坦克逐纹素表面转移（按需） | OpenCV、Numba、ModernGL、可用的 OpenGL 4.3 上下文 |
+| 历史地面兼容工具的逐纹素表面转移（按需） | OpenCV、Numba、ModernGL、可用的 OpenGL 4.3 上下文 |
 | Composa 分层编辑器 | 已安装 Composa，并在编辑器中启用 `Help > Allow AI Control` |
 
 纹理、模型和字体等项目资源由具体制作任务提供。各工具的实际参数以安装包内脚本的 `--help` 为准；脚本输出保存在制作目录。

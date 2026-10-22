@@ -1,28 +1,34 @@
-# 文档导航
+# 中文文档中心
 
-本仓库按研究、实验、规则、候选、评测、审查与发布组织研发。已有正式安装包保留各自版本线，开发候选通过仓库工具单独构建。
+## 使用 Skills
 
-## 按目的进入
-
-| 目的 | 入口 |
+| 你想了解 | 阅读入口 |
 | --- | --- |
-| 安装当前推荐 Skill | [下载索引](../releases/README.md) → [安装与运行环境](installation.md) |
-| 了解新研发流程 | [流程与各阶段产物](workflow/README.md) |
-| 查找源码、工具和配置 | [目录与装配关系](workflow/repository-layout.md) |
-| 整理证据或开展对比实验 | [证据与评测](workflow/evidence-and-evaluation.md) → [检查器契约](../evals/CONTRACT.md) |
-| 检查仓库、构建候选包 | [维护指南](maintaining.md) |
-| 查看终末地0.1.0完整内容 | [规则、分区、五车型、预设与素材全览](skills/wt-style-endfield-0.1.0.md) |
-| 理解终末地布局与跨车型方向 | [A7V 范本、部件分区与五车型图解](skills/endfield-layout-guide.md) |
-| 查看历史版本与来源 | [历史兼容归档](history/README.md) · [版本记录](changelog/README.md) · [素材与参考](credits.md) |
+| 我该下载哪一个 | [首页选用表](../README.md#选择适合的-skill) |
+| 第一次从下载到开始制作 | [快速上手](quick-start.md) |
+| 安装目录、运行依赖和调用方式 | [安装指南](installation.md) |
+| UV、DDS、法线等术语的意思 | [中文术语表](terminology.md) |
+| 全部正式版本与旧版本 | [下载中心](../releases/README.md) · [历史档案](history/README.md) |
 
-## 当前推荐 Skill
+## 理解风格与能力
 
-以下文档描述当前推荐的正式包。终末地 0.1.0 已正式发布，旧兼容包见[历史版本](history/README.md)。新研发模块的职责和状态以[仓库首页](../README.md)及[构建目录](../catalog.json)为准。
+| 工作流 | 内容 |
+| --- | --- |
+| [终末地风格地面载具](skills/endfield-tanks.md) | 构图方法、适用边界、素材和工具入口 |
+| [通用飞机痛涂](skills/jet-liveries.md) | 人物、UV、材质与飞机交付 |
+| [Akamywek 风格飞机](skills/akamywek.md) | 深炭底、签名色和几何图形的组合 |
+| [五车型布局图解](skills/endfield-layout-guide.md) | 参考关系、部件分区与方向建议 |
+| [终末地 0.1.0 全览](skills/wt-style-endfield-0.1.0.md) | 逐条规则、可选预设和全部素材 |
 
-| 载具 | Skill | 正式版本 | 介绍 |
-| --- | --- | --- | --- |
-| 地面载具 | `wt-style-endfield` | 0.1.0 | [完整展示与下载](skills/wt-style-endfield-0.1.0.md) |
-| 二次元固定翼喷气机 | `war-thunder-user-skins` | 3.14 | [用途与工具](skills/jet-liveries.md) |
-| 固定翼喷气机 | `war-thunder-style-akamywek` | 1.14 | [风格与制作顺序](skills/akamywek.md) |
+## 开发与维护
 
-[返回仓库首页](../README.md)
+| 工作 | 文档 |
+| --- | --- |
+| 研究到发布的各阶段 | [研发流程](workflow/README.md) |
+| 目录、源码和装配职责 | [仓库结构](workflow/repository-layout.md) |
+| 来源、对比实验和评测记录 | [证据与评测](workflow/evidence-and-evaluation.md) |
+| 检查和构建独立候选包 | [维护指南](maintaining.md) |
+| 逐版本变化 | [更新记录](changelog/README.md) |
+| 素材来源与使用范围 | [素材说明](credits.md) · [许可说明](licensing.md) |
+
+[返回首页](../README.md) · [查看涂装作品](https://github.com/IcyRyna/war-thunder-liveries)
