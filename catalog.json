@@ -627,6 +627,25 @@
       "status": "released_baseline",
       "supplements": [],
       "description": "终末地黑白黄工业构图、可编辑素材与部件分区；Blender模型定位和PS原尺寸UV双向核对。"
+    },
+    {
+      "id": "wt-style-spectre42",
+      "kind": "style",
+      "status": "released_baseline",
+      "description": "SPECTRE42炭黑科技涂装；原生模型/UV、提取与规整、固定颜色覆盖和完整生产交付。AZUR生产已通过。",
+      "source": "src/styles/ground/wt-style-spectre42",
+      "includes": [],
+      "supplements": [],
+      "documentation": "docs/skills/spectre42.md",
+      "changelog": "docs/changelog/wt-style-spectre42.md",
+      "baseline": {
+        "version": "0.1.1",
+        "tag": "wt-style-spectre42/v0.1.1",
+        "package_sha256": "9d1bdd17f831af9b2973213cb431cdf5ca1179fd287d83d250b0a95f8c0bad81",
+        "package_bytes": 22225613,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-spectre42/v0.1.1/wt-style-spectre42-v0.1.1.skill.zip"
+      }
     }
   ],
   "profiles": {

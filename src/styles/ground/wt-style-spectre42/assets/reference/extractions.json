@@ -1,0 +1,121 @@
+[
+  {
+    "id": "pixel-module",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      1625,
+      1135,
+      2175,
+      1310
+    ],
+    "output": "pixel-module.png",
+    "sha256": "5a16f272d98c8b0edbc06c8714be24bd9bcfbd7eb48141379650b95b1336a17d",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "circuit-module",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      2360,
+      1550,
+      2815,
+      1795
+    ],
+    "output": "circuit-module.png",
+    "sha256": "dbb0e823fdf4cbe864d076366c1ffd3141cd9947658990495412987f1f0e4c1a",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "hex-rail",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      680,
+      2195,
+      2400,
+      2540
+    ],
+    "output": "hex-rail.png",
+    "sha256": "5c4829bfc92f5e3503c2f3587f95f6e198d2797257038e95d9d95c362f9d5454",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "aps-cheek",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      370,
+      2330,
+      745,
+      2890
+    ],
+    "output": "aps-cheek.png",
+    "sha256": "4faf3450bd76d656a8301c0113ac612f892024e96a544a5a36e08c732663e5ce",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "camo-net",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      2720,
+      2600,
+      3290,
+      3580
+    ],
+    "output": "camo-net.png",
+    "sha256": "b9202be402ac3c57830e7d002dd7304987a5bfaa8c6d2a3059f010413638acca",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "blow-out",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      1920,
+      2735,
+      2390,
+      3070
+    ],
+    "output": "blow-out.png",
+    "sha256": "197ce6f06508a79574216b5ca3021726f283228cf439d93394a7c5e9f0b268a5",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "roof-id",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      600,
+      2510,
+      1010,
+      2870
+    ],
+    "output": "roof-id.png",
+    "sha256": "e963d510b931f4c07785291be93383a7d8827517d03ec09af33cc2ae58a18cce",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "no-step",
+    "source": "m1a2_sep3_turret_c.png",
+    "source_sha256": "d9e3d086f60903cd5cbeed064d277d611ef1d882515a95e47622051b2aa17c5f",
+    "box_xyxy": [
+      650,
+      2110,
+      2050,
+      2170
+    ],
+    "output": "no-step.png",
+    "sha256": "17fc5d3bfb81dbf11e7cee3411468b1c61aecba41e37ca2ad7a18edb8389b442",
+    "kind": "exact RGB crop; contains baked structure and/or lighting; reference, not a production decal"
+  },
+  {
+    "id": "macro-camo",
+    "source": "camo_spectre.dds",
+    "output": "camo-spectre-native.png",
+    "kind": "exact DDS top-level RGB decode, native 1024 square; source attribution Fying_",
+    "sha256": "b8bf5e981c6e6aac668d57a43f4924a33de4ce7aa2ae50d5bb532c19fabdf4b8"
+  }
+]

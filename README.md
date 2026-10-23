@@ -8,6 +8,7 @@
 
 | 中文名称 | 适合做什么 | 正式下载 | 中文解读 |
 | --- | --- | --- | --- |
+| SPECTRE42 · 地面载具 | 炭黑科技风、原生UV、提取与规整、固定颜色及整车交付 | [0.1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1) | [生产流程与示例](docs/skills/spectre42.md) |
 | 终末地风格 · 地面载具 | 黑白黄工业构图、部件分区、原生 UV 与材质制作 | [0.1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1) | [图文介绍](docs/skills/endfield-tanks.md) |
 | 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
 | Akamywek 风格 · 飞机 | 深炭底、签名色、白色几何焦点与三角马赛克 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [风格与顺序](docs/skills/akamywek.md) |

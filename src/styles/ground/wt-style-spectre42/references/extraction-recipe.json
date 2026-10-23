@@ -1,0 +1,417 @@
+{
+  "schema_version": 1,
+  "post": "https://live.warthunder.com/post/1192186/en/",
+  "archive_sha256": "79e3bf02c6984d64601c5a12428bb410dd1ea74b9ef672ebb9fb736de91222da",
+  "sources": [
+    {
+      "file": "m1a2_sep2_trophy_c.dds",
+      "sha256": "d7c53a24a3344766c85f16cade95bdfe91e86172be8e788e4a1f8f43434367ed"
+    },
+    {
+      "file": "m1a2_sep3_body_c.dds",
+      "sha256": "a7824bd516af22d4abe90e7a1a3c6445db3b558aea8eedf2d656e4a20e6d7866"
+    },
+    {
+      "file": "m1a2_sep3_turret_c.dds",
+      "sha256": "a40fd25d1e23982c7fecc24900e580d37993f15a4fb54ea2593df6c8ff5e721b"
+    }
+  ],
+  "assets": [
+    {
+      "id": "pixel-module",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        1625,
+        1135,
+        2175,
+        1310
+      ],
+      "polygon_px": [
+        [
+          10,
+          2
+        ],
+        [
+          540,
+          2
+        ],
+        [
+          540,
+          153
+        ],
+        [
+          10,
+          153
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "circuit-module",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        2360,
+        1550,
+        2815,
+        1795
+      ],
+      "polygon_px": [
+        [
+          21,
+          7
+        ],
+        [
+          443,
+          7
+        ],
+        [
+          447,
+          223
+        ],
+        [
+          20,
+          231
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "hex-rail",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        680,
+        2195,
+        2400,
+        2540
+      ],
+      "polygon_px": [
+        [
+          11,
+          48
+        ],
+        [
+          246,
+          7
+        ],
+        [
+          1000,
+          9
+        ],
+        [
+          1634,
+          65
+        ],
+        [
+          1702,
+          135
+        ],
+        [
+          1700,
+          241
+        ],
+        [
+          1636,
+          304
+        ],
+        [
+          950,
+          327
+        ],
+        [
+          420,
+          310
+        ],
+        [
+          99,
+          275
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "aps-cheek",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        370,
+        2330,
+        745,
+        2890
+      ],
+      "polygon_px": [
+        [
+          199,
+          7
+        ],
+        [
+          342,
+          124
+        ],
+        [
+          215,
+          405
+        ],
+        [
+          29,
+          329
+        ],
+        [
+          28,
+          315
+        ]
+      ],
+      "rotate": 110,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "cable-bay",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        370,
+        2330,
+        745,
+        2890
+      ],
+      "polygon_px": [
+        [
+          46,
+          359
+        ],
+        [
+          191,
+          421
+        ],
+        [
+          157,
+          514
+        ],
+        [
+          46,
+          513
+        ],
+        [
+          28,
+          464
+        ],
+        [
+          29,
+          407
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "blow-out",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        1920,
+        2735,
+        2390,
+        3070
+      ],
+      "polygon_px": [
+        [
+          8,
+          5
+        ],
+        [
+          449,
+          5
+        ],
+        [
+          449,
+          307
+        ],
+        [
+          8,
+          307
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": true
+    },
+    {
+      "id": "no-step",
+      "source": "m1a2_sep3_turret_c.dds",
+      "box_xyxy": [
+        650,
+        2110,
+        2050,
+        2170
+      ],
+      "polygon_px": [
+        [
+          17,
+          10
+        ],
+        [
+          1383,
+          10
+        ],
+        [
+          1383,
+          44
+        ],
+        [
+          17,
+          44
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "radar-display",
+      "source": "m1a2_sep2_trophy_c.dds",
+      "box_xyxy": [
+        717,
+        1073,
+        1275,
+        1485
+      ],
+      "polygon_px": [
+        [
+          7,
+          8
+        ],
+        [
+          551,
+          8
+        ],
+        [
+          551,
+          405
+        ],
+        [
+          7,
+          405
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "electronics-access",
+      "source": "m1a2_sep3_body_c.dds",
+      "box_xyxy": [
+        891,
+        3827,
+        1854,
+        4086
+      ],
+      "polygon_px": [
+        [
+          4,
+          5
+        ],
+        [
+          957,
+          5
+        ],
+        [
+          957,
+          253
+        ],
+        [
+          4,
+          253
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "hazard-chevron",
+      "source": "m1a2_sep2_trophy_c.dds",
+      "box_xyxy": [
+        878,
+        1528,
+        1434,
+        1777
+      ],
+      "polygon_px": [
+        [
+          3,
+          4
+        ],
+        [
+          552,
+          4
+        ],
+        [
+          552,
+          244
+        ],
+        [
+          3,
+          244
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "hot-surface",
+      "source": "m1a2_sep3_body_c.dds",
+      "box_xyxy": [
+        381,
+        2637,
+        965,
+        2714
+      ],
+      "polygon_px": [
+        [
+          4,
+          5
+        ],
+        [
+          579,
+          5
+        ],
+        [
+          579,
+          70
+        ],
+        [
+          4,
+          70
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    },
+    {
+      "id": "mine-protected",
+      "source": "m1a2_sep3_body_c.dds",
+      "box_xyxy": [
+        1416,
+        192,
+        1685,
+        328
+      ],
+      "polygon_px": [
+        [
+          4,
+          4
+        ],
+        [
+          265,
+          4
+        ],
+        [
+          265,
+          132
+        ],
+        [
+          4,
+          132
+        ]
+      ],
+      "rotate": 0,
+      "mirror_horizontal": false
+    }
+  ]
+}

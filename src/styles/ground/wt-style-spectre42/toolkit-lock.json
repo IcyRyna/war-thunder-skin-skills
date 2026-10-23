@@ -1,0 +1,116 @@
+{
+  "status": "production-tested-azur",
+  "source_toolkit": "wt-style-endfield 0.1.0",
+  "python": "3.12.10",
+  "packages": {
+    "Pillow": "12.2.0",
+    "numpy": "2.3.5"
+  },
+  "vendored_scripts": [
+    {
+      "file": "scripts/artifact_io.py",
+      "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+      "source_sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/composa_mcp.py",
+      "sha256": "e9ecd721b68f1629782106ad47031b312d5732f2fc91a2aac112b1ff60563102",
+      "source_sha256": "e9ecd721b68f1629782106ad47031b312d5732f2fc91a2aac112b1ff60563102",
+      "modified_in_candidate": false,
+      "source_release": "independent Composa MCP production client snapshot"
+    },
+    {
+      "file": "scripts/dds_variant.py",
+      "sha256": "99151e2f1e161c4826f162bebf340d670682df2e22f1ec061a92e15ff94f5b86",
+      "source_sha256": "99151e2f1e161c4826f162bebf340d670682df2e22f1ec061a92e15ff94f5b86",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/export_uv_reference.py",
+      "sha256": "d5f67c3ef26f8bca2d9a285f53739aa6c87d126d2717eba0f292dc1434a295f3",
+      "source_sha256": "d5f67c3ef26f8bca2d9a285f53739aa6c87d126d2717eba0f292dc1434a295f3",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/ground_dds.py",
+      "sha256": "3bc69fdc82f70a4fda39bffdfe75948338bfad548ead4a524d30d41b5dac380a",
+      "source_sha256": "948ceb344d703d9b0b996eab6699fb8b5ce634c6dc08d81f52eacab5cc2adf7a",
+      "modified_in_candidate": true,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/inspect_skin.py",
+      "sha256": "b7fea2e55cfefa89c31ab0bffb32d2f5f5a8b75b015b5b4d047d00418dbed9f4",
+      "source_sha256": "b7fea2e55cfefa89c31ab0bffb32d2f5f5a8b75b015b5b4d047d00418dbed9f4",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/tank_core.py",
+      "sha256": "947af0cdd32bc33d57854d71a7167f3f434a7146015162b81d5976a6f36ae306",
+      "source_sha256": "947af0cdd32bc33d57854d71a7167f3f434a7146015162b81d5976a6f36ae306",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/tank_preview.py",
+      "sha256": "5a1dafff3283fbcfafe4537e97ff8030306a5f6fff31ef8e40612d757109cd67",
+      "source_sha256": "5a1dafff3283fbcfafe4537e97ff8030306a5f6fff31ef8e40612d757109cd67",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    },
+    {
+      "file": "scripts/texture_semantics.py",
+      "sha256": "9ba5dde3869e232e8ec6978ce99ee4aad86dde25a9e61b5ca2f33e5e69262750",
+      "source_sha256": "9ba5dde3869e232e8ec6978ce99ee4aad86dde25a9e61b5ca2f33e5e69262750",
+      "modified_in_candidate": false,
+      "source_release": "wt-style-endfield 0.1.0; engineering only"
+    }
+  ],
+  "new_scripts": [
+    {
+      "file": "scripts/apply_local_repair.py",
+      "sha256": "cf44af79e0086f970bca07692e6c17e0619c7326890ef61839f304a5258a3211"
+    },
+    {
+      "file": "scripts/compose_native.py",
+      "sha256": "c567cba71def758742410ed9975c4f86011989770f6787dacc583788cafa061d"
+    },
+    {
+      "file": "scripts/extract_assets.py",
+      "sha256": "6cf634071da8ff897c74a2bb5128ac0cb1bccc70642a3a72679e0cb2c0b77c86"
+    },
+    {
+      "file": "scripts/verify_package.py",
+      "sha256": "024d0927adc28f4e15ca1ef33672daf598e83ccb50d95a314df712841f857472"
+    }
+  ],
+  "external_tools": {
+    "texconv": {
+      "version": "2026.5.8.1",
+      "sha256": "dcfdec10244e02cf5037fba089c55fb7e1326b1c8181742d77d15fa5cb5eef06",
+      "included": false
+    },
+    "preview": "ModernGL/OpenGL 3.3",
+    "editor": "Composa; live MCP schema required"
+  },
+  "runtime_dependency_on_other_skill": false,
+  "retired_runtime_included": false,
+  "material_revision": "source-first; procedural motifs omitted",
+  "version": "0.1.1",
+  "dependencies": {
+    "Python": ">=3.12",
+    "Pillow": ">=12",
+    "numpy": ">=2",
+    "scipy": "asset/repair checks only"
+  },
+  "new_helpers": [
+    "scripts/fixed_color.py",
+    "scripts/precision_decal.py",
+    "scripts/editor_batch.py"
+  ]
+}

@@ -1,0 +1,53 @@
+{
+  "schema_version": 1,
+  "rules": [
+    {
+      "id": "S42-MODEL-UV",
+      "scope": "source and target materials",
+      "claim": "Pair actual model part and correct material UV in both directions",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    },
+    {
+      "id": "S42-FIXED-COLOR",
+      "scope": "confirmed opaque fixed paint",
+      "claim": "Check set_tex/camo_skin_tex and alpha coverage separately from decal transparency",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    },
+    {
+      "id": "S42-EXTRACT-REGULARIZE",
+      "scope": "reusable graphic mothers",
+      "claim": "Keep extraction and geometry regularization as separate artifacts/checks",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    },
+    {
+      "id": "S42-UV-COVERAGE",
+      "scope": "target C atlases",
+      "claim": "Inspect small parts, island trim and backfaces; split materials rather than exclude whole node names",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    },
+    {
+      "id": "S42-EDITOR-BATCH",
+      "scope": "shared Composa runtime",
+      "claim": "Serialize owned batches; preserve other documents and never replay successful edits after save failures",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    },
+    {
+      "id": "S42-FINAL-DDS",
+      "scope": "offline model preview",
+      "claim": "Read final game textures and verify binding hashes before visual review",
+      "validation": "tested_local",
+      "review": "accepted_for_production_workflow",
+      "evidence": "production-validation.json"
+    }
+  ]
+}

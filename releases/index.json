@@ -4,6 +4,27 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "wt-style-spectre42/v0.1.1",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1",
+      "published_at": null,
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "name": "wt-style-spectre42-v0.1.1.skill.zip",
+          "bytes": 22225613,
+          "digest": "sha256:9d1bdd17f831af9b2973213cb431cdf5ca1179fd287d83d250b0a95f8c0bad81",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-spectre42/v0.1.1/wt-style-spectre42-v0.1.1.skill.zip"
+        },
+        {
+          "name": "wt-style-spectre42-v0.1.1.files.json",
+          "bytes": 25534,
+          "digest": "sha256:0343bd11986da67388ebfa93ebef028b0ceabaa22931ce10aa5497684970e811",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-spectre42/v0.1.1/wt-style-spectre42-v0.1.1.files.json"
+        }
+      ]
+    },
+    {
       "tag": "wt-style-endfield/v0.1.1",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1",
       "published_at": "2026-10-22T20:05:58Z",
