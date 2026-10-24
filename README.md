@@ -6,9 +6,9 @@
 
 ## 每套涂装的在线 3D 预览
 
-**[进入作品集，打开各套介绍与 3D 预览](https://icyryna.github.io/war-thunder-liveries/)** · [通用涂装工作台](https://icyryna.github.io/war-thunder-skin-skills/) · [打开自己的模型](docs/web-preview.md)
+**[进入作品集，打开各套介绍与 3D 预览](https://icyryna.github.io/war-thunder-liveries/)** · [在线预览入口](https://icyryna.github.io/war-thunder-skin-skills/) · [本地编辑与导入](docs/web-preview.md)
 
-点击作品标题，介绍页会自动载入该车型和该套涂装，可直接旋转、缩放和切换视角。F-2A、EMBT 等提供车型版本选择；原有下载、来源和评价保留。通用工作台用于载入自己的模型、校准独立装饰、文字和区域改色。
+点击作品标题，介绍页会自动载入该车型和该套涂装，可直接旋转、缩放和切换视角。F-2A、EMBT 等提供车型版本选择；原有下载、来源和评价保留。在线只提供 3D 展示、反射与凹凸、清晰度、视角及预览截图。自己的模型与涂装导入、独立装饰、文字、区域改色和工程导出均在本地工作台完成。
 
 ## 选择适合的 Skill
 
