@@ -1,0 +1,1450 @@
+{
+  "schema_version": 1,
+  "skill_id": "wt-style-charcoal-industrial",
+  "version": "0.1.5",
+  "status": "released",
+  "previous_id": "wt-style-spectre42",
+  "base_version": "0.1.1",
+  "files": [
+    {
+      "file": "assets/armour-labels/armour-id.png",
+      "bytes": 12190,
+      "sha256": "726b2fc5da030340533178d50b525b5a2ac239147ed326824e5f5ab8f8280b06"
+    },
+    {
+      "file": "assets/armour-labels/catalog.json",
+      "bytes": 6857,
+      "sha256": "c9484033d7aed01eb7c49da432b0161ae954c4770bb7c9689ac75329b4f410f5"
+    },
+    {
+      "file": "assets/armour-labels/circuit-narrow.png",
+      "bytes": 2363,
+      "sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b"
+    },
+    {
+      "file": "assets/armour-labels/circuit.png",
+      "bytes": 2284,
+      "sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f"
+    },
+    {
+      "file": "assets/armour-labels/honey-field.png",
+      "bytes": 66075,
+      "sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30"
+    },
+    {
+      "file": "assets/armour-labels/module-panel-unlabelled.png",
+      "bytes": 4921,
+      "sha256": "29b4dd448153d9bbd0dc41db25f0936f5db76b563a7a297f86e8fed13290a3b0"
+    },
+    {
+      "file": "assets/armour-labels/no-step.png",
+      "bytes": 4879,
+      "sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5"
+    },
+    {
+      "file": "assets/armour-labels/quality.json",
+      "bytes": 1794,
+      "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
+    },
+    {
+      "file": "assets/azur-masters/access-word.png",
+      "bytes": 32207,
+      "sha256": "8289c78e313727c98f2bebbacee2d0665ea25b2ebef44189cdae854047ac7729"
+    },
+    {
+      "file": "assets/azur-masters/aps-wide.png",
+      "bytes": 82816,
+      "sha256": "1c8f0931b5fd0f4e0e8661685c55bbbd7e577d8ce7351699c5dd7dcf0a81c6d9"
+    },
+    {
+      "file": "assets/azur-masters/azur-equipment-circuit.png",
+      "bytes": 13091,
+      "sha256": "04f715187bc7a9428681f48b3aadd506dbd0464f835b9cd1c9884b6ca2cd3378"
+    },
+    {
+      "file": "assets/azur-masters/azur-side-honey.png",
+      "bytes": 974978,
+      "sha256": "20f8a3fc3009df507fad74de29d954c4c3f2df9bc65605edee15c5122d234f45"
+    },
+    {
+      "file": "assets/azur-masters/blow-out.png",
+      "bytes": 55809,
+      "sha256": "c4b63a70847f17cab80ff92f17fb619fb0048842504d4791f826f433dcdb21b3"
+    },
+    {
+      "file": "assets/azur-masters/circuit-traces.png",
+      "bytes": 10665,
+      "sha256": "ce017f21c6c380a3467c0eef862029410234251a68087f102ee6eec6b14defa9"
+    },
+    {
+      "file": "assets/azur-masters/edge-chevron.png",
+      "bytes": 9801,
+      "sha256": "029b5527617abe3a2a6b5c64279aad088a8b8b8e99a7c188ef5cba4de266bf8b"
+    },
+    {
+      "file": "assets/azur-masters/electronics-word.png",
+      "bytes": 29264,
+      "sha256": "a150b75739dac1a02049bd9ac0c8a1f8b9ad416dfbadf4b89afa4de56be4a07d"
+    },
+    {
+      "file": "assets/azur-masters/lineage.json",
+      "bytes": 13245,
+      "sha256": "b3b31547100ed51fe719419c2860a3f744e0f1eb63ace06a687383f97aedfdb8"
+    },
+    {
+      "file": "assets/azur-masters/no-step.png",
+      "bytes": 6651,
+      "sha256": "7a486e1508fe4d97f79e43138e9b7ee2b449db214f8b8a061eb057d1abd341a9"
+    },
+    {
+      "file": "assets/azur-shapes/access-word.png",
+      "bytes": 32207,
+      "sha256": "8289c78e313727c98f2bebbacee2d0665ea25b2ebef44189cdae854047ac7729"
+    },
+    {
+      "file": "assets/azur-shapes/access-word.svg",
+      "bytes": 201,
+      "sha256": "76c681a26329f6e878a6e49ef6376bf8eca6ff2d68d5771075200941481daf0c"
+    },
+    {
+      "file": "assets/azur-shapes/aps-wide.png",
+      "bytes": 82816,
+      "sha256": "1c8f0931b5fd0f4e0e8661685c55bbbd7e577d8ce7351699c5dd7dcf0a81c6d9"
+    },
+    {
+      "file": "assets/azur-shapes/aps-wide.svg",
+      "bytes": 14069,
+      "sha256": "2a7e43785b99ca923f414712c2a7e103e68ffd65000c64c193645d91b0b1ddd2"
+    },
+    {
+      "file": "assets/azur-shapes/blow-out.png",
+      "bytes": 55809,
+      "sha256": "c4b63a70847f17cab80ff92f17fb619fb0048842504d4791f826f433dcdb21b3"
+    },
+    {
+      "file": "assets/azur-shapes/blow-out.svg",
+      "bytes": 2431,
+      "sha256": "5b3ac67e16e3bb707a27f49b4b35d520f2ec939c2bbc7c89598bf913fb431926"
+    },
+    {
+      "file": "assets/azur-shapes/circuit-traces.png",
+      "bytes": 10665,
+      "sha256": "ce017f21c6c380a3467c0eef862029410234251a68087f102ee6eec6b14defa9"
+    },
+    {
+      "file": "assets/azur-shapes/edge-chevron.png",
+      "bytes": 9801,
+      "sha256": "029b5527617abe3a2a6b5c64279aad088a8b8b8e99a7c188ef5cba4de266bf8b"
+    },
+    {
+      "file": "assets/azur-shapes/edge-chevron.svg",
+      "bytes": 743,
+      "sha256": "5a704cc95779ab3ed0abe681e3ccf27e29404552241fb5df2300f6c1745688f8"
+    },
+    {
+      "file": "assets/azur-shapes/electronics-word.png",
+      "bytes": 29264,
+      "sha256": "a150b75739dac1a02049bd9ac0c8a1f8b9ad416dfbadf4b89afa4de56be4a07d"
+    },
+    {
+      "file": "assets/azur-shapes/electronics-word.svg",
+      "bytes": 206,
+      "sha256": "6d7ae133d61414388c7dee5235b23d61e4b82c5d7cb3f7b2d37b09d1c159631d"
+    },
+    {
+      "file": "assets/azur-shapes/honey-unit.png",
+      "bytes": 3658,
+      "sha256": "afbe6dd3abb855f3583b5b7e111cef70cca2f1ac4e8bbc8507f4d6aaa3fd1037"
+    },
+    {
+      "file": "assets/azur-shapes/honey-unit.svg",
+      "bytes": 256,
+      "sha256": "a698b20b2a49ecbdfb79b9e8956477250f39f100904163b2629c8831bb6aec2f"
+    },
+    {
+      "file": "assets/azur-shapes/no-step.png",
+      "bytes": 15120,
+      "sha256": "edc2d333aab5de0db89884d3f610830782650adefdea7e30dd8403f5588a55d2"
+    },
+    {
+      "file": "assets/azur-shapes/no-step.svg",
+      "bytes": 1386,
+      "sha256": "a1971b63c3f26ab0fa281bfffc41e1c3fa341cb03731ae09126145288b8be743"
+    },
+    {
+      "file": "assets/catalog.json",
+      "bytes": 84169,
+      "sha256": "2d80383b5cb7a57e64c429e88e159ad3b9782fd3e6a1b002a7b589bb152ab4f3"
+    },
+    {
+      "file": "assets/elements/aps-elements.png",
+      "bytes": 1303557,
+      "sha256": "398dc3cb191fdaa5ec583c04c30018188927a254b55fddbed72bf83b6ec3436e"
+    },
+    {
+      "file": "assets/elements/blow-out.png",
+      "bytes": 1210182,
+      "sha256": "fbf6e4bb33dbdfc6e0e908884708d6feadc752b9dd7f15e0125f4556f354b9c4"
+    },
+    {
+      "file": "assets/elements/cables.png",
+      "bytes": 1601443,
+      "sha256": "083dcc886e0e090ca749605acc4ce753eb3a1e8a35b0188b301ff3c231bded76"
+    },
+    {
+      "file": "assets/elements/catalog.json",
+      "bytes": 115,
+      "sha256": "88a1e4644644b38b91458a9a0d311b33cff88752a431e25398422083e49ef698"
+    },
+    {
+      "file": "assets/elements/circuit-traces.png",
+      "bytes": 245399,
+      "sha256": "cb212a13e2839a7a758b6cb461de2c8dea15324662f33a84746654a657958308"
+    },
+    {
+      "file": "assets/elements/electronics-markings.png",
+      "bytes": 486894,
+      "sha256": "de7f7af3e00c2a1aa9a5e0c305493988d0b22230a0ffb6fc676a144093b0f1ba"
+    },
+    {
+      "file": "assets/elements/hazard-chevron.png",
+      "bytes": 1198815,
+      "sha256": "1d51a0be5f428eead0ed79f48f9dbd4e1eae41df19b885cca93adb8a8b23bcda"
+    },
+    {
+      "file": "assets/elements/hex-tiles.png",
+      "bytes": 1154323,
+      "sha256": "8cc046423127b5aca8d2b4095d11c74d410d6169529a08ed3fe122b784618486"
+    },
+    {
+      "file": "assets/elements/hot-surface.png",
+      "bytes": 316402,
+      "sha256": "7a351cda223c2490a89465e659ead069035764066fcda49f90b575905d2ffe19"
+    },
+    {
+      "file": "assets/elements/mine-protected.png",
+      "bytes": 1012679,
+      "sha256": "77016515e3b08fa6a50f916ca5bd11dc9b23cae0e8de9a98a146eec5507c8f45"
+    },
+    {
+      "file": "assets/elements/no-step.png",
+      "bytes": 92086,
+      "sha256": "a88aec14e5d7c6fe0d055e4249f7022fc9c6267449508a864d24276fd9d0bd1f"
+    },
+    {
+      "file": "assets/elements/pixel-circuits.png",
+      "bytes": 186156,
+      "sha256": "27972299c9299c32784a9e9b8bf2801f5573c732c1fcec6661f5da3d0a7ea454"
+    },
+    {
+      "file": "assets/elements/radar-elements.png",
+      "bytes": 372318,
+      "sha256": "ac952890baf6ef7ae1c59f850b04ad3d12eed4199100bd5f2735729bdf653cb2"
+    },
+    {
+      "file": "assets/native/aligned/aps-cheek.png",
+      "bytes": 114181,
+      "sha256": "63e8146a99bbfe395698c526106df1594308678cadab9bc472b0054bb8ba3a1b"
+    },
+    {
+      "file": "assets/native/aligned/blow-out.png",
+      "bytes": 82737,
+      "sha256": "c345703e0faa0de259c4f277354d1fdf8f13889ef29cc01d14dea440293d3bf6"
+    },
+    {
+      "file": "assets/native/aligned/cable-bay.png",
+      "bytes": 27796,
+      "sha256": "a6286ec5e578a3e186ab60a019599d0ec9683ae1af73350494b4689477af26ab"
+    },
+    {
+      "file": "assets/native/aligned/circuit-module.png",
+      "bytes": 39579,
+      "sha256": "4da159855f91066af644a5f6f9701b5975e091194b6fe430d183d230331677de"
+    },
+    {
+      "file": "assets/native/aligned/electronics-access.png",
+      "bytes": 139902,
+      "sha256": "c0222042e0b713753c65b2cf47cdc710960b96e6661af2afc79b92939eccf931"
+    },
+    {
+      "file": "assets/native/aligned/hazard-chevron.png",
+      "bytes": 80397,
+      "sha256": "5a60a99efc3eb86dc4e33f338f678b93307264fbe34171a5abc4db5ba0f40673"
+    },
+    {
+      "file": "assets/native/aligned/hex-rail.png",
+      "bytes": 262832,
+      "sha256": "3feb8c9f79aacc1e23e132408d243a27727f7cf93676ece743010af2a51b8a5a"
+    },
+    {
+      "file": "assets/native/aligned/hot-surface.png",
+      "bytes": 17891,
+      "sha256": "7271b774ce4fe153bdf6577b86d03b6c1c0bf7d80c89911dbedf7459e085dca3"
+    },
+    {
+      "file": "assets/native/aligned/mine-protected.png",
+      "bytes": 18649,
+      "sha256": "06b592ae68e4c5da8794541f55af9953043751c95c602e48966f845b94151981"
+    },
+    {
+      "file": "assets/native/aligned/no-step.png",
+      "bytes": 21715,
+      "sha256": "3917d6a1c24550af6aaae8853d9ff1e27a44bc4f5df8979f71939d88d7a98749"
+    },
+    {
+      "file": "assets/native/aligned/pixel-module.png",
+      "bytes": 35632,
+      "sha256": "306bcabc9209646b48e5848fb2d1b59e01fe6a6c0173a5c07abd17b70a05099a"
+    },
+    {
+      "file": "assets/native/aligned/radar-display.png",
+      "bytes": 48615,
+      "sha256": "90227b0838216fcc6952cf0c6ff0ff962db0c2a3ea922f841a46b18a3bdcc064"
+    },
+    {
+      "file": "assets/native/cutouts/aps-cheek.png",
+      "bytes": 161224,
+      "sha256": "513a465e7b7e979bee3b53aa47673502d32f40638544291901a8b3064ede46f0"
+    },
+    {
+      "file": "assets/native/cutouts/blow-out.png",
+      "bytes": 93404,
+      "sha256": "0dca340d96fdfaae5e9328e03395952a8eacc777b4688927f4792267b043d167"
+    },
+    {
+      "file": "assets/native/cutouts/cable-bay.png",
+      "bytes": 160613,
+      "sha256": "cbd7486e07b1747ccb523181090910c6ba288ac60f80076f6f9c80ea3e3f3fe1"
+    },
+    {
+      "file": "assets/native/cutouts/circuit-module.png",
+      "bytes": 45716,
+      "sha256": "185695da5d4c47d907a94a600b805b67e542390334d261fddf9e27a8e79e192f"
+    },
+    {
+      "file": "assets/native/cutouts/electronics-access.png",
+      "bytes": 148268,
+      "sha256": "d65e9da9aaf40fe83bd9d224e35a3127dab05dd119b765f0bc10b552339296e6"
+    },
+    {
+      "file": "assets/native/cutouts/hazard-chevron.png",
+      "bytes": 83545,
+      "sha256": "c9d38fe1b62b5cb3d80d761ccb445e8cdc17e838bb65c8148ab4d9746227eb7a"
+    },
+    {
+      "file": "assets/native/cutouts/hex-rail.png",
+      "bytes": 282170,
+      "sha256": "c7f0e7630b6dce21f7004c44eae8acc11cd7523611afff4c6e465a7f504f191e"
+    },
+    {
+      "file": "assets/native/cutouts/hot-surface.png",
+      "bytes": 21159,
+      "sha256": "55588aa421525fcfebb9b1c46fcf4c143a96e0fef93692cfd403f0357ea59f60"
+    },
+    {
+      "file": "assets/native/cutouts/mine-protected.png",
+      "bytes": 20016,
+      "sha256": "4de8405e2f39c57dd46b5fc6aab9f7f2cdef5a2ff0ad83d934a910d19c5599d7"
+    },
+    {
+      "file": "assets/native/cutouts/no-step.png",
+      "bytes": 31020,
+      "sha256": "ba9937c4cb3d85089e012b80639c0250e54e902e337572b910b3d79f51e5d645"
+    },
+    {
+      "file": "assets/native/cutouts/pixel-module.png",
+      "bytes": 42319,
+      "sha256": "342e7c9db62b0002ff6766992c3b65c5bdf8a044b25b1bca1c3cc702eac61994"
+    },
+    {
+      "file": "assets/native/cutouts/radar-display.png",
+      "bytes": 54846,
+      "sha256": "c2086b4e1ccbcc4553002261735a6372b97efd51ea0ba87d5800be99c8299521"
+    },
+    {
+      "file": "assets/native/masks/aps-cheek.png",
+      "bytes": 2182,
+      "sha256": "edb0e6375ac337cecfddd87f778cce8dc045fd1119489b18c9e7b4db34b85abd"
+    },
+    {
+      "file": "assets/native/masks/blow-out.png",
+      "bytes": 797,
+      "sha256": "ab0b286439718f60b086e042d24a5bfadb3f2c133eb11bbb589e520d8229f8c4"
+    },
+    {
+      "file": "assets/native/masks/cable-bay.png",
+      "bytes": 1009,
+      "sha256": "7b247027c3644e50ecc576b2a4868a40da11b34aa8d42f303a2e216c4ad306e3"
+    },
+    {
+      "file": "assets/native/masks/circuit-module.png",
+      "bytes": 656,
+      "sha256": "3a75163307a993bcc04d95c70b04b7531bbef224f06018954eaf99e260f5858d"
+    },
+    {
+      "file": "assets/native/masks/electronics-access.png",
+      "bytes": 824,
+      "sha256": "c9fd142a71c0e726cdf77b69e6e396134db250d29f473c938c7e32e47d490d3c"
+    },
+    {
+      "file": "assets/native/masks/hazard-chevron.png",
+      "bytes": 676,
+      "sha256": "5cda2c90c104c0fde84c5155b1ad3c4ac18e6f3eb95d62d3cb66920e7a59f935"
+    },
+    {
+      "file": "assets/native/masks/hex-rail.png",
+      "bytes": 2354,
+      "sha256": "c3a8ea1692f107f250587860d282494eb9dc1fd427d6decd999bc3ff091c082a"
+    },
+    {
+      "file": "assets/native/masks/hot-surface.png",
+      "bytes": 269,
+      "sha256": "e226ed4226fcbb66b4dc6a2160943c23ba39467c07d20253f2cf9f25fa77b220"
+    },
+    {
+      "file": "assets/native/masks/mine-protected.png",
+      "bytes": 328,
+      "sha256": "c8a05be771e971cf0f354532dfc5b941bde8cfe379eb7272bc79ee4e6c310cb0"
+    },
+    {
+      "file": "assets/native/masks/no-step.png",
+      "bytes": 251,
+      "sha256": "493d692e4dc7711fdbb43fbd6301e250e2c425e22ad03a19728e2f3512a2b6a2"
+    },
+    {
+      "file": "assets/native/masks/pixel-module.png",
+      "bytes": 473,
+      "sha256": "a3384e23414a9e19133af338743506df51d94ffc731ba263413c211adf1c515f"
+    },
+    {
+      "file": "assets/native/masks/radar-display.png",
+      "bytes": 1053,
+      "sha256": "718df3190dab1aaf24cb1afaa9da4c72a418938c5f7545040e3e4a97bc95381b"
+    },
+    {
+      "file": "assets/native/raw/aps-cheek.png",
+      "bytes": 153795,
+      "sha256": "4faf3450bd76d656a8301c0113ac612f892024e96a544a5a36e08c732663e5ce"
+    },
+    {
+      "file": "assets/native/raw/blow-out.png",
+      "bytes": 88883,
+      "sha256": "197ce6f06508a79574216b5ca3021726f283228cf439d93394a7c5e9f0b268a5"
+    },
+    {
+      "file": "assets/native/raw/cable-bay.png",
+      "bytes": 153795,
+      "sha256": "4faf3450bd76d656a8301c0113ac612f892024e96a544a5a36e08c732663e5ce"
+    },
+    {
+      "file": "assets/native/raw/circuit-module.png",
+      "bytes": 43406,
+      "sha256": "dbb0e823fdf4cbe864d076366c1ffd3141cd9947658990495412987f1f0e4c1a"
+    },
+    {
+      "file": "assets/native/raw/electronics-access.png",
+      "bytes": 141272,
+      "sha256": "4d987a0347e04d88de2f71b62414f896e8ca2e77e09d2722adfa981f9153d375"
+    },
+    {
+      "file": "assets/native/raw/hazard-chevron.png",
+      "bytes": 79181,
+      "sha256": "0d41faceaa1d6816ad715eb965327745225081c3a20f5532d0adf5d5a9a6b7f3"
+    },
+    {
+      "file": "assets/native/raw/hex-rail.png",
+      "bytes": 267616,
+      "sha256": "5c4829bfc92f5e3503c2f3587f95f6e198d2797257038e95d9d95c362f9d5454"
+    },
+    {
+      "file": "assets/native/raw/hot-surface.png",
+      "bytes": 20333,
+      "sha256": "ee48b85fe562c9df9aac1c0faac8fedeaf9df0cd89d8cc263a25b1f3e89893f1"
+    },
+    {
+      "file": "assets/native/raw/mine-protected.png",
+      "bytes": 19197,
+      "sha256": "e7ad61c3cef45062bcc0f38eeb1b9bbab1e8c7f7119c7f65d16b992e3d5d690f"
+    },
+    {
+      "file": "assets/native/raw/no-step.png",
+      "bytes": 29577,
+      "sha256": "17fc5d3bfb81dbf11e7cee3411468b1c61aecba41e37ca2ad7a18edb8389b442"
+    },
+    {
+      "file": "assets/native/raw/pixel-module.png",
+      "bytes": 40152,
+      "sha256": "5a16f272d98c8b0edbc06c8714be24bd9bcfbd7eb48141379650b95b1336a17d"
+    },
+    {
+      "file": "assets/native/raw/radar-display.png",
+      "bytes": 51661,
+      "sha256": "100a24fc2c57e2d896ab31f1c4d8640e8d6357e88a4e4ab668ae7a3ea4046e12"
+    },
+    {
+      "file": "assets/native-surface-children/front-towing.png",
+      "bytes": 8355,
+      "sha256": "cd179761d76c2f4b55e01f3643d2f0c8199b06057b93415aaf4f8fc100250a01"
+    },
+    {
+      "file": "assets/native-surface-children/net-pattern.png",
+      "bytes": 21599,
+      "sha256": "c06fa112e42b6b6ee72ce3e3ecdc136e590ee727af52e9a0629d3751f77a3a65"
+    },
+    {
+      "file": "assets/native-surface-children/net-recipe.json",
+      "bytes": 1535,
+      "sha256": "6ce2c7246bf06e5cecbb36e4934b122541e152d42267a2cafd31cacb40c18520"
+    },
+    {
+      "file": "assets/native-surface-children/quality.json",
+      "bytes": 1794,
+      "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
+    },
+    {
+      "file": "assets/native-surface-children/roof-ammo-warning.png",
+      "bytes": 19909,
+      "sha256": "0e40f795395566a1734cc78bad40ad268865bf14fcce2858079f2e0a8fc82a27"
+    },
+    {
+      "file": "assets/native-surface-children/roof-quality.json",
+      "bytes": 855,
+      "sha256": "c017fe5c32367fe4908a2b59d62f0b2eb570db723bcbb80c500bd08da89738a6"
+    },
+    {
+      "file": "assets/native-surface-children/side-accents-right.png",
+      "bytes": 714,
+      "sha256": "3f2fe123e7e5e2e0ff1eddb87cde487dd15df3b8a6172ef0aabd24c30d4031b0"
+    },
+    {
+      "file": "assets/native-surface-children/side-accents.png",
+      "bytes": 687,
+      "sha256": "df2b4c5aa0c0d3ed56123a6a4da94f96d13e0b1e0f8dab1c913dc1a88572ce8e"
+    },
+    {
+      "file": "assets/native-surface-children/side-quality.json",
+      "bytes": 597,
+      "sha256": "d9a00d0321e0ebe269ccaae8e51123d94524aaf3e0815a71e87b7a66d24be98b"
+    },
+    {
+      "file": "assets/native-surface-children/side-right-quality.json",
+      "bytes": 894,
+      "sha256": "9e976b4606d08d1f554026da4c9e1821edf260da143a40ad453ec5b36516dbae"
+    },
+    {
+      "file": "assets/native-surface-children/towing-quality.json",
+      "bytes": 572,
+      "sha256": "2dcbfb137c2c0578d6453ff8755f1aa69781baa64041ce126d51ce14404c41dd"
+    },
+    {
+      "file": "assets/patterns/camo-net-native.png",
+      "bytes": 482675,
+      "sha256": "b9202be402ac3c57830e7d002dd7304987a5bfaa8c6d2a3059f010413638acca"
+    },
+    {
+      "file": "assets/patterns/camo-spectre-native.png",
+      "bytes": 30458,
+      "sha256": "b8bf5e981c6e6aac668d57a43f4924a33de4ce7aa2ae50d5bb532c19fabdf4b8"
+    },
+    {
+      "file": "assets/production/color-ticks-mother.png",
+      "bytes": 11390,
+      "sha256": "246696210ac20d7a6e6b6f6b357b6a89da30aaf6f62e9c4f4501b746e93d0514"
+    },
+    {
+      "file": "assets/production/color-ticks-mother.svg",
+      "bytes": 741,
+      "sha256": "eddc001bebdee8afb356abe02cf487f9a11a7638e0d44ee1c79e46f596f835ba"
+    },
+    {
+      "file": "assets/production/hex-trace-mother.png",
+      "bytes": 60847,
+      "sha256": "04b52de7f0a4bfbea908760d9baeaeed827c0e15827de759ffd3719ea2ddb462"
+    },
+    {
+      "file": "assets/production/hex-trace-mother.svg",
+      "bytes": 2033,
+      "sha256": "d4aa322d7ae556629d01675acacb5d2ed20b8ec2319e384c67985ea082cc4489"
+    },
+    {
+      "file": "assets/production/optic-id-mother.png",
+      "bytes": 7349,
+      "sha256": "4daf9d586e9029ee097bdd9db38c062056987a3d177e4131fc4faada8dc64cbb"
+    },
+    {
+      "file": "assets/production/optic-id-mother.svg",
+      "bytes": 1302,
+      "sha256": "eccace5ac356eaabcb2d8c2ac6ad37c86be6268b16602a743c3fbb486f157890"
+    },
+    {
+      "file": "assets/production/roof-service-mother.png",
+      "bytes": 18429,
+      "sha256": "b6cc8fe8b9698ceed1c5e5a9f3b1523014df93355c5ecad27c0aa7916ef938a6"
+    },
+    {
+      "file": "assets/production/roof-service-mother.svg",
+      "bytes": 1692,
+      "sha256": "69a3b9580533eba05f37a75a353c30ceba74a496813d8c342d603b82148029ad"
+    },
+    {
+      "file": "assets/production/specs/color-ticks-mother.json",
+      "bytes": 1209,
+      "sha256": "3325a5b65052aa669b2cad7e205802f445f4679b2a0a5e6106ddbfa0e10fe6cc"
+    },
+    {
+      "file": "assets/production/specs/hex-trace-mother.json",
+      "bytes": 2344,
+      "sha256": "e740bc425a115db82dc39e4ba5efd3de8ec9c7daf5a7079adc858335caf43edd"
+    },
+    {
+      "file": "assets/production/specs/optic-id-mother.json",
+      "bytes": 1883,
+      "sha256": "227bbf42fccc57ff8ad083dedf3fe3655c36a2d95ac1545e280c7edc6d451f93"
+    },
+    {
+      "file": "assets/production/specs/roof-service-mother.json",
+      "bytes": 1809,
+      "sha256": "c45799ad9ce52c0d494b6f35c223ff76bff0fa96738a861d38b32f6e4f55ea09"
+    },
+    {
+      "file": "assets/publication-templates/release-body.md",
+      "bytes": 793,
+      "sha256": "f5ae370d37fb28700a627831a72ef3a51b02b082af2b0520ef7ebc994e6acbfc"
+    },
+    {
+      "file": "assets/publication-templates/skin-readme.md",
+      "bytes": 1318,
+      "sha256": "3b2c4103aec8cbf84d10e4fb13e26bf9d87b8c4266ec35d378af74e8897aefad"
+    },
+    {
+      "file": "assets/reference/aps-cheek.png",
+      "bytes": 153795,
+      "sha256": "4faf3450bd76d656a8301c0113ac612f892024e96a544a5a36e08c732663e5ce"
+    },
+    {
+      "file": "assets/reference/blow-out.png",
+      "bytes": 88883,
+      "sha256": "197ce6f06508a79574216b5ca3021726f283228cf439d93394a7c5e9f0b268a5"
+    },
+    {
+      "file": "assets/reference/camo-net.png",
+      "bytes": 482675,
+      "sha256": "b9202be402ac3c57830e7d002dd7304987a5bfaa8c6d2a3059f010413638acca"
+    },
+    {
+      "file": "assets/reference/circuit-module.png",
+      "bytes": 43406,
+      "sha256": "dbb0e823fdf4cbe864d076366c1ffd3141cd9947658990495412987f1f0e4c1a"
+    },
+    {
+      "file": "assets/reference/cover.png",
+      "bytes": 822286,
+      "sha256": "05140ff9b1fa0b6b9758a5dda3ecf3ac09534572fcd471d2a85ddea6e22c2f66"
+    },
+    {
+      "file": "assets/reference/extractions.json",
+      "bytes": 4017,
+      "sha256": "0dfb26d4964dd1ca70b4c4c169d1184fbeb92f7d7236b6bb50c16447aec7e19c"
+    },
+    {
+      "file": "assets/reference/hex-rail.png",
+      "bytes": 267616,
+      "sha256": "5c4829bfc92f5e3503c2f3587f95f6e198d2797257038e95d9d95c362f9d5454"
+    },
+    {
+      "file": "assets/reference/model-uv/aps-cheek-model-uv.png",
+      "bytes": 1584965,
+      "sha256": "5426904cabf1b8dc0a9d69b86fbeec03621b331470017727fc9e9c15239fe577"
+    },
+    {
+      "file": "assets/reference/model-uv/blow-out-model-uv.png",
+      "bytes": 1342669,
+      "sha256": "957fee2663625ade005e84645d3b222de345f8439f82396585920570e3aa75f4"
+    },
+    {
+      "file": "assets/reference/model-uv/circuit-module-model-uv.png",
+      "bytes": 1230913,
+      "sha256": "31fa8800ad0159c31322987280a2dd3b3ffaee1be87708c14fb384cd269175e8"
+    },
+    {
+      "file": "assets/reference/model-uv/electronics-access-model-uv.png",
+      "bytes": 1043221,
+      "sha256": "b7d6af5e10477d3ee5a05e4f2a7c18e283ce023216dbfc0e84e619b9c4e51e39"
+    },
+    {
+      "file": "assets/reference/motif-evidence.jpg",
+      "bytes": 364148,
+      "sha256": "fc89a0509f69dc7a2a706943e8181aec588794409a73abe4a1f09fea07589d18"
+    },
+    {
+      "file": "assets/reference/no-step.png",
+      "bytes": 29577,
+      "sha256": "17fc5d3bfb81dbf11e7cee3411468b1c61aecba41e37ca2ad7a18edb8389b442"
+    },
+    {
+      "file": "assets/reference/palette-measurements.json",
+      "bytes": 936,
+      "sha256": "cc83d2b9dd3f499c88e5c7d1d2a8e57ff1a99271210fd274c62f942ab726e046"
+    },
+    {
+      "file": "assets/reference/pixel-module.png",
+      "bytes": 40152,
+      "sha256": "5a16f272d98c8b0edbc06c8714be24bd9bcfbd7eb48141379650b95b1336a17d"
+    },
+    {
+      "file": "assets/reference/roof-id.png",
+      "bytes": 137171,
+      "sha256": "e963d510b931f4c07785291be93383a7d8827517d03ec09af33cc2ae58a18cce"
+    },
+    {
+      "file": "assets/reference/view-1.jpg",
+      "bytes": 310047,
+      "sha256": "2bd1f4e4394268ccd82cf1ea28d32f947b36844f0ac350cd25e4aa6b021f6602"
+    },
+    {
+      "file": "assets/reference/view-2.jpg",
+      "bytes": 332633,
+      "sha256": "36611c5e0d7116448a58f8c1fd2ba22510cfa97ff53bf16430eec29a58f8b85d"
+    },
+    {
+      "file": "assets/reference/view-3.jpg",
+      "bytes": 475936,
+      "sha256": "875563d3fa1e8c90a858e9f193b0e2fdbb7a46e5cb54b8532c48940d4cdf607d"
+    },
+    {
+      "file": "assets/repair-masks/aps-cheek-actual.png",
+      "bytes": 1526,
+      "sha256": "d2a7d03fa080bc46e307de0d8d49898af6f93be3f5560d8ae7d2fb85f13df2b7"
+    },
+    {
+      "file": "assets/repair-masks/aps-cheek.png",
+      "bytes": 1710,
+      "sha256": "558e2892ff339975b27b7e83d0a9ce54058f8813d07dbe5d2e2ea153d638714d"
+    },
+    {
+      "file": "assets/repair-masks/hex-local-allowed.png",
+      "bytes": 2416,
+      "sha256": "9b06938514de3f43b6eafacca8ecb08dee573f63d26ab95ebe119dc750a81efa"
+    },
+    {
+      "file": "assets/repair-masks/hex-local-changed.png",
+      "bytes": 2806,
+      "sha256": "9c9d28e693901fbdfb9a336e032ccc21da1cef9928812d8af6fe319be04be1b2"
+    },
+    {
+      "file": "assets/repair-masks/pixel-module-actual.png",
+      "bytes": 441,
+      "sha256": "03f2cd07dbb7c91ce1eef15a0ce3ba2b08b614e443141e7015f5c554e296c6b6"
+    },
+    {
+      "file": "assets/repair-masks/pixel-module.png",
+      "bytes": 425,
+      "sha256": "24b157245e6d3d6816aaa9ea26d5f42cd777fd60c56ea6e21d9fc70fa85a69f8"
+    },
+    {
+      "file": "assets/repaired/aps-cheek.png",
+      "bytes": 115664,
+      "sha256": "c4c98331bc18ad73cf0a093846ae5b70d4ebce8ccc1da44561e717fc9604b709"
+    },
+    {
+      "file": "assets/repaired/pixel-module.png",
+      "bytes": 41607,
+      "sha256": "47bdac5a0bf97094db1b576526afbae2c98b95d47ad7575c707b6c058489e178"
+    },
+    {
+      "file": "assets/target-children/catalog.json",
+      "bytes": 5563,
+      "sha256": "6ab298453fe398fe4ac949faf2a70cfd8064a4d93f714c9c128d40f436ab29c1"
+    },
+    {
+      "file": "assets/target-children/circuit-narrow.png",
+      "bytes": 2363,
+      "sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b"
+    },
+    {
+      "file": "assets/target-children/circuit.png",
+      "bytes": 2284,
+      "sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f"
+    },
+    {
+      "file": "assets/target-children/honey-field.png",
+      "bytes": 66075,
+      "sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30"
+    },
+    {
+      "file": "assets/target-children/instrument.png",
+      "bytes": 13639,
+      "sha256": "f9471a985feabae17bdc8445b83c1ad4f12219245b4f5f18134c8a8f79b04889"
+    },
+    {
+      "file": "assets/target-children/no-step.png",
+      "bytes": 4879,
+      "sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5"
+    },
+    {
+      "file": "assets/target-children/quality.json",
+      "bytes": 584,
+      "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+    },
+    {
+      "file": "references/99a-case/index.md",
+      "bytes": 361,
+      "sha256": "6adffe00780bb16bd4d18e9048c62eeb609a4a8b1e3ba1ea5ffb62c920309987"
+    },
+    {
+      "file": "references/99a-case/rear-both-paint-fields.png",
+      "bytes": 2054640,
+      "sha256": "3c3016bc5d6687e4800d5d02f0d92a8d5a2d757663e05df91a210689241ab504"
+    },
+    {
+      "file": "references/99a-case/right-rear-matched.png",
+      "bytes": 1816923,
+      "sha256": "f8a16c373a896d49b9914a9414775a06b4baf697e0d98a41e20df9e4a5aca09d"
+    },
+    {
+      "file": "references/asset-catalog.md",
+      "bytes": 877,
+      "sha256": "61f73788600654f79c650326e46c17b389c6249a3cfaa06a29a230a7aadc43e8"
+    },
+    {
+      "file": "references/azur-99a-lessons.md",
+      "bytes": 3018,
+      "sha256": "e8d01581b5f8f6f009481d4115a886fee5e767bde67683f1e1103afe4047e9e6"
+    },
+    {
+      "file": "references/azur-approved/hero-front.png",
+      "bytes": 1518817,
+      "sha256": "46d0a0e937b64495571d0dd912a6e5ef460b8f566d249d0e32871dd0b559f352"
+    },
+    {
+      "file": "references/azur-approved/hero-opposite.png",
+      "bytes": 1817754,
+      "sha256": "33f904124ad23d8ca2cc4f6309f3da22fec1ba9f91e273b64af250e57b25f816"
+    },
+    {
+      "file": "references/azur-approved/hero-overview.png",
+      "bytes": 2030120,
+      "sha256": "24534d06edcda9f376b0194328f0f97fce49f71144af1422bff6951333437e5b"
+    },
+    {
+      "file": "references/azur-approved/seven-views.png",
+      "bytes": 5664596,
+      "sha256": "a290b38f82b79ac677ca68f7db07423b8a6d47f3762588bd3886c759e20c0f93"
+    },
+    {
+      "file": "references/azur-art-direction.md",
+      "bytes": 8051,
+      "sha256": "fbb30f46b522443a598bee41e24c3ebf846179e74cee1ad767069c0b03d2c128"
+    },
+    {
+      "file": "references/azur-current/side-blocks-right.png",
+      "bytes": 2568041,
+      "sha256": "7b5c8f411543b96b7c1900a2db9a19f4f83031f6fb763f20a672b9988d938a6b"
+    },
+    {
+      "file": "references/azur-current-v29/hero-front.png",
+      "bytes": 1886764,
+      "sha256": "89ccdfccbfe07e455cbfa4c0d8b46397750f16b4bca0877319c821e407475735"
+    },
+    {
+      "file": "references/azur-current-v29/hero-overview.png",
+      "bytes": 2519689,
+      "sha256": "cdf7d1cbe6561a57c1a6efc5c6a47b9b132d3028fcc0765e9504a54de37e619a"
+    },
+    {
+      "file": "references/azur-current-v29/side-blocks-right.png",
+      "bytes": 2568041,
+      "sha256": "7b5c8f411543b96b7c1900a2db9a19f4f83031f6fb763f20a672b9988d938a6b"
+    },
+    {
+      "file": "references/azur-measured-paint.json",
+      "bytes": 4428,
+      "sha256": "68157350a51ab785bf06f778b12bbddc331efc130d274b75ad614a7f36e779c2"
+    },
+    {
+      "file": "references/azur-pilot.md",
+      "bytes": 1117,
+      "sha256": "8b8d38794b2b7a0488afdc2fcfca4e7fab77378a59646b635759306e0ac63081"
+    },
+    {
+      "file": "references/azur-reference-lock.json",
+      "bytes": 4915,
+      "sha256": "d1df2c5e2683100910556575d4c77a6ed12c9a145b4de7a6541d4dfd9d6a4b7a"
+    },
+    {
+      "file": "references/azur-source-lock.json",
+      "bytes": 1416,
+      "sha256": "0105aea5f1a850a4568e238388a0b232ec581ca030fc6e022329edda4bbb28c7"
+    },
+    {
+      "file": "references/azur-source-method.md",
+      "bytes": 531,
+      "sha256": "c4d06c96d4ea776bc7472b314c5aadaae93480187e39035438487253a608b5e3"
+    },
+    {
+      "file": "references/azur-style-card.svg",
+      "bytes": 2941,
+      "sha256": "5773d7bde55a82a9ad312296a5f530e56165340c7585783d37bb174e8ea10cc6"
+    },
+    {
+      "file": "references/azur-style-recipe.json",
+      "bytes": 3204,
+      "sha256": "c245df288e3fd0c9922e68465fc8eeddce0a55a2b5d60181f5fd8937725bddc6"
+    },
+    {
+      "file": "references/azur015-measurements.json",
+      "bytes": 9137,
+      "sha256": "7960e085bd11bf2d6961bbaa8de35bf688accd8d84fd4b2bf00cb02f63ec6e69"
+    },
+    {
+      "file": "references/branch-lessons.md",
+      "bytes": 4211,
+      "sha256": "43db2a369935611f255b15e261f9fdd2bba5593ccfe8ee4faa7394e66bd56581"
+    },
+    {
+      "file": "references/carrier-and-budget.md",
+      "bytes": 1438,
+      "sha256": "30fcdfdafd988533b7f05161e2fac6f6f25fef1ffbdb1dc65ce1ca8c3c798e7c"
+    },
+    {
+      "file": "references/cases/99a-skirt/alpha-connectivity.json",
+      "bytes": 317,
+      "sha256": "59165eff340a287b88772ad97cb89b0b8ab5d59af01a89e08c732eb112da4315"
+    },
+    {
+      "file": "references/cases/99a-skirt/calibration.json",
+      "bytes": 687,
+      "sha256": "77b1b671f17bb26aaa3d98b9a9f958c116b10b197a8586e9fef53e8aaed8004d"
+    },
+    {
+      "file": "references/cases/99a-skirt/color-check.json",
+      "bytes": 423,
+      "sha256": "9f1b5a1162cf22790d7ca336b5ed5539dc59d59f25834ebbaa28a42f73676a53"
+    },
+    {
+      "file": "references/cases/99a-skirt/generation-1.png",
+      "bytes": 1554185,
+      "sha256": "c74414ee7b94bf440d796b0f922d7b8233c8a1d81e8c1b27f8781a13f67b5e71"
+    },
+    {
+      "file": "references/cases/99a-skirt/generation-2.png",
+      "bytes": 1638232,
+      "sha256": "85290926f1a9d2a5f06c976cd0043b16373eb507d28dc3f5f5e26773a09f95b8"
+    },
+    {
+      "file": "references/cases/99a-skirt/generation-audit.json",
+      "bytes": 1195,
+      "sha256": "7f4a269e477e9737dbe06292e542e6fb0d81f741a3f4fbb0a3eeab874cb14d6b"
+    },
+    {
+      "file": "references/cases/99a-skirt/model-after.png",
+      "bytes": 1845094,
+      "sha256": "a3930f184240123ebfcedf71800a14e3c21bb707ac24c9fe680834d6fc600271"
+    },
+    {
+      "file": "references/cases/99a-skirt/model-before.png",
+      "bytes": 1850330,
+      "sha256": "903f0f5a29e2f311cb6bcacb50a11d917799add2c82787e67eb2036fca9c4280"
+    },
+    {
+      "file": "references/cases/99a-skirt/uv-after.png",
+      "bytes": 909610,
+      "sha256": "ad63097ab97b27cc7d572354e34f779aae5bf2fb805c5c29f5a7ef9eeae24986"
+    },
+    {
+      "file": "references/cases/99a-skirt/uv-before.png",
+      "bytes": 906973,
+      "sha256": "8895161f97f56af42cea373f40d9184f5d674ddaed30f59af912fc37856d48ac"
+    },
+    {
+      "file": "references/cases/99a-skirt/uv-coverage.json",
+      "bytes": 521,
+      "sha256": "5a3ddc4ff077944356bef2489806229949dbaddb7bb2a96cd50a3872e48bebca"
+    },
+    {
+      "file": "references/cases/99a-skirt/uv-role-map.png",
+      "bytes": 272171,
+      "sha256": "3558e9c1b47a1b9df257765f5ebc3a1ae245254122c20d8fef6f82d711911a9b"
+    },
+    {
+      "file": "references/changelog.md",
+      "bytes": 1526,
+      "sha256": "12ed0343ca3acb211bd03ffb2ac5b7f19e94cdfab7b1c445dd43906a92509db7"
+    },
+    {
+      "file": "references/color-and-material.md",
+      "bytes": 3082,
+      "sha256": "0f875687bc218aabbc6abd2c3b72a682a0fe8879b0e729bc09ef5d0bf5dcbe4b"
+    },
+    {
+      "file": "references/consolidated-rules.md",
+      "bytes": 2209,
+      "sha256": "39cd324a5616cc225e1097465d72749efd5bd8be1af80d4317d27afa55934eac"
+    },
+    {
+      "file": "references/decal-adaptation.json",
+      "bytes": 2522,
+      "sha256": "43a859930e498b6fbc230ea6bbdde50e25014258b48ebe4bee4a940101a02ced"
+    },
+    {
+      "file": "references/decal-adaptation.md",
+      "bytes": 2682,
+      "sha256": "3d918cdbd332725165f67223ceccce95ad8b772c3ea152d91f4a1ab11d65f2e8"
+    },
+    {
+      "file": "references/era-surface-coverage.md",
+      "bytes": 2263,
+      "sha256": "ed47f72e737b2ae4ae65c1d7ad18a879abffcb5bda17871e2405b0cd980fbef9"
+    },
+    {
+      "file": "references/extraction-and-regularization.md",
+      "bytes": 2604,
+      "sha256": "e43ec89963444bd6a01a3248a7afc7f9d53e9a5873526e44b29175801627d903"
+    },
+    {
+      "file": "references/extraction-and-repair.md",
+      "bytes": 2434,
+      "sha256": "b7b47d72efeff6cc15b2a7324309e13d68d4ee9862ae7547824084f2d46edb6d"
+    },
+    {
+      "file": "references/extraction-recipe.json",
+      "bytes": 6768,
+      "sha256": "f6ff150d7eb10c113b820911f245ea044b0715efbbda970e6c80ddc8a6a53d88"
+    },
+    {
+      "file": "references/finish-diagnosis.md",
+      "bytes": 2861,
+      "sha256": "ba89cdd56647c15f654b41a46075d41d5479bb72cbf3e3e6f7e7b32917d5b492"
+    },
+    {
+      "file": "references/game-corrections.md",
+      "bytes": 5115,
+      "sha256": "2c68ebd3ae4dafc48035439c1ab519cd54f56b6511926f6cd806b105116ed559"
+    },
+    {
+      "file": "references/generation-children.md",
+      "bytes": 2789,
+      "sha256": "2b3040be08c54e24e59aabadcb422a28b0e9df463b91e34981181546ec8b7e62"
+    },
+    {
+      "file": "references/github-publication.md",
+      "bytes": 3532,
+      "sha256": "0426067f75793e76706bcb64ba71ba038521f7491daf2c9ab9c39fdc5de6757a"
+    },
+    {
+      "file": "references/image-input-workflow.md",
+      "bytes": 5601,
+      "sha256": "82e57f7f3f15eb92584b0007ff269bcc7dae5b5702354776f8d111a15e3f5cb0"
+    },
+    {
+      "file": "references/learning-ledger.md",
+      "bytes": 2806,
+      "sha256": "dd8ebe6350bc0424f3712f2b121ca2291743967c671fb9acf91525732afb5c94"
+    },
+    {
+      "file": "references/local-repair.md",
+      "bytes": 1446,
+      "sha256": "157ac151bbc186580192666e2fd5f40b24479bf735409fad17fb066e10d6acdd"
+    },
+    {
+      "file": "references/material-and-alpha.md",
+      "bytes": 2860,
+      "sha256": "c2b859bd66a79c52ab5f0a67932be12ad60b1513c86ee0e39fc892ea70f9e854"
+    },
+    {
+      "file": "references/model-uv-method.md",
+      "bytes": 5559,
+      "sha256": "49f1598a3ae66a5d4f36537f8c255426490e29b315d473ca710de7fb38c3c32e"
+    },
+    {
+      "file": "references/naming-contract.md",
+      "bytes": 2605,
+      "sha256": "935108352ce0e15ff4112b15dc54934c48b6c40038e50c1759953016c7ce1521"
+    },
+    {
+      "file": "references/native-model-deployment.md",
+      "bytes": 1770,
+      "sha256": "5ce35dd5bead324276cc55aafc30b1fa01627918f0613784afc78810f3364874"
+    },
+    {
+      "file": "references/native-profile.md",
+      "bytes": 6269,
+      "sha256": "384eb92e8ab77309f707aad5bc3ca5a67024d035e933ba160eafd80c1aa4a195"
+    },
+    {
+      "file": "references/native-resource-checks.md",
+      "bytes": 1553,
+      "sha256": "3f4ea0201d3f7f7b428d68ab71014ffcb5c32a7c3dd0cf1a6cae3e8722a60707"
+    },
+    {
+      "file": "references/native-surface-corrections.md",
+      "bytes": 7355,
+      "sha256": "5a9125e43667d7c2d37be8fe0531865308368b190b6d86f668322337b5b716d5"
+    },
+    {
+      "file": "references/package-provenance.json",
+      "bytes": 7406,
+      "sha256": "af731ce0125ad172fefbb6eaeec5ed60f80fb25d7c0faa760ae70ac3f2b2eb43"
+    },
+    {
+      "file": "references/palette-policy.json",
+      "bytes": 884,
+      "sha256": "ad52c595d5e5a5e2fb309fd41fa7778083ead5daacb93e522efae1af9a2d8b71"
+    },
+    {
+      "file": "references/pilot-99a.md",
+      "bytes": 2812,
+      "sha256": "c5b810c43d820f1a95e72b2f87a32fbbfd4a4d9ca014b14f4d0585c5ed1aac66"
+    },
+    {
+      "file": "references/primary-anchor.md",
+      "bytes": 2872,
+      "sha256": "b803ae49b1c356754eeb3e4cb3365a39ff9a1b91eb6a621abf1c78c18c103f54"
+    },
+    {
+      "file": "references/production-assets.json",
+      "bytes": 1840,
+      "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+    },
+    {
+      "file": "references/production-validation.json",
+      "bytes": 863,
+      "sha256": "3a857d79cf07dc04cbd6928ad8cd3dfc45682a4940b01db8a03c3509678ae964"
+    },
+    {
+      "file": "references/production.md",
+      "bytes": 2490,
+      "sha256": "42ce90067163ec0392d46b0f96350260c00902aedfd4f7a1272a3b8b58f64f91"
+    },
+    {
+      "file": "references/provenance.json",
+      "bytes": 10318,
+      "sha256": "3aa4841db509fff4240aaf655d0ebb9e261cab42ea6311666ce8bc73eedb8c38"
+    },
+    {
+      "file": "references/required-editor-and-blender.md",
+      "bytes": 4775,
+      "sha256": "9f6abe9e93aeef5cfbbdfc9ea9bef16f9ebfd586c1b3d06c1da8696e2b8e4577"
+    },
+    {
+      "file": "references/review-contract.md",
+      "bytes": 2278,
+      "sha256": "73e87ce0d8d59a178082caed18c11353e740ac5f6865dcc198cb46231effeba3"
+    },
+    {
+      "file": "references/rules.json",
+      "bytes": 18112,
+      "sha256": "71dfdf7449f5846f10e28d5d6b2564ce6b220e71e163dc702e62a1d446ac51ad"
+    },
+    {
+      "file": "references/runtime-and-storage.md",
+      "bytes": 2268,
+      "sha256": "cef7eaa41f45faa177d73ae7da89ffcbba89a25587c3a903a1bf17cdeb41bf24"
+    },
+    {
+      "file": "references/shape-mothers.md",
+      "bytes": 1632,
+      "sha256": "b5e364eb94476e7df94bd40f02e298e1360763ab420ce4dd8f3f85c1224cd7fe"
+    },
+    {
+      "file": "references/source-analysis.md",
+      "bytes": 6635,
+      "sha256": "d3360264fd5786f3ff1268756605fcc01e77f48ce9c78b9763a9aa3163e60ccd"
+    },
+    {
+      "file": "references/source-inspection.json",
+      "bytes": 10064,
+      "sha256": "71d21ab7fda150f5219c282f5696fa3c8ea282bf9cd5074de867e556254cbb8a"
+    },
+    {
+      "file": "references/style-authoring.md",
+      "bytes": 1820,
+      "sha256": "c339527cbf588900175706e20544a4e66d5aa3949af7a85cae4337570c67058a"
+    },
+    {
+      "file": "references/target-art-direction.md",
+      "bytes": 1275,
+      "sha256": "478dec10c01a15b280e3f6024b11d5a6b02f2a1642291ea6e975c8b384c23827"
+    },
+    {
+      "file": "references/tool-integration.md",
+      "bytes": 2542,
+      "sha256": "da1dd581d89ac8bdd81e2f7f91f8cc0cc4fa94f0cc5c9959430a7da10c80d63d"
+    },
+    {
+      "file": "references/transfer-layout.md",
+      "bytes": 1749,
+      "sha256": "6f3c1d99eaff81fd039715d2a41a6ac2d1d9e0a5ff630b93f8606b1fedf42e11"
+    },
+    {
+      "file": "references/transparent-elements.md",
+      "bytes": 2048,
+      "sha256": "213329ea4a45a369086d8a3017f9e32af4f229aee9b7fdb5e7a01e3c3f2a8e6f"
+    },
+    {
+      "file": "references/uv-coverage.md",
+      "bytes": 2587,
+      "sha256": "1a5a0bc9d3680c58a40b88976658ebf731b29e07315729c1503517d332289931"
+    },
+    {
+      "file": "references/validation.md",
+      "bytes": 1435,
+      "sha256": "f27e941053e50e813287401552b1ab6f54fa95452a5435ebf39ded2afc6fb8e1"
+    },
+    {
+      "file": "references/vehicle-cases.md",
+      "bytes": 2852,
+      "sha256": "8402f78511560d54f27a299161540f4356ea662858b6f74fc097421cdec0f8e1"
+    },
+    {
+      "file": "references/vehicle-families/cn-turret-era.md",
+      "bytes": 1055,
+      "sha256": "ff986aae94e0bc8830ce48f71120298a48314d13a9482a23d1b2161146a7cc5d"
+    },
+    {
+      "file": "references/vehicle-specific-decals.md",
+      "bytes": 359,
+      "sha256": "af1b3102643175f8a8b2bb68ac962fbf54ad69b1cbafadb547750571fd60139c"
+    },
+    {
+      "file": "references/visual-contract.md",
+      "bytes": 837,
+      "sha256": "8268d7e39a1cd3312b423417fd9cb66b7dcc117808c68da64ebe05357111aa7a"
+    },
+    {
+      "file": "references/workflow-requirements.json",
+      "bytes": 1756,
+      "sha256": "3c6085bcf9a5cd98c978e9384e643a56e38713d61d5110d76b34ee5425277dae"
+    },
+    {
+      "file": "scripts/apply_local_repair.py",
+      "bytes": 7229,
+      "sha256": "8a36f19d1b3f152ebc7b17ed0b73d82e18917265838d972d3cb46a83b3b987bd"
+    },
+    {
+      "file": "scripts/artifact_io.py",
+      "bytes": 16341,
+      "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2"
+    },
+    {
+      "file": "scripts/audit_assets.py",
+      "bytes": 4928,
+      "sha256": "a405e73de4a65dd7461cc0b566e538bb4ba7ea07f053efd05f1a0fdfcf9af174"
+    },
+    {
+      "file": "scripts/basecoat.py",
+      "bytes": 1118,
+      "sha256": "8d90dfccdc53aca7a9c8e421d68749204f6bf8def7554d1093066f865d47a1aa"
+    },
+    {
+      "file": "scripts/carrier_color_audit.py",
+      "bytes": 2808,
+      "sha256": "6b6328064083527fbe7ebffcf8d0e33622c5e35f05d534f4a2b4db5c478a468c"
+    },
+    {
+      "file": "scripts/carrier_visibility.py",
+      "bytes": 2401,
+      "sha256": "24662385e5c974e6f3d8243ea631633fe7955d7d8adee2a6b55222d8be19d94c"
+    },
+    {
+      "file": "scripts/catalog_assets.py",
+      "bytes": 1162,
+      "sha256": "73e87cde0fab38e78229717e66f56e39e71981cf96098c62ae322c6269bddb17"
+    },
+    {
+      "file": "scripts/color_probe.py",
+      "bytes": 2002,
+      "sha256": "511ec6a5aaf4dd7a88257277157b2bf41e343ccbf22413ada51c536fd2ef9bf5"
+    },
+    {
+      "file": "scripts/composa_mcp.py",
+      "bytes": 38439,
+      "sha256": "e9ecd721b68f1629782106ad47031b312d5732f2fc91a2aac112b1ff60563102"
+    },
+    {
+      "file": "scripts/compose_native.py",
+      "bytes": 12730,
+      "sha256": "d64b6e5ef1e666f341c475e635c524c5ef30a1bd256b2d0ab1bbe08987f6cc0a"
+    },
+    {
+      "file": "scripts/composite_guard.py",
+      "bytes": 1096,
+      "sha256": "7d89f1d4dd066f400ff3e5969925c13635c698780afd066b0dbb6fcce85fa7fb"
+    },
+    {
+      "file": "scripts/cutout_coating.py",
+      "bytes": 2627,
+      "sha256": "62c6e5dbbf38c68d1e7433489fea57b67d82e872cbdb7668aa9eeff666602953"
+    },
+    {
+      "file": "scripts/dds_variant.py",
+      "bytes": 7100,
+      "sha256": "99151e2f1e161c4826f162bebf340d670682df2e22f1ec061a92e15ff94f5b86"
+    },
+    {
+      "file": "scripts/ddsx_top.py",
+      "bytes": 2491,
+      "sha256": "44daff73023570416df70ddd5b719720fbf4708a741948feb6d0c3e6273b4326"
+    },
+    {
+      "file": "scripts/editor_batch.py",
+      "bytes": 1718,
+      "sha256": "4d48f6afbda0c8fe3489563d485840136d767744fba66f98c395343d28028309"
+    },
+    {
+      "file": "scripts/equipment_labels.py",
+      "bytes": 1305,
+      "sha256": "66e8476d5c02aae2eaf46a6576ffdd38a1178ce8bb4670112d46aaa01be8225e"
+    },
+    {
+      "file": "scripts/export_uv_reference.py",
+      "bytes": 3133,
+      "sha256": "d5f67c3ef26f8bca2d9a285f53739aa6c87d126d2717eba0f292dc1434a295f3"
+    },
+    {
+      "file": "scripts/extract_assets.py",
+      "bytes": 3076,
+      "sha256": "6cf634071da8ff897c74a2bb5128ac0cb1bccc70642a3a72679e0cb2c0b77c86"
+    },
+    {
+      "file": "scripts/finish_hierarchy.py",
+      "bytes": 818,
+      "sha256": "db0b61f9782e2311422d5bb481a6792f647849469ef48d4feaa7b17799a1f5c1"
+    },
+    {
+      "file": "scripts/fixed_color.py",
+      "bytes": 7399,
+      "sha256": "8ecdc37015170f3c19c8cfadbd844e7244ba9d0225da1edfd8d73bcbebebc9dc"
+    },
+    {
+      "file": "scripts/ground_dds.py",
+      "bytes": 23596,
+      "sha256": "3bc69fdc82f70a4fda39bffdfe75948338bfad548ead4a524d30d41b5dac380a"
+    },
+    {
+      "file": "scripts/hex_surface.py",
+      "bytes": 4455,
+      "sha256": "9ae12fa1684a40e7b38e2487d7a179aaa77505d415787248980fea28d4237b8e"
+    },
+    {
+      "file": "scripts/honey_field.py",
+      "bytes": 1054,
+      "sha256": "2808f031919be2343ad32df4b1829fd6a64ab8f96453956034df1eeff8a55592"
+    },
+    {
+      "file": "scripts/inspect_skin.py",
+      "bytes": 8635,
+      "sha256": "b7fea2e55cfefa89c31ab0bffb32d2f5f5a8b75b015b5b4d047d00418dbed9f4"
+    },
+    {
+      "file": "scripts/native_carrier.py",
+      "bytes": 2359,
+      "sha256": "4474826cd4d7576a0e0ecdacb64cc78a914f4232def8bc2076605a0c19349376"
+    },
+    {
+      "file": "scripts/native_components.py",
+      "bytes": 1517,
+      "sha256": "b4ad17e12c06e49b29288af8a8a5262d66af5b59de30b3d40556d635b527fce6"
+    },
+    {
+      "file": "scripts/net_pattern.py",
+      "bytes": 3327,
+      "sha256": "b117faf9053394a6633787cd572ebc09bdb7f480929afbe7bcf9f2ee44c7b42b"
+    },
+    {
+      "file": "scripts/optics_finish.py",
+      "bytes": 596,
+      "sha256": "e5bdd78e4a7a1250718b59d9cb2c7d001b2ad3478ed44a89f5113bcac5f251ef"
+    },
+    {
+      "file": "scripts/painted_material.py",
+      "bytes": 1468,
+      "sha256": "8234912644a426ac5ec407dd1e58987de937971b7d7136cbdf02b6f9ab099933"
+    },
+    {
+      "file": "scripts/panel_tones.py",
+      "bytes": 1364,
+      "sha256": "73af7f78992618f309da2257c7ce520d9d852254975e0ef5d5e6e022deed5f60"
+    },
+    {
+      "file": "scripts/precision_decal.py",
+      "bytes": 5082,
+      "sha256": "fd4be0f28f7484f9d6f97e94ebaf84e12b4292a2d272a72678a11a5ebda113b2"
+    },
+    {
+      "file": "scripts/reference_contract.py",
+      "bytes": 2515,
+      "sha256": "d6dd4c94087154781c58cda1ab4f765c645a625d94a085c3b63654de17b802bc"
+    },
+    {
+      "file": "scripts/satin_metal.py",
+      "bytes": 1834,
+      "sha256": "f3d9825ce19b63d058ead47bbc08e66cfcdcc10c85a8bcdbbb163aa4ccc05348"
+    },
+    {
+      "file": "scripts/source_model_uv.py",
+      "bytes": 5976,
+      "sha256": "ac19f0e67c44ff29b14c673a3fa84fcfd33771179b629a90f1ed3acfd26323f1"
+    },
+    {
+      "file": "scripts/style_quality.py",
+      "bytes": 4676,
+      "sha256": "6762666e7cb5904555af6be98ce32a6ca09f22b91c7d939c78718396335197a5"
+    },
+    {
+      "file": "scripts/surface_finish.py",
+      "bytes": 1237,
+      "sha256": "b438624e26aa107ff41097c5e0243acec6787138454f8207191cf0609cf75d3a"
+    },
+    {
+      "file": "scripts/surface_finish_audit.py",
+      "bytes": 3564,
+      "sha256": "cd519ce50f57b421b158212c0477c597fc9c3d0c6ed97a74df4c5d4855a817e2"
+    },
+    {
+      "file": "scripts/tank_core.py",
+      "bytes": 7105,
+      "sha256": "947af0cdd32bc33d57854d71a7167f3f434a7146015162b81d5976a6f36ae306"
+    },
+    {
+      "file": "scripts/tank_preview.py",
+      "bytes": 15280,
+      "sha256": "5a1dafff3283fbcfafe4537e97ff8030306a5f6fff31ef8e40612d757109cd67"
+    },
+    {
+      "file": "scripts/texture_semantics.py",
+      "bytes": 8275,
+      "sha256": "9ba5dde3869e232e8ec6978ce99ee4aad86dde25a9e61b5ca2f33e5e69262750"
+    },
+    {
+      "file": "scripts/uv_coverage.py",
+      "bytes": 2648,
+      "sha256": "66ee5d28bd80d00086c5b487f1840cecb6a5bd9e78c5535b7b39cbc11c1ccba3"
+    },
+    {
+      "file": "scripts/uv_paint_scope.py",
+      "bytes": 3292,
+      "sha256": "e741aed1ec0ee7c388b910c750e1f8e3030f3321f11eac58ae44a2c5e424f655"
+    },
+    {
+      "file": "scripts/uv_surface_map.py",
+      "bytes": 2621,
+      "sha256": "511ab0c11c68b82180e66b6f66d7f93a915a4995dd49b4850272b316950eb6ea"
+    },
+    {
+      "file": "scripts/verify_package.py",
+      "bytes": 1080,
+      "sha256": "024d0927adc28f4e15ca1ef33672daf598e83ccb50d95a314df712841f857472"
+    },
+    {
+      "file": "SKILL.md",
+      "bytes": 5682,
+      "sha256": "9db79a0a1c9cf7b8d45379fe550e6acc06c113499f9d361c3d8d02349a7aefbe"
+    },
+    {
+      "file": "toolkit-lock.json",
+      "bytes": 6502,
+      "sha256": "e3874fd118b181a366a509e667f63a3295f38587687da2626b7f84b00c243b0a"
+    }
+  ]
+}

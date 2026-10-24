@@ -1,0 +1,38 @@
+[
+  {
+    "file_in_azur_source": "tools/build_surface_v6.py",
+    "sha256": "26695b7458d09a9f8d4890523485636ffd7346e9513d81baa2ddbd3952dfbacc"
+  },
+  {
+    "file_in_azur_source": "tools/uv_basecoat_v12.py",
+    "sha256": "c040da4ce526b0a4c06b67a35047ed69b28a0b48f30c30564583b0f9aeba34aa"
+  },
+  {
+    "file_in_azur_source": "tools/color_ticks_v17.py",
+    "sha256": "1a84d64e26f801844e7749d6ccf6a57f4c70767443c19a3210ec8ceadc357a7b"
+  },
+  {
+    "file_in_azur_source": "workbase/v12/design/layers.json",
+    "sha256": "9d9e020fdf77fc636be6ff1e81c9a45f1386f77a74e10eca92f4893de237e172"
+  },
+  {
+    "file_in_azur_source": "workbase/v15/design-v2/layers.json",
+    "sha256": "126688d19ee22dfd31a3fade4a93fa142264845362de58dcdb21895c0031fdc7"
+  },
+  {
+    "file_in_azur_source": "workbase/v17/design/layers.json",
+    "sha256": "6c0c2fc2c144b5d7b15651ca27ced776c222045b011b855bd25bb867d166f10f"
+  },
+  {
+    "file_in_azur_source": "packaging/color-ticks-v17/preview.json",
+    "sha256": "730a9312d03b8295a0f8be9478890d7bd9fc6a17b9553549291a3901aab7ceae"
+  },
+  {
+    "file_in_azur_source": "verification/uv-basecoat-v12/build.json",
+    "sha256": "4bd40a3990427acee25d2a23f726335e6d63d8675e84409adb05c44746d845c7"
+  },
+  {
+    "file_in_azur_source": "verification/uv-basecoat-v12/method.json",
+    "sha256": "0c08e019f927acf9d1fb34c5fb4bc46755ea5f2a9f21ec0863aaddab1a9ff1d0"
+  }
+]

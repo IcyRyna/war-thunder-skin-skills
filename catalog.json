@@ -629,16 +629,27 @@
       "description": "终末地黑白黄工业构图、可编辑素材与部件分区；Blender模型定位和PS原尺寸UV双向核对。"
     },
     {
-      "id": "wt-style-spectre42",
+      "id": "wt-style-charcoal-industrial",
       "kind": "style",
       "status": "released_baseline",
-      "description": "SPECTRE42炭黑科技涂装；原生模型/UV、提取与规整、固定颜色覆盖和完整生产交付。AZUR生产已通过。",
-      "source": "src/styles/ground/wt-style-spectre42",
+      "description": "炭灰工业涂装：AZUR第一范本、三主灰区、几何与蜂窝层次、车型贴纸、车尾橙黑警示及分区材质；实际PS制作，可用Blender检查。",
+      "source": "src/styles/ground/wt-style-charcoal-industrial",
       "includes": [],
       "supplements": [],
-      "documentation": "docs/skills/spectre42.md",
-      "changelog": "docs/changelog/wt-style-spectre42.md",
+      "documentation": "docs/skills/charcoal-industrial.md",
+      "changelog": "docs/changelog/wt-style-charcoal-industrial.md",
       "baseline": {
+        "version": "0.1.5",
+        "tag": "wt-style-charcoal-industrial/v0.1.5",
+        "package_sha256": "bf0a764170496b50506131793f79c25c491e104ae638735f599750dded80eab1",
+        "package_bytes": 57686797,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.5/wt-style-charcoal-industrial-v0.1.5.skill.zip"
+      },
+      "previous_ids": [
+        "wt-style-spectre42"
+      ],
+      "previous_baseline": {
         "version": "0.1.1",
         "tag": "wt-style-spectre42/v0.1.1",
         "package_sha256": "9d1bdd17f831af9b2973213cb431cdf5ca1179fd287d83d250b0a95f8c0bad81",

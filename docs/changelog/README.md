@@ -4,6 +4,7 @@
 
 | 分类 | Skill | 已发布记录 | 更新记录 |
 | --- | --- | --- | --- |
+| 地面载具 | 炭灰工业涂装 | 0.1.5（原S42） | [查看](wt-style-charcoal-industrial.md) |
 | 飞机 | 喷气机涂装工作流 | 3.14 | [查看](war-thunder-user-skins.md) |
 | 飞机 | Akamywek 风格飞机涂装 | 1.14 | [查看](war-thunder-style-akamywek.md) |
 | 地面载具 | `wt-style-endfield` | 0.1.1 | [查看](wt-style-endfield.md) |

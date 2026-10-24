@@ -1,0 +1,17 @@
+{
+  "state": "checked_local",
+  "kind": "target-authored regular geometric ticks",
+  "amber_count": 2,
+  "cyan_count": 3,
+  "alpha_zero_pixels": 70718,
+  "coverage_fraction": 0.017805555555555557,
+  "concept_sha256": "37627fd68470ca2b5319d6406ade3ac3e85a4f00a0a638fb241ee2c05b3256b7",
+  "user_authorization": "实装看看效果",
+  "visual_acceptance": "pending",
+  "native_size": [
+    600,
+    120
+  ],
+  "minimum_perpendicular_stroke_px": 12.5,
+  "reason": "First trial projected to 1.689px; compact canvas and regular bars preserve tiny-tick design with >=2px native budget"
+}

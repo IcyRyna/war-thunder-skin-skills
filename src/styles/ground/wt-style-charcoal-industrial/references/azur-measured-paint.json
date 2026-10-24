@@ -1,0 +1,117 @@
+[
+  {
+    "scope": "declared neutral paint only, visual approval separate",
+    "pixels": 3032818,
+    "mean_rgb": [
+      36.203370924335054,
+      36.203370924335054,
+      36.203370924335054
+    ],
+    "mean_B_minus_R": 0.0,
+    "p95_chroma": 0.0,
+    "luminance_p10_p50_p90": [
+      30.0,
+      32.0,
+      47.0
+    ],
+    "neutral_pass": true,
+    "threshold_status": "proposed engineering tolerance; not visual acceptance",
+    "resource": "leclerc_s2_body",
+    "texture_sha256": "329b102d967393ddd5e827085e45ff5bdf5b2a1f916e4a060a910369be788c1c",
+    "mask_sha256": "74ce8df393cea5786a4ed808b8e21295e285efc9afa84e40468d61eba95d6d85",
+    "geometry_sha256": "dc5c72e30b0f12b036fc4b01ffa62726d67cb95317033a63d4cd64dc1206467a",
+    "mask_recipe": "v12 basecoat AND occupied nid>=0; subtract v15 allowed region if present; no color-derived sample filter"
+  },
+  {
+    "scope": "declared neutral paint only, visual approval separate",
+    "pixels": 434482,
+    "mean_rgb": [
+      25.712075529020765,
+      25.712075529020765,
+      25.712075529020765
+    ],
+    "mean_B_minus_R": 0.0,
+    "p95_chroma": 0.0,
+    "luminance_p10_p50_p90": [
+      0.0,
+      30.0,
+      43.0
+    ],
+    "neutral_pass": true,
+    "threshold_status": "proposed engineering tolerance; not visual acceptance",
+    "resource": "leclerc_s2_turret",
+    "texture_sha256": "96a0b120b483b20bf6aec2c2dc950af4fb0c01232385101b85d9ac65f37b1069",
+    "mask_sha256": "ad57019a11ca74b9263722520af4e262f597a5738438d88e2d8e57cad5771741",
+    "geometry_sha256": "9b6b77f634289c871cfb3fe14beae923697ed4763a127f92ddedf32388b0c06e",
+    "mask_recipe": "v12 basecoat AND occupied nid>=0; subtract v15 allowed region if present; no color-derived sample filter"
+  },
+  {
+    "scope": "declared neutral paint only, visual approval separate",
+    "pixels": 893532,
+    "mean_rgb": [
+      32.758474234834345,
+      32.758474234834345,
+      32.758474234834345
+    ],
+    "mean_B_minus_R": 0.0,
+    "p95_chroma": 0.0,
+    "luminance_p10_p50_p90": [
+      31.0,
+      32.0,
+      32.99999999999999
+    ],
+    "neutral_pass": true,
+    "threshold_status": "proposed engineering tolerance; not visual acceptance",
+    "resource": "leclerc_azur",
+    "texture_sha256": "0c9a6da7b38cabece2126f44691f0deb9efcaaf315015da587a5d422e70f3bf5",
+    "mask_sha256": "04a42184400bcd25e32b5fa493c720fbc12b9ea6c2c7a20185de6e576a966f1b",
+    "geometry_sha256": "492bd8ce1708cf1b38f6aeef82cd05ae4d7cafd770615e85fdc054198d29e779",
+    "mask_recipe": "v12 basecoat AND occupied nid>=0; subtract v15 allowed region if present; no color-derived sample filter"
+  },
+  {
+    "scope": "declared neutral paint only, visual approval separate",
+    "pixels": 382,
+    "mean_rgb": [
+      5.971204188481676,
+      5.971204188481676,
+      5.971204188481676
+    ],
+    "mean_B_minus_R": 0.0,
+    "p95_chroma": 0.0,
+    "luminance_p10_p50_p90": [
+      0.0,
+      3.0,
+      15.0
+    ],
+    "neutral_pass": true,
+    "threshold_status": "proposed engineering tolerance; not visual acceptance",
+    "resource": "leclerc_s2_dz",
+    "texture_sha256": "2c2e386aba11da8931478e128f34a8ab349d6d4df9f119ef3f87c4a2e4e80455",
+    "mask_sha256": "17bd676e25562c45ff6f2c280be4dd5948b324811febace7c7e96481d1d8d4b2",
+    "geometry_sha256": "b136b66251354e4240e8293f8ee309f74cb88bdb7e7a3333bc1d6db2b709164c",
+    "mask_recipe": "v12 basecoat AND occupied nid>=0; subtract v15 allowed region if present; no color-derived sample filter"
+  },
+  {
+    "scope": "declared neutral paint only, visual approval separate",
+    "pixels": 298224,
+    "mean_rgb": [
+      38.03185860292934,
+      38.03185860292934,
+      38.03185860292934
+    ],
+    "mean_B_minus_R": 0.0,
+    "p95_chroma": 0.0,
+    "luminance_p10_p50_p90": [
+      36.0,
+      38.0,
+      41.0
+    ],
+    "neutral_pass": true,
+    "threshold_status": "proposed engineering tolerance; not visual acceptance",
+    "resource": "leclerc_s2_gun",
+    "texture_sha256": "bd9de3e54b674afa022367ac26a60ebeded5148c4925477648558a7efc79e2c3",
+    "mask_sha256": "4aeda591c713844fcea89ee0b3152a568c3a96f56409a9779d5e78cdfaae4836",
+    "geometry_sha256": "5209103fadc32df84f29fbadafb1fb50a733c9b6e99be5714bf9015af6f2ee5d",
+    "mask_recipe": "v12 basecoat AND occupied nid>=0; subtract v15 allowed region if present; no color-derived sample filter"
+  }
+]

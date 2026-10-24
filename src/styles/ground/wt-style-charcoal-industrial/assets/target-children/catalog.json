@@ -1,0 +1,172 @@
+{
+  "schema_version": 2,
+  "assets": [
+    {
+      "id": "instrument",
+      "kind": "transparent_element",
+      "file": "instrument.png",
+      "sha256": "f9471a985feabae17bdc8445b83c1ad4f12219245b4f5f18134c8a8f79b04889",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1100,
+        330
+      ],
+      "critical_features": {
+        "line_width_px": 6,
+        "text_cap_height_px": 55
+      },
+      "contains_text": true,
+      "parent": "aps-wide",
+      "change": "Same module hierarchy and colors; one readable title instead of unresolved microtext; panel sized for native target flank",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 613,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      }
+    },
+    {
+      "id": "circuit",
+      "kind": "transparent_element",
+      "file": "circuit.png",
+      "sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        250
+      ],
+      "critical_features": {
+        "line_width_px": 13
+      },
+      "contains_text": false,
+      "parent": "azur-equipment-circuit",
+      "change": "One four-line cluster for a shorter target equipment box; uniform spacing and clear terminals",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 186758,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      }
+    },
+    {
+      "id": "no-step",
+      "kind": "transparent_element",
+      "file": "no-step.png",
+      "sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        600,
+        120
+      ],
+      "critical_features": {
+        "line_width_px": 10,
+        "text_cap_height_px": 59
+      },
+      "contains_text": true,
+      "parent": "no-step",
+      "change": "Shortened to fit one actual top equipment rail without tiny text",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 60715,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      }
+    },
+    {
+      "id": "honey-field",
+      "kind": "transparent_element",
+      "file": "honey-field.png",
+      "sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1887,
+        575
+      ],
+      "critical_features": {
+        "line_width_px": 8
+      },
+      "contains_text": false,
+      "parent": "azur-side-honey",
+      "change": "48 exact regular cells; AI silhouette rejected; equal gaps, sparse light cells, original child interior grain only",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 213371,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      }
+    },
+    {
+      "id": "circuit-narrow",
+      "kind": "transparent_element",
+      "file": "circuit-narrow.png",
+      "sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        250
+      ],
+      "critical_features": {
+        "line_width_px": 18
+      },
+      "contains_text": false,
+      "parent": "azur-equipment-circuit",
+      "change": "Shorter left hull service hatch; 18px source strokes retain approximately 12mm physical line width and at least two final pixels",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 186758,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      }
+    }
+  ]
+}

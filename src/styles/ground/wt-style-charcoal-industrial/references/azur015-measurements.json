@@ -1,0 +1,426 @@
+{
+  "source_product_id": "product-9a2ffcf481354db0",
+  "source_sha256": "e5e1ca8a7ed23d47034c08a0397ee6576f68a9937be8e5c7d40523070a424d8d",
+  "revision": "AZUR v29",
+  "side_blocks": {
+    "palette_RGB": [
+      [
+        27.0,
+        27.0,
+        27.0
+      ],
+      [
+        33.0,
+        33.0,
+        33.0
+      ],
+      [
+        39.0,
+        39.0,
+        39.0
+      ],
+      [
+        47.0,
+        47.0,
+        47.0
+      ],
+      [
+        54.0,
+        54.0,
+        54.0
+      ]
+    ],
+    "pixel_pitch_m": 0.065,
+    "source": "checks/design-v1-build.json",
+    "scope": "AZUR upper/intermediate side contrast blocks, not global vehicle area proportions"
+  },
+  "regions": [
+    {
+      "id": "body_painted_armor",
+      "resource": "leclerc_s2_body_c",
+      "mask_member": "design/masks/leclerc_s2_body-whole-armor-coating-RB.png",
+      "selected_pixels": 5045084,
+      "neutral_paint_pixels": 5035784,
+      "mask_native_size": [
+        2048,
+        2048
+      ],
+      "C_size": [
+        4096,
+        4096
+      ],
+      "mask_mapping": "nearest-neighbor pixel grid alignment; same atlas coordinates",
+      "method": "compose retained layer stack, explicit paint mask; describe neutral subpopulation below gray100",
+      "is_render_sample": false,
+      "visual_acceptance": "separate",
+      "neutral_RGB_p10_p50_p90": [
+        [
+          30.0,
+          30.0,
+          30.0
+        ],
+        [
+          34.0,
+          34.0,
+          34.0
+        ],
+        [
+          65.0,
+          65.0,
+          65.0
+        ]
+      ],
+      "neutral_gray_p10_p50_p90": [
+        30.0,
+        34.0,
+        65.0
+      ],
+      "N_source_space": "PNG RGBA semantic R/G/B/A; not DDS BGRA memory",
+      "N_R_B_p10_p50_p90": [
+        [
+          115.0,
+          95.0
+        ],
+        [
+          115.0,
+          95.0
+        ],
+        [
+          115.0,
+          95.0
+        ]
+      ]
+    },
+    {
+      "id": "turret_painted_armor",
+      "resource": "leclerc_s2_turret_c",
+      "mask_member": "design/masks/leclerc_s2_turret-whole-armor-coating-RB.png",
+      "selected_pixels": 7684200,
+      "neutral_paint_pixels": 7646003,
+      "mask_native_size": [
+        2048,
+        2048
+      ],
+      "C_size": [
+        4096,
+        4096
+      ],
+      "mask_mapping": "nearest-neighbor pixel grid alignment; same atlas coordinates",
+      "method": "compose retained layer stack, explicit paint mask; describe neutral subpopulation below gray100",
+      "is_render_sample": false,
+      "visual_acceptance": "separate",
+      "neutral_RGB_p10_p50_p90": [
+        [
+          27.0,
+          27.0,
+          27.0
+        ],
+        [
+          35.0,
+          35.0,
+          35.0
+        ],
+        [
+          65.0,
+          65.0,
+          65.0
+        ]
+      ],
+      "neutral_gray_p10_p50_p90": [
+        27.0,
+        35.0,
+        65.0
+      ],
+      "N_source_space": "PNG RGBA semantic R/G/B/A; not DDS BGRA memory",
+      "N_R_B_p10_p50_p90": [
+        [
+          173.0,
+          143.0
+        ],
+        [
+          173.0,
+          143.0
+        ],
+        [
+          173.0,
+          143.0
+        ]
+      ]
+    },
+    {
+      "id": "side_contrast_blocks",
+      "resource": "leclerc_s2_turret_c",
+      "mask_member": "design/masks/leclerc_s2_turret_c-side-block-extension.png",
+      "selected_pixels": 398989,
+      "neutral_paint_pixels": 398989,
+      "mask_native_size": [
+        4096,
+        4096
+      ],
+      "C_size": [
+        4096,
+        4096
+      ],
+      "mask_mapping": "nearest-neighbor pixel grid alignment; same atlas coordinates",
+      "method": "compose retained layer stack, explicit paint mask; describe neutral subpopulation below gray100",
+      "is_render_sample": false,
+      "visual_acceptance": "separate",
+      "neutral_RGB_p10_p50_p90": [
+        [
+          27.0,
+          27.0,
+          27.0
+        ],
+        [
+          39.0,
+          39.0,
+          39.0
+        ],
+        [
+          54.0,
+          54.0,
+          54.0
+        ]
+      ],
+      "neutral_gray_p10_p50_p90": [
+        27.0,
+        39.0,
+        54.0
+      ],
+      "N_source_space": "PNG RGBA semantic R/G/B/A; not DDS BGRA memory",
+      "N_R_B_p10_p50_p90": [
+        [
+          128.0,
+          72.0
+        ],
+        [
+          173.0,
+          143.0
+        ],
+        [
+          173.0,
+          143.0
+        ]
+      ]
+    },
+    {
+      "id": "fire_control_housing",
+      "resource": "leclerc_s2_turret_c",
+      "mask_member": "design/masks/leclerc_s2_turret_c-complete-black-metal-housing-and-shutters.png",
+      "selected_pixels": 538496,
+      "neutral_paint_pixels": 538496,
+      "mask_native_size": [
+        4096,
+        4096
+      ],
+      "C_size": [
+        4096,
+        4096
+      ],
+      "mask_mapping": "nearest-neighbor pixel grid alignment; same atlas coordinates",
+      "method": "compose retained layer stack, explicit paint mask; describe neutral subpopulation below gray100",
+      "is_render_sample": false,
+      "visual_acceptance": "separate",
+      "neutral_RGB_p10_p50_p90": [
+        [
+          25.0,
+          25.0,
+          25.0
+        ],
+        [
+          26.0,
+          26.0,
+          26.0
+        ],
+        [
+          28.0,
+          28.0,
+          28.0
+        ]
+      ],
+      "neutral_gray_p10_p50_p90": [
+        25.0,
+        26.0,
+        28.0
+      ],
+      "N_source_space": "PNG RGBA semantic R/G/B/A; not DDS BGRA memory",
+      "N_R_B_p10_p50_p90": [
+        [
+          67.0,
+          7.0
+        ],
+        [
+          195.0,
+          230.0
+        ],
+        [
+          195.0,
+          230.0
+        ]
+      ]
+    },
+    {
+      "id": "rear_warning_ink",
+      "method": "opaque ink pixels of the dedicated rear warning layer",
+      "palette_RGB_counts": [
+        {
+          "RGB": [
+            17,
+            19,
+            21
+          ],
+          "pixels": 6386
+        },
+        {
+          "RGB": [
+            16,
+            18,
+            20
+          ],
+          "pixels": 4349
+        },
+        {
+          "RGB": [
+            205,
+            144,
+            38
+          ],
+          "pixels": 4092
+        },
+        {
+          "RGB": [
+            206,
+            144,
+            39
+          ],
+          "pixels": 3134
+        },
+        {
+          "RGB": [
+            17,
+            18,
+            20
+          ],
+          "pixels": 3034
+        },
+        {
+          "RGB": [
+            211,
+            148,
+            39
+          ],
+          "pixels": 2920
+        },
+        {
+          "RGB": [
+            211,
+            148,
+            40
+          ],
+          "pixels": 2850
+        },
+        {
+          "RGB": [
+            210,
+            147,
+            39
+          ],
+          "pixels": 830
+        },
+        {
+          "RGB": [
+            209,
+            102,
+            24
+          ],
+          "pixels": 525
+        },
+        {
+          "RGB": [
+            214,
+            104,
+            24
+          ],
+          "pixels": 479
+        },
+        {
+          "RGB": [
+            205,
+            143,
+            38
+          ],
+          "pixels": 189
+        },
+        {
+          "RGB": [
+            212,
+            149,
+            40
+          ],
+          "pixels": 158
+        }
+      ],
+      "includes_dark_backing": true,
+      "is_render_sample": false
+    },
+    {
+      "id": "side_honeycomb",
+      "resource": "leclerc_azur_c",
+      "mask_member": "design/masks/leclerc_azur_c-honey-finish.png",
+      "selected_pixels": 1230913,
+      "neutral_paint_pixels": 1189269,
+      "mask_native_size": [
+        4096,
+        4096
+      ],
+      "C_size": [
+        4096,
+        4096
+      ],
+      "mask_mapping": "nearest-neighbor pixel grid alignment; same atlas coordinates",
+      "method": "compose retained layer stack, explicit paint mask; describe neutral subpopulation below gray100",
+      "is_render_sample": false,
+      "visual_acceptance": "separate",
+      "neutral_RGB_p10_p50_p90": [
+        [
+          22.0,
+          22.0,
+          22.0
+        ],
+        [
+          42.0,
+          42.0,
+          42.0
+        ],
+        [
+          59.0,
+          59.0,
+          59.0
+        ]
+      ],
+      "neutral_gray_p10_p50_p90": [
+        22.0,
+        42.0,
+        59.0
+      ],
+      "N_source_space": "PNG RGBA semantic R/G/B/A; not DDS BGRA memory",
+      "N_R_B_p10_p50_p90": [
+        [
+          47.0,
+          68.0
+        ],
+        [
+          73.0,
+          68.0
+        ],
+        [
+          92.0,
+          68.0
+        ]
+      ]
+    }
+  ],
+  "source_unmodified": true,
+  "new_vehicle_created": false,
+  "new_render_created": false
+}

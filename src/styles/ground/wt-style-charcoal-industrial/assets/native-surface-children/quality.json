@@ -1,0 +1,61 @@
+{
+  "method": "native graphic geometry + one real font + sampled pigment grain only",
+  "AI_child": "8b81b6ae5797aa2bb894d4e73dd188dbfe9507e8de596fce81f7f0ba5701ce99",
+  "no_vehicle_surface_pixels": true,
+  "counts": {
+    "honey_cells": 48,
+    "circuit_traces": 4,
+    "instrument_main_cells": 5
+  },
+  "colors": {
+    "amber": [
+      232,
+      123,
+      27
+    ],
+    "cyan": [
+      87,
+      164,
+      183
+    ],
+    "line": [
+      164,
+      166,
+      166
+    ]
+  },
+  "visual": "local element inspection complete; target model review pending",
+  "label": "D-TECHNOLOGIE",
+  "label_authority": "explicit current user instruction",
+  "equipment_assertion": "armour identifier; no APS claim; no performance numbers",
+  "panel_background": "intentional whole flat graphic panel, not a bare transparent element",
+  "layout": {
+    "cell_group_center_x": 819,
+    "left_rail_center_x": 619.5,
+    "right_rail_center_x": 1018.5,
+    "left_gap_px": 20.574374157795887,
+    "right_gap_px": 20.574374157795887,
+    "cyan_ticks_per_side": 5,
+    "amber_ticks_per_side": 3,
+    "label_to_left_rail_gap_px": 71,
+    "right_rail_to_inner_border_px": 73
+  },
+  "frameless_derivation": [
+    {
+      "asset": "armour-id",
+      "removed_backing_pixels": 272258,
+      "removed_border_pixels": 16658,
+      "retained_foreground_RGBA_exact": true,
+      "transparent_margin_min_px": 20
+    },
+    {
+      "asset": "module-panel-unlabelled",
+      "removed_backing_pixels": 282755,
+      "removed_border_pixels": 16658,
+      "retained_foreground_RGBA_exact": true,
+      "transparent_margin_min_px": 20
+    }
+  ],
+  "user_request": "可以不用这个方框",
+  "backing_and_perimeter": "removed; graphics rest directly on target armour"
+}

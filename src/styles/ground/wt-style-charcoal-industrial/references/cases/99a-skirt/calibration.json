@@ -1,0 +1,13 @@
+{
+  "raw_generation_unchanged": true,
+  "reason": "second generation reduced blue drift but raised average gray; calibrate target C in the UV composition stage",
+  "basecoat": "source target base luminance times 0.78, bounded 10..58",
+  "child": "neutral luminance * (0.78 + 0.22*clip((L-80)/20,0,1)); preserve sparse bright cells",
+  "scope": "trial-specific color calibration; not universal shader recipe",
+  "initial_paint_pixels": 125310,
+  "shared_protected_pixels": 8270,
+  "final_paint_pixels": 117040,
+  "outside_final_paint_RGBA_exact": true,
+  "native_N_AO_unchanged": true,
+  "texture_sha256": "281544e80a8b50d92f10f5430888b516c051dbd37c8ec3dd6fe4b34b47385052"
+}

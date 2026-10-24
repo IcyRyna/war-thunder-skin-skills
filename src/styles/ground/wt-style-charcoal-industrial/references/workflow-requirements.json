@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.1.5",
+  "local_revision": "workflow-r2",
+  "editor": {
+    "required_for_actual_skin_creation_or_substantive_edit": true,
+    "workspace_entry": "photoshop-tools/scripts/composa_mcp.py",
+    "standalone_entry": "scripts/editor_batch.py",
+    "connection_only_counts_as_production": false,
+    "required_evidence": [
+      "live_schema",
+      "actual_layer_edit_or_assembly",
+      "native_project",
+      "export",
+      "copy_reopen_check",
+      "owned_document_cleanup"
+    ]
+  },
+  "blender": {
+    "required_if_usable": true,
+    "capability_checks": [
+      "actual_binary",
+      "background_bpy",
+      "target_model_import"
+    ],
+    "required_work": [
+      "native_model_uv_and_material_slots",
+      "final_DDS_rebind",
+      "named_scope_report_or_project"
+    ],
+    "missing_gpu_is_not_unavailable": true,
+    "web_viewer_replaces_Blender_work": false,
+    "requires_new_render": false,
+    "seven_views_require_separate_authorization": true
+  },
+  "publication": {
+    "intro_required_when_publishing": true,
+    "minimum_fields": [
+      "title",
+      "actual_vehicle",
+      "design_features",
+      "installation_route",
+      "download_roles",
+      "review_and_verification_scope",
+      "credits_and_license"
+    ],
+    "templates": "assets/publication-templates",
+    "upload_authorization": "specific current scope; no repeated question for existing authorization"
+  },
+  "naming": {
+    "contract": "references/naming-contract.md",
+    "public_build_revision_numbers": false,
+    "keep_vehicle_variant_digits": true,
+    "github_asset_names": "ASCII with Chinese labels",
+    "keep_existing_registered_identity": true
+  }
+}

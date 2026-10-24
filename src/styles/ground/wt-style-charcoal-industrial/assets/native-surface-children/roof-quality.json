@@ -1,0 +1,28 @@
+{
+  "state": "checked_local",
+  "known_text": [
+    "NO STEP",
+    "BLOW-OUT"
+  ],
+  "text_mirror": false,
+  "bar_geometry": "regular diagonal paired bands; transparent between stripes",
+  "parent_sha256": "c4b63a70847f17cab80ff92f17fb619fb0048842504d4791f826f433dcdb21b3",
+  "source_user_request": "顶盖缺少图四这种",
+  "target_surface": "left rear turret bustle cover, bounded native plane; no crew hatch",
+  "minimum_text_cap_height_px": 73,
+  "visual_review": "pending",
+  "caption_dash_gap_px": 49,
+  "self_review": "Dash runs stay outside exact font bounds; no line crosses a glyph",
+  "blowout_centering": {
+    "gap_y": [
+      287,
+      409
+    ],
+    "glyph_top": 311,
+    "glyph_height": 74,
+    "upper_gap": 24,
+    "lower_gap": 24,
+    "text_shift_down_px": 19,
+    "outside_caption_RGBA_exact": true
+  }
+}

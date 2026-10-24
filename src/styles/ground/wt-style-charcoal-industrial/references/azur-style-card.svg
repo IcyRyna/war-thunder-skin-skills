@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="940" viewBox="0 0 1400 940">
+<rect width="1400" height="940" fill="#e9e8e4"/>
+<g font-family="Microsoft YaHei, Noto Sans CJK SC, sans-serif" fill="#242424">
+<text x="54" y="65" font-size="32" font-weight="700">S42 / AZUR · 色区与装饰角色</text>
+<text x="54" y="102" font-size="18">0.1.5：三主灰区 + 大几何 / 小灰块 / 蜂窝 + 六组车型贴纸</text>
+<rect x="54" y="138" width="750" height="145" fill="#222222"/>
+<text x="70" y="180" font-size="22" fill="#ffffff">A 34</text>
+<rect x="804" y="138" width="375" height="145" fill="#2f2f2f"/>
+<text x="820" y="180" font-size="22" fill="#ffffff">B 47</text>
+<rect x="1179" y="138" width="125" height="145" fill="#414141"/>
+<text x="1195" y="180" font-size="22" fill="#ffffff">C 65</text>
+<text x="54" y="317" font-size="18">A 60% / B 30% / C 10%：构图起点，不是 AZUR 面积实测；按本车板面调整</text>
+<text x="54" y="365" font-size="22" font-weight="700">局部小灰块：五档，不代替上方大几何</text>
+<rect x="54" y="389" width="140" height="73" fill="#1b1b1b"/>
+<text x="70" y="436" font-size="20" fill="white">27</text>
+<rect x="204" y="389" width="140" height="73" fill="#212121"/>
+<text x="220" y="436" font-size="20" fill="white">33</text>
+<rect x="354" y="389" width="140" height="73" fill="#272727"/>
+<text x="370" y="436" font-size="20" fill="white">39</text>
+<rect x="504" y="389" width="140" height="73" fill="#2f2f2f"/>
+<text x="520" y="436" font-size="20" fill="white">47</text>
+<rect x="654" y="389" width="140" height="73" fill="#363636"/>
+<text x="670" y="436" font-size="20" fill="white">54</text>
+<rect x="54" y="499" width="290" height="70" fill="#1a1a1a"/>
+<text x="69" y="543" font-size="20" fill="white">F 黑色金属26</text>
+<rect x="366" y="499" width="290" height="70" fill="#d16818"/>
+<text x="381" y="543" font-size="20" fill="white">后警示橙</text>
+<rect x="678" y="499" width="290" height="70" fill="#d39427"/>
+<text x="693" y="543" font-size="20" fill="white">暖橙黄</text>
+<rect x="990" y="499" width="290" height="70" fill="#508a96"/>
+<text x="1005" y="543" font-size="20" fill="white">微青色</text>
+<text x="54" y="620" font-size="22" font-weight="700">随车型标注：前四组重做语义；后两组适配结构</text>
+<text x="54" y="666" font-size="21">D01 车型身份 / 变体 / 编号　　D02 装甲 / 装备名</text>
+<text x="54" y="711" font-size="21">D03 前部功能或花纹　　　　　D04 顶部真实盖板警示</text>
+<text x="54" y="756" font-size="21">D05 黄青微色标　　　　　　　D06 车尾橙黑线条（默认安排）</text>
+<text x="54" y="801" font-size="21">主体磨砂金属 · 蜂窝轻反射 · 火控更深 · 镜片独立</text>
+<text x="54" y="846" font-size="21">整车六区：首上 / 炮塔 / 侧裙 / 顶部 / 观瞄 / 车尾</text>
+</g></svg>

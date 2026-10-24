@@ -1,0 +1,94 @@
+{
+  "source_reference_sha256": "b9202be402ac3c57830e7d002dd7304987a5bfaa8c6d2a3059f010413638acca",
+  "target_pattern_sha256": "c06fa112e42b6b6ee72ce3e3ecdc136e590ee727af52e9a0629d3751f77a3a65",
+  "size": 2048,
+  "background": [
+    38,
+    38,
+    38
+  ],
+  "patch": [
+    63,
+    63,
+    63
+  ],
+  "rectangles": [
+    [
+      -130,
+      60,
+      260,
+      32
+    ],
+    [
+      -180,
+      224,
+      360,
+      40
+    ],
+    [
+      -110,
+      388,
+      220,
+      48
+    ],
+    [
+      -210,
+      552,
+      420,
+      32
+    ],
+    [
+      -150,
+      716,
+      300,
+      40
+    ],
+    [
+      -120,
+      880,
+      240,
+      48
+    ],
+    [
+      -130,
+      1044,
+      260,
+      32
+    ],
+    [
+      -180,
+      1208,
+      360,
+      40
+    ],
+    [
+      -110,
+      1372,
+      220,
+      48
+    ],
+    [
+      -210,
+      1536,
+      420,
+      32
+    ],
+    [
+      -150,
+      1700,
+      300,
+      40
+    ],
+    [
+      -120,
+      1864,
+      240,
+      48
+    ]
+  ],
+  "derivation": "interpreted grey-tab rhythm as periodic flat geometry; no source-vehicle RGB/N/AO pixels copied",
+  "native_net_C_N_AO_and_cutout_Alpha": "not replaced",
+  "shared_track_protection": "native target RGB preserved; fixed-coverage Alpha255 prevents scalable net pattern on solid track parts",
+  "official_method": "https://wiki.warthunder.com/cdk/386-working-with-camouflage-nets",
+  "game_visual": "pending actual client refresh"
+}

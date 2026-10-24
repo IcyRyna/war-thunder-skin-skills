@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "skill_id": "wt-style-charcoal-industrial",
+  "previous_id": "wt-style-spectre42",
+  "version": "0.1.5",
+  "common_baseline": "0.1.1",
+  "primary_anchor": "Leclerc AZUR",
+  "M1": "art reference only",
+  "review": "Skill release approved; no new unseen-vehicle or game pass claimed",
+  "azur_current_images": [
+    {
+      "file": "references/azur-current-v29/hero-front.png",
+      "sha256": "89ccdfccbfe07e455cbfa4c0d8b46397750f16b4bca0877319c821e407475735",
+      "purpose": "existing offline observation, not full game approval"
+    },
+    {
+      "file": "references/azur-current-v29/hero-overview.png",
+      "sha256": "cdf7d1cbe6561a57c1a6efc5c6a47b9b132d3028fcc0765e9504a54de37e619a",
+      "purpose": "existing offline observation, not full game approval"
+    },
+    {
+      "file": "references/azur-current-v29/side-blocks-right.png",
+      "sha256": "7b5c8f411543b96b7c1900a2db9a19f4f83031f6fb763f20a672b9988d938a6b",
+      "purpose": "existing offline observation, not full game approval"
+    }
+  ],
+  "engineering_scripts_changed_in_015": false,
+  "scripts": [
+    {
+      "file": "scripts/apply_local_repair.py",
+      "sha256": "8a36f19d1b3f152ebc7b17ed0b73d82e18917265838d972d3cb46a83b3b987bd"
+    },
+    {
+      "file": "scripts/artifact_io.py",
+      "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2"
+    },
+    {
+      "file": "scripts/audit_assets.py",
+      "sha256": "a405e73de4a65dd7461cc0b566e538bb4ba7ea07f053efd05f1a0fdfcf9af174"
+    },
+    {
+      "file": "scripts/basecoat.py",
+      "sha256": "8d90dfccdc53aca7a9c8e421d68749204f6bf8def7554d1093066f865d47a1aa"
+    },
+    {
+      "file": "scripts/carrier_color_audit.py",
+      "sha256": "6b6328064083527fbe7ebffcf8d0e33622c5e35f05d534f4a2b4db5c478a468c"
+    },
+    {
+      "file": "scripts/carrier_visibility.py",
+      "sha256": "24662385e5c974e6f3d8243ea631633fe7955d7d8adee2a6b55222d8be19d94c"
+    },
+    {
+      "file": "scripts/catalog_assets.py",
+      "sha256": "73e87cde0fab38e78229717e66f56e39e71981cf96098c62ae322c6269bddb17"
+    },
+    {
+      "file": "scripts/color_probe.py",
+      "sha256": "511ec6a5aaf4dd7a88257277157b2bf41e343ccbf22413ada51c536fd2ef9bf5"
+    },
+    {
+      "file": "scripts/composa_mcp.py",
+      "sha256": "e9ecd721b68f1629782106ad47031b312d5732f2fc91a2aac112b1ff60563102"
+    },
+    {
+      "file": "scripts/compose_native.py",
+      "sha256": "d64b6e5ef1e666f341c475e635c524c5ef30a1bd256b2d0ab1bbe08987f6cc0a"
+    },
+    {
+      "file": "scripts/composite_guard.py",
+      "sha256": "7d89f1d4dd066f400ff3e5969925c13635c698780afd066b0dbb6fcce85fa7fb"
+    },
+    {
+      "file": "scripts/cutout_coating.py",
+      "sha256": "62c6e5dbbf38c68d1e7433489fea57b67d82e872cbdb7668aa9eeff666602953"
+    },
+    {
+      "file": "scripts/dds_variant.py",
+      "sha256": "99151e2f1e161c4826f162bebf340d670682df2e22f1ec061a92e15ff94f5b86"
+    },
+    {
+      "file": "scripts/ddsx_top.py",
+      "sha256": "44daff73023570416df70ddd5b719720fbf4708a741948feb6d0c3e6273b4326"
+    },
+    {
+      "file": "scripts/editor_batch.py",
+      "sha256": "4d48f6afbda0c8fe3489563d485840136d767744fba66f98c395343d28028309"
+    },
+    {
+      "file": "scripts/equipment_labels.py",
+      "sha256": "66e8476d5c02aae2eaf46a6576ffdd38a1178ce8bb4670112d46aaa01be8225e"
+    },
+    {
+      "file": "scripts/export_uv_reference.py",
+      "sha256": "d5f67c3ef26f8bca2d9a285f53739aa6c87d126d2717eba0f292dc1434a295f3"
+    },
+    {
+      "file": "scripts/extract_assets.py",
+      "sha256": "6cf634071da8ff897c74a2bb5128ac0cb1bccc70642a3a72679e0cb2c0b77c86"
+    },
+    {
+      "file": "scripts/finish_hierarchy.py",
+      "sha256": "db0b61f9782e2311422d5bb481a6792f647849469ef48d4feaa7b17799a1f5c1"
+    },
+    {
+      "file": "scripts/fixed_color.py",
+      "sha256": "8ecdc37015170f3c19c8cfadbd844e7244ba9d0225da1edfd8d73bcbebebc9dc"
+    },
+    {
+      "file": "scripts/ground_dds.py",
+      "sha256": "3bc69fdc82f70a4fda39bffdfe75948338bfad548ead4a524d30d41b5dac380a"
+    },
+    {
+      "file": "scripts/hex_surface.py",
+      "sha256": "9ae12fa1684a40e7b38e2487d7a179aaa77505d415787248980fea28d4237b8e"
+    },
+    {
+      "file": "scripts/honey_field.py",
+      "sha256": "2808f031919be2343ad32df4b1829fd6a64ab8f96453956034df1eeff8a55592"
+    },
+    {
+      "file": "scripts/inspect_skin.py",
+      "sha256": "b7fea2e55cfefa89c31ab0bffb32d2f5f5a8b75b015b5b4d047d00418dbed9f4"
+    },
+    {
+      "file": "scripts/native_carrier.py",
+      "sha256": "4474826cd4d7576a0e0ecdacb64cc78a914f4232def8bc2076605a0c19349376"
+    },
+    {
+      "file": "scripts/native_components.py",
+      "sha256": "b4ad17e12c06e49b29288af8a8a5262d66af5b59de30b3d40556d635b527fce6"
+    },
+    {
+      "file": "scripts/net_pattern.py",
+      "sha256": "b117faf9053394a6633787cd572ebc09bdb7f480929afbe7bcf9f2ee44c7b42b"
+    },
+    {
+      "file": "scripts/optics_finish.py",
+      "sha256": "e5bdd78e4a7a1250718b59d9cb2c7d001b2ad3478ed44a89f5113bcac5f251ef"
+    },
+    {
+      "file": "scripts/painted_material.py",
+      "sha256": "8234912644a426ac5ec407dd1e58987de937971b7d7136cbdf02b6f9ab099933"
+    },
+    {
+      "file": "scripts/panel_tones.py",
+      "sha256": "73af7f78992618f309da2257c7ce520d9d852254975e0ef5d5e6e022deed5f60"
+    },
+    {
+      "file": "scripts/precision_decal.py",
+      "sha256": "fd4be0f28f7484f9d6f97e94ebaf84e12b4292a2d272a72678a11a5ebda113b2"
+    },
+    {
+      "file": "scripts/reference_contract.py",
+      "sha256": "d6dd4c94087154781c58cda1ab4f765c645a625d94a085c3b63654de17b802bc"
+    },
+    {
+      "file": "scripts/satin_metal.py",
+      "sha256": "f3d9825ce19b63d058ead47bbc08e66cfcdcc10c85a8bcdbbb163aa4ccc05348"
+    },
+    {
+      "file": "scripts/source_model_uv.py",
+      "sha256": "ac19f0e67c44ff29b14c673a3fa84fcfd33771179b629a90f1ed3acfd26323f1"
+    },
+    {
+      "file": "scripts/style_quality.py",
+      "sha256": "6762666e7cb5904555af6be98ce32a6ca09f22b91c7d939c78718396335197a5"
+    },
+    {
+      "file": "scripts/surface_finish.py",
+      "sha256": "b438624e26aa107ff41097c5e0243acec6787138454f8207191cf0609cf75d3a"
+    },
+    {
+      "file": "scripts/surface_finish_audit.py",
+      "sha256": "cd519ce50f57b421b158212c0477c597fc9c3d0c6ed97a74df4c5d4855a817e2"
+    },
+    {
+      "file": "scripts/tank_core.py",
+      "sha256": "947af0cdd32bc33d57854d71a7167f3f434a7146015162b81d5976a6f36ae306"
+    },
+    {
+      "file": "scripts/tank_preview.py",
+      "sha256": "5a1dafff3283fbcfafe4537e97ff8030306a5f6fff31ef8e40612d757109cd67"
+    },
+    {
+      "file": "scripts/texture_semantics.py",
+      "sha256": "9ba5dde3869e232e8ec6978ce99ee4aad86dde25a9e61b5ca2f33e5e69262750"
+    },
+    {
+      "file": "scripts/uv_coverage.py",
+      "sha256": "66ee5d28bd80d00086c5b487f1840cecb6a5bd9e78c5535b7b39cbc11c1ccba3"
+    },
+    {
+      "file": "scripts/uv_paint_scope.py",
+      "sha256": "e741aed1ec0ee7c388b910c750e1f8e3030f3321f11eac58ae44a2c5e424f655"
+    },
+    {
+      "file": "scripts/uv_surface_map.py",
+      "sha256": "511ab0c11c68b82180e66b6f66d7f93a915a4995dd49b4850272b316950eb6ea"
+    },
+    {
+      "file": "scripts/verify_package.py",
+      "sha256": "024d0927adc28f4e15ca1ef33672daf598e83ccb50d95a314df712841f857472"
+    }
+  ]
+}

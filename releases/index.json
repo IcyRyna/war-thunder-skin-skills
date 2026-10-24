@@ -860,6 +860,27 @@
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v1.x/war-thunder-user-skins-v1.9.skill.zip"
         }
       ]
+    },
+    {
+      "tag": "wt-style-charcoal-industrial/v0.1.5",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5",
+      "published_at": null,
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "name": "wt-style-charcoal-industrial-v0.1.5.skill.zip",
+          "bytes": 57686797,
+          "digest": "sha256:bf0a764170496b50506131793f79c25c491e104ae638735f599750dded80eab1",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.5/wt-style-charcoal-industrial-v0.1.5.skill.zip"
+        },
+        {
+          "name": "wt-style-charcoal-industrial-v0.1.5.files.json",
+          "bytes": 50559,
+          "digest": "sha256:31dc4e83b3ae510ac31e8064c8b57ac183b5d02fe5f69da19627b262d1f2bec2",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.5/wt-style-charcoal-industrial-v0.1.5.files.json"
+        }
+      ]
     }
   ]
 }

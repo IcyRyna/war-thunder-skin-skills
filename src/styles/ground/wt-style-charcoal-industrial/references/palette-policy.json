@@ -1,0 +1,31 @@
+{
+  "version": "0.1.5",
+  "paint_space": "srgb_8bit",
+  "neutral_body_rgb": "R=G=B before target microstructure",
+  "scope": "explicit middle-tone body paint mask excluding accent, optical, rubber, unpainted metal and UV background",
+  "threshold_status": "proposed engineering tolerances, not transfer-validated",
+  "max_abs_mean_blue_minus_red": 2.0,
+  "max_p95_chroma": 3.0,
+  "minimum_sample_pixels": 64,
+  "exposure_comparison": "same lighting/exposure/view transform; rendered pixel values are not texture colors",
+  "repeated_darkening_forbidden": true,
+  "art_direction": "azur-style-recipe.json",
+  "main_zone_RGB": [
+    [
+      34,
+      34,
+      34
+    ],
+    [
+      47,
+      47,
+      47
+    ],
+    [
+      65,
+      65,
+      65
+    ]
+  ],
+  "main_zone_status": "proposed composition; explicit target paint masks; not a global remap"
+}

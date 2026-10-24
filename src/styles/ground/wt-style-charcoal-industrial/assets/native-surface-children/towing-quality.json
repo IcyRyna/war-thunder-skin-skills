@@ -1,0 +1,11 @@
+{
+  "known_text": "TOWING POINTS",
+  "role": "front towing interfaces, arrows point outboard toward the two visible tow eyes",
+  "native_model_evidence": "current front render plus lower-glacis plane at x3.04..3.56,y0.65..1.03,z+-1.01",
+  "alpha": "transparent graphic; no backing or frame",
+  "user_request": "use words appropriate to position and function",
+  "visual": "pending",
+  "chevrons_per_side": 2,
+  "change": "move arrows inboard clear of physical tow eyes; reduce caption size while retaining native readability budget",
+  "text_cap_height_px": 47
+}
