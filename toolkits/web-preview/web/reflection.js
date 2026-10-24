@@ -46,7 +46,7 @@ export function createReflection({enabled,amount,detail,summary,invalidate,sourc
         for(const [channel,keys] of [['orm',['roughnessMap','metalnessMap']],['normal',['normalMap']]]){
           const record=row.info?.reflection?.[channel];const previous=row.maps[keys[0]];
           if(!record||!previous||Math.max(previous.image.width,previous.image.height)>=Math.min(limit,Math.max(...record.size)))continue;
-          if(!/^native-(?:orm|normal)-[0-9]+\.png$/.test(record.file))throw new Error('反射贴图路径无效');
+          if(!/^(?:native-(?:orm|normal)-[0-9]+\.png|\.\.\/\.\.\/shared\/[0-9a-f]{64}\.png)$/.test(record.file))throw new Error('反射贴图路径无效');
           const url=new URL(record.file,source().manifestURL);if(url.origin!==location.origin)throw new Error('反射贴图必须同源');
           const response=await fetch(url);if(!response.ok)throw new Error('反射贴图读取失败：'+response.status);
           const data=await response.arrayBuffer();const hash=[...new Uint8Array(await crypto.subtle.digest('SHA-256',data))].map(n=>n.toString(16).padStart(2,'0')).join('');if(hash!==record.sha256)throw new Error('反射贴图校验失败');

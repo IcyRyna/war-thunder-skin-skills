@@ -42,7 +42,7 @@ async function ensureNative(m,refresh=true) {
   const expected=info?.source_size;
   if (original && (!expected || original.width===expected[0] && original.height===expected[1])) return original;
   const filename=info?.native_file;
-  if (!state.source?.manifestURL || !/^native-color-[0-9]+\.png$/.test(filename || '')) throw new Error('当前只有预览图；请先替换为此材质原尺寸 RGB 图，或使用本地 prepare 场景再创作');
+  if (!state.source?.manifestURL || !/^(?:native-color-[0-9]+\.png|\.\.\/\.\.\/shared\/[0-9a-f]{64}\.png)$/.test(filename || '')) throw new Error('当前只有预览图；请先替换为此材质原尺寸 RGB 图，或使用本地 prepare 场景再创作');
   const url=new URL(filename,state.source.manifestURL);
   status('正在按需读取原尺寸颜色图…');
   const serial=state.serial;const response=await fetch(url);if(!response.ok)throw new Error('原尺寸颜色图读取失败: '+response.status);
@@ -251,6 +251,8 @@ async function acceptModel(object, label, source, serial) {
   });
   if (!state.meshes.length) { resetModel(); throw new Error('模型没有可显示的三角面'); }
   for (const material of state.materials) {
+    const manifestRecord=source.manifest?.materials?.find(row=>row.name===material.name);
+    if(manifestRecord)material.userData.source=manifestRecord;
     const image=await bitmapFromTexture(material.map);
     if (serial!==state.serial) return;
     if (image) state.originals.set(material,{image,width:image.width,height:image.height,source:material.map});
