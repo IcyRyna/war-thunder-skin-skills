@@ -194,10 +194,12 @@ function fit(view='front',selectedBounds=null) {
   const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize();
   const up=new THREE.Vector3().crossVectors(direction,right).normalize();
   let distance=0;
-  for (const x of [frameBounds.min.x,frameBounds.max.x]) for (const y of [frameBounds.min.y,frameBounds.max.y]) for (const z of [frameBounds.min.z,frameBounds.max.z]) {
-    const corner=new THREE.Vector3(x,y,z).sub(frameCenter);
+  const corner=new THREE.Vector3(),fitMeshes=selectedBounds&&state.selected?[state.selected]:state.meshes.filter(m=>m.visible);
+  state.model?.updateMatrixWorld(true);
+  for(const mesh of fitMeshes){const positions=mesh.geometry.attributes.position;for(let i=0;i<positions.count;i++){
+    corner.fromBufferAttribute(positions,i).applyMatrix4(mesh.matrixWorld).sub(frameCenter);
     distance=Math.max(distance,corner.dot(direction)+Math.max(Math.abs(corner.dot(right))/Math.tan(horizontal/2),Math.abs(corner.dot(up))/Math.tan(vertical/2)));
-  }
+  }}
   distance*=1.08;
   camera.position.copy(frameCenter).add(direction.normalize().multiplyScalar(distance)); camera.up.set(0,1,0);
   camera.near=Math.max(frameRadius/1000,.001); camera.far=Math.max(radius,frameRadius)*100; camera.updateProjectionMatrix();
