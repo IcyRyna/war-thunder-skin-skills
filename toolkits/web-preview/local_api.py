@@ -39,7 +39,13 @@ class LocalAPI:
             scene=job.get('scene')
             if not scene or job.get('state')!='ready':handler.send_error(404);return True
             scene=Path(scene);allowed={'scene.json','model.glb'}
-            try:allowed.update(r['native_file'] for r in json.loads((scene/'scene.json').read_text(encoding='utf-8'))['materials'] if re.fullmatch(r'native-color-\d+\.png',r.get('native_file','')))
+            try:
+                materials=json.loads((scene/'scene.json').read_text(encoding='utf-8'))['materials']
+                allowed.update(r['native_file'] for r in materials if re.fullmatch(r'native-color-\d+\.png',r.get('native_file','')))
+                for row in materials:
+                    for channel in ('orm','normal'):
+                        filename=row.get('reflection',{}).get(channel,{}).get('file','')
+                        if re.fullmatch(r'native-(?:orm|normal)-\d+\.png',filename):allowed.add(filename)
             except (OSError,ValueError):handler.send_error(404);return True
             leaf=match[2];path=scene/leaf
             if leaf not in allowed or not path.is_file() or path.is_symlink() or not path.resolve().is_relative_to(scene):handler.send_error(404);return True

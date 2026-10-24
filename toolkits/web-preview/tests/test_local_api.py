@@ -34,6 +34,13 @@ class LocalAPITests(unittest.TestCase):
         h=Handler();self.assertTrue(self.api.get(h,f'/imports/{identifier}/raw.grp'));self.assertEqual(h.status,404)
         h=Handler();self.api.get(h,f'/imports/{identifier}/scene.json');self.assertEqual(h.status,200)
         self.api.jobs[identifier]['state']='working';h=Handler();self.api.get(h,f'/imports/{identifier}/scene.json');self.assertEqual(h.status,404)
+    def test_ready_reflection_files_are_allowlisted_but_raw_inputs_are_not(self):
+        scene=self.root/'scene';scene.mkdir();native=scene/'native-orm-000.png';native.write_bytes(b'png')
+        (scene/'scene.json').write_text(json.dumps({'materials':[{'reflection':{'orm':{'file':native.name},'normal':{'file':'../private.png'}}}]}))
+        identifier='c'*32;self.api.jobs[identifier]={'state':'ready','scene':str(scene)}
+        h=Handler();self.api.get(h,f'/imports/{identifier}/{native.name}');self.assertEqual(h.status,200);self.assertEqual(h.wfile.getvalue(),b'png')
+        h=Handler();self.api.get(h,f'/imports/{identifier}/private.png');self.assertEqual(h.status,404)
+
     def test_upload_size_validation_does_not_create_job_or_directory(self):
         h=Handler({'Host':'127.0.0.1:8000','X-Workbench-Token':self.api.token,'Content-Length':str(513*1024*1024)})
         self.api.post(h,'/api/import-skin');self.assertEqual(h.status,400);self.assertFalse(self.api.jobs);self.assertFalse((self.root/'imports').exists())

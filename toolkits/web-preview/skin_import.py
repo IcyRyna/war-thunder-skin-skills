@@ -234,7 +234,7 @@ def matching_rule(rules,resource,kind=None):
     return selected
 
 
-def build(discovery,out,vehicle=None,blk=None,lod=1,progress_file=None):
+def build(discovery,out,vehicle=None,blk=None,lod=1,progress_file=None,prepared_source=None,max_color_size=None):
     from PIL import Image,ImageStat
     import preview
     data=read_json(discovery);skin=Path(data['skin_root']);config=next((r for r in data['configs'] if r['blk']==(blk or data.get('selected_blk'))),None)
@@ -245,82 +245,101 @@ def build(discovery,out,vehicle=None,blk=None,lod=1,progress_file=None):
     if out.exists():raise FileExistsError('模型准备输出必须是新目录')
     if out.is_relative_to(Path(data['game_dir'])):raise ValueError('输出不能在游戏目录内')
     out.mkdir(parents=True);extractor=Path(data['extractor']);sys.path.insert(0,str(extractor.parent));sys.path.insert(0,str(ROOT/'tools'))
+    from dds_mip import open_display
+    def open_color(path):return open_display(path,max_color_size) if max_color_size else Image.open(path)
     progress(progress_file,'extracting','已识别 '+vehicle+'，正在从游戏文件夹提取模型…')
     import wt_assets
-    model_dir=out/'model';model_dir.mkdir()
-    model_pack=Path(choice['pack']);model_origin='game-folder'
-    if choice.get('bundled_pack'):
-        model_origin='package';model_source=out/'model-source/content/base/res';(model_source/'tanks').mkdir(parents=True)
-        model_pack=model_source/'tanks'/Path(choice['bundled_pack']).name;shutil.copyfile(choice['bundled_pack'],model_pack)
-        game=Path(data['game_dir'])
-        for relative in ['content/base/res/dynModelDesc.bin','patch/content/base/res/dynModelDesc.bin']:
-            path=game/relative
-            if path.is_file():
-                target=out/'model-source'/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,target)
-    with (out/'model-extraction.log').open('w',encoding='utf-8') as log,contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
-        wt_assets.export_model(model_pack,vehicle,lod,model_dir,'*',None)
-    progress(progress_file,'textures','正在读取原车材质与颜色底图…')
-    spec=importlib.util.spec_from_file_location('import_auto_textures',ROOT/'tools/auto_textures.py');helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
-    old_argv=sys.argv
-    with (out/'texture-extraction.log').open('w',encoding='utf-8') as log,contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
-        try:sys.argv=[str(ROOT/'tools/auto_textures.py'),'--extractor',str(extractor),'--client',data['game_dir'],'--model-dir',str(model_dir),'--out',str(out/'stock-colors')];helper.main()
-        finally:sys.argv=old_argv
-    stock_bind=out/'stock-colors/bindings.json';preview.prepare(model_dir,out/'stock-scene',stock_bind,1024)
-    stock=read_json(out/'stock-scene/scene.json');materials=read_json(model_dir/'materials.json')['materials'];used={r['name'] for r in stock['materials']};rules=config['rules'];config_dir=skin/Path(config['blk']).parent
-    binding={'materials':{},'source_quality':{}};report=[];warnings=[];baked=out/'imported-colors';baked.mkdir()
+    stock_root=out/'stock-scene'
+    if prepared_source is not None:
+        previous=Path(prepared_source).resolve();cached=read_json(previous/'scene/scene.json');identity=cached.get('imported_skin',{})
+        model_pack=Path(choice.get('bundled_pack') or choice['pack']);model_origin='package' if choice.get('bundled_pack') else 'game-folder'
+        if identity.get('vehicle')!=vehicle or identity.get('model_lod')!=lod or identity.get('model_pack_sha256')!=sha(model_pack):raise ValueError('共享提取基线与当前车型、LOD 或模型包不匹配')
+        model_dir=previous/'model';stock_root=previous/'stock-scene';stock_bind=previous/'stock-colors/bindings.json'
+        if sha(model_dir/'assembly.obj')!=cached['source_obj_sha256']:raise ValueError('共享几何基线发生变化')
+        for row in read_json(stock_root/'scene.json')['materials']:
+            if row.get('native_file') and sha(stock_root/row['native_file'])!=row['native_sha256']:raise ValueError('共享底图基线发生变化')
+    else:
+        model_dir=out/'model';model_dir.mkdir()
+        model_pack=Path(choice['pack']);model_origin='game-folder'
+        if choice.get('bundled_pack'):
+            model_origin='package';model_source=out/'model-source/content/base/res';(model_source/'tanks').mkdir(parents=True)
+            model_pack=model_source/'tanks'/Path(choice['bundled_pack']).name;shutil.copyfile(choice['bundled_pack'],model_pack)
+            game=Path(data['game_dir'])
+            for relative in ['content/base/res/dynModelDesc.bin','patch/content/base/res/dynModelDesc.bin']:
+                path=game/relative
+                if path.is_file():
+                    target=out/'model-source'/relative;target.parent.mkdir(parents=True,exist_ok=True);shutil.copyfile(path,target)
+        with (out/'model-extraction.log').open('w',encoding='utf-8') as log,contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
+            wt_assets.export_model(model_pack,vehicle,lod,model_dir,'*',None)
+        progress(progress_file,'textures','正在读取原车材质与颜色底图…')
+        spec=importlib.util.spec_from_file_location('import_auto_textures',ROOT/'tools/auto_textures.py');helper=importlib.util.module_from_spec(spec);spec.loader.exec_module(helper)
+        old_argv=sys.argv
+        with (out/'texture-extraction.log').open('w',encoding='utf-8') as log,contextlib.redirect_stdout(log),contextlib.redirect_stderr(log):
+            try:sys.argv=[str(ROOT/'tools/auto_textures.py'),'--extractor',str(extractor),'--client',data['game_dir'],'--model-dir',str(model_dir),'--out',str(out/'stock-colors')];helper.main()
+            finally:sys.argv=old_argv
+        stock_bind=out/'stock-colors/bindings.json';preview.prepare(model_dir,out/'stock-scene',stock_bind,1024)
+    stock=read_json(stock_root/'scene.json');materials=read_json(model_dir/'materials.json')['materials'];used={r['name'] for r in stock['materials']};rules=config['rules'];config_dir=skin/Path(config['blk']).parent
+    binding={'materials':{},'surface_materials':{},'source_quality':{}};report=[];warnings=[];baked=out/'imported-colors';baked.mkdir()
     progress(progress_file,'binding','正在把导入涂装绑定到实际材质槽…')
     unique={}
     for row in materials:
         if row['obj_name'] in used:unique.setdefault(row['obj_name'],row)
     for number,source in enumerate(unique.values()):
         name=source['obj_name'];slots=source.get('texture_slots',[]);color=slots[0] if slots else None;baseline=next(row for row in stock['materials'] if row['name']==name)
-        base=None
+        base=None;source_original_size=None
         if baseline.get('native_file'):
-            with Image.open(out/'stock-scene'/baseline['native_file']) as image:base=image.convert('RGB')
+            with open_color(stock_root/baseline['native_file']) as image:base=image.convert('RGB')
         replace=matching_rule(rules,color,'replace_tex') if color else None
         overlay=matching_rule(rules,color,'set_tex') if color else None
         camo=matching_rule(rules,slots[1],'replace_tex') if len(slots)>1 and slots[1] else None
         sources=[];quality=baseline.get('source_quality','unclassified')
         if replace:
             path=(config_dir/replace['to'].replace('\\','/')).resolve()
-            with Image.open(path) as image:raw=image.convert('RGBA');base=raw.convert('RGB')
+            with open_color(path) as image:source_original_size=list(image.info.get('original_dds_size',image.size));raw=image.convert('RGBA');base=raw.convert('RGB')
             sources.append({'file':str(path.relative_to(skin)),'sha256':sha(path),'binding':'replace_tex'})
             if source.get('shader')=='dynamic_masked_tank' and (camo or baseline.get('camo_mean_rgb')):
                 if camo:
-                    with Image.open(config_dir/camo['to']) as image:paint=tuple(round(n) for n in ImageStat.Stat(image.convert('RGB')).mean)
+                    with open_color(config_dir/camo['to']) as image:paint=tuple(round(n) for n in ImageStat.Stat(image.convert('RGB')).mean)
                 else:paint=tuple(baseline['camo_mean_rgb'])
                 base=Image.composite(Image.new('RGB',base.size,paint),base,raw.getchannel('A'))
             quality='user-supplied'
         elif camo and source.get('shader')=='dynamic_masked_tank':
             stock_map=read_json(stock_bind).get('materials',{}).get(name)
             if stock_map:
-                with Image.open(stock_bind.parent/stock_map) as image:raw=image.convert('RGBA')
-                with Image.open(config_dir/camo['to']) as image:paint=tuple(round(n) for n in ImageStat.Stat(image.convert('RGB')).mean)
+                with open_color(stock_bind.parent/stock_map) as image:raw=image.convert('RGBA')
+                with open_color(config_dir/camo['to']) as image:paint=tuple(round(n) for n in ImageStat.Stat(image.convert('RGB')).mean)
                 base=Image.composite(Image.new('RGB',raw.size,paint),raw.convert('RGB'),raw.getchannel('A'))
                 warnings.append('平铺迷彩暂以平均色近似；未还原第二套迷彩 UV 图案')
         if overlay:
             if overlay.get('param')!='camo_skin_tex':warnings.append('有 set_tex 使用了尚未支持的参数：'+str(overlay.get('param')))
             else:
                 path=(config_dir/overlay['to'].replace('\\','/')).resolve()
-                with Image.open(path) as image:paint=image.convert('RGBA')
+                with open_color(path) as image:source_original_size=list(image.info.get('original_dds_size',image.size));paint=image.convert('RGBA')
                 if base is None:
                     if paint.getchannel('A').getextrema()==(255,255):base=Image.new('RGB',paint.size)
                     else:raise ValueError('半透明固定涂装需要原车底图，但资源未能读取：'+name)
                 if base.size!=paint.size:base=base.resize(paint.size,Image.Resampling.LANCZOS)
                 base=Image.composite(paint.convert('RGB'),base,paint.getchannel('A'));quality='user-supplied'
                 sources.append({'file':str(path.relative_to(skin)),'sha256':sha(path),'binding':'set_tex/camo_skin_tex'})
+        original_size=source_original_size or (list(base.size) if base else None)
         if base is not None:
-            path=baked/f'color-{number:03d}.png';base.save(path);binding['materials'][name]=path.name;binding['source_quality'][name]=quality
-        report.append({'material':name,'resource':color,'sources':sources,'dimensions':list(base.size) if base else None})
+            if max_color_size:base.thumbnail((max_color_size,max_color_size),Image.Resampling.LANCZOS)
+            path=baked/f'color-{number:03d}.png';base.save(path,compress_level=1 if max_color_size else 6);binding['materials'][name]=path.name;binding['source_quality'][name]=quality
+        normal_resource=slots[2] if len(slots)>2 else None
+        normal_rule=matching_rule(rules,normal_resource,'replace_tex') if normal_resource else None
+        stock_normal=read_json(stock_bind).get('surface_materials',{}).get(name)
+        if normal_rule:binding['surface_materials'][name]=os.path.relpath(config_dir/normal_rule['to'].replace('\\','/'),baked)
+        elif stock_normal:binding['surface_materials'][name]=os.path.relpath(stock_bind.parent/stock_normal,baked)
+        report.append({'material':name,'resource':color,'sources':sources,'dimensions':list(base.size) if base else None,'original_dimensions':original_size})
     if not any(row['sources'] for row in report) and not any(matching_rule(rules,row['texture_slots'][1]) for row in materials if len(row.get('texture_slots',[]))>1 and row['texture_slots'][1]):raise ValueError('涂装配置未匹配到所选模型的颜色材质，请检查车型')
     binding_path=baked/'bindings.json';write_json(binding_path,binding)
     progress(progress_file,'preparing','正在生成轻量模型和可编辑颜色图…')
     final=preview.prepare(model_dir,out/'scene',binding_path,1024)
     material_data=[r for r in rules if re.search(r'_(?:n|ao)\*?$',r['from'])]
-    if material_data:warnings.append(f'已保留 {len(material_data)} 项法线／材质／AO 替换，当前仅预览颜色')
+    if material_data:warnings.append('反射、金属度、凹凸已按配套 N 贴图预览；AO 与完整游戏着色器未模拟')
     if model_origin=='package':warnings.append('已使用包内配套模型；没有替换游戏安装文件')
     final['imported_skin']={'vehicle':vehicle,'config':config['blk'],'model_lod':lod,'model_origin':model_origin,'model_pack_sha256':sha(model_pack),'warnings':list(dict.fromkeys(warnings)),'flattened':True,'source_files_preserved':True,
-                            'note':'导入的游戏贴图已合并，不能自动拆出旧装饰；新增图层可独立编辑。反射/法线/AO 原文件保留，当前未接入材质显示。'}
+                            'note':'导入的游戏贴图已合并，不能自动拆出旧装饰；新增图层可独立编辑。反射/金属度/凹凸按 N 贴图显示；AO 与完整游戏着色器以游戏内为准。'}
     write_json(out/'scene/scene.json',final);write_json(out/'skin-bindings.json',{'materials':report,'warnings':final['imported_skin']['warnings']})
     progress(progress_file,'ready','涂装与模型已经准备好')
     return {'ok':True,'vehicle':vehicle,'scene':str(out/'scene'),'config':config['blk'],'model_origin':model_origin,'warnings':final['imported_skin']['warnings']}

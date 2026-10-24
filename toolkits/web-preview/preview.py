@@ -307,7 +307,8 @@ def prepare(model_dir, output, bindings=None, max_texture=1024):
               "thumbnail_materials": [r["name"] for r in records if r["source_quality"] == "thumbnail-only"],
               "verification": {"geometry": "converted", "visual": "unreviewed", "game": "not_run"}}
     write_json(output / "scene.json", result)
-    return result
+    from reflection import attach
+    return attach(output,binding_data,Path(bindings).resolve().parent) if bindings else result
 
 
 class PreviewHandler(SimpleHTTPRequestHandler):
@@ -330,6 +331,10 @@ class PreviewHandler(SimpleHTTPRequestHandler):
             if self.scene_dir and (self.scene_dir / "scene.json").is_file():
                 allowed.update(row["native_file"] for row in read_json(self.scene_dir / "scene.json").get("materials", [])
                                if re.fullmatch(r"native-color-[0-9]+\.png", row.get("native_file", "")))
+                for row in read_json(self.scene_dir / "scene.json").get("materials", []):
+                    for channel in ("orm","normal"):
+                        filename=row.get("reflection",{}).get(channel,{}).get("file", "")
+                        if re.fullmatch(r"native-(?:orm|normal)-[0-9]+\.png",filename):allowed.add(filename)
             if not self.scene_dir or leaf not in allowed:
                 self.send_error(404)
                 return

@@ -94,7 +94,9 @@ build 校验模型、源图哈希、素材路径与尺寸，标记 origin=ai、m
 
 直接显示原车 masked C 的 RGB 会露出未覆盖底层，出现像残骸的外观。默认已结合真实迷彩槽平均 RGB 与原 C Alpha 生成标为 stock-camo-approx 的正常涂层近似；没有完整第二套迷彩 UV，不复现多色平铺、损伤和完整 Dagor shader。固定用户颜色绑定不会再被刷绿。资源提取优先高分辨率；仅找到 `$tq` 缩略级的小件明确标记，编辑前要求补正确底图。
 
-当前只编辑颜色。Web 高光是通用固定 PBR，未读取或编辑游戏真实反射、粗糙度/光泽、法线和 AO。导入包中的这些文件保留并提示未接入，不冒充材质支持。Web 截图不能代替游戏内验收。
+已读取真实 N 贴图中的反射数据：R 为反向粗糙度，B 为金属度，G/A 为法线 X/Y，转换成线性 glTF PBR 材质。涂装 `replace_tex` 的 N 贴图优先，没有替换时从游戏文件夹读取配套资源。中文面板可开关反射、调节反射强度、开关接缝凹凸，内嵌预览也有反射开关。环境反射采用本地生成的柔光棚，无需下载 HDR。512–4K 档位同时控制颜色与材质图显示；2K/4K 按需读取并校验原尺寸展示材质。未能读取的小附件保留模型原设置。颜色编辑不改动反射贴图，暂不回写 N/AO；完整 Dagor 着色器、AO、特殊材质和游戏光照以游戏内为准。
+
+通道依据：[War Thunder 官方 Custom skins](https://wiki.warthunder.com/cdk/creation_camo)。`prepare` 的 bindings 支持 `"surface_materials":{"实际材质名":"textures/body_n.dds"}`。N 的 Alpha 是法线数据，不作为透明度。
 
 ## GitHub 与依赖
 

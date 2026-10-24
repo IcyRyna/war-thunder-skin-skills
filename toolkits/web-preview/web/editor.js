@@ -27,7 +27,7 @@ export function createEditor(bridge){
   <div class="button-row"><button id="undo" disabled>撤销</button><button id="redo" disabled>重做</button><button id="cancelTool">退出绘制</button></div>
   <div class="edit-exports"><button id="exportColor" disabled>导出这张贴图</button><button id="exportAll" disabled>导出改过的贴图 ZIP</button></div>
   <div class="edit-exports"><button id="saveProject" class="primary" disabled>保存可编辑工程</button><button id="openProject">打开 AI／人工工程</button></div>
-  <input id="projectFile" type="file" accept=".json" hidden><p class="hint">只编辑颜色；反射、法线和 AO 暂未接入。</p>`;
+  <input id="projectFile" type="file" accept=".json" hidden><p class="hint">颜色图层可编辑；反射与凹凸可预览，暂不回写 N/AO。</p>`;
   const $=id=>document.getElementById(id),uv=$('uv'),overlayContext=uv.getContext('2d'),documents=new Map(),queued=new Set();
   let material=null,mode='select',polygon=[],draft=null,drag=null,dirty=false,pending=false,quality=1024,loadGeneration=0,revision=0;
   const limits={layers:64,history:32,maxDimension:8192,maxProjectBytes:128*1024*1024};

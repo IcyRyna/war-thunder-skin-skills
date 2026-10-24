@@ -7,6 +7,7 @@ import { createEditor } from './editor.js';
 import {CATEGORIES,partRecord,materialLabel,validatePartOverrides} from './parts.js';
 import {setupSkinImport} from './skin-open.js';
 import {makeDemo} from './demo.js';
+import {studioEnvironment,createReflection} from './reflection.js';
 
 const $ = id => document.getElementById(id);
 const ui = Object.fromEntries(['viewport','empty','loading','modelName','parts','partCount','search','quality','wire','isolate','showAll','materials','replace','uv','picked','materialInfo','record','capture','status','metrics'].map(id => [id, $(id)]));
@@ -15,6 +16,8 @@ if(embedded){document.body.classList.add('embedded');const toolbar=document.crea
 const state = { model:null, meshes:[], materials:[], selected:null, material:null, marker:null, originals:new Map(), records:[], source:null, serial:0, frames:0, triangles:0, textures:new Set(),parts:[],annotations:{},clipCache:new Map(),uvWireCache:new Map() };
 let renderer, scene, camera, controls, radius = 6, center = new THREE.Vector3(), bounds = null, renderPending = false;
 const raycaster = new THREE.Raycaster();
+const reflections=createReflection({enabled:$('reflectionEnabled'),amount:$('reflectionAmount'),detail:$('normalEnabled'),summary:$('reflectionSummary'),invalidate,source:()=>state.source});
+if(embedded){const controls=ui.viewport.querySelector('.embed-controls'),label=document.createElement('label');label.className='embed-reflection';const input=$('reflectionEnabled');label.append(input,document.createTextNode('反射层'));controls.insertBefore(label,controls.lastChild);}
 const context = ui.uv.getContext('2d');
 let selectionBox=null;
 const editor=createEditor({ensureNative,identity:materialIdentity,modelIdentity:()=>state.source?.manifest?.source_obj_sha256 || state.source?.model_signature || state.source?.sha256 || null,
@@ -68,6 +71,7 @@ function startRenderer() {
   renderer.toneMapping = THREE.NoToneMapping;
   ui.viewport.append(renderer.domElement);
   scene = new THREE.Scene(); scene.background = new THREE.Color('#94979c');
+  const environment=studioEnvironment(renderer);scene.environment=environment.texture;
   camera = new THREE.PerspectiveCamera(36, 1, .01, 10000);
   scene.add(new THREE.HemisphereLight(0xffffff, 0x737a83, 1.5));
   const key = new THREE.DirectionalLight(0xffffff, 2); key.position.set(4, 7, 4); scene.add(key);
@@ -87,6 +91,7 @@ function startRenderer() {
 
 function releaseModel(model) {
   if (!model) return;
+  if(model===state.model)reflections.clear();
   const materials = new Set(), textures = new Set();
   model.traverse(obj => { if (obj.geometry) obj.geometry.dispose(); for (const m of Array.isArray(obj.material) ? obj.material : obj.material ? [obj.material] : []) { materials.add(m); for (const val of Object.values(m)) if (val?.isTexture) textures.add(val); } });
   for (const texture of textures) { texture.dispose(); if (texture.image?.close) texture.image.close(); }
@@ -258,6 +263,9 @@ async function acceptModel(object, label, source, serial) {
   ui.modelName.textContent=label==='ztz_99a'?'99A 主战坦克':label; ui.modelName.title=label; ui.materials.replaceChildren();
   state.materials.forEach((m,i) => { const option=document.createElement('option'); option.value=String(i); const label=materialLabel(m.name,i),siblings=state.materials.filter(n=>materialLabel(n.name,state.materials.indexOf(n))===label);option.textContent=label+(siblings.length>1?' '+(siblings.indexOf(m)+1):'');option.title=m.name;ui.materials.append(option); });
   for (const id of ['materials','replace','record','capture','showAll']) ui[id].disabled=false;
+  reflections.accept(state.materials);
+  await reflections.quality(Number(ui.quality.value));
+  if(serial!==state.serial)return;
   ui.empty.hidden=true; ui.loading.hidden=true; showParts(); applyVisibility(); selectMaterial(state.materials[0]); applyQuality(); fit();
   ui.metrics.textContent=`${state.meshes.length} 个可选部件 · ${Math.round(state.triangles).toLocaleString()} 三角面`;
   const imported=source.manifest?.imported_skin;if(imported&&$('importStatus'))$('importStatus').textContent=`已识别 ${label==='ztz_99a'?'99A 主战坦克':label} · 模型来源：${imported.model_origin==='package'?'包内配套模型':'战雷安装文件夹'}${imported.warnings?.length?' · '+imported.warnings.join('；'):''}`;
@@ -342,7 +350,7 @@ ui.viewport.addEventListener('dragover',e => e.preventDefault()); ui.viewport.ad
 ui.search.addEventListener('input',showParts);
 ui.showAll.addEventListener('click',() => { ui.isolate.checked=false; ui.search.value=''; showParts(); applyVisibility(); });
 ui.isolate.addEventListener('change',applyVisibility);
-ui.quality.addEventListener('change',async()=>{const limit=Number(ui.quality.value),serial=state.serial;ui.quality.disabled=true;try{if(limit>1024&&state.source?.manifestURL)for(const m of state.materials){const info=m.userData?.source,original=state.originals.get(m);if(info?.native_file&&info.source_quality!=='thumbnail-only'&&!editor.hasDocument(m)&&info.source_size&&Math.max(...info.source_size)>Math.max(original?.width||0,original?.height||0))await ensureNative(m,false);}if(serial!==state.serial)return;applyQuality();editor.quality(limit);status(`模型显示上限 ${limit===512?'512':limit/1024+'K'}；导出仍按各贴图画布设置`);}catch(error){fail(error);}finally{ui.quality.disabled=false;}});
+ui.quality.addEventListener('change',async()=>{const limit=Number(ui.quality.value),serial=state.serial;ui.quality.disabled=true;try{if(limit>1024&&state.source?.manifestURL)for(const m of state.materials){const info=m.userData?.source,original=state.originals.get(m);if(info?.native_file&&info.source_quality!=='thumbnail-only'&&!editor.hasDocument(m)&&info.source_size&&Math.max(...info.source_size)>Math.max(original?.width||0,original?.height||0))await ensureNative(m,false);}if(serial!==state.serial)return;await reflections.quality(limit);applyQuality();editor.quality(limit);status(`模型显示上限 ${limit===512?'512':limit/1024+'K'}；导出仍按各贴图画布设置`);}catch(error){fail(error);}finally{ui.quality.disabled=false;}});
 ui.wire.addEventListener('change',() => { for (const m of state.materials) m.wireframe=ui.wire.checked; invalidate(); });
 ui.materials.addEventListener('change',() => selectMaterial(state.materials[Number(ui.materials.value)]));
 ui.replace.addEventListener('click',() => $('textureFile').click());

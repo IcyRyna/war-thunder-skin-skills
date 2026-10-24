@@ -7,3 +7,5 @@
 .embedded header,.embedded aside,.embedded footer,.embedded .stage-help{display:none!important}.embedded main{display:block;height:100dvh;min-height:260px}.embedded .stage{width:100%;height:100%}.embedded #viewport{min-height:0}.embedded .views{height:52px;flex-shrink:0}.embed-controls{position:absolute;right:12px;top:12px;z-index:3;display:flex;align-items:center;gap:10px;padding:6px 9px;border:1px solid #d6dce4;border-radius:4px;background:#fff;font-size:12px}.embed-controls label{display:flex;gap:7px;align-items:center}.embed-controls select{width:104px;min-height:31px;font-size:12px;padding:4px}.embed-controls a{color:#285ec2;text-decoration:none}.embedded #loading{max-width:85%;font-size:13px}
 
 .embedded #empty{display:none}
+
+.embed-controls .embed-reflection{white-space:nowrap}.embed-reflection input{width:15px;height:15px;margin:0}@media(max-width:500px){.embed-controls{left:8px;right:8px;top:8px;gap:8px;justify-content:space-between;font-size:11px}.embed-controls label{gap:4px}.embed-controls select{width:80px;font-size:11px}.embed-controls a{font-size:11px}}
