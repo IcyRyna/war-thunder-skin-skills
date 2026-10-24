@@ -188,7 +188,7 @@ function drawUV() {
 
 function fit(view='front',selectedBounds=null) {
   const frameBounds=selectedBounds||bounds;if(!frameBounds)return;const frameCenter=frameBounds.getCenter(new THREE.Vector3()),frameRadius=Math.max(.01,frameBounds.getBoundingSphere(new THREE.Sphere()).radius);
-  const vectors={front:[1,.45,-1],left:[1,.12,0],right:[-1,.12,0],top:[0,1,.0001],reset:[1,.45,-1]};
+  const vectors={front:[1,.45,-1],left:[0,.12,-1],right:[0,.12,1],top:[0,1,.0001],reset:[1,.45,-1]};
   const direction=new THREE.Vector3(...vectors[view]).normalize();
   const vertical=camera.fov*Math.PI/180; const horizontal=2*Math.atan(Math.tan(vertical/2)*camera.aspect);
   const right=new THREE.Vector3().crossVectors(new THREE.Vector3(0,1,0),direction).normalize();
