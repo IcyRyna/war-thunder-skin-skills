@@ -10,6 +10,8 @@ import {makeDemo} from './demo.js';
 
 const $ = id => document.getElementById(id);
 const ui = Object.fromEntries(['viewport','empty','loading','modelName','parts','partCount','search','quality','wire','isolate','showAll','materials','replace','uv','picked','materialInfo','record','capture','status','metrics'].map(id => [id, $(id)]));
+const embedded=new URLSearchParams(location.search).get('embed')==='1';
+if(embedded){document.body.classList.add('embedded');const toolbar=document.createElement('div');toolbar.className='embed-controls';const label=document.createElement('label');label.textContent='显示清晰度';const quality=ui.quality.cloneNode(true);quality.id='embedQuality';quality.setAttribute('aria-label','显示清晰度');quality.addEventListener('change',()=>{if(ui.quality.disabled)return;ui.quality.value=quality.value;ui.quality.dispatchEvent(new Event('change'));});new MutationObserver(()=>{quality.disabled=ui.quality.disabled;}).observe(ui.quality,{attributes:true,attributeFilter:['disabled']});label.append(quality);const full=document.createElement('a');const url=new URL(location.href);url.searchParams.delete('embed');full.href=url.href;full.target='_blank';full.rel='noopener';full.textContent='展开查看';toolbar.append(label,full);ui.viewport.append(toolbar);}
 const state = { model:null, meshes:[], materials:[], selected:null, material:null, marker:null, originals:new Map(), records:[], source:null, serial:0, frames:0, triangles:0, textures:new Set(),parts:[],annotations:{},clipCache:new Map(),uvWireCache:new Map() };
 let renderer, scene, camera, controls, radius = 6, center = new THREE.Vector3(), bounds = null, renderPending = false;
 const raycaster = new THREE.Raycaster();
@@ -31,6 +33,7 @@ function materialIdentity(m) {
 }
 async function ensureNative(m,refresh=true) {
   const original=state.originals.get(m), info=m.userData?.source;
+  if(info?.source_quality==='web-preview-only'&&refresh&&!original?.userNative)throw new Error('这是网页展示副本；制作涂装请提供原尺寸底图或原始分层工程');
   if(info?.source_quality==='thumbnail-only'&&!original?.userNative)throw new Error('游戏资源目前只有此材质的缩略级纹理；请先替换原尺寸颜色图，创作器不会把缩略图当生产基底');
   if(original?.userNative&&!original.editorCanvas)return original;
   const expected=info?.source_size;
@@ -50,7 +53,7 @@ async function ensureNative(m,refresh=true) {
 }
 
 function status(text, error = false) { ui.status.textContent = text; ui.status.classList.toggle('error', error); }
-function fail(error) { console.error(error); status(error.message || String(error), true); ui.loading.hidden = true; }
+function fail(error) { console.error(error); status(error.message || String(error), true); ui.loading.hidden = !embedded;if(embedded)ui.loading.textContent='无法加载这个三维预览：'+(error.message||String(error)); }
 function download(blob, name) { const url = URL.createObjectURL(blob); const a = document.createElement('a'); a.href = url; a.download = name; a.click(); setTimeout(() => URL.revokeObjectURL(url), 1000); }
 function render() { renderPending = false; if (!renderer || document.hidden) return; renderer.render(scene, camera); state.frames++; ui.metrics.dataset.frames=String(state.frames); }
 function invalidate() { if (!renderPending && renderer) { renderPending = true; requestAnimationFrame(render); } }
