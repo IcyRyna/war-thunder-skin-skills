@@ -1,0 +1,49 @@
+name: Deploy interactive 3D workbench
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'toolkits/web-preview/**'
+      - '.github/workflows/web-preview-pages.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: web-preview-pages
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          sparse-checkout: toolkits/web-preview
+      - name: Verify editor math, layer selection and ZIP format
+        working-directory: toolkits/web-preview
+        run: |
+          node --test tests/editor-core.test.mjs
+          node --check web/app.js
+          node --check web/demo.js
+          node --check web/editor.js
+          node --check web/skin-open.js
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: toolkits/web-preview/web
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/deploy-pages@v4
+        id: deployment

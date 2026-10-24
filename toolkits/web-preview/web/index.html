@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>涂装工作台 · 4K 与人工校准</title><link rel="icon" href="data:,"><link rel="stylesheet" href="style.css"><link rel="stylesheet" href="editor.css"><script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body>
+<header><div class="brand"><h1>涂装工作台</h1><span>看模型、改图案、导出贴图</span></div><div class="actions"><button id="demo">交互演示</button><button id="open">打开模型</button><button id="capture" class="primary" disabled>保存模型图</button></div></header>
+<main>
+<aside class="left">
+  <section id="skinImport"></section>
+  <section><h2>当前模型</h2><div id="modelName" class="filename">还没有打开模型</div><p class="hint">选择准备好的 GLB 模型；也可同时打开 OBJ、材质说明和颜色图。</p><input id="files" type="file" accept=".glb,.obj,.mtl,.png,.jpg,.jpeg,.webp,.tga,.dds" multiple hidden></section>
+  <section class="parts-section"><h2>选部件 <span id="partCount"></span></h2><input id="search" type="search" placeholder="搜中文名称或原始名称" aria-label="查找部件"><p class="hint">自动分类按名称推测；选中后可以修正。</p><div id="parts" aria-label="部件分类"><p class="hint">打开模型后会显示分类</p></div><div class="button-row"><button id="focusPart">看近一点</button><button id="showAll" disabled>看全车</button></div><label class="check"><input type="checkbox" id="isolate">只显示选中的部件</label></section>
+  <section id="partEditor" hidden><h2>修正部件分类</h2><p id="partBasis" class="hint"></p><label class="field-wide">中文名称<input id="partAlias" maxlength="80"></label><label class="field-wide">归到哪一类<select id="partCategory"></select></label><button id="savePart" class="full">确认这个名称与分类</button><details><summary>查看原始名称</summary><code id="partOriginal"></code></details></section>
+  <section><h2>模型显示清晰度</h2><label class="sr-only" for="quality">模型显示清晰度</label><select id="quality"><option value="512">512 · 更省性能</option><option value="1024" selected>1K · 日常操作</option><option value="2048">2K · 看细节</option><option value="4096">4K · 高清检查</option></select><p id="renderInfo" class="hint">显示档位不改变模型面数。</p><label class="check"><input type="checkbox" id="wire">显示模型网格</label><details class="advanced"><summary>给 AI 用的工具</summary><p class="hint">模型来自战雷安装文件夹，不会启动或连接游戏。模型精细度由实际 LOD 决定。</p><button id="exportContract" class="full">导出部件与贴图清单</button></details></section>
+</aside>
+<div class="stage"><div class="stage-help">拖动旋转 · 滚轮拉近 · 点一下选部件或图案</div><div id="viewport"><div id="empty"><h2>把涂装放回真实模型</h2><p>自动从战雷文件夹取模型，或打开本地模型。<br>不需要 Blender。</p><button id="openEmpty" class="primary">选择模型文件</button></div><div id="loading" role="status" hidden>正在准备模型…</div></div><nav class="views" aria-label="模型视角"><button data-view="front">斜前看</button><button data-view="left">看左侧</button><button data-view="right">看右侧</button><button data-view="top">从上看</button><button data-view="reset">恢复全车</button></nav></div>
+<aside class="right">
+  <section class="texture-section"><h2>正在修改哪张贴图</h2><label for="materials" class="sr-only">当前贴图</label><select id="materials" disabled><option>先打开模型</option></select><button id="replace" class="full" disabled>换这张颜色底图</button><input id="textureFile" type="file" accept=".png,.jpg,.jpeg,.webp,.tga,.dds" hidden><details id="flatMap" open><summary>平面贴图 · 用来精调位置</summary><label class="check small"><input id="uvLines" type="checkbox" checked>显示部件轮廓线</label><canvas id="uv" width="1024" height="1024" aria-label="平面贴图编辑区"></canvas><p id="picked" class="hint">点击模型选位置，或在这里直接调整。</p></details><details id="technical"><summary>贴图详情与检查记录</summary><p id="materialInfo" class="hint"></p><button id="record" class="quiet" disabled>保存模型与贴图检查记录</button></details></section>
+  <section id="creative"></section>
+</aside>
+</main><footer><span id="status" role="status">按需渲染 · 文件留在本机</span><span id="metrics"></span></footer><script type="module" src="app.js"></script>
+</body></html>
