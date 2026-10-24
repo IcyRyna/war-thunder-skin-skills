@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>涂装 3D 预览</title><link rel="icon" href="data:,"><link rel="stylesheet" href="preview.css"><script>if(new URLSearchParams(location.search).get('embed')==='1')document.documentElement.classList.add('embedded');</script><script type="importmap">{"imports":{"three":"./vendor/three.module.js","three/addons/":"./vendor/addons/"}}</script></head>
+<body>
+<header><div><a class="brand" href="https://icyryna.github.io/war-thunder-liveries/">涂装 3D 预览</a><span id="modelName">在线展示</span></div><div class="header-actions"><button id="capture" disabled>保存预览图</button><a href="https://icyryna.github.io/war-thunder-liveries/">返回作品集</a></div></header>
+<main><div id="viewport">
+  <div id="empty"><h1>选择一套涂装开始预览</h1><p>查看对应车型，旋转、拉近并调整反射与清晰度。</p><a class="primary" href="https://icyryna.github.io/war-thunder-liveries/">打开涂装作品集</a></div>
+  <div id="loading" role="status" hidden>正在载入模型与材质…</div>
+  <div class="preview-controls" aria-label="预览设置">
+    <label class="quality-label"><span>清晰度</span><select id="quality" aria-label="显示清晰度"><option value="512">512 · 省性能</option><option value="1024" selected>1K · 日常</option><option value="2048">2K · 细节</option><option value="4096">4K · 高清</option></select></label>
+    <label class="check"><input id="reflectionEnabled" type="checkbox" checked>反射层</label>
+    <details id="surfaceSettings"><summary>表面设置</summary><div class="surface-panel"><label for="reflectionAmount">反射强度</label><input id="reflectionAmount" type="range" min="0" max="2" step="0.1" value="0.8"><label class="check"><input id="normalEnabled" type="checkbox" checked>显示接缝与凹凸</label><p id="reflectionSummary" role="status">模型载入后读取反射贴图</p><p class="hint">PBR 近似预览，完整材质以游戏内为准。</p></div></details>
+    <a id="expand" target="_blank" rel="noopener" hidden>展开查看</a>
+  </div>
+</div><nav class="views" aria-label="模型视角"><button data-view="front">斜前看</button><button data-view="left">看左侧</button><button data-view="right">看右侧</button><button data-view="top">从上看</button><button data-view="reset">恢复全车</button></nav></main>
+<footer><span id="status" role="status">在线只提供展示与预览设置 · 涂装编辑请使用本地工作台</span><span id="metrics"></span></footer>
+<script type="module" src="preview.js"></script></body></html>

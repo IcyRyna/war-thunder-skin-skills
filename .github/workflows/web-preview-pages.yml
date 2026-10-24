@@ -1,4 +1,4 @@
-name: Deploy interactive 3D workbench
+name: Deploy presentation-only 3D preview
 
 on:
   push:
@@ -30,10 +30,14 @@ jobs:
           node --check web/demo.js
           node --check web/editor.js
           node --check web/skin-open.js
+          node --check web/preview.js
+          python -B -m unittest discover -s tests -p test_online_build.py
+      - name: Build presentation-only online distribution
+        run: python -B toolkits/web-preview/tools/build_online.py --out _online
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v4
         with:
-          path: toolkits/web-preview/web
+          path: _online
 
   deploy:
     needs: build
