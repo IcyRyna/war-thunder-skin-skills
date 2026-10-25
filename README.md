@@ -24,7 +24,7 @@
 | --- | --- | --- | --- |
 | 炭灰工业涂装 · 地面载具 | AZUR三主灰区、几何与蜂窝、车型贴纸、车尾警示及分区材质 | [0.1.5](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5) | [制作精髓与示例](docs/skills/charcoal-industrial.md) |
 | 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
-| Akamywek 风格 · 飞机 | 深炭底、签名色、白色几何焦点与三角马赛克 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [风格与顺序](docs/skills/akamywek.md) |
+| Akamywek 风格 · 飞机 | 按单发、双发与鸭式分支安排线条、人物和留白，结合原生 UV 与工具实做 | [0.2.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0) | [布局与验证范围](docs/skills/wt-style-akamywek.md) |
 
 每个正式安装包都能独立使用，自带对应版本的说明、工具和必要素材。完整下载记录见[下载中心](releases/README.md)，旧终末地 1.4 等版本见[历史档案](docs/history/README.md)。
 

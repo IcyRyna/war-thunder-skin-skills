@@ -669,6 +669,206 @@
         "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1",
         "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-spectre42/v0.1.1/wt-style-spectre42-v0.1.1.skill.zip"
       }
+    },
+    {
+      "id": "wt-style-akamywek",
+      "kind": "style",
+      "status": "released",
+      "description": "Akamywek飞机线条与立绘布局：按单发、双发和鸭式分支，结合原生UV、分层编辑、Blender与按需生图素材；保留实际验证边界。",
+      "source": "src/styles/aircraft/wt-style-akamywek",
+      "includes": [
+        {
+          "source": "toolkits/aircraft/scripts/airframe_setup.py",
+          "target": "scripts/airframe_setup.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/arrangement.py",
+          "target": "scripts/arrangement.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/art_cutout.py",
+          "target": "scripts/art_cutout.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/artifact_io.py",
+          "target": "scripts/artifact_io.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/atlas_palette.py",
+          "target": "scripts/atlas_palette.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/build_skin.py",
+          "target": "scripts/build_skin.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/coat_material.py",
+          "target": "scripts/coat_material.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/compare_skin.py",
+          "target": "scripts/compare_skin.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/dds_variant.py",
+          "target": "scripts/dds_variant.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/design_lint.py",
+          "target": "scripts/design_lint.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/detail_sheet.py",
+          "target": "scripts/detail_sheet.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/fetch_asset.py",
+          "target": "scripts/fetch_asset.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/finish_preview.py",
+          "target": "scripts/finish_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/inspect_skins.py",
+          "target": "scripts/inspect_skins.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/panel_lines.py",
+          "target": "scripts/panel_lines.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/replica_check.py",
+          "target": "scripts/replica_check.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/replica_measure.py",
+          "target": "scripts/replica_measure.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/scene_preview.py",
+          "target": "scripts/scene_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/structure_layer.py",
+          "target": "scripts/structure_layer.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/style_board.py",
+          "target": "scripts/style_board.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/surface_map.py",
+          "target": "scripts/surface_map.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/surface_preview.py",
+          "target": "scripts/surface_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_airframe_setup.py",
+          "target": "scripts/test_airframe_setup.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_arrangement.py",
+          "target": "scripts/test_arrangement.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_art_cutout.py",
+          "target": "scripts/test_art_cutout.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_artifact_io.py",
+          "target": "scripts/test_artifact_io.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_atlas_palette.py",
+          "target": "scripts/test_atlas_palette.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_cli_gates.py",
+          "target": "scripts/test_cli_gates.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_coat_material.py",
+          "target": "scripts/test_coat_material.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_comparison.py",
+          "target": "scripts/test_comparison.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_dds_variant.py",
+          "target": "scripts/test_dds_variant.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_design_lint.py",
+          "target": "scripts/test_design_lint.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_detail_sheet.py",
+          "target": "scripts/test_detail_sheet.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_finish_preview.py",
+          "target": "scripts/test_finish_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_io_tools.py",
+          "target": "scripts/test_io_tools.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_panel_lines.py",
+          "target": "scripts/test_panel_lines.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_projection_contract.py",
+          "target": "scripts/test_projection_contract.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_replica_check.py",
+          "target": "scripts/test_replica_check.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_replica_measure.py",
+          "target": "scripts/test_replica_measure.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_scene_preview.py",
+          "target": "scripts/test_scene_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_structure_layer.py",
+          "target": "scripts/test_structure_layer.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_style_board.py",
+          "target": "scripts/test_style_board.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_surface_map.py",
+          "target": "scripts/test_surface_map.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_surface_workflow.py",
+          "target": "scripts/test_surface_workflow.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/uv_frame.py",
+          "target": "scripts/uv_frame.py"
+        }
+      ],
+      "supplements": [],
+      "documentation": "docs/skills/wt-style-akamywek.md",
+      "changelog": "docs/changelog/wt-style-akamywek.md",
+      "baseline": {
+        "version": "0.2.0",
+        "tag": "wt-style-akamywek/v0.2.0",
+        "package_sha256": "bc8ad47e9fd70ea1b6852082337014c714a27899148a01970392e631d2adc60e",
+        "package_bytes": 1187846,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-akamywek/v0.2.0/wt-style-akamywek-v0.2.0.skill.zip"
+      }
     }
   ],
   "profiles": {

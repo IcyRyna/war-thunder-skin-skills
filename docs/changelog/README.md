@@ -6,7 +6,8 @@
 | --- | --- | --- | --- |
 | 地面载具 | 炭灰工业涂装 | 0.1.5（原S42） | [查看](wt-style-charcoal-industrial.md) |
 | 飞机 | 喷气机涂装工作流 | 3.14 | [查看](war-thunder-user-skins.md) |
-| 飞机 | Akamywek 风格飞机涂装 | 1.14 | [查看](war-thunder-style-akamywek.md) |
+| 飞机 | Akamywek 飞机布局 | 0.2.0 | [查看](wt-style-akamywek.md) |
+| 飞机 | Akamywek 风格飞机涂装（旧线） | 1.14 | [查看](war-thunder-style-akamywek.md) |
 | 地面载具 | `wt-style-endfield` | 0.1.1 | [查看](wt-style-endfield.md) |
 | 地面载具 | 终末地风格坦克涂装 | 1.4（历史兼容版） | [归档说明](../history/war-thunder-tank-style-endfield-v1.4.md) · [逐版记录](war-thunder-tank-style-endfield.md) |
 

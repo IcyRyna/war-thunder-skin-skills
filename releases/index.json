@@ -4,6 +4,27 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "wt-style-akamywek/v0.2.0",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0",
+      "published_at": null,
+      "draft": false,
+      "prerelease": false,
+      "assets": [
+        {
+          "name": "wt-style-akamywek-v0.2.0.skill.zip",
+          "bytes": 1187846,
+          "digest": "sha256:bc8ad47e9fd70ea1b6852082337014c714a27899148a01970392e631d2adc60e",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-akamywek/v0.2.0/wt-style-akamywek-v0.2.0.skill.zip"
+        },
+        {
+          "name": "wt-style-akamywek-v0.2.0.files.json",
+          "bytes": 16680,
+          "digest": "sha256:fd1a382382bd0d1d07b7ab70c6d62e6757553d473815f2449ef921d24579d3b9",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-akamywek/v0.2.0/wt-style-akamywek-v0.2.0.files.json"
+        }
+      ]
+    },
+    {
       "tag": "wt-style-spectre42/v0.1.1",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1",
       "published_at": null,

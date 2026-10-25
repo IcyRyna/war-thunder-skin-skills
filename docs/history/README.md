@@ -6,6 +6,7 @@
 
 | 历史版本 | 状态 | 资料与下载 |
 |---|---|---|
+| `war-thunder-style-akamywek` 1.14 | 旧版本线，当前安装入口为 `wt-style-akamywek` 0.2.0 | [旧版资料](../skills/akamywek.md) · [当前版](../skills/wt-style-akamywek.md) |
 | `war-thunder-tank-style-endfield` 1.4 | 已发布历史兼容版，不在当前推荐中列出 | [完整说明与下载](war-thunder-tank-style-endfield-v1.4.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-tank-style-endfield/v1.4) · [逐版记录](../changelog/war-thunder-tank-style-endfield.md) |
 
 1.4 原安装附件：`war-thunder-tank-style-endfield-v1.4.skill.zip`，61,780,595 字节，SHA-256 `68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135`。

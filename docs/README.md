@@ -16,7 +16,7 @@
 | --- | --- |
 | [终末地历史封存](history/endfield-archived.md) | 旧 0.1.x／1.x，停止维护，仅作历史恢复 |
 | [通用飞机痛涂](skills/jet-liveries.md) | 人物、UV、材质与飞机交付 |
-| [Akamywek 风格飞机](skills/akamywek.md) | 深炭底、签名色和几何图形的组合 |
+| [Akamywek 飞机布局 0.2.0](skills/wt-style-akamywek.md) | 单发／双发／鸭式的线条与立绘布局、原生 UV 和工具验证 |
 | [历史五车型布局图解](skills/endfield-layout-guide.md) | 参考关系、部件分区与方向建议 |
 | [历史终末地 0.1.1 全览](skills/wt-style-endfield-0.1.1.md) | 逐条规则、可选预设和全部素材 |
 

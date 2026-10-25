@@ -8,7 +8,7 @@
 | --- | --- | --- | --- |
 | 炭灰工业涂装 · 地面载具 | `wt-style-charcoal-industrial` | [0.1.5](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5) | [制作精髓](../docs/skills/charcoal-industrial.md) |
 | 通用飞机痛涂 | `war-thunder-user-skins` | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [中文介绍](../docs/skills/jet-liveries.md) |
-| Akamywek 风格 · 飞机 | `war-thunder-style-akamywek` | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [中文介绍](../docs/skills/akamywek.md) |
+| Akamywek 风格 · 飞机 | `wt-style-akamywek` | [0.2.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0) | [布局与验证范围](../docs/skills/wt-style-akamywek.md) |
 
 每条 Skill 版本线独立编号。终末地 0.1.x 和旧 1.x 已停止维护，全部移入[历史封存](../docs/history/endfield-archived.md)，不再列为当前安装入口。
 

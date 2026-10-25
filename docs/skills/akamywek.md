@@ -1,3 +1,5 @@
+> 此页记录旧 `war-thunder-style-akamywek` 1.14。当前版本见 [wt-style-akamywek 0.2.0](wt-style-akamywek.md)。
+
 # Akamywek 风格飞机涂装
 
 按 Akamywek 公开涂装整理的飞机痛涂 Skill，主要参考深炭底、单一签名色、白色几何焦点和三角马赛克的组合方式。
