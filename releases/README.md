@@ -7,11 +7,10 @@
 | 中文名称 | Skill ID | 正式版本 | 使用说明 |
 | --- | --- | --- | --- |
 | 炭灰工业涂装 · 地面载具 | `wt-style-charcoal-industrial` | [0.1.5](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5) | [制作精髓](../docs/skills/charcoal-industrial.md) |
-| 终末地风格 · 地面载具 | `wt-style-endfield` | [0.1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1) | [中文介绍](../docs/skills/endfield-tanks.md) |
 | 通用飞机痛涂 | `war-thunder-user-skins` | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [中文介绍](../docs/skills/jet-liveries.md) |
 | Akamywek 风格 · 飞机 | `war-thunder-style-akamywek` | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [中文介绍](../docs/skills/akamywek.md) |
 
-每条 Skill 版本线独立编号。终末地 0.1.1 是独立工作流，安装时不依赖旧终末地 1.4。
+每条 Skill 版本线独立编号。终末地 0.1.x 和旧 1.x 已停止维护，全部移入[历史封存](../docs/history/endfield-archived.md)，不再列为当前安装入口。
 
 ## 其他附件怎么选
 

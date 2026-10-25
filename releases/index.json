@@ -67,7 +67,10 @@
           "digest": "sha256:ee5549fdff3c4745eeb103c94a3f3c32d72814e7cbd13049a0e2664ccd0eb937",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.1/wt-style-endfield-v0.1.1.validation.json"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "wt-style-endfield/v0.1.0",
@@ -112,7 +115,10 @@
           "digest": "sha256:3649d2567ced981aa3c7566d4d426b0c7d04070bcd8b1a78e8f9253a02ac7694",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.0/wt-style-endfield-v0.1.0.validation.json"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-tank-style-endfield/v1.4",
@@ -127,7 +133,10 @@
           "digest": "sha256:68554a8e86d74a77256158050eea2a92447f44c93e9951cd275690c9a48c4135",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.4/war-thunder-tank-style-endfield-v1.4.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-tank-style-endfield/v1.3",
@@ -142,7 +151,10 @@
           "digest": "sha256:a5146a4d7ad6f7f737103ea0def94e3f7485e9cfd797736cca7c3e2fd9993de3",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.3/war-thunder-tank-style-endfield-v1.3.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.14",
@@ -217,7 +229,10 @@
           "digest": "sha256:d4551377eaa609b77aa45ab0c57cfd2127a2ec41a72b383ec75c3acc33c714b9",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.2/war-thunder-tank-style-endfield-v1.2.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-tank-style-endfield/v1.1",
@@ -232,7 +247,10 @@
           "digest": "sha256:afdb0e0f669227a45836670379cd24acb428e693d04ea6436641e08ce377bc3a",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.1/war-thunder-tank-style-endfield-v1.1.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-tank-style-endfield/v1.0",
@@ -265,7 +283,10 @@
           "digest": "sha256:3ee0bc0aa252eca32a438547b384f931d255ff5c8c113c112b183468f7b5f668",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-tank-style-endfield/v1.0/war-thunder-tank-style-endfield-v1.0.validation.json"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-10-25",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.14",

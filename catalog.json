@@ -84,7 +84,7 @@
     {
       "id": "war-thunder-tank-style-endfield",
       "kind": "style",
-      "status": "released_baseline",
+      "status": "archived_read_only",
       "description": "终末地工业风坦克涂装，包含车型 UV 与材质适配方法和参考素材。",
       "source": "src/styles/ground/war-thunder-tank-style-endfield",
       "includes": [],
@@ -134,7 +134,13 @@
         "package_bytes": 61780595
       },
       "documentation": "docs/skills/endfield-tanks.md",
-      "changelog": "docs/changelog/war-thunder-tank-style-endfield.md"
+      "changelog": "docs/changelog/war-thunder-tank-style-endfield.md",
+      "archive": {
+        "date": "2026-10-25",
+        "maintenance": "closed",
+        "recommended_for_new_work": false,
+        "reason": "0.2.0 workflow rebuild; historical source and release bytes retained"
+      }
     },
     {
       "baseline": {
@@ -624,9 +630,15 @@
       ],
       "kind": "style",
       "source": "src/styles/ground/wt-style-endfield",
-      "status": "released_baseline",
+      "status": "archived_read_only",
       "supplements": [],
-      "description": "终末地黑白黄工业构图、可编辑素材与部件分区；Blender模型定位和PS原尺寸UV双向核对。"
+      "description": "终末地黑白黄工业构图、可编辑素材与部件分区；Blender模型定位和PS原尺寸UV双向核对。",
+      "archive": {
+        "date": "2026-10-25",
+        "maintenance": "closed",
+        "recommended_for_new_work": false,
+        "reason": "0.2.0 workflow rebuild; historical source and release bytes retained"
+      }
     },
     {
       "id": "wt-style-charcoal-industrial",

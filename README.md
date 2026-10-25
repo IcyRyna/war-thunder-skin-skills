@@ -23,7 +23,6 @@
 | 中文名称 | 适合做什么 | 正式下载 | 中文解读 |
 | --- | --- | --- | --- |
 | 炭灰工业涂装 · 地面载具 | AZUR三主灰区、几何与蜂窝、车型贴纸、车尾警示及分区材质 | [0.1.5](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5) | [制作精髓与示例](docs/skills/charcoal-industrial.md) |
-| 终末地风格 · 地面载具 | 黑白黄工业构图、部件分区、原生 UV 与材质制作 | [0.1.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1) | [图文介绍](docs/skills/endfield-tanks.md) |
 | 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
 | Akamywek 风格 · 飞机 | 深炭底、签名色、白色几何焦点与三角马赛克 | [1.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) | [风格与顺序](docs/skills/akamywek.md) |
 
@@ -37,13 +36,11 @@
 
 第一次使用可先读[中文快速上手](docs/quick-start.md)。安装包、开发源码和历史素材的区别也在那里说明。
 
-## 终末地风格：从参考关系到目标载具
+## 终末地旧版已封存
 
-![A7V 参考作品的终末地整车效果](assets/endfield/reference/a7v/iso.png)
+终末地 0.1.0、0.1.1 与旧 1.0–1.4 全部停止维护，移出当前推荐。原标签、源码和下载附件保留为历史恢复资料；新工作使用重建流程，另行审查发布。
 
-先理解明暗分区、黄色路径、工业标识和图形密度，再根据目标车辆的实际表面重新构图。布局资料包含五个车型家族的方向建议与可选预设，使用时仍需核对目标车的 UV 和材质。
-
-[风格概览](docs/skills/endfield-tanks.md) · [A7V 与五车型图解](docs/skills/endfield-layout-guide.md) · [0.1.1 完整素材与工具](docs/skills/wt-style-endfield-0.1.1.md)
+[历史封存说明与下载](docs/history/endfield-archived.md)
 
 ## 它会怎样完成一套涂装
 

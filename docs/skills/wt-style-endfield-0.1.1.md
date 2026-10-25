@@ -1,5 +1,7 @@
 # wt-style-endfield 0.1.1 · 完整展示
 
+> **历史封存 · 停止维护**：本页为旧版资料，不再作为当前制作入口。[封存范围与恢复下载](../history/endfield-archived.md)。
+
 这是 **已发布的 wt-style-endfield 0.1.1 完整图文展示**：规则、车型方向、部件分区、三套可选兜底、制作素材、工具和验证范围都在本页。独立运行包为 **202 文件、约 15.7 MiB**。
 
 **[下载独立 Skill](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.1/wt-style-endfield-v0.1.1.skill.zip) · [Release 全部附件](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.1.1) · [源码](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.1/wt-style-endfield-v0.1.1.source.zip) · [可选旧素材库](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.1.1/wt-style-endfield-v0.1.1.legacy-assets.zip) · [更新记录](../changelog/wt-style-endfield.md)**
