@@ -4,6 +4,7 @@
 <header><div class="brand"><h1>涂装工作台</h1><span>看模型、改图案、导出贴图</span></div><div class="actions"><button id="demo">交互演示</button><button id="open">打开模型</button><button id="capture" class="primary" disabled>保存模型图</button></div></header>
 <main>
 <aside class="left">
+  <section id="aiPreviewNotice"><h2>让 AI 使用这里预览</h2><p class="hint">制作前先告诉 AI：可以使用本地工作台预览模型、检查涂装，并提供工具的完整解压路径。具体命令见包内“给AI的说明.md”。</p></section>
   <section id="skinImport"></section>
   <section><h2>当前模型</h2><div id="modelName" class="filename">还没有打开模型</div><p class="hint">选择准备好的 GLB 模型；也可同时打开 OBJ、材质说明和颜色图。</p><input id="files" type="file" accept=".glb,.obj,.mtl,.png,.jpg,.jpeg,.webp,.tga,.dds" multiple hidden></section>
   <section id="reflectionSettings"><h2>反射与表面质感</h2><label class="check"><input id="reflectionEnabled" type="checkbox" checked>显示反射层</label><label class="field-wide">反射强度<input id="reflectionAmount" aria-label="反射强度" type="range" min="0" max="2" step="0.1" value="0.8"></label><label class="check"><input id="normalEnabled" type="checkbox" checked>显示接缝与凹凸</label><p id="reflectionSummary" class="hint" role="status">打开模型后读取反射贴图</p><p class="hint">自动读取配套 N 贴图；未提供的材质沿用模型设置。</p></section>

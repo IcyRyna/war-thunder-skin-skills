@@ -10,6 +10,14 @@
 
 点击作品标题，介绍页会自动载入该车型和该套涂装，可直接旋转、缩放和切换视角。F-2A、EMBT 等提供车型版本选择；原有下载、来源和评价保留。在线只提供 3D 展示、反射与凹凸、清晰度、视角及预览截图。自己的模型与涂装导入、独立装饰、文字、区域改色和工程导出均在本地工作台完成。
 
+## 本地涂装工作台 · 双击启动
+
+**[下载 Windows x64 本地版](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-paint-workbench/v1.0.0/wt-paint-workbench-windows-x64.zip)** · [使用说明](docs/web-preview.md) · [给 AI 的预览入口](toolkits/web-preview/给AI的说明.md)
+
+完整解压，双击 **启动工作台.cmd**。自带 Python，首次联网自动准备固定依赖，浏览器自动打开并查找战雷目录；之后可离线使用。无需预装 Python、Git 或 Blender。装饰校准、区域改色、部件分类、工程保存与颜色导出放在本地版，在线版保持纯预览。
+
+**制作前先告诉 AI：可以在这个工作台预览和检查涂装，并提供工具的完整解压路径。** 包内附可复制提示词及命令行说明。
+
 ## 选择适合的 Skill
 
 | 中文名称 | 适合做什么 | 正式下载 | 中文解读 |

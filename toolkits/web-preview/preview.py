@@ -77,6 +77,8 @@ def discover_clients(explicit=None, extra=()):
             valid[os.path.normcase(str(path))] = str(path)
     if explicit and os.path.normcase(str(Path(explicit).resolve())) not in valid:
         raise ValueError("指定目录不是可识别的战雷客户端（需要 content 和 aces/launcher）")
+    if explicit:
+        return [valid[os.path.normcase(str(Path(explicit).resolve()))]]
     return list(valid.values())
 
 
@@ -372,7 +374,7 @@ class PreviewHandler(SimpleHTTPRequestHandler):
         else:self.send_error(405)
 
 
-def serve(scene=None, port=0, work_dir=None, game_dir=None, extractor=None):
+def serve(scene=None, port=0, work_dir=None, game_dir=None, extractor=None, on_ready=None):
     if scene and not (Path(scene) / "scene.json").is_file():
         raise FileNotFoundError("场景目录缺少 scene.json")
     if not (ROOT / "web/vendor/three.module.js").is_file():
@@ -386,6 +388,8 @@ def serve(scene=None, port=0, work_dir=None, game_dir=None, extractor=None):
     with ThreadingHTTPServer(("127.0.0.1", port), partial(PreviewHandler, scene=scene,api=api)) as server:
         url = f"http://127.0.0.1:{server.server_port}/" + ("?scene=/scene/scene.json" if scene else "")
         print(json.dumps({"ok": True, "url": url, "stop": "Ctrl+C"}, ensure_ascii=False), flush=True)
+        if on_ready:
+            on_ready(url)
         try:
             server.serve_forever()
         except KeyboardInterrupt:

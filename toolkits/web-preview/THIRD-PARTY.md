@@ -1,0 +1,8 @@
+# Third-party components
+
+- Python 3.12.10 Windows embeddable x64: https://www.python.org/downloads/release/python-31210/ . Bundled without modification except the application search-path file; Python license is retained in `runtime/LICENSE.txt`. Embeddable application distribution: https://docs.python.org/3.12/using/windows.html#the-embeddable-package . No global Python installation or pip is required.
+- Three.js 0.180.0: MIT license retained at `web/vendor/LICENSE.txt`; recorded sources at `web/vendor/provenance.json`.
+- First launch downloads pinned Pillow, zstandard, PyQt5, PyQt5-Qt5 and PyQt5-sip wheels directly from the PyPI file URLs in `portable-lock.json`. Upstream distribution metadata and license files remain in `runtime/packages/*.dist-info/`. These wheels are fetched on the user's machine and are not included in this release ZIP.
+- First launch downloads Dagor Asset Explorer directly from https://github.com/quentin-dh/Dagor-Asset-Explorer at commit `1f0d1e04ded04bf9b28e8d5be93cb79714f505d3`. Its source, native libraries, README and requirements are kept under `extractor/vendor/dagor-asset-explorer/`; they are not redistributed in this release ZIP. Our existing headless adapter keeps the pinned decoder and substitutes the standard-library LZMA compatibility interface.
+
+`portable-lock.json` records HTTPS URLs, exact byte lengths and SHA-256 hashes. Downloads are bounded and verified before extraction; a local marker records the lock fingerprint only after the imports and native decoder have loaded. The package contains no game assets, private project paths or user credentials. Game files and original skin packages are read from the user's own machine.

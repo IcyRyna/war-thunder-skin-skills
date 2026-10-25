@@ -10,18 +10,17 @@
 
 涂装 ZIP／文件夹导入、游戏目录提取、装饰与图层编辑、区域改色、部件分类修正、工程及贴图导入导出均保留在本地工作台。下方本地启动和使用方法保持不变。
 
-## 本地启动
+## Windows 一键启动（推荐）
 
-Python 3.10+，资源解码目前需要 Windows x64。首次运行 `./extractor/setup.ps1`，准备固定版本 Dagor Asset Explorer 及 Pillow、zstandard、PyQt5。PyQt5 是现用解码器的导入依赖，不打开图形界面。包没有包含游戏模型或纹理，也尚未提供免 Python 的 EXE。
+**[下载 Windows x64 便携包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-paint-workbench/v1.0.0/wt-paint-workbench-windows-x64.zip)** · [本地版发行说明](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-paint-workbench/v1.0.0)
 
-```powershell
-python -B preview.py doctor
-python -B preview.py serve
-```
+完整解压 ZIP，双击 **启动工作台.cmd**，浏览器自动打开。无需预装 Python、Git、Blender 或管理员权限。包内自带 Python；首次联网下载约 70 MB 固定依赖并校验 SHA-256，之后可离线使用。自动识别战雷安装目录，找不到时弹窗选择。换目录前先停止服务，再双击 **选择战雷目录.cmd**。启动窗口按 Ctrl+C 结束本次服务。
 
-打开终端输出的本机网址。服务仅监听 `127.0.0.1`。默认查找 Steam 库与常见独立安装位置；多个安装副本时明确选择，找不到时指定 `--game-dir 'D:/Games/War Thunder'`。可指定 `--work-dir PATH` 保存导入工程；默认使用本机 LocalAppData 下的 WT-Paint-Workbench/imports。
+**制作前先告诉 AI：可以使用这个本地工作台预览模型和检查涂装，并给它完整解压路径。** 包内 [先读我](先读我.md) 有可复制提示词，[给AI的说明](给AI的说明.md) 给出启动、车型初始化、读取本机 URL 和检查流程。网页左侧也显示提醒。
 
-本工作区可用已维护的 `--extractor PATH/wt_assets.py`；候选也会按项目注册表寻找它。独立分发包用 setup 后的包内解码器。doctor 只证明入口可定位，实际提取才验证依赖齐全。
+源码运行仍支持 Python 3.10+：首次 `./extractor/setup.ps1`，再执行 `python -B preview.py serve`。源码方式要求系统 Python 和 Git；便携包不需要。资源解码目前支持 Windows x64。可用 `--game-dir` 指定安装目录，`--work-dir` 指定导入输出；默认输出 `%LOCALAPPDATA%/WT-Paint-Workbench/imports`。多个安装副本时明确选择；服务仅监听 127.0.0.1。
+
+自行构建：`python -B tools/build_windows.py --out 新包.zip`。运行时二进制仅作为 Release 附件，不进入 Git 历史；固定来源、哈希和第三方说明见 portable-lock.json 与 THIRD-PARTY.md。
 
 ## 导入现成涂装
 

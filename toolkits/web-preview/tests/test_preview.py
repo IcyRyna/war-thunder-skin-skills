@@ -11,6 +11,17 @@ spec.loader.exec_module(preview)
 
 
 class PreparationTests(unittest.TestCase):
+    def test_explicit_game_directory_wins_over_other_installs(self):
+        from unittest.mock import patch
+        from preview import discover_clients
+        with tempfile.TemporaryDirectory() as folder:
+            root = Path(folder)
+            for name in ('first', 'second'):
+                (root / name / 'content').mkdir(parents=True)
+                (root / name / 'aces.exe').write_bytes(b'')
+            with patch.dict('os.environ', {'WT_CLIENT': str(root / 'second')}):
+                self.assertEqual(discover_clients(root / 'first'), [str((root / 'first').resolve())])
+
     def setUp(self):
         self.temp = tempfile.TemporaryDirectory()
         self.root = Path(self.temp.name)
