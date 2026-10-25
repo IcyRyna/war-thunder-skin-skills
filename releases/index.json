@@ -6,7 +6,7 @@
     {
       "tag": "wt-style-endfield/v0.2.0",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0",
-      "published_at": null,
+      "published_at": "2026-10-25T18:51:11Z",
       "draft": false,
       "prerelease": true,
       "validation": {
@@ -19,6 +19,12 @@
           "bytes": 1347459,
           "digest": "sha256:1bd6cadcbba054239589e40c0542ef7c7e8123985f87510013c13abbbbcbfdbd",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.2.0/wt-style-endfield-v0.2.0.skill.zip"
+        },
+        {
+          "name": "wt-style-endfield-v0.2.0.assets.zip",
+          "bytes": 351067,
+          "digest": "sha256:6dc69fa794f2858b6b42cef949d582424f25cd3e8271b0eab175bc8e9ac7c08f",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.2.0/wt-style-endfield-v0.2.0.assets.zip"
         }
       ]
     },
