@@ -1,5 +1,9 @@
 # 终末地工业涂装 v0.2.0 · 发布候选
 
+按用户授权以 **发布候选（Pre-release）** 公开。[下载安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.2.0/wt-style-endfield-v0.2.0.skill.zip)：**1,347,459字节（约1.35MB）**，低于18MB限制。
+
+安装包SHA-256：`1bd6cadcbba054239589e40c0542ef7c7e8123985f87510013c13abbbbcbfdbd`。85个文件；包内验证记录为发布前构建快照，公开状态以本发布页为准。本次公开不改变独立复现待回传和游戏未实测的结论。
+
 以 A7V 原作为第一视觉范本，结合 A7HU、EMBT 的迁移经验及本轮选中的 WT Live 铠甲／社区 EMBT 观察，重建适用于地面载具的黑白灰、黄色方向与工业身份制作流程。
 
 - **按真实承载面构图。** 分配主识别、次识别、方向和安静机械面。宽主侧面把完整徽记、黄带与设备／三色微标安排到不同区域，保留连续底色；紧凑设备面保持成组层级。

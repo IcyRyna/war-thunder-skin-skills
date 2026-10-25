@@ -38,7 +38,7 @@
 
 ## 终末地 0.2.0 · 发布候选
 
-新版已完成本地候选与独立包检查，内置精选透明素材与固定工具；[构图、素材与验证范围](docs/skills/wt-style-endfield-0.2.0.md)。独立复现待回传，游戏未实测；准备工作不创建正式下载或恢复旧版推荐。
+**[下载 0.2.0 发布候选（1.35 MB）](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0)** · [构图、素材与验证范围](docs/skills/wt-style-endfield-0.2.0.md)。内置23张透明PNG、22份可编辑SVG及固定工具，安装包低于18MB。独立复现待回传，游戏未实测；旧版继续封存。
 
 ## 终末地旧版已封存
 

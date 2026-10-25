@@ -208,7 +208,16 @@
         "package_checks": "passed_local",
         "independent_reproduction": "awaiting_return",
         "game": "not_run",
-        "published": false
+        "published": true
+      },
+      "release": {
+        "version": "0.2.0",
+        "tag": "wt-style-endfield/v0.2.0",
+        "prerelease": true,
+        "package_sha256": "1bd6cadcbba054239589e40c0542ef7c7e8123985f87510013c13abbbbcbfdbd",
+        "package_bytes": 1347459,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.2.0/wt-style-endfield-v0.2.0.skill.zip"
       }
     },
     {

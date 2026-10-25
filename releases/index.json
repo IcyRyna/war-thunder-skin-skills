@@ -4,6 +4,25 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "wt-style-endfield/v0.2.0",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0",
+      "published_at": null,
+      "draft": false,
+      "prerelease": true,
+      "validation": {
+        "independent_reproduction": "awaiting_return",
+        "game": "not_run"
+      },
+      "assets": [
+        {
+          "name": "wt-style-endfield-v0.2.0.skill.zip",
+          "bytes": 1347459,
+          "digest": "sha256:1bd6cadcbba054239589e40c0542ef7c7e8123985f87510013c13abbbbcbfdbd",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-endfield/v0.2.0/wt-style-endfield-v0.2.0.skill.zip"
+        }
+      ]
+    },
+    {
       "tag": "wt-style-akamywek/v0.2.0",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0",
       "published_at": null,

@@ -12,6 +12,10 @@
 
 每条 Skill 版本线独立编号。终末地 0.1.x 和旧 1.x 已停止维护，全部移入[历史封存](../docs/history/endfield-archived.md)，不再列为当前安装入口。
 
+## 终末地 0.2.0 · 发布候选
+
+[下载当前0.2.0安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0)（1,347,459字节，约1.35MB）。内置透明素材与必要工具，旧版继续封存。独立复现尚未回传，游戏实测为 `not_run`；[完整验证范围](../docs/skills/wt-style-endfield-0.2.0.md)。
+
 ## 其他附件怎么选
 
 | 附件 | 用途 |
