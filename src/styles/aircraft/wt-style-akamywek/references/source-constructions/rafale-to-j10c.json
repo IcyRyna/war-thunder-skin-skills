@@ -1,0 +1,359 @@
+{
+  "source_panel_bounds_zx_m": [
+    [
+      1.0521298816836984,
+      1.2987052310221419
+    ],
+    [
+      2.274800214423943,
+      3.0733191496376326
+    ]
+  ],
+  "target_panel_bounds_zx_m": [
+    [
+      0.6620096233722573,
+      2.1732603346233765
+    ],
+    [
+      2.2209782370183566,
+      4.676175269746926
+    ]
+  ],
+  "semantic_frame": {
+    "source_corners_zx_m": [
+      [
+        1.2027432918548584,
+        3.073319911956787
+      ],
+      [
+        2.2744922637939453,
+        1.2987066507339478
+      ],
+      [
+        2.23834490776062,
+        1.835319995880127
+      ]
+    ],
+    "target_corners_zx_m": [
+      [
+        0.691416323184967,
+        4.6598358154296875
+      ],
+      [
+        2.2074170112609863,
+        2.173260450363159
+      ],
+      [
+        2.2208354473114014,
+        2.7731435298919678
+      ]
+    ],
+    "roles": [
+      "forward root",
+      "outboard aft tip",
+      "outboard forward corner"
+    ],
+    "selection": "Real projected hull corners, from source and target LOD0 main-material canards; no UV scaling or target-style answer supplied.",
+    "target_compound_inset": {
+      "factor": 0.95,
+      "pivot_zx_m": [
+        1.706556260585785,
+        3.202079931894938
+      ],
+      "attempts": [
+        {
+          "compound_inset_factor": 1.0,
+          "outside_edges_all_four_surfaces": 72
+        },
+        {
+          "compound_inset_factor": 0.995,
+          "outside_edges_all_four_surfaces": 60
+        },
+        {
+          "compound_inset_factor": 0.99,
+          "outside_edges_all_four_surfaces": 52
+        },
+        {
+          "compound_inset_factor": 0.98,
+          "outside_edges_all_four_surfaces": 32
+        },
+        {
+          "compound_inset_factor": 0.97,
+          "outside_edges_all_four_surfaces": 16
+        },
+        {
+          "compound_inset_factor": 0.95,
+          "outside_edges_all_four_surfaces": 0
+        }
+      ],
+      "meaning": "Whole-compound geometric contraction retains red/white independent endpoints and negative gap; target-specific fit, not a universal style ratio."
+    }
+  },
+  "fit_attempts": [
+    {
+      "compound_inset_factor": 1.0,
+      "outside_edges_all_four_surfaces": 72
+    },
+    {
+      "compound_inset_factor": 0.995,
+      "outside_edges_all_four_surfaces": 60
+    },
+    {
+      "compound_inset_factor": 0.99,
+      "outside_edges_all_four_surfaces": 52
+    },
+    {
+      "compound_inset_factor": 0.98,
+      "outside_edges_all_four_surfaces": 32
+    },
+    {
+      "compound_inset_factor": 0.97,
+      "outside_edges_all_four_surfaces": 16
+    },
+    {
+      "compound_inset_factor": 0.95,
+      "outside_edges_all_four_surfaces": 0
+    }
+  ],
+  "controls": {
+    "red": [
+      {
+        "source_atlas_xy": [
+          2044,
+          898
+        ],
+        "source_world_zx": [
+          2.19703117315611,
+          1.3742401807000968
+        ],
+        "panel_normalized_zx": [
+          0.9363941046205502,
+          0.042564159384529905
+        ],
+        "target_world_zx": [
+          2.0715009946518634,
+          2.3412182001518156
+        ],
+        "semantic_corner_weights": [
+          0.0760054965776301,
+          1.0345896511635688,
+          -0.11059514774119876
+        ]
+      },
+      {
+        "source_atlas_xy": [
+          1200,
+          1010
+        ],
+        "source_world_zx": [
+          1.2613271529986212,
+          2.8813115798537767
+        ],
+        "panel_normalized_zx": [
+          0.17109867289089334,
+          0.8918031872906443
+        ],
+        "target_world_zx": [
+          0.8086777914663594,
+          4.360137085857482
+        ],
+        "semantic_corner_weights": [
+          0.9520589833829913,
+          0.24721218500144979,
+          -0.19927116838444112
+        ]
+      },
+      {
+        "source_atlas_xy": [
+          1867,
+          966
+        ],
+        "source_world_zx": [
+          2.074691504966921,
+          1.7488821773031653
+        ],
+        "panel_normalized_zx": [
+          0.8363346978342566,
+          0.25367599203337715
+        ],
+        "target_world_zx": [
+          1.9292347910923182,
+          2.787794850177403
+        ],
+        "semantic_corner_weights": [
+          0.1779822546683933,
+          0.5716962458993583,
+          0.25032149943224846
+        ]
+      }
+    ],
+    "white": [
+      {
+        "source_atlas_xy": [
+          2066,
+          912
+        ],
+        "source_world_zx": [
+          2.247962208024099,
+          1.3565262085655698
+        ],
+        "panel_normalized_zx": [
+          0.9780496789026567,
+          0.03258228560978404
+        ],
+        "target_world_zx": [
+          2.14850993403332,
+          2.297459305871429
+        ],
+        "semantic_corner_weights": [
+          0.02377130522193866,
+          0.9470928477298763,
+          0.029135847048185018
+        ]
+      },
+      {
+        "source_atlas_xy": [
+          1871,
+          987
+        ],
+        "source_world_zx": [
+          2.1139772897915643,
+          1.7706209431670168
+        ],
+        "panel_normalized_zx": [
+          0.868465832264088,
+          0.26592584854346896
+        ],
+        "target_world_zx": [
+          1.9931893698293122,
+          2.7904430076326223
+        ],
+        "semantic_corner_weights": [
+          0.13518679869731567,
+          0.4324534606791106,
+          0.43235974062357363
+        ]
+      },
+      {
+        "source_atlas_xy": [
+          1156,
+          1034
+        ],
+        "source_world_zx": [
+          1.2414929841032951,
+          2.9835262740214716
+        ],
+        "panel_normalized_zx": [
+          0.15487666409243514,
+          0.9494014587205452
+        ],
+        "target_world_zx": [
+          0.7909478208917202,
+          4.47518473652296
+        ],
+        "semantic_corner_weights": [
+          0.9656576810216538,
+          0.08810412627618522,
+          -0.053761807297839026
+        ]
+      },
+      {
+        "source_atlas_xy": [
+          1884,
+          1025
+        ],
+        "source_world_zx": [
+          2.192644589396904,
+          1.800397958976181
+        ],
+        "panel_normalized_zx": [
+          0.932806396927198,
+          0.28270528180318066
+        ],
+        "target_world_zx": [
+          2.119485369221469,
+          2.7816041052474927
+        ],
+        "semantic_corner_weights": [
+          0.05046456762995309,
+          0.18150343869689028,
+          0.7680319936731566
+        ]
+      }
+    ]
+  },
+  "checks": [
+    {
+      "surface": "upper",
+      "node": "elevator0",
+      "shape": "white",
+      "edge_samples": 404,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "upper",
+      "node": "elevator0",
+      "shape": "red",
+      "edge_samples": 303,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "upper",
+      "node": "elevator1",
+      "shape": "white",
+      "edge_samples": 404,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "upper",
+      "node": "elevator1",
+      "shape": "red",
+      "edge_samples": 303,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "lower",
+      "node": "elevator0",
+      "shape": "white",
+      "edge_samples": 404,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "lower",
+      "node": "elevator0",
+      "shape": "red",
+      "edge_samples": 303,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "lower",
+      "node": "elevator1",
+      "shape": "white",
+      "edge_samples": 404,
+      "outside_carrier": 0,
+      "examples": []
+    },
+    {
+      "surface": "lower",
+      "node": "elevator1",
+      "shape": "red",
+      "edge_samples": 303,
+      "outside_carrier": 0,
+      "examples": []
+    }
+  ],
+  "zero_hit_items": [],
+  "validation_type": "Primary-agent development transfer; no new artist source supplied for target",
+  "limits": [
+    "No whole-aircraft design claim",
+    "Bounding-frame transfer is only accepted where actual target carrier checks and native view support it",
+    "Red shading is an approximate new gradient; not measured author material values",
+    "Upper/lower share the compound deliberately; no independent text layout claim"
+  ]
+}

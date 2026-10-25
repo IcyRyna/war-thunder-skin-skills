@@ -1,0 +1,1746 @@
+{
+  "schema_version": 1,
+  "status": "source-specific research, not production profiles",
+  "geometry": {
+    "f2a": {
+      "sha256": "509b75084faaa22f99f6c5ef66b73611a4247d4de99a2a7c981b72b25857aa8b",
+      "source": "Existing archived native geometry, no retired runtime restored",
+      "validation_scope": "selected node/surface mappings and static layout only"
+    },
+    "f16": {
+      "sha256": "7d2607da1aa5216faf3b6b54ea38869359fa577d58af3b4a561cd5f83d59dabc",
+      "source": "Existing archived native geometry, no retired runtime restored",
+      "validation_scope": "selected node/surface mappings and static layout only"
+    }
+  },
+  "selected_native_probes": [
+    {
+      "case": "f2a",
+      "label": "pink_face_top",
+      "atlas_pixel_xy": [
+        575,
+        1975
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "material_id=1",
+      "hits": [
+        {
+          "triangle_id": 79177,
+          "node": "wing_l",
+          "position_m": [
+            0.21008414193814454,
+            0.14505610382340883,
+            -2.4837248523401447
+          ],
+          "normal": [
+            0.04155436530709267,
+            0.9985496401786804,
+            -0.03423188999295235
+          ],
+          "surface_hint": "upper"
+        }
+      ]
+    },
+    {
+      "case": "f2a",
+      "label": "whitehair_face_other",
+      "atlas_pixel_xy": [
+        6230,
+        2270
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "material_id=1",
+      "hits": [
+        {
+          "triangle_id": 79207,
+          "node": "wing_l",
+          "position_m": [
+            -0.20727148283794372,
+            0.030050045311780203,
+            -2.1857613621150334
+          ],
+          "normal": [
+            -0.00791630707681179,
+            -0.9999338984489441,
+            -0.00833355076611042
+          ],
+          "surface_hint": "lower"
+        }
+      ]
+    },
+    {
+      "case": "f2a",
+      "label": "navy_face_other",
+      "atlas_pixel_xy": [
+        1980,
+        1555
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "material_id=1",
+      "hits": [
+        {
+          "triangle_id": 76857,
+          "node": "wing_r",
+          "position_m": [
+            0.4197276727417044,
+            0.021979662826787993,
+            1.8176314616510947
+          ],
+          "normal": [
+            -0.004683834034949541,
+            -0.9999533891677856,
+            0.008439410477876663
+          ],
+          "surface_hint": "lower"
+        }
+      ]
+    },
+    {
+      "case": "f2a",
+      "label": "fin_face_A",
+      "atlas_pixel_xy": [
+        5100,
+        1400
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "material_id=1",
+      "hits": [
+        {
+          "triangle_id": 254686,
+          "node": "tail",
+          "position_m": [
+            -4.755477592096662,
+            2.324923691099203,
+            -0.03369572800634409
+          ],
+          "normal": [
+            0.06810668110847473,
+            0.07530995458364487,
+            -0.9948315620422363
+          ],
+          "surface_hint": "side/curved"
+        }
+      ]
+    },
+    {
+      "case": "f2a",
+      "label": "fin_face_B",
+      "atlas_pixel_xy": [
+        5000,
+        2250
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "material_id=1",
+      "hits": [
+        {
+          "triangle_id": 254561,
+          "node": "tail",
+          "position_m": [
+            -5.188130029186546,
+            1.9323078148688153,
+            0.048748963307452535
+          ],
+          "normal": [
+            -0.024822870269417763,
+            -0.0028567868284881115,
+            0.9996877312660217
+          ],
+          "surface_hint": "side/curved"
+        }
+      ]
+    },
+    {
+      "case": "f16",
+      "label": "megumin_face_A",
+      "atlas_pixel_xy": [
+        420,
+        1125
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "single-atlas input geometry",
+      "hits": [
+        {
+          "triangle_id": 32910,
+          "node": "wing_r",
+          "position_m": [
+            -0.46794533148633055,
+            0.10789759856786514,
+            2.1002104928052785
+          ],
+          "normal": [
+            0.03123917430639267,
+            0.9988691210746765,
+            0.035841044038534164
+          ],
+          "surface_hint": "upper"
+        }
+      ]
+    },
+    {
+      "case": "f16",
+      "label": "megumin_face_B",
+      "atlas_pixel_xy": [
+        3350,
+        1440
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "single-atlas input geometry",
+      "hits": [
+        {
+          "triangle_id": 32775,
+          "node": "wing_r",
+          "position_m": [
+            -1.018212700614926,
+            -0.011219580280651748,
+            2.17546960787328
+          ],
+          "normal": [
+            -0.013085009530186653,
+            -0.9998669028282166,
+            0.009740193374454975
+          ],
+          "surface_hint": "lower"
+        }
+      ]
+    },
+    {
+      "case": "f16",
+      "label": "fin_face",
+      "atlas_pixel_xy": [
+        6300,
+        715
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "single-atlas input geometry",
+      "hits": [
+        {
+          "triangle_id": 70568,
+          "node": "tail",
+          "position_m": [
+            -5.522858620765762,
+            2.4755660484812956,
+            0.042014565085037016
+          ],
+          "normal": [
+            -0.02493930608034134,
+            -0.0029101171530783176,
+            0.9996846318244934
+          ],
+          "surface_hint": "side/curved"
+        }
+      ]
+    },
+    {
+      "case": "f16",
+      "label": "main_wing_instance_D",
+      "atlas_pixel_xy": [
+        3370,
+        575
+      ],
+      "UV_formula": "u=x/8191; v=1-y/8191",
+      "material_filter": "single-atlas input geometry",
+      "hits": [
+        {
+          "triangle_id": 31371,
+          "node": "wing_l",
+          "position_m": [
+            -1.5984009615117862,
+            0.07931247829208522,
+            -3.920698880638733
+          ],
+          "normal": [
+            -0.0014529356267303228,
+            0.9998427033424377,
+            -0.01767490990459919
+          ],
+          "surface_hint": "upper"
+        }
+      ]
+    }
+  ],
+  "verified_tailplane_faces": {
+    "supersedes": "Earlier (4510,685) is a stripe, not a face; retained as discarded diagnostic point. These two points were visually checked on the native atlas crop before probing.",
+    "probes": [
+      {
+        "case": "f16",
+        "landmark": "tailplane_face_A",
+        "source_xy": [
+          4260,
+          470
+        ],
+        "hits": [
+          {
+            "node": "elevator1",
+            "world": [
+              -5.292819116369459,
+              -0.13817671297695405,
+              2.0779470848453205
+            ],
+            "normal": [
+              0.017578911036252975,
+              0.9779099225997925,
+              0.20828603208065033
+            ]
+          }
+        ]
+      },
+      {
+        "case": "f16",
+        "landmark": "tailplane_face_B",
+        "source_xy": [
+          4270,
+          1290
+        ],
+        "hits": [
+          {
+            "node": "elevator1",
+            "world": [
+              -5.273937782680788,
+              -0.19467058649139557,
+              1.9532971529960865
+            ],
+            "normal": [
+              -0.006560962181538343,
+              -0.9887819886207581,
+              -0.14922167360782623
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "constructions": [
+    {
+      "box": [
+        2300,
+        2950,
+        5400,
+        4300
+      ],
+      "center_y": 748,
+      "outer": [
+        [
+          2250,
+          -396
+        ],
+        [
+          1815,
+          -396
+        ],
+        [
+          265,
+          -70
+        ],
+        [
+          420,
+          -27
+        ],
+        [
+          840,
+          -116
+        ],
+        [
+          1185,
+          -116
+        ],
+        [
+          840,
+          0
+        ],
+        [
+          1185,
+          116
+        ],
+        [
+          840,
+          116
+        ],
+        [
+          420,
+          27
+        ],
+        [
+          265,
+          70
+        ],
+        [
+          1815,
+          396
+        ],
+        [
+          2250,
+          396
+        ],
+        [
+          1055,
+          0
+        ]
+      ],
+      "holes_half": [
+        [
+          [
+            1355,
+            224
+          ],
+          [
+            1510,
+            224
+          ],
+          [
+            1780,
+            312
+          ]
+        ],
+        [
+          [
+            975,
+            142
+          ],
+          [
+            1265,
+            142
+          ],
+          [
+            1430,
+            196
+          ],
+          [
+            1225,
+            196
+          ]
+        ]
+      ],
+      "central_hole": null,
+      "color": [
+        233,
+        233,
+        235
+      ],
+      "mechanism": "14-vertex connected white field with two pairs of negative cutouts; center fold belongs to the exterior boundary.",
+      "source_dds_sha256": "c4395b1d0c2e4aa6245f72a6aa8daf669cfd37ab58eb0236a1ce00d665de3613",
+      "method": "Construction coordinates inferred from source measurement; opposite arms regularized by explicit reflection. Not a blind design or independent transfer.",
+      "holes": 4,
+      "source_mask_IoU": 0.9811063085639082,
+      "cutout_area_pixels": 42134
+    },
+    {
+      "box": [
+        1800,
+        6430,
+        5900,
+        8030
+      ],
+      "center_y": 774,
+      "outer": [
+        [
+          2825,
+          -396
+        ],
+        [
+          2385,
+          -396
+        ],
+        [
+          510,
+          0
+        ],
+        [
+          2385,
+          396
+        ],
+        [
+          2825,
+          396
+        ],
+        [
+          1630,
+          0
+        ]
+      ],
+      "holes_half": [
+        [
+          [
+            1935,
+            223
+          ],
+          [
+            2085,
+            223
+          ],
+          [
+            2340,
+            308
+          ]
+        ],
+        [
+          [
+            1995,
+            194
+          ],
+          [
+            1795,
+            194
+          ],
+          [
+            1555,
+            143
+          ],
+          [
+            1840,
+            143
+          ]
+        ]
+      ],
+      "central_hole": [
+        [
+          1750,
+          -114
+        ],
+        [
+          1410,
+          -114
+        ],
+        [
+          870,
+          0
+        ],
+        [
+          1410,
+          114
+        ],
+        [
+          1750,
+          114
+        ],
+        [
+          1410,
+          0
+        ]
+      ],
+      "color": [
+        224,
+        63,
+        84
+      ],
+      "mechanism": "6-vertex red field, two pairs of side cutouts plus a separate central knockout; surrounding black and inner white remain different layers.",
+      "source_dds_sha256": "19ea69dd15d917362f0597ef50bb8697a519a60d2be66a43aed13da10ce1ce5f",
+      "method": "Construction coordinates inferred from source measurement; opposite arms regularized by explicit reflection. Not a blind design or independent transfer.",
+      "holes": 5,
+      "source_mask_IoU": 0.9838486482020777,
+      "cutout_area_pixels": 140712
+    }
+  ],
+  "controlled_native": {
+    "independent_variable": "remove four internal cutouts from white field",
+    "changed_source_pixels": 42134,
+    "expected_cutout_pixels": 42134,
+    "unchanged_camera_and_geometry": true,
+    "outputs": [
+      {
+        "variant": "constructed",
+        "texture_sha256": "d18b621b27ca84a52e1df3644e15e44d8c2a99fe7264e7a2b6fdb2ccde008e39",
+        "output_sha256": "2a1551a3f95180e7a91b48a542e0d3b3e26e892d767cbb5917aee38045c5508f",
+        "camera_sha256": "153854c9ef97ef7eec20ac236170d87cc3ec309f19697f1357ae9b36dc5b238a",
+        "geometry_sha256": "509b75084faaa22f99f6c5ef66b73611a4247d4de99a2a7c981b72b25857aa8b"
+      },
+      {
+        "variant": "solid-ablation",
+        "texture_sha256": "dea57e2bde2a1f0e7a5b78518065ae9a34183b757be51fca2327450d932e8002",
+        "output_sha256": "13a46fc213ff4b4846584104d80412cf117457943f9e35aaf6a49b4343f7b75d",
+        "camera_sha256": "153854c9ef97ef7eec20ac236170d87cc3ec309f19697f1357ae9b36dc5b238a",
+        "geometry_sha256": "509b75084faaa22f99f6c5ef66b73611a4247d4de99a2a7c981b72b25857aa8b"
+      }
+    ],
+    "interpretation": "A source-construction ablation on actual F2A UV; supports the visual role of these cutouts, not new artwork mastery."
+  },
+  "f15_sequence": {
+    "source_box": [
+      2350,
+      5430,
+      4500,
+      7000
+    ],
+    "method": "chroma >14, not separated blue/gold thresholds",
+    "units": [
+      {
+        "component": 2,
+        "bbox_xywh": [
+          227,
+          227,
+          309,
+          259
+        ],
+        "area": 25257,
+        "points": [
+          [
+            227,
+            485
+          ],
+          [
+            325,
+            485
+          ],
+          [
+            535,
+            354
+          ],
+          [
+            325,
+            227
+          ],
+          [
+            229,
+            227
+          ],
+          [
+            439,
+            356
+          ],
+          [
+            272,
+            457
+          ],
+          [
+            270,
+            454
+          ],
+          [
+            269,
+            459
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 3,
+        "bbox_xywh": [
+          471,
+          227,
+          309,
+          259
+        ],
+        "area": 25149,
+        "points": [
+          [
+            471,
+            485
+          ],
+          [
+            566,
+            485
+          ],
+          [
+            779,
+            355
+          ],
+          [
+            573,
+            228
+          ],
+          [
+            473,
+            227
+          ],
+          [
+            684,
+            355
+          ],
+          [
+            641,
+            382
+          ],
+          [
+            634,
+            382
+          ],
+          [
+            637,
+            384
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 4,
+        "bbox_xywh": [
+          715,
+          226,
+          308,
+          260
+        ],
+        "area": 24772,
+        "points": [
+          [
+            715,
+            485
+          ],
+          [
+            811,
+            485
+          ],
+          [
+            1022,
+            355
+          ],
+          [
+            813,
+            227
+          ],
+          [
+            717,
+            227
+          ],
+          [
+            928,
+            356
+          ],
+          [
+            730,
+            476
+          ],
+          [
+            727,
+            474
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 5,
+        "bbox_xywh": [
+          961,
+          227,
+          307,
+          259
+        ],
+        "area": 24759,
+        "points": [
+          [
+            961,
+            485
+          ],
+          [
+            1054,
+            485
+          ],
+          [
+            1267,
+            354
+          ],
+          [
+            1057,
+            227
+          ],
+          [
+            963,
+            227
+          ],
+          [
+            1172,
+            356
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 6,
+        "bbox_xywh": [
+          1204,
+          226,
+          309,
+          260
+        ],
+        "area": 25171,
+        "points": [
+          [
+            1204,
+            485
+          ],
+          [
+            1299,
+            485
+          ],
+          [
+            1512,
+            355
+          ],
+          [
+            1384,
+            278
+          ],
+          [
+            1385,
+            274
+          ],
+          [
+            1379,
+            275
+          ],
+          [
+            1302,
+            227
+          ],
+          [
+            1206,
+            227
+          ],
+          [
+            1416,
+            356
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 7,
+        "bbox_xywh": [
+          1447,
+          226,
+          310,
+          260
+        ],
+        "area": 25232,
+        "points": [
+          [
+            1447,
+            485
+          ],
+          [
+            1543,
+            485
+          ],
+          [
+            1672,
+            406
+          ],
+          [
+            1681,
+            405
+          ],
+          [
+            1686,
+            397
+          ],
+          [
+            1756,
+            355
+          ],
+          [
+            1546,
+            227
+          ],
+          [
+            1450,
+            227
+          ],
+          [
+            1661,
+            355
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 49,
+        "bbox_xywh": [
+          1204,
+          938,
+          309,
+          264
+        ],
+        "area": 25196,
+        "points": [
+          [
+            1204,
+            1199
+          ],
+          [
+            1299,
+            1199
+          ],
+          [
+            1512,
+            1068
+          ],
+          [
+            1302,
+            941
+          ],
+          [
+            1206,
+            941
+          ],
+          [
+            1416,
+            1070
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 50,
+        "bbox_xywh": [
+          227,
+          941,
+          309,
+          259
+        ],
+        "area": 25242,
+        "points": [
+          [
+            227,
+            1199
+          ],
+          [
+            322,
+            1199
+          ],
+          [
+            535,
+            1069
+          ],
+          [
+            325,
+            941
+          ],
+          [
+            229,
+            941
+          ],
+          [
+            439,
+            1070
+          ],
+          [
+            392,
+            1099
+          ],
+          [
+            386,
+            1098
+          ],
+          [
+            382,
+            1105
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 51,
+        "bbox_xywh": [
+          471,
+          941,
+          308,
+          259
+        ],
+        "area": 25151,
+        "points": [
+          [
+            471,
+            1199
+          ],
+          [
+            567,
+            1199
+          ],
+          [
+            587,
+            1186
+          ],
+          [
+            589,
+            1189
+          ],
+          [
+            596,
+            1180
+          ],
+          [
+            778,
+            1068
+          ],
+          [
+            569,
+            941
+          ],
+          [
+            473,
+            941
+          ],
+          [
+            684,
+            1069
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 52,
+        "bbox_xywh": [
+          715,
+          941,
+          309,
+          259
+        ],
+        "area": 24792,
+        "points": [
+          [
+            715,
+            1199
+          ],
+          [
+            810,
+            1199
+          ],
+          [
+            1023,
+            1069
+          ],
+          [
+            813,
+            941
+          ],
+          [
+            717,
+            941
+          ],
+          [
+            928,
+            1070
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 53,
+        "bbox_xywh": [
+          961,
+          941,
+          307,
+          259
+        ],
+        "area": 24728,
+        "points": [
+          [
+            961,
+            1199
+          ],
+          [
+            1054,
+            1199
+          ],
+          [
+            1267,
+            1068
+          ],
+          [
+            1057,
+            941
+          ],
+          [
+            963,
+            941
+          ],
+          [
+            1172,
+            1070
+          ]
+        ],
+        "touches_roi": false
+      },
+      {
+        "component": 54,
+        "bbox_xywh": [
+          1447,
+          941,
+          310,
+          261
+        ],
+        "area": 25219,
+        "points": [
+          [
+            1447,
+            1199
+          ],
+          [
+            1543,
+            1199
+          ],
+          [
+            1756,
+            1069
+          ],
+          [
+            1546,
+            941
+          ],
+          [
+            1450,
+            941
+          ],
+          [
+            1578,
+            1019
+          ],
+          [
+            1574,
+            1020
+          ],
+          [
+            1586,
+            1023
+          ],
+          [
+            1661,
+            1069
+          ]
+        ],
+        "touches_roi": false
+      }
+    ],
+    "limit": "Original DDS threshold segmentation; edge anti-aliasing and near-gray gradient may fragment."
+  },
+  "f15_gradient": {
+    "source_box": [
+      5100,
+      5340,
+      8080,
+      7340
+    ],
+    "crop_y_band": [
+      1197,
+      1204
+    ],
+    "samples": [
+      {
+        "crop_x": 400,
+        "median_RGB": [
+          231.0,
+          172.0,
+          76.0
+        ]
+      },
+      {
+        "crop_x": 450,
+        "median_RGB": [
+          222.0,
+          167.0,
+          82.0
+        ]
+      },
+      {
+        "crop_x": 500,
+        "median_RGB": [
+          206.0,
+          158.0,
+          84.0
+        ]
+      },
+      {
+        "crop_x": 550,
+        "median_RGB": [
+          200.0,
+          154.0,
+          90.0
+        ]
+      },
+      {
+        "crop_x": 600,
+        "median_RGB": [
+          189.0,
+          146.0,
+          99.0
+        ]
+      },
+      {
+        "crop_x": 650,
+        "median_RGB": [
+          178.0,
+          138.0,
+          104.0
+        ]
+      },
+      {
+        "crop_x": 700,
+        "median_RGB": [
+          165.0,
+          130.0,
+          107.0
+        ]
+      },
+      {
+        "crop_x": 750,
+        "median_RGB": [
+          148.0,
+          119.0,
+          115.0
+        ]
+      },
+      {
+        "crop_x": 800,
+        "median_RGB": [
+          137.0,
+          111.0,
+          123.0
+        ]
+      },
+      {
+        "crop_x": 850,
+        "median_RGB": [
+          123.0,
+          102.0,
+          123.0
+        ]
+      },
+      {
+        "crop_x": 900,
+        "median_RGB": [
+          107.0,
+          93.0,
+          132.0
+        ]
+      },
+      {
+        "crop_x": 950,
+        "median_RGB": [
+          99.0,
+          85.0,
+          140.0
+        ]
+      },
+      {
+        "crop_x": 1000,
+        "median_RGB": [
+          82.0,
+          77.0,
+          140.0
+        ]
+      },
+      {
+        "crop_x": 1050,
+        "median_RGB": [
+          71.0,
+          69.0,
+          148.0
+        ]
+      },
+      {
+        "crop_x": 1100,
+        "median_RGB": [
+          57.0,
+          58.0,
+          148.0
+        ]
+      },
+      {
+        "crop_x": 1150,
+        "median_RGB": [
+          49.0,
+          52.0,
+          156.0
+        ]
+      },
+      {
+        "crop_x": 1200,
+        "median_RGB": [
+          33.0,
+          45.0,
+          159.0
+        ]
+      },
+      {
+        "crop_x": 1250,
+        "median_RGB": [
+          24.0,
+          40.0,
+          165.0
+        ]
+      },
+      {
+        "crop_x": 1300,
+        "median_RGB": [
+          16.0,
+          36.0,
+          165.0
+        ]
+      }
+    ],
+    "RGB_linear_fit_per_pixel_slope": [
+      -0.249157894736842,
+      -0.16154385964912274,
+      0.10403508771929827
+    ],
+    "rms_RGB": 2.789628154169465,
+    "scope": "This sampled strip of the source printed gradient only, not a global color palette or physical material."
+  },
+  "su27_strip": {
+    "source_x_band": [
+      5450,
+      5550
+    ],
+    "method": "per-row median of 100 atlas pixels; class runs, not inferred physical dimensions",
+    "runs": [
+      {
+        "class": "other",
+        "source_y": [
+          3730,
+          3762
+        ],
+        "median_RGB": [
+          210.0,
+          209.0,
+          210.0
+        ]
+      },
+      {
+        "class": "white",
+        "source_y": [
+          3762,
+          3783
+        ],
+        "median_RGB": [
+          255.0,
+          255.0,
+          255.0
+        ]
+      },
+      {
+        "class": "pink",
+        "source_y": [
+          3783,
+          3842
+        ],
+        "median_RGB": [
+          255.0,
+          170.0,
+          187.0
+        ]
+      },
+      {
+        "class": "other",
+        "source_y": [
+          3842,
+          3890
+        ],
+        "median_RGB": [
+          211.0,
+          210.0,
+          211.0
+        ]
+      }
+    ]
+  },
+  "portrait_exercise": {
+    "kind": "same-known-vehicle new-source-pose exercise, primary agent self-run",
+    "sources": [
+      {
+        "file": "first-megumin.png",
+        "url": "https://konosuba.com/1st/character/img/megumin.png",
+        "page": "https://konosuba.com/1st/character/",
+        "sha256": "5b0ae152c755167a01b0bcafe756eb76823b906eb2a2b389847cc4def588b59d",
+        "dimensions": [
+          980,
+          785
+        ],
+        "use": "local layout exercise only; official character art not included in production Skill"
+      },
+      {
+        "file": "bakuen-megumin.png",
+        "url": "https://konosuba.com/bakuen/character/img/megmin.png",
+        "page": "https://konosuba.com/bakuen/character/",
+        "sha256": "d37ddc03556925a5b1ec59e8aa02a3f85591a0e3669c7272c8ae6b3917551476",
+        "dimensions": [
+          488,
+          689
+        ],
+        "use": "local layout exercise only; official character art not included in production Skill"
+      }
+    ],
+    "controlled_AB": {
+      "source_art": "Two official character sheets; profile isolated from an existing alpha component, dynamic pose kept whole. Low source resolution limits final print-quality claims.",
+      "frozen_variable": "Both portrait centers move only in longitudinal world X; source, width, rotation, geometry, background and camera unchanged.",
+      "variants": {
+        "A": -0.3,
+        "B": -1.5
+      },
+      "source_crop_profile": [
+        21,
+        120,
+        244,
+        696
+      ],
+      "results": [
+        {
+          "variant": "A",
+          "center_x": -0.3,
+          "checks": [
+            {
+              "id": "profile",
+              "critical_source_pixels": 23952,
+              "missing_carrier_before_bake": 18603,
+              "missing_examples_world_zx": [
+                [
+                  -2.713004484304933,
+                  1.3115470852017936
+                ],
+                [
+                  -2.7073991031390134,
+                  1.3115470852017936
+                ],
+                [
+                  -2.7242152466367715,
+                  1.3059417040358743
+                ],
+                [
+                  -2.718609865470852,
+                  1.3059417040358743
+                ],
+                [
+                  -2.713004484304933,
+                  1.3059417040358743
+                ],
+                [
+                  -2.7073991031390134,
+                  1.3059417040358743
+                ],
+                [
+                  -2.701793721973094,
+                  1.3059417040358743
+                ],
+                [
+                  -2.6961883408071747,
+                  1.3059417040358743
+                ],
+                [
+                  -2.6905829596412554,
+                  1.3059417040358743
+                ],
+                [
+                  -2.7298206278026904,
+                  1.3003363228699552
+                ],
+                [
+                  -2.7242152466367715,
+                  1.3003363228699552
+                ],
+                [
+                  -2.718609865470852,
+                  1.3003363228699552
+                ]
+              ],
+              "scope": "Only declared source head/hat/hand opaque region; not whole silhouette or 3D occlusion",
+              "source_sha256": "d8b0ce5887fdbab31a43f7bb4a869dcb78f671695fd4f69ccaa5fe0aaf7c6c40",
+              "missing_carrier": 18603,
+              "low_actual_export_alpha": 0
+            },
+            {
+              "id": "bakuen",
+              "critical_source_pixels": 32189,
+              "missing_carrier_before_bake": 25735,
+              "missing_examples_world_zx": [
+                [
+                  2.6927766393442623,
+                  1.3888319672131146
+                ],
+                [
+                  2.6819159836065576,
+                  1.3834016393442623
+                ],
+                [
+                  2.6873463114754097,
+                  1.3834016393442623
+                ],
+                [
+                  2.6927766393442623,
+                  1.3834016393442623
+                ],
+                [
+                  2.698206967213115,
+                  1.3834016393442623
+                ],
+                [
+                  2.6764856557377046,
+                  1.3779713114754097
+                ],
+                [
+                  2.6819159836065576,
+                  1.3779713114754097
+                ],
+                [
+                  2.6873463114754097,
+                  1.3779713114754097
+                ],
+                [
+                  2.6927766393442623,
+                  1.3779713114754097
+                ],
+                [
+                  2.698206967213115,
+                  1.3779713114754097
+                ],
+                [
+                  2.665625,
+                  1.3725409836065572
+                ],
+                [
+                  2.6710553278688525,
+                  1.3725409836065572
+                ]
+              ],
+              "scope": "Only declared source head/hat/hand opaque region; not whole silhouette or 3D occlusion",
+              "source_sha256": "d37ddc03556925a5b1ec59e8aa02a3f85591a0e3669c7272c8ae6b3917551476",
+              "missing_carrier": 25735,
+              "low_actual_export_alpha": 0
+            }
+          ],
+          "zero_hit_items": []
+        },
+        {
+          "variant": "B",
+          "center_x": -1.5,
+          "checks": [
+            {
+              "id": "profile",
+              "critical_source_pixels": 23952,
+              "missing_carrier_before_bake": 0,
+              "missing_examples_world_zx": [],
+              "scope": "Only declared source head/hat/hand opaque region; not whole silhouette or 3D occlusion",
+              "source_sha256": "d8b0ce5887fdbab31a43f7bb4a869dcb78f671695fd4f69ccaa5fe0aaf7c6c40",
+              "missing_carrier": 0,
+              "low_actual_export_alpha": 0
+            },
+            {
+              "id": "bakuen",
+              "critical_source_pixels": 32189,
+              "missing_carrier_before_bake": 0,
+              "missing_examples_world_zx": [],
+              "scope": "Only declared source head/hat/hand opaque region; not whole silhouette or 3D occlusion",
+              "source_sha256": "d37ddc03556925a5b1ec59e8aa02a3f85591a0e3669c7272c8ae6b3917551476",
+              "missing_carrier": 0,
+              "low_actual_export_alpha": 0
+            }
+          ],
+          "zero_hit_items": []
+        }
+      ]
+    },
+    "refinements": {
+      "C": {
+        "kind": "multi-variable exploratory refinement, not the controlled A/B experiment",
+        "reason": "B preserves head/hat/gesture but cuts legs and leaves small heads in large empty fields. C declares upper-body roles and aligns art to swept wings instead of shrinking full bodies further.",
+        "checks": [
+          {
+            "id": "profile",
+            "core_source_pixels": 23952,
+            "missing_carrier": 2454,
+            "examples_world_zx": [
+              [
+                -1.400883883322836,
+                -0.2663452105598605
+              ],
+              [
+                -1.3984611643207576,
+                -0.28008513279038993
+              ],
+              [
+                -1.3903798437044537,
+                -0.28574373440461565
+              ],
+              [
+                -1.3960384453186792,
+                -0.2938250550209198
+              ],
+              [
+                -1.3879571247023752,
+                -0.2994836566351453
+              ],
+              [
+                -1.3798758040860712,
+                -0.3051422582493708
+              ],
+              [
+                -1.4016970469329046,
+                -0.30190637563722356
+              ],
+              [
+                -1.3936157263166007,
+                -0.30756497725144905
+              ],
+              [
+                -1.3855344057002967,
+                -0.31322357886567453
+              ],
+              [
+                -1.3774530850839928,
+                -0.31888218047990025
+              ],
+              [
+                -1.3693717644676888,
+                -0.32454078209412573
+              ],
+              [
+                -1.3992743279308266,
+                -0.3156462978677532
+              ]
+            ],
+            "source_crop": [
+              0,
+              0,
+              223,
+              350
+            ],
+            "center_world_zx": [
+              -2.2,
+              -1.7
+            ],
+            "width_m": 2.2,
+            "rotation_deg": -35,
+            "low_actual_export_alpha": 0
+          },
+          {
+            "id": "bakuen",
+            "core_source_pixels": 32189,
+            "missing_carrier": 0,
+            "examples_world_zx": [],
+            "source_crop": [
+              0,
+              0,
+              488,
+              430
+            ],
+            "center_world_zx": [
+              2.6,
+              -1.5
+            ],
+            "width_m": 3.4,
+            "rotation_deg": 35,
+            "low_actual_export_alpha": 0
+          }
+        ],
+        "zero_hit_items": [],
+        "not_claimed": [
+          "independent unseen transfer",
+          "whole source silhouette retained",
+          "finished visual acceptance",
+          "game rendering"
+        ]
+      },
+      "D": {
+        "kind": "multi-variable exploratory refinement, not the controlled A/B experiment",
+        "reason": "B preserves selected key regions but leaves unwanted leg cuts. C declares upper-body roles and opposing rotation, but clips 2454 left key-region source pixels. D keeps the same key masks and right placement, adjusts left width/center and adds separate small captions; combination effect, not a one-variable attribution.",
+        "checks": [
+          {
+            "id": "profile",
+            "core_source_pixels": 23952,
+            "missing_carrier": 0,
+            "examples_world_zx": [],
+            "source_crop": [
+              0,
+              0,
+              223,
+              350
+            ],
+            "center_world_zx": [
+              -2.6,
+              -1.9
+            ],
+            "width_m": 1.8,
+            "rotation_deg": -35,
+            "low_actual_export_alpha": 0
+          },
+          {
+            "id": "bakuen",
+            "core_source_pixels": 32189,
+            "missing_carrier": 0,
+            "examples_world_zx": [],
+            "source_crop": [
+              0,
+              0,
+              488,
+              430
+            ],
+            "center_world_zx": [
+              2.6,
+              -1.5
+            ],
+            "width_m": 3.4,
+            "rotation_deg": 35,
+            "low_actual_export_alpha": 0
+          }
+        ],
+        "zero_hit_items": [],
+        "not_claimed": [
+          "independent unseen transfer",
+          "whole source silhouette retained",
+          "finished visual acceptance",
+          "game rendering"
+        ]
+      },
+      "E": {
+        "kind": "multi-variable exploratory refinement, not the controlled A/B experiment",
+        "reason": "B preserves selected key regions but leaves unwanted leg cuts. C declares upper-body roles and opposing rotation, but clips 2454 left key-region source pixels. D preserves selected key pixels but still leaves the figures low and small. E uses explicit bust crops and moves the two prints forward while retaining the same original critical source pixels, rotations and visual roles. Combination refinement, not a one-variable causal claim.",
+        "checks": [
+          {
+            "id": "profile",
+            "core_source_pixels": 23952,
+            "missing_carrier": 0,
+            "examples_world_zx": [],
+            "source_crop": [
+              0,
+              0,
+              223,
+              230
+            ],
+            "center_world_zx": [
+              -2.6,
+              -1.2
+            ],
+            "width_m": 2.2,
+            "rotation_deg": -35,
+            "low_actual_export_alpha": 0
+          },
+          {
+            "id": "bakuen",
+            "core_source_pixels": 32189,
+            "missing_carrier": 0,
+            "examples_world_zx": [],
+            "source_crop": [
+              0,
+              0,
+              488,
+              300
+            ],
+            "center_world_zx": [
+              2.5,
+              -1.2
+            ],
+            "width_m": 3.4,
+            "rotation_deg": 35,
+            "low_actual_export_alpha": 0
+          }
+        ],
+        "zero_hit_items": [],
+        "not_claimed": [
+          "independent unseen transfer",
+          "whole source silhouette retained",
+          "finished visual acceptance",
+          "game rendering"
+        ]
+      }
+    },
+    "visual_judgement": {
+      "A": "failed: head/hat/gesture off surface",
+      "B": "failed as final composition: leg cuts and small figures despite selected-core retention",
+      "C": "failed: left selected core still clipped",
+      "D": "not accepted as completed composition: figures remain low/small",
+      "E": "not accepted as completed composition: safe selected anatomy and declared bust crops, but large quiet fields and overall balance still need work"
+    },
+    "limits": [
+      "No new game package or finished artwork claimed",
+      "Only upper wing local study; original other surfaces retained",
+      "Source art resolution is limited",
+      "No independent repetition or unseen target"
+    ]
+  }
+}

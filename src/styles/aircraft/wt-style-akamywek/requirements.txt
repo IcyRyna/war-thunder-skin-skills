@@ -1,0 +1,9 @@
+Pillow>=10
+numpy>=1.26
+numba>=0.59
+scipy>=1.11
+requests>=2.31
+opencv-python-headless>=4.8
+# Optional native Adobe Photoshop on Windows: pywin32 (only for Photoshop COM).
+# Blender tools run inside the external Blender's bundled Python/NumPy.
+# Built-in imagegen is discovered at runtime; this file does not configure a paid API fallback.

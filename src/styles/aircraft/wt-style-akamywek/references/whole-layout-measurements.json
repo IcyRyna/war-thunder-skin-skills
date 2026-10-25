@@ -1,0 +1,503 @@
+{
+  "su27": {
+    "geometry_sha256": "50f3d8a3aa8724b13150c0ecf1d4c083df4fb7dfcaacab0d58e1e1e35ea36a85",
+    "reading": "One oversized active pose crosses the broad blended dorsal/wing-root area; the smaller opposite portrait counterbalances it. A diagonal title bridges the upper scene. Cyan outer shoulders are a frame, not a central nested spear.",
+    "landmarks": [
+      {
+        "pixel": [
+          775,
+          884
+        ],
+        "triangle": 135709,
+        "node": "fuse",
+        "world_xyz_m": [
+          0.01936620464169914,
+          0.21812122041889198,
+          -2.288687081453278
+        ],
+        "normal": [
+          -0.04613403550487872,
+          0.9964297261791057,
+          -0.07070679991816016
+        ],
+        "atlas_pixel_xy": [
+          1790.8020444178771,
+          132.60848657118387
+        ],
+        "approx_face_box_pixels": [
+          731,
+          849,
+          824,
+          923
+        ],
+        "approx_face_box_width_m": 1.7096211410150295,
+        "body_direction_pixel": [
+          827,
+          1018
+        ]
+      },
+      {
+        "pixel": [
+          1114,
+          932
+        ],
+        "triangle": 28953,
+        "node": "wing_r",
+        "world_xyz_m": [
+          -0.8630189003983161,
+          0.14955403119249575,
+          3.943157722891832
+        ],
+        "normal": [
+          -0.0034646770653881977,
+          0.9992341000333923,
+          0.03897703610190189
+        ],
+        "atlas_pixel_xy": [
+          1761.4245698499133,
+          7238.198641753109
+        ],
+        "approx_face_box_pixels": [
+          1084,
+          903,
+          1146,
+          964
+        ],
+        "approx_face_box_width_m": 1.139747427343353,
+        "body_direction_pixel": [
+          1170,
+          1040
+        ]
+      }
+    ],
+    "measurement_limits": "Manual approximate face boxes on a flat native top view; landmark mapping is exact for the selected displayed texel only. Not whole-figure segmentation, full 3D visibility or a universal face-size threshold."
+  },
+  "f15": {
+    "geometry_sha256": "ab2073ba1b66a8724ad7a9b7844fdcaab21b6eb414dd51874aa5696cf91cc82c",
+    "reading": "The left wing uses a smaller figure inside a large gold/blue illustrated field and fine frames; the right uses a taller figure and long pale garment. White dorsal channels and rear tapered colour fans separate the dense wings.",
+    "landmarks": [
+      {
+        "pixel": [
+          670,
+          877
+        ],
+        "triangle": 6066,
+        "node": "wing_l",
+        "world_xyz_m": [
+          -1.0501813074437578,
+          0.8622662669151018,
+          -3.6226497138418807
+        ],
+        "normal": [
+          0.07318597657264407,
+          0.9914366579213104,
+          -0.10815343805414078
+        ],
+        "atlas_pixel_xy": [
+          2809.9168754409757,
+          1366.0821872336758
+        ],
+        "approx_face_box_pixels": [
+          650,
+          854,
+          691,
+          899
+        ],
+        "approx_face_box_width_m": 0.6471836090087891,
+        "body_direction_pixel": [
+          695,
+          975
+        ]
+      },
+      {
+        "pixel": [
+          1062,
+          832
+        ],
+        "triangle": 11384,
+        "node": "wing_r",
+        "world_xyz_m": [
+          -0.3398578341414293,
+          0.9204462659605835,
+          2.565056986925078
+        ],
+        "normal": [
+          0.05130217042366408,
+          0.9950155165352709,
+          0.08551145633112202
+        ],
+        "atlas_pixel_xy": [
+          3075.3243435581085,
+          3768.084183111009
+        ],
+        "approx_face_box_pixels": [
+          1038,
+          807,
+          1086,
+          855
+        ],
+        "approx_face_box_width_m": 0.7576783715224847,
+        "body_direction_pixel": [
+          1110,
+          955
+        ]
+      }
+    ],
+    "measurement_limits": "Manual approximate face boxes on a flat native top view; landmark mapping is exact for the selected displayed texel only. Not whole-figure segmentation, full 3D visibility or a universal face-size threshold."
+  },
+  "rafale": {
+    "geometry_sha256": "a7dbcd3d86db09d965834ad1cb37118ec363e295ca18c72825b327d99bbce320",
+    "reading": "Distinct seated/reclining poses follow different wing diagonals; hair, legs and props expand laterally. Black longitudinal text lanes remain between the portraits; the canards carry compact self-contained red/white edge forms and a short title.",
+    "landmarks": [
+      {
+        "pixel": [
+          721,
+          860
+        ],
+        "triangle": 6157,
+        "node": "wing_l",
+        "world_xyz_m": [
+          -0.8815203220863654,
+          0.011652004575700306,
+          -2.218479440270401
+        ],
+        "normal": [
+          0.01636760877868041,
+          0.9957559460800258,
+          -0.09056598273712342
+        ],
+        "atlas_pixel_xy": [
+          2602.1709084212457,
+          3897.094137203989
+        ],
+        "approx_face_box_pixels": [
+          694,
+          831,
+          750,
+          884
+        ],
+        "approx_face_box_width_m": 0.6959936994847243,
+        "body_direction_pixel": [
+          657,
+          1000
+        ]
+      },
+      {
+        "pixel": [
+          1086,
+          866
+        ],
+        "triangle": 1278,
+        "node": "wing_r",
+        "world_xyz_m": [
+          -0.9560910756025861,
+          0.003841030741165628,
+          2.317908065299677
+        ],
+        "normal": [
+          0.016367830350694845,
+          0.9957561955275681,
+          0.09056320002116888
+        ],
+        "atlas_pixel_xy": [
+          2556.620762850777,
+          6505.51649907572
+        ],
+        "approx_face_box_pixels": [
+          1059,
+          840,
+          1107,
+          892
+        ],
+        "approx_face_box_width_m": 0.5965660281297637,
+        "body_direction_pixel": [
+          1200,
+          1005
+        ]
+      }
+    ],
+    "measurement_limits": "Manual approximate face boxes on a flat native top view; landmark mapping is exact for the selected displayed texel only. Not whole-figure segmentation, full 3D visibility or a universal face-size threshold."
+  },
+  "f16a": {
+    "geometry_sha256": "51fcb3e8245a1c306de882b97c2df0fecaff3e46887237261948acbe0e436f3a",
+    "reading": "Two large upper-body prints dominate warm wing fields; hats approach the swept leading edges and bodies reach the trailing boundary. Sloped outer titles flank the portraits. Nested axial red/dark/white geometry and long shoulder lettering remain separate.",
+    "landmarks": [
+      {
+        "pixel": [
+          716,
+          858
+        ],
+        "triangle": 31963,
+        "node": "wing_l",
+        "world_xyz_m": [
+          -0.3842836205552267,
+          0.0993495452055839,
+          -2.2626919537055783
+        ],
+        "normal": [
+          0.055078771549727235,
+          0.9972031570952077,
+          -0.050519228061437056
+        ],
+        "atlas_pixel_xy": [
+          2414.0489597074265,
+          1272.9445985370376
+        ],
+        "approx_face_box_pixels": [
+          694,
+          837,
+          742,
+          883
+        ],
+        "approx_face_box_width_m": 0.5918756996713033,
+        "body_direction_pixel": [
+          711,
+          983
+        ]
+      },
+      {
+        "pixel": [
+          1076,
+          861
+        ],
+        "triangle": 33556,
+        "node": "wing_r",
+        "world_xyz_m": [
+          -0.421275851784683,
+          0.10370605379562617,
+          2.176375793829197
+        ],
+        "normal": [
+          0.031251404772740424,
+          0.9988687163824032,
+          0.03584183494606114
+        ],
+        "atlas_pixel_xy": [
+          463.22869494530124,
+          1098.1107418102165
+        ],
+        "approx_face_box_pixels": [
+          1056,
+          840,
+          1102,
+          887
+        ],
+        "approx_face_box_width_m": 0.567214212184999,
+        "body_direction_pixel": [
+          1085,
+          983
+        ]
+      }
+    ],
+    "measurement_limits": "Manual approximate face boxes on a flat native top view; landmark mapping is exact for the selected displayed texel only. Not whole-figure segmentation, full 3D visibility or a universal face-size threshold."
+  },
+  "rafale_canard_groups": [
+    {
+      "group": "rafale-canard-A",
+      "selected_components": [
+        {
+          "component": 0,
+          "area_pixels": 19260,
+          "centroid_atlas_xy": [
+            1701.1644859813084,
+            958.320041536864
+          ],
+          "hits": [
+            {
+              "triangle": 625,
+              "node": "elevator0",
+              "world_xyz_m": [
+                2.007803909032562,
+                0.43882788076558193,
+                -1.8427567254385449
+              ],
+              "normal": [
+                -0.03870026849735912,
+                0.9991864928574501,
+                -0.011342032862812917
+              ],
+              "material_id": 1
+            }
+          ]
+        },
+        {
+          "component": 1,
+          "area_pixels": 19277,
+          "centroid_atlas_xy": [
+            1701.1423458006952,
+            1163.7458110701873
+          ],
+          "hits": [
+            {
+              "triangle": 541,
+              "node": "elevator0",
+              "world_xyz_m": [
+                2.003119846748138,
+                0.393817427579286,
+                -1.8369405637652192
+              ],
+              "normal": [
+                -0.03870026849688905,
+                -0.9991865105232582,
+                -0.011340476472494965
+              ],
+              "material_id": 1
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "group": "rafale-canard-B",
+      "selected_components": [
+        {
+          "component": 0,
+          "area_pixels": 19258,
+          "centroid_atlas_xy": [
+            3613.416761865199,
+            3039.3077682002286
+          ],
+          "hits": [
+            {
+              "triangle": 133,
+              "node": "elevator1",
+              "world_xyz_m": [
+                1.9890268306470182,
+                0.3944824799224077,
+                1.8472644119337982
+              ],
+              "normal": [
+                -0.03870026164708854,
+                -0.9991864982656449,
+                0.011341579787902633
+              ],
+              "material_id": 1
+            }
+          ]
+        },
+        {
+          "component": 1,
+          "area_pixels": 19278,
+          "centroid_atlas_xy": [
+            3613.0077808901337,
+            3244.7362796970638
+          ],
+          "hits": [
+            {
+              "triangle": 217,
+              "node": "elevator1",
+              "world_xyz_m": [
+                1.995547768578365,
+                0.4382029749016232,
+                1.8540532259857918
+              ],
+              "normal": [
+                -0.03856375158338256,
+                0.9991919081483801,
+                0.01132994945329683
+              ],
+              "material_id": 1
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "native_models": {
+    "su27": {
+      "model": "su_27",
+      "lod": 0,
+      "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+      "geometry_sha256": "62ac840ed08de32910e1f684ba3e9fa669436e8e243643fb75aff8bf54d2d0a3",
+      "triangles": 688990,
+      "coordinates": "Native X/Y, reflected Z; assembly transforms applied. Original decoded UV; no clamp, V flip, rescale or re-unwrapping.",
+      "limits": "Static bind pose; no animation/simulation, shader or game validation. No original source files modified.",
+      "selected_resource_hashes": [
+        {
+          "name": "su_27_skeleton",
+          "sha256": "b46284576393e0815067037dbc8e460b03e4bd081b726a540b3f364e3c332e7a"
+        },
+        {
+          "name": "su_27",
+          "sha256": "d3211a9e7b1916df9d4e5899c5d6c2aeb6edb66695a3252c85394a3f77651fd7"
+        }
+      ]
+    },
+    "f15": {
+      "model": "f_15a",
+      "lod": 0,
+      "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+      "geometry_sha256": "04fcea3d9b1e9cf5d71a33822d71c154abdf4ec8726fdda48f223c4be4c7cbd0",
+      "triangles": 399734,
+      "coordinates": "Native X/Y, reflected Z; assembly transforms applied. Original decoded UV; no clamp, V flip, rescale or re-unwrapping.",
+      "limits": "Static bind pose; no animation/simulation, shader or game validation. No original source files modified.",
+      "selected_resource_hashes": [
+        {
+          "name": "f_15a_skeleton",
+          "sha256": "932c99acd9321011abd4c7e729fa3ad017c228f21856aea6fb72364811b5aa89"
+        },
+        {
+          "name": "f_15a",
+          "sha256": "f1bdecddc9316fb680780a662ee22f498b8478f2188d341ae31fbbc0fd6134db"
+        }
+      ]
+    },
+    "rafale": {
+      "model": "rafale_c_f3",
+      "lod": 0,
+      "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+      "geometry_sha256": "611ad3dd65a4452db96fe956013d1deab80c87d4b9159fcf8baca2e5f55af18e",
+      "triangles": 340094,
+      "coordinates": "Native X/Y, reflected Z; assembly transforms applied. Original decoded UV; no clamp, V flip, rescale or re-unwrapping.",
+      "limits": "Static bind pose; no animation/simulation, shader or game validation. No original source files modified.",
+      "selected_resource_hashes": [
+        {
+          "name": "rafale_c_f3_skeleton",
+          "sha256": "fde6c44033e552468283a34617b57de1b82015023942818ae004d49ffdc7f71e"
+        },
+        {
+          "name": "rafale_c_f3",
+          "sha256": "8332c9318adf0a1771035172376d2da9834803213e6d8e3257e1437a204203ab"
+        }
+      ]
+    },
+    "f16a": {
+      "model": "f_16a_block_10",
+      "lod": 0,
+      "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+      "geometry_sha256": "5b078890d85b8682c7a61cb1fc97e21bffb931c43da0a35cd0005858e71d74c8",
+      "triangles": 341896,
+      "coordinates": "Native X/Y, reflected Z; assembly transforms applied. Original decoded UV; no clamp, V flip, rescale or re-unwrapping.",
+      "limits": "Static bind pose; no animation/simulation, shader or game validation. No original source files modified.",
+      "selected_resource_hashes": [
+        {
+          "name": "f_16a_block_10_skeleton",
+          "sha256": "ec1faeb58e5a6c1f2b2de6bc04a907209b1c64d00bfe34fca878484273203544"
+        },
+        {
+          "name": "f_16a_block_10",
+          "sha256": "5cc94807450ba5b5c693a6a64f0c63377c472e2dfb0e6e017addad5fd2066593"
+        }
+      ]
+    },
+    "j10c": {
+      "model": "j_10c",
+      "lod": 0,
+      "decoder_revision": "1f0d1e04ded04bf9b28e8d5be93cb79714f505d3",
+      "geometry_sha256": "e02447fdff3da2f17f05772b3e92034da0d614ccb071b34eebc124c4520b35e8",
+      "triangles": 681098,
+      "coordinates": "Native X/Y, reflected Z; assembly transforms applied. Original decoded UV; no clamp, V flip, rescale or re-unwrapping.",
+      "limits": "Static bind pose; no animation/simulation, shader or game validation. No original source files modified.",
+      "selected_resource_hashes": [
+        {
+          "name": "j_10c_skeleton",
+          "sha256": "ec45d526c511282c0b1e08c5d8fcc7a5366b9d73bbb902c9d9280fb44055ffee"
+        },
+        {
+          "name": "j_10c",
+          "sha256": "74aa9ebd47426faf098245d245b758e18d1d2380dffa97d211166210d72e8ccf"
+        }
+      ]
+    }
+  }
+}

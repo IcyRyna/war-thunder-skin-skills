@@ -1,0 +1,106 @@
+{
+  "box": [
+    1800,
+    6430,
+    5900,
+    8030
+  ],
+  "center_y": 774,
+  "outer": [
+    [
+      2825,
+      -396
+    ],
+    [
+      2385,
+      -396
+    ],
+    [
+      510,
+      0
+    ],
+    [
+      2385,
+      396
+    ],
+    [
+      2825,
+      396
+    ],
+    [
+      1630,
+      0
+    ]
+  ],
+  "holes_half": [
+    [
+      [
+        1935,
+        223
+      ],
+      [
+        2085,
+        223
+      ],
+      [
+        2340,
+        308
+      ]
+    ],
+    [
+      [
+        1995,
+        194
+      ],
+      [
+        1795,
+        194
+      ],
+      [
+        1555,
+        143
+      ],
+      [
+        1840,
+        143
+      ]
+    ]
+  ],
+  "central_hole": [
+    [
+      1750,
+      -114
+    ],
+    [
+      1410,
+      -114
+    ],
+    [
+      870,
+      0
+    ],
+    [
+      1410,
+      114
+    ],
+    [
+      1750,
+      114
+    ],
+    [
+      1410,
+      0
+    ]
+  ],
+  "color": [
+    224,
+    63,
+    84
+  ],
+  "mechanism": "6-vertex red field, two pairs of side cutouts plus a separate central knockout; surrounding black and inner white remain different layers.",
+  "source_dds_sha256": "19ea69dd15d917362f0597ef50bb8697a519a60d2be66a43aed13da10ce1ce5f",
+  "method": "Construction coordinates inferred from source measurement; opposite arms regularized by explicit reflection. Not a blind design or independent transfer.",
+  "holes": 5,
+  "source_mask_IoU": 0.9838486482020777,
+  "cutout_area_pixels": 140712
+}

@@ -1,0 +1,4 @@
+interface:
+  display_name: "Akamywek 飞机布局 0.2.0"
+  short_description: "区分单发、双发及鸭式布局，结合原生UV、分层编辑、Blender与按需生图素材"
+  default_prompt: "使用 $wt-style-akamywek 按目标机型分支规划线条与立绘，核对原生UV，并按需要调用分层编辑器、Blender及生图模型制作和检查配套素材。"

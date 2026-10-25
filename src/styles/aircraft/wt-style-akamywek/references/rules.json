@@ -1,0 +1,1208 @@
+{
+  "schema_version": 1,
+  "style": "wt-style-akamywek",
+  "target_version": "0.2.0",
+  "status": "released",
+  "evidence": [
+    {
+      "id": "f2a",
+      "kind": "original-source-observation",
+      "author": "Akamywek",
+      "author_id": 14366265,
+      "post": "https://live.warthunder.com/post/1169418/en/",
+      "archive_sha256": "2ce21353371e3126d38f36c7260a2630bfc5f5cb5d8b33ce7d39bdf2d0017799",
+      "primary_member": "F-2A_M4_SOPMOD_II/f_2a.dds",
+      "primary_sha256": "c4395b1d0c2e4aa6245f72a6aa8daf669cfd37ab58eb0236a1ce00d665de3613",
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "inspected_images": [
+        {
+          "id": "f2a-01",
+          "url": "https://images-live.warthunder.com/e0f/8ac/51ce4c982e16f7a1c5a696436823e15de7.jpeg",
+          "sha256": "e0d5468951d3d6a747a74bfc87f7fcf7bc87d6e39eff95e074346ebafa65e9ac"
+        },
+        {
+          "id": "f2a-02",
+          "url": "https://images-live.warthunder.com/4d3/574/7ab44a0ac3e24f6fdd4e8a37e32da4712b.jpeg",
+          "sha256": "87254c48ef70029a65db4b96999d348123f81e175e30ba60396758b8c295476d"
+        },
+        {
+          "id": "f2a-03",
+          "url": "https://images-live.warthunder.com/3b9/ac7/cfafce9f70a837fc837ce6d9b87b7ffdb9.jpeg",
+          "sha256": "33585c29bb23a9504f07dd38ce079c6c7576209adf24aa73bf1b03a23d63b24d"
+        },
+        {
+          "id": "f2a-04",
+          "url": "https://images-live.warthunder.com/290/1d4/dd74a071a126991c7e0482c7a2166d7cdb.jpeg",
+          "sha256": "0b1f8a3b3f1c8547dd860db8a5cfa45fc81b2ae338762d8e23f0e2ea91ae3e24"
+        },
+        {
+          "id": "f2a-05",
+          "url": "https://images-live.warthunder.com/f2f/69f/8e69ebf351d178505c952d00db7c3d4553.jpeg",
+          "sha256": "625fcb9bb2b8f8b191b6dcee2eff1b743f932e64057fb0ebfe0a9053d4f6be8c"
+        },
+        {
+          "id": "f2a-06",
+          "url": "https://images-live.warthunder.com/e86/6da/9bacb94d08f88021e2754f88d04fb67d5b.jpeg",
+          "sha256": "0752b4e2b2d2ec82d116f7f5c80df21aea62ce0662085e4de64f1e2766f622cd"
+        }
+      ],
+      "native_uv_mesh_status": "archived geometry loaded; selected per-material probes and native layout views verified",
+      "selection": "research reference, not user acceptance of artwork",
+      "geometry_sha256": "509b75084faaa22f99f6c5ef66b73611a4247d4de99a2a7c981b72b25857aa8b"
+    },
+    {
+      "id": "f16",
+      "kind": "original-source-observation",
+      "author": "Akamywek",
+      "author_id": 14366265,
+      "post": "https://live.warthunder.com/post/1133108/en/",
+      "archive_sha256": "1986ea23b6884db1734de077c81480888f318b51d85f6e6796ecf024f135a88c",
+      "primary_member": "F-16_Megumin/f_16a_block_10.dds",
+      "primary_sha256": "19ea69dd15d917362f0597ef50bb8697a519a60d2be66a43aed13da10ce1ce5f",
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "inspected_images": [
+        {
+          "id": "f16-01",
+          "url": "https://images-live.warthunder.com/726/e4c/399306397a879e2a0fca5a591538ded17f.jpeg",
+          "sha256": "e0bd6cc7573797848b8c532b467f836828f413b959c0d752ed5b825b91cf59b5"
+        },
+        {
+          "id": "f16-02",
+          "url": "https://images-live.warthunder.com/0e6/32f/e0d879595dbbc9aadd50420ff10bb5ba96.jpeg",
+          "sha256": "eaf344b04ee9d97bffc0a23c5f61b6def9fae5c9cf8de1601c8ddda8e0b35887"
+        },
+        {
+          "id": "f16-03",
+          "url": "https://images-live.warthunder.com/9c6/c7d/dac3ac079e12565391e84ac297618838a7.jpeg",
+          "sha256": "f4b9520a277fbe92faa6e5484a6d30c52360a78284121c88bf8e5cca4faf2af5"
+        },
+        {
+          "id": "f16-04",
+          "url": "https://images-live.warthunder.com/b60/cc0/b40819fc443a9bfe8ba1765bb8bcfd78c0.jpeg",
+          "sha256": "4f585284ba1509fe3772348e727bf549381759833d4526597bcf9c05833a7fee"
+        },
+        {
+          "id": "f16-05",
+          "url": "https://images-live.warthunder.com/7d3/6b9/6f6bed29e15c2d2e7d499d43dd8f8a2902.jpeg",
+          "sha256": "3f8b16e7cb54fe2d00de5fd58007a92181895dcbfe47c25c4e78fd180fe5dab8"
+        },
+        {
+          "id": "f16-06",
+          "url": "https://images-live.warthunder.com/991/1e8/22d825ef60cf7bdbe4d4ae16153fed890a.jpeg",
+          "sha256": "05613d9bb6725dc1c4a86e9f95511f39ceed263d4dc4821eafd4efd9bd7fedb0"
+        }
+      ],
+      "native_uv_mesh_status": "Fresh local LOD0 decoded; original colour bound to exact material; static layout and selected native points inspected in round3",
+      "selection": "research reference, not user acceptance of artwork",
+      "geometry_sha256": "5b078890d85b8682c7a61cb1fc97e21bffb931c43da0a35cd0005858e71d74c8",
+      "native_model": "f_16a_block_10",
+      "animation_status": "not verified; Rafale rigid 0/+20/-20 exploration is not game travel limits"
+    },
+    {
+      "id": "su27",
+      "kind": "original-source-observation",
+      "author": "Akamywek",
+      "author_id": 14366265,
+      "post": "https://live.warthunder.com/post/1093742/en/",
+      "archive_sha256": "7d6a9a3e5536fd772aff0bf1ef2c798a452453fa479f8ddae5edacc37b2b7f10",
+      "primary_member": "Su-27_Anon_Chihaya_MyGO!/su_27.dds",
+      "primary_sha256": "8793e6f5ea39679c71df4c78808cc02e76e276fddb23877ecee820104b6799f8",
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "inspected_images": [
+        {
+          "id": "su27-01",
+          "url": "https://images-live.warthunder.com/c5d/4fe/75306520b806ef927a1b136da13b158494.jpeg",
+          "sha256": "de087539d3a698363c4cd7c5a79ba47ee3df7cb31244c47aeb1672a97252b656"
+        },
+        {
+          "id": "su27-02",
+          "url": "https://images-live.warthunder.com/e91/22f/cbeed768e6f85533ad9323eaf54006c757.jpeg",
+          "sha256": "a3917a01700f65d623cdef7fba1513f0642b723852d1f1d750e0d0f8cd4e4558"
+        },
+        {
+          "id": "su27-03",
+          "url": "https://images-live.warthunder.com/495/d6e/507bcc4a695d94c4f3bb1382b520200a1e.jpeg",
+          "sha256": "57f2a4e8e200274023a404bb6c9a377530b4373b4953ad3e63cc145f8cc0d2a1"
+        },
+        {
+          "id": "su27-04",
+          "url": "https://images-live.warthunder.com/6f9/0a7/815a07d8d76d14310135239a57de4d17ae.jpeg",
+          "sha256": "044800cb0260c9962f8627a2cfcf18e821da84c642edacd6d0c58e73ccf619c3"
+        },
+        {
+          "id": "su27-05",
+          "url": "https://images-live.warthunder.com/66d/019/6fcd731892a995a24552fdd5fdc7dbe6ad.png",
+          "sha256": "88793f99d6732b05f4ddf44e6fc50dd7036e8784ffa743f58f6ee24b971c762d"
+        },
+        {
+          "id": "su27-06",
+          "url": "https://images-live.warthunder.com/6a5/a2b/172b626742e9f3aa696b20b00a7065b750.jpeg",
+          "sha256": "03e0cd63fea9d1e71cad700f63a25193f9d1767f7e36eda64e45e032d99361c6"
+        }
+      ],
+      "native_uv_mesh_status": "Fresh local LOD0 decoded; original colour bound to exact material; static layout and selected native points inspected in round3",
+      "selection": "research reference, not user acceptance of artwork",
+      "geometry_sha256": "62ac840ed08de32910e1f684ba3e9fa669436e8e243643fb75aff8bf54d2d0a3",
+      "native_model": "su_27",
+      "animation_status": "not verified; Rafale rigid 0/+20/-20 exploration is not game travel limits"
+    },
+    {
+      "id": "f15",
+      "kind": "original-source-observation",
+      "author": "Akamywek",
+      "author_id": 14366265,
+      "post": "https://live.warthunder.com/post/1176864/en/",
+      "archive_sha256": "1058f9d0cffb52286ba5649fbbfcb99cd17f47c055204ad505cc9a3dd5c954d6",
+      "primary_member": "F-15_Shu/f_15a.dds",
+      "primary_sha256": "b75df125140edee80729eb40ecd79eefa8ac86c38247adf1915831cf17ea8d46",
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "inspected_images": [
+        {
+          "id": "f15-01",
+          "url": "https://images-live.warthunder.com/d98/75a/e6adbba0001fad63ba9a81a447fdfa0bdb.jpeg",
+          "sha256": "630a7ef0e54fc2e48cd7328c44506f5bd40fddc8aec6c8588c5bd3ade257c44d"
+        },
+        {
+          "id": "f15-02",
+          "url": "https://images-live.warthunder.com/87a/446/80abb7e89076ea9e6f1bad01175702a928.jpeg",
+          "sha256": "f0e117f5c6a8af4c56d71133bec1f1d4e3f52cf2df1eb8ea1dadad7c42b58543"
+        },
+        {
+          "id": "f15-03",
+          "url": "https://images-live.warthunder.com/347/9f3/896632c50d29582377b97243b5a2955427.jpeg",
+          "sha256": "7bba29aa6e1cc4272e8854b1bc1d46dca7a3ba6fcc238a73bac55ad5d82a0d4d"
+        },
+        {
+          "id": "f15-04",
+          "url": "https://images-live.warthunder.com/ba0/6db/59b1abf63db909c165238c436c45430ee5.jpeg",
+          "sha256": "2942ca2b93eba504058a97025d826673b997fce38588cb641df9cf3da74c8d14"
+        },
+        {
+          "id": "f15-05",
+          "url": "https://images-live.warthunder.com/25b/e17/d829b6e30b80ced2c22aaa946af8fb876c.jpeg",
+          "sha256": "59cb80c5d7c2d31b21bf11a2c3ffb9fedb3a6487fec9eb0cc99ab96ade08d63c"
+        },
+        {
+          "id": "f15-06",
+          "url": "https://images-live.warthunder.com/829/3e2/8388f676c6401d055c147ba812ac7ea162.jpeg",
+          "sha256": "e02a359197801b58859c9f91999be5c7e798667c992e68b40ad3217b771e1f76"
+        },
+        {
+          "id": "f15-07",
+          "url": "https://images-live.warthunder.com/aca/09d/48dcd44dd00ac4f3a74c6da879fe6be984.jpeg",
+          "sha256": "3670e4bcfa0a745050d252c2ae7f344f34d0fccc66c2c843f8919b6454b87961"
+        },
+        {
+          "id": "f15-08",
+          "url": "https://images-live.warthunder.com/071/6e7/b38784524abcad269e94bd16461b49600c.jpeg",
+          "sha256": "33f33261664d230c8f3bd5786a0224b89d6e81e1c48726a01fe8dd1e554ae00c"
+        }
+      ],
+      "native_uv_mesh_status": "Fresh local LOD0 decoded; original colour bound to exact material; static layout and selected native points inspected in round3",
+      "selection": "research reference, not user acceptance of artwork",
+      "geometry_sha256": "04fcea3d9b1e9cf5d71a33822d71c154abdf4ec8726fdda48f223c4be4c7cbd0",
+      "native_model": "f_15a",
+      "animation_status": "not verified; Rafale rigid 0/+20/-20 exploration is not game travel limits"
+    },
+    {
+      "id": "rafale",
+      "kind": "original-source-observation",
+      "author": "Akamywek",
+      "author_id": 14366265,
+      "post": "https://live.warthunder.com/post/1166978/en/",
+      "archive_sha256": "a40d9678128ec9211ae462909410ea4e8ebc3a44c9b772cab01f245e411c5b05",
+      "primary_member": "Rafale_Jean_Bart/rafale_c_f3_c.dds",
+      "primary_sha256": "e0f8447259a7890d7903b1debe779038d08f23726b2e94ed4f3e5a80e912d1e3",
+      "dimensions": [
+        8192,
+        8192
+      ],
+      "inspected_images": [
+        {
+          "id": "rafale-01",
+          "url": "https://images-live.warthunder.com/710/f76/b2c26a1d9ed98c482760bf9aa2e6b1d259.jpeg",
+          "sha256": "083aafdc57910c6260f3025ca72ac01c9dd66274c313f31c9ff0d474e6a12239"
+        },
+        {
+          "id": "rafale-02",
+          "url": "https://images-live.warthunder.com/696/a67/7248129f6f79a0456dc2d1d503d90317d1.jpeg",
+          "sha256": "231e02c35679822147cce752054b3e5b6416a018253874c66cfdd36dd23ad38b"
+        },
+        {
+          "id": "rafale-03",
+          "url": "https://images-live.warthunder.com/06a/258/0722dab2d0d607c1fbdc44f0f9c58835a4.jpeg",
+          "sha256": "cd1de789a07fef4287bebb496fae7ba9fa262c5276d213397fa8833ab3e9bf9a"
+        },
+        {
+          "id": "rafale-04",
+          "url": "https://images-live.warthunder.com/0f3/934/b861c39ee06d79202e361a249cbcb1c189.jpeg",
+          "sha256": "d391df92f6a86764a1852c2c0d77347ab1b67b0c12dc44a5a7abd5af48eb3663"
+        },
+        {
+          "id": "rafale-05",
+          "url": "https://images-live.warthunder.com/f02/817/117745ed0e823d43528db2e8e6721127c7.jpeg",
+          "sha256": "4af1245365b286f78c6909552b59fbb0878d50d77acbb18040aaedc89d433f69"
+        },
+        {
+          "id": "rafale-06",
+          "url": "https://images-live.warthunder.com/0de/26b/50ee0ef73b8bdca3e2f63c633b4820c5e2.jpeg",
+          "sha256": "8dc0ef4768a874770ba9b6e8134eff49f81f1625fb1ffa9799059a937abee110"
+        }
+      ],
+      "native_uv_mesh_status": "Fresh local LOD0 decoded; original colour bound to exact material; static layout and selected native points inspected in round3",
+      "selection": "research reference, not user acceptance of artwork",
+      "geometry_sha256": "611ad3dd65a4452db96fe956013d1deab80c87d4b9159fcf8baca2e5f55af18e",
+      "native_model": "rafale_c_f3",
+      "animation_status": "not verified; Rafale rigid 0/+20/-20 exploration is not game travel limits"
+    }
+  ],
+  "rules": [
+    {
+      "id": "AK-L01",
+      "scope": "all airframes / line hierarchy",
+      "claim": "Assign color field, main shape, companion and rhythm distinct roles; remove details and confirm the main composition still reads.",
+      "exceptions": "No fixed universal line count or color-area ratio.",
+      "instruction": "composition.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L02",
+      "scope": "narrow dorsal single-engine branch",
+      "claim": "Give main and companion tapered shapes independent start/end positions and widths; preserve meaningful dark/quiet gaps.",
+      "exceptions": "Not a requirement to use V shapes on every aircraft.",
+      "instruction": "line-layout.md",
+      "evidence": [
+        "f2a",
+        "f16"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run",
+        "source_pair": "E01: measured F2A author-pair comparison, not a new livery experiment"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L03",
+      "scope": "positive/negative contrast branch",
+      "claim": "Transfer hierarchy and gaps between dark-base F2A and light-base F16; choose colors from the current brief.",
+      "exceptions": "The reference palette is not mandatory.",
+      "instruction": "line-layout.md",
+      "evidence": [
+        "f2a",
+        "f16"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L04",
+      "scope": "wide blended twin-engine surfaces",
+      "claim": "Use verified continuous wing-body area for a main/subordinate portrait relationship; do not force a narrow single-engine spine.",
+      "exceptions": "Critical face/hand cannot cross an unverified gap.",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "su27"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L05",
+      "scope": "separate dorsal ridges / intake platforms",
+      "claim": "Route each real ridge and its endpoints independently and preserve the central separation; organize complex wings around these quieter lanes.",
+      "exceptions": "Twin engines alone do not prove a split-ridge design is appropriate.",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "f15"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L06",
+      "scope": "any real UV seam",
+      "claim": "Match surface position, tangent and width at a fixed seam; treat moving surfaces as independent elements.",
+      "exceptions": "Atlas adjacency and equal pixel width are not physical adjacency or equal surface width.",
+      "instruction": "line-layout.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-P01",
+      "scope": "main wing portraits",
+      "claim": "Choose scale, rotation and crop by the actual pose and required anatomy; balance visual weight instead of equal rectangles.",
+      "exceptions": "Mirroring needs an explicit check of text, emblems and handedness.",
+      "instruction": "portrait-layout.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-P02",
+      "scope": "critical anatomy",
+      "claim": "Compare original head/hat/hand/prop with exported instance and carrier; classify source crop, UV crop, geometry occlusion and material loss separately.",
+      "exceptions": "2D alpha retention cannot prove RGB identity or 3D visibility.",
+      "instruction": "portrait-layout.md",
+      "evidence": [
+        "f16",
+        "f2a"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run",
+        "helper": "9 behavior tests plus E02 synthetic-carrier diagnostic; not a real aircraft transfer",
+        "actual_native_variant": "Primary-agent F16 official-pose exercise A..E: selected critical pixels plus actual layer alpha checked. B/D/E technical preservation does not close visual judgement; final composition not accepted."
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-P03",
+      "scope": "vertical fins",
+      "claim": "Design each readable fin face as an independent recognition panel, with source pose chosen for its shape.",
+      "exceptions": "Shared/mirrored fin UV may require common artwork or nondirectional symbols.",
+      "instruction": "portrait-layout.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-P04",
+      "scope": "classifying portrait instances before seam continuation",
+      "claim": "Identify texture/material domain, node, upper/lower/inner/outer surface and reading direction before interpreting adjacent atlas fragments as one print. Continue anatomy only across verified adjacent pieces of the same instance.",
+      "exceptions": "Adjacent top and bottom prints are independent instances; identical numeric UVs in different materials do not establish shared texels.",
+      "instruction": "source-cases.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "f15"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run",
+        "source_pair": "E01: measured F2A author-pair comparison, not a new livery experiment",
+        "native_probe": "F2A/F16 selected archived mesh points; does not validate complete silhouette or current game version"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-C01",
+      "scope": "canard branch observed on Rafale",
+      "claim": "Keep canard field and short tapered motif self-contained; echo color order and direction without extending a main-wing figure through the moving joint.",
+      "exceptions": "The sampled neutral pose does not establish continuity across motion.",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-C02",
+      "scope": "target canard adaptation",
+      "claim": "Verify upper/lower faces, axes, mirror/shared texels and available movement states before artwork placement.",
+      "exceptions": "J10C, Gripen and Typhoon are not validated by this Rafale source.",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-C03",
+      "scope": "canard/main wing occlusion",
+      "claim": "Review main-wing critical anatomy against canard occlusion in the required views; prefer restrained canard graphics when face size or motion makes characters unreadable.",
+      "exceptions": "Do not ban all portraits on all canards, or call normal one-view occlusion a universal failure.",
+      "instruction": "portrait-layout.md",
+      "evidence": [
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-T01",
+      "scope": "package/profile engineering",
+      "claim": "Scan the actual target template and exported BLK references; a visually useful reference with missing files is not a production template.",
+      "exceptions": "Preserve the original source ZIP and keep layout evidence separate from material validity.",
+      "instruction": "source-cases.md",
+      "evidence": [
+        "su27",
+        "f15",
+        "f16"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-M01",
+      "scope": "appearance versus material encoding",
+      "claim": "Define visual paint goals separately from verified per-vehicle channel operations; preserve unknown channels.",
+      "exceptions": "Author photographs and generic N-map names cannot establish material constants.",
+      "instruction": "material-contract.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "validation": {
+        "source": "inspected-original-atlas-and-author-views",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "relevant actual UV mapping",
+        "source/final image comparison",
+        "required model views"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L07",
+      "scope": "nested connected field",
+      "claim": "Construct the outer field and its internal negative cutouts together; use the source-specific topology as a studied example, not a universal hole count.",
+      "exceptions": "Source observations and limited constructions only; target geometry/pose and new artwork still require their own verification.",
+      "instruction": "deep-study.md",
+      "evidence": [
+        "f2a",
+        "f16"
+      ],
+      "validation": {
+        "source": "native atlas examined",
+        "source_reconstruction": "measured/constructed in second study",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "source class and ROI selection",
+        "per-material target mapping",
+        "actual view and final-scale inspection"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L08",
+      "scope": "bounded repeated motifs",
+      "claim": "Use a finite repeated unit group when it serves the panel. F15 source has six arrows per row with a cross-unit color progression; preserve shape gaps and an explicit end rather than treating repetition as inherently bad.",
+      "exceptions": "Source observations and limited constructions only; target geometry/pose and new artwork still require their own verification.",
+      "instruction": "deep-study.md",
+      "evidence": [
+        "f15"
+      ],
+      "validation": {
+        "source": "native atlas examined",
+        "source_reconstruction": "measured/constructed in second study",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "source class and ROI selection",
+        "per-material target mapping",
+        "actual view and final-scale inspection"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-L09",
+      "scope": "offset backing versus outline",
+      "claim": "When the source shows a one-sided light backing, build that offset shape separately instead of uniformly expanding the colored strip.",
+      "exceptions": "Source observations and limited constructions only; target geometry/pose and new artwork still require their own verification.",
+      "instruction": "deep-study.md",
+      "evidence": [
+        "su27"
+      ],
+      "validation": {
+        "source": "native atlas examined",
+        "source_reconstruction": "measured/constructed in second study",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "source class and ROI selection",
+        "per-material target mapping",
+        "actual view and final-scale inspection"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-UV01",
+      "scope": "resource-aware UV interpretation",
+      "claim": "Filter geometry by the exact texture/material domain before testing shared texels; separate per-view prints before validating seam continuation.",
+      "exceptions": "Source observations and limited constructions only; target geometry/pose and new artwork still require their own verification.",
+      "instruction": "deep-study.md",
+      "evidence": [
+        "f2a",
+        "f16"
+      ],
+      "validation": {
+        "source": "native atlas examined",
+        "source_reconstruction": "measured/constructed in second study",
+        "new_artwork_visual": "not_run",
+        "game": "not_run",
+        "unseen_transfer": "not_run"
+      },
+      "required_checks": [
+        "source class and ROI selection",
+        "per-material target mapping",
+        "actual view and final-scale inspection"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-WHOLE01",
+      "scope": "Five studied aircraft and their main visible layouts",
+      "claim": "Select the engine family and aerodynamic layout before composing. Conventional-tail F2A/F16 use single-axis; J10C-class single-engine canard-delta has a separate proposed whole-layout branch; twin-engine Su27, F15 and Rafale use their respective blended-body, twin-spine and two-side-corridor branches. Shared local motifs do not permit a shared whole-aircraft template.",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "exceptions": "Source-specific and local development results; each new target/artwork still needs its own profile, visual checks and relevant game evidence.",
+      "validation": {
+        "round3": "source-native views and selected points inspected; no independent full design repeat",
+        "independent_repeat": "not_run",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "actual native surface and material",
+        "whole composition at working scale",
+        "declared cores after all upper layers",
+        "specific applicable source branch"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-POSE02",
+      "scope": "F16 new-pose placement and comparable wing-print exercises",
+      "claim": "Define anatomy/gesture cores on the original art, keep face weight at whole-aircraft scale, and let a deliberate noncritical lower-body crop meet the actual wing border or designed panel boundary. A safe but floating small bust is not a completed composition.",
+      "instruction": "whole-layout-grammar.md",
+      "evidence": [
+        "f16"
+      ],
+      "exceptions": "Source-specific and local development results; each new target/artwork still needs its own profile, visual checks and relevant game evidence.",
+      "validation": {
+        "round3": "G/H/I/J native 8K development attempts retained; overall art remains pending",
+        "independent_repeat": "not_run",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "actual native surface and material",
+        "whole composition at working scale",
+        "declared cores after all upper layers",
+        "specific applicable source branch"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-TYPE02",
+      "scope": "Overlying titles and cleanup layers in portrait composition",
+      "claim": "Audit the complete layer stack at mapped source cores; move or reduce subordinate wording when it covers a gesture. Character-layer alpha alone does not prove final visibility.",
+      "instruction": "whole-layout-grammar.md",
+      "evidence": [
+        "f16"
+      ],
+      "exceptions": "Source-specific and local development results; each new target/artwork still needs its own profile, visual checks and relevant game evidence.",
+      "validation": {
+        "round3": "H right core overpaint 154 source pixels; I/J fixed core sets retained; no universal aesthetic score",
+        "independent_repeat": "not_run",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "actual native surface and material",
+        "whole composition at working scale",
+        "declared cores after all upper layers",
+        "specific applicable source branch"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-CANARD02",
+      "scope": "Rafale reference and the specific J10C local transfer exercise",
+      "claim": "Treat red triangle and white turning quadrilateral as separate shapes with a dark gap. Map through corresponding physical panel corners, then fit the compound to all actual target surfaces; bbox normalization alone may clip.",
+      "instruction": "whole-layout-grammar.md",
+      "evidence": [
+        "rafale"
+      ],
+      "exceptions": "Source-specific and local development results; each new target/artwork still needs its own profile, visual checks and relevant game evidence.",
+      "validation": {
+        "round3": "BBox failed; triangle improved; target-specific .95 inset passed four-surface sampled boundaries and actual 8K interior colour checks; primary-agent development transfer only",
+        "independent_repeat": "not_run",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "actual native surface and material",
+        "whole composition at working scale",
+        "declared cores after all upper layers",
+        "specific applicable source branch"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-UV02",
+      "scope": "Replacement art on a wing with continuous fuselage shoulders",
+      "claim": "Separate actual portrait carrier, background-clearing surface and preserved text lane. Include verified continuous shoulders without blindly overpainting the spine, and remove old figure remnants on visible sloped surfaces.",
+      "instruction": "whole-layout-grammar.md",
+      "evidence": [
+        "f16"
+      ],
+      "exceptions": "Source-specific and local development results; each new target/artwork still needs its own profile, visual checks and relevant game evidence.",
+      "validation": {
+        "round3": "Fresh F16A profile and G/H/I/J layered outputs inspected; not a universal node/normal threshold",
+        "independent_repeat": "not_run",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "actual native surface and material",
+        "whole composition at working scale",
+        "declared cores after all upper layers",
+        "specific applicable source branch"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-ENGINE01",
+      "scope": "所有本风格整机制作、换人物重排与载具迁移",
+      "claim": "在摆人物和画主线之前确认单发／双发、常规尾翼／鸭式气动布局及具体分支；brief写明这些选择和主线、人物、字标／留白区。双发若照搬单发窄中轴，或单发鸭式仍沿用F2A／F16的主翼—后平尾人物分配，先返回构图阶段。",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "exceptions": "发动机类别内部仍按真实翼身、双脊、中央沟槽与鸭翼细分。双发允许中央尖形，不要求所有双发都画两条线；具体UV、坐标与活动状态须单独验证。J10C现有证据仅为鸭翼局部开发迁移。",
+      "validation": {
+        "basis": "当前用户明确要求；既有五套原作和第三轮原生模型观察",
+        "instruction_consistency": "入口、机型分支、构图、线条、人物与整机语法静态一致性审查",
+        "new_artwork_this_revision": "not_run; instruction-only change",
+        "independent_repeat": "not_run",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "发动机类别、气动布局与具体分支已记录",
+        "前鸭翼、翼根和主翼人物场共同构图",
+        "未虚构后平尾人物区或照搬异类整机模板",
+        "实际原生UV、遮挡和已测范围清楚"
+      ],
+      "review": {
+        "user_instruction": "explicitly required in this turn",
+        "artwork": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-SINGLE02",
+      "scope": "常规尾翼单发single-axis分支，以F2A／F16为参照；不自动覆盖单发鸭式机体",
+      "claim": "以主要机背轴组织嵌套主形与负形，两翼人物分别向外展开，机背与字标通道分隔视觉焦点，后段围绕单一发动机体量退出；具体图形按目标机型原生profile重建。",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "f2a",
+        "f16"
+      ],
+      "exceptions": "发动机类别内部仍按真实翼身、双脊、中央沟槽与鸭翼细分。双发允许中央尖形，不要求所有双发都画两条线；具体UV、坐标与活动状态须单独验证。J10C现有证据仅为鸭翼局部开发迁移。",
+      "validation": {
+        "basis": "当前用户明确要求；既有五套原作和第三轮原生模型观察",
+        "instruction_consistency": "入口、机型分支、构图、线条、人物与整机语法静态一致性审查",
+        "new_artwork_this_revision": "not_run; instruction-only change",
+        "independent_repeat": "not_run",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "发动机类别与具体布局分支已写入brief",
+        "主线、人物、字标采用所选类别骨架",
+        "双发没有退回单发窄中轴模板",
+        "鸭翼叠加项未覆盖整机类别"
+      ],
+      "review": {
+        "user_instruction": "explicitly required in this turn",
+        "artwork": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-TWIN02",
+      "scope": "双发整机布局，以Su27／F15／阵风样本为参照",
+      "claim": "先组织宽翼身、两侧肩部、双纵向体量或中央沟槽，再设计人物和主路径。Su27用宽融合大面与主副像横向联系；F15用双脊、分开的纵向通道与两侧收尾；阵风用中央场加双侧长字走廊。不得以单发窄中轴等比放大替代双发布局。",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "su27",
+        "f15",
+        "rafale"
+      ],
+      "exceptions": "发动机类别内部仍按真实翼身、双脊、中央沟槽与鸭翼细分。双发允许中央尖形，不要求所有双发都画两条线；具体UV、坐标与活动状态须单独验证。J10C现有证据仅为鸭翼局部开发迁移。",
+      "validation": {
+        "basis": "当前用户明确要求；既有五套原作和第三轮原生模型观察",
+        "instruction_consistency": "入口、机型分支、构图、线条、人物与整机语法静态一致性审查",
+        "new_artwork_this_revision": "not_run; instruction-only change",
+        "independent_repeat": "not_run",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "发动机类别与具体布局分支已写入brief",
+        "主线、人物、字标采用所选类别骨架",
+        "双发没有退回单发窄中轴模板",
+        "鸭翼叠加项未覆盖整机类别"
+      ],
+      "review": {
+        "user_instruction": "explicitly required in this turn",
+        "artwork": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-ENGINE-CANARD01",
+      "scope": "带鸭翼的单发／双发目标",
+      "claim": "发动机类别与常规尾翼／鸭式布局共同确定整机分支。单发鸭式三角翼采用single-canard-delta，双发阵风采用twin-canard-lanes；鸭翼与主翼的节奏、人物可读区和遮挡在整机阶段共同设计，鸭翼表面短形再独立适配。局部红白构形迁移不能代替整机验证。",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "rafale"
+      ],
+      "exceptions": "发动机类别内部仍按真实翼身、双脊、中央沟槽与鸭翼细分。双发允许中央尖形，不要求所有双发都画两条线；具体UV、坐标与活动状态须单独验证。J10C现有证据仅为鸭翼局部开发迁移。",
+      "validation": {
+        "basis": "当前用户明确要求；既有五套原作和第三轮原生模型观察",
+        "instruction_consistency": "入口、机型分支、构图、线条、人物与整机语法静态一致性审查",
+        "new_artwork_this_revision": "not_run; instruction-only change",
+        "independent_repeat": "not_run",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "发动机类别、气动布局与具体分支已记录",
+        "前鸭翼、翼根和主翼人物场共同构图",
+        "未虚构后平尾人物区或照搬异类整机模板",
+        "实际原生UV、遮挡和已测范围清楚"
+      ],
+      "review": {
+        "user_instruction": "explicitly required in this turn",
+        "artwork": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-SINGLE-CANARD01",
+      "scope": "J10C类单发鸭式三角翼的整机制作与换人物布局，当前为待完整实做验证的方法候选",
+      "claim": "采用single-canard-delta独立分支：以单一机背纵向导向统领前鸭翼短节奏、中部翼根过渡／字标区和后主翼大人物场；按三角翼后掠与姿态展开身体／衣摆，核对前鸭翼遮挡，鸭翼短形独立起止。不得照搬F16后平尾人物区或压窄阵风双发整机布局。",
+      "instruction": "airframe-families.md",
+      "evidence": [
+        "f2a",
+        "f16",
+        "rafale"
+      ],
+      "exceptions": "当前五套获选作者原作没有单发鸭式整机。J10C真实网格、UV和鸭翼局部迁移提供结构证据；整机线条、人物比例、字标与游戏活动状态未完成验证。各机型仍需独立profile，不能把方法候选称为已学成的作者J10C整机配方。",
+      "validation": {
+        "structure": "whole-layout-measurements.json的j10c真实LOD0，前elevator0/1与后主翼位置已核对",
+        "local_canard": "已有8K局部复合形、四面采样与模型上下视检查，见source-constructions/rafale-to-j10c.json",
+        "positive_author_whole_case": "not_available_in_selected_corpus",
+        "whole_layout_artwork": "not_run",
+        "independent_repeat": "not_run",
+        "game": "not_run"
+      },
+      "required_checks": [
+        "整机分支为single-canard-delta",
+        "前鸭翼—翼根过渡—后主翼的完整节奏",
+        "脸／手势在已验证连续面内且核对鸭翼遮挡",
+        "没有把前鸭翼节点误当F16后平尾",
+        "整机方法候选与局部已测结果分开记录"
+      ],
+      "review": {
+        "user_instruction": "single-engine plus canard explicitly requested",
+        "artwork": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-TOOL-EDITOR01",
+      "scope": "原生UV的分层查看与编辑器导出",
+      "claim": "先发现实际编辑器后端，用真实材质域的同尺寸透明UV线框与颜色、人物、装饰分层检查；生产颜色隐藏检查层，核对RGBA，按稳定身份只收尾自己的文档。Composa结果不作为原生Photoshop通过。",
+      "instruction": "editor-blender-workflow.md",
+      "evidence": [
+        "f16"
+      ],
+      "validation": {
+        "local_tool_audit": "tool-validation.json",
+        "native_photoshop": "unavailable; not live validated",
+        "blender_editor_imagegen": "actual local F16A tool-chain test",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "exceptions": "Results cover this local F16A tool audit and the declared source regions. Full style mastery, all vehicle branches, native Photoshop operations and game behaviour are not established.",
+      "required_checks": [
+        "actual backend and input identity",
+        "nonzero actual outputs",
+        "native UV and original source preserved",
+        "source anatomy and complete layer stack",
+        "scope and untested items recorded"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-TOOL-BLENDER01",
+      "scope": "原生模型／UV与离线布局检查",
+      "claim": "以真实几何、逐面UV、确切颜色材质和profile轴建立独立Blender检查场景，不unwrap或重排。检查源UV回读、纹理绑定、实际保存文件和相关视角；离线色彩图不能替代游戏shader或活动状态。",
+      "instruction": "editor-blender-workflow.md",
+      "evidence": [
+        "f16"
+      ],
+      "validation": {
+        "local_tool_audit": "tool-validation.json",
+        "native_photoshop": "unavailable; not live validated",
+        "blender_editor_imagegen": "actual local F16A tool-chain test",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "exceptions": "Results cover this local F16A tool audit and the declared source regions. Full style mastery, all vehicle branches, native Photoshop operations and game behaviour are not established.",
+      "required_checks": [
+        "actual backend and input identity",
+        "nonzero actual outputs",
+        "native UV and original source preserved",
+        "source anatomy and complete layer stack",
+        "scope and untested items recorded"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-ASSET-GEN01",
+      "scope": "需要生成或编辑立绘姿态及配套有机装饰",
+      "claim": "先给出目标分支／承载面、脸与手势锚点、身体方向和字标余量，再实际调用可用内置imagegen生成／编辑独立RGBA。检查源图和透明度，按真实UV落位，并到编辑器和Blender核对；精确主线、文字、UV和数据通道不交给模型猜测。",
+      "instruction": "generated-assets.md",
+      "evidence": [
+        "f16"
+      ],
+      "validation": {
+        "local_tool_audit": "tool-validation.json",
+        "native_photoshop": "unavailable; not live validated",
+        "blender_editor_imagegen": "actual local F16A tool-chain test",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "exceptions": "Results cover this local F16A tool audit and the declared source regions. Full style mastery, all vehicle branches, native Photoshop operations and game behaviour are not established.",
+      "required_checks": [
+        "actual backend and input identity",
+        "nonzero actual outputs",
+        "native UV and original source preserved",
+        "source anatomy and complete layer stack",
+        "scope and untested items recorded"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    },
+    {
+      "id": "AK-INPUT-ID01",
+      "scope": "矢量／图像混合绘制及可复现产物",
+      "claim": "冻结设计、几何、底图、遮罩、实际人物／装饰源文件和解析到的字体身份；绘制期间输入改变则停止提交，收据不能只记录素材路径。",
+      "instruction": "generated-assets.md",
+      "evidence": [
+        "f16"
+      ],
+      "validation": {
+        "local_tool_audit": "tool-validation.json",
+        "native_photoshop": "unavailable; not live validated",
+        "blender_editor_imagegen": "actual local F16A tool-chain test",
+        "user_visual": "pending",
+        "game": "not_run"
+      },
+      "exceptions": "Results cover this local F16A tool audit and the declared source regions. Full style mastery, all vehicle branches, native Photoshop operations and game behaviour are not established.",
+      "required_checks": [
+        "actual backend and input identity",
+        "nonzero actual outputs",
+        "native UV and original source preserved",
+        "source anatomy and complete layer stack",
+        "scope and untested items recorded"
+      ],
+      "review": {
+        "user": "pending",
+        "publication": "authorized_for_0.2.0_release"
+      }
+    }
+  ],
+  "split": "All five cases are seen development materials. No unseen holdout was tested.",
+  "research_status": {
+    "status": "research-in-progress",
+    "round": 3,
+    "art_learning_complete": false,
+    "completed": [
+      "five original source studies with native geometry for each",
+      "selected parametric source constructions",
+      "actual F16 new-pose layered exercises",
+      "J10C local compound-canard development transfer"
+    ],
+    "open": [
+      "complete new same-style artwork meeting visual standard",
+      "independent repetition",
+      "broader transfer",
+      "game animation and user approval"
+    ],
+    "subagents_used": false,
+    "latest_instruction_revision": "single-canard-delta is a separate whole-layout method candidate; aerodynamic layout and engine family are selected together. Prior J10C art validation remains local-canard only.",
+    "tool_audit": "tool-validation.json; Composa/Blender/imagegen chain tested; native Photoshop unavailable; full art remains pending"
+  },
+  "release": {
+    "version": "0.2.0",
+    "authorized_on": "2026-10-26",
+    "scope": "Skill organization, public release, local installation and scoped cleanup",
+    "artwork_acceptance_implied": false
+  }
+}

@@ -1,0 +1,338 @@
+{
+  "schema_version": 1,
+  "package": "wt-style-akamywek",
+  "target_version": "0.2.0",
+  "status": "released",
+  "repository": "https://github.com/IcyRyna/war-thunder-skin-skills",
+  "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e",
+  "assembled_shared_tools": [
+    {
+      "path": "scripts/airframe_setup.py",
+      "source": "toolkits/aircraft/scripts/airframe_setup.py",
+      "sha256": "a4f95d19c51b17d362fcd579a19e73a4c8c14fcdc066f8ecfb6b196baba8c7c0",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/arrangement.py",
+      "source": "toolkits/aircraft/scripts/arrangement.py",
+      "sha256": "003e3c03e98d5f42fd353a6f9e412fa143c9da6cc1c8bf229a2623801a025820",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/artifact_io.py",
+      "source": "toolkits/aircraft/scripts/artifact_io.py",
+      "sha256": "8e915607c7eb15515d031d48ec6dcb27b6b9df33767d7e487cfd35a0694322c2",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/art_cutout.py",
+      "source": "toolkits/aircraft/scripts/art_cutout.py",
+      "sha256": "4625ac2e817d7e6a29aaffa3fe29d9fa10bf31225f3b6f4ea03e2a74b854cb4a",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/atlas_palette.py",
+      "source": "toolkits/aircraft/scripts/atlas_palette.py",
+      "sha256": "a2e2fca0ef66ac98ae448835383ed9ca2c95105e5684b47aac0aa837ad50a667",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/build_skin.py",
+      "source": "toolkits/aircraft/scripts/build_skin.py",
+      "sha256": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/coat_material.py",
+      "source": "toolkits/aircraft/scripts/coat_material.py",
+      "sha256": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/compare_skin.py",
+      "source": "toolkits/aircraft/scripts/compare_skin.py",
+      "sha256": "a05f8a1908d45a73d593fc7da505bcad8542f4890e3e2037c4209292189fcf61",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/dds_variant.py",
+      "source": "toolkits/aircraft/scripts/dds_variant.py",
+      "sha256": "6ffe49b8b1e29ac8b92e93a70b6357a59e22ca52caccfc77e36339b17a83bd03",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/design_lint.py",
+      "source": "toolkits/aircraft/scripts/design_lint.py",
+      "sha256": "3fa4e2d16f5722abddb1210e2d0892f2a6e60230e4f7355c0be4e3345f82b3ef",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/detail_sheet.py",
+      "source": "toolkits/aircraft/scripts/detail_sheet.py",
+      "sha256": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/fetch_asset.py",
+      "source": "toolkits/aircraft/scripts/fetch_asset.py",
+      "sha256": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/finish_preview.py",
+      "source": "toolkits/aircraft/scripts/finish_preview.py",
+      "sha256": "108a9e618d27668ed4eb52a51b06a2ab6b98f42f7d783128499b0a1b5ed7be64",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/inspect_skins.py",
+      "source": "toolkits/aircraft/scripts/inspect_skins.py",
+      "sha256": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/panel_lines.py",
+      "source": "toolkits/aircraft/scripts/panel_lines.py",
+      "sha256": "ef14d1a61906276c78effc3d051639f3f9395c8db0d02ef20b1e6d327756145d",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/replica_check.py",
+      "source": "toolkits/aircraft/scripts/replica_check.py",
+      "sha256": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/replica_measure.py",
+      "source": "toolkits/aircraft/scripts/replica_measure.py",
+      "sha256": "97f3b881afa935bc097c609a65015e2b07dbe427538b3435904c10365976b03b",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/scene_preview.py",
+      "source": "toolkits/aircraft/scripts/scene_preview.py",
+      "sha256": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/structure_layer.py",
+      "source": "toolkits/aircraft/scripts/structure_layer.py",
+      "sha256": "26440530f59c9ddfbb63b756748c6a77b37dbdbd40a21436b4a05c3c00c9e530",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/style_board.py",
+      "source": "toolkits/aircraft/scripts/style_board.py",
+      "sha256": "d3bc243e71007464e0e4de50c20e77093149631abdc1c1637b52a103fd91a702",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/surface_map.py",
+      "source": "toolkits/aircraft/scripts/surface_map.py",
+      "sha256": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/surface_preview.py",
+      "source": "toolkits/aircraft/scripts/surface_preview.py",
+      "sha256": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_airframe_setup.py",
+      "source": "toolkits/aircraft/scripts/test_airframe_setup.py",
+      "sha256": "0021f9fef15b6b1ebfc4709411c97506dd9a2a484a47f0191e344461c758ad9b",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_arrangement.py",
+      "source": "toolkits/aircraft/scripts/test_arrangement.py",
+      "sha256": "dde8c21d27af1458dfa18e80e4ec67e780d37397d362892b50ab321334649912",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_artifact_io.py",
+      "source": "toolkits/aircraft/scripts/test_artifact_io.py",
+      "sha256": "42eeeb97d6961b49fdbd8bff40c22abb8d13d9433e0960b0a485b93d9f236af5",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_art_cutout.py",
+      "source": "toolkits/aircraft/scripts/test_art_cutout.py",
+      "sha256": "8cd2fe1ee9eaca186e22803124754c5ab325620052c0dbf3bf28496edc062221",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_atlas_palette.py",
+      "source": "toolkits/aircraft/scripts/test_atlas_palette.py",
+      "sha256": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_cli_gates.py",
+      "source": "toolkits/aircraft/scripts/test_cli_gates.py",
+      "sha256": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_coat_material.py",
+      "source": "toolkits/aircraft/scripts/test_coat_material.py",
+      "sha256": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_comparison.py",
+      "source": "toolkits/aircraft/scripts/test_comparison.py",
+      "sha256": "d63f3e3d30c617345273f46c7f5d59a59d62654c907cb0f5d85fe0c7a71281a8",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_dds_variant.py",
+      "source": "toolkits/aircraft/scripts/test_dds_variant.py",
+      "sha256": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_design_lint.py",
+      "source": "toolkits/aircraft/scripts/test_design_lint.py",
+      "sha256": "6d6c3020177a595391c474e4bb709411760faa0f2bc05b9b9701ccebdf70416c",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_detail_sheet.py",
+      "source": "toolkits/aircraft/scripts/test_detail_sheet.py",
+      "sha256": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_finish_preview.py",
+      "source": "toolkits/aircraft/scripts/test_finish_preview.py",
+      "sha256": "5b6dea70ed7850d3d8b812a5b0604c2b687c249f1f2efa7d64e0c45e98c8d932",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_io_tools.py",
+      "source": "toolkits/aircraft/scripts/test_io_tools.py",
+      "sha256": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_panel_lines.py",
+      "source": "toolkits/aircraft/scripts/test_panel_lines.py",
+      "sha256": "2a8cf9a155fa2082067289e8f303a3a225f997d552d79e127cdf2aad676b6f2b",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_projection_contract.py",
+      "source": "toolkits/aircraft/scripts/test_projection_contract.py",
+      "sha256": "0228804949a4dd41602cc13f84bbc670c57f10c5dadd570b6c72032aad0850fc",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_replica_check.py",
+      "source": "toolkits/aircraft/scripts/test_replica_check.py",
+      "sha256": "0669de38b8478f8ca5da3a18be5ee27a9e5aa73f123f4029af7db116d5b604cd",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_replica_measure.py",
+      "source": "toolkits/aircraft/scripts/test_replica_measure.py",
+      "sha256": "f4fefc2b40dfa11a34dd98fdaf95d5aa0c0090f2ad7b91010451acf374a8ffc9",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_scene_preview.py",
+      "source": "toolkits/aircraft/scripts/test_scene_preview.py",
+      "sha256": "2e7be5499b66788ac3ccb9842182afaa1c504bf0f1c5975da4480b735ff42351",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_structure_layer.py",
+      "source": "toolkits/aircraft/scripts/test_structure_layer.py",
+      "sha256": "ee6e284eeb0015ac1e0726fc8cd2ea39e4c256742636bd7e678a02d87a236a7c",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_style_board.py",
+      "source": "toolkits/aircraft/scripts/test_style_board.py",
+      "sha256": "7c9ec3d6c60547562530998628b4185bc4a2899e3af4bcb35444e97a9728b7c4",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_surface_map.py",
+      "source": "toolkits/aircraft/scripts/test_surface_map.py",
+      "sha256": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_surface_workflow.py",
+      "source": "toolkits/aircraft/scripts/test_surface_workflow.py",
+      "sha256": "d9925c0aaa703f1fb33e6534a77201b9673343c11f44894ec0e04d355a6e9994",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/test_vector_paint.py",
+      "source": "toolkits/aircraft/scripts/test_vector_paint.py",
+      "sha256": "13fe8119866a7ae2093b258eb2cf43517b709ceecc6437e8546d55cfb5ae3f8b",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e",
+      "upstream_sha256": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba",
+      "modified_locally": true,
+      "local_patch": "Final tool audit: bind actual raster source/font inputs and reject mid-run changes; regression tests added."
+    },
+    {
+      "path": "scripts/uv_frame.py",
+      "source": "toolkits/aircraft/scripts/uv_frame.py",
+      "sha256": "d55870280bab95cfe208fa962b5bcc2a99dfc7eb65924f192c8025b5d4b521ae",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e"
+    },
+    {
+      "path": "scripts/vector_paint.py",
+      "source": "toolkits/aircraft/scripts/vector_paint.py",
+      "sha256": "2c83b684b2545fdae6b9404cf1bdcaae15afaa43e8311c4f97f63d49120deca1",
+      "commit": "72296c55f96a6f0b8a577ba9adeb03bc2752d65e",
+      "upstream_sha256": "fd8f682dbd98899292cf92cd0ec5b478201a3e0cc4830c1b3e584ec0c40dd466",
+      "modified_locally": true,
+      "local_patch": "Final tool audit: bind actual raster source/font inputs and reject mid-run changes; regression tests added."
+    },
+    {
+      "path": "scripts/composa_mcp.py",
+      "source": "current standalone Composa client, lifecycle-aware workspace entry",
+      "sha256": "e9ecd721b68f1629782106ad47031b312d5732f2fc91a2aac112b1ff60563102",
+      "snapshot_date": "2026-10-25"
+    }
+  ],
+  "new_helpers": [
+    {
+      "path": "scripts/layout_audit.py",
+      "sha256": "07ef3bc0e54c2f3dbadce8f354abf1e9dacab7713ade2901c842010bc5ef7221"
+    },
+    {
+      "path": "scripts/test_layout_audit.py",
+      "sha256": "858a5c0e565805f99d807b54d19fa554df92d789a97366a98d564fac9306f241"
+    },
+    {
+      "path": "scripts/uv_review_assets.py",
+      "sha256": "1c307720f963748074af8a17382f61ddf074a893349ce9011177f91a97501cdc",
+      "origin": "local final tool audit"
+    },
+    {
+      "path": "scripts/test_uv_review_assets.py",
+      "sha256": "ebcb0b84d3ce42b14479f3efb2756f551db39f274a314923f51186948ff03828",
+      "origin": "local final tool audit"
+    },
+    {
+      "path": "scripts/photoshop_uv_review.py",
+      "sha256": "9c1f549835a4150cff63ffe45b1a0a4c9bf2446da7be4fc262ec34e98aee83b6",
+      "origin": "local final tool audit; native Photoshop adapter not live-validated in current environment"
+    },
+    {
+      "path": "scripts/blender_uv_review.py",
+      "sha256": "093da7b36539e252b67d1030ede3a9ef200700a7804dcb5ceed8537a4cec7107",
+      "origin": "local final tool audit"
+    }
+  ],
+  "runtime": "Python 3.11+; Blender executes in its own bundled Python. Native Photoshop COM optionally needs pywin32 on Windows. Editors, game, decoder, fonts and texconv are external; built-in imagegen discovered at runtime.",
+  "not_a_retired_skill_restore": true,
+  "validation_summary": "references/tool-validation.json",
+  "assembly": "Byte-identical shared tools come from catalog includes. Audited local overrides and new adapters remain in this style source; shared implementations and other packages are unchanged."
+}

@@ -1,0 +1,113 @@
+{
+  "box": [
+    2300,
+    2950,
+    5400,
+    4300
+  ],
+  "center_y": 748,
+  "outer": [
+    [
+      2250,
+      -396
+    ],
+    [
+      1815,
+      -396
+    ],
+    [
+      265,
+      -70
+    ],
+    [
+      420,
+      -27
+    ],
+    [
+      840,
+      -116
+    ],
+    [
+      1185,
+      -116
+    ],
+    [
+      840,
+      0
+    ],
+    [
+      1185,
+      116
+    ],
+    [
+      840,
+      116
+    ],
+    [
+      420,
+      27
+    ],
+    [
+      265,
+      70
+    ],
+    [
+      1815,
+      396
+    ],
+    [
+      2250,
+      396
+    ],
+    [
+      1055,
+      0
+    ]
+  ],
+  "holes_half": [
+    [
+      [
+        1355,
+        224
+      ],
+      [
+        1510,
+        224
+      ],
+      [
+        1780,
+        312
+      ]
+    ],
+    [
+      [
+        975,
+        142
+      ],
+      [
+        1265,
+        142
+      ],
+      [
+        1430,
+        196
+      ],
+      [
+        1225,
+        196
+      ]
+    ]
+  ],
+  "central_hole": null,
+  "color": [
+    233,
+    233,
+    235
+  ],
+  "mechanism": "14-vertex connected white field with two pairs of negative cutouts; center fold belongs to the exterior boundary.",
+  "source_dds_sha256": "c4395b1d0c2e4aa6245f72a6aa8daf669cfd37ab58eb0236a1ce00d665de3613",
+  "method": "Construction coordinates inferred from source measurement; opposite arms regularized by explicit reflection. Not a blind design or independent transfer.",
+  "holes": 4,
+  "source_mask_IoU": 0.9811063085639082,
+  "cutout_area_pixels": 42134
+}

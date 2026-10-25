@@ -1,0 +1,179 @@
+{
+  "audit_date": "2026-10-26",
+  "status": "released 0.2.0; tool audit completed with explicit limitations",
+  "line_and_portrait": {
+    "instructions": "engine/aerodynamic branches, source constructions, pose/core/crop/title relationships audited",
+    "full_original_quality_artwork": "not established; technical source retention is not aesthetic approval",
+    "single_canard_whole_layout": "method candidate; existing J10C artwork validation is local canard only"
+  },
+  "photoshop_native": {
+    "status": "unavailable",
+    "registered_server_executable_exists": false,
+    "activation_attempt": "unavailable",
+    "scope": "Read-only COM probe and a bounded activation attempt; registered executable is missing and activation failed with class-not-registered. Static adapter checks passed, native PSD operations not executed. Registry unchanged."
+  },
+  "layered_editor": {
+    "backend": "Composa 1.4.0",
+    "atlas": [
+      8192,
+      8192
+    ],
+    "layers": 5,
+    "save_copy_reopen": "passed",
+    "native_UV_local_view": "512x512 actual render with coordinate grid",
+    "pixel_comparison": {
+      "atlas_size": [
+        8192,
+        8192
+      ],
+      "max_RGBA_difference": [
+        2,
+        2,
+        2,
+        0
+      ],
+      "different_pixels": 1364151,
+      "pixels_exceeding_one_channel_value": 2381,
+      "alpha_exact": true,
+      "scope": "Actual editor export before adding the UV guide versus deterministic native-layer composite. Technical comparison only; not aesthetic approval.",
+      "unmodified_region_max_RGBA_difference": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "unmodified_region_different_pixels": 0,
+      "editor_project_reopen_pixels_exact": true,
+      "interpretation": "Composite colours differ by at most 2/255 inside edited areas; alpha and unmodified pixels are checked separately. Do not claim byte-identical cross-editor compositing."
+    },
+    "audit_owned_documents_closed": true,
+    "baseline_documents": 0
+  },
+  "blender": {
+    "version": "4.5.15 LTS",
+    "selected_triangles": 117028,
+    "mesh_objects": 128,
+    "max_UV_error": 0.0,
+    "axes": {
+      "up": "y",
+      "forward": "x"
+    },
+    "source_files_unchanged": true,
+    "saved_file_reopen": "passed",
+    "packed_colour_size": [
+      8192,
+      8192
+    ],
+    "native_UV_and_image_editor": "verified in saved file",
+    "scope": "Offline colour/layout; no game shader or animation certification"
+  },
+  "imagegen": {
+    "backend": "built-in image_gen",
+    "provider_model_name": "not exposed by tool",
+    "calls": 3,
+    "roles": [
+      "original adult pilot",
+      "composition/border edit of same pilot",
+      "independent background ornament"
+    ],
+    "generation_results": [
+      {
+        "id": "left-wing-pilot-original",
+        "size": [
+          1254,
+          1254
+        ],
+        "sha256": "28159eb56dd12713ef1b5b385f4e4731f96ce348c855c2fca99774b64f1060ef",
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "nonzero_bbox": [
+          25,
+          17,
+          1226,
+          1254
+        ],
+        "opaque_bbox": [
+          448,
+          22,
+          1223,
+          1254
+        ]
+      },
+      {
+        "id": "left-wing-pilot-reframed",
+        "size": [
+          1254,
+          1254
+        ],
+        "sha256": "cc52c1ba476e9aee80bc682ae3d4fc8c539462c7447b8efdf5c50766fe825b19",
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          255
+        ],
+        "nonzero_bbox": [
+          0,
+          19,
+          1240,
+          1230
+        ],
+        "opaque_bbox": [
+          284,
+          47,
+          1130,
+          1193
+        ]
+      },
+      {
+        "id": "wing-decoration",
+        "size": [
+          1536,
+          1024
+        ],
+        "sha256": "032d306555bdf990069fc02571cd6e45c7cc5cba9e441cb054a69e9992df605f",
+        "mode": "RGBA",
+        "alpha_extrema": [
+          0,
+          253
+        ],
+        "nonzero_bbox": [
+          0,
+          17,
+          1518,
+          1024
+        ],
+        "opaque_bbox": [
+          14,
+          23,
+          1310,
+          998
+        ]
+      }
+    ],
+    "source_retention": 291839,
+    "missing_carrier": 0,
+    "low_actual_export_alpha": 0,
+    "scope": "Actual local tool-chain demonstration, not a user-selected new aircraft theme or completed livery"
+  },
+  "tests": {
+    "command": "python -X utf8 -B -m unittest test_vector_paint test_uv_review_assets -v",
+    "count": 21,
+    "result": "passed; actual run recorded in this chat, session 50214",
+    "new_invariants": [
+      "UV orientation and material-domain isolation",
+      "source RGBA and original files unchanged",
+      "out-of-tile UV reported, not clamped",
+      "source images and resolved fonts hash-bound",
+      "mid-run source change prevents commit"
+    ]
+  },
+  "subagents_used": false,
+  "game_validation": "not_run",
+  "user_art_approval": "pending",
+  "art_learning_complete": false,
+  "installed_or_published": false,
+  "release_authorized_on": "2026-10-26"
+}
