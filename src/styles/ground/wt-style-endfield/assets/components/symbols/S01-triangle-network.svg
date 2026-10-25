@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="700" height="360" viewBox="0 0 700 360">
+<title>S01 triangle-network</title><desc>强图形网络；节点位置随新构图重排。</desc>
+<style>text{text-rendering:geometricPrecision} .hair{vector-effect:non-scaling-stroke}</style>
+<g id="links" ><path d="M90 270 L300 80 L480 270 L610 145" fill="none" stroke="#222625" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" opacity="1"/></g><g id="nodes" ><path d="M90 245 l-29 50 h58 Z" fill="#222625"/><path d="M300 55 l-29 50 h58 Z" fill="#222625"/><path d="M480 245 l-29 50 h58 Z" fill="#222625"/><path d="M610 120 l-29 50 h58 Z" fill="#222625"/></g></svg>

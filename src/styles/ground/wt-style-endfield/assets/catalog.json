@@ -1,0 +1,601 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "items": [
+    {
+      "id": "identity-dark",
+      "purpose": "完整工业主徽记；统一缩放，保留全部字形",
+      "source_kind": "community-vector",
+      "source": "Yue-plus/endfield_icons, project complete lockup",
+      "license": "assets/identity/community/LICENSE",
+      "png": {
+        "path": "assets/identity/ENDFIELD-industries-complete-dark.png",
+        "bytes": 33511,
+        "sha256": "d642384e12e2bd99e73bb3d71392eda30a5456eecde77b819c01e0b407fec6eb",
+        "size": [
+          512,
+          512
+        ],
+        "alpha_bbox": [
+          0,
+          29,
+          512,
+          482
+        ]
+      },
+      "svg": {
+        "path": "assets/identity/ENDFIELD-industries-complete-dark.svg",
+        "bytes": 23243,
+        "sha256": "67ff7bc8105eba95599baa5b8ebfe35549b5b00aa0b1ba8cae3c14c3c5a67d83"
+      }
+    },
+    {
+      "id": "identity-light",
+      "purpose": "完整工业主徽记；统一缩放，保留全部字形",
+      "source_kind": "community-vector",
+      "source": "Yue-plus/endfield_icons, project complete lockup",
+      "license": "assets/identity/community/LICENSE",
+      "png": {
+        "path": "assets/identity/ENDFIELD-industries-complete-light.png",
+        "bytes": 32256,
+        "sha256": "4ec2f5d501f1c434d4996a95708fd9aee93404c2c43dc747ebbcbef2128db820",
+        "size": [
+          512,
+          512
+        ],
+        "alpha_bbox": [
+          0,
+          29,
+          512,
+          482
+        ]
+      },
+      "svg": {
+        "path": "assets/identity/ENDFIELD-industries-complete-light.svg",
+        "bytes": 23244,
+        "sha256": "a1c5d97b52b74bf2d5a4bc805bafc70515f07c682a0143aa3d6ee691b9f616ad"
+      }
+    },
+    {
+      "id": "identity-original-122px",
+      "purpose": "原始小尺寸完整徽记；有效墨迹122px，不用于大幅放大",
+      "source_kind": "original-reference",
+      "source": "retained original transparent reference; no new license grant",
+      "png": {
+        "path": "assets/identity/endfield-industries-en-original-transparent.png",
+        "bytes": 2847,
+        "sha256": "852ba24a66ceb04f78a1fd6537f79c975a91c99d077d16fdae69b684472c05de",
+        "size": [
+          400,
+          400
+        ],
+        "alpha_bbox": [
+          118,
+          212,
+          240,
+          334
+        ]
+      }
+    },
+    {
+      "id": "R01-long-route",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R01-long-route.png",
+        "bytes": 7638,
+        "sha256": "2c15694d4bf558b1663e29105f13ad4a55f04d7958e286a94ae6330b561bc581",
+        "size": [
+          1000,
+          260
+        ],
+        "alpha_bbox": [
+          25,
+          62,
+          945,
+          221
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R01-long-route.svg",
+        "bytes": 793,
+        "sha256": "021c54682865341fc06cefe2d0b924702cb8c1f5aa31ad807342e723174553f1"
+      }
+    },
+    {
+      "id": "R02-folded-double-route",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R02-folded-double-route.png",
+        "bytes": 10357,
+        "sha256": "a63d338cfdf7f99cb95fcb9c3f8ebbc625aecf87e829edf88461aa35791895db",
+        "size": [
+          700,
+          420
+        ],
+        "alpha_bbox": [
+          45,
+          62,
+          640,
+          322
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R02-folded-double-route.svg",
+        "bytes": 669,
+        "sha256": "45fa44c90a8b0405bbb006f1e6c3f61d6cd94355d400cce443f57ec363882a21"
+      }
+    },
+    {
+      "id": "R03-slot-terminal",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R03-slot-terminal.png",
+        "bytes": 6005,
+        "sha256": "b3530fc26fae784a73f27a32f2d1b902b632326f15068c3ffc274b2a061f2f4e",
+        "size": [
+          700,
+          230
+        ],
+        "alpha_bbox": [
+          13,
+          25,
+          653,
+          190
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R03-slot-terminal.svg",
+        "bytes": 908,
+        "sha256": "d9dd9af4a9e198d4a15902a5965c2bbe304d7c7a2a21d94d54875813d1c2f66e"
+      }
+    },
+    {
+      "id": "R04-direction-plane",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R04-direction-plane.png",
+        "bytes": 13879,
+        "sha256": "045f82dc7587949684da516b0110be2586e06ee841a8088eb451e61d40752b17",
+        "size": [
+          1000,
+          330
+        ],
+        "alpha_bbox": [
+          35,
+          45,
+          945,
+          265
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R04-direction-plane.svg",
+        "bytes": 593,
+        "sha256": "570974f0552e3a54365cbb79440332dda24add9fee98cc5c0432a8517c603206"
+      }
+    },
+    {
+      "id": "R05-ring-node",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R05-ring-node.png",
+        "bytes": 7522,
+        "sha256": "2685f93240e87b24e20e23f96706f0a2cfbe555a1636cd8acabc83a8c89f0d77",
+        "size": [
+          520,
+          300
+        ],
+        "alpha_bbox": [
+          9,
+          61,
+          442,
+          239
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R05-ring-node.svg",
+        "bytes": 682,
+        "sha256": "160211031cf7c800f85936cd0b1bcb6db4ed6cfe644fbd80d9253847e6f842a0"
+      }
+    },
+    {
+      "id": "R06-capsule-rhythm",
+      "purpose": "黄色方向、转折、伴线与节点",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/routes/R06-capsule-rhythm.png",
+        "bytes": 4132,
+        "sha256": "5253b52814694ad1b0f8fe5980907891ac9ab053459a443a4859f5162757f6a5",
+        "size": [
+          850,
+          300
+        ],
+        "alpha_bbox": [
+          36,
+          50,
+          796,
+          216
+        ]
+      },
+      "svg": {
+        "path": "assets/components/routes/R06-capsule-rhythm.svg",
+        "bytes": 782,
+        "sha256": "f42a64034d2b730263bb6cb8dee06ae6abca749682990a4d62872b28e788b890"
+      }
+    },
+    {
+      "id": "S01-triangle-network",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S01-triangle-network.png",
+        "bytes": 14048,
+        "sha256": "011d4d12d5eaee1917656a2e6b57886f73c7025b96ecc6a1dabfb2539f048b5b",
+        "size": [
+          700,
+          360
+        ],
+        "alpha_bbox": [
+          61,
+          55,
+          639,
+          295
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S01-triangle-network.svg",
+        "bytes": 735,
+        "sha256": "38d38c9a6b885734bd54099c3a2fb6320ea3fdd20d1c472c47383f0ea8db11c5"
+      }
+    },
+    {
+      "id": "S02-hollow-triangles",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S02-hollow-triangles.png",
+        "bytes": 4083,
+        "sha256": "2a56ee9e7de57c8cd63d30d12fdb5c55e21c85b417699c8253ecbe01ffcaea95",
+        "size": [
+          700,
+          320
+        ],
+        "alpha_bbox": [
+          56,
+          59,
+          644,
+          260
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S02-hollow-triangles.svg",
+        "bytes": 1013,
+        "sha256": "ed764d3253912c30c7a0d7eb02e8b5521ce90cad84f4e7d175d925369688218e"
+      }
+    },
+    {
+      "id": "S03-crosshair",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S03-crosshair.png",
+        "bytes": 1494,
+        "sha256": "28d2eddfd7a0d5e259e2e9fa49b2a9f0574b6a2fddff026497fe40c68278172d",
+        "size": [
+          360,
+          360
+        ],
+        "alpha_bbox": [
+          45,
+          45,
+          315,
+          315
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S03-crosshair.svg",
+        "bytes": 691,
+        "sha256": "ea75c9da1b44ac44105e90276abf1b61bca147da4938e418d0b3ef5b66864305"
+      }
+    },
+    {
+      "id": "S04-hatch-block",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S04-hatch-block.png",
+        "bytes": 5716,
+        "sha256": "e00f21c0362bbb7b49cc7cb4bb8a635f42eee3bdf837027d82de40bebc14f092",
+        "size": [
+          700,
+          300
+        ],
+        "alpha_bbox": [
+          35,
+          40,
+          665,
+          260
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S04-hatch-block.svg",
+        "bytes": 983,
+        "sha256": "72b201389c383eb8084801bf31c95461bacbc054a88402158ebb663c71e7e8d0"
+      }
+    },
+    {
+      "id": "S05-calibration-strip",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S05-calibration-strip.png",
+        "bytes": 3973,
+        "sha256": "f95548a53ccedac67d29f3c1aac40ab8af05826985da6bce77f0c052551be5b7",
+        "size": [
+          720,
+          150
+        ],
+        "alpha_bbox": [
+          30,
+          38,
+          690,
+          126
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S05-calibration-strip.svg",
+        "bytes": 841,
+        "sha256": "b103beb17734f9926f76fb13bb185082b364a19b4194cfc68acf6810febe3a69"
+      }
+    },
+    {
+      "id": "S06-tick-ruler",
+      "purpose": "局部几何与刻度节奏",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/symbols/S06-tick-ruler.png",
+        "bytes": 2067,
+        "sha256": "51c1334ae2cf6edee454bccb617bde41a239209fa715164623bdeb3c1c6d772d",
+        "size": [
+          900,
+          170
+        ],
+        "alpha_bbox": [
+          35,
+          68,
+          866,
+          143
+        ]
+      },
+      "svg": {
+        "path": "assets/components/symbols/S06-tick-ruler.svg",
+        "bytes": 3846,
+        "sha256": "8feedf82a0dbe74c977ca4a70b14bea98736bcb1a8aac68b511a0a03f35f67cc"
+      }
+    },
+    {
+      "id": "L01-equipment-id",
+      "purpose": "可编辑设备信息；制作时替换车型与编号",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/labels/L01-equipment-id.png",
+        "bytes": 15391,
+        "sha256": "56013c7d62eaf91a308ab677e55734153d2b3e5ccc5aa729c787380e0f34be92",
+        "size": [
+          780,
+          290
+        ],
+        "alpha_bbox": [
+          30,
+          36,
+          413,
+          246
+        ]
+      },
+      "svg": {
+        "path": "assets/components/labels/L01-equipment-id.svg",
+        "bytes": 931,
+        "sha256": "2b22c57db5485acedc563840862ba4ff0b0e8117b39ed8986af802d85267fd52"
+      }
+    },
+    {
+      "id": "L02-warning-stencil",
+      "purpose": "可编辑设备信息；制作时替换车型与编号",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/labels/L02-warning-stencil.png",
+        "bytes": 15112,
+        "sha256": "b8f356bfa79a24fe32edf6902ae845a15a53b7bb3b5c6d3f5ec2d9d21ea2422c",
+        "size": [
+          900,
+          250
+        ],
+        "alpha_bbox": [
+          0,
+          45,
+          820,
+          202
+        ]
+      },
+      "svg": {
+        "path": "assets/components/labels/L02-warning-stencil.svg",
+        "bytes": 975,
+        "sha256": "b879a55fc91286c2a8645e6a7c72013e51c77794e0ceed9b851201715eeea11a"
+      }
+    },
+    {
+      "id": "L03-vehicle-nameplate",
+      "purpose": "可编辑设备信息；制作时替换车型与编号",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/labels/L03-vehicle-nameplate.png",
+        "bytes": 13537,
+        "sha256": "a140cb6ca4dbe890e7fdf408b4be1bba9a9577f9bd234dd03a83af9b8e2f93bf",
+        "size": [
+          900,
+          260
+        ],
+        "alpha_bbox": [
+          28,
+          28,
+          872,
+          232
+        ]
+      },
+      "svg": {
+        "path": "assets/components/labels/L03-vehicle-nameplate.svg",
+        "bytes": 1156,
+        "sha256": "288f6bc737bd3cd23bd752fc8aae8beade62dd2eab752b6bb0a05120c587728c"
+      }
+    },
+    {
+      "id": "L04-technical-coordinates",
+      "purpose": "可编辑设备信息；制作时替换车型与编号",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/labels/L04-technical-coordinates.png",
+        "bytes": 22326,
+        "sha256": "4ce18ef7fa6f775ca8980015421edefd9d13c2147b95387cd79babe200a2a242",
+        "size": [
+          780,
+          300
+        ],
+        "alpha_bbox": [
+          34,
+          43,
+          721,
+          271
+        ]
+      },
+      "svg": {
+        "path": "assets/components/labels/L04-technical-coordinates.svg",
+        "bytes": 1104,
+        "sha256": "c88f55db1f99012b795b04939cb16eae84017d97faa280d323766bf72e63a38b"
+      }
+    },
+    {
+      "id": "L05-vertical-id",
+      "purpose": "可编辑设备信息；制作时替换车型与编号",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/labels/L05-vertical-id.png",
+        "bytes": 13753,
+        "sha256": "f622861c387f310f2b59ba0c3294a517fd2f39b9acbf171973c7f0ebf8b994e5",
+        "size": [
+          300,
+          780
+        ],
+        "alpha_bbox": [
+          35,
+          35,
+          164,
+          745
+        ]
+      },
+      "svg": {
+        "path": "assets/components/labels/L05-vertical-id.svg",
+        "bytes": 823,
+        "sha256": "706e3dd777e38e0885879f2fb1c036b3d60889a0a68925b00947ab55c8332490"
+      }
+    },
+    {
+      "id": "P01-topographic-flow",
+      "purpose": "局部低对比背景纹样",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/patterns/P01-topographic-flow.png",
+        "bytes": 69526,
+        "sha256": "0d041ac1574738696560c181060d7f8aa3cb1e171999647e0952c824a05bcb38",
+        "size": [
+          1000,
+          520
+        ],
+        "alpha_bbox": [
+          0,
+          22,
+          1000,
+          363
+        ]
+      },
+      "svg": {
+        "path": "assets/components/patterns/P01-topographic-flow.svg",
+        "bytes": 1569,
+        "sha256": "1f7587d667db73c9cb3df41ae3a8e7918c200b86b935e3a189bf5ceddbe45d4e"
+      }
+    },
+    {
+      "id": "P02-quiet-node-field",
+      "purpose": "局部低对比背景纹样",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/patterns/P02-quiet-node-field.png",
+        "bytes": 19790,
+        "sha256": "0deca8abd378cc31b4cda0667d3d2cc055f1d7d13ae66fea78f5372a317c1de0",
+        "size": [
+          900,
+          500
+        ],
+        "alpha_bbox": [
+          46,
+          111,
+          769,
+          359
+        ]
+      },
+      "svg": {
+        "path": "assets/components/patterns/P02-quiet-node-field.svg",
+        "bytes": 867,
+        "sha256": "09ee40e063373efbf3fd15c96e0a1eb372cb9773303edc65037f9b30e1f52259"
+      }
+    },
+    {
+      "id": "P03-diagonal-microgrid",
+      "purpose": "局部低对比背景纹样",
+      "source_kind": "project-editable-component",
+      "source": "project inherited editable component; selected unchanged",
+      "png": {
+        "path": "assets/components/patterns/P03-diagonal-microgrid.png",
+        "bytes": 11314,
+        "sha256": "0427203edfffbcb57e90adfa3e67f29a591c4238fd6725dd47b88d94363c0dd4",
+        "size": [
+          900,
+          500
+        ],
+        "alpha_bbox": [
+          0,
+          69,
+          900,
+          431
+        ]
+      },
+      "svg": {
+        "path": "assets/components/patterns/P03-diagonal-microgrid.svg",
+        "bytes": 2751,
+        "sha256": "b6f91db73542cb3711fe7bf513cabbc7f0cc4d2dd4ea9d792905d6b286b65dbc"
+      }
+    }
+  ]
+}

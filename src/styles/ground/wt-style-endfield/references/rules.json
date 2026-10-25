@@ -1,0 +1,252 @@
+{
+  "schema_version": 1,
+  "version": "0.2.0",
+  "sources_document": "source-cases.md",
+  "rules": [
+    {
+      "id": "EF-01",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "按真实可见承载面分配职责；宽主侧面分别安排主徽记、方向和设备区域，保留连续底色",
+      "evidence": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "紧凑次识别设备面可成组；不能把一个小组合放大当整块侧面布局",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "R01",
+        "E04-r2",
+        "E06-r2",
+        "X01-r6",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-02",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "大明暗先成立，黄为方向与识别；不固定比例或色值",
+      "evidence": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "按本车主要阅读角度改变大区",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "R01",
+        "S04",
+        "S05"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-03",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "黄带以单一方向组织炮塔侧面，可顺真实上缘倾斜；等宽成组可用，完整信息组建立主次",
+      "evidence": [
+        "S01",
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "炮塔侧面不曲折；直线不锁水平，不强制粗主线加细伴线；独立运动件方向呼应",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "E05-r5/C",
+        "X01-r11-rejected-crowding",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance.",
+      "user_constraint": {
+        "status": "explicit",
+        "scope": "turret-side direction, structural alignment and grouped hierarchy; not whole-skill acceptance"
+      }
+    },
+    {
+      "id": "EF-04",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "完整工业徽记统一缩放，保留品牌所有组成部分",
+      "evidence": [
+        "S01",
+        "S02",
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "保留完整母版与整体可读性；真实内部窄缝逐项检查；外边界不裁主体，不以避缝为由无限缩小",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "E06-r2/B",
+        "X01-r11-rejected-crowding",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-05",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "保留原 RGB/Alpha 并按实际阅读判断密度；宽侧面把主标、路线和辅助设备错开，放大不替代分区",
+      "evidence": [
+        "S01",
+        "S03",
+        "E03",
+        "E04-r2"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "可减少或不用纹样；不能以技术读回通过覆盖主标干扰或裁切断头",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "E01-correction",
+        "E03",
+        "E04-r2/A",
+        "X01-r11-rejected-crowding",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-06",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "左右视觉语言对应，文字按独立面方向排；共享UV显式退让",
+      "evidence": [
+        "S02",
+        "S03",
+        "S06"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "镜像冲突改用非文字图形或换面",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "X01-r6",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-07",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "车型和设备信息可改，品牌母版与字形不随意替换",
+      "evidence": [
+        "S01",
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "不把原车铭牌照搬新车",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "E05-r5",
+        "V01-r4",
+        "X01-r12a-delegated-composition"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    },
+    {
+      "id": "EF-08",
+      "scope": [
+        "style:endfield",
+        "domain:ground"
+      ],
+      "claim": "逐槽核对混合图集和Alpha语义，保留本车机械基底",
+      "evidence": [
+        "S03"
+      ],
+      "validation": "unverified",
+      "review": {
+        "status": "pending",
+        "evidence": []
+      },
+      "required_checks": [
+        "technical",
+        "visual"
+      ],
+      "exception": "网格opacity与固定装甲fixed_rgb、N数据分别处理",
+      "acceptance": "本车模型与原生UV成对检查；视觉由具体版本用户评价确认",
+      "development_evidence": [
+        "R01",
+        "E03",
+        "E06-r2",
+        "X01-r6"
+      ],
+      "evidence_note": "Development evidence is scoped per validation.md. It is not independent repetition or human acceptance."
+    }
+  ]
+}

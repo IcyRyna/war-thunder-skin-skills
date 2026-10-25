@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="900" height="250" viewBox="0 0 900 250">
+<title>L02 warning-stencil</title><desc>警告主标题 + 小说明；不冒充品牌字体。</desc>
+<style>text{text-rendering:geometricPrecision} .hair{vector-effect:non-scaling-stroke}</style>
+<g id="symbol" ><path d="M45 45 l45 45 l-45 45 l-45 -45 Z" fill="#222625" stroke="#222625" stroke-width="0" stroke-linecap="round" stroke-linejoin="round" opacity="1"/></g><g id="editable-copy" ><text x="115" y="111" fill="#222625" font-family="Arial, sans-serif" font-size="78" font-weight="700" letter-spacing="2">CAUTION</text><text x="118" y="165" fill="#222625" font-family="Arial, sans-serif" font-size="23" font-weight="400" letter-spacing="2">KEEP CLEAR / MOVING EQUIPMENT</text><path d="M118 200 H820" fill="none" stroke="#222625" stroke-width="3" stroke-linecap="butt" stroke-linejoin="round" opacity="1"/></g></svg>

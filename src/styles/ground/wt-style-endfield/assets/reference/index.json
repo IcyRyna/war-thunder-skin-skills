@@ -1,0 +1,80 @@
+[
+  {
+    "path": "assets/reference/a7v-author-01.jpg",
+    "sha256": "22e3735fba2f6dd3ebe9e6ac0d7262e61c1f8ea7ccea3fab57f0d66db4799a6f",
+    "bytes": 102595,
+    "source_sha256": "e7886c4a8f3cc3c1620d9bbd4790a71c3167570f80e3317011c81b7f9b3cae20",
+    "source_dimensions": [
+      2161,
+      1284
+    ],
+    "purpose": "overall appearance only; no colour, alpha or UV precision claim",
+    "encoding": "JPEG preview only; label band added by study"
+  },
+  {
+    "path": "assets/reference/a7v-author-02.jpg",
+    "sha256": "c11ecf29ca01de79c81ee59cea5d9967769b55b63e005233bc5edd8d6bf4d517",
+    "bytes": 146450,
+    "source_sha256": "deb0f6f12537148a244e1ba0d878236f94396d26fe0ee2ba42e351755a6c9816",
+    "source_dimensions": [
+      2161,
+      1284
+    ],
+    "purpose": "overall appearance only; no colour, alpha or UV precision claim",
+    "encoding": "JPEG preview only; label band added by study"
+  },
+  {
+    "path": "assets/reference/embt-current-iso.jpg",
+    "sha256": "2372d5b33e1b0c0f3c5c0ee97e31f201bece1c9bda971c5abef3c508ec72e618",
+    "bytes": 111370,
+    "source_sha256": "64a7fde1d0267717572b547628f7fde01032d0586323adcf6b5f2362f0f5628e",
+    "source_dimensions": [
+      2100,
+      1300
+    ],
+    "purpose": "overall appearance only; no colour, alpha or UV precision claim",
+    "encoding": "JPEG preview only; label band added by study"
+  },
+  {
+    "path": "assets/reference/a7hu-current-hero-front.jpg",
+    "sha256": "5ad70f07f95e99a8124116d952826695a4e2009b795b3509d53066dd3ad44d99",
+    "bytes": 116959,
+    "source_sha256": "508c2ed88c33b2304c53a20856a4521f33313596cb7c84fff497f202724cd89a",
+    "source_dimensions": [
+      2880,
+      1700
+    ],
+    "purpose": "overall appearance only; no colour, alpha or UV precision claim",
+    "encoding": "JPEG preview only; label band added by study"
+  },
+  {
+    "path": "assets/reference/pantsir-fresh.jpg",
+    "sha256": "e70b78503b0f3d9f9af92def4a6581e0f8c95c7a3536b064ef8202d122e75876",
+    "bytes": 131592,
+    "source_url": "https://cdn-live.warthunder.com/uploads/46/e0/ca/3ee6fd041616ce858e7faf5bf5ecb16718/Pantsir_SMSV_Endfield_FactoryFresh_4K.png",
+    "source_page": "https://live.warthunder.com/post/1192231/en/",
+    "author": "巴别塔的锋刃",
+    "source_sha256": "b1a3c514fbdc02910d33b0bc3dcf9178aa7a9987a4091f891e67aef3678d2187",
+    "source_dimensions": [
+      3840,
+      2160
+    ],
+    "purpose": "user-selected study reference; not a production decal; image remains third-party material",
+    "selection": "2026-10-25 user: 图二图三可以"
+  },
+  {
+    "path": "assets/reference/embt-si.jpg",
+    "sha256": "64e734a2ca37ed6371d6bd8a66f8278d0cbe37515ed72c96a9d7242065c29c83",
+    "bytes": 77601,
+    "source_url": "https://images-live.warthunder.com/51b/b3e/255029c5f5a5bbcc8bec791c6111b13921.png",
+    "source_page": "https://live.warthunder.com/post/1191856/en/",
+    "author": "芳乃世界第一可爱",
+    "source_sha256": "cd0f2e902657bfcdb9ba0541329f9a29b904bbf240ca589b7f173722d4448912",
+    "source_dimensions": [
+      1920,
+      1080
+    ],
+    "purpose": "user-selected study reference; not a production decal; image remains third-party material",
+    "selection": "2026-10-25 user: 图二图三可以"
+  }
+]

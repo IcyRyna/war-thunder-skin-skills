@@ -1,6 +1,4 @@
 interface:
-  display_name: "终末地坦克风格"
-  short_description: "以 A7V 范本指导布局，并将 Blender 模型与 PS 原尺寸 UV 成对检查"
-  default_prompt: "使用 $wt-style-endfield 分析 A7V 范本并为目标坦克自由布局，在 Blender 确认构件与 UV 对应，再用 PS/Composa 原尺寸检查，修改后双向复查。"
-policy:
-  allow_implicit_invocation: true
+  display_name: "终末地工业涂装"
+  short_description: "按真实车体结构组织黑白黄工业构图、透明素材、原生 UV 与材质"
+  default_prompt: "使用 $wt-style-endfield，依据 A7V、A7HU 和 EMBT 的经验为指定地面载具制作终末地风格涂装。"

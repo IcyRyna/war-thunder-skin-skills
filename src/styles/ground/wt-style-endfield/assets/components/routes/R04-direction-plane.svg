@@ -1,0 +1,4 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" width="1000" height="330" viewBox="0 0 1000 330">
+<title>R04 direction-plane</title><desc>宽方向面与细轴；非任意拉伸贴花。</desc>
+<style>text{text-rendering:geometricPrecision} .hair{vector-effect:non-scaling-stroke}</style>
+<g id="direction-field" ><path d="M35 265 L650 45 H945 L590 265 Z" fill="#F2E74D"/></g><g id="axis" ><path d="M140 247 L700 82 H900" fill="none" stroke="#222625" stroke-width="7" stroke-linecap="butt" stroke-linejoin="round" opacity="1"/></g></svg>

@@ -1,0 +1,4 @@
+# Optional local native-SVG rasterization and offline model preview.
+# Core PNG/DDS tools use requirements.txt only.
+skia-python==144.0.post2
+moderngl==5.12.0
