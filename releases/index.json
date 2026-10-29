@@ -6,7 +6,7 @@
     {
       "tag": "wt-style-charcoal-industrial/v0.1.6",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.6",
-      "published_at": null,
+      "published_at": "2026-10-29T08:52:09Z",
       "draft": false,
       "prerelease": false,
       "validation": {
@@ -32,6 +32,12 @@
           "bytes": 72769035,
           "digest": "sha256:e3fa1141087eb12098ca81914a4c4225cd5ce9177f4272cb66baa3fb2319d94a",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip"
+        },
+        {
+          "name": "wt-style-charcoal-industrial-v0.1.6.files.json",
+          "bytes": 38318,
+          "digest": "sha256:8e903015ae6baa0980d93149f24a50ae35122716f45a7f7751ca949631b04ba3",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.files.json"
         }
       ]
     },
