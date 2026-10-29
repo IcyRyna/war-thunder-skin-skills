@@ -242,8 +242,8 @@
       "baseline": {
         "version": "0.1.6",
         "tag": "wt-style-charcoal-industrial/v0.1.6",
-        "package_sha256": "1969f56ee4827de138d191fe65bbe774f137822f678667fbf67b1a1b6be254cf",
-        "package_bytes": 391392,
+        "package_sha256": "ec99280154e5f810c602c2d83d4d21a87d0f36199eec724bb02b0823ee810f1d",
+        "package_bytes": 391451,
         "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.6",
         "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip"
       },
@@ -269,8 +269,8 @@
       },
       "bundle": {
         "download": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip",
-        "sha256": "48f4ca0b16731dfdb5535e9e65b21c435f024e7568b505b135f4d036eac4d2a8",
-        "bytes": 72768976,
+        "sha256": "e3fa1141087eb12098ca81914a4c4225cd5ce9177f4272cb66baa3fb2319d94a",
+        "bytes": 72769035,
         "layout": "two sibling directories"
       }
     },

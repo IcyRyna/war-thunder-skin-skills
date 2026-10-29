@@ -33,6 +33,6 @@ def main():
         from asset_pack import verify as verify_assets
         result['assets']=verify_assets(args.assets)
     else:result['assets']={'status':'separate; not requested'}
-    print(json.dumps(result,ensure_ascii=False,indent=2))
+    print(json.dumps(result,ensure_ascii=True,indent=2))
 
 if __name__=='__main__':main()

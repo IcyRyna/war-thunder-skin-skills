@@ -261,8 +261,8 @@
     },
     {
       "file": "references/release-validation.json",
-      "bytes": 519,
-      "sha256": "db713a03c0ccddcb143f1711d7fad3c0a6d5f0463fef67b8aa21db9f0c34ff00"
+      "bytes": 610,
+      "sha256": "58a5398ad8baff916cca9b64e9b357d85f6ef68860f7a5af75b71aedebfde84c"
     },
     {
       "file": "references/required-editor-and-blender.md",
@@ -401,8 +401,8 @@
     },
     {
       "file": "scripts/asset_pack.py",
-      "bytes": 4984,
-      "sha256": "0ed1d07b3ec99cd547f19794df486b9def57efc92329294f2f092088136f44f1"
+      "bytes": 4983,
+      "sha256": "258cbe6a43c33048dddba8a108bc5d8fb92c1f5a6aff2ab33117df414c1c1ccf"
     },
     {
       "file": "scripts/audit_assets.py",
@@ -741,8 +741,8 @@
     },
     {
       "file": "scripts/verify_release.py",
-      "bytes": 2254,
-      "sha256": "9aebcdd14ac5e61c2fa2b1b9b5ebffa3c6bbcaaf9d834fc581beb518c2f4b571"
+      "bytes": 2253,
+      "sha256": "fe8044b416a5c035863547d81fff9e6fbc8fded3f272a79a8ec788644e157d76"
     },
     {
       "file": "scripts/visibility_probe.py",
@@ -762,7 +762,7 @@
     {
       "file": "toolkit-lock.json",
       "bytes": 11280,
-      "sha256": "339636a3658714d190b15e81284af54de4e4f14c6912373ac18558c172cdaa7f"
+      "sha256": "00881758dc81480efcd1cca79db87fa1346de9eeda79dd61957424e095dfca9b"
     },
     {
       "file": "VERSION.json",

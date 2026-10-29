@@ -1,12 +1,13 @@
 {
   "schema_version": 1,
   "release_id": "charcoal-0.1.6",
-  "tests_run": 290,
+  "tests_run": 291,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
   "source_test_input_fingerprint": "919b5f1a5d348b14f3334c1ed5b52ebc44c8db1422949ddd44b953ddafaa72dc",
   "asset_catalog_entries": 18,
   "asset_scope": "independent companion; all original production media bytes retained",
-  "scope": "engineering regressions, independent package checks and retained A7HU repair evidence; not full legacy schema migration or new game validation"
+  "scope": "engineering regressions, independent package checks and retained A7HU repair evidence; not full legacy schema migration or new game validation",
+  "release_cli_check": "Chinese asset paths verified under cp950 stdout without -X utf8"
 }

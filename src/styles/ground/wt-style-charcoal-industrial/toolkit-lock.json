@@ -19,7 +19,7 @@
     },
     {
       "file": "scripts/asset_pack.py",
-      "sha256": "0ed1d07b3ec99cd547f19794df486b9def57efc92329294f2f092088136f44f1"
+      "sha256": "258cbe6a43c33048dddba8a108bc5d8fb92c1f5a6aff2ab33117df414c1c1ccf"
     },
     {
       "file": "scripts/audit_assets.py",
@@ -291,7 +291,7 @@
     },
     {
       "file": "scripts/verify_release.py",
-      "sha256": "9aebcdd14ac5e61c2fa2b1b9b5ebffa3c6bbcaaf9d834fc581beb518c2f4b571"
+      "sha256": "fe8044b416a5c035863547d81fff9e6fbc8fded3f272a79a8ec788644e157d76"
     },
     {
       "file": "scripts/visibility_probe.py",

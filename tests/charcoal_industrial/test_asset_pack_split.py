@@ -1,6 +1,6 @@
 """Independent companion discovery, identity and file integrity."""
 from pathlib import Path
-import json,os,tempfile,unittest,sys
+import json,os,tempfile,unittest,sys,subprocess
 from unittest.mock import patch
 sys.path.insert(0,str((Path(__file__).resolve().parents[2]/'src/styles/ground/wt-style-charcoal-industrial')/'scripts'))
 from asset_pack import PACK_ID,locate,reference,verify,digest
@@ -43,5 +43,12 @@ class AssetPackTests(unittest.TestCase):
  def test_unknown_extra_file_rejected(self):
   (self.pack/'unexpected.txt').write_text('research residue')
   with self.assertRaisesRegex(ValueError,'file set differs'):verify(self.pack,skill_root=self.skill)
+ def test_chinese_path_survives_windows_cp950_stdout(self):
+  other=self.make_pack(self.root/'独立素材包 验证')
+  env=os.environ.copy();env['PYTHONIOENCODING']='cp950'
+  script=(Path(__file__).resolve().parents[2]/'src/styles/ground/wt-style-charcoal-industrial')/'scripts/asset_pack.py'
+  result=subprocess.run([sys.executable,'-B',str(script),'locate','--assets',str(other)],capture_output=True,env=env)
+  self.assertEqual(result.returncode,0,result.stderr.decode('ascii',errors='backslashreplace'))
+  self.assertEqual(json.loads(result.stdout.decode('ascii'))['root'],str(other.resolve()))
 
 if __name__=='__main__':unittest.main()

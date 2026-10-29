@@ -95,6 +95,6 @@ def main():
     else:
         root,data=locate(args.assets)
         result={'asset_pack_id':PACK_ID,'version':data['version'],'root':str(root),'catalog':str(inside(root,data['catalog']['file']))}
-    print(json.dumps(result,ensure_ascii=False,indent=2))
+    print(json.dumps(result,ensure_ascii=True,indent=2))
 
 if __name__=='__main__':main()

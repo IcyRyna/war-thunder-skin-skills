@@ -6,7 +6,7 @@
 
 | 下载 | 大小 | 内容 |
 |---|---:|---|
-| [Skill安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip) | 391.39 KB | 规则、工具、模板；不包含生产图片 |
+| [Skill安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip) | 391.45 KB | 规则、工具、模板；不包含生产图片 |
 | [独立素材包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-assets-v0.1.6.zip) | 72.38 MB | 18项可直接用/改制的素材、完整高清材质、必要AZUR范本图 |
 | [一起压缩的合集](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip) | 72.77 MB | 两个并列目录，内容与单独下载一致 |
 
@@ -44,7 +44,7 @@ Skill单独安装仍可读取规则、设计构图、处理自备素材并生成
 
 ## 验证范围
 
-290项单元/集成回归通过；独立解压验证覆盖Skill单独使用、缺素材包、并排目录和任意素材路径。18项素材目录与三套四图防滑检查通过。A7HU既有副本完成13项部位局部审计，六份真实编辑器工程、13张DDS/149级mip及完整顶部、首下字标、支架、火控和原皮细节修复有实际记录。
+291项单元/集成回归通过；独立解压验证覆盖Skill单独使用、缺素材包、并排目录和任意素材路径。18项素材目录与三套四图防滑检查通过。A7HU既有副本完成13项部位局部审计，六份真实编辑器工程、13张DDS/149级mip及完整顶部、首下字标、支架、火控和原皮细节修复有实际记录。
 
 这些结果不表示未见车型独立制作、旧工程完整schema3迁移或新游戏实装已经完成；具体作品美术认可仍由用户判断。A7HU作品不随本次Skill发布上传。
 
