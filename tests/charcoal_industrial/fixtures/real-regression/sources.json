@@ -1,0 +1,70 @@
+{
+  "usage": "regression only; never default painting assets",
+  "files": [
+    {
+      "file": "merkava4m/plaque-current-c-64.png",
+      "bytes": 2098,
+      "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+    },
+    {
+      "file": "merkava4m/plaque-fixture-provenance.json",
+      "bytes": 2342,
+      "sha256": "c24908482d46aacd679845800ccb48dece197dc3606d11e3d3014e25a4da4d91"
+    },
+    {
+      "file": "merkava4m/plaque-injected-r-64.png",
+      "bytes": 6043,
+      "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+    },
+    {
+      "file": "merkava4m/plaque-r-stripe-mask-64.png",
+      "bytes": 111,
+      "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+    },
+    {
+      "file": "merkava4m/plaque-reference-n-64.png",
+      "bytes": 6034,
+      "sha256": "6466bfccc8916deb0a22fb8db4f0d48096c7b01ba8e293e9ed5bb8ff140cac04"
+    },
+    {
+      "file": "merkava4m/plaque-removal-negative.json",
+      "bytes": 4570,
+      "sha256": "1a98289020123acc9d916e2e4b5e2a1db5e8fde1df509c90eadd4a16f15ddd98"
+    },
+    {
+      "file": "merkava4m/plaque-removal-positive.json",
+      "bytes": 4739,
+      "sha256": "b8ebb649389d83124c8ef83f327fece94a8a15966cf42511ddb418d285875f57"
+    },
+    {
+      "file": "type10/actual-ink-fixtures.json",
+      "bytes": 16410,
+      "sha256": "769849353689fe77b42ab56b640d5e92050a300918ff65e120a54563f20cdc3e"
+    },
+    {
+      "file": "type10/actual-turret-n-crop.png",
+      "bytes": 74806,
+      "sha256": "d714bcefbe9d090eb4f0d28293726d9660210eae027c5fbd71eb7e07bf74a6d4"
+    },
+    {
+      "file": "type10/roof-panel-0-ink-support.npz",
+      "bytes": 2505,
+      "sha256": "1f0d5a3e9787781519140876aaaf018dfc9fea38de13a3a9bab1e60a90a9270b"
+    },
+    {
+      "file": "type10/roof-panel-0-ink.npz",
+      "bytes": 301364,
+      "sha256": "0eafd91d5702ee5ca6ef6af5c70644c612b0fba0426e3edd6f930000f0eb1dab"
+    },
+    {
+      "file": "type10/roof-panel-1-ink-support.npz",
+      "bytes": 2464,
+      "sha256": "b3275caa3c49308a78abbee95467ed322e990d8881187cdf7938849933fd6e56"
+    },
+    {
+      "file": "type10/roof-panel-1-ink.npz",
+      "bytes": 299855,
+      "sha256": "1986afc43054c668e160ec682f2d00223bce69e70a15b2b5e6b805883a6ee137"
+    }
+  ]
+}

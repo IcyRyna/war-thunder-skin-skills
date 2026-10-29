@@ -1,0 +1,23 @@
+{
+  "schema_version": 1,
+  "skill_id": "wt-style-charcoal-industrial",
+  "version": "0.1.6",
+  "base_version": "0.1.5.1",
+  "candidate_id": "charcoal-0.1.6-release",
+  "status": "release",
+  "source_revision": "2026-10-27-package-budget",
+  "formal_release": true,
+  "artwork_approval": "not_inferred",
+  "unseen_vehicle_validation": "not_run",
+  "previous_candidate": "charcoal-0.1.6-rc3",
+  "regression_scope": "AZUR retained runtime identity/decode first; Type 10, Merkava Mk.4M, Leopard 2A7HU adaptation regressions",
+  "known_vehicle_regression": "completed_bounded_replay",
+  "offline_pipeline_validation": "2026-10-29 actual A7HU repair: native C/RB restoration, five native material grids, visible complete roof warnings, editor roundtrips, 13 DDS/149 mips, final Blender inspection; explicit repair acceptance, not full historical schema migration or game approval",
+  "manifest_schema": 3,
+  "primary_template": "fr_leclerc_azur",
+  "primary_reference_validation": "completed retained v29 archive: 16 files, 15 DDS, 169 mips; historical source masks unavailable; no artwork/game approval",
+  "local_amendment": "2026-10-29: separate Skill and production material pack; research media excluded; current image evidence linked to render receipts",
+  "source_candidate": "charcoal-0.1.6-rc4",
+  "asset_pack_id": "wt-charcoal-industrial-assets",
+  "material_assets_embedded": false
+}

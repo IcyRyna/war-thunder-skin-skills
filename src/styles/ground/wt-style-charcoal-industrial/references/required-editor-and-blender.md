@@ -4,7 +4,7 @@
 
 ## PS / Composa是必经制作阶段
 
-本工作区的PS风格分层编辑入口是Composa MCP。当前工作区优先使用photoshop-tools项目的composa_mcp.py；独立包使用随包scripts/editor_batch.py与客户端。真实Photoshop桥若由目标项目明确配置，以其已实现接口为准，不把Composa说成Adobe Photoshop插件。
+本工作区的PS风格分层编辑入口是Composa MCP。当前工作区和独立包的写批次优先使用随包scripts/editor_batch.py串行互斥；它调用随包composa_mcp.py。photoshop-tools项目的通用客户端可用于只读诊断，直接编写客户端调用脚本时应使用同一editor_lock覆盖完整写批次。真实Photoshop桥若由目标项目明确配置，以其已实现接口为准，不把Composa说成Adobe Photoshop插件。
 
 开始先连接并读取实时工具schema，核对打开/新建、导入图层、描述、保存、导出及自有文档收尾能力。用户已启用Allow AI Control时直接进行本次已授权操作，不反复要求勾选。暂时无工具先重连诊断；确有连接/权限阻断时保留响应，报告具体未完成阶段，不把纯脚本合成冒充PS已完成。
 
@@ -46,3 +46,9 @@ Blender调用不等于必须渲染整车图片。默认展示仍复用本地交�
 
 本车任务保存：实时schema与编辑器批次、真实编辑/图层组装说明、原生工程、导出与重开检查、owned文档收尾；Blender能力发现与实际调用/输入/结果，或真实不可用原因。公开作品页不附内部会话、机器路径和调试日志。
 
+
+## 2026-10-29工具调用审计补充
+
+生产交付必须按[工具调用与回执契约](tool-execution-contract.md)提供production_tools schema 1。vehicle_review final仍是技术检查；delivery_validate额外核对真实编辑、保存、复制重开、导出、后处理关联和Blender执行/实际不可用证据。旧日志缺字段时据实转换或补做缺失步骤，不生成虚构成功记录。
+
+预览默认单张iso；七张及以上需本次明确用户请求记录。渲染器source_face_ids用于追溯被略过退化面后的原始面身份，不能把导入器的数组下标当原生面号。Windows editor_batch固定UTF-8子进程日志，未知结果先读回执再决定，不自动重放编辑。

@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "skill_version": "0.1.5",
-  "local_revision": "workflow-r2",
+  "skill_version": "0.1.6",
+  "local_revision": "0.1.6-canonical-runtime-delivery",
   "editor": {
     "required_for_actual_skin_creation_or_substantive_edit": true,
-    "workspace_entry": "photoshop-tools/scripts/composa_mcp.py",
+    "workspace_entry": "scripts/editor_batch.py",
     "standalone_entry": "scripts/editor_batch.py",
     "connection_only_counts_as_production": false,
     "required_evidence": [
@@ -13,8 +13,11 @@
       "native_project",
       "export",
       "copy_reopen_check",
-      "owned_document_cleanup"
-    ]
+      "owned_document_cleanup",
+      "frozen_original_tool_responses"
+    ],
+    "read_only_shared_client": "photoshop-tools/scripts/composa_mcp.py",
+    "utf8_child_process": true
   },
   "blender": {
     "required_if_usable": true,
@@ -52,6 +55,27 @@
     "public_build_revision_numbers": false,
     "keep_vehicle_variant_digits": true,
     "github_asset_names": "ASCII with Chinese labels",
-    "keep_existing_registered_identity": true
-  }
+    "keep_existing_registered_identity": "reuse actual identity; no central registry"
+  },
+  "candidate_id": "charcoal-0.1.6-release",
+  "identity_source": "VERSION.json",
+  "required_vehicle_review": {
+    "policy": "style-policy.json",
+    "parts": "part-layout-defaults.md",
+    "manifest_schema": 3,
+    "composer_schema": 4,
+    "stages": [
+      "design",
+      "base",
+      "final"
+    ],
+    "detail_checks": "production-detail-checklist.md",
+    "runtime": "runtime-and-delivery-contract.md",
+    "delivery": "scripts/delivery_validate.py",
+    "technical_is_art_approval": false,
+    "production_tools": "scripts/production_tools.py",
+    "tool_execution_contract": "tool-execution-contract.md",
+    "delivery_requires_actual_tool_evidence": true
+  },
+  "production_tools_contract": "references/tool-execution-contract.md"
 }

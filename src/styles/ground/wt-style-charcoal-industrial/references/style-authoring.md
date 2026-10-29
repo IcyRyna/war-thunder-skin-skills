@@ -1,3 +1,5 @@
+> 当前候选：新制作先读[部位默认](part-layout-defaults.md)与[候选流程](candidate-workflow.md)，统一规则由style-policy.json提供；以下保留旧工具与案例说明，旧schema 2仅用于历史复刻。
+
 > 整合候选：本页保留分支的历史方法与案例配方。当前决定以[共同规则](consolidated-rules.md)、[车型案例](vehicle-cases.md)及[材质／Alpha](material-and-alpha.md)为准；旧认可、参数和阶段方案不自动扩展。
 
 > 0.1.4：侧面贴纸按车型重做；99A取消国旗。当前规则见[车型子版](vehicle-specific-decals.md)和[中系ERA](vehicle-families/cn-turret-era.md)。

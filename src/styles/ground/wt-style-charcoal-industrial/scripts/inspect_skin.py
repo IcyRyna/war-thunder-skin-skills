@@ -11,6 +11,7 @@ import struct
 from artifact_io import ArtifactTransaction
 from tank_core import load_image, write_json
 from texture_semantics import validate_alpha_semantics, validate_color_space
+from dds_variant import decode_mips
 
 
 def _relative(value: str) -> Path:
@@ -23,20 +24,11 @@ def _relative(value: str) -> Path:
 def _metadata(path: Path) -> dict:
     if path.suffix.lower() != '.dds':
         return {'container': path.suffix[1:].lower(), 'mip_count': 1}
-    with path.open('rb') as stream:
-        header = stream.read(148)
-    if len(header) < 128 or header[:4] != b'DDS ' or struct.unpack_from('<I', header, 4)[0] != 124:
-        raise ValueError(f'Invalid DDS header: {path}')
-    fourcc = header[84:88]
-    result = {'container': 'dds', 'mip_count': max(1, struct.unpack_from('<I', header, 28)[0])}
-    if fourcc == b'DX10':
-        if len(header) < 148:
-            raise ValueError(f'Truncated DDS DX10 header: {path}')
-        result['dxgi_format'] = struct.unpack_from('<I', header, 128)[0]
-    else:
-        result['fourcc'] = fourcc.rstrip(b'\0').decode('ascii', errors='replace') or None
-        result['rgb_bits'] = struct.unpack_from('<I', header, 88)[0]
-    return result
+    meta, mips = decode_mips(path)
+    return {"container":"dds","mip_count":meta["mip_count"],"dxgi_format":meta["dxgi"],
+            "alpha_mode":meta["alpha_mode"],"all_mips_decoded":True,
+            "mip_rgba_sha256":[hashlib.sha256(mip.tobytes()).hexdigest() for mip in mips]}
+
 
 
 def inspect(folder: Path, materials: Path | None = None, manifest: Path | None = None,

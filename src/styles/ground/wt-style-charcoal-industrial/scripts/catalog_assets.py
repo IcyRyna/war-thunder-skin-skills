@@ -4,6 +4,9 @@ import json,hashlib
 from style_quality import authorize
 
 def resolve_asset(catalog_file,asset_id,kind,intent='style_transfer',target_profile=None):
+ if catalog_file is None:
+  from asset_pack import catalog_file as find_catalog
+  catalog_file=find_catalog()
  catalog_file=Path(catalog_file).resolve();catalog=json.loads(catalog_file.read_bytes());root=catalog_file.parent.parent if catalog.get('asset_path_base','skill_root')=='skill_root' else catalog_file.parent
  rows=[r for r in catalog['assets'] if r['id']==asset_id]
  if len(rows)!=1:raise ValueError('Asset identity must be unique')

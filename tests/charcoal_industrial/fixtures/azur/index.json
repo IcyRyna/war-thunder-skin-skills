@@ -1,0 +1,246 @@
+{
+  "archive_sha256": "4f9e0ab2572ea2f47cd868f076fa1babfd0ef19c6f2870871ca26fbe27bc2d3e",
+  "samples": [
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur.dds",
+      "source_sha256": "706adc1e5e96208826cb665ae1cdabffd73286e63b1d97ff178fadab5a6b8d6d",
+      "source_bytes": 89478612,
+      "header": "leclerc_azur.header.bin",
+      "header_sha256": "c1c96138704b5f3958fe47d6e739c05ee9e0b438811fab135cbca46ac43b0836",
+      "payload": "leclerc_azur.mip.bin",
+      "payload_sha256": "e5a5d8fa03c7ad5ded767ffd35d0af9d3f8219f39bff51d6a9ae40e942e9cfef",
+      "level": 9,
+      "size": [
+        8,
+        8
+      ],
+      "role": "color",
+      "decoded_rgba_sha256": "7561ed57dda297a8035bf03e7c054ce0a0314908caa8e0a2170ed2042d04cd94"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur_ao.dds",
+      "source_sha256": "63a2eb1877068ffbd16c5be20b289d9f30ec6d8f778a4360b8c06d833c589212",
+      "source_bytes": 1398228,
+      "header": "leclerc_azur_ao.header.bin",
+      "header_sha256": "a8177c31cef2223de2ab23ae8af3f2c13dc85f016cd30894f1fc87a0f613ee1c",
+      "payload": "leclerc_azur_ao.mip.bin",
+      "payload_sha256": "80689fb967cb0da9f8bee1543613825632383ea4e77fbf35b71cd95d61a9ff4e",
+      "level": 6,
+      "size": [
+        8,
+        8
+      ],
+      "role": "ao",
+      "decoded_rgba_sha256": "80689fb967cb0da9f8bee1543613825632383ea4e77fbf35b71cd95d61a9ff4e"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur_n.dds",
+      "source_sha256": "3a6413079001a2cd8053cc7569d8293788f3cae1a52039b3818698773caec689",
+      "source_bytes": 22369748,
+      "header": "leclerc_azur_n.header.bin",
+      "header_sha256": "f7442ff5851063110f26b99b587bff970b641690f9022246685015911f15b476",
+      "payload": "leclerc_azur_n.mip.bin",
+      "payload_sha256": "820918fd09f0e12f0e87409a09922bfc11397f56a5841eb966ba92ffa718abad",
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "role": "normal",
+      "decoded_rgba_sha256": "e710d4124f96c79e41c0dadda813b4674a3d7de9ba4ca65f2081dfa08ec507bb"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body.dds",
+      "source_sha256": "29ddcfd8730969f24f5a26514bf3bfba22c50e5277422a79ddf66d05ae9f5212",
+      "source_bytes": 89478612,
+      "header": "leclerc_s2_body.header.bin",
+      "header_sha256": "c1c96138704b5f3958fe47d6e739c05ee9e0b438811fab135cbca46ac43b0836",
+      "payload": "leclerc_s2_body.mip.bin",
+      "payload_sha256": "542359fae4a8cbe850f48cd88e9f8facb5be658edfa353e72a7ceb403b57fac6",
+      "level": 9,
+      "size": [
+        8,
+        8
+      ],
+      "role": "color",
+      "decoded_rgba_sha256": "f55965578f56b25db0f9985e2cd17d804984e8fabe5e0cdc51fb6af1ada48595"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body_ao.dds",
+      "source_sha256": "83a24f9c55df3ff03dd7146209311f18eeb8ac5cb5d791fe5ebbc1db6bcc63d3",
+      "source_bytes": 1398228,
+      "header": "leclerc_s2_body_ao.header.bin",
+      "header_sha256": "a8177c31cef2223de2ab23ae8af3f2c13dc85f016cd30894f1fc87a0f613ee1c",
+      "payload": "leclerc_s2_body_ao.mip.bin",
+      "payload_sha256": "ff875e69f7fdb41614e8a4a6fa8b6fd4e577f657f313ebbf98bc64b1807e34a5",
+      "level": 6,
+      "size": [
+        8,
+        8
+      ],
+      "role": "ao",
+      "decoded_rgba_sha256": "ff875e69f7fdb41614e8a4a6fa8b6fd4e577f657f313ebbf98bc64b1807e34a5"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body_n.dds",
+      "source_sha256": "a4862aaa3815dd971bed855c00c0b905286cc63d50422b0286ea8dc3b691d592",
+      "source_bytes": 22369748,
+      "header": "leclerc_s2_body_n.header.bin",
+      "header_sha256": "f7442ff5851063110f26b99b587bff970b641690f9022246685015911f15b476",
+      "payload": "leclerc_s2_body_n.mip.bin",
+      "payload_sha256": "b5eec874c4f4a98f9c18c14d91258cbad6a833496db4513c5de82144b898dd64",
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "role": "normal",
+      "decoded_rgba_sha256": "25c27d8c4d2ade2113f85579f6d0fcf3a56d6241ee93add42ffcc596f11b7f24"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz.dds",
+      "source_sha256": "74ca8ed0555d18dea033d889e53982652e29adeba6061c44fcb7309825ede78c",
+      "source_bytes": 22369748,
+      "header": "leclerc_s2_dz.header.bin",
+      "header_sha256": "f7442ff5851063110f26b99b587bff970b641690f9022246685015911f15b476",
+      "payload": "leclerc_s2_dz.mip.bin",
+      "payload_sha256": "5a7282bea6a6ed20cfa7f429e674586a2cc849a530d4cb82bb202c350c8d6789",
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "role": "color",
+      "decoded_rgba_sha256": "5a7282bea6a6ed20cfa7f429e674586a2cc849a530d4cb82bb202c350c8d6789"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz_ao.dds",
+      "source_sha256": "4e8f0c68c0348bf8a6fe11af1fe6b7b08f334a96199d935fb840d9dda2cbe5d2",
+      "source_bytes": 349652,
+      "header": "leclerc_s2_dz_ao.header.bin",
+      "header_sha256": "d6086b06a0d9b38dd592dc511ff90d24d982f37918862c4a7c420ba49cc40b46",
+      "payload": "leclerc_s2_dz_ao.mip.bin",
+      "payload_sha256": "34075c1be79b4de3cf7bc3fc784cd4025bce0b6af0b3e28cfb549027be3361af",
+      "level": 5,
+      "size": [
+        8,
+        8
+      ],
+      "role": "ao",
+      "decoded_rgba_sha256": "34075c1be79b4de3cf7bc3fc784cd4025bce0b6af0b3e28cfb549027be3361af"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz_n.dds",
+      "source_sha256": "9a1088d4433ee0763d989fa09261557d8fa2551b3aefa9bf92c994dc17b1bb1b",
+      "source_bytes": 5592532,
+      "header": "leclerc_s2_dz_n.header.bin",
+      "header_sha256": "79995b5db5308388b5515679c70f7fa3353d51bbedf7027da64dba39c150168f",
+      "payload": "leclerc_s2_dz_n.mip.bin",
+      "payload_sha256": "6a498fdb8bf42c449bec798b9c09e2c454180f3d9c689ea83dc31cf3e81e8b66",
+      "level": 7,
+      "size": [
+        8,
+        8
+      ],
+      "role": "normal",
+      "decoded_rgba_sha256": "65f7b60fe41419fb4f6cc2dfb99c22efc19bafc1b3e07e721aeded6f27b26723"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun.dds",
+      "source_sha256": "02688f82c8c3298859b32d04c972e58455524920404a1e33bc19c38ae1a9e0f5",
+      "source_bytes": 11184940,
+      "header": "leclerc_s2_gun.header.bin",
+      "header_sha256": "434b29d01b3c2d28dbb35775807087a7807d3ec62dc0f747630039966fe33d63",
+      "payload": "leclerc_s2_gun.mip.bin",
+      "payload_sha256": "e79599c17002e6207a2cd75db48bdd89a9d99c1ae58d60156becb9e381aedb8c",
+      "level": 8,
+      "size": [
+        8,
+        4
+      ],
+      "role": "color",
+      "decoded_rgba_sha256": "e79599c17002e6207a2cd75db48bdd89a9d99c1ae58d60156becb9e381aedb8c"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun_ao.dds",
+      "source_sha256": "ccb8bf191a37649ac4fb26e73d73b0a79f42384c3b49487ef358bd83c01c3ceb",
+      "source_bytes": 174892,
+      "header": "leclerc_s2_gun_ao.header.bin",
+      "header_sha256": "d684bde86b5520afe4a714bb3159aec41ae5de60009e9a2f83898ecd467300a9",
+      "payload": "leclerc_s2_gun_ao.mip.bin",
+      "payload_sha256": "351bb27445566d07470c0c61a3bdba88cb573d47a147f35ab3ecc43350211c69",
+      "level": 5,
+      "size": [
+        8,
+        4
+      ],
+      "role": "ao",
+      "decoded_rgba_sha256": "351bb27445566d07470c0c61a3bdba88cb573d47a147f35ab3ecc43350211c69"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun_n.dds",
+      "source_sha256": "45af14297e18de9cd6180b278272e0adf5645b44878c9108755c8a8139a8d3c3",
+      "source_bytes": 2796332,
+      "header": "leclerc_s2_gun_n.header.bin",
+      "header_sha256": "0aeaef8b94e17d65f6e56d228ba1b4f1a63fa4061f92e9b407a90d12c6ebb3f7",
+      "payload": "leclerc_s2_gun_n.mip.bin",
+      "payload_sha256": "cb6f16bd6fdfc475e7072daf8f19483d8172055da44db636830380e3e29f667a",
+      "level": 7,
+      "size": [
+        8,
+        4
+      ],
+      "role": "normal",
+      "decoded_rgba_sha256": "cb86942116b4a7e258320bce380109bce9d6c2867a5c70affaace6c4525eedaf"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret.dds",
+      "source_sha256": "0af1edacc3b0b0517c9189c5d2d1e5bcd5ea4aaf5659e6cc0d4acdeb8206f268",
+      "source_bytes": 89478612,
+      "header": "leclerc_s2_turret.header.bin",
+      "header_sha256": "c1c96138704b5f3958fe47d6e739c05ee9e0b438811fab135cbca46ac43b0836",
+      "payload": "leclerc_s2_turret.mip.bin",
+      "payload_sha256": "0045885593990b6b8e0baaa12e9400407abefea383f8204c2e8fa286686bd8b7",
+      "level": 9,
+      "size": [
+        8,
+        8
+      ],
+      "role": "color",
+      "decoded_rgba_sha256": "3cbfe593aa1e64fcb275cff74131af2cfaf75ff0bdb507e8c0ce01730ec8d9c1"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret_ao.dds",
+      "source_sha256": "9e4a8abd29b718a0d954f0ac1a8d8c99bacf37c3f036fd7923ce0e69781a3836",
+      "source_bytes": 1398228,
+      "header": "leclerc_s2_turret_ao.header.bin",
+      "header_sha256": "a8177c31cef2223de2ab23ae8af3f2c13dc85f016cd30894f1fc87a0f613ee1c",
+      "payload": "leclerc_s2_turret_ao.mip.bin",
+      "payload_sha256": "946df10243f57f513fe86dd3415b58bacbb9dffd13470d722720cd341fb5f56c",
+      "level": 6,
+      "size": [
+        8,
+        8
+      ],
+      "role": "ao",
+      "decoded_rgba_sha256": "946df10243f57f513fe86dd3415b58bacbb9dffd13470d722720cd341fb5f56c"
+    },
+    {
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret_n.dds",
+      "source_sha256": "b7621b486d1fe766c553c986e98a489e7959da6f8222f8e0635bc08bfaeb0c2e",
+      "source_bytes": 22369748,
+      "header": "leclerc_s2_turret_n.header.bin",
+      "header_sha256": "f7442ff5851063110f26b99b587bff970b641690f9022246685015911f15b476",
+      "payload": "leclerc_s2_turret_n.mip.bin",
+      "payload_sha256": "177a34c1cd44fc6510762781cf60a522ca496a24d82270bc08d14e98ecec9c5a",
+      "level": 8,
+      "size": [
+        8,
+        8
+      ],
+      "role": "normal",
+      "decoded_rgba_sha256": "e08f0b601a965e496f829ad4a22fc0b8cbc5ed1737dd251cebe2548540ad87f4"
+    }
+  ],
+  "scope": "exact historical tail bytes for decoder regression; not full vehicle or material approval"
+}

@@ -1,0 +1,1331 @@
+{
+  "schema_version": 3,
+  "asset_pack_id": "wt-charcoal-industrial-assets",
+  "version": "0.1.6",
+  "asset_path_base": "catalog_directory",
+  "evidence_path_base": "catalog_directory",
+  "selection_requires": [
+    "asset_id",
+    "kind"
+  ],
+  "no_implicit_default": true,
+  "assets": [
+    {
+      "id": "hex-trace-mother",
+      "kind": "transparent_element",
+      "label": "独立透明几何母版",
+      "file": "production/hex-trace-mother.png",
+      "sha256": "04b52de7f0a4bfbea908760d9baeaeed827c0e15827de759ffd3719ea2ddb462",
+      "svg_file": "production/hex-trace-mother.svg",
+      "svg_sha256": "d4aa322d7ae556629d01675acacb5d2ed20b8ec2319e384c67985ea082cc4489",
+      "contains_text": false,
+      "known_text": [],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "origin_class": "clean_graphic",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "engineering_state": "geometry_alpha_checked",
+      "user_review": "Whole AZUR accepted; this reusable mother and new child require their own carrier-specific review. Gray RWS hex/trace placement was rejected.",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "references/production-assets.json",
+          "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+        }
+      },
+      "native_detail_size": [
+        2304,
+        700
+      ],
+      "critical_features": {
+        "line_width_px": 15
+      },
+      "transforms": {
+        "scale": "uniform; rerasterize SVG for a larger target",
+        "mirror": false,
+        "internal_rearrangement": "new child version with declared adaptation",
+        "repeat": "explicit cell/module count"
+      },
+      "note": "optional graphic vocabulary; not a default for every component",
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            596,
+            316,
+            657,
+            331
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "04b52de7f0a4bfbea908760d9baeaeed827c0e15827de759ffd3719ea2ddb462",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "roof-service-mother",
+      "kind": "transparent_element",
+      "label": "独立透明几何母版",
+      "file": "production/roof-service-mother.png",
+      "sha256": "b6cc8fe8b9698ceed1c5e5a9f3b1523014df93355c5ecad27c0aa7916ef938a6",
+      "svg_file": "production/roof-service-mother.svg",
+      "svg_sha256": "69a3b9580533eba05f37a75a353c30ceba74a496813d8c342d603b82148029ad",
+      "contains_text": false,
+      "known_text": [],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "origin_class": "clean_graphic",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "engineering_state": "geometry_alpha_checked",
+      "user_review": "Whole AZUR accepted; this reusable mother and new child require their own carrier-specific review. Gray RWS hex/trace placement was rejected.",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "references/production-assets.json",
+          "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+        }
+      },
+      "native_detail_size": [
+        1000,
+        1000
+      ],
+      "critical_features": {
+        "line_width_px": 11
+      },
+      "transforms": {
+        "scale": "uniform; rerasterize SVG for a larger target",
+        "mirror": false,
+        "internal_rearrangement": "new child version with declared adaptation",
+        "repeat": "explicit cell/module count"
+      },
+      "note": "optional graphic vocabulary; not a default for every component",
+      "target_adaptation": {
+        "role_id": "D04",
+        "policy": "required_semantics_and_carrier",
+        "replace_or_confirm": [
+          "actual_hatch_function",
+          "approved_label",
+          "handedness",
+          "seams",
+          "handles",
+          "text_alignment"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            815,
+            90,
+            826,
+            135
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "b6cc8fe8b9698ceed1c5e5a9f3b1523014df93355c5ecad27c0aa7916ef938a6",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "optic-id-mother",
+      "kind": "transparent_element",
+      "label": "独立透明几何母版",
+      "file": "production/optic-id-mother.png",
+      "sha256": "4daf9d586e9029ee097bdd9db38c062056987a3d177e4131fc4faada8dc64cbb",
+      "svg_file": "production/optic-id-mother.svg",
+      "svg_sha256": "eccace5ac356eaabcb2d8c2ac6ad37c86be6268b16602a743c3fbb486f157890",
+      "contains_text": false,
+      "known_text": [],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "origin_class": "clean_graphic",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "engineering_state": "geometry_alpha_checked",
+      "user_review": "Whole AZUR accepted; this reusable mother and new child require their own carrier-specific review. Gray RWS hex/trace placement was rejected.",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "references/production-assets.json",
+          "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+        }
+      },
+      "native_detail_size": [
+        1000,
+        550
+      ],
+      "critical_features": {
+        "line_width_px": 23
+      },
+      "transforms": {
+        "scale": "uniform; rerasterize SVG for a larger target",
+        "mirror": false,
+        "internal_rearrangement": "new child version with declared adaptation",
+        "repeat": "explicit cell/module count"
+      },
+      "note": "optional graphic vocabulary; not a default for every component",
+      "target_adaptation": {
+        "role_id": "D01",
+        "policy": "required_per_vehicle",
+        "replace_or_confirm": [
+          "vehicle_name",
+          "variant",
+          "serial",
+          "layout",
+          "size",
+          "position",
+          "handedness"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            69,
+            44,
+            92,
+            137
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "4daf9d586e9029ee097bdd9db38c062056987a3d177e4131fc4faada8dc64cbb",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "color-ticks-mother",
+      "kind": "transparent_element",
+      "label": "独立透明几何母版",
+      "file": "production/color-ticks-mother.png",
+      "sha256": "246696210ac20d7a6e6b6f6b357b6a89da30aaf6f62e9c4f4501b746e93d0514",
+      "svg_file": "production/color-ticks-mother.svg",
+      "svg_sha256": "eddc001bebdee8afb356abe02cf487f9a11a7638e0d44ee1c79e46f596f835ba",
+      "contains_text": false,
+      "known_text": [],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "origin_class": "clean_graphic",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "engineering_state": "geometry_alpha_checked",
+      "user_review": "Whole AZUR accepted; this reusable mother and new child require their own carrier-specific review. Gray RWS hex/trace placement was rejected.",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "references/production-assets.json",
+          "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+        }
+      },
+      "native_detail_size": [
+        2304,
+        700
+      ],
+      "critical_features": {
+        "line_width_px": 30
+      },
+      "transforms": {
+        "scale": "uniform; rerasterize SVG for a larger target",
+        "mirror": false,
+        "internal_rearrangement": "new child version with declared adaptation",
+        "repeat": "explicit cell/module count"
+      },
+      "note": "optional graphic vocabulary; not a default for every component",
+      "target_adaptation": {
+        "role_id": "D05",
+        "policy": "carrier_geometry",
+        "replace_or_confirm": [
+          "carrier",
+          "size",
+          "spacing",
+          "visibility"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            26,
+            280,
+            147,
+            310
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "246696210ac20d7a6e6b6f6b357b6a89da30aaf6f62e9c4f4501b746e93d0514",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "azur-child-circuit",
+      "kind": "transparent_element",
+      "file": "target-children/circuit.png",
+      "sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        250
+      ],
+      "critical_features": {
+        "line_width_px": 13
+      },
+      "contains_text": false,
+      "parent": "azur-equipment-circuit",
+      "change": "One four-line cluster for a shorter target equipment box; uniform spacing and clear terminals",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 186758,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "target-children/quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            39,
+            31,
+            52,
+            84
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "azur-child-no-step",
+      "kind": "transparent_element",
+      "file": "target-children/no-step.png",
+      "sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        600,
+        120
+      ],
+      "critical_features": {
+        "line_width_px": 10,
+        "text_cap_height_px": 59
+      },
+      "contains_text": true,
+      "parent": "no-step",
+      "change": "Shortened to fit one actual top equipment rail without tiny text",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 60715,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "target-children/quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D04",
+        "policy": "required_semantics_and_carrier",
+        "replace_or_confirm": [
+          "actual_hatch_function",
+          "approved_label",
+          "handedness",
+          "seams",
+          "handles",
+          "text_alignment"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            58,
+            41,
+            68
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            126,
+            26,
+            173,
+            85
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "feature_region_source_sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "azur-child-honey-field",
+      "kind": "transparent_element",
+      "file": "target-children/honey-field.png",
+      "sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1887,
+        575
+      ],
+      "critical_features": {
+        "line_width_px": 8
+      },
+      "contains_text": false,
+      "parent": "azur-side-honey",
+      "change": "48 exact regular cells; AI silhouette rejected; equal gaps, sparse light cells, original child interior grain only",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 213371,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "target-children/quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      },
+      "allowed_layer_roles": [
+        "honeycomb",
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            45,
+            46,
+            53,
+            79
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              24,
+              24,
+              24
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "azur-child-circuit-narrow",
+      "kind": "transparent_element",
+      "file": "target-children/circuit-narrow.png",
+      "sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        250
+      ],
+      "critical_features": {
+        "line_width_px": 18
+      },
+      "contains_text": false,
+      "parent": "azur-equipment-circuit",
+      "change": "Shorter left hull service hatch; 18px source strokes retain approximately 12mm physical line width and at least two final pixels",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 186758,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "target-children/quality.json",
+          "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+        }
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            18,
+            57,
+            91,
+            75
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-d-technologie",
+      "kind": "transparent_element",
+      "file": "armour-labels/armour-id.png",
+      "sha256": "726b2fc5da030340533178d50b525b5a2ac239147ed326824e5f5ab8f8280b06",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1100,
+        330
+      ],
+      "critical_features": {
+        "line_width_px": 6,
+        "text_cap_height_px": 45
+      },
+      "contains_text": true,
+      "parent": "module-panel-unlabelled",
+      "change": "Remove perimeter and backing only; title, five regular hexagons, triangle and symmetric cyan/amber rails remain pixel-exact.",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 289529,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "armour-labels/quality.json",
+          "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
+        }
+      },
+      "label_text": "D-TECHNOLOGIE",
+      "label_semantics": "armour_identifier",
+      "requires_capabilities": [],
+      "approved_for_units": [
+        "il_leopard_2a6_hel"
+      ],
+      "target_adaptation": {
+        "role_id": "D02",
+        "policy": "required_per_vehicle",
+        "replace_or_confirm": [
+          "approved_label",
+          "capabilities",
+          "unit_id",
+          "label_evidence",
+          "layout",
+          "size",
+          "position"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            206,
+            75,
+            231,
+            81
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            311,
+            68,
+            354,
+            113
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "feature_region_source_sha256": "726b2fc5da030340533178d50b525b5a2ac239147ed326824e5f5ab8f8280b06",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "module-panel-unlabelled",
+      "kind": "transparent_element",
+      "file": "armour-labels/module-panel-unlabelled.png",
+      "sha256": "29b4dd448153d9bbd0dc41db25f0936f5db76b563a7a297f86e8fed13290a3b0",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1100,
+        330
+      ],
+      "critical_features": {
+        "line_width_px": 6
+      },
+      "contains_text": false,
+      "parent": "azur-child-instrument",
+      "change": "Remove perimeter and backing only; title, five regular hexagons, triangle and symmetric cyan/amber rails remain pixel-exact.",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 300026,
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "armour-labels/quality.json",
+          "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D01",
+        "policy": "required_per_vehicle",
+        "replace_or_confirm": [
+          "vehicle_name",
+          "variant",
+          "serial",
+          "layout",
+          "size",
+          "position",
+          "handedness"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            816,
+            30,
+            822,
+            55
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              51,
+              51,
+              51
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "29b4dd448153d9bbd0dc41db25f0936f5db76b563a7a297f86e8fed13290a3b0",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-side-accents",
+      "kind": "transparent_element",
+      "file": "native-surface-children/side-accents.png",
+      "sha256": "df2b4c5aa0c0d3ed56123a6a4da94f96d13e0b1e0f8dab1c913dc1a88572ce8e",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        600,
+        120
+      ],
+      "critical_features": {
+        "line_width_px": 12.5
+      },
+      "contains_text": false,
+      "parent": "approved-for-installation side concept / AZUR amber-cyan accents",
+      "engineering_state": "checked_local",
+      "user_review": "limited game visibility for side ticks; latest roof/towing layout pending",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "native-surface-children/side-quality.json",
+          "sha256": "d9a00d0321e0ebe269ccaae8e51123d94524aaf3e0815a71e87b7a66d24be98b"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D05",
+        "policy": "carrier_geometry",
+        "replace_or_confirm": [
+          "carrier",
+          "size",
+          "spacing",
+          "visibility"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            5,
+            92,
+            58,
+            105
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "df2b4c5aa0c0d3ed56123a6a4da94f96d13e0b1e0f8dab1c913dc1a88572ce8e",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-side-accents-right",
+      "kind": "transparent_element",
+      "file": "native-surface-children/side-accents-right.png",
+      "sha256": "3f2fe123e7e5e2e0ff1eddb87cde487dd15df3b8a6172ef0aabd24c30d4031b0",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        600,
+        120
+      ],
+      "critical_features": {
+        "line_width_px": 12.5
+      },
+      "contains_text": false,
+      "parent": "approved-for-installation side concept / AZUR amber-cyan accents",
+      "engineering_state": "checked_local",
+      "user_review": "limited game visibility for side ticks; latest roof/towing layout pending",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "native-surface-children/side-right-quality.json",
+          "sha256": "9e976b4606d08d1f554026da4c9e1821edf260da143a40ad453ec5b36516dbae"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D05",
+        "policy": "carrier_geometry",
+        "replace_or_confirm": [
+          "carrier",
+          "size",
+          "spacing",
+          "visibility"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            463,
+            60,
+            516,
+            73
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "3f2fe123e7e5e2e0ff1eddb87cde487dd15df3b8a6172ef0aabd24c30d4031b0",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-roof-ammo-warning",
+      "kind": "transparent_element",
+      "file": "native-surface-children/roof-ammo-warning.png",
+      "sha256": "0e40f795395566a1734cc78bad40ad268865bf14fcce2858079f2e0a8fc82a27",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        600
+      ],
+      "critical_features": {
+        "line_width_px": 12,
+        "text_cap_height_px": 73
+      },
+      "contains_text": true,
+      "known_text": [
+        "NO STEP",
+        "BLOW-OUT"
+      ],
+      "label_text": "BLOW-OUT",
+      "requires_capabilities": [
+        "ammunition_blowout_panels"
+      ],
+      "approved_for_units": [
+        "il_leopard_2a6_hel"
+      ],
+      "parent": "AZUR approved blow-out master / source hazard rhythm",
+      "engineering_state": "checked_local",
+      "user_review": "limited game visibility for side ticks; latest roof/towing layout pending",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "native-surface-children/roof-quality.json",
+          "sha256": "c017fe5c32367fe4908a2b59d62f0b2eb570db723bcbb80c500bd08da89738a6"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D04",
+        "policy": "required_semantics_and_carrier",
+        "replace_or_confirm": [
+          "actual_hatch_function",
+          "approved_label",
+          "handedness",
+          "seams",
+          "handles",
+          "text_alignment"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            888,
+            177,
+            900,
+            226
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            599,
+            312,
+            656,
+            385
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "feature_region_source_sha256": "0e40f795395566a1734cc78bad40ad268865bf14fcce2858079f2e0a8fc82a27",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-front-towing",
+      "kind": "transparent_element",
+      "file": "native-surface-children/front-towing.png",
+      "sha256": "cd179761d76c2f4b55e01f3643d2f0c8199b06057b93415aaf4f8fc100250a01",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1100,
+        200
+      ],
+      "critical_features": {
+        "line_width_px": 12,
+        "text_cap_height_px": 47
+      },
+      "contains_text": true,
+      "label_text": "TOWING POINTS",
+      "requires_capabilities": [
+        "front_towing_points"
+      ],
+      "approved_for_units": [
+        "il_leopard_2a6_hel"
+      ],
+      "parent": "SPECTRE amber warning/chevron rhythm; target-specific functional label",
+      "engineering_state": "checked_local",
+      "user_review": "limited game visibility for side ticks; latest roof/towing layout pending",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "native-surface-children/towing-quality.json",
+          "sha256": "2dcbfb137c2c0578d6453ff8755f1aa69781baa64041ce126d51ce14404c41dd"
+        }
+      },
+      "target_adaptation": {
+        "role_id": "D03",
+        "policy": "required_per_vehicle",
+        "replace_or_confirm": [
+          "actual_part",
+          "approved_label",
+          "occlusion",
+          "carrier",
+          "layout"
+        ],
+        "requirements": "references/decal-adaptation.json",
+        "existing_allowed_modes_unchanged": true,
+        "note": "derive a target child; graphic identity is not target semantic approval"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            402,
+            38,
+            414,
+            87
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            287,
+            62,
+            324,
+            109
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "feature_region_source_sha256": "cd179761d76c2f4b55e01f3643d2f0c8199b06057b93415aaf4f8fc100250a01",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "a6hel-periodic-net-pattern",
+      "kind": "tileable_pattern",
+      "file": "native-surface-children/net-pattern.png",
+      "sha256": "c06fa112e42b6b6ee72ce3e3ecdc136e590ee727af52e9a0629d3751f77a3a65",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "trial_eligible": true,
+      "contains_text": false,
+      "user_review": "appearance confirmed in actual game; not full artwork approval",
+      "recipe": "native-surface-children/net-recipe.json",
+      "shader_route": "base camouflage inheritance; no direct native net C/N/AO replacement",
+      "native_detail_size": [
+        2048,
+        2048
+      ],
+      "critical_features": {
+        "line_width_px": 32
+      },
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "native-surface-children/net-recipe.json",
+          "sha256": "6ce2c7246bf06e5cecbb36e4934b122541e152d42267a2cafd31cacb40c18520"
+        }
+      },
+      "style_transfer_eligible": true,
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            60,
+            89,
+            92
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              63,
+              63,
+              63
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "c06fa112e42b6b6ee72ce3e3ecdc136e590ee727af52e9a0629d3751f77a3a65",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "hd-antislip-square",
+      "kind": "antislip_material",
+      "file": "hd-antislip/square/color.png",
+      "sha256": "ec50b92b5f2b7d5c27350cde81c2ed1cbe9d2eacd5559543436614bd01bba87d",
+      "label": "高清炭灰透明底防滑磨砂片 · square",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        2048,
+        2048
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "hd-antislip/square/coverage.png",
+          "sha256": "6ba746d4eeb4832ed8830314847fdda3642425ab98a6fa4365e6bb2dbfc6a801"
+        },
+        "normal-rgb.png": {
+          "file": "hd-antislip/square/normal-rgb.png",
+          "sha256": "003c269d278080fca2fb43472306ceb3c785e9a764e769ccefda31fa4e50bd24"
+        },
+        "packed-n.png": {
+          "file": "hd-antislip/square/packed-n.png",
+          "sha256": "be847a74d1a30f990c60fa9a365ff88a90076912705bc6b157024c18c46eb79b"
+        }
+      },
+      "recipe": "hd-antislip/square/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "hd-antislip/quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "allowed_layer_roles": [
+        "antislip"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            1023,
+            1020,
+            1025,
+            1028
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      },
+      "feature_region_source_sha256": "ec50b92b5f2b7d5c27350cde81c2ed1cbe9d2eacd5559543436614bd01bba87d",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "hd-antislip-rectangle",
+      "kind": "antislip_material",
+      "file": "hd-antislip/rectangle/color.png",
+      "sha256": "d1ffddf578f99fd858eade44e7cff15acda3cceacd99bc1a66aafc508a8eb68c",
+      "label": "高清炭灰透明底防滑磨砂片 · rectangle",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        4096,
+        2048
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "hd-antislip/rectangle/coverage.png",
+          "sha256": "9b1175cfaa9457c2a1ec562f6e910c44060bfe116a6e4b1d0187616aeef36414"
+        },
+        "normal-rgb.png": {
+          "file": "hd-antislip/rectangle/normal-rgb.png",
+          "sha256": "76534c8fc2e90104b4602433edb757bead08bf5acce3cba550a167fd0ced8c61"
+        },
+        "packed-n.png": {
+          "file": "hd-antislip/rectangle/packed-n.png",
+          "sha256": "16ad1ea99f0d574b6ed6a15e5e1c4c5d3fe4416d491e8a70b65eecdc30922c2c"
+        }
+      },
+      "recipe": "hd-antislip/rectangle/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "hd-antislip/quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "allowed_layer_roles": [
+        "antislip"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            2047,
+            1020,
+            2049,
+            1028
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      },
+      "feature_region_source_sha256": "d1ffddf578f99fd858eade44e7cff15acda3cceacd99bc1a66aafc508a8eb68c",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    },
+    {
+      "id": "hd-antislip-strip",
+      "kind": "antislip_material",
+      "file": "hd-antislip/strip/color.png",
+      "sha256": "71d3050342bb17566d45b61f15ff89ce3e9b0f2e1ef22d8d63dc1c8058e40505",
+      "label": "高清炭灰透明底防滑磨砂片 · strip",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        4096,
+        512
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "hd-antislip/strip/coverage.png",
+          "sha256": "92f6cf62f95ff7f37f0f083d401e36e2295f862e71d46e7f67960976951440e9"
+        },
+        "normal-rgb.png": {
+          "file": "hd-antislip/strip/normal-rgb.png",
+          "sha256": "682101df7c47ecc0dabba770b781126432906df0f1b0786f25271d8bf4e2ea39"
+        },
+        "packed-n.png": {
+          "file": "hd-antislip/strip/packed-n.png",
+          "sha256": "ebec28b773308de845cab0c3e38806b64648b9582e8abf182e45e499e6891493"
+        }
+      },
+      "recipe": "hd-antislip/strip/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "hd-antislip/quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "allowed_layer_roles": [
+        "antislip"
+      ],
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            2047,
+            252,
+            2049,
+            260
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      },
+      "feature_region_source_sha256": "71d3050342bb17566d45b61f15ff89ce3e9b0f2e1ef22d8d63dc1c8058e40505",
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      }
+    }
+  ],
+  "selection_policy": "Use suitable assets directly or derive a vehicle-specific variant; functional text and materials require the actual carrier.",
+  "asset_authoring": {
+    "routes": [
+      "direct_reuse",
+      "ai_target_adaptation"
+    ],
+    "decision": "AI selects either route from actual target geometry, semantics and composition",
+    "routine_adaptation_requires_user_confirmation": false,
+    "mandatory_redraw": false,
+    "mandatory_image_generation": false,
+    "allow_target_authored_variants": true,
+    "allow_recomposition_and_new_children": true,
+    "modifiable": [
+      "target_text",
+      "typography",
+      "layout",
+      "outline",
+      "element_count",
+      "pattern_scale_and_density",
+      "color_and_contrast",
+      "material_parameters"
+    ],
+    "preserve_explicit_user_locked_content": true,
+    "source_only_assets": "may be used as reference or extraction input; qualify the actual new child, do not relabel the unchanged source",
+    "changed_pixels": "new target-local file and record; preserve source master",
+    "instructions": "references/asset-use-and-adaptation.md",
+    "native_skin_details_allowed": true,
+    "native_skin_route": "retain target-native structure/materials; qualify extracted marking layers from actual target; no full-atlas transplant"
+  },
+  "style_ready_asset_count": 18,
+  "research_assets_bundled": false
+}

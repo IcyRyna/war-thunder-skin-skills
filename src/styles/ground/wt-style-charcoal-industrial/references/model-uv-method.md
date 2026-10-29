@@ -34,7 +34,7 @@
 
 ## 本次原包实际核对
 
-4 组[前颊](../assets/reference/model-uv/aps-cheek-model-uv.png)、[附属盒](../assets/reference/model-uv/circuit-module-model-uv.png)、[后顶警示](../assets/reference/model-uv/blow-out-model-uv.png)、[前部检修](../assets/reference/model-uv/electronics-access-model-uv.png)分别使用同一份原包 C 和原生模型。左右主侧裙均为蜂窝；宣传图中的另一种像素侧裙与当前包不一致，尚未确定其制作阶段。不能混用为一份默认布局。
+4 组前颊、附属盒、后顶警示、前部检修分别使用同一份原包 C 和原生模型。左右主侧裙均为蜂窝；宣传图中的另一种像素侧裙与当前包不一致，尚未确定其制作阶段。不能混用为一份默认布局。
 
 模型使用静态 bind pose；Cycles 只近似 Dagor 材质。当前已核实空间对应与 UV 身份，未核实游戏材质和跨车型成品率。
 

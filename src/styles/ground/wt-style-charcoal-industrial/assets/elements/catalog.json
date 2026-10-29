@@ -1,5 +1,0 @@
-{
-  "schema_version": 2,
-  "authoritative_catalog": "../catalog.json",
-  "filter_kind": "transparent_element"
-}

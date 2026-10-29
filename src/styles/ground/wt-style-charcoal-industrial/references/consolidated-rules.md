@@ -2,7 +2,7 @@
 
 # 共同规则与旧资料读取顺序
 
-先读 SKILL.md、primary-anchor.md 与本页，再按问题读取旧专题。旧参考的历史配方、试验值和认可状态仅解释各自快照；本页及分车型案例记录的后续纠正优先。
+先读 SKILL.md、primary-anchor.md 与本页，再按问题读取旧专题。旧参考的历史配方、试验值和认可状态仅解释各自快照；后续纠正只在对应问题和目标范围内优先；不把分支配方提升为整车模板。AZUR仍为第一范本，见[主线映射](azur-primary-workflow.md)。
 
 | 通用决定 | 具体做法 | 不推广的案例 |
 |---|---|---|
@@ -17,4 +17,4 @@
 | 共享UV诚实 | 列出全部使用者，选择可实现方案 | 独立双面字向不能靠重复贴图；改模须单独授权 |
 | 真实实装闭环 | 实际选择名、路径、配置、文件哈希、刷新后反馈 | 离线正确和写入磁盘均不等于游戏视觉获准 |
 
-规则的证据身份与适用范围见 [rules.json](rules.json)，车型例外见 [vehicle-cases.md](vehicle-cases.md)，镜片与材质诊断见 [material-and-alpha.md](material-and-alpha.md)。
+规则的证据身份与适用范围见 rules.json，车型例外见 [vehicle-cases.md](vehicle-cases.md)，镜片与材质诊断见 [material-and-alpha.md](material-and-alpha.md)。

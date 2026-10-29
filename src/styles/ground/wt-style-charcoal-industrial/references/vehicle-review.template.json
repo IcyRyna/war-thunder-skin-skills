@@ -1,0 +1,883 @@
+{
+  "schema_version": 3,
+  "policy_version": "0.1.6",
+  "template_status": "requires_actual_target_inputs; not a passing vehicle",
+  "vehicle": null,
+  "unit_id": null,
+  "attachment_state": null,
+  "capabilities": {},
+  "model": {
+    "file": null,
+    "sha256": null
+  },
+  "bindings": {
+    "file": null,
+    "sha256": null
+  },
+  "zones": {
+    "Z1": {
+      "state": "unresolved",
+      "purpose": "首上与车体前部",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    },
+    "Z2": {
+      "state": "unresolved",
+      "purpose": "炮塔装甲",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    },
+    "Z3": {
+      "state": "unresolved",
+      "purpose": "侧裙",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    },
+    "Z4": {
+      "state": "unresolved",
+      "purpose": "顶部设备",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    },
+    "Z5": {
+      "state": "unresolved",
+      "purpose": "观瞄与特殊材质",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    },
+    "Z6": {
+      "state": "unresolved",
+      "purpose": "车尾",
+      "large_geometry": null,
+      "quiet_area": null,
+      "focal_point": null,
+      "pattern_scale": null,
+      "material_contrast": null,
+      "coverage_ids": []
+    }
+  },
+  "part_layouts": {
+    "upper_glacis": {
+      "state": "apply_default",
+      "reason": "先按真实板块形成大灰区，局部低对比数码块与原生防滑；不把首上全部铺成蜂窝或碎棋盘。",
+      "elements": [
+        "large_gray_geometry",
+        "native_antislip"
+      ],
+      "optional_elements": [
+        "local_microblocks"
+      ],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:主板细磨砂A/B/C",
+          "antislip:原防滑块单独保留或按真实采样重建"
+        ],
+        "primary_starting_points": [
+          "沿真实板缝形成大灰区"
+        ],
+        "secondary_options": [
+          "低对比小块",
+          "盖板短刻度/角部小块",
+          "真实原生小警示与编号"
+        ],
+        "native_details_to_inspect": [
+          "检修字/方向箭头/扣锁标记",
+          "焊缝/铆钉/合理AO/防滑边界"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "中距离大灰区明确，近看有原标记、微表面和紧固件，不能只剩一块灰",
+        "actual_observation": null
+      }
+    },
+    "lower_glacis": {
+      "state": "apply_default",
+      "reason": "首下默认安排本车身份构图；真实功能标注或无字图形可按承载面替代。短橙黄斜条可选。遮挡先改位/重排，不能靠无限缩小、放大或无依据功能词填充。",
+      "elements": [
+        "vehicle_wordmark"
+      ],
+      "optional_elements": [
+        "paired_short_warning_stripes"
+      ],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "identity_text": null,
+      "identity_unit_id": null,
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:较深主漆与折边灰阶",
+          "spare_track:可见钢件与橡胶分开"
+        ],
+        "primary_starting_points": [
+          "本车身份字标及可选副行，遮挡时换无字图组"
+        ],
+        "secondary_options": [
+          "短橙黄斜条",
+          "角部标记",
+          "原拖曳/编号标识"
+        ],
+        "native_details_to_inspect": [
+          "原拖具标线/固定件",
+          "灯/反光片和橡胶件按原材质"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "主字/无字焦点可见，与拖具、原标记和前侧灰区形成层级",
+        "actual_observation": null
+      }
+    },
+    "turret_side": {
+      "state": "apply_default",
+      "reason": "局部较大蜂窝与本车身份/装备铭牌，平衡字标、蜂窝徽记、三角和黄青刻度；避把手板缝。",
+      "elements": [
+        "local_large_honey",
+        "vehicle_identity",
+        "equipment_mark"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:A/B主板与少量C次级板",
+          "honey:局部大蜂窝克制反射"
+        ],
+        "primary_starting_points": [
+          "本车身份图组",
+          "局部较大蜂窝及真实适用装备标识"
+        ],
+        "secondary_options": [
+          "蜂窝徽记/小三角",
+          "黄青短刻度",
+          "小副行/板件编号",
+          "窄肩低对比块或短带"
+        ],
+        "native_details_to_inspect": [
+          "原数据牌/安装箭头/锁扣",
+          "接缝/螺栓/把手结构"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "主字、图标与副层级组合，左右独立；不能一张大标签以外全空",
+        "actual_observation": null
+      }
+    },
+    "side_skirts": {
+      "state": "apply_default",
+      "reason": "连续细密蜂窝按板缝分段，少量亮格；后半段、转角、压条与窄边逐面检查。 完整执行已确定的铺装面，不等于所有相邻前向面和水平平台都铺蜂窝。",
+      "elements": [
+        "fine_honey_band",
+        "sparse_bright_cells",
+        "complete_rear_sections"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "honey:细密实心格与稀疏亮格",
+          "body:框条与压条另分灰阶",
+          "rubber:下摆保持真实低反射"
+        ],
+        "primary_starting_points": [
+          "按板缝分段连续细蜂窝主带"
+        ],
+        "secondary_options": [
+          "少量模块编号",
+          "末端角标或短色标",
+          "局部亮格节奏"
+        ],
+        "native_details_to_inspect": [
+          "固定螺栓/原检修小字/铰链",
+          "后半段折边和橡胶下沿"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "前后尺度一致，完整末段和窄边有收尾，不逐板重复大徽记",
+        "actual_observation": null
+      }
+    },
+    "turret_roof": {
+      "state": "apply_default",
+      "reason": "相近灰阶板面、局部数码块、高清防滑颗粒与设备周围留白并存；顶盖按真实身份单独处理。",
+      "elements": [
+        "large_gray_geometry",
+        "native_antislip",
+        "quiet_equipment_space"
+      ],
+      "optional_elements": [
+        "local_microblocks"
+      ],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:顶板/舱盖按板形灰区",
+          "antislip:行走面颗粒与边界",
+          "gun_metal/gun_polymer:扣具与密封件分材质"
+        ],
+        "primary_starting_points": [
+          "顶板几何与完整警示的主次关系"
+        ],
+        "secondary_options": [
+          "原舱盖字/开合箭头/编号",
+          "局部小块或短刻度",
+          "设备周围实板的适用小标记"
+        ],
+        "native_details_to_inspect": [
+          "原防滑/铰链/胶圈/插头",
+          "焊缝/锁止刻线/数据牌"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "顶面有盖板层次、防滑和小件，不只有一色底加一张黄牌",
+        "actual_observation": null
+      }
+    },
+    "roof_warning": {
+      "state": "apply_default",
+      "reason": "默认安排完整橙黄警示图组，文字与两排/两侧斜条形成整体，随真实盖板重排大小、方向和数量。NO STEP适配实际位置；BLOW-OUT仅核实泄压盖后使用。 设计阶段先给警示图组留位置，再布置周边灰块与防滑；记录板面和图组尺寸、方向、四边间距及常用俯视距离的可读性。",
+      "elements": [
+        "complete_warning_group",
+        "centered_legible_text",
+        "carrier_fitted_stripes"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "layout": null,
+      "label_texts": [],
+      "carrier_size_m": null,
+      "graphic_size_m": null,
+      "margins_m": null,
+      "rotation_deg": null,
+      "readable_at_normal_view": false,
+      "function_evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "required_instances": [],
+      "placement_checks": [],
+      "placement_check_schema": "schema-3-contract.md and layout-native-checks.md; complete native carrier area, actual ink spans, core text separately visible; composition_requirement for full-panel requests",
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:盖板薄涂层图形",
+          "antislip:与文字占地分开"
+        ],
+        "primary_starting_points": [
+          "适用文字与两侧/两排斜条组成完整图组"
+        ],
+        "secondary_options": [
+          "盖板编号/真实开合箭头",
+          "与原把手标记呼应的短刻度"
+        ],
+        "native_details_to_inspect": [
+          "原正确警示可直接保留并围绕排版",
+          "把手/铰链和原防滑边界"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "完整盖板为构图基准，核心文字在可读分区，斜条随整板延展；要求占满时不得缩到空闲角落，不叠两套同用途警示",
+        "actual_observation": null
+      }
+    },
+    "optics_housing": {
+      "state": "apply_default",
+      "reason": "壳体比主漆更深且有受控高光，顶面侧壁压条窄边完整；镜片和透空结构保持独立。",
+      "elements": [
+        "dark_metal_housing",
+        "complete_edges",
+        "native_glass"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "fire_control:F深灰受控集中高光",
+          "glass:原生镜片及镀膜",
+          "rubber:密封件/线缆分开"
+        ],
+        "primary_starting_points": [
+          "深色外壳材质焦点"
+        ],
+        "secondary_options": [
+          "原序号/旋向标记",
+          "少量真实接头色环",
+          "适当壳体实面的短色标"
+        ],
+        "native_details_to_inspect": [
+          "镜片Alpha与原生N数据",
+          "小字/旋钮/线缆卡箍/边框结构"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "外壳、镜片、胶圈可分辨，窄边完整；不把深色外壳变成纯黑无细节",
+        "actual_observation": null
+      }
+    },
+    "machine_gun": {
+      "state": "apply_default",
+      "reason": "护罩/枪座、金属枪体、枪托或握把、弹链分别对应真实部件与材质。黄青色标优先适当护罩，不默认给枪管/枪托加彩条；不存在的组件明确记录。",
+      "elements": [
+        "charcoal_housing",
+        "black_gun_body",
+        "dark_polymer_stock",
+        "sparse_cyan_amber",
+        "native_ammunition"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "accent_component": "housing",
+      "components": {
+        "housing": {
+          "state": "unresolved",
+          "coverage_id": null,
+          "face_group_ids": [],
+          "reason": null,
+          "evidence": {
+            "file": null,
+            "sha256": null
+          }
+        },
+        "gun_body": {
+          "state": "unresolved",
+          "coverage_id": null,
+          "face_group_ids": [],
+          "reason": null,
+          "evidence": {
+            "file": null,
+            "sha256": null
+          }
+        },
+        "stock": {
+          "state": "unresolved",
+          "coverage_id": null,
+          "face_group_ids": [],
+          "reason": null,
+          "evidence": {
+            "file": null,
+            "sha256": null
+          }
+        },
+        "ammunition": {
+          "state": "unresolved",
+          "coverage_id": null,
+          "face_group_ids": [],
+          "reason": null,
+          "evidence": {
+            "file": null,
+            "sha256": null
+          }
+        }
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:护罩炭灰",
+          "gun_metal:枪钢较紧高光",
+          "gun_polymer:枪托/握把哑黑",
+          "native_ammunition:弹链/弹箱原材质"
+        ],
+        "primary_starting_points": [
+          "护罩上成组稀疏黄青色标或适用小识别"
+        ],
+        "secondary_options": [
+          "原枪身刻字",
+          "原弹箱小标",
+          "接头/卡箍/紧固件的材质区别"
+        ],
+        "native_details_to_inspect": [
+          "枪体机构边缘/握把沟槽",
+          "弹链/导线/原维护标记"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "近看能读出枪钢、聚合物和弹链，不能只涂枪座漏枪体",
+        "actual_observation": null
+      }
+    },
+    "barrel_mantlet": {
+      "state": "apply_default",
+      "reason": "炮管、炮根及布套分材质，清理粗脏斑，保留卡箍接缝和微表面，不默认加彩色炮管带。",
+      "elements": [
+        "separate_gunmetal",
+        "clean_low_frequency_stains",
+        "retained_structure"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "barrel:枪钢/热护套按实际分段",
+          "native_fabric:炮根布套原织物",
+          "gun_metal:卡箍与活动机构"
+        ],
+        "primary_starting_points": [
+          "依靠真实分段与灰阶组织，默认无大彩带"
+        ],
+        "secondary_options": [
+          "原温度/套筒编号",
+          "适用小字/卡箍标记",
+          "有限真实接触亮边"
+        ],
+        "native_details_to_inspect": [
+          "套缝/箍带/布套褶皱",
+          "结构法线和合理AO"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "长炮管由分段和材质形成细节，不必强加贴花，也不能是一根同质灰棒",
+        "actual_observation": null
+      }
+    },
+    "spare_tracks": {
+      "state": "apply_default",
+      "reason": "可见备用履带钢面纳入涂装，橡胶另处理；运行履带独立保留，不按整个track节点一概排除。",
+      "elements": [
+        "charcoal_steel",
+        "separate_rubber",
+        "native_running_tracks"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "spare_track:备用钢面深灰/合理原生钢质",
+          "rubber:橡胶块另处理",
+          "native_tools:工具手柄/绑带分材料"
+        ],
+        "primary_starting_points": [
+          "以真实钢件/橡胶/绑带差异完成造型"
+        ],
+        "secondary_options": [
+          "原编号/色环",
+          "附件盒小型识别/角标"
+        ],
+        "native_details_to_inspect": [
+          "钢索股线/扣锁/连接边",
+          "工具压印字/原手柄结构"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "可见备用件全部有材料判断，避免整组同灰塑料；运行履带独立保留",
+        "actual_observation": null
+      }
+    },
+    "rear_warning": {
+      "state": "apply_default",
+      "reason": "两侧可见实板布置暖橙黑短条，随板形重排，避免尾灯排气口；连旧底色与R/B残影一起检查。",
+      "elements": [
+        "paired_orange_black_stripes",
+        "solid_visible_carriers",
+        "clean_old_imprint"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:深色尾部实板",
+          "native_lights:灯/反光片原生",
+          "gun_metal:拖具与排气相邻钢件"
+        ],
+        "primary_starting_points": [
+          "两侧可见实板的暖橙黑/橙黄黑短条"
+        ],
+        "secondary_options": [
+          "原车号牌/拖曳标记",
+          "真实维护小字",
+          "附近灰阶块或短角标"
+        ],
+        "native_details_to_inspect": [
+          "尾灯/反光片/线束/支架",
+          "原铭牌/紧固件与适用小警示"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "后视有暖色主图和真实小件，不能只贴新橙线而漏旧底色/残影",
+        "actual_observation": null
+      }
+    },
+    "vents_and_openings": {
+      "state": "apply_default",
+      "reason": "叶片、孔口、设备工作面与外框实板分开。装饰不跨入百叶/孔洞；邻近外框是否铺蜂窝由其真实表面决定。",
+      "elements": [
+        "clean_louvers",
+        "classified_outer_frames",
+        "protected_working_faces"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:外框实板",
+          "native_louvers:叶片/黑腔/合理AO",
+          "native_working_faces:设备工作面保留"
+        ],
+        "primary_starting_points": [
+          "外框灰区延续邻近设计，孔口不画装饰"
+        ],
+        "secondary_options": [
+          "真实外框编号",
+          "邻近实板短刻度/小警示"
+        ],
+        "native_details_to_inspect": [
+          "原叶片/栅格/接缝",
+          "工作面/插座与边框差异"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "外框、孔洞、叶片各自可读；不靠满铺纹样掩盖材质",
+        "actual_observation": null
+      }
+    },
+    "decal_finish": {
+      "state": "apply_default",
+      "reason": "文字按实际字形居中和行距排版；移除旧图时清理旧底板与相关R/B印迹。边框按本车要求选择，不默认硬塞矩形底板。",
+      "elements": [
+        "balanced_glyph_layout",
+        "no_old_backing_halo",
+        "clean_material_imprint"
+      ],
+      "optional_elements": [],
+      "coverage_ids": [],
+      "visibility_checked": false,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      },
+      "finish_plan": {
+        "status": "adapt_to_target",
+        "material_starting_points": [
+          "body:普通字/色标为薄涂层，无默认凸起",
+          "native_plate:确有金属牌/反光材料时按本车处理"
+        ],
+        "primary_starting_points": [
+          "主字/副行/图标的清楚层级"
+        ],
+        "secondary_options": [
+          "真实原皮小标记",
+          "字距/角标/短刻度和留白收尾"
+        ],
+        "native_details_to_inspect": [
+          "原字形与用途合适就保留",
+          "旧底板和实际R/B残影分别处理"
+        ],
+        "chosen_secondary_details": [],
+        "native_detail_ids": [],
+        "finish_target": "主要区域有副层级与本车原生细节；小件完成度与大图一致",
+        "actual_observation": null
+      }
+    }
+  },
+  "graphics": [],
+  "graphic_omissions": {},
+  "materials": [
+    {
+      "role": "body",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "honey",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "fire_control",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "barrel",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "gun_metal",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "gun_polymer",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "spare_track",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "glass",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "rubber",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "net",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    },
+    {
+      "role": "antislip",
+      "state": "unresolved",
+      "reason": null,
+      "parameters": {}
+    }
+  ],
+  "textures": [],
+  "coverage": [],
+  "reviews": {},
+  "final_runtime_files": [],
+  "capability_evidence": {},
+  "approved_labels": [],
+  "label_evidence": {},
+  "runtime_textures": [],
+  "channel_repairs": [],
+  "observation_matrix": {
+    "delivery_state": null,
+    "states": [],
+    "views": [
+      {
+        "direction": "front",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      },
+      {
+        "direction": "rear",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      },
+      {
+        "direction": "left",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      },
+      {
+        "direction": "right",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      },
+      {
+        "direction": "top",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      },
+      {
+        "direction": "lower_visible",
+        "state_id": null,
+        "status": "unresolved",
+        "coverage_ids": [],
+        "observation": null,
+        "evidence": {
+          "file": null,
+          "sha256": null
+        },
+        "verdict": "unverified",
+        "images": [],
+        "artifact_binding": null
+      }
+    ],
+    "paired_surfaces": [],
+    "dynamic_net": {
+      "state": "unresolved",
+      "reason": null,
+      "evidence": {
+        "file": null,
+        "sha256": null
+      }
+    },
+    "available_lods": [],
+    "unobserved_coverage": {}
+  },
+  "candidate_id": "charcoal-0.1.6-release",
+  "identity_source": "VERSION.json",
+  "sensitive_equipment": [],
+  "schema_contract": "schema-3-contract.md",
+  "native_detail_plan": {
+    "status": "inspect_current_target_before_basecoat",
+    "guide": "references/native-skin-detail-reuse.md",
+    "actions": [
+      "retain",
+      "recolor",
+      "extract_recompose",
+      "replace",
+      "remove"
+    ],
+    "inventory": [],
+    "notes": "Planning notes only: map actual decisions into existing layers, coverage, material and channel repair evidence; do not infer completion from this list."
+  },
+  "decoration_review_plan": {
+    "distances": [
+      "far",
+      "medium",
+      "near"
+    ],
+    "questions": [
+      "首上、两侧、顶部、车尾是否各有主次与副装饰/原生细节？",
+      "机枪、观瞄、盖板、附件和车尾小件是否有真实材料区分？",
+      "原皮小字、刻线、色环、反光片和结构是否被底漆误盖？",
+      "增加细节后大灰区与焦点是否仍清楚？"
+    ],
+    "evidence_target": "existing whole_vehicle and surface_finish reviews; no automatic artwork approval"
+  },
+  "production_tools": {
+    "schema_version": 1,
+    "editor": {
+      "sessions": [],
+      "projects": []
+    },
+    "blender": {
+      "status": "unresolved",
+      "receipt": null
+    },
+    "contract": "references/tool-execution-contract.md"
+  },
+  "scope_and_visual_contract": "references/scope-and-visual-audit.md; every coverage needs frozen scope_contract; bindings need original source_inventory; visual evidence is actual current imagery, never automatic art approval"
+}

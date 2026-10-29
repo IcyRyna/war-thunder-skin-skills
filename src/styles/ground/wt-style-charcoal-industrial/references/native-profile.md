@@ -1,3 +1,5 @@
+> 当前候选：新制作先读[部位默认](part-layout-defaults.md)与[候选流程](candidate-workflow.md)，统一规则由style-policy.json提供；以下保留旧工具与案例说明，旧schema 2仅用于历史复刻。
+
 # 原生 UV 接口
 
 `compose_native.py` 接受两个 JSON：实际车型 profile，以及冻结该 profile 哈希的设计计划。路径分别相对于各自 JSON。脚本只写新目录；原 C、N、AO、模型都不改。它验证输入和合成，不自动判断你标注的语义是否正确。

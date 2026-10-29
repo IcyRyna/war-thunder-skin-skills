@@ -1,0 +1,35 @@
+{
+  "source_sha256": "b502e9e140d8123c9c7f73d118ba1a824b7d5195eedbff13ba74ce3b3271f72b",
+  "source_resource": "leopard_2a7hu_mg_c",
+  "source_payload_offset": 2796356,
+  "payload_sha256": "f32b036e3f7ff65dea9b721cfb80bb19f1c495f42b02494c08468850278e5b0c",
+  "fixture_sha256": "07b50536d20c39f1c1cfeca213baaa84eb5807f27ef238d2fae05797cef31ae1",
+  "expected_rgba": [
+    [
+      [
+        [
+          26,
+          26,
+          26,
+          255
+        ],
+        [
+          26,
+          26,
+          26,
+          255
+        ]
+      ]
+    ],
+    [
+      [
+        [
+          26,
+          26,
+          26,
+          255
+        ]
+      ]
+    ]
+  ]
+}

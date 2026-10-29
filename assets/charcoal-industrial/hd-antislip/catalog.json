@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "version": "0.1.6",
+  "asset_path_base": "catalog_directory",
+  "selection_requires": [
+    "asset_id",
+    "kind"
+  ],
+  "no_implicit_default": true,
+  "assets": [
+    {
+      "id": "hd-antislip-square",
+      "kind": "antislip_material",
+      "file": "square/color.png",
+      "sha256": "ec50b92b5f2b7d5c27350cde81c2ed1cbe9d2eacd5559543436614bd01bba87d",
+      "label": "高清炭灰透明底防滑磨砂片 · square",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        2048,
+        2048
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "square/coverage.png",
+          "sha256": "6ba746d4eeb4832ed8830314847fdda3642425ab98a6fa4365e6bb2dbfc6a801"
+        },
+        "normal-rgb.png": {
+          "file": "square/normal-rgb.png",
+          "sha256": "003c269d278080fca2fb43472306ceb3c785e9a764e769ccefda31fa4e50bd24"
+        },
+        "packed-n.png": {
+          "file": "square/packed-n.png",
+          "sha256": "be847a74d1a30f990c60fa9a365ff88a90076912705bc6b157024c18c46eb79b"
+        }
+      },
+      "recipe": "square/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            1023,
+            1020,
+            1025,
+            1028
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      }
+    },
+    {
+      "id": "hd-antislip-rectangle",
+      "kind": "antislip_material",
+      "file": "rectangle/color.png",
+      "sha256": "d1ffddf578f99fd858eade44e7cff15acda3cceacd99bc1a66aafc508a8eb68c",
+      "label": "高清炭灰透明底防滑磨砂片 · rectangle",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        4096,
+        2048
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "rectangle/coverage.png",
+          "sha256": "9b1175cfaa9457c2a1ec562f6e910c44060bfe116a6e4b1d0187616aeef36414"
+        },
+        "normal-rgb.png": {
+          "file": "rectangle/normal-rgb.png",
+          "sha256": "76534c8fc2e90104b4602433edb757bead08bf5acce3cba550a167fd0ced8c61"
+        },
+        "packed-n.png": {
+          "file": "rectangle/packed-n.png",
+          "sha256": "16ad1ea99f0d574b6ed6a15e5e1c4c5d3fe4416d491e8a70b65eecdc30922c2c"
+        }
+      },
+      "recipe": "rectangle/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            2047,
+            1020,
+            2049,
+            1028
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      }
+    },
+    {
+      "id": "hd-antislip-strip",
+      "kind": "antislip_material",
+      "file": "strip/color.png",
+      "sha256": "71d3050342bb17566d45b61f15ff89ce3e9b0f2e1ef22d8d63dc1c8058e40505",
+      "label": "高清炭灰透明底防滑磨砂片 · strip",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "allowed_modes": [
+        "style_transfer",
+        "source_reproduction"
+      ],
+      "trial_eligible": true,
+      "style_transfer_eligible": true,
+      "contains_text": false,
+      "native_detail_size": [
+        4096,
+        512
+      ],
+      "provenance": "parameterized neutral height-field material, same native dimensions",
+      "critical_features": {
+        "line_width_px": 2
+      },
+      "user_review": "local candidate neutral regeneration; vehicle appearance pending",
+      "maps": {
+        "coverage.png": {
+          "file": "strip/coverage.png",
+          "sha256": "92f6cf62f95ff7f37f0f083d401e36e2295f862e71d46e7f67960976951440e9"
+        },
+        "normal-rgb.png": {
+          "file": "strip/normal-rgb.png",
+          "sha256": "682101df7c47ecc0dabba770b781126432906df0f1b0786f25271d8bf4e2ea39"
+        },
+        "packed-n.png": {
+          "file": "strip/packed-n.png",
+          "sha256": "ebec28b773308de845cab0c3e38806b64648b9582e8abf182e45e499e6891493"
+        }
+      },
+      "recipe": "strip/recipe.json",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "quality.json",
+          "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+        }
+      },
+      "usage": "references/hd-antislip-material.md; data alpha is not coverage; regenerate at actual target texel density",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            2047,
+            252,
+            2049,
+            260
+          ],
+          "axis": "x",
+          "measurement": "opaque support sample for the separately validated native height-field grain budget"
+        }
+      }
+    }
+  ],
+  "evidence_path_base": "catalog_directory",
+  "candidate_id": "charcoal-0.1.6-rc4",
+  "identity_source": "VERSION.json"
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "skill_version": "0.1.5",
+  "skill_version": "0.1.6",
   "primary_template": "Leclerc AZUR source/model/native UV",
   "paint_space": "8-bit sRGB, not rendered RGB",
   "source_product_sha256": "e5e1ca8a7ed23d47034c08a0397ee6576f68a9937be8e5c7d40523070a424d8d",
@@ -146,5 +146,8 @@
     "honeycomb modular field"
   ],
   "not_a_texture_filter": true,
-  "independent_unseen_vehicle_validation": "not_run"
+  "independent_unseen_vehicle_validation": "not_run",
+  "candidate_id": "charcoal-0.1.6-release",
+  "identity_source": "VERSION.json",
+  "canonical_policy": "style-policy.json"
 }

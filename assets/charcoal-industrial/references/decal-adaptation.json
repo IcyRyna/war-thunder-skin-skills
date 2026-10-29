@@ -1,0 +1,110 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.1.6",
+  "roles": [
+    {
+      "id": "D01",
+      "role": "vehicle_identity",
+      "adaptation": "required_per_vehicle",
+      "replace_fields": [
+        "vehicle_name",
+        "variant",
+        "serial",
+        "layout",
+        "size",
+        "position",
+        "handedness"
+      ],
+      "examples": [
+        "LECLERC / AZUR / H-01"
+      ],
+      "copy_example_text": false
+    },
+    {
+      "id": "D02",
+      "role": "equipment_armour_identifier",
+      "adaptation": "required_per_vehicle",
+      "replace_fields": [
+        "approved_label",
+        "capabilities",
+        "unit_id",
+        "label_evidence",
+        "layout",
+        "size",
+        "position"
+      ],
+      "examples": [
+        "FY-4 ERA",
+        "D-TECHNOLOGIE"
+      ],
+      "copy_example_text": false
+    },
+    {
+      "id": "D03",
+      "role": "front_function_or_pattern",
+      "adaptation": "required_per_vehicle",
+      "replace_fields": [
+        "actual_part",
+        "approved_label",
+        "occlusion",
+        "carrier",
+        "layout"
+      ],
+      "fallback": "nontext graphic if no valid readable carrier",
+      "copy_example_text": false
+    },
+    {
+      "id": "D04",
+      "role": "roof_functional_warning",
+      "adaptation": "required_semantics_and_carrier",
+      "replace_fields": [
+        "actual_hatch_function",
+        "approved_label",
+        "handedness",
+        "seams",
+        "handles",
+        "text_alignment"
+      ],
+      "examples": [
+        "NO STEP",
+        "BLOW-OUT"
+      ],
+      "copy_example_text": false
+    },
+    {
+      "id": "D05",
+      "role": "micro_color_ticks",
+      "adaptation": "carrier_geometry",
+      "replace_fields": [
+        "carrier",
+        "size",
+        "spacing",
+        "visibility"
+      ],
+      "keep": [
+        "restrained amber/cyan rhythm"
+      ]
+    },
+    {
+      "id": "D06",
+      "role": "rear_orange_black_warning",
+      "adaptation": "carrier_geometry",
+      "default_required_for_S42": true,
+      "replace_fields": [
+        "solid_carrier",
+        "count",
+        "angle",
+        "width",
+        "spacing",
+        "edge_margin",
+        "left_right_balance"
+      ],
+      "keep": [
+        "orange/amber-black rhythm"
+      ]
+    }
+  ],
+  "note": "role requirements; nonexistent equipment gets a documented alternative, never fictitious capability text",
+  "candidate_id": "charcoal-0.1.6-rc4",
+  "identity_source": "VERSION.json"
+}

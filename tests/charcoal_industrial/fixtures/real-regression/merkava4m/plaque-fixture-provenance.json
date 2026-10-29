@@ -1,0 +1,80 @@
+{
+  "evidence_class": "actual current DDS crop plus explicitly synthetic R stripe",
+  "reference_meaning": "Current actual N crop is the reference snapshot for this fault injection; it is not asserted artistically clean or historically pre-effect.",
+  "source_archive": {
+    "file": "梅卡瓦4M_玄岩_金属蜂窝游戏涂装.zip",
+    "sha256": "d3c9b905f33561fc497adf2cd9d3ca7edd489c0e0b1f9a04f9a520e7d7e92e87",
+    "bytes": 342091724
+  },
+  "source_members": [
+    {
+      "member": "UserSkins/Merkava_4M_Xuanyan_S42/merkava_mk_4_turret.dds",
+      "sha256": "2ff737ec07a0e2a67c90f7e6ad1d8d68a77a7f0403d170aa1a1a432703180125",
+      "bytes": 89478612,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "crop_xy": [
+        2651,
+        694
+      ],
+      "crop_size": [
+        64,
+        64
+      ],
+      "decode": "exact legacy BGRA8 bit-mask decoding; no gamma, alpha compositing, or resampling"
+    },
+    {
+      "member": "UserSkins/Merkava_4M_Xuanyan_S42/merkava_mk_4_turret_n.dds",
+      "sha256": "671fa8c63b432ab7734300b5fc2a54eaa9ef5effa5b1931e4587c16e06b9e69b",
+      "bytes": 89478612,
+      "dimensions": [
+        4096,
+        4096
+      ],
+      "crop_xy": [
+        2651,
+        694
+      ],
+      "crop_size": [
+        64,
+        64
+      ],
+      "decode": "exact legacy BGRA8 bit-mask decoding; no gamma, alpha compositing, or resampling"
+    }
+  ],
+  "fixtures": [
+    {
+      "file": "plaque-current-c-64.png",
+      "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+    },
+    {
+      "file": "plaque-reference-n-64.png",
+      "sha256": "6466bfccc8916deb0a22fb8db4f0d48096c7b01ba8e293e9ed5bb8ff140cac04"
+    },
+    {
+      "file": "plaque-injected-r-64.png",
+      "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+    },
+    {
+      "file": "plaque-r-stripe-mask-64.png",
+      "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+    }
+  ],
+  "fault": {
+    "channel": "N_R",
+    "rectangle_xyxy": [
+      29,
+      16,
+      35,
+      48
+    ],
+    "delta": 32,
+    "affected_pixels": 192,
+    "other_channels_exact": true,
+    "outside_exact": true
+  },
+  "artwork_approval": "not inferred",
+  "original_files_modified": false
+}

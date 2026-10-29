@@ -1,6 +1,7 @@
 """Independent image and OBJ helpers for ground vehicle skins."""
 from __future__ import annotations
 import json
+import hashlib
 import struct
 from pathlib import Path
 import numpy as np
@@ -64,11 +65,17 @@ def save_dds(image: Image.Image, path: Path | str) -> None:
 
 def load_obj(path: Path | str, cache: Path | None = None) -> dict:
     path = Path(path)
-    if cache is not None and cache.exists() and cache.stat().st_mtime >= path.stat().st_mtime:
+    def source_digest():
+        with path.open('rb') as stream:return hashlib.file_digest(stream,'sha256').hexdigest()
+    digest=source_digest()
+    if cache is not None and cache.resolve()==path.resolve():raise ValueError('OBJ cache must not overwrite its input')
+    if cache is not None and cache.exists():
         with np.load(cache, allow_pickle=False) as data:
-            return {name: data[name] for name in data.files}
+            if {'source_sha256','source_face_ids','source_triangle_count','skipped_source_face_ids'}<=set(data.files) and str(data['source_sha256'])==digest:
+                return {name: data[name] for name in data.files}
     vertices, texcoords, normals = [], [], []
     triangles, uvtri, normtri, material_ids, node_ids = [], [], [], [], []
+    source_ids,skipped_ids,source_count=[],[],0
     material_names, node_names = [], []
     material_lookup, node_lookup = {}, {}
     def key_id(name: str, lookup: dict, names: list) -> int:
@@ -101,12 +108,16 @@ def load_obj(path: Path | str, cache: Path | None = None) -> dict:
             elif row[0] == 'f':
                 corners = [token.split('/') for token in row[1:]]
                 for k in range(1, len(corners) - 1):
+                    source_id=source_count;source_count+=1
                     face = [corners[0], corners[k], corners[k + 1]]
                     p = np.asarray([vertices[index(f[0], len(vertices))] for f in face])
                     n = np.cross(p[1] - p[0], p[2] - p[0])
                     length = np.linalg.norm(n)
-                    if not np.isfinite(p).all() or length < 1e-12: continue
+                    if not np.isfinite(p).all():raise ValueError(f'OBJ has non-finite positions: {path}')
+                    if length < 1e-12:
+                        skipped_ids.append(source_id);continue
                     triangles.append(p)
+                    source_ids.append(source_id)
                     face_uvs = [texcoords[index(f[1], len(texcoords))] if len(f) > 1 and f[1] else (0., 0.) for f in face]
                     face_normals = [normals[index(f[2], len(normals))] if len(f) > 2 and f[2] else n / length for f in face]
                     if np.asarray(face_uvs).shape != (3, 2) or not np.isfinite(face_uvs).all():
@@ -121,7 +132,10 @@ def load_obj(path: Path | str, cache: Path | None = None) -> dict:
     result = dict(positions=np.asarray(triangles, dtype='f4'), uvs=np.asarray(uvtri, dtype='f4'),
                   normals=np.asarray(normtri, dtype='f4'), material_ids=np.asarray(material_ids, dtype='i4'),
                   node_ids=np.asarray(node_ids, dtype='i4'), material_names=np.asarray(material_names),
-                  node_names=np.asarray(node_names))
+                  node_names=np.asarray(node_names),source_face_ids=np.asarray(source_ids,dtype='i8'),
+                  skipped_source_face_ids=np.asarray(skipped_ids,dtype='i8'),
+                  source_triangle_count=np.asarray(source_count,dtype='i8'),source_sha256=np.asarray(digest))
+    if source_digest()!=digest:raise ValueError('OBJ changed during parsing')
     if cache is not None:
         cache.parent.mkdir(parents=True, exist_ok=True)
         np.savez(cache, **result)

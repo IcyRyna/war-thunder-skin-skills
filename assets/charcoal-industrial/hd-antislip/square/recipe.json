@@ -1,0 +1,73 @@
+{
+  "schema_version": 2,
+  "recipe": "charcoal-antislip-parameterized",
+  "skill_version": "0.1.5.1-candidate.20261028",
+  "seed": 15051,
+  "size": [
+    2048,
+    2048
+  ],
+  "parameters": {
+    "color_srgb": [
+      27,
+      27,
+      27
+    ],
+    "color_noise_sigma": 1.3,
+    "grain_sigma_px": 1.0,
+    "rms_height_slope": 0.22,
+    "inverse_roughness_center": 48,
+    "roughness_noise_sigma": 3.0,
+    "metallic": 128,
+    "required_grain_mip": 0,
+    "tint_reason": null,
+    "physical_scale": {
+      "diameter_mm": null,
+      "texels_per_meter": null,
+      "definition": "characteristic diameter = 2 gaussian sigma"
+    }
+  },
+  "color_srgb": [
+    27,
+    27,
+    27
+  ],
+  "grain_sigma_px": 1.0,
+  "rms_height_slope": 0.22,
+  "packed_n": {
+    "R": "inverse_roughness",
+    "G": "normal_x",
+    "B": "metallic",
+    "A": "normal_y"
+  },
+  "normal_convention": "tangent +Y up; image-row gradient is +normal Y",
+  "boundary": {
+    "inset_px": 32,
+    "corner_radius_px": 51,
+    "raised_plate_edge": false
+  },
+  "alpha": "C straight coverage; N.A normal Y data, never coverage",
+  "files": [
+    {
+      "file": "color.png",
+      "bytes": 1585165,
+      "sha256": "ec50b92b5f2b7d5c27350cde81c2ed1cbe9d2eacd5559543436614bd01bba87d"
+    },
+    {
+      "file": "coverage.png",
+      "bytes": 9547,
+      "sha256": "6ba746d4eeb4832ed8830314847fdda3642425ab98a6fa4365e6bb2dbfc6a801"
+    },
+    {
+      "file": "normal-rgb.png",
+      "bytes": 7929112,
+      "sha256": "003c269d278080fca2fb43472306ceb3c785e9a764e769ccefda31fa4e50bd24"
+    },
+    {
+      "file": "packed-n.png",
+      "bytes": 8884965,
+      "sha256": "be847a74d1a30f990c60fa9a365ff88a90076912705bc6b157024c18c46eb79b"
+    }
+  ],
+  "visual_approval": "pending; candidate sample only"
+}

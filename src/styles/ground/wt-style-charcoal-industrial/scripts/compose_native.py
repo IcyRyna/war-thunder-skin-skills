@@ -16,6 +16,7 @@ import numpy as np
 from PIL import Image, ImageChops, ImageDraw
 from style_quality import authorize,check_detail
 from source_model_uv import validate_plan as validate_source_model_uv
+from vehicle_review import validate_for_composer
 
 def sha(path):
     h=hashlib.sha256()
@@ -37,6 +38,9 @@ def read_image(path):
 
 def path_at(root,value):
     if not isinstance(value,str) or not value:raise ValueError('Missing file path')
+    if value.startswith('asset-pack:'):
+        from asset_pack import reference
+        return reference(value)
     return (root/value).resolve(strict=True)
 
 def mask_at(root,spec,size):
@@ -65,8 +69,11 @@ def points(value,size,count=None):
 def load(profile_path,plan_path):
     root=profile_path.resolve().parent
     profile=json.loads(profile_path.read_text(encoding='utf-8-sig'))
+    profile['_evidence_root']=str(root)
     plan=json.loads(plan_path.read_text(encoding='utf-8-sig'))
-    if profile.get('schema_version')!=1 or plan.get('schema_version')!=2:raise ValueError('Use explicit asset contract plan schema 2')
+    if profile.get('schema_version')!=1 or plan.get('schema_version') not in (2,3,4):raise ValueError('Unsupported profile/plan schema')
+    if plan.get('intent','style_transfer')=='style_transfer' and plan.get('schema_version')!=4:
+        raise ValueError('Style transfer requires schema 4 with a checked vehicle_design; schema 2 is historical reproduction only')
     validate_source_model_uv(plan_path,plan)
     catalog_path=path_at(plan_path.resolve().parent,plan.get('catalog'))
     if sha(catalog_path)!=plan.get('catalog_sha256'):raise ValueError('Asset catalog lock mismatch')
@@ -115,11 +122,13 @@ def load(profile_path,plan_path):
         if not record or placement.get('kind')!=record['kind']:raise ValueError('Explicit asset_id and matching kind required')
         evidence_root = catalog_path.parent.parent if catalog.get('evidence_path_base') == 'skill_root' else catalog_path.parent
         authorize(record,intent,evidence_root,target_profile=profile)
+        if intent=='style_transfer' and placement.get('layer_role') not in record.get('allowed_layer_roles',['decal']):
+            raise ValueError('Asset is not qualified for actual decoration layer role')
         if record.get('trial_eligible') is not True:raise ValueError('Asset is not eligible for vehicle trials')
         has_text=record.get('contains_text',True)
         if has_text and s['sharing']=='mirrored':raise ValueError('Readable text on mirrored shared UV is not supported')
         if has_text and s.get('planar') is not True:raise ValueError('Text needs one verified planar carrier')
-        if has_text and placement.get('text_height_px',0)<8:raise ValueError('Text height must be declared and at least eight final texture pixels')
+        if has_text and placement.get('text_height_px',0)<12:raise ValueError('Text height must be declared and at least twelve final texture pixels')
         if has_text and placement.get('allow_clip'):raise ValueError('Do not clip text modules')
         if s['sharing']!='unique' and placement.get('accept_shared') is not True:raise ValueError('Shared-UV impact not acknowledged')
         opacity=placement.get('opacity',1)
@@ -129,8 +138,10 @@ def load(profile_path,plan_path):
         if sha(asset)!=record['sha256']:raise ValueError('Selected pixels differ from frozen catalog asset')
         quad=points(placement['quad_px'],inputs[s['texture']]['image'].size,4)
         if intent=='style_transfer':
-            check_detail(record,quad,read_image(asset).size,s['rotation_deg'],plan.get('quality_budget'))
+            check_detail(record,quad,read_image(asset).size,s['rotation_deg'],plan.get('quality_budget'),source_image=read_image(asset))
         resolved.append((placement,s,asset,quad))
+    if intent=='style_transfer':
+        plan['_vehicle_report']=validate_for_composer(profile_path,profile,plan_path,plan)
     return profile,plan,inputs,resolved
 
 def warp(im,quad,size):
@@ -147,9 +158,39 @@ def warp(im,quad,size):
     return im.convert('RGBa').transform(size,Image.Transform.PERSPECTIVE,coeff,
         resample=Image.Resampling.BICUBIC,fillcolor=(0,0,0,0)).convert('RGBA')
 
+def prepare_layer(placement,s,asset,quad,inputs):
+    key=s['texture'];size=inputs[key]['image'].size
+    layer=warp(read_image(asset).rotate(s['rotation_deg'],expand=True),quad,size)
+    area=Image.new('L',size);ImageDraw.Draw(area).polygon(s['polygon_px'],fill=255)
+    allowed=ImageChops.multiply(area,inputs[key]['allowed'])
+    original=layer.getchannel('A')
+    coverage=ImageChops.multiply(original,allowed)
+    total=float(np.asarray(original,dtype=float).sum())
+    kept=float(np.asarray(coverage,dtype=float).sum())/total if total else 0
+    if '_reviewed_coverage' in s:
+        actual=np.asarray(original)>0
+        approved=s['_reviewed_coverage']
+        if approved.shape!=actual.shape:raise ValueError('Scope resolution differs from final native C')
+        if np.any(actual & (~approved | (np.asarray(allowed)==0))):
+            raise ValueError(placement['id']+': actual decal exceeds reviewed native coverage')
+        if s['_coverage_mode']=='full_surface' and not np.array_equal(actual,approved):
+            raise ValueError(placement['id']+': full-surface layer leaves native face samples uncovered')
+    elif kept<0.98 and placement.get('allow_clip') is not True:
+        raise ValueError(placement['id']+': re-layout outside-surface placement')
+    if kept==0:raise ValueError('Placement has no visible coverage')
+    alpha=coverage.point(lambda v:round(v*placement.get('opacity',1)))
+    if not np.any(np.asarray(alpha)>0):raise ValueError('Opacity quantized the entire layer away')
+    layer.putalpha(alpha)
+    return layer,alpha,kept
+
+
 def compose(profile_path:Path,plan_path:Path,out:Path,dry=False):
     profile,plan,inputs,resolved=load(profile_path,plan_path)
-    if dry:return {'profile_valid':True,'placements':len(resolved),'vehicle':profile['vehicle']}
+    if dry:
+        for placement,s,asset,quad in resolved:
+            prepare_layer(placement,s,asset,quad,inputs)
+        return {'profile_valid':True,'placements':len(resolved),'vehicle':profile['vehicle'],
+                'vehicle_review':plan.get('_vehicle_report'),'actual_layer_scope_checked':True}
     out=out.resolve()
     if out.exists():raise FileExistsError('Use a new output directory')
     out.parent.mkdir(parents=True,exist_ok=True)
@@ -160,19 +201,7 @@ def compose(profile_path:Path,plan_path:Path,out:Path,dry=False):
         receipts=[]
         for placement,s,asset,quad in resolved:
             key=s['texture'];size=merged[key].size
-            im=read_image(asset).rotate(s['rotation_deg'],expand=True)
-            layer=warp(im,quad,size)
-            area=Image.new('L',size);ImageDraw.Draw(area).polygon(s['polygon_px'],fill=255)
-            allowed=ImageChops.multiply(area,inputs[key]['allowed'])
-            original=layer.getchannel('A')
-            coverage=ImageChops.multiply(original,allowed)
-            total=float(np.asarray(original,dtype=float).sum())
-            kept=float(np.asarray(coverage,dtype=float).sum())/total if total else 0
-            if kept<0.98 and placement.get('allow_clip') is not True:
-                raise ValueError(f"{placement['id']}: {1-kept:.1%} lies outside its approved surface; explicitly re-layout or allow clipping")
-            if kept==0:raise ValueError('Placement has no visible coverage')
-            alpha=coverage.point(lambda v:round(v*placement.get('opacity',1)))
-            layer.putalpha(alpha)
+            layer,alpha,kept=prepare_layer(placement,s,asset,quad,inputs)
             layer.save(stage/'layers'/(placement['id']+'.png'))
             # Never alpha-composite onto a zero-A game C map: its RGB still matters.
             rgb=Image.composite(layer.convert('RGB'),merged[key].convert('RGB'),alpha)
@@ -189,7 +218,7 @@ def compose(profile_path:Path,plan_path:Path,out:Path,dry=False):
             outputs.append({'id':key,'sha256':sha(stage/'colors'/(key+'.png')),'alpha_exact':True,'protected_pixels_exact':True})
         report={'vehicle':profile['vehicle'],'intent':plan.get('intent','style_transfer'),'profile_sha256':sha(profile_path),'plan_sha256':sha(plan_path),
                 'placements':receipts,'outputs':outputs,'normal_ao':'not_modified','game':'not_run',
-                'visual':'pending','scope':'native colour composition only; not a full transferred vehicle validation'}
+                'visual':'pending','vehicle_review':plan.get('_vehicle_report'),'scope':'native colour composition; final vehicle_review --stage final remains required'}
         (stage/'composition.json').write_text(json.dumps(report,ensure_ascii=False,indent=2),encoding='utf-8')
         stage.rename(out)
         return report

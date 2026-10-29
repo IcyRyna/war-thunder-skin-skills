@@ -1,0 +1,282 @@
+{
+  "schema_version": 1,
+  "asset_pack_id": "wt-charcoal-industrial-assets",
+  "skill_id": "wt-style-charcoal-industrial",
+  "version": "0.1.6",
+  "compatible_skill_versions": [
+    "0.1.6"
+  ],
+  "catalog": {
+    "file": "catalog.json",
+    "sha256": "7d2aabc1951f5c49211f6e049ca44aacc1f96e2af427c1c4ee2dcf2ccef206f2"
+  },
+  "files": [
+    {
+      "file": "armour-labels/armour-id.png",
+      "bytes": 12190,
+      "sha256": "726b2fc5da030340533178d50b525b5a2ac239147ed326824e5f5ab8f8280b06"
+    },
+    {
+      "file": "armour-labels/module-panel-unlabelled.png",
+      "bytes": 4921,
+      "sha256": "29b4dd448153d9bbd0dc41db25f0936f5db76b563a7a297f86e8fed13290a3b0"
+    },
+    {
+      "file": "armour-labels/quality.json",
+      "bytes": 1794,
+      "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
+    },
+    {
+      "file": "catalog.json",
+      "bytes": 46733,
+      "sha256": "7d2aabc1951f5c49211f6e049ca44aacc1f96e2af427c1c4ee2dcf2ccef206f2"
+    },
+    {
+      "file": "hd-antislip/blender-check.json",
+      "bytes": 730,
+      "sha256": "dcc8be340f4f87116b72d3edb5c143355677c874dcc7f6d41af95f4cce95e747"
+    },
+    {
+      "file": "hd-antislip/catalog.json",
+      "bytes": 6867,
+      "sha256": "e223baff083d94e359713fc7ed15c44e3d474e7f3210f74d68ddda1ed2a0c719"
+    },
+    {
+      "file": "hd-antislip/preview.jpg",
+      "bytes": 69707,
+      "sha256": "3d463561c9766e7d341533dde047614f35985f60b0ace7ce50c821e98d9466b2"
+    },
+    {
+      "file": "hd-antislip/quality.json",
+      "bytes": 4101,
+      "sha256": "6d2920004be37e400101d42772034bff40252f4d84ef7a373f4bfc7a9b1502d7"
+    },
+    {
+      "file": "hd-antislip/rectangle/color.png",
+      "bytes": 3198654,
+      "sha256": "d1ffddf578f99fd858eade44e7cff15acda3cceacd99bc1a66aafc508a8eb68c"
+    },
+    {
+      "file": "hd-antislip/rectangle/coverage.png",
+      "bytes": 13933,
+      "sha256": "9b1175cfaa9457c2a1ec562f6e910c44060bfe116a6e4b1d0187616aeef36414"
+    },
+    {
+      "file": "hd-antislip/rectangle/normal-rgb.png",
+      "bytes": 16103887,
+      "sha256": "76534c8fc2e90104b4602433edb757bead08bf5acce3cba550a167fd0ced8c61"
+    },
+    {
+      "file": "hd-antislip/rectangle/packed-n.png",
+      "bytes": 18028501,
+      "sha256": "16ad1ea99f0d574b6ed6a15e5e1c4c5d3fe4416d491e8a70b65eecdc30922c2c"
+    },
+    {
+      "file": "hd-antislip/rectangle/recipe.json",
+      "bytes": 1838,
+      "sha256": "cf1d4158efb98b875dae66d8c2e219b1fc8b6534dee7f5455f13bed3959d3f83"
+    },
+    {
+      "file": "hd-antislip/square/color.png",
+      "bytes": 1585165,
+      "sha256": "ec50b92b5f2b7d5c27350cde81c2ed1cbe9d2eacd5559543436614bd01bba87d"
+    },
+    {
+      "file": "hd-antislip/square/coverage.png",
+      "bytes": 9547,
+      "sha256": "6ba746d4eeb4832ed8830314847fdda3642425ab98a6fa4365e6bb2dbfc6a801"
+    },
+    {
+      "file": "hd-antislip/square/normal-rgb.png",
+      "bytes": 7929112,
+      "sha256": "003c269d278080fca2fb43472306ceb3c785e9a764e769ccefda31fa4e50bd24"
+    },
+    {
+      "file": "hd-antislip/square/packed-n.png",
+      "bytes": 8884965,
+      "sha256": "be847a74d1a30f990c60fa9a365ff88a90076912705bc6b157024c18c46eb79b"
+    },
+    {
+      "file": "hd-antislip/square/recipe.json",
+      "bytes": 1835,
+      "sha256": "c5a2ffdaf4cdefd612d5a4641ca976129658b50b35a6ca2854c72e546a618f56"
+    },
+    {
+      "file": "hd-antislip/strip/color.png",
+      "bytes": 808091,
+      "sha256": "71d3050342bb17566d45b61f15ff89ce3e9b0f2e1ef22d8d63dc1c8058e40505"
+    },
+    {
+      "file": "hd-antislip/strip/coverage.png",
+      "bytes": 3536,
+      "sha256": "92f6cf62f95ff7f37f0f083d401e36e2295f862e71d46e7f67960976951440e9"
+    },
+    {
+      "file": "hd-antislip/strip/normal-rgb.png",
+      "bytes": 4075394,
+      "sha256": "682101df7c47ecc0dabba770b781126432906df0f1b0786f25271d8bf4e2ea39"
+    },
+    {
+      "file": "hd-antislip/strip/packed-n.png",
+      "bytes": 4559352,
+      "sha256": "ebec28b773308de845cab0c3e38806b64648b9582e8abf182e45e499e6891493"
+    },
+    {
+      "file": "hd-antislip/strip/recipe.json",
+      "bytes": 1832,
+      "sha256": "05d2d0d93ac3d7d551f9801953bb356993eaf4c02946f1620ce8e9e934a168df"
+    },
+    {
+      "file": "native-surface-children/front-towing.png",
+      "bytes": 8355,
+      "sha256": "cd179761d76c2f4b55e01f3643d2f0c8199b06057b93415aaf4f8fc100250a01"
+    },
+    {
+      "file": "native-surface-children/net-pattern.png",
+      "bytes": 21599,
+      "sha256": "c06fa112e42b6b6ee72ce3e3ecdc136e590ee727af52e9a0629d3751f77a3a65"
+    },
+    {
+      "file": "native-surface-children/net-recipe.json",
+      "bytes": 1535,
+      "sha256": "6ce2c7246bf06e5cecbb36e4934b122541e152d42267a2cafd31cacb40c18520"
+    },
+    {
+      "file": "native-surface-children/roof-ammo-warning.png",
+      "bytes": 19909,
+      "sha256": "0e40f795395566a1734cc78bad40ad268865bf14fcce2858079f2e0a8fc82a27"
+    },
+    {
+      "file": "native-surface-children/roof-quality.json",
+      "bytes": 855,
+      "sha256": "c017fe5c32367fe4908a2b59d62f0b2eb570db723bcbb80c500bd08da89738a6"
+    },
+    {
+      "file": "native-surface-children/side-accents-right.png",
+      "bytes": 714,
+      "sha256": "3f2fe123e7e5e2e0ff1eddb87cde487dd15df3b8a6172ef0aabd24c30d4031b0"
+    },
+    {
+      "file": "native-surface-children/side-accents.png",
+      "bytes": 687,
+      "sha256": "df2b4c5aa0c0d3ed56123a6a4da94f96d13e0b1e0f8dab1c913dc1a88572ce8e"
+    },
+    {
+      "file": "native-surface-children/side-quality.json",
+      "bytes": 597,
+      "sha256": "d9a00d0321e0ebe269ccaae8e51123d94524aaf3e0815a71e87b7a66d24be98b"
+    },
+    {
+      "file": "native-surface-children/side-right-quality.json",
+      "bytes": 894,
+      "sha256": "9e976b4606d08d1f554026da4c9e1821edf260da143a40ad453ec5b36516dbae"
+    },
+    {
+      "file": "native-surface-children/towing-quality.json",
+      "bytes": 572,
+      "sha256": "2dcbfb137c2c0578d6453ff8755f1aa69781baa64041ce126d51ce14404c41dd"
+    },
+    {
+      "file": "production/color-ticks-mother.png",
+      "bytes": 11390,
+      "sha256": "246696210ac20d7a6e6b6f6b357b6a89da30aaf6f62e9c4f4501b746e93d0514"
+    },
+    {
+      "file": "production/color-ticks-mother.svg",
+      "bytes": 741,
+      "sha256": "eddc001bebdee8afb356abe02cf487f9a11a7638e0d44ee1c79e46f596f835ba"
+    },
+    {
+      "file": "production/hex-trace-mother.png",
+      "bytes": 60847,
+      "sha256": "04b52de7f0a4bfbea908760d9baeaeed827c0e15827de759ffd3719ea2ddb462"
+    },
+    {
+      "file": "production/hex-trace-mother.svg",
+      "bytes": 2033,
+      "sha256": "d4aa322d7ae556629d01675acacb5d2ed20b8ec2319e384c67985ea082cc4489"
+    },
+    {
+      "file": "production/optic-id-mother.png",
+      "bytes": 7349,
+      "sha256": "4daf9d586e9029ee097bdd9db38c062056987a3d177e4131fc4faada8dc64cbb"
+    },
+    {
+      "file": "production/optic-id-mother.svg",
+      "bytes": 1302,
+      "sha256": "eccace5ac356eaabcb2d8c2ac6ad37c86be6268b16602a743c3fbb486f157890"
+    },
+    {
+      "file": "production/roof-service-mother.png",
+      "bytes": 18429,
+      "sha256": "b6cc8fe8b9698ceed1c5e5a9f3b1523014df93355c5ecad27c0aa7916ef938a6"
+    },
+    {
+      "file": "production/roof-service-mother.svg",
+      "bytes": 1692,
+      "sha256": "69a3b9580533eba05f37a75a353c30ceba74a496813d8c342d603b82148029ad"
+    },
+    {
+      "file": "references/azur-current-v29/hero-front.png",
+      "bytes": 1886764,
+      "sha256": "89ccdfccbfe07e455cbfa4c0d8b46397750f16b4bca0877319c821e407475735"
+    },
+    {
+      "file": "references/azur-current-v29/hero-overview.png",
+      "bytes": 2519689,
+      "sha256": "cdf7d1cbe6561a57c1a6efc5c6a47b9b132d3028fcc0765e9504a54de37e619a"
+    },
+    {
+      "file": "references/azur-current-v29/side-blocks-right.png",
+      "bytes": 2568041,
+      "sha256": "7b5c8f411543b96b7c1900a2db9a19f4f83031f6fb763f20a672b9988d938a6b"
+    },
+    {
+      "file": "references/decal-adaptation.json",
+      "bytes": 2601,
+      "sha256": "4191ddf66ffaa0fd16623f07c3ff48d4e5a31cdaeb5bcaa22b698e52d5e89dac"
+    },
+    {
+      "file": "references/hd-antislip-material.md",
+      "bytes": 1250,
+      "sha256": "e4eacb36ad13ac975d154ec51c0742e23e4d27c2e73e0579c75afce5cca45b6a"
+    },
+    {
+      "file": "references/production-assets.json",
+      "bytes": 1840,
+      "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
+    },
+    {
+      "file": "target-children/circuit-narrow.png",
+      "bytes": 2363,
+      "sha256": "bd47c58f70810e27f0196b5597bb30abf8eb9a77dcd0c756b5e00d5773a1a38b"
+    },
+    {
+      "file": "target-children/circuit.png",
+      "bytes": 2284,
+      "sha256": "39a613fbc26a08603f7623b288c2aae74bc7cca6d2298cc01dcd94ffb855e24f"
+    },
+    {
+      "file": "target-children/honey-field.png",
+      "bytes": 66075,
+      "sha256": "8aeacf55f45ed1f7e9342260efd76a2f45d2e0e308ca153610baf2faf49b4e30"
+    },
+    {
+      "file": "target-children/no-step.png",
+      "bytes": 4879,
+      "sha256": "0c248b1f046c38bda6cb30624ca1066ec8a4a307de3a535dab2b427d9acccaa5"
+    },
+    {
+      "file": "target-children/quality.json",
+      "bytes": 584,
+      "sha256": "acc133e0d9fe3a8492b4a4a55a42249f4d6525b32da361fad141e54e406d9ad8"
+    },
+    {
+      "file": "使用说明.md",
+      "bytes": 1252,
+      "sha256": "63d29dc678e6c6642aa49e956b5633939f58a2e6de3f52b919e7a5a4f05019d0"
+    }
+  ],
+  "image_transform": "none; all production media bytes unchanged from the reviewed source",
+  "research_assets_bundled": false
+}

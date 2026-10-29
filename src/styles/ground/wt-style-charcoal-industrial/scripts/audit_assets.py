@@ -25,7 +25,14 @@ def components(mask):
 
 def audit(root,out):
     if out.exists():raise FileExistsError(out)
-    rows=json.loads((root/'assets/catalog.json').read_bytes())['assets']; out.mkdir(parents=True)
+    root=Path(root)
+    path=root/'catalog.json'
+    if not path.is_file():path=root/'assets/catalog.json'
+    if not path.is_file():
+        from asset_pack import catalog_file
+        path=catalog_file()
+    catalog=json.loads(path.read_bytes());root=path.parent.parent if catalog.get('asset_path_base')=='skill_root' else path.parent
+    rows=catalog['assets']; out.mkdir(parents=True)
     font=ImageFont.truetype('C:/Windows/Fonts/arial.ttf',20) if Path('C:/Windows/Fonts/arial.ttf').exists() else ImageFont.load_default()
     report=[]
     for row in rows:

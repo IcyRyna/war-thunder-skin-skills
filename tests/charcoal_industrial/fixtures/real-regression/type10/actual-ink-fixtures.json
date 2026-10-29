@@ -1,0 +1,592 @@
+{
+  "evidence_type": "Current final DDS orange ink sampled through current actual GLB native triangles",
+  "source_model": {
+    "file": "model.glb",
+    "sha256": "9e193888a7561bc843a8ec6b6523b1ff718bb1d864e27d6d19f3740d58ba43a6"
+  },
+  "source_color": {
+    "archive": "10式_玄铁_深炭灰磨砂_游戏涂装.zip",
+    "archive_sha256": "b3b61024f77b897c93eacb1a71bd272cc2934e700ec856b628e286b99d87b144",
+    "member": "Type10_Xuantie_S42/type_10_turret_c.dds",
+    "member_sha256": "9b6ea4c36c5f4733f913d48fee8160119a28e55170bcc66cf7cd211b9eb690d6",
+    "size": [
+      8192,
+      4096
+    ]
+  },
+  "frame": {
+    "origin": [
+      0,
+      2.25731635,
+      0
+    ],
+    "u_axis": [
+      1,
+      0,
+      0
+    ],
+    "v_axis": [
+      0,
+      0,
+      -1
+    ],
+    "normal": [
+      0,
+      1,
+      0
+    ]
+  },
+  "sampling": {
+    "step_m": 0.002,
+    "texture_filter": "nearest actual texel at barycentric GLB UV",
+    "surface": "highest native upward triangle at each XZ grid sample; normal_Y > 0.8",
+    "ink_rule": "R>=110 and G>=45 and R>1.2*G and R>2*B; targets orange warning ink, not dark/white text or full transparent asset canvas",
+    "limit": "Only orange ink is proven. Antialias edge threshold and 2mm spacing mean this is a finite sample check, not mathematical full-resolution alpha reconstruction."
+  },
+  "fault_injection": "Current v12 ink samples normalized by the recorded v12 center/size/rotation and mapped into recorded v11 center/size/rotation. This deliberately controlled layout fault is NOT a historical DDS reconstruction.",
+  "panels": [
+    {
+      "id": "roof-panel-0",
+      "samples": {
+        "file": "roof-panel-0-ink.npz",
+        "sha256": "0eafd91d5702ee5ca6ef6af5c70644c612b0fba0426e3edd6f930000f0eb1dab",
+        "bytes": 301364
+      },
+      "sample_count": 62520,
+      "actual_carrier_geometry": {
+        "file": "roof-panel-0.npz",
+        "sha256": "d6fd95a9058c8145a76dc58960ed932c1276e2a2a00cae320e28afb97d5add6e"
+      },
+      "ink_bounds_uv_m": [
+        [
+          -1.443,
+          0.06599999999999939
+        ],
+        [
+          -0.5809999999999993,
+          0.6779999999999999
+        ]
+      ],
+      "injected_bounds_uv_m": [
+        [
+          -1.6929508196721321,
+          0.2370659083305448
+        ],
+        [
+          -0.79,
+          0.8859451321512213
+        ]
+      ],
+      "v12_layout": {
+        "center_m": [
+          -1.01,
+          0.373
+        ],
+        "size_m": [
+          0.61,
+          0.854
+        ],
+        "rotation_degrees": 90,
+        "expected": "current corrected group footprint; native small seams/fasteners may require explicit treatment"
+      },
+      "v11_injected_layout": {
+        "center_m": [
+          -1.24,
+          0.56
+        ],
+        "size_m": [
+          0.9,
+          0.6428571428571429
+        ],
+        "rotation_degrees": 0,
+        "expected": "outside current native lid; historical too-large/offset correction"
+      },
+      "source_faces": [
+        {
+          "aggregate_face_id": 573,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 573
+        },
+        {
+          "aggregate_face_id": 2130,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2130
+        },
+        {
+          "aggregate_face_id": 2131,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2131
+        },
+        {
+          "aggregate_face_id": 2132,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2132
+        },
+        {
+          "aggregate_face_id": 3596,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3596
+        },
+        {
+          "aggregate_face_id": 3597,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3597
+        },
+        {
+          "aggregate_face_id": 3598,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3598
+        },
+        {
+          "aggregate_face_id": 7649,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 7649
+        },
+        {
+          "aggregate_face_id": 7650,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 7650
+        },
+        {
+          "aggregate_face_id": 8156,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 8156
+        },
+        {
+          "aggregate_face_id": 8157,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 8157
+        },
+        {
+          "aggregate_face_id": 14576,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 14576
+        },
+        {
+          "aggregate_face_id": 24398,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 24398
+        },
+        {
+          "aggregate_face_id": 24502,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 24502
+        },
+        {
+          "aggregate_face_id": 29829,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29829
+        },
+        {
+          "aggregate_face_id": 29830,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29830
+        },
+        {
+          "aggregate_face_id": 29831,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29831
+        },
+        {
+          "aggregate_face_id": 29832,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29832
+        },
+        {
+          "aggregate_face_id": 29847,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29847
+        },
+        {
+          "aggregate_face_id": 29848,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29848
+        },
+        {
+          "aggregate_face_id": 29849,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29849
+        },
+        {
+          "aggregate_face_id": 29850,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29850
+        }
+      ],
+      "complete_ink_support": {
+        "geometry": {
+          "file": "roof-panel-0-ink-support.npz",
+          "sha256": "1f0d5a3e9787781519140876aaaf018dfc9fea38de13a3a9bab1e60a90a9270b"
+        },
+        "triangle_count": 109,
+        "additional_source_faces": [
+          {
+            "aggregate_face_id": 14576,
+            "node": "bone_turret",
+            "primitive": 0,
+            "local_face": 14576,
+            "positions": [
+              [
+                -0.4296446740627289,
+                2.248088836669922,
+                -0.9142552614212036
+              ],
+              [
+                -2.0706968307495117,
+                2.248088836669922,
+                -0.9142552614212036
+              ],
+              [
+                -0.4296446740627289,
+                2.2480881214141846,
+                0.7614496350288391
+              ]
+            ]
+          }
+        ],
+        "original_carrier_supported_fraction": 0.9710492642354447,
+        "height_range_m": [
+          2.2480881214141846,
+          2.266991376876831
+        ],
+        "scope_polygon_uv_m": [
+          [
+            -1.46,
+            0.048
+          ],
+          [
+            -0.52,
+            0.048
+          ],
+          [
+            -0.52,
+            0.697
+          ],
+          [
+            -1.46,
+            0.697
+          ]
+        ],
+        "scope_basis": "Retained v12 lid bounds; required to clip the actual large lower roof faces to the named physical panel. Geometry remains original whole triangles, no invented support vertices.",
+        "warning": "Do not union the complete large lower roof triangles as unrestricted paint carriers: they extend outside this lid and would incorrectly authorize the old v11 placement."
+      }
+    },
+    {
+      "id": "roof-panel-1",
+      "samples": {
+        "file": "roof-panel-1-ink.npz",
+        "sha256": "1986afc43054c668e160ec682f2d00223bce69e70a15b2b5e6b805883a6ee137",
+        "bytes": 299855
+      },
+      "sample_count": 62447,
+      "actual_carrier_geometry": {
+        "file": "roof-panel-1.npz",
+        "sha256": "d2ca5c604c4e3cb0b91b06d39fb0166bf42163b314fbdb2abd09b73c5d96a320"
+      },
+      "ink_bounds_uv_m": [
+        [
+          -1.443,
+          -0.642
+        ],
+        [
+          -0.5809999999999993,
+          -0.032
+        ]
+      ],
+      "injected_bounds_uv_m": [
+        [
+          -1.6914754098360656,
+          -0.8829340916694552
+        ],
+        [
+          -0.7914754098360655,
+          -0.23405486784877882
+        ]
+      ],
+      "v12_layout": {
+        "center_m": [
+          -1.01,
+          -0.336
+        ],
+        "size_m": [
+          0.61,
+          0.854
+        ],
+        "rotation_degrees": 90,
+        "expected": "current corrected group footprint; native small seams/fasteners may require explicit treatment"
+      },
+      "v11_injected_layout": {
+        "center_m": [
+          -1.24,
+          -0.56
+        ],
+        "size_m": [
+          0.9,
+          0.6428571428571429
+        ],
+        "rotation_degrees": 0,
+        "expected": "outside current native lid; historical too-large/offset correction"
+      },
+      "source_faces": [
+        {
+          "aggregate_face_id": 17,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 17
+        },
+        {
+          "aggregate_face_id": 2116,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2116
+        },
+        {
+          "aggregate_face_id": 2117,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2117
+        },
+        {
+          "aggregate_face_id": 2118,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 2118
+        },
+        {
+          "aggregate_face_id": 3467,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3467
+        },
+        {
+          "aggregate_face_id": 3468,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3468
+        },
+        {
+          "aggregate_face_id": 3469,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 3469
+        },
+        {
+          "aggregate_face_id": 8454,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 8454
+        },
+        {
+          "aggregate_face_id": 8457,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 8457
+        },
+        {
+          "aggregate_face_id": 14576,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 14576
+        },
+        {
+          "aggregate_face_id": 14577,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 14577
+        },
+        {
+          "aggregate_face_id": 14579,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 14579
+        },
+        {
+          "aggregate_face_id": 24189,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 24189
+        },
+        {
+          "aggregate_face_id": 24294,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 24294
+        },
+        {
+          "aggregate_face_id": 29793,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29793
+        },
+        {
+          "aggregate_face_id": 29794,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29794
+        },
+        {
+          "aggregate_face_id": 29795,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29795
+        },
+        {
+          "aggregate_face_id": 29796,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29796
+        },
+        {
+          "aggregate_face_id": 29811,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29811
+        },
+        {
+          "aggregate_face_id": 29812,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29812
+        },
+        {
+          "aggregate_face_id": 29813,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29813
+        },
+        {
+          "aggregate_face_id": 29814,
+          "node": "bone_turret",
+          "primitive": 0,
+          "local_face": 29814
+        }
+      ],
+      "complete_ink_support": {
+        "geometry": {
+          "file": "roof-panel-1-ink-support.npz",
+          "sha256": "b3275caa3c49308a78abbee95467ed322e990d8881187cdf7938849933fd6e56"
+        },
+        "triangle_count": 103,
+        "additional_source_faces": [
+          {
+            "aggregate_face_id": 14576,
+            "node": "bone_turret",
+            "primitive": 0,
+            "local_face": 14576,
+            "positions": [
+              [
+                -0.4296446740627289,
+                2.248088836669922,
+                -0.9142552614212036
+              ],
+              [
+                -2.0706968307495117,
+                2.248088836669922,
+                -0.9142552614212036
+              ],
+              [
+                -0.4296446740627289,
+                2.2480881214141846,
+                0.7614496350288391
+              ]
+            ]
+          },
+          {
+            "aggregate_face_id": 14577,
+            "node": "bone_turret",
+            "primitive": 0,
+            "local_face": 14577,
+            "positions": [
+              [
+                -1.0053515434265137,
+                2.2480881214141846,
+                0.7612966299057007
+              ],
+              [
+                -0.4296446740627289,
+                2.2480881214141846,
+                0.7614496350288391
+              ],
+              [
+                -2.0706968307495117,
+                2.248088836669922,
+                -0.9142552614212036
+              ]
+            ]
+          },
+          {
+            "aggregate_face_id": 14579,
+            "node": "bone_turret",
+            "primitive": 0,
+            "local_face": 14579,
+            "positions": [
+              [
+                -2.0917134284973145,
+                2.248088836669922,
+                -0.8932381868362427
+              ],
+              [
+                -2.0917134284973145,
+                2.2480878829956055,
+                1.2076036930084229
+              ],
+              [
+                -1.0053515434265137,
+                2.2480881214141846,
+                0.7612966299057007
+              ]
+            ]
+          }
+        ],
+        "original_carrier_supported_fraction": 0.973465498742934,
+        "height_range_m": [
+          2.2480878829956055,
+          2.266990900039673
+        ],
+        "scope_polygon_uv_m": [
+          [
+            -1.46,
+            -0.665
+          ],
+          [
+            -0.52,
+            -0.665
+          ],
+          [
+            -0.52,
+            -0.007
+          ],
+          [
+            -1.46,
+            -0.007
+          ]
+        ],
+        "scope_basis": "Retained v12 lid bounds; required to clip the actual large lower roof faces to the named physical panel. Geometry remains original whole triangles, no invented support vertices.",
+        "warning": "Do not union the complete large lower roof triangles as unrestricted paint carriers: they extend outside this lid and would incorrectly authorize the old v11 placement."
+      }
+    }
+  ],
+  "usage": "test-only source snapshots and explicitly controlled fault injection; no artwork approval or style-transfer asset qualification"
+}

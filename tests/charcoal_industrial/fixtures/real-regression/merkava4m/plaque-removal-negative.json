@@ -1,0 +1,133 @@
+{
+  "intent": "remove_graphic",
+  "reason": "Remove the synthetic R stripe back to its actual current reference snapshot.",
+  "evidence": {
+    "file": "plaque-fixture-provenance.json",
+    "sha256": "c24908482d46aacd679845800ccb48dece197dc3606d11e3d3014e25a4da4d91"
+  },
+  "decisions": {
+    "C_RGB": {
+      "action": "preserve",
+      "before": {
+        "file": "plaque-current-c-64.png",
+        "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+      },
+      "after": {
+        "file": "plaque-current-c-64.png",
+        "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+      },
+      "mask": {
+        "file": "plaque-r-stripe-mask-64.png",
+        "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+      },
+      "postcondition": {
+        "mode": "reference",
+        "reference": {
+          "file": "plaque-current-c-64.png",
+          "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+        },
+        "tolerance": 0
+      }
+    },
+    "C_A": {
+      "action": "preserve",
+      "before": {
+        "file": "plaque-current-c-64.png",
+        "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+      },
+      "after": {
+        "file": "plaque-current-c-64.png",
+        "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+      },
+      "mask": {
+        "file": "plaque-r-stripe-mask-64.png",
+        "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+      },
+      "postcondition": {
+        "mode": "reference",
+        "reference": {
+          "file": "plaque-current-c-64.png",
+          "sha256": "527338438c7e2f3165a415c263f9abe026e7ca01e96ad0100178c43c77eb337e"
+        },
+        "tolerance": 0
+      }
+    },
+    "N_R": {
+      "action": "preserve",
+      "before": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "after": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "mask": {
+        "file": "plaque-r-stripe-mask-64.png",
+        "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+      },
+      "postcondition": {
+        "mode": "reference",
+        "reference": {
+          "file": "plaque-reference-n-64.png",
+          "sha256": "6466bfccc8916deb0a22fb8db4f0d48096c7b01ba8e293e9ed5bb8ff140cac04"
+        },
+        "tolerance": 0
+      }
+    },
+    "N_B": {
+      "action": "preserve",
+      "before": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "after": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "mask": {
+        "file": "plaque-r-stripe-mask-64.png",
+        "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+      },
+      "postcondition": {
+        "mode": "reference",
+        "reference": {
+          "file": "plaque-reference-n-64.png",
+          "sha256": "6466bfccc8916deb0a22fb8db4f0d48096c7b01ba8e293e9ed5bb8ff140cac04"
+        },
+        "tolerance": 0
+      }
+    },
+    "N_GA": {
+      "action": "preserve",
+      "before": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "after": {
+        "file": "plaque-injected-r-64.png",
+        "sha256": "835e9ec0ccb6b79d97079ac2b21724036f4cb709f4612dbc4f70bf16f138ac0b"
+      },
+      "mask": {
+        "file": "plaque-r-stripe-mask-64.png",
+        "sha256": "5d307c93a60df30674fa5f8b3ef92d42c6492c679988b2b65db6c9d73e6403eb"
+      },
+      "postcondition": {
+        "mode": "reference",
+        "reference": {
+          "file": "plaque-reference-n-64.png",
+          "sha256": "6466bfccc8916deb0a22fb8db4f0d48096c7b01ba8e293e9ed5bb8ff140cac04"
+        },
+        "tolerance": 0
+      }
+    },
+    "AO": {
+      "action": "absent",
+      "reason": "The chosen single turret DDS crop has no separately bound AO in this probe.",
+      "evidence": {
+        "file": "plaque-fixture-provenance.json",
+        "sha256": "c24908482d46aacd679845800ccb48dece197dc3606d11e3d3014e25a4da4d91"
+      }
+    }
+  }
+}

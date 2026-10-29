@@ -4,6 +4,38 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "wt-style-charcoal-industrial/v0.1.6",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.6",
+      "published_at": null,
+      "draft": false,
+      "prerelease": false,
+      "validation": {
+        "engineering_tests": 290,
+        "separate_skill_and_assets": true,
+        "game": "not_run"
+      },
+      "assets": [
+        {
+          "name": "wt-style-charcoal-industrial-v0.1.6.skill.zip",
+          "bytes": 391392,
+          "digest": "sha256:1969f56ee4827de138d191fe65bbe774f137822f678667fbf67b1a1b6be254cf",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip"
+        },
+        {
+          "name": "wt-charcoal-industrial-assets-v0.1.6.zip",
+          "bytes": 72377606,
+          "digest": "sha256:46e3189b85c51dace88453f28778dd53458c742dc46db585c49c7d134438dcfd",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-assets-v0.1.6.zip"
+        },
+        {
+          "name": "wt-charcoal-industrial-bundle-v0.1.6.zip",
+          "bytes": 72768976,
+          "digest": "sha256:48f4ca0b16731dfdb5535e9e65b21c435f024e7568b505b135f4d036eac4d2a8",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip"
+        }
+      ]
+    },
+    {
       "tag": "wt-style-endfield/v0.2.0",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0",
       "published_at": "2026-10-25T18:51:11Z",

@@ -1,37 +1,81 @@
-"""Check full UV role masks and immutable protected RGBA; emit review diagnostics."""
-import argparse,json
+"""Check complete UV classification and immutable pixels outside explicit edits."""
+from __future__ import annotations
+import argparse
+import json
 from pathlib import Path
 import numpy as np
 from PIL import Image
+from skill_contract import binary, load_mask, read_json
+from surface_coverage import audit_record
 
-def check(occupied,paint,protected,before,after,shared=None):
- arrays=[np.asarray(x) for x in (occupied,paint,protected)];shape=arrays[0].shape
- if len(shape)!=2 or any(x.shape!=shape or not np.isin(x,[0,1,255]).all() for x in arrays):raise ValueError('Same-size binary role masks required')
- b,a=np.asarray(before),np.asarray(after)
- if b.shape!=a.shape or b.shape!=shape+(4,) or b.dtype!=np.uint8 or a.dtype!=np.uint8:raise ValueError('Matching RGBA8 originals and outputs required')
- o,p,r=[x>0 for x in arrays]
- if not o.any():raise ValueError('Occupied mask is empty')
- if shared is None:s=np.zeros(shape,bool)
- else:
-  s=np.asarray(shared)
-  if s.shape!=shape or not np.isin(s,[0,1,255]).all():raise ValueError('Same-size binary shared-UV mask required')
-  s=s>0
- shared_paint=s&p
- missing=o&~(p|r);overlap=p&r;outside=(p|r)&~o;changed=np.any(a!=b,axis=2);bad=r&changed;unchanged=p&~changed
- counts={name:int(x.sum()) for name,x in [('occupied',o),('paint',p),('protected',r),('unclassified',missing),('overlap',overlap),('outside_occupied',outside),('protected_changed',bad),('unchanged_paint_review',unchanged)]}
- counts['shared_paint']=int(shared_paint.sum())
- return {'counts':counts,'sharing_checked':shared is not None,'technical_pass':not any(x.any() for x in [missing,overlap,outside,bad,shared_paint]),'visual_review':'pending; unchanged paint is a suspicion, not automatic failure'}, {'unclassified':missing,'overlap':overlap,'outside-occupied':outside,'protected-changed':bad,'unchanged-paint':unchanged,'shared-paint':shared_paint}
+
+def check(occupied, paint, protected, before, after, shared=None, shared_allowed=None):
+    occupied = binary(occupied, "occupied")
+    paint = binary(paint, "paint", occupied.shape)
+    protected = binary(protected, "protected", occupied.shape)
+    before, after = np.asarray(before), np.asarray(after)
+    if (before.shape != after.shape or before.shape != occupied.shape+(4,)
+            or before.dtype != np.uint8 or after.dtype != np.uint8):
+        raise ValueError("Matching RGBA8 originals and outputs required")
+    if not occupied.any():
+        raise ValueError("Occupied mask is empty")
+    sharing_checked = shared is not None
+    shared = np.zeros(occupied.shape, bool) if shared is None else binary(shared, "shared", occupied.shape)
+    allowed = np.zeros(occupied.shape, bool) if shared_allowed is None else binary(shared_allowed, "reviewed shared", occupied.shape)
+    if np.any(allowed & ~shared):
+        raise ValueError("Reviewed aliases must be a subset of actual shared pixels")
+    changed = np.any(after != before, axis=2)
+    diagnostics = {
+        "unclassified": occupied & ~(paint | protected),
+        "overlap": paint & protected,
+        "outside-occupied": (paint | protected) & ~occupied,
+        "protected-changed": protected & changed,
+        "outside-paint-changed": ~paint & changed,
+        "alpha-changed": before[..., 3] != after[..., 3],
+        "shared-paint": shared & paint & ~allowed,
+        "unchanged-paint": paint & ~changed,
+    }
+    failures = [value.any() for key, value in diagnostics.items() if key != "unchanged-paint"]
+    counts = {key.replace("-", "_"): int(value.sum()) for key, value in diagnostics.items()}
+    counts.update(occupied=int(occupied.sum()), paint=int(paint.sum()), protected=int(protected.sum()))
+    return {"counts": counts, "sharing_checked": sharing_checked,
+            "technical_pass": sharing_checked and not any(failures),
+            "shared_proof": "caller must supply allowed aliases only from a successful native face audit",
+            "visual_review": "pending; unchanged paint is diagnostic, not an automatic failure"}, diagnostics
+
 
 def main():
- p=argparse.ArgumentParser(description=__doc__)
- for name in ['occupied','paint','protected','before','after','out']:p.add_argument('--'+name,type=Path,required=True)
- p.add_argument('--shared',type=Path)
- a=p.parse_args()
- if a.out.exists():raise FileExistsError(a.out)
- masks=[np.asarray(Image.open(getattr(a,n)).convert('L')) for n in ['occupied','paint','protected']]
- shared=np.asarray(Image.open(a.shared).convert('L')) if a.shared else None
- report,diagnostics=check(*masks,*[np.asarray(Image.open(getattr(a,n)).convert('RGBA')) for n in ['before','after']],shared=shared)
- a.out.mkdir(parents=True)
- for name,mask in diagnostics.items():Image.fromarray(np.uint8(mask)*255).save(a.out/(name+'.png'))
- (a.out/'report.json').write_text(json.dumps(report,indent=2)+'\n',encoding='utf-8');print(json.dumps(report));return 0 if report['technical_pass'] else 2
-if __name__=='__main__':raise SystemExit(main())
+    parser = argparse.ArgumentParser(description=__doc__)
+    for name in ("occupied", "paint", "protected", "before", "after", "shared", "out"):
+        parser.add_argument("--"+name, type=Path, required=True)
+    parser.add_argument("--scope-record", type=Path)
+    args = parser.parse_args()
+    if args.out.exists():
+        raise FileExistsError(args.out)
+    arrays = {}
+    for name in ("occupied", "paint", "protected", "shared", "before", "after"):
+        with Image.open(getattr(args, name)) as image:
+            expected = "RGBA" if name in {"before", "after"} else "L"
+            if image.mode != expected:
+                raise ValueError(name + " must have mode " + expected)
+            arrays[name] = np.array(image)
+    allowed = None
+    if args.scope_record:
+        record = read_json(args.scope_record)
+        result = audit_record(args.scope_record.resolve().parent, record)
+        measured = load_mask(args.scope_record.resolve().parent, record["paint_mask"], "audited scope")
+        if not result["technical_pass"] or not np.array_equal(measured, arrays["paint"] > 0):
+            raise ValueError("Scope proof does not cover this exact paint mask")
+        allowed = measured & (arrays["shared"] > 0)
+    report, diagnostics = check(*(arrays[n] for n in ("occupied", "paint", "protected", "before", "after")),
+                                shared=arrays["shared"], shared_allowed=allowed)
+    args.out.mkdir(parents=True)
+    for name, mask in diagnostics.items():
+        Image.fromarray(np.uint8(mask)*255).save(args.out/(name+".png"))
+    (args.out/"report.json").write_text(json.dumps(report, indent=2)+"\n", encoding="utf-8")
+    print(json.dumps(report))
+    return 0 if report["technical_pass"] else 2
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

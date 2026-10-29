@@ -1,32 +1,51 @@
-# 炭灰工业涂装 · 地面载具
+# 炭灰工业涂装 · 0.1.6
 
-`wt-style-charcoal-industrial`，原名 S42 / SPECTRE42。以勒克莱尔 AZUR 的源码、模型和原生 UV 为第一制作范本，按目标车重新安排灰阶、几何、图形与材质。
+以勒克莱尔AZUR为第一构成范本，面向War Thunder地面载具：三档主灰、大几何与不同尺度蜂窝、车型身份、顶部完整警示、车尾暖色呼应，以及观瞄、机枪、炮管、橡胶和原皮小件的材质分工。
 
-![AZUR制作范本](https://raw.githubusercontent.com/IcyRyna/war-thunder-liveries/main/works/ground/leclerc-azur-spectre42/hero-overview.png)
+## 两个独立产物
 
-## 正式下载与安装
+| 下载 | 大小 | 内容 |
+|---|---:|---|
+| [Skill安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip) | 391.39 KB | 规则、工具、模板；不包含生产图片 |
+| [独立素材包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-assets-v0.1.6.zip) | 72.38 MB | 18项可直接用/改制的素材、完整高清材质、必要AZUR范本图 |
+| [一起压缩的合集](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip) | 72.77 MB | 两个并列目录，内容与单独下载一致 |
 
-[0.1.5 完整独立包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.5/wt-style-charcoal-industrial-v0.1.5.skill.zip) · [发布与 SHA-256](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5) · [安装说明](../installation.md)
+[发布说明与文件校验](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.6)。历史研究图库、原车裁片、未核实AI元素和过程记录不在这两个发布包里。此前“Skill里包含全部素材”的说明自0.1.6起不再适用。
 
-将 ZIP 解压后的完整 `wt-style-charcoal-industrial` 文件夹放入助手的技能目录，调用 `$wt-style-charcoal-industrial`。工具和必要素材随包提供。原 `wt-style-spectre42/v0.1.1` 标签与附件保留；0.1.2—0.1.4 是共同基线的本地分支，不分别发布。
+## 安装与素材定位
 
-## AZUR的制作精髓
+将`wt-style-charcoal-industrial`放入技能目录，调用`$wt-style-charcoal-industrial`。素材包是独立目录`wt-charcoal-industrial-assets`；两者并排解压可自动识别，素材放在别处则用`WT_CHARCOAL_ASSETS`指定其目录。
 
-- 三档主灰：34、47、65；60/30/10 是新车构图的建议起点，并非 AZUR 模型表面积实测。深灰主体占主导，提亮克制，火控壳体约26作为局部焦点。
-- 三个图形尺度：整车大几何、局部低对比灰块、蜂窝模块带。AZUR侧面实际五灰为27/33/39/47/54，节距65mm；不要把局部配方铺成满车棋盘。
-- 六区一起构图和检查：首上、炮塔、侧裙、顶部、观瞄、车尾。保留安静区域，同时避免只有灰底和几块大蜂窝。
-- D01—D06逐车适配：车型身份、装备铭牌、前部功能/图形、顶部警示、黄青微色标、车尾橙黑警示。包内19件相关素材标注了需改动或确认的字段。
-- 车尾默认安排橙色或橙黄黑线条，按可用实板调整角度、宽度和留边，保护尾灯、格栅与透空结构；对比两侧完整C/N/AO，避免旧条纹底影和后板发白。
-- 主体磨砂金属、蜂窝轻反射、火控壳体深黑、镜片独立；炮根、机枪、备用履带、橡胶和网布分别处理，去脏斑时保留细磨砂和结构细节。
+```text
+python -B scripts/verify_release.py
+python -B scripts/asset_pack.py locate
+python -B scripts/verify_release.py --assets "独立素材包目录"
+```
 
-## 实际制作与交付
+Skill单独安装仍可读取规则、设计构图、处理自备素材并生成参数材质。取用现成图形或对照AZUR范本图时，连接独立素材包。缺包会明确报错，不能默默借用另一版本的图片。
 
-必须实际使用 PS/Composa 完成分层制作、保存原生工程、导出与重开检查，并收尾本批自有文档。Python辅助精确几何、遮罩和DDS处理。Blender实际可用时调用本车模型、UV、材质槽与最终DDS检查；网页预览用于交互展示。七视图每次须有具体授权。
+运行环境为Python 3.12；依赖见Skill内`requirements.txt`，交互预览的额外依赖见`requirements-preview.txt`。实际涂装制作使用已连接的Composa/编辑器；Blender可用时实际核验模型与最终DDS。
 
-公开涂装标题、游戏目录和展示图不带制作编号；GitHub附件用ASCII文件名与中文label。获准上传时同步作品简介，说明真实车型、设计特点、安装、下载、验证范围、来源与许可。
+## 素材如何使用
+
+合适的图形可以直接拿。车型不同，由AI根据真实板形、原生UV、文字用途和整车构图调整布局、颜色、图案密度与材质；新子版放当前工程，保留原母版。无需每次重画或生图，也不能仅改目录标签就把不适用文字判成合格。
+
+三套高清防滑保留完整的color、coverage、normal-rgb、packed-n及原生分辨率。PNG像素和数据通道未有损改写，N.A不作透明度处理。18项制作素材及三张核心范本图均保留本轮审定的原始媒体字节。
+
+![AZUR构成范本](../../assets/charcoal-industrial/references/azur-current-v29/hero-front.png)
+
+## 本版改进
+
+- 13项部位明确主装饰、副装饰、真实材质和原皮细节的职责；完整板面不会因遮挡缩成角落。
+- 固定真实源面和共享使用者；整面改局部、缩小目标面组、零像素比较或六方向全不可见不能作为完成证据。
+- 视觉检查绑定实际渲染回执与输出图片；只刷新声明中的DDS哈希、沿用旧图会被拒绝。
+- 真实编辑器保存/复制重开、DDS各级mip、原生模型与通道保护分别核验。
+- Skill与素材的身份、版本、目录、哈希和安装路径分别验证；素材可以与Skill合包，但不会装进Skill目录。
 
 ## 验证范围
 
-本版32条规则、44个工程脚本，82项行为与合成集成检查通过。素材哈希、图形证据、包内链接和ZIP逐成员核验另行完成。构图比例仍是建议，未在未见车型上独立验证；既有案例的局部认可与待评项保持原范围。Skill发布批准不等于所有新作品或游戏状态已通过。
+290项单元/集成回归通过；独立解压验证覆盖Skill单独使用、缺素材包、并排目录和任意素材路径。18项素材目录与三套四图防滑检查通过。A7HU既有副本完成13项部位局部审计，六份真实编辑器工程、13张DDS/149级mip及完整顶部、首下字标、支架、火控和原皮细节修复有实际记录。
 
-原作参考：[Fying_ / WT Live1192186](https://live.warthunder.com/post/1192186/en/)。自行编写的指令和代码采用MIT；参考、游戏资源和独立许可素材的范围见[许可说明](../licensing.md)。
+这些结果不表示未见车型独立制作、旧工程完整schema3迁移或新游戏实装已经完成；具体作品美术认可仍由用户判断。A7HU作品不随本次Skill发布上传。
+
+原作研究来源：[Fying_ / WT Live 1192186](https://live.warthunder.com/post/1192186/en/)。自行编写的代码与指令沿用仓库MIT许可；第三方参考与游戏资源保留各自范围，见[许可说明](../licensing.md)。

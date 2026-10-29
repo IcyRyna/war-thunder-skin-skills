@@ -233,13 +233,24 @@
       "id": "wt-style-charcoal-industrial",
       "kind": "style",
       "status": "released_baseline",
-      "description": "炭灰工业涂装：AZUR第一范本、三主灰区、几何与蜂窝层次、车型贴纸、车尾橙黑警示及分区材质；实际PS制作，可用Blender检查。",
+      "description": "炭灰工业涂装：AZUR第一范本、完整部位装饰与原皮细节；Skill与18项制作素材独立分发，可共同压缩交付。",
       "source": "src/styles/ground/wt-style-charcoal-industrial",
       "includes": [],
       "supplements": [],
       "documentation": "docs/skills/charcoal-industrial.md",
       "changelog": "docs/changelog/wt-style-charcoal-industrial.md",
       "baseline": {
+        "version": "0.1.6",
+        "tag": "wt-style-charcoal-industrial/v0.1.6",
+        "package_sha256": "1969f56ee4827de138d191fe65bbe774f137822f678667fbf67b1a1b6be254cf",
+        "package_bytes": 391392,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.6",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-style-charcoal-industrial-v0.1.6.skill.zip"
+      },
+      "previous_ids": [
+        "wt-style-spectre42"
+      ],
+      "previous_baseline": {
         "version": "0.1.5",
         "tag": "wt-style-charcoal-industrial/v0.1.5",
         "package_sha256": "bf0a764170496b50506131793f79c25c491e104ae638735f599750dded80eab1",
@@ -247,16 +258,20 @@
         "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.1.5",
         "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.5/wt-style-charcoal-industrial-v0.1.5.skill.zip"
       },
-      "previous_ids": [
-        "wt-style-spectre42"
-      ],
-      "previous_baseline": {
-        "version": "0.1.1",
-        "tag": "wt-style-spectre42/v0.1.1",
-        "package_sha256": "9d1bdd17f831af9b2973213cb431cdf5ca1179fd287d83d250b0a95f8c0bad81",
-        "package_bytes": 22225613,
-        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-spectre42/v0.1.1",
-        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-spectre42/v0.1.1/wt-style-spectre42-v0.1.1.skill.zip"
+      "asset_pack": {
+        "id": "wt-charcoal-industrial-assets",
+        "version": "0.1.6",
+        "source": "assets/charcoal-industrial",
+        "download": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-assets-v0.1.6.zip",
+        "sha256": "46e3189b85c51dace88453f28778dd53458c742dc46db585c49c7d134438dcfd",
+        "bytes": 72377606,
+        "embedded_in_skill": false
+      },
+      "bundle": {
+        "download": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-style-charcoal-industrial/v0.1.6/wt-charcoal-industrial-bundle-v0.1.6.zip",
+        "sha256": "48f4ca0b16731dfdb5535e9e65b21c435f024e7568b505b135f4d036eac4d2a8",
+        "bytes": 72768976,
+        "layout": "two sibling directories"
       }
     },
     {

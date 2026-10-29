@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "skill_version": "0.1.5",
+  "skill_version": "0.1.6",
   "roles": [
     {
       "id": "D01",
@@ -104,5 +104,7 @@
       ]
     }
   ],
-  "note": "role requirements; nonexistent equipment gets a documented alternative, never fictitious capability text"
+  "note": "role requirements; nonexistent equipment gets a documented alternative, never fictitious capability text",
+  "candidate_id": "charcoal-0.1.6-release",
+  "identity_source": "VERSION.json"
 }

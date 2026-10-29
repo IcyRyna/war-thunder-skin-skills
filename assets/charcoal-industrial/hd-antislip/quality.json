@@ -1,0 +1,148 @@
+{
+  "schema_version": 2,
+  "version": "0.1.6",
+  "assets": [
+    {
+      "folder": "square",
+      "passed": true,
+      "size": [
+        2048,
+        2048
+      ],
+      "checks": {
+        "coverage_alpha": true,
+        "transparent_rgb_zero": true,
+        "outside_flat_normal": true,
+        "data_alpha_not_coverage": true,
+        "packed_x_matches": true,
+        "packed_y_matches": true,
+        "metallic_matches_parameters": true,
+        "roughness_matches_parameters": true,
+        "color_matches_parameters": true,
+        "unit_normals": true,
+        "neutral_color": true
+      },
+      "maximum_normal_length_error": 0.005903363227844238,
+      "files_checked": 4,
+      "mip_diagnostics": [
+        {
+          "level": 0,
+          "diameter_px": 2.0,
+          "sampled_std": 1.3304393291473389
+        },
+        {
+          "level": 1,
+          "diameter_px": 1.0,
+          "sampled_std": 1.1470577716827393
+        },
+        {
+          "level": 2,
+          "diameter_px": 0.5,
+          "sampled_std": 0.7827242016792297
+        },
+        {
+          "level": 3,
+          "diameter_px": 0.25,
+          "sampled_std": 0.37428227066993713
+        }
+      ],
+      "visual_approval": "not inferred; final compressed DDS still requires target review"
+    },
+    {
+      "folder": "rectangle",
+      "passed": true,
+      "size": [
+        4096,
+        2048
+      ],
+      "checks": {
+        "coverage_alpha": true,
+        "transparent_rgb_zero": true,
+        "outside_flat_normal": true,
+        "data_alpha_not_coverage": true,
+        "packed_x_matches": true,
+        "packed_y_matches": true,
+        "metallic_matches_parameters": true,
+        "roughness_matches_parameters": true,
+        "color_matches_parameters": true,
+        "unit_normals": true,
+        "neutral_color": true
+      },
+      "maximum_normal_length_error": 0.006086826324462891,
+      "files_checked": 4,
+      "mip_diagnostics": [
+        {
+          "level": 0,
+          "diameter_px": 2.0,
+          "sampled_std": 1.332317590713501
+        },
+        {
+          "level": 1,
+          "diameter_px": 1.0,
+          "sampled_std": 1.1486239433288574
+        },
+        {
+          "level": 2,
+          "diameter_px": 0.5,
+          "sampled_std": 0.7827776074409485
+        },
+        {
+          "level": 3,
+          "diameter_px": 0.25,
+          "sampled_std": 0.37554553151130676
+        }
+      ],
+      "visual_approval": "not inferred; final compressed DDS still requires target review"
+    },
+    {
+      "folder": "strip",
+      "passed": true,
+      "size": [
+        4096,
+        512
+      ],
+      "checks": {
+        "coverage_alpha": true,
+        "transparent_rgb_zero": true,
+        "outside_flat_normal": true,
+        "data_alpha_not_coverage": true,
+        "packed_x_matches": true,
+        "packed_y_matches": true,
+        "metallic_matches_parameters": true,
+        "roughness_matches_parameters": true,
+        "color_matches_parameters": true,
+        "unit_normals": true,
+        "neutral_color": true
+      },
+      "maximum_normal_length_error": 0.00590747594833374,
+      "files_checked": 4,
+      "mip_diagnostics": [
+        {
+          "level": 0,
+          "diameter_px": 2.0,
+          "sampled_std": 1.3338677883148193
+        },
+        {
+          "level": 1,
+          "diameter_px": 1.0,
+          "sampled_std": 1.1509660482406616
+        },
+        {
+          "level": 2,
+          "diameter_px": 0.5,
+          "sampled_std": 0.7847302556037903
+        },
+        {
+          "level": 3,
+          "diameter_px": 0.25,
+          "sampled_std": 0.3767455816268921
+        }
+      ],
+      "visual_approval": "not inferred; final compressed DDS still requires target review"
+    }
+  ],
+  "provenance": "candidate neutral material regenerated from parameterized height field",
+  "visual_approval": "pending",
+  "candidate_id": "charcoal-0.1.6-rc4",
+  "identity_source": "VERSION.json"
+}

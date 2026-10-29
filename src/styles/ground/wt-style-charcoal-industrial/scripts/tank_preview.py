@@ -99,6 +99,19 @@ def frame(positions,eye_dir,size,margin=1.13,target=None):
     cx,cy=(mn[0]+mx[0])/2,(mn[1]+mx[1])/2
     return ortho(cx-width/2,cx+width/2,cy-height/2,cy+height/2,.05,80)@view,eye
 
+def preview_views(views=None,authorization=None):
+    selected=['iso'] if views is None else list(views)
+    if not selected or len(set(selected))!=len(selected) or any(view not in CAMERAS for view in selected):
+        raise ValueError('Views must be nonempty, unique and chosen from '+', '.join(CAMERAS))
+    if len(selected)>=7:
+        if authorization is None:raise ValueError('Seven-view generation needs this request\'s explicit user authorization record')
+        from skill_contract import read_json,require_text
+        record=read_json(authorization)
+        require_text(record.get('user_request'),'user authorization quotation')
+        require_text(record.get('request_reference'),'current request reference')
+        if record.get('authorized_views')!=selected:raise ValueError('Authorization view list differs from requested generation')
+    return selected
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--model',type=Path,required=True)
@@ -108,13 +121,15 @@ def main():
     parser.add_argument('--width',type=int,default=1800)
     parser.add_argument('--height',type=int,default=1150)
     parser.add_argument('--bounds',type=float,nargs=6)
-    parser.add_argument('--views',nargs='+',default=['iso','opposite','top','left','right','rear','front'])
+    parser.add_argument('--views',nargs='+',default=None,help='Default: one iso view; seven or more require this request\'s authorization record')
+    parser.add_argument('--seven-view-authorization',type=Path)
     args=parser.parse_args()
     if not 128<=args.width<=8192 or not 128<=args.height<=8192:raise ValueError('Preview dimensions out of range')
-    if len(set(args.views))!=len(args.views) or any(view not in CAMERAS for view in args.views):raise ValueError('Views must be unique and chosen from '+', '.join(CAMERAS))
+    args.views=preview_views(args.views,args.seven_view_authorization)
     if args.out.exists():raise FileExistsError('Preview output directory already exists; choose a fresh output directory')
     outputs=[args.out/'geometry.npz',args.out/'preview-report.json']+[args.out/(view+'.png') for view in args.views]
     inputs=[args.model,args.config]+([args.profile] if args.profile else [])
+    if args.seven_view_authorization:inputs.append(args.seven_view_authorization)
     with ArtifactTransaction(outputs,inputs,label='ground-preview') as transaction:
         ctx=moderngl.create_standalone_context(require=330)
         try:
@@ -231,5 +246,10 @@ def render(args,transaction,ctx):
         img=Image.frombytes('RGB',size,resolved.read(components=3,alignment=1)).transpose(Image.Transpose.FLIP_TOP_BOTTOM)
         img.save(transaction.stage(args.out/(name+'.png')))
         print('rendered',name,flush=True)
-    write_json(transaction.stage(args.out/'preview-report.json'),{'renderer':'Independent OpenGL preview; approximate lighting, not the game engine','gpu':ctx.info.get('GL_RENDERER'),'texture_bindings':bindings,'material_bindings':material_bindings,'texture_filtering':texture_filtering,'profile_alpha_semantics':profile.get('texture_alpha_semantics',{}),'missing_stock_preview_materials':missing,'bounds':[lo.tolist(),hi.tolist()],'views':args.views})
+    from skill_contract import sha
+    write_json(transaction.stage(args.out/'preview-report.json'),{'renderer':'Independent OpenGL preview; approximate lighting, not the game engine','gpu':ctx.info.get('GL_RENDERER'),'texture_bindings':bindings,'material_bindings':material_bindings,'texture_filtering':texture_filtering,'profile_alpha_semantics':profile.get('texture_alpha_semantics',{}),'missing_stock_preview_materials':missing,'bounds':[lo.tolist(),hi.tolist()],'views':args.views,
+        'source_triangle_count':int(model['source_triangle_count']),'renderable_triangles':len(model['positions']),
+        'skipped_degenerate_source_face_ids':model['skipped_source_face_ids'].tolist(),
+        'face_mapping':'geometry.npz source_face_ids; do not substitute render-array indices for native faces',
+        'seven_view_authorization_sha256':sha(args.seven_view_authorization) if args.seven_view_authorization else None})
 if __name__=='__main__':main()

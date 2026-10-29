@@ -1,0 +1,2973 @@
+{
+  "schema_version": 1,
+  "primary_template": "fr_leclerc_azur",
+  "archive_sha256": "4f9e0ab2572ea2f47cd868f076fa1babfd0ef19c6f2870871ca26fbe27bc2d3e",
+  "archive_bytes": 65035247,
+  "unpacked_bytes": 382209196,
+  "members_verified": 16,
+  "dds_count": 15,
+  "mips_decoded": 169,
+  "source_unchanged": true,
+  "deployment_hashes_match": true,
+  "textures": [
+    {
+      "width": 4096,
+      "height": 4096,
+      "mip_count": 13,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          4096,
+          4096
+        ],
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        67108864,
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "706adc1e5e96208826cb665ae1cdabffd73286e63b1d97ff178fadab5a6b8d6d",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "payload_bytes": 67108864,
+          "payload_sha256": "d56693faf1f84b563d8561e7e33af99854dbaa537dbc9a3f9fefb2b5f85d2b8f",
+          "decoded_rgba_sha256": "36bd1db6789be031330492821f47f42387b5beb10250c1b692bf320968316759"
+        },
+        {
+          "level": 1,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "16c4a507524572a1b4920b08619d7b947300bb8841631d13fd86e6b98752e59a",
+          "decoded_rgba_sha256": "1f86793124b837a71fc7be89dab448b118d2f5e45e8510e6061dfe4421e7f946"
+        },
+        {
+          "level": 2,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "c2229ff52ae65a818f1cca2e77bae3e2c79f7b271e982c2dfd5a5ab18975d55e",
+          "decoded_rgba_sha256": "c22e3aac09e34fdacc23f1e136f0245a404157a865bbe31cc47d491db13792db"
+        },
+        {
+          "level": 3,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "068339800935d05b68e8c7f3c1899eeae23ace09445c49029278161ed20e2930",
+          "decoded_rgba_sha256": "c4240705353504100500f29d3fc94e1c4413268ee54eca2b6cf001917dde88de"
+        },
+        {
+          "level": 4,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "c1eeae24347597fa94e87dda3af054b4d1b12a4af9f8c95f0caaecce3b39958d",
+          "decoded_rgba_sha256": "be1cc1bde31390a33e18d82badcddc4ba421627dc1b9fa726c6fb97c6c40e481"
+        },
+        {
+          "level": 5,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "f1a8560e6f8dc2f1a309f057b5391c7506b2d3e4e8e270d6f49dce536646a2d9",
+          "decoded_rgba_sha256": "59aada5d7250aed608091750edc27a8d8e22fa6a2ac1568b38a43edc1a2d334a"
+        },
+        {
+          "level": 6,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "278730d649b2b34ef28a5893a9d80e4966b85086a18c8fb830744ef9a3209dab",
+          "decoded_rgba_sha256": "a6964032a121a3fb666d0c4cc4499fcf4d907eda40eae1d8089de0bc4d744de9"
+        },
+        {
+          "level": 7,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "1ffa0eb57c238a3992584d51f7eea004e783f6a2c144b5f58edd33dfbd3fe683",
+          "decoded_rgba_sha256": "76d6d843f1f46cc162faf3027b5783493f2c74e8b691215a7f86476743e29a77"
+        },
+        {
+          "level": 8,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "232aaa0fc1786306bf915a655ef7601db41d15698f42bd070b93fc0aa21f97fb",
+          "decoded_rgba_sha256": "5a67ccb7d6f1fa16c0eff5db89bc0a0c1ace6e40aa7fc0394ab390175aca0071"
+        },
+        {
+          "level": 9,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "e5a5d8fa03c7ad5ded767ffd35d0af9d3f8219f39bff51d6a9ae40e942e9cfef",
+          "decoded_rgba_sha256": "7561ed57dda297a8035bf03e7c054ce0a0314908caa8e0a2170ed2042d04cd94"
+        },
+        {
+          "level": 10,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "508a61b8623917f4beceaea9271922a4db4df1e455a114d647842d0fbc1b820a",
+          "decoded_rgba_sha256": "57173a93a6c905d52f634c72b995d651f72ba0f17a5d1bca94d767e1f47aa5e2"
+        },
+        {
+          "level": 11,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "698e889e928f58db0bcf721845719a6d2f570ad1fb8ca2d73a138fd8a67acecd",
+          "decoded_rgba_sha256": "f173bd31bb525820fe4fbbf2ab2b6146ce9db429d8a2067ae3e25bb953abe6cf"
+        },
+        {
+          "level": 12,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "6d69720b8c6fa3860fd9ed63d51cf48c3d40eb9d82527d3a47525573cfc0dc18",
+          "decoded_rgba_sha256": "6d69720b8c6fa3860fd9ed63d51cf48c3d40eb9d82527d3a47525573cfc0dc18"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur.dds",
+      "native_resource": "leclerc_azur_c*",
+      "role": "color"
+    },
+    {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "63a2eb1877068ffbd16c5be20b289d9f30ec6d8f778a4360b8c06d833c589212",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "61c4597875d33b6a06c3a38f0b0c42e2245f3b7ab2412a95d8e9d1de88539cde",
+          "decoded_rgba_sha256": "61c4597875d33b6a06c3a38f0b0c42e2245f3b7ab2412a95d8e9d1de88539cde"
+        },
+        {
+          "level": 1,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "e742d40421ad8f3179e8f7bfde26de69ead23c13968defddc559e5a44bace167",
+          "decoded_rgba_sha256": "e742d40421ad8f3179e8f7bfde26de69ead23c13968defddc559e5a44bace167"
+        },
+        {
+          "level": 2,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "e4dc4accc61cf1894121eb1464844ba37ec997a4513d4b61e6770d5d944318d0",
+          "decoded_rgba_sha256": "e4dc4accc61cf1894121eb1464844ba37ec997a4513d4b61e6770d5d944318d0"
+        },
+        {
+          "level": 3,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "55c2e6cb6a93d6737dece45b5a3cfeb59a3bc817f06f78d77e37d1364a9f34ac",
+          "decoded_rgba_sha256": "55c2e6cb6a93d6737dece45b5a3cfeb59a3bc817f06f78d77e37d1364a9f34ac"
+        },
+        {
+          "level": 4,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "bba62bbbfbc5a4d8ed1f89d301e4594adcbe8ec05c41e33c3866f699caa24007",
+          "decoded_rgba_sha256": "bba62bbbfbc5a4d8ed1f89d301e4594adcbe8ec05c41e33c3866f699caa24007"
+        },
+        {
+          "level": 5,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "d78da6b5ef95dd9006ef88faaedc22e8be9530eac15181866509d6f36a0f3d43",
+          "decoded_rgba_sha256": "d78da6b5ef95dd9006ef88faaedc22e8be9530eac15181866509d6f36a0f3d43"
+        },
+        {
+          "level": 6,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "80689fb967cb0da9f8bee1543613825632383ea4e77fbf35b71cd95d61a9ff4e",
+          "decoded_rgba_sha256": "80689fb967cb0da9f8bee1543613825632383ea4e77fbf35b71cd95d61a9ff4e"
+        },
+        {
+          "level": 7,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "9d01fc4327698aea009c05fec5b0861b58212526a94f1a0170103118d5a818c3",
+          "decoded_rgba_sha256": "9d01fc4327698aea009c05fec5b0861b58212526a94f1a0170103118d5a818c3"
+        },
+        {
+          "level": 8,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "778149622f9a2f256104c1381886f46751daec0e5061b14829d690821bb5626b",
+          "decoded_rgba_sha256": "778149622f9a2f256104c1381886f46751daec0e5061b14829d690821bb5626b"
+        },
+        {
+          "level": 9,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "95dfdcb46ae18e005a56a48e971dc64d2cba351b708004a6cca474fc0ea9221e",
+          "decoded_rgba_sha256": "95dfdcb46ae18e005a56a48e971dc64d2cba351b708004a6cca474fc0ea9221e"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur_ao.dds",
+      "native_resource": "leclerc_azur_ao*",
+      "role": "ao"
+    },
+    {
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "3a6413079001a2cd8053cc7569d8293788f3cae1a52039b3818698773caec689",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "26ea3a4c96bbf8e2ee5b9a501046c697ec61a864bd4dde2e9f956c7b03bf01cb",
+          "decoded_rgba_sha256": "da5ad46e7f805959bc86f4e754567d1521003c6625aa29915a01570a2ee23efd"
+        },
+        {
+          "level": 1,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "7c5a6c73ef20339aec5adca70d5c9537e3c64f3f09bd40bcf233290fd13f4570",
+          "decoded_rgba_sha256": "706fe2cdf56b1ca339848d941a525e2912bf09206b6e891686c5863c794bf6b8"
+        },
+        {
+          "level": 2,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "d6a46ba26ab450f1906f6abcc9e79d0f0e59a71464dcdfd24e898c369cb79738",
+          "decoded_rgba_sha256": "93ee21eed31d0f40eefb0d1376ea6dc9d1ba1e63b922d1464ebc74e8b2d7dcd1"
+        },
+        {
+          "level": 3,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "3f68b83c154ec44c899709582fdc1f3d69143131383acd862e892d12ca19a66f",
+          "decoded_rgba_sha256": "a802a2a3a2b13aada9b446d9993c4a79a5730b5908eb390acfe64d53170ce2ee"
+        },
+        {
+          "level": 4,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "60070bdbc73f781ecf739c632f31a5ccfb61a82a2c042b5bae4d5bd6584e6fd1",
+          "decoded_rgba_sha256": "603122d5f8e8bff4fb0271f78c883a66e348ff96bf82ecae24dd2734ec284d24"
+        },
+        {
+          "level": 5,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "3ec843e26067f3d92171fcb2920ef9cdf1a88516925bbc3e7f265f2494b4f1a2",
+          "decoded_rgba_sha256": "38b83a9a8c6453953006ab143011415f83b2b579f5ca31d8493f8e04e15c2e25"
+        },
+        {
+          "level": 6,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "a9dc1008c14a0e0bd42778c1d9d4ac24da5e9b5fcc36d9e7e2fe8ca2c954d2ef",
+          "decoded_rgba_sha256": "121c41d22ffa1e1fa45a0c959b135e998998a5fd766b29309b8f6fd73779bd2a"
+        },
+        {
+          "level": 7,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "7a74b93edf338aca2db726a7560bb941e2d1c7799f0e47b7f5ed990264bdb01f",
+          "decoded_rgba_sha256": "c1c2f6280db86fed49902e9298176a76af32376196d0ed54deb54cc4d9c3f59e"
+        },
+        {
+          "level": 8,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "820918fd09f0e12f0e87409a09922bfc11397f56a5841eb966ba92ffa718abad",
+          "decoded_rgba_sha256": "e710d4124f96c79e41c0dadda813b4674a3d7de9ba4ca65f2081dfa08ec507bb"
+        },
+        {
+          "level": 9,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "c94d4905cf16d2e684dec138e0fe95ea4864e85b3429e81952b56827e86f1b11",
+          "decoded_rgba_sha256": "8c7f87c3e17fb485f90e5838ef3f767df63c8345e0238728b5dee05c8f58f895"
+        },
+        {
+          "level": 10,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "0d8df667a8b98dfa50240dc7f7ab850d5d208b8016f4f21f7675a8d662158f26",
+          "decoded_rgba_sha256": "c7ee1c5e08c71667d3e35ed185acfa274912aaf16df3da54afede1e8c651c8eb"
+        },
+        {
+          "level": 11,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "61d5f2c876326c3a4274617d46211b90f8ada447cbece8df29c85fb578d28f4c",
+          "decoded_rgba_sha256": "e494670daa50834c2d62b4647f8373b095e8215621b2c2941593f97f30f0020a"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_azur_n.dds",
+      "native_resource": "leclerc_azur_n*",
+      "role": "normal"
+    },
+    {
+      "width": 4096,
+      "height": 4096,
+      "mip_count": 13,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          4096,
+          4096
+        ],
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        67108864,
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "29ddcfd8730969f24f5a26514bf3bfba22c50e5277422a79ddf66d05ae9f5212",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "payload_bytes": 67108864,
+          "payload_sha256": "964b9d474ae1e9ddf49612ab1d429202882e9387f03481175189bc86207e7792",
+          "decoded_rgba_sha256": "b9e6507ae4f0d51ef6b0e257e7e5c050f2b9a58030a674d6016aeee7e08d5d57"
+        },
+        {
+          "level": 1,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "c69d781a0abf8c86a1fcd78d3a6463eb9d31b7377cf7866b799cd65731814a91",
+          "decoded_rgba_sha256": "5ea5ff8e910ffbb578833a109a227f6c4c621b499ec506ff4d321c40c68cfc7a"
+        },
+        {
+          "level": 2,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "2d0ee3a37d8d9f679e2723f336cf6ed6972e1d80c446895846736d82b0de9189",
+          "decoded_rgba_sha256": "136d0cadca7c64c05f3e4862f842890f0357b5dc267f651479e55262a32cc07f"
+        },
+        {
+          "level": 3,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "d46f4b967f6b16bbbcf752dfe52f7d63a33d2bdd7cf60199962da5ab6463a8e0",
+          "decoded_rgba_sha256": "dcab61655b42ccb5ed9ed81a7ef4f9c91f6ab5b0cd87e120c59213ebe952a9af"
+        },
+        {
+          "level": 4,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "f29e0e344bfb26b3a01b99945d82d0dc8ffad92efabf122ea0b639a68a87182f",
+          "decoded_rgba_sha256": "8587ef1dd4cc233dc508520d311ff692781eabcda8c8c413656e4134331f3b68"
+        },
+        {
+          "level": 5,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "0b28f4794c742fb05ca352ad65d4ba04529a1d151b61c9549fe522ba2a8bfcce",
+          "decoded_rgba_sha256": "c536c572f007f30c9867a7e95482e5d45cfcf6f359994245f371e568ad8c52fe"
+        },
+        {
+          "level": 6,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "a70962be6bca06881df7f412cb8e314fcf225611e25b8750f4afbe9f036f8355",
+          "decoded_rgba_sha256": "50cfb51d24b21189ae24ee5e8125a311bbcc67d7cc56530848855608ded2e370"
+        },
+        {
+          "level": 7,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "06d55a84f3b3bf6c7df570523eeb8c07fab7ab95b1db23964c3f0c687aab9b18",
+          "decoded_rgba_sha256": "159c09d4cf793c37562340e9551a9da4671fa60afbbf09343d2fdbbc7c48a3e9"
+        },
+        {
+          "level": 8,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "731c7b1b4702882cd9f009df9bc20490ff542fd0a94a16aeb7de05bed4e784a2",
+          "decoded_rgba_sha256": "a50ea3056a759930d970fa3d2b30043512847785e34034e2e38a68b829307203"
+        },
+        {
+          "level": 9,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "542359fae4a8cbe850f48cd88e9f8facb5be658edfa353e72a7ceb403b57fac6",
+          "decoded_rgba_sha256": "f55965578f56b25db0f9985e2cd17d804984e8fabe5e0cdc51fb6af1ada48595"
+        },
+        {
+          "level": 10,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "6e5d398650568f62a18d8a857ec2fc7297a7c3aaaf45861121cebea47e579e75",
+          "decoded_rgba_sha256": "8c9305d5d995b8e32a5350a91e3f1f4aadafbdca42f4c7fd7a641680df7309e9"
+        },
+        {
+          "level": 11,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "d00cbddd38da7fadfddc912433971da52bec8c04dc8e3ef6a5bf8ad4f3b6bcc6",
+          "decoded_rgba_sha256": "0c6f3a68f0a09c79d15a714e08e5371acf6c487e7f130be4480187188d4daf6d"
+        },
+        {
+          "level": 12,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "da2a133341cfdc84d358306a8ae7e90be0aca001a829f924a4a64ff908af97f2",
+          "decoded_rgba_sha256": "da2a133341cfdc84d358306a8ae7e90be0aca001a829f924a4a64ff908af97f2"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body.dds",
+      "native_resource": "leclerc_s2_body_c*",
+      "role": "color"
+    },
+    {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "83a24f9c55df3ff03dd7146209311f18eeb8ac5cb5d791fe5ebbc1db6bcc63d3",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "d3ad61d4f1e2f56358800d6ec4712e59638eaac8407636a42aea400189e2b544",
+          "decoded_rgba_sha256": "d3ad61d4f1e2f56358800d6ec4712e59638eaac8407636a42aea400189e2b544"
+        },
+        {
+          "level": 1,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "5a4148f5256493061763dfa33fb8c1c0c6be3400b292cfabdd33b42018d37fde",
+          "decoded_rgba_sha256": "5a4148f5256493061763dfa33fb8c1c0c6be3400b292cfabdd33b42018d37fde"
+        },
+        {
+          "level": 2,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "65ff147defddd45561c29d2121a6c586faddcce72cf516e12029ea679a17d424",
+          "decoded_rgba_sha256": "65ff147defddd45561c29d2121a6c586faddcce72cf516e12029ea679a17d424"
+        },
+        {
+          "level": 3,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "b286c763b64da6eb902768fcadb93378efc3569569093de6a7a4b6747d4fdc2d",
+          "decoded_rgba_sha256": "b286c763b64da6eb902768fcadb93378efc3569569093de6a7a4b6747d4fdc2d"
+        },
+        {
+          "level": 4,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "7b4baba03c8c8a5f1f8aca825ad4bce273aa74d77cbd46fd3bb301cdaa9a213a",
+          "decoded_rgba_sha256": "7b4baba03c8c8a5f1f8aca825ad4bce273aa74d77cbd46fd3bb301cdaa9a213a"
+        },
+        {
+          "level": 5,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "ab365ee53d05aa438418e6a34cdd9f33b9d9aac0df3008f32024c0bb92e72b7b",
+          "decoded_rgba_sha256": "ab365ee53d05aa438418e6a34cdd9f33b9d9aac0df3008f32024c0bb92e72b7b"
+        },
+        {
+          "level": 6,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "ff875e69f7fdb41614e8a4a6fa8b6fd4e577f657f313ebbf98bc64b1807e34a5",
+          "decoded_rgba_sha256": "ff875e69f7fdb41614e8a4a6fa8b6fd4e577f657f313ebbf98bc64b1807e34a5"
+        },
+        {
+          "level": 7,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "a42241cc7824ab1d1bb091d8895783e37af4dbc30686dddb60ece910cdedeccd",
+          "decoded_rgba_sha256": "a42241cc7824ab1d1bb091d8895783e37af4dbc30686dddb60ece910cdedeccd"
+        },
+        {
+          "level": 8,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "b174874e628a2a58bf3191641f485c63607964f65d9359be56cf631375b22d29",
+          "decoded_rgba_sha256": "b174874e628a2a58bf3191641f485c63607964f65d9359be56cf631375b22d29"
+        },
+        {
+          "level": 9,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "b5500bf19d103375db3b45963e6a7f723e743b6f754e44bf98c5706a9245de15",
+          "decoded_rgba_sha256": "b5500bf19d103375db3b45963e6a7f723e743b6f754e44bf98c5706a9245de15"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body_ao.dds",
+      "native_resource": "leclerc_s2_body_ao*",
+      "role": "ao"
+    },
+    {
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "a4862aaa3815dd971bed855c00c0b905286cc63d50422b0286ea8dc3b691d592",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "64725d9182eaa5c8494e01e8bd7bd2c8c9379899e08683ec58708c2c688d5f85",
+          "decoded_rgba_sha256": "e05d1800114bc5234b38d6b88a948105fa637b5467e5e8070af744746dbce9c4"
+        },
+        {
+          "level": 1,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "ae5e9fb7143d8a0d54693c292bb5eba52d57f667dec6b208d61b3834c018b929",
+          "decoded_rgba_sha256": "988132bb91e4eb2a6de5b7208d0fbac2f80fbf804b15ae2af5e5675676b3d8e8"
+        },
+        {
+          "level": 2,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "50feac90416ba01c1b9695e8c66bcad3c5a17e903c66939e1dcc0b87097c9622",
+          "decoded_rgba_sha256": "09552256cc62d3d999fd722dcfdfbeb0eb3bd31ae59c814adf83bb6058b49892"
+        },
+        {
+          "level": 3,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "70b0ba6de814c1ac9af77d6247f2a577b8127e5ba1f6427dd009708f865fd6d0",
+          "decoded_rgba_sha256": "7a88cbbfae9d5765e6da7986dbbf1f913d3fc3699ade049976706167eb075fcc"
+        },
+        {
+          "level": 4,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "2e04efe27ebd493412b2e86ef2f3794ab8a6799f2e7e351538fb4c0bebda3c6b",
+          "decoded_rgba_sha256": "341368561c3813b83ef840e7800eed70b18635896aecf8fae366048bfbc42ebf"
+        },
+        {
+          "level": 5,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "05ba54bd75bb64b2442d8d6281011fea33a73088c1141955a9e7f7f156024f3e",
+          "decoded_rgba_sha256": "f601c363b2f61a7c6dc29de31692f7419bbef1abfe59cdc0f6b5ece7d55bc2bc"
+        },
+        {
+          "level": 6,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "8a861730e6e2b950eb6b07ac6a2e6e779949a047c49efa470dd703315a8c949b",
+          "decoded_rgba_sha256": "a55c3025b4fa4dcf0a9172541654b4567259adf4afc417256d59036abdc9b112"
+        },
+        {
+          "level": 7,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "b97dbdd4b93494d0a60a47485f1b6acdd4cfccbbef98f6ab2192e4d8328cf2c4",
+          "decoded_rgba_sha256": "9deec08cd6c5a5e0207ced9954f0a7ad3374173cf2b96bb6d9552b549f15e3f7"
+        },
+        {
+          "level": 8,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "b5eec874c4f4a98f9c18c14d91258cbad6a833496db4513c5de82144b898dd64",
+          "decoded_rgba_sha256": "25c27d8c4d2ade2113f85579f6d0fcf3a56d6241ee93add42ffcc596f11b7f24"
+        },
+        {
+          "level": 9,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "24ff21c6dd88412536d7e2234054a4c14fbc737705a5bfd638f224b78b133c6f",
+          "decoded_rgba_sha256": "7e92dc8c9df4c38e587f205d2567fbb46be5d9d6ca2119908f703d05bb1ceb41"
+        },
+        {
+          "level": 10,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "76464779410eb4c4f486510094f314331b52dbadb001ebf0f3ec1f432e88d666",
+          "decoded_rgba_sha256": "c7a72e06d9841fd2b37243f96f8c1ee54f80da611e26d11688a5c004dde4e18b"
+        },
+        {
+          "level": 11,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "97a34fc167eecb9d587f8cc6ddd2350d3d5c76d072736fb301cd6aec9ab5362e",
+          "decoded_rgba_sha256": "c2ecefc5ad4f5ab9d0cccc1f97c190cc22efcfb88c6ab47d64fa47d87a83519c"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_body_n.dds",
+      "native_resource": "leclerc_s2_body_n*",
+      "role": "normal"
+    },
+    {
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "74ca8ed0555d18dea033d889e53982652e29adeba6061c44fcb7309825ede78c",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "7c632a7d44995bd8e506ab2a2ede4a8a2881df18603c841de2c2309973d3c3c7",
+          "decoded_rgba_sha256": "02b427893cbb4e95ff862043f161dd98eb00ecf4418b226677a84618f85f0028"
+        },
+        {
+          "level": 1,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "cebde7419c3f16ba6cd182c5810d82e0b91eff6c68ded3f9df3a2ffaa34ca12e",
+          "decoded_rgba_sha256": "19cf5187751bb2032bf2318a905a909e76b02c7df19b9c0affd1b394f381a5f1"
+        },
+        {
+          "level": 2,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "3ebcc737d125cda99228ede2b2f599d2ee9cc00fd1529e575d1431f530133536",
+          "decoded_rgba_sha256": "b4e985ba06d49cd97c0541ab4831e330c7fd92e550430aef6b97152f4d9e64aa"
+        },
+        {
+          "level": 3,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "99e0e4ddc14326f9c533e1bc2c2d797bc100e98e61cc7541d78acad997386ecd",
+          "decoded_rgba_sha256": "c4b093461145469b8afd2575d5582fa0ed9fc71a791a7075b4f96f3a6a9de1e3"
+        },
+        {
+          "level": 4,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "bb1169d2bb2a80355d9fec625e34ca49fe8a851ec995bc2d07318c5b286ebe0f",
+          "decoded_rgba_sha256": "bb1169d2bb2a80355d9fec625e34ca49fe8a851ec995bc2d07318c5b286ebe0f"
+        },
+        {
+          "level": 5,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "09846f1c85ed7415e4b8be98c8a8e0b57a34f5b4e739f07ffd19941d91275ebe",
+          "decoded_rgba_sha256": "09846f1c85ed7415e4b8be98c8a8e0b57a34f5b4e739f07ffd19941d91275ebe"
+        },
+        {
+          "level": 6,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "dfc3cc38c8bd518bf6d1c5662c5e28b294400188cb6b02028ba0a0086513e11e",
+          "decoded_rgba_sha256": "dfc3cc38c8bd518bf6d1c5662c5e28b294400188cb6b02028ba0a0086513e11e"
+        },
+        {
+          "level": 7,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "3334530e4c0928f70fe994a6ee3adac7a689cdf85b3fd797dde136348278b2b1",
+          "decoded_rgba_sha256": "3334530e4c0928f70fe994a6ee3adac7a689cdf85b3fd797dde136348278b2b1"
+        },
+        {
+          "level": 8,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "5a7282bea6a6ed20cfa7f429e674586a2cc849a530d4cb82bb202c350c8d6789",
+          "decoded_rgba_sha256": "5a7282bea6a6ed20cfa7f429e674586a2cc849a530d4cb82bb202c350c8d6789"
+        },
+        {
+          "level": 9,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "48f995ee185ab08617fe240985dde2c9356f0145132e2dbbb90c77e1ff361abb",
+          "decoded_rgba_sha256": "48f995ee185ab08617fe240985dde2c9356f0145132e2dbbb90c77e1ff361abb"
+        },
+        {
+          "level": 10,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "b79b803d8d39c747e88498009a8659a5955c4f2615e47910aa923543435054d9",
+          "decoded_rgba_sha256": "b79b803d8d39c747e88498009a8659a5955c4f2615e47910aa923543435054d9"
+        },
+        {
+          "level": 11,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "da2a133341cfdc84d358306a8ae7e90be0aca001a829f924a4a64ff908af97f2",
+          "decoded_rgba_sha256": "da2a133341cfdc84d358306a8ae7e90be0aca001a829f924a4a64ff908af97f2"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz.dds",
+      "native_resource": "leclerc_s2_dz_c*",
+      "role": "color"
+    },
+    {
+      "width": 256,
+      "height": 256,
+      "mip_count": 9,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "4e8f0c68c0348bf8a6fe11af1fe6b7b08f334a96199d935fb840d9dda2cbe5d2",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "0abaccee7aa362e51ac1891c32d918779e3ede1e928db2f78d53ec9bc342b3b3",
+          "decoded_rgba_sha256": "0abaccee7aa362e51ac1891c32d918779e3ede1e928db2f78d53ec9bc342b3b3"
+        },
+        {
+          "level": 1,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "fa9bda6c4f1c5b35c18841b79fe4ee5045dc8bfdac48fcd2c4951334507ae8a9",
+          "decoded_rgba_sha256": "fa9bda6c4f1c5b35c18841b79fe4ee5045dc8bfdac48fcd2c4951334507ae8a9"
+        },
+        {
+          "level": 2,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "33431371793c68e0ddf12095da5814b2ea380087c4d6e76acb354b4694dd13b1",
+          "decoded_rgba_sha256": "33431371793c68e0ddf12095da5814b2ea380087c4d6e76acb354b4694dd13b1"
+        },
+        {
+          "level": 3,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "cab0796c4cbd9efe29610e8ccc54c4d1adf1242502356afe756ae8e01cc5a947",
+          "decoded_rgba_sha256": "cab0796c4cbd9efe29610e8ccc54c4d1adf1242502356afe756ae8e01cc5a947"
+        },
+        {
+          "level": 4,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "cf094872075c1da295de0885725d37805af66e9fc58ec56da9986dc87fe1a1ba",
+          "decoded_rgba_sha256": "cf094872075c1da295de0885725d37805af66e9fc58ec56da9986dc87fe1a1ba"
+        },
+        {
+          "level": 5,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "34075c1be79b4de3cf7bc3fc784cd4025bce0b6af0b3e28cfb549027be3361af",
+          "decoded_rgba_sha256": "34075c1be79b4de3cf7bc3fc784cd4025bce0b6af0b3e28cfb549027be3361af"
+        },
+        {
+          "level": 6,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "292adb2df912ea619048a090a46c4d73103c56b184ab55beb5e536ad3e02d92a",
+          "decoded_rgba_sha256": "292adb2df912ea619048a090a46c4d73103c56b184ab55beb5e536ad3e02d92a"
+        },
+        {
+          "level": 7,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "eb44e6394e400e99f78f4fd6e1b8898b3606911c3711710a6b153d761d71fd37",
+          "decoded_rgba_sha256": "eb44e6394e400e99f78f4fd6e1b8898b3606911c3711710a6b153d761d71fd37"
+        },
+        {
+          "level": 8,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "e6d3f25d525cbcd0dfb253deae3ab69d41952f2ff25105241b2d75eb03f2d9bc",
+          "decoded_rgba_sha256": "e6d3f25d525cbcd0dfb253deae3ab69d41952f2ff25105241b2d75eb03f2d9bc"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz_ao.dds",
+      "native_resource": "leclerc_s2_dz_ao*",
+      "role": "ao"
+    },
+    {
+      "width": 1024,
+      "height": 1024,
+      "mip_count": 11,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "9a1088d4433ee0763d989fa09261557d8fa2551b3aefa9bf92c994dc17b1bb1b",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "5ac95c5d1fae8ccdeaea5d8ab940db771c877b7b4159fab2274cbe95b46e53f3",
+          "decoded_rgba_sha256": "66f0f9eb6416b45f03217968de3e898a9258dd88fe21eb189af5d13c33dc8493"
+        },
+        {
+          "level": 1,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "a381e2deb43ec5dda6f054f1358b99284ea925495c3d1ec19205aea28118b3ff",
+          "decoded_rgba_sha256": "b93d69b01082f73c0cefde7aa3667ec30d4253c596e58fe9e0ad9bb7b327a155"
+        },
+        {
+          "level": 2,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "95cd6eb9fc50f4b4c0356153380f50cfa8ef8608cfdda7f7a4af19bf43e7dd3e",
+          "decoded_rgba_sha256": "f2357955db7913d52cce3329c11226570534442af4b2a91d50429c2ea3ccb6e8"
+        },
+        {
+          "level": 3,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "ab0b12b6e37fada768b1f91847a8e0b9bc29caedb08e276120ddcfc6a49da5dd",
+          "decoded_rgba_sha256": "0dca9de5cc4418fd795d58f14386b5d18d43a79410364b42cdbf92e1b701d963"
+        },
+        {
+          "level": 4,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "497aff6c7969069c17baeb49d7177bc21882b4df01d5472777c5bbb733866fba",
+          "decoded_rgba_sha256": "53bca948d9cb024737adc73bc48a6163bc681f9cbf781cc5590b1f67253e30c0"
+        },
+        {
+          "level": 5,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "a453843f7512c55f9b8b8bbaae1dd909c7590d0c9083e69e6ffe1b8f73d60173",
+          "decoded_rgba_sha256": "d2f4cd630b47e95c94d28c175386b5febfc10fb181122ee2f23837a72eb7bea9"
+        },
+        {
+          "level": 6,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "d1341bc8667ff73b6c382c008ac1d6e4ca383950ce80091d4d87541e19bba2c4",
+          "decoded_rgba_sha256": "242f4e7177657ade1fee7a1de94369184330d2cfc80c9440e6c84101842bcc79"
+        },
+        {
+          "level": 7,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "6a498fdb8bf42c449bec798b9c09e2c454180f3d9c689ea83dc31cf3e81e8b66",
+          "decoded_rgba_sha256": "65f7b60fe41419fb4f6cc2dfb99c22efc19bafc1b3e07e721aeded6f27b26723"
+        },
+        {
+          "level": 8,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "4f1bc8816b86dc085cab7754a04d76f5ee937ba7d9739d091ef1e80cb451805a",
+          "decoded_rgba_sha256": "81860ee365f8d3650123429773e8c00fe22138dde4aba4720df600a176ca6d16"
+        },
+        {
+          "level": 9,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "dd1392cba976760acb0ef1341b8964fa19da0802356b42d3dcd45f986f345a6d",
+          "decoded_rgba_sha256": "753926708dcd4394e31888823e1d59ca076cf5e8f80141ff5bc8c7fdb1ab3614"
+        },
+        {
+          "level": 10,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "deca97ef8a601e83b93c618be9f60882181677684fb15ceb60e88e559dffbde1",
+          "decoded_rgba_sha256": "48ee00fe374f300fac695d36be6978c14512384bbe5e4402b295a85c4fb5d7f7"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_dz_n.dds",
+      "native_resource": "leclerc_s2_dz_n*",
+      "role": "normal"
+    },
+    {
+      "width": 2048,
+      "height": 1024,
+      "mip_count": 12,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          2048,
+          1024
+        ],
+        [
+          1024,
+          512
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          256,
+          128
+        ],
+        [
+          128,
+          64
+        ],
+        [
+          64,
+          32
+        ],
+        [
+          32,
+          16
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        8388608,
+        2097152,
+        524288,
+        131072,
+        32768,
+        8192,
+        2048,
+        512,
+        128,
+        32,
+        8,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "02688f82c8c3298859b32d04c972e58455524920404a1e33bc19c38ae1a9e0f5",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            2048,
+            1024
+          ],
+          "payload_bytes": 8388608,
+          "payload_sha256": "1ea6ec5c20d71487a84ef91d55652a5366cbd8463875d08b9d6e7f4cde317beb",
+          "decoded_rgba_sha256": "1ea6ec5c20d71487a84ef91d55652a5366cbd8463875d08b9d6e7f4cde317beb"
+        },
+        {
+          "level": 1,
+          "size": [
+            1024,
+            512
+          ],
+          "payload_bytes": 2097152,
+          "payload_sha256": "1f2bf4e2736ae1238ae299a0ee99c94d3329699f181d5dec79e82aa539346521",
+          "decoded_rgba_sha256": "1f2bf4e2736ae1238ae299a0ee99c94d3329699f181d5dec79e82aa539346521"
+        },
+        {
+          "level": 2,
+          "size": [
+            512,
+            256
+          ],
+          "payload_bytes": 524288,
+          "payload_sha256": "717ac5129b0479c374e5a0d71bbe3470a884783f540950fb3392dd05ab3001de",
+          "decoded_rgba_sha256": "717ac5129b0479c374e5a0d71bbe3470a884783f540950fb3392dd05ab3001de"
+        },
+        {
+          "level": 3,
+          "size": [
+            256,
+            128
+          ],
+          "payload_bytes": 131072,
+          "payload_sha256": "73efdeddebab2aac4ce5d833732ba6b9a9fcce1ea10632a32cfe4203d7964bc4",
+          "decoded_rgba_sha256": "73efdeddebab2aac4ce5d833732ba6b9a9fcce1ea10632a32cfe4203d7964bc4"
+        },
+        {
+          "level": 4,
+          "size": [
+            128,
+            64
+          ],
+          "payload_bytes": 32768,
+          "payload_sha256": "654b0cb03effed5b511037d805338772f80597667e8405c0fbe23c1a48de3622",
+          "decoded_rgba_sha256": "654b0cb03effed5b511037d805338772f80597667e8405c0fbe23c1a48de3622"
+        },
+        {
+          "level": 5,
+          "size": [
+            64,
+            32
+          ],
+          "payload_bytes": 8192,
+          "payload_sha256": "f015e302090af7c8b0d656c811567eece56f4b4c0e5c20d72bf1c6cbf54f59a6",
+          "decoded_rgba_sha256": "f015e302090af7c8b0d656c811567eece56f4b4c0e5c20d72bf1c6cbf54f59a6"
+        },
+        {
+          "level": 6,
+          "size": [
+            32,
+            16
+          ],
+          "payload_bytes": 2048,
+          "payload_sha256": "da82918f84705c556f1d3ad312e1e762666491eace0398630d4cb8faa4b2a042",
+          "decoded_rgba_sha256": "da82918f84705c556f1d3ad312e1e762666491eace0398630d4cb8faa4b2a042"
+        },
+        {
+          "level": 7,
+          "size": [
+            16,
+            8
+          ],
+          "payload_bytes": 512,
+          "payload_sha256": "722a9ff037df199137f995acc913344f255550344024b0ad2d6189d7b4806925",
+          "decoded_rgba_sha256": "722a9ff037df199137f995acc913344f255550344024b0ad2d6189d7b4806925"
+        },
+        {
+          "level": 8,
+          "size": [
+            8,
+            4
+          ],
+          "payload_bytes": 128,
+          "payload_sha256": "e79599c17002e6207a2cd75db48bdd89a9d99c1ae58d60156becb9e381aedb8c",
+          "decoded_rgba_sha256": "e79599c17002e6207a2cd75db48bdd89a9d99c1ae58d60156becb9e381aedb8c"
+        },
+        {
+          "level": 9,
+          "size": [
+            4,
+            2
+          ],
+          "payload_bytes": 32,
+          "payload_sha256": "40db92b60d75913d38fa91d90428edae1b0961033444c07fc5acbd7c7f00d189",
+          "decoded_rgba_sha256": "40db92b60d75913d38fa91d90428edae1b0961033444c07fc5acbd7c7f00d189"
+        },
+        {
+          "level": 10,
+          "size": [
+            2,
+            1
+          ],
+          "payload_bytes": 8,
+          "payload_sha256": "863d820a25426bb25c172b75ef3fc817d0f93437f80b99801e30223f0cbc7be7",
+          "decoded_rgba_sha256": "863d820a25426bb25c172b75ef3fc817d0f93437f80b99801e30223f0cbc7be7"
+        },
+        {
+          "level": 11,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "2ac9af490d9f9034d038662dfb3d007c6d632953430de9d0d477560eccb5b6ad",
+          "decoded_rgba_sha256": "2ac9af490d9f9034d038662dfb3d007c6d632953430de9d0d477560eccb5b6ad"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun.dds",
+      "native_resource": "leclerc_s2_gun_c*",
+      "role": "color"
+    },
+    {
+      "width": 256,
+      "height": 128,
+      "mip_count": 9,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          256,
+          128
+        ],
+        [
+          128,
+          64
+        ],
+        [
+          64,
+          32
+        ],
+        [
+          32,
+          16
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        131072,
+        32768,
+        8192,
+        2048,
+        512,
+        128,
+        32,
+        8,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "ccb8bf191a37649ac4fb26e73d73b0a79f42384c3b49487ef358bd83c01c3ceb",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            256,
+            128
+          ],
+          "payload_bytes": 131072,
+          "payload_sha256": "3c1c9aded49b44810f614efb91302a477042ced2a4e371c763796ab853ace3f2",
+          "decoded_rgba_sha256": "3c1c9aded49b44810f614efb91302a477042ced2a4e371c763796ab853ace3f2"
+        },
+        {
+          "level": 1,
+          "size": [
+            128,
+            64
+          ],
+          "payload_bytes": 32768,
+          "payload_sha256": "81d444dfeee08d02bae1be02306ac03d61397946d0cfdc8ca48689593fbf69b4",
+          "decoded_rgba_sha256": "81d444dfeee08d02bae1be02306ac03d61397946d0cfdc8ca48689593fbf69b4"
+        },
+        {
+          "level": 2,
+          "size": [
+            64,
+            32
+          ],
+          "payload_bytes": 8192,
+          "payload_sha256": "24654777309a9d1520754ea922c75e334c6ab3328a2d16ba2697d6667e994637",
+          "decoded_rgba_sha256": "24654777309a9d1520754ea922c75e334c6ab3328a2d16ba2697d6667e994637"
+        },
+        {
+          "level": 3,
+          "size": [
+            32,
+            16
+          ],
+          "payload_bytes": 2048,
+          "payload_sha256": "3eadc75b8c2081d00e54c8088c953913cdf170405da0023fc242c2e927f27efc",
+          "decoded_rgba_sha256": "3eadc75b8c2081d00e54c8088c953913cdf170405da0023fc242c2e927f27efc"
+        },
+        {
+          "level": 4,
+          "size": [
+            16,
+            8
+          ],
+          "payload_bytes": 512,
+          "payload_sha256": "e1915644b914b86e746eba80f74f08f512f3377be8c60f7e89862eeb8cfd59e4",
+          "decoded_rgba_sha256": "e1915644b914b86e746eba80f74f08f512f3377be8c60f7e89862eeb8cfd59e4"
+        },
+        {
+          "level": 5,
+          "size": [
+            8,
+            4
+          ],
+          "payload_bytes": 128,
+          "payload_sha256": "351bb27445566d07470c0c61a3bdba88cb573d47a147f35ab3ecc43350211c69",
+          "decoded_rgba_sha256": "351bb27445566d07470c0c61a3bdba88cb573d47a147f35ab3ecc43350211c69"
+        },
+        {
+          "level": 6,
+          "size": [
+            4,
+            2
+          ],
+          "payload_bytes": 32,
+          "payload_sha256": "0b98c56e2f186b8ace9f021e935290378ce53a85108c2c24e8b1e738e5da1671",
+          "decoded_rgba_sha256": "0b98c56e2f186b8ace9f021e935290378ce53a85108c2c24e8b1e738e5da1671"
+        },
+        {
+          "level": 7,
+          "size": [
+            2,
+            1
+          ],
+          "payload_bytes": 8,
+          "payload_sha256": "c964cfc6452ed9a123e91feaf8dbb0bde59f116b5ecddc2f8189f24496f7661f",
+          "decoded_rgba_sha256": "c964cfc6452ed9a123e91feaf8dbb0bde59f116b5ecddc2f8189f24496f7661f"
+        },
+        {
+          "level": 8,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "4f5690f24b10695b5384254fd37acc02810d844e4d881a7fbea15460a959c938",
+          "decoded_rgba_sha256": "4f5690f24b10695b5384254fd37acc02810d844e4d881a7fbea15460a959c938"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun_ao.dds",
+      "native_resource": "leclerc_s2_gun_ao*",
+      "role": "ao"
+    },
+    {
+      "width": 1024,
+      "height": 512,
+      "mip_count": 11,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          1024,
+          512
+        ],
+        [
+          512,
+          256
+        ],
+        [
+          256,
+          128
+        ],
+        [
+          128,
+          64
+        ],
+        [
+          64,
+          32
+        ],
+        [
+          32,
+          16
+        ],
+        [
+          16,
+          8
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          4,
+          2
+        ],
+        [
+          2,
+          1
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        2097152,
+        524288,
+        131072,
+        32768,
+        8192,
+        2048,
+        512,
+        128,
+        32,
+        8,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "45af14297e18de9cd6180b278272e0adf5645b44878c9108755c8a8139a8d3c3",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            1024,
+            512
+          ],
+          "payload_bytes": 2097152,
+          "payload_sha256": "287101fcc1748327d3143bf1996be780d94a6c86cd7dd6a744024bdec3546356",
+          "decoded_rgba_sha256": "38c39caf39124be4acb434e5fb06325d0570c814154eb1e4045d32500607973e"
+        },
+        {
+          "level": 1,
+          "size": [
+            512,
+            256
+          ],
+          "payload_bytes": 524288,
+          "payload_sha256": "a0c15540e55302305f658bf620021e466ce60a982dc5529816e27bc3e1353dfc",
+          "decoded_rgba_sha256": "db1a71288985f624a949623cf4327a4751e66b14eadbb3d6f3105b7ef9533047"
+        },
+        {
+          "level": 2,
+          "size": [
+            256,
+            128
+          ],
+          "payload_bytes": 131072,
+          "payload_sha256": "bcd0408e7306dc211943eba7221742136d2eaa8f21858d31bdfaa4e8e420e22c",
+          "decoded_rgba_sha256": "d2a7d8d48679e2e0403ed679ede47b977ea8673fff0a7707d220d839f48fbb26"
+        },
+        {
+          "level": 3,
+          "size": [
+            128,
+            64
+          ],
+          "payload_bytes": 32768,
+          "payload_sha256": "30670f253fda5bd80ad4f6e9a6566ecb96856cb02676076f3f4c7cfa91d85784",
+          "decoded_rgba_sha256": "f3796f506282b45df581d76291b1ff8a355e229cf36575af3b0323b837a97c0a"
+        },
+        {
+          "level": 4,
+          "size": [
+            64,
+            32
+          ],
+          "payload_bytes": 8192,
+          "payload_sha256": "f0e93c84be333cfa27ce86e70ccc8533316588c54b8eb58a27942a9e1b7b034e",
+          "decoded_rgba_sha256": "cd16387682e9c4e24426fab116c27c6b04c5c6218146ff684d1425f6e1ba85db"
+        },
+        {
+          "level": 5,
+          "size": [
+            32,
+            16
+          ],
+          "payload_bytes": 2048,
+          "payload_sha256": "6306ef8be9588a88e3d5476ff1480842dd800c4a4221ab389833fd34ea87ce9b",
+          "decoded_rgba_sha256": "7d742ee8791e27f2c522f5d8c0765fb95bc57b49d42d0248d2a70044a536fcc3"
+        },
+        {
+          "level": 6,
+          "size": [
+            16,
+            8
+          ],
+          "payload_bytes": 512,
+          "payload_sha256": "a0bd3a523bd8790d5cc558d5f5536b821275fe55e1d44499e4abff037219ce50",
+          "decoded_rgba_sha256": "e6d4a939def7e17e72abb3f46020664a92c282c12888af6be1ab3fe7d5cc1a19"
+        },
+        {
+          "level": 7,
+          "size": [
+            8,
+            4
+          ],
+          "payload_bytes": 128,
+          "payload_sha256": "cb6f16bd6fdfc475e7072daf8f19483d8172055da44db636830380e3e29f667a",
+          "decoded_rgba_sha256": "cb86942116b4a7e258320bce380109bce9d6c2867a5c70affaace6c4525eedaf"
+        },
+        {
+          "level": 8,
+          "size": [
+            4,
+            2
+          ],
+          "payload_bytes": 32,
+          "payload_sha256": "0cc500a98157ffaafaa62c12a8d0f52dae0ab025bf40f26aeac6b81aa2d6ef9d",
+          "decoded_rgba_sha256": "4fbbfef1517456d1de2a36ba4f50c0464e00c8a104209d04972c8620d7094f5a"
+        },
+        {
+          "level": 9,
+          "size": [
+            2,
+            1
+          ],
+          "payload_bytes": 8,
+          "payload_sha256": "26272f31efdb2c737c578f034ddec170e11e4b8da817f6a087fd028de440cbca",
+          "decoded_rgba_sha256": "660f3ea0ffda460d1c6e232cdd23472264b985bc42a43046383de42aad7ea7da"
+        },
+        {
+          "level": 10,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "3b5bd3c9546be2d69b9880d0c232edc00633d6b1843363d074604c28d67fc137",
+          "decoded_rgba_sha256": "f0453a91ae54f71d277d93bc53e5e86034f944cd5e9f9920d495a048416833a6"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_gun_n.dds",
+      "native_resource": "leclerc_s2_gun_n*",
+      "role": "normal"
+    },
+    {
+      "width": 4096,
+      "height": 4096,
+      "mip_count": 13,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          4096,
+          4096
+        ],
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        67108864,
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "0af1edacc3b0b0517c9189c5d2d1e5bcd5ea4aaf5659e6cc0d4acdeb8206f268",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            4096,
+            4096
+          ],
+          "payload_bytes": 67108864,
+          "payload_sha256": "29767761dc439d8bde20b49c8e4bd7136de8c33f4c73406a729684f57d124e53",
+          "decoded_rgba_sha256": "f778b9be8359abc3f69761a5562333dd175c35546cb19ac326ab13045436ab8c"
+        },
+        {
+          "level": 1,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "24e5daf75d4b7716aa24137febf00404ce7a81fb6bb2b5fcec9eb9fa278b3985",
+          "decoded_rgba_sha256": "0382cdbef98223828ff9c465724a492bbc9a51fe97151a4bc6017180006ef11e"
+        },
+        {
+          "level": 2,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "86cb8649a4f9f31c85cd6d0dce801228a397a11001ad46b0bcced56f7ed57c70",
+          "decoded_rgba_sha256": "0ed16b05e01470460eae9e680f1389f25626419c6b65b3086dceeb4dd560743e"
+        },
+        {
+          "level": 3,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "0b7843f38cadc9631b24a324d1df2e03c19a99175cfff7b26bdaf1fd5154b965",
+          "decoded_rgba_sha256": "d6334d7ecbdc8250ecd7a08cfa346ed4b1ecb41e94b3de32948c3b8691c50993"
+        },
+        {
+          "level": 4,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "31c9801b73e39b241655eac00a72dc346bf85aec8323c0e3a51400481cec39c8",
+          "decoded_rgba_sha256": "e5ba97cedecf0f690ed75bfa76352c21ebc6b847fa1a58c8761fce323cac38e0"
+        },
+        {
+          "level": 5,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "16adef8b992089e6969079ded33b8e4541e908258d5b332b7cc8676bade183cd",
+          "decoded_rgba_sha256": "f47c9199d6d2b4f72a59f4e342c27a0ac0943ae54fee3c087af98aa0160afede"
+        },
+        {
+          "level": 6,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "4ac5d7bee292ae12719eea50f37119fce24abe8354eaea4693118ba13ce4f0e0",
+          "decoded_rgba_sha256": "3ef5c5e7ab778744a713f935970e7b75dc64ae6b86dc4466a7cafae73bc7eb1b"
+        },
+        {
+          "level": 7,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "a8e6770ff49a2db26d16fa203a94e9f0c8b3047f1f6492e26f05c4edc4f14373",
+          "decoded_rgba_sha256": "829ad384cb7b9969524f15a125710960190acc4402309c8e799749572d617bea"
+        },
+        {
+          "level": 8,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "2bed891cfb6b70b3387d81e9be210a69b54038ca687a2507f7fd527c1b949261",
+          "decoded_rgba_sha256": "aaa8efc198a87cd02077ca56b437bc7399816d15a22644de3ba2e60cd345adf2"
+        },
+        {
+          "level": 9,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "0045885593990b6b8e0baaa12e9400407abefea383f8204c2e8fa286686bd8b7",
+          "decoded_rgba_sha256": "3cbfe593aa1e64fcb275cff74131af2cfaf75ff0bdb507e8c0ce01730ec8d9c1"
+        },
+        {
+          "level": 10,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "230aec67f2ed2bb0afdf9bbdcafcb628bd0a24b40b575d92f1c32a6ebf8b848e",
+          "decoded_rgba_sha256": "9f6bd1e28a1a27c01a873942ae23b6ea7dc4a66cdfd6f50c649669c77ed6bc04"
+        },
+        {
+          "level": 11,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "c179f076b5ba0fcd36f8eb976d8f9588c3208e0900c3363f019fc8fc50071339",
+          "decoded_rgba_sha256": "1ce32411558fa9f951cad2d5a5b3a68b216dca740f10cd1723e54ffbb6173624"
+        },
+        {
+          "level": 12,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "ae0055e24fce4e161d04d17a0397060466b4dd589cd9916a4255b7577da40eb0",
+          "decoded_rgba_sha256": "748b1eefb81bb9fc7db759d811eb946628ff253fd0ead2f0a73f2cd1972cb683"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret.dds",
+      "native_resource": "leclerc_s2_turret_c*",
+      "role": "color"
+    },
+    {
+      "width": 512,
+      "height": 512,
+      "mip_count": 10,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "9e4a8abd29b718a0d954f0ac1a8d8c99bacf37c3f036fd7923ce0e69781a3836",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "99e3bb0e8e82b470bb78e957dd813f813600a4e662b57fec6d4593e1c65b930c",
+          "decoded_rgba_sha256": "99e3bb0e8e82b470bb78e957dd813f813600a4e662b57fec6d4593e1c65b930c"
+        },
+        {
+          "level": 1,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "b2b7362ac0cc7ced2ec897cb341f4249a488bd167dcd030a46a3467f4701deed",
+          "decoded_rgba_sha256": "b2b7362ac0cc7ced2ec897cb341f4249a488bd167dcd030a46a3467f4701deed"
+        },
+        {
+          "level": 2,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "a6d083c698faf4b6c26e61404eb9c5ee61c08111c0f738b4e2ef7ebcd0359eed",
+          "decoded_rgba_sha256": "a6d083c698faf4b6c26e61404eb9c5ee61c08111c0f738b4e2ef7ebcd0359eed"
+        },
+        {
+          "level": 3,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "69d3c5e9eebe18e671047235c1ce73ebdd253556ea285e3c6fb8e155dae14a0d",
+          "decoded_rgba_sha256": "69d3c5e9eebe18e671047235c1ce73ebdd253556ea285e3c6fb8e155dae14a0d"
+        },
+        {
+          "level": 4,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "fd0717d110836941a302193accca2a072121dbee6cdec977b6ee795cc33696da",
+          "decoded_rgba_sha256": "fd0717d110836941a302193accca2a072121dbee6cdec977b6ee795cc33696da"
+        },
+        {
+          "level": 5,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "d70b386c7b99280c8b508f54d646076eec413913869e71b8db2da3e7bfee5b25",
+          "decoded_rgba_sha256": "d70b386c7b99280c8b508f54d646076eec413913869e71b8db2da3e7bfee5b25"
+        },
+        {
+          "level": 6,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "946df10243f57f513fe86dd3415b58bacbb9dffd13470d722720cd341fb5f56c",
+          "decoded_rgba_sha256": "946df10243f57f513fe86dd3415b58bacbb9dffd13470d722720cd341fb5f56c"
+        },
+        {
+          "level": 7,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "beb643e3ade2c9afe7f7d82e56164dbcd1166f362adecb9ab320f407316d991c",
+          "decoded_rgba_sha256": "beb643e3ade2c9afe7f7d82e56164dbcd1166f362adecb9ab320f407316d991c"
+        },
+        {
+          "level": 8,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "2aa7f48de8e400a5277e9fb7aa81d19a157e66ee024ce424470784132ab04048",
+          "decoded_rgba_sha256": "2aa7f48de8e400a5277e9fb7aa81d19a157e66ee024ce424470784132ab04048"
+        },
+        {
+          "level": 9,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "9e62497486f3208d36848d96dad5f516e570f25a6b9b42ff9a32f5435c5eb7a1",
+          "decoded_rgba_sha256": "9e62497486f3208d36848d96dad5f516e570f25a6b9b42ff9a32f5435c5eb7a1"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret_ao.dds",
+      "native_resource": "leclerc_s2_turret_ao*",
+      "role": "ao"
+    },
+    {
+      "width": 2048,
+      "height": 2048,
+      "mip_count": 12,
+      "codec": "legacy_rgba8",
+      "dxgi": null,
+      "color_space_tag": "legacy_unspecified",
+      "alpha_mode": null,
+      "channel_masks": [
+        16711680,
+        65280,
+        255,
+        4278190080
+      ],
+      "header_bytes": 128,
+      "mip_sizes": [
+        [
+          2048,
+          2048
+        ],
+        [
+          1024,
+          1024
+        ],
+        [
+          512,
+          512
+        ],
+        [
+          256,
+          256
+        ],
+        [
+          128,
+          128
+        ],
+        [
+          64,
+          64
+        ],
+        [
+          32,
+          32
+        ],
+        [
+          16,
+          16
+        ],
+        [
+          8,
+          8
+        ],
+        [
+          4,
+          4
+        ],
+        [
+          2,
+          2
+        ],
+        [
+          1,
+          1
+        ]
+      ],
+      "mip_bytes": [
+        16777216,
+        4194304,
+        1048576,
+        262144,
+        65536,
+        16384,
+        4096,
+        1024,
+        256,
+        64,
+        16,
+        4
+      ],
+      "evidence_boundary": "actual container decoded; shader semantics and delivery limits remain separate",
+      "actual_file_sha256": "b7621b486d1fe766c553c986e98a489e7959da6f8222f8e0635bc08bfaeb0c2e",
+      "mips": [
+        {
+          "level": 0,
+          "size": [
+            2048,
+            2048
+          ],
+          "payload_bytes": 16777216,
+          "payload_sha256": "30819c42b109f7fc199d9524f07c77c2c9b19917c2289595e1fc7f0327734553",
+          "decoded_rgba_sha256": "55b5c264af6b97ec584ac9d104453256a85cf36003612c926ca51eb9757cf443"
+        },
+        {
+          "level": 1,
+          "size": [
+            1024,
+            1024
+          ],
+          "payload_bytes": 4194304,
+          "payload_sha256": "ba346d3931ee42787afddf53b80f3072a3d8ab82bd08b0b420378c265ad6a550",
+          "decoded_rgba_sha256": "507562b96444b5d779c32250ef9904d24fa4607fd3afca9469ed03287f2ade86"
+        },
+        {
+          "level": 2,
+          "size": [
+            512,
+            512
+          ],
+          "payload_bytes": 1048576,
+          "payload_sha256": "ee4b2eae55b49c1e0abad7343fe84606cc26088dfcda3bf95f939bb4641cbb62",
+          "decoded_rgba_sha256": "53422660de2d295c7b7d452d14501ea740d4c84050ec78db0d7e3d52b0e255c8"
+        },
+        {
+          "level": 3,
+          "size": [
+            256,
+            256
+          ],
+          "payload_bytes": 262144,
+          "payload_sha256": "af1d7341e97a5d79ef71ceaf41e3e7feaa450ce7ca1d2c8d4c5912b86b9a55fe",
+          "decoded_rgba_sha256": "300e99b8e9682aeb8e7eb7f28858db83d56f0d4dd38adbd36ba05c0cabab0afa"
+        },
+        {
+          "level": 4,
+          "size": [
+            128,
+            128
+          ],
+          "payload_bytes": 65536,
+          "payload_sha256": "80cf642bb087dcf5afc02e0b52bf9e9cbf99acbedca8c0498f57f9212569baf0",
+          "decoded_rgba_sha256": "f599d6df4da530d42fc47d4c00e4b126f98f1bb7e92a8a12ec2d3b3d97e77044"
+        },
+        {
+          "level": 5,
+          "size": [
+            64,
+            64
+          ],
+          "payload_bytes": 16384,
+          "payload_sha256": "9ea62650fe652287eec51eea62dcef0add6202e24403173f13506a2172b32776",
+          "decoded_rgba_sha256": "9da25762feb16a2dba44b451e3d5f17a0bc355b22e2ad757db1cdf7a3512387e"
+        },
+        {
+          "level": 6,
+          "size": [
+            32,
+            32
+          ],
+          "payload_bytes": 4096,
+          "payload_sha256": "704776c9894d6c26bdc1f0b38944842ea09a1dee2a45c6e51bcdd2c8cf9d85fe",
+          "decoded_rgba_sha256": "55243a8ee69cd87ba81058de856da6022130ad5b15fb9d518b0e232df00f2925"
+        },
+        {
+          "level": 7,
+          "size": [
+            16,
+            16
+          ],
+          "payload_bytes": 1024,
+          "payload_sha256": "88f7e8fdc3536dc32dc4183e8a82cd98bda57012140900e9ecf9a1bcf1e2b51d",
+          "decoded_rgba_sha256": "6c8c7a4b33d1876980d33a21c7ff223f0957435aa28e622629d3570b51913c26"
+        },
+        {
+          "level": 8,
+          "size": [
+            8,
+            8
+          ],
+          "payload_bytes": 256,
+          "payload_sha256": "177a34c1cd44fc6510762781cf60a522ca496a24d82270bc08d14e98ecec9c5a",
+          "decoded_rgba_sha256": "e08f0b601a965e496f829ad4a22fc0b8cbc5ed1737dd251cebe2548540ad87f4"
+        },
+        {
+          "level": 9,
+          "size": [
+            4,
+            4
+          ],
+          "payload_bytes": 64,
+          "payload_sha256": "5186f5b04ff676a94e5bc51362313be843dc37d51492c9c64b5e18b10c4d7fe8",
+          "decoded_rgba_sha256": "d7d08096fa7336359393b2795a0f382985983f68eafa237e4d09d4d328ce7fc2"
+        },
+        {
+          "level": 10,
+          "size": [
+            2,
+            2
+          ],
+          "payload_bytes": 16,
+          "payload_sha256": "20368664967dfbce928dc48d4cff9722076ad86e7a2ed29b380c02500805c044",
+          "decoded_rgba_sha256": "ba5c1f93c07fb5293adc6791878c7ec393a09e56cfce3f945e08eda4cc32e73e"
+        },
+        {
+          "level": 11,
+          "size": [
+            1,
+            1
+          ],
+          "payload_bytes": 4,
+          "payload_sha256": "6452b5de474c456b7e2b72f11df2db8ba227e3ce144c6cdc8811a92313b65669",
+          "decoded_rgba_sha256": "9c5317c3b33476a80aea80ee25834c59ee8704e8f9fc8d8554e5fb66fac72ab5"
+        }
+      ],
+      "decoded": true,
+      "member": "Leclerc_AZUR_SPECTRE42/leclerc_s2_turret_n.dds",
+      "native_resource": "leclerc_s2_turret_n*",
+      "role": "normal"
+    }
+  ],
+  "historical_masked_measurements": "retained only; source masks unavailable, not remeasured",
+  "whole_vehicle_style_validation": "not_run",
+  "game_visual": "pending existing user feedback",
+  "current_delivery_budget": "not applied to historical input; validate new output separately"
+}

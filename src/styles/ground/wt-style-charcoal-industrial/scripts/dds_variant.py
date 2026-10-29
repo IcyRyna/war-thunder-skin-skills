@@ -21,9 +21,9 @@ TEXCONV_VERSION = "texconv version 2026.5.8.1"
 TEXCONV_SHA256 = "dcfdec10244e02cf5037fba089c55fb7e1326b1c8181742d77d15fa5cb5eef06"
 TEXCONV_URL = "https://github.com/microsoft/DirectXTex/releases/download/may2026/texconv.exe"
 MAX_PIXELS = 16384 * 16384
-DXGI = {"rgba8": {"color": 29, "data": 28}, "bc3": {"color": 78, "data": 77}}
+DXGI = {"rgba8": {"color": 29, "data": 28}, "bc3": {"color": 78, "data": 77}, "bc7": {"color": 99, "data": 98}}
 FORMAT_NAMES = {28: "R8G8B8A8_UNORM", 29: "R8G8B8A8_UNORM_SRGB",
-                77: "BC3_UNORM", 78: "BC3_UNORM_SRGB"}
+                77: "BC3_UNORM", 78: "BC3_UNORM_SRGB", 98: "BC7_UNORM", 99: "BC7_UNORM_SRGB"}
 
 
 def sha256(path: Path) -> str:
@@ -84,10 +84,10 @@ def decode_mips(path: Path) -> tuple[dict, list[np.ndarray]]:
         if dxgi in {28, 29}:
             image = np.frombuffer(chunk, np.uint8).reshape(height, width, 4).copy()
         else:
-            # BC3_UNORM and BC3_UNORM_SRGB have identical block bit layouts.
-            # Pillow supports 77 but not 78; relabel only this in-memory decoder
-            # wrapper. Stored DDS metadata and decoded byte values stay intact.
-            with Image.open(BytesIO(_single_mip_header(width, height, 77) + chunk)) as bitmap:
+            # sRGB changes sampling semantics, not compressed block bits.
+            # Only the in-memory decoder wrapper uses the matching linear code.
+            linear_dxgi={78:77,99:98}.get(dxgi,dxgi)
+            with Image.open(BytesIO(_single_mip_header(width, height, linear_dxgi) + chunk)) as bitmap:
                 bitmap.load()
                 image = np.asarray(bitmap.convert("RGBA")).copy()
         if image.shape != (height, width, 4):
@@ -143,4 +143,3 @@ def validate_tool(path: Path) -> dict:
     return {"release": TEXCONV_RELEASE, "version": TEXCONV_VERSION, "sha256": digest,
             "asset_url": TEXCONV_URL, "executable": str(path),
             "required_options_verified": required}
-

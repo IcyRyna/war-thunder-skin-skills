@@ -1,0 +1,25 @@
+{
+  "blender": "4.5.14 LTS",
+  "renderer": "Cycles",
+  "samples": 128,
+  "denoising": false,
+  "maps": [
+    {
+      "file": "color.png",
+      "sha256": "8f9063290e7e1c80eba437089dfef1278869abf6e6debe484a499a97a2ef8b31"
+    },
+    {
+      "file": "coverage.png",
+      "sha256": "9b1175cfaa9457c2a1ec562f6e910c44060bfe116a6e4b1d0187616aeef36414"
+    },
+    {
+      "file": "normal-rgb.png",
+      "sha256": "68679bc19084c69aa23479bc52b904a02f64b55b9073b2a72249dbfb404a19b9"
+    },
+    {
+      "file": "packed-n.png",
+      "sha256": "e0a0960f13a86d806c2723a463d9a383bb8a69fe4d6d55ad76633ba46431b1e4"
+    }
+  ],
+  "purpose": "standalone material under neutral grazing light; no vehicle approval inferred"
+}

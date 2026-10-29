@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "identity_source": "VERSION.json",
+  "selection": "explicit carrier geometry; retain user-selected artwork pixels when required",
+  "layouts": [
+    {
+      "id": "wide_identity",
+      "use": "宽首下/炮塔实板",
+      "structure": "本车主字标＋可选副行，局部图标，短条可选",
+      "protect": "拖具、备用履带、板缝；不附无依据功能词"
+    },
+    {
+      "id": "equipment_plaque",
+      "use": "已核实装甲或设备承载板",
+      "structure": "技术词或无字主图、蜂窝徽记、警示三角、对齐黄青刻度",
+      "protect": "把手、螺栓与两侧方向；按实际字形行距重排"
+    },
+    {
+      "id": "roof_warning",
+      "use": "核实功能的顶部盖板",
+      "structure": "可读文字＋两排/两侧斜条，整组随板形适配",
+      "protect": "先规划占地再排防滑；检查常用俯视可读性"
+    },
+    {
+      "id": "compact_micro_mark",
+      "use": "窄护罩/小实板",
+      "structure": "短黄青刻度或简洁无字图形",
+      "protect": "空间不足就减少元素，不压糊完整铭牌"
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 """Serialize complete owned Composa batches across independent vehicle tasks."""
 from pathlib import Path
-import argparse,contextlib,os,subprocess,sys,tempfile,time
+import argparse,contextlib,math,os,subprocess,sys,tempfile,time
 
 @contextlib.contextmanager
 def editor_lock(timeout=180):
@@ -33,10 +33,20 @@ def editor_lock(timeout=180):
     fcntl.flock(stream.fileno(),fcntl.LOCK_UN)
   stream.close()
 
+def build_command(args):
+ if not math.isfinite(args.lock_timeout) or args.lock_timeout<=0 or not math.isfinite(args.timeout) or not 1<=args.timeout<=60:
+  raise ValueError('Lock timeout must be finite/positive; request timeout must be 1..60 seconds')
+ command=[sys.executable,'-B','-X','utf8',str(Path(__file__).with_name('composa_mcp.py')),'--out',str(args.out),'--timeout',str(args.timeout)]
+ if args.calls:command+=['--calls',str(args.calls)]
+ if args.exe:command+=['--exe',str(args.exe)]
+ if args.keep_open:command.append('--keep-open')
+ return command
+
 def main():
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--calls',type=Path,required=True);p.add_argument('--out',type=Path,required=True);p.add_argument('--lock-timeout',type=float,default=180);p.add_argument('--timeout',type=float,default=60);a=p.parse_args()
- if a.lock_timeout<=0 or a.timeout<=0:raise ValueError('Timeouts must be positive')
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--calls',type=Path);p.add_argument('--out',type=Path,required=True);p.add_argument('--lock-timeout',type=float,default=180);p.add_argument('--timeout',type=float,default=60)
+ p.add_argument('--exe',type=Path);p.add_argument('--keep-open',action='store_true');a=p.parse_args()
+ command=build_command(a)
  with editor_lock(a.lock_timeout):
-  result=subprocess.run([sys.executable,'-B',str(Path(__file__).with_name('composa_mcp.py')),'--calls',str(a.calls),'--out',str(a.out),'--timeout',str(a.timeout)],check=False)
+  result=subprocess.run(command,check=False)
  raise SystemExit(result.returncode)
 if __name__=='__main__':main()

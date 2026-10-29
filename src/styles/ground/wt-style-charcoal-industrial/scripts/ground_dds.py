@@ -31,6 +31,7 @@ from dds_variant import (DXGI, FORMAT_NAMES, MAX_PIXELS, TEXCONV_SHA256, _run,
                          decode_mips, mip_sizes, sha256, validate_tool,
                          write_rgba8_mips)
 from texture_semantics import resize_texture, validate_alpha_semantics
+from package_budget import require_budget
 
 
 DEFAULT_COUNTS = {"color": 4, "normal": 4, "ao": 3}
@@ -253,7 +254,7 @@ def _input_hashes(source: Path) -> dict[str, str]:
 
 
 def convert(input_directory: Path, manifest_path: Path, profile_path: Path, config_path: Path,
-            output: Path, output_format: str = "rgba8") -> dict:
+            output: Path, output_format: str = "bc3") -> dict:
     source = input_directory.resolve(strict=True)
     declared_output = output.absolute()
     if os.path.lexists(declared_output):
@@ -264,7 +265,7 @@ def convert(input_directory: Path, manifest_path: Path, profile_path: Path, conf
     if not source.is_dir():
         raise ValueError("--input must be a skin directory")
     if output_format not in DXGI:
-        raise ValueError("DDS format must be rgba8 or bc3")
+        raise ValueError("DDS format must be rgba8, bc3 or bc7")
     if os.path.lexists(output) or output == source or output.is_relative_to(source) or source.is_relative_to(output):
         raise ValueError("--out must be a fresh directory outside the input skin directory")
     manifest, profile, config = (read_json(p) for p in (manifest_path, profile_path, config_path))
@@ -311,6 +312,8 @@ def convert(input_directory: Path, manifest_path: Path, profile_path: Path, conf
                                "-o", str(destination.parent)]
                     if output_format == "bc3" and semantic == "data":
                         command.extend(["-bc", "u"])
+                    if output_format == "bc7" and item["alpha_semantics"] == "fixed_rgb":
+                        command.extend(["-aw", "1000"])
                     command.append(str(baseline))
                     invocation = _run(command)
                     if not destination.is_file():
@@ -354,15 +357,18 @@ def convert(input_directory: Path, manifest_path: Path, profile_path: Path, conf
                 raise ValueError("Input/configuration changed during conversion")
             if sha256(texconv) != tool["sha256"]:
                 raise ValueError("texconv changed during conversion")
-            with zipfile.ZipFile(transaction.stage(archive), "w", zipfile.ZIP_DEFLATED) as zipped:
+            with zipfile.ZipFile(transaction.stage(archive), "w", zipfile.ZIP_DEFLATED, compresslevel=9) as zipped:
                 for relative in sorted(package_files):
                     path = package / relative
                     shutil.copyfile(path, transaction.stage(output / "skin" / relative))
                     zipped.write(path, (Path("skin") / relative).as_posix())
+            budget = require_budget(transaction.stage(archive))
+            budget["archive"] = str(archive)
             report = {"schema_version": 1, "created_utc": datetime.now(timezone.utc).isoformat(),
                 "status": "complete_offline", "input": str(source), "output": str(output),
                 "zip": str(archive), "mips_zip": str(mips_archive), "report": str(report_path),
-                "format": output_format, "experimental_compression": output_format == "bc3",
+                "format": output_format, "experimental_compression": output_format != "rgba8",
+                "package_budget": budget,
                 "tool": tool, "source_files_unchanged": True, "textures": records, "mappings": mappings,
                 "profile_id": profile.get("id", profile.get("profile_id")),
                 "texture_counts": dict(Counter(item["role"] for item in textures)),
@@ -375,7 +381,7 @@ def convert(input_directory: Path, manifest_path: Path, profile_path: Path, conf
                     "packed_data": "independent linear numeric channels, no normal reconstruction",
                     "scalar_data": "independent linear numeric channels, no gamma conversion"},
                 "limitations": ["Runtime game shader/mip selection is not verified by offline conversion.",
-                    "BC3 is a lossy experimental option; RGBA8 is the default exact pixel baseline.",
+                    "BC3 is the default lossy delivery candidate and still requires material/alpha/game review; RGBA8 is an explicit exact pixel baseline.",
                     "Packed normal channels are numeric data; mip filtering does not normalize vectors."]}
             staged_report.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
         transaction.commit()
@@ -389,7 +395,7 @@ def main() -> int:
     parser.add_argument("--profile", type=Path, required=True)
     parser.add_argument("--config", type=Path, required=True)
     parser.add_argument("--out", type=Path, required=True)
-    parser.add_argument("--format", choices=["rgba8", "bc3"], default="rgba8")
+    parser.add_argument("--format", choices=["rgba8", "bc3", "bc7"], default="bc3")
     args = parser.parse_args()
     try:
         report = convert(args.input_directory, args.manifest, args.profile, args.config, args.out, args.format)

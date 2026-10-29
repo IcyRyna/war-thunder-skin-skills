@@ -1,0 +1,27 @@
+{
+  "source_sha256": "a55c52967c01721af97a52e03916a50a6e168ed28ebb16f0d346295be93b8260",
+  "current_sha256": "3be3bae0d5243d72adeaf110dd12df15ebbcb0c2343c5a4e4ee439cec096e579",
+  "native_crop_box": [
+    228,
+    394,
+    296,
+    462
+  ],
+  "mapping": "same_normalized_uv_texel_centers",
+  "native_size": [
+    2048,
+    2048
+  ],
+  "source_model_sha256": "e234a2577bd2a2e1a1a3bcb7b7fb2c1f2623a745227ffc1731a98388612952be",
+  "source_face_ids": [
+    63486,
+    63503
+  ],
+  "scope": "197 visually selected interior texels; regression evidence, not a reusable decal or complete component mask",
+  "repair": {
+    "canonical_sha256": "f7f8cf0cd7e463d0aceeae08d7af6138401a702273021e9943e49e34c7524c07",
+    "dds_sha256": "1143a2032471be057e632c61857107aed9d86206e9c2749ef64a6fb64b9d4cb1",
+    "normal_sha256": "8b42370f06a0aca37ee9b470e4a47ac6bcece01826e9dcb3d25de6022849de0d",
+    "scope": "Actual restored RGB and native packed N on same 197 interior texels; alpha remains runtime coverage, not copied stock mask"
+  }
+}

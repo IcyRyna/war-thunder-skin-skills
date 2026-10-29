@@ -1,3 +1,5 @@
+> 当前候选：新制作先读[部位默认](part-layout-defaults.md)与[候选流程](candidate-workflow.md)，统一规则由style-policy.json提供；以下保留旧工具与案例说明，旧schema 2仅用于历史复刻。
+
 > 0.1.5补充：实际制作必须用[PS/Composa](required-editor-and-blender.md)，Blender可用即调用；交付核对[命名](naming-contract.md)，获准GitHub上传时完成[涂装简介](github-publication.md)。本条不要求日常新增整车渲染或七视图。
 
 # 工具整合及仍需改进的边界

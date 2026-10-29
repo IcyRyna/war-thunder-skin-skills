@@ -1,0 +1,61 @@
+{
+  "state": "checked_local",
+  "method": "AI concept and extraction followed by exact SVG geometry and independent light/dark alpha inspection",
+  "assets": [
+    {
+      "id": "hex-trace-mother",
+      "file": "assets/production/hex-trace-mother.png",
+      "sha256": "04b52de7f0a4bfbea908760d9baeaeed827c0e15827de759ffd3719ea2ddb462",
+      "canvas": [
+        2304,
+        700
+      ],
+      "true_transparent_pixels": 1371783,
+      "flat_graphic": true,
+      "source_surface_content": false
+    },
+    {
+      "id": "roof-service-mother",
+      "file": "assets/production/roof-service-mother.png",
+      "sha256": "b6cc8fe8b9698ceed1c5e5a9f3b1523014df93355c5ecad27c0aa7916ef938a6",
+      "canvas": [
+        1000,
+        1000
+      ],
+      "true_transparent_pixels": 934905,
+      "flat_graphic": true,
+      "source_surface_content": false
+    },
+    {
+      "id": "optic-id-mother",
+      "file": "assets/production/optic-id-mother.png",
+      "sha256": "4daf9d586e9029ee097bdd9db38c062056987a3d177e4131fc4faada8dc64cbb",
+      "canvas": [
+        1000,
+        550
+      ],
+      "true_transparent_pixels": 482425,
+      "flat_graphic": true,
+      "source_surface_content": false
+    },
+    {
+      "id": "color-ticks-mother",
+      "file": "assets/production/color-ticks-mother.png",
+      "sha256": "246696210ac20d7a6e6b6f6b357b6a89da30aaf6f62e9c4f4501b746e93d0514",
+      "canvas": [
+        2304,
+        700
+      ],
+      "true_transparent_pixels": 1598802,
+      "flat_graphic": true,
+      "source_surface_content": false
+    }
+  ],
+  "hex_geometry": {
+    "shared_primitive": true,
+    "corners": 6,
+    "internal_angle_degrees": 120,
+    "width_height_ratio": "2:sqrt(3)"
+  },
+  "visual_scope": "style vocabulary; target placement needs its own review"
+}
