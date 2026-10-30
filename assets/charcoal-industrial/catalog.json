@@ -1,7 +1,7 @@
 {
   "schema_version": 3,
   "asset_pack_id": "wt-charcoal-industrial-assets",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "asset_path_base": "catalog_directory",
   "evidence_path_base": "catalog_directory",
   "selection_requires": [
@@ -1295,6 +1295,881 @@
         "ai_target_adaptation_allowed": true,
         "adapted_output": "new target_authored record after actual content and target checks"
       }
+    },
+    {
+      "id": "azur-v29-roof-chevron-blank",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/roof-chevron-blank.png",
+      "sha256": "6378aa8e96ae08633cf7cd0d13ac22cacd8fdd8c7a0f8201251ebde2ec356861",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        512,
+        1024
+      ],
+      "critical_features": {
+        "line_width_px": 42.103
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "以42度重新排布每列八条镜像斜条，条宽等于条距，保留120px无字中缝。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 0,
+      "target_adaptation": {
+        "role_id": "D04"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/roof-chevron-blank.svg",
+      "svg_sha256": "2d2f4004e3508201c3a62cc4edc7c23c51e6941dc89473e82bed09345e3a1b83",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            49,
+            42,
+            222
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "6378aa8e96ae08633cf7cd0d13ac22cacd8fdd8c7a0f8201251ebde2ec356861",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-roof-chevron-landscape-blank",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/roof-chevron-landscape-blank.png",
+      "sha256": "0d059730738b1b0a6371c25b67de9883ad5312c34531b32ce35e5143dc377ce0",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1024,
+        512
+      ],
+      "critical_features": {
+        "line_width_px": 36.132
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "独立以42度绘制上下各八条镜像斜条，两端收齐，保留120px横缝。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 0,
+      "target_adaptation": {
+        "role_id": "D04"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/roof-chevron-landscape-blank.svg",
+      "svg_sha256": "f9fe52226503efc97765ae7bc68a47bdfb1803e3518a97be9d6e6723a77f3b4c",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            988,
+            86,
+            1024,
+            235
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "0d059730738b1b0a6371c25b67de9883ad5312c34531b32ce35e5143dc377ce0",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-rear-stripe-plate",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/rear-stripe-plate.png",
+      "sha256": "00eeb9be11dd57434a80306ad5686e750480244dd7613822dd1dcb4e640901a6",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        256,
+        512
+      ],
+      "critical_features": {
+        "line_width_px": 16.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "重绘四条45度车尾琥珀斜条和上下16px橙色端条。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 0,
+      "target_adaptation": {
+        "role_id": "D06"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/rear-stripe-plate.svg",
+      "svg_sha256": "8cb1bb232b86401ea06a63fb26764301a6c7407e3213fb8c4834a547d2f123fa",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            93,
+            16,
+            158
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              211,
+              148,
+              39
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "00eeb9be11dd57434a80306ad5686e750480244dd7613822dd1dcb4e640901a6",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-identity-hex-flower",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/identity-hex-flower.png",
+      "sha256": "4805c52f1c4c732ecbae6dca8431f2e00e8725e8cb0c0093ac2fa41d8c59cb60",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        420,
+        260
+      ],
+      "critical_features": {
+        "line_width_px": 10.161
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "重绘七枚平顶正六边形、冷白边框及两端透明网点。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 71675,
+      "target_adaptation": {
+        "role_id": "D01"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/identity-hex-flower.svg",
+      "svg_sha256": "73f621f5633b84d57fc379701601cd4890cb893992fd0603ec311551dbd5eb23",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            73,
+            91,
+            118,
+            101
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "4805c52f1c4c732ecbae6dca8431f2e00e8725e8cb0c0093ac2fa41d8c59cb60",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-micro-tick-column",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/micro-tick-column.png",
+      "sha256": "f7449d4d83793fac733a8c5c856953d1c581db454defad9c05baa536e90dce46",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        40,
+        260
+      ],
+      "critical_features": {
+        "line_width_px": 10.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "按实测青色及琥珀色生成四青二琥珀微色标。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 7784,
+      "target_adaptation": {
+        "role_id": "D01"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/micro-tick-column.svg",
+      "svg_sha256": "0cb82f6b266ee9921ee81a2e9fbda2202b08f704e6b4c123d825b9032e5f9633",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            72,
+            40,
+            82
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "f7449d4d83793fac733a8c5c856953d1c581db454defad9c05baa536e90dce46",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-warning-triangle",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/warning-triangle.png",
+      "sha256": "a20571579c46236d49e15f881061b2dbcd2e71afd5387f77299adaa384162737",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        120,
+        104
+      ],
+      "critical_features": {
+        "line_width_px": 12.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "生成等边橙色警告三角形及几何深色感叹号。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 5803,
+      "target_adaptation": {
+        "role_id": "D01"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/warning-triangle.svg",
+      "svg_sha256": "70829f33145c92f7357bdb938ef842834212a935db83c2e18eb7e1d35a0254c2",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            54,
+            0,
+            66,
+            35
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "a20571579c46236d49e15f881061b2dbcd2e71afd5387f77299adaa384162737",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-identity-plaque-unlabelled",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/identity-plaque-unlabelled.png",
+      "sha256": "d3d6d8b1012f7fd16a4ec7fb34928a2603f6d7c666ca9c4205f29988d84ce8b2",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1108,
+        300
+      ],
+      "critical_features": {
+        "line_width_px": 10.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "组合透明空白文字区、48px警告图标、对称微色标及六边花。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 287987,
+      "target_adaptation": {
+        "role_id": "D01"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/identity-plaque-unlabelled.svg",
+      "svg_sha256": "367a1db16c50d565009da0bcc94b635cd6c63f6c260c76b04333a8caa5ccf5c9",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            479,
+            8,
+            489,
+            49
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "d3d6d8b1012f7fd16a4ec7fb34928a2603f6d7c666ca9c4205f29988d84ce8b2",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-front-chevrons",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/front-chevrons.png",
+      "sha256": "5a5aa2a3ff3f538fb9ce6ebff6e5938ca7d2e283b190dc319d3ab9a9f7996b3a",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        900,
+        120
+      ],
+      "critical_features": {
+        "line_width_px": 18.164
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "生成左右均向右的几何双箭头，中部透明预留车名。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 96220,
+      "target_adaptation": {
+        "role_id": "D03"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/front-chevrons.svg",
+      "svg_sha256": "c589a80f71178872eb1bf0fc7bbb704b3e2c287903841c51e1f701a07ba806bc",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            38,
+            51,
+            115,
+            69
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "5a5aa2a3ff3f538fb9ce6ebff6e5938ca7d2e283b190dc319d3ab9a9f7996b3a",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-panel-notch-mark",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/panel-notch-mark.png",
+      "sha256": "58acb25d4bb03efabb620211d67919b4450c8bb2008f651e098e031f9ac5cab4",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        80,
+        48
+      ],
+      "critical_features": {
+        "line_width_px": 30.885
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "生成浅灰平顶、底部中央V形缺口标签。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 179,
+      "target_adaptation": {
+        "role_id": "D05"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/panel-notch-mark.svg",
+      "svg_sha256": "8cb806214e6cdfba281bb0a23161f8893eff7132a9fed08666972757c105a143",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            0,
+            80,
+            31
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "58acb25d4bb03efabb620211d67919b4450c8bb2008f651e098e031f9ac5cab4",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-ruler-ticks",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/ruler-ticks.png",
+      "sha256": "3d33249fcc82bee53475db0e0b8bc4461800bdb251a2184da1ab7d9d1976862c",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        320,
+        80
+      ],
+      "critical_features": {
+        "line_width_px": 10.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "生成七条10px宽等距刻度，首条延长至70px。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 20952,
+      "target_adaptation": {
+        "role_id": "D05"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "svg_file": "azur-v29-children/ruler-ticks.svg",
+      "svg_sha256": "d5e42f22d54b50e3de37cc77a38d30e7ec7f07ff754d3aa43a69a58502cf0f9f",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            5,
+            0,
+            15,
+            40
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "3d33249fcc82bee53475db0e0b8bc4461800bdb251a2184da1ab7d9d1976862c",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-pixel-band-tile",
+      "kind": "tileable_pattern",
+      "file": "azur-v29-children/pixel-band-tile.png",
+      "sha256": "2a03a57a9af73ed1b164106f70dec31e92978cce250737d7328c3379a49e26b4",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1040,
+        1040
+      ],
+      "critical_features": {
+        "line_width_px": 65.0
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "以4242种子生成65px五灰阶方块周期平铺。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 0,
+      "target_adaptation": {
+        "role_id": "pixel_field"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "tileable": true,
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            845,
+            195,
+            910,
+            456
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              39,
+              39,
+              39
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "2a03a57a9af73ed1b164106f70dec31e92978cce250737d7328c3379a49e26b4",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-pixel-dissolve-cluster",
+      "kind": "tileable_pattern",
+      "file": "azur-v29-children/pixel-dissolve-cluster.png",
+      "sha256": "292d968ec7cd42b8ffe3ac0c7df5dc245d78f37026f9d577d7bde6c6ee6601ed",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1040,
+        1040
+      ],
+      "critical_features": {
+        "line_width_px": 64.991
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "以4243种子生成左下聚集、900px半径衰减的透明消散簇。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 803875,
+      "target_adaptation": {
+        "role_id": "pixel_field"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "tileable": false,
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            130,
+            65,
+            391
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "feature_region_source_sha256": "292d968ec7cd42b8ffe3ac0c7df5dc245d78f37026f9d577d7bde6c6ee6601ed",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-skirt-honey-tile",
+      "kind": "tileable_pattern",
+      "file": "azur-v29-children/skirt-honey-tile.png",
+      "sha256": "911b9c471e118ddaff9973219a9c72c72e1bcd781050d66233d814847d53fe6f",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        1008,
+        1164
+      ],
+      "critical_features": {
+        "line_width_px": 7.812
+      },
+      "contains_text": false,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "以4244种子和环绕最小距离采样生成七枚均匀散布亮格，格心距至少四步。",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 0,
+      "target_adaptation": {
+        "role_id": "honey_band"
+      },
+      "allowed_layer_roles": [
+        "honeycomb"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "tileable": true,
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            611,
+            0,
+            619,
+            33
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "feature_region_source_sha256": "911b9c471e118ddaff9973219a9c72c72e1bcd781050d66233d814847d53fe6f",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
+    },
+    {
+      "id": "azur-v29-warning-word-blowout",
+      "kind": "transparent_element",
+      "file": "azur-v29-children/warning-word-blowout.png",
+      "sha256": "2bded5200808933326706de32a6f73113cfaa5e9803b3f7a730a5d066e01c458",
+      "origin_class": "target_authored",
+      "source_surface_content": false,
+      "lighting_content": "flat_graphic",
+      "trial_eligible": true,
+      "allowed_modes": [
+        "style_transfer"
+      ],
+      "native_detail_size": [
+        450,
+        91
+      ],
+      "critical_features": {
+        "line_width_px": 11.0,
+        "text_cap_height_px": 62
+      },
+      "contains_text": true,
+      "parent": "azur-v29-runtime-measurement",
+      "change": "stored upright; rotate 90° at placement for the vertical chevron gap",
+      "engineering_state": "checked_local",
+      "user_review": "pending",
+      "alpha_zero_pixels": 26256,
+      "target_adaptation": {
+        "role_id": "D04"
+      },
+      "allowed_layer_roles": [
+        "decal"
+      ],
+      "reuse_and_adaptation": {
+        "direct_style_transfer_candidate": true,
+        "ai_target_adaptation_allowed": true,
+        "adapted_output": "new target_authored record after actual content and target checks"
+      },
+      "known_text": "BLOW-OUT",
+      "svg_file": "azur-v29-children/warning-word-blowout.svg",
+      "svg_sha256": "e6d1d3c1b8a88baa243be7ac40b7cab7c0bb975fb8f6d7125e58883964ca3ff2",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            70,
+            0,
+            81,
+            45
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            118,
+            14,
+            162,
+            76
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "feature_region_source_sha256": "2bded5200808933326706de32a6f73113cfaa5e9803b3f7a730a5d066e01c458",
+      "graphic_validation": {
+        "state": "checked_local",
+        "evidence": {
+          "file": "azur-v29-children/quality.json",
+          "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+        }
+      }
     }
   ],
   "selection_policy": "Use suitable assets directly or derive a vehicle-specific variant; functional text and materials require the actual carrier.",
@@ -1326,6 +2201,6 @@
     "native_skin_details_allowed": true,
     "native_skin_route": "retain target-native structure/materials; qualify extracted marking layers from actual target; no full-atlas transplant"
   },
-  "style_ready_asset_count": 18,
+  "style_ready_asset_count": 32,
   "research_assets_bundled": false
 }

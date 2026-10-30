@@ -2,13 +2,13 @@
   "schema_version": 1,
   "asset_pack_id": "wt-charcoal-industrial-assets",
   "skill_id": "wt-style-charcoal-industrial",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "compatible_skill_versions": [
-    "0.1.6"
+    "0.2.0"
   ],
   "catalog": {
     "file": "catalog.json",
-    "sha256": "7d2aabc1951f5c49211f6e049ca44aacc1f96e2af427c1c4ee2dcf2ccef206f2"
+    "sha256": "aae4897b0e6940a9e79d7c12aae5d93638116f371827c254cc4387bf5d07e110"
   },
   "files": [
     {
@@ -27,9 +27,139 @@
       "sha256": "c8cdfffbd1fb1d2c5b635e7ab768f289d767ccafc430095389614922abb1dc96"
     },
     {
+      "file": "azur-v29-children/front-chevrons.png",
+      "bytes": 2116,
+      "sha256": "5a5aa2a3ff3f538fb9ce6ebff6e5938ca7d2e283b190dc319d3ab9a9f7996b3a"
+    },
+    {
+      "file": "azur-v29-children/front-chevrons.svg",
+      "bytes": 523,
+      "sha256": "c589a80f71178872eb1bf0fc7bbb704b3e2c287903841c51e1f701a07ba806bc"
+    },
+    {
+      "file": "azur-v29-children/identity-hex-flower.png",
+      "bytes": 17785,
+      "sha256": "4805c52f1c4c732ecbae6dca8431f2e00e8725e8cb0c0093ac2fa41d8c59cb60"
+    },
+    {
+      "file": "azur-v29-children/identity-hex-flower.svg",
+      "bytes": 7817,
+      "sha256": "73f621f5633b84d57fc379701601cd4890cb893992fd0603ec311551dbd5eb23"
+    },
+    {
+      "file": "azur-v29-children/identity-plaque-unlabelled.png",
+      "bytes": 25763,
+      "sha256": "d3d6d8b1012f7fd16a4ec7fb34928a2603f6d7c666ca9c4205f29988d84ce8b2"
+    },
+    {
+      "file": "azur-v29-children/identity-plaque-unlabelled.svg",
+      "bytes": 8934,
+      "sha256": "367a1db16c50d565009da0bcc94b635cd6c63f6c260c76b04333a8caa5ccf5c9"
+    },
+    {
+      "file": "azur-v29-children/micro-tick-column.png",
+      "bytes": 666,
+      "sha256": "f7449d4d83793fac733a8c5c856953d1c581db454defad9c05baa536e90dce46"
+    },
+    {
+      "file": "azur-v29-children/micro-tick-column.svg",
+      "bytes": 507,
+      "sha256": "0cb82f6b266ee9921ee81a2e9fbda2202b08f704e6b4c123d825b9032e5f9633"
+    },
+    {
+      "file": "azur-v29-children/panel-notch-mark.png",
+      "bytes": 776,
+      "sha256": "58acb25d4bb03efabb620211d67919b4450c8bb2008f651e098e031f9ac5cab4"
+    },
+    {
+      "file": "azur-v29-children/panel-notch-mark.svg",
+      "bytes": 176,
+      "sha256": "8cb806214e6cdfba281bb0a23161f8893eff7132a9fed08666972757c105a143"
+    },
+    {
+      "file": "azur-v29-children/pixel-band-tile.png",
+      "bytes": 8656,
+      "sha256": "2a03a57a9af73ed1b164106f70dec31e92978cce250737d7328c3379a49e26b4"
+    },
+    {
+      "file": "azur-v29-children/pixel-dissolve-cluster.png",
+      "bytes": 11299,
+      "sha256": "292d968ec7cd42b8ffe3ac0c7df5dc245d78f37026f9d577d7bde6c6ee6601ed"
+    },
+    {
+      "file": "azur-v29-children/quality.json",
+      "bytes": 72635,
+      "sha256": "a9a1d7dc50f9bb72370cad61aba8cfd66b3c535cffe40c6c1aad27f35d0c04e5"
+    },
+    {
+      "file": "azur-v29-children/rear-stripe-plate.png",
+      "bytes": 3890,
+      "sha256": "00eeb9be11dd57434a80306ad5686e750480244dd7613822dd1dcb4e640901a6"
+    },
+    {
+      "file": "azur-v29-children/rear-stripe-plate.svg",
+      "bytes": 590,
+      "sha256": "8cb1bb232b86401ea06a63fb26764301a6c7407e3213fb8c4834a547d2f123fa"
+    },
+    {
+      "file": "azur-v29-children/roof-chevron-blank.png",
+      "bytes": 38215,
+      "sha256": "6378aa8e96ae08633cf7cd0d13ac22cacd8fdd8c7a0f8201251ebde2ec356861"
+    },
+    {
+      "file": "azur-v29-children/roof-chevron-blank.svg",
+      "bytes": 1759,
+      "sha256": "2d2f4004e3508201c3a62cc4edc7c23c51e6941dc89473e82bed09345e3a1b83"
+    },
+    {
+      "file": "azur-v29-children/roof-chevron-landscape-blank.png",
+      "bytes": 36380,
+      "sha256": "0d059730738b1b0a6371c25b67de9883ad5312c34531b32ce35e5143dc377ce0"
+    },
+    {
+      "file": "azur-v29-children/roof-chevron-landscape-blank.svg",
+      "bytes": 1767,
+      "sha256": "f9fe52226503efc97765ae7bc68a47bdfb1803e3518a97be9d6e6723a77f3b4c"
+    },
+    {
+      "file": "azur-v29-children/ruler-ticks.png",
+      "bytes": 773,
+      "sha256": "3d33249fcc82bee53475db0e0b8bc4461800bdb251a2184da1ab7d9d1976862c"
+    },
+    {
+      "file": "azur-v29-children/ruler-ticks.svg",
+      "bytes": 582,
+      "sha256": "d5e42f22d54b50e3de37cc77a38d30e7ec7f07ff754d3aa43a69a58502cf0f9f"
+    },
+    {
+      "file": "azur-v29-children/skirt-honey-tile.png",
+      "bytes": 133802,
+      "sha256": "911b9c471e118ddaff9973219a9c72c72e1bcd781050d66233d814847d53fe6f"
+    },
+    {
+      "file": "azur-v29-children/warning-triangle.png",
+      "bytes": 2528,
+      "sha256": "a20571579c46236d49e15f881061b2dbcd2e71afd5387f77299adaa384162737"
+    },
+    {
+      "file": "azur-v29-children/warning-triangle.svg",
+      "bytes": 309,
+      "sha256": "70829f33145c92f7357bdb938ef842834212a935db83c2e18eb7e1d35a0254c2"
+    },
+    {
+      "file": "azur-v29-children/warning-word-blowout.png",
+      "bytes": 15662,
+      "sha256": "2bded5200808933326706de32a6f73113cfaa5e9803b3f7a730a5d066e01c458"
+    },
+    {
+      "file": "azur-v29-children/warning-word-blowout.svg",
+      "bytes": 260,
+      "sha256": "e6d1d3c1b8a88baa243be7ac40b7cab7c0bb975fb8f6d7125e58883964ca3ff2"
+    },
+    {
       "file": "catalog.json",
-      "bytes": 46733,
-      "sha256": "7d2aabc1951f5c49211f6e049ca44aacc1f96e2af427c1c4ee2dcf2ccef206f2"
+      "bytes": 76356,
+      "sha256": "aae4897b0e6940a9e79d7c12aae5d93638116f371827c254cc4387bf5d07e110"
     },
     {
       "file": "hd-antislip/blender-check.json",
@@ -233,13 +363,13 @@
     },
     {
       "file": "references/decal-adaptation.json",
-      "bytes": 2601,
-      "sha256": "4191ddf66ffaa0fd16623f07c3ff48d4e5a31cdaeb5bcaa22b698e52d5e89dac"
+      "bytes": 2605,
+      "sha256": "b79cfa8bb1693edf142215b7523a0e354845d18052643e79f33672a03ffe98e8"
     },
     {
       "file": "references/hd-antislip-material.md",
       "bytes": 1250,
-      "sha256": "e4eacb36ad13ac975d154ec51c0742e23e4d27c2e73e0579c75afce5cca45b6a"
+      "sha256": "1ebbedf2c024f2bea8be436ca2e79387b10bbda3a581bbf69c8126daa40c14d5"
     },
     {
       "file": "references/production-assets.json",
@@ -273,8 +403,8 @@
     },
     {
       "file": "使用说明.md",
-      "bytes": 1252,
-      "sha256": "63d29dc678e6c6642aa49e956b5633939f58a2e6de3f52b919e7a5a4f05019d0"
+      "bytes": 2157,
+      "sha256": "b38bb96bd557f7ad966e8381924d14edcf2dcd080fe11fcc713814f3a8402376"
     }
   ],
   "image_transform": "none; all production media bytes unchanged from the reviewed source",

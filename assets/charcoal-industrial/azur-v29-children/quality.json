@@ -1,0 +1,3595 @@
+[
+  {
+    "file": "roof-chevron-blank.png",
+    "size": [
+      512,
+      1024
+    ],
+    "sha256": "6378aa8e96ae08633cf7cd0d13ac22cacd8fdd8c7a0f8201251ebde2ec356861",
+    "alpha_zero_pixels": 0,
+    "nontransparent_rgb_color_count": 156,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          20,
+          20,
+          20
+        ],
+        "pixels": 325808
+      },
+      {
+        "rgb": [
+          230,
+          120,
+          24
+        ],
+        "pixels": 158048
+      },
+      {
+        "rgb": [
+          226,
+          118,
+          24
+        ],
+        "pixels": 2473
+      },
+      {
+        "rgb": [
+          24,
+          22,
+          20
+        ],
+        "pixels": 2464
+      },
+      {
+        "rgb": [
+          21,
+          20,
+          20
+        ],
+        "pixels": 1844
+      },
+      {
+        "rgb": [
+          228,
+          119,
+          24
+        ],
+        "pixels": 1824
+      },
+      {
+        "rgb": [
+          229,
+          120,
+          24
+        ],
+        "pixels": 1807
+      },
+      {
+        "rgb": [
+          23,
+          21,
+          20
+        ],
+        "pixels": 1537
+      }
+    ],
+    "line_width_px": 42.103,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "stripe-0-0",
+        "center": [
+          98,
+          116.49028991844243
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.127
+      },
+      {
+        "label": "stripe-1-0",
+        "center": [
+          414,
+          116.49028991844243
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-1",
+        "center": [
+          98,
+          229.4930642274589
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.127
+      },
+      {
+        "label": "stripe-1-1",
+        "center": [
+          414,
+          229.4930642274589
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-2",
+        "center": [
+          98,
+          342.4958385364754
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.127
+      },
+      {
+        "label": "stripe-1-2",
+        "center": [
+          414,
+          342.4958385364754
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-3",
+        "center": [
+          98,
+          455.49861284549183
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.127
+      },
+      {
+        "label": "stripe-1-3",
+        "center": [
+          414,
+          455.49861284549183
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-4",
+        "center": [
+          98,
+          568.5013871545083
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.127
+      },
+      {
+        "label": "stripe-1-4",
+        "center": [
+          414,
+          568.5013871545083
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-5",
+        "center": [
+          98,
+          681.5041614635247
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.128
+      },
+      {
+        "label": "stripe-1-5",
+        "center": [
+          414,
+          681.5041614635247
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-6",
+        "center": [
+          98,
+          794.5069357725412
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.128
+      },
+      {
+        "label": "stripe-1-6",
+        "center": [
+          414,
+          794.5069357725412
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      },
+      {
+        "label": "stripe-0-7",
+        "center": [
+          98,
+          907.5097100815576
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.128
+      },
+      {
+        "label": "stripe-1-7",
+        "center": [
+          414,
+          907.5097100815576
+        ],
+        "normal": [
+          -0.9004040442978399,
+          1
+        ],
+        "expected": 41.988713496167705,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 42.103
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "42度；每列8条完整等宽斜条，法向条宽与条距相等。首条内端收齐顶边、末条外端收齐底边，无三角残条；中缝120px。"
+    ],
+    "stripe_geometry_measurement": {
+      "angle_to_horizontal_degrees": [
+        42.0118,
+        42.016
+      ],
+      "bands_per_side": [
+        8,
+        8
+      ],
+      "method": "Least-squares fit to first orange band edge at 165 final-PNG scanlines per side; alpha/color midpoint threshold"
+    },
+    "svg_file": "roof-chevron-blank.svg",
+    "svg_sha256": "2d2f4004e3508201c3a62cc4edc7c23c51e6941dc89473e82bed09345e3a1b83",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            49,
+            42,
+            222
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "source_sha256": "6378aa8e96ae08633cf7cd0d13ac22cacd8fdd8c7a0f8201251ebde2ec356861"
+    }
+  },
+  {
+    "file": "roof-chevron-landscape-blank.png",
+    "size": [
+      1024,
+      512
+    ],
+    "sha256": "0d059730738b1b0a6371c25b67de9883ad5312c34531b32ce35e5143dc377ce0",
+    "alpha_zero_pixels": 0,
+    "nontransparent_rgb_color_count": 184,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          20,
+          20,
+          20
+        ],
+        "pixels": 332499
+      },
+      {
+        "rgb": [
+          230,
+          120,
+          24
+        ],
+        "pixels": 147668
+      },
+      {
+        "rgb": [
+          24,
+          22,
+          20
+        ],
+        "pixels": 2760
+      },
+      {
+        "rgb": [
+          226,
+          118,
+          24
+        ],
+        "pixels": 2752
+      },
+      {
+        "rgb": [
+          21,
+          20,
+          20
+        ],
+        "pixels": 2036
+      },
+      {
+        "rgb": [
+          228,
+          119,
+          24
+        ],
+        "pixels": 1955
+      },
+      {
+        "rgb": [
+          229,
+          120,
+          24
+        ],
+        "pixels": 1940
+      },
+      {
+        "rgb": [
+          22,
+          21,
+          20
+        ],
+        "pixels": 1617
+      }
+    ],
+    "line_width_px": 36.132,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "stripe-0-0",
+        "center": [
+          135.71735802304352,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.14
+      },
+      {
+        "label": "stripe-1-0",
+        "center": [
+          135.71735802304352,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.152
+      },
+      {
+        "label": "stripe-0-1",
+        "center": [
+          243.2266843021739,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.132
+      },
+      {
+        "label": "stripe-1-1",
+        "center": [
+          243.2266843021739,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.191
+      },
+      {
+        "label": "stripe-0-2",
+        "center": [
+          350.73601058130436,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.138
+      },
+      {
+        "label": "stripe-1-2",
+        "center": [
+          350.73601058130436,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.15
+      },
+      {
+        "label": "stripe-0-3",
+        "center": [
+          458.2453368604348,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.135
+      },
+      {
+        "label": "stripe-1-3",
+        "center": [
+          458.2453368604348,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.191
+      },
+      {
+        "label": "stripe-0-4",
+        "center": [
+          565.7546631395652,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.136
+      },
+      {
+        "label": "stripe-1-4",
+        "center": [
+          565.7546631395652,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.148
+      },
+      {
+        "label": "stripe-0-5",
+        "center": [
+          673.2639894186956,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.137
+      },
+      {
+        "label": "stripe-1-5",
+        "center": [
+          673.2639894186956,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.192
+      },
+      {
+        "label": "stripe-0-6",
+        "center": [
+          780.7733156978261,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.135
+      },
+      {
+        "label": "stripe-1-6",
+        "center": [
+          780.7733156978261,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.145
+      },
+      {
+        "label": "stripe-0-7",
+        "center": [
+          888.2826419769565,
+          98
+        ],
+        "normal": [
+          0.9004040442978399,
+          -1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.14
+      },
+      {
+        "label": "stripe-1-7",
+        "center": [
+          888.2826419769565,
+          414
+        ],
+        "normal": [
+          0.9004040442978399,
+          1
+        ],
+        "expected": 35.96889034119343,
+        "color": [
+          230,
+          120,
+          24
+        ],
+        "background": [
+          20,
+          20,
+          20
+        ],
+        "measured_width_px": 36.192
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "独立按42度绘制，未旋转竖版；上下各8条完整等宽斜条，法向条宽与条距相等，两端收齐，无三角残条；中缝120px。"
+    ],
+    "stripe_geometry_measurement": {
+      "angle_to_horizontal_degrees": [
+        42.0133,
+        41.9886
+      ],
+      "bands_per_side": [
+        8,
+        8
+      ],
+      "method": "Least-squares fit to first orange band edge at 165 final-PNG scanlines per side; alpha/color midpoint threshold"
+    },
+    "svg_file": "roof-chevron-landscape-blank.svg",
+    "svg_sha256": "f9fe52226503efc97765ae7bc68a47bdfb1803e3518a97be9d6e6723a77f3b4c",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            988,
+            86,
+            1024,
+            235
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "source_sha256": "0d059730738b1b0a6371c25b67de9883ad5312c34531b32ce35e5143dc377ce0"
+    }
+  },
+  {
+    "file": "rear-stripe-plate.png",
+    "size": [
+      256,
+      512
+    ],
+    "sha256": "00eeb9be11dd57434a80306ad5686e750480244dd7613822dd1dcb4e640901a6",
+    "alpha_zero_pixels": 0,
+    "nontransparent_rgb_color_count": 124,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          211,
+          148,
+          39
+        ],
+        "pixels": 59787
+      },
+      {
+        "rgb": [
+          17,
+          19,
+          21
+        ],
+        "pixels": 54858
+      },
+      {
+        "rgb": [
+          209,
+          104,
+          24
+        ],
+        "pixels": 6916
+      },
+      {
+        "rgb": [
+          20,
+          21,
+          21
+        ],
+        "pixels": 1245
+      },
+      {
+        "rgb": [
+          210,
+          147,
+          39
+        ],
+        "pixels": 634
+      },
+      {
+        "rgb": [
+          207,
+          145,
+          39
+        ],
+        "pixels": 625
+      },
+      {
+        "rgb": [
+          223,
+          156,
+          40
+        ],
+        "pixels": 625
+      },
+      {
+        "rgb": [
+          23,
+          23,
+          22
+        ],
+        "pixels": 622
+      }
+    ],
+    "line_width_px": 16.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "amber-band-0",
+        "center": [
+          36,
+          60
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 67.88225099390856,
+        "color": [
+          211,
+          148,
+          39
+        ],
+        "background": [
+          17,
+          19,
+          21
+        ],
+        "measured_width_px": 68.024
+      },
+      {
+        "label": "amber-band-1",
+        "center": [
+          36,
+          252
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 67.88225099390856,
+        "color": [
+          211,
+          148,
+          39
+        ],
+        "background": [
+          17,
+          19,
+          21
+        ],
+        "measured_width_px": 68.024
+      },
+      {
+        "label": "amber-band-2",
+        "center": [
+          220,
+          260
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 67.88225099390856,
+        "color": [
+          211,
+          148,
+          39
+        ],
+        "background": [
+          17,
+          19,
+          21
+        ],
+        "measured_width_px": 68.024
+      },
+      {
+        "label": "amber-band-3",
+        "center": [
+          220,
+          452
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 67.88225099390856,
+        "color": [
+          211,
+          148,
+          39
+        ],
+        "background": [
+          17,
+          19,
+          21
+        ],
+        "measured_width_px": 68.024
+      },
+      {
+        "label": "orange-cap-0",
+        "center": [
+          128,
+          8
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 16.0,
+        "color": [
+          209,
+          104,
+          24
+        ],
+        "background": null,
+        "measured_width_px": 16.0
+      },
+      {
+        "label": "orange-cap-496",
+        "center": [
+          128,
+          504
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 16.0,
+        "color": [
+          209,
+          104,
+          24
+        ],
+        "background": null,
+        "measured_width_px": 16.0
+      }
+    ],
+    "tileable": false,
+    "notes": [],
+    "svg_file": "rear-stripe-plate.svg",
+    "svg_sha256": "8cb1bb232b86401ea06a63fb26764301a6c7407e3213fb8c4834a547d2f123fa",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            93,
+            16,
+            158
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              211,
+              148,
+              39
+            ]
+          }
+        }
+      },
+      "source_sha256": "00eeb9be11dd57434a80306ad5686e750480244dd7613822dd1dcb4e640901a6"
+    }
+  },
+  {
+    "file": "identity-hex-flower.png",
+    "size": [
+      420,
+      260
+    ],
+    "sha256": "4805c52f1c4c732ecbae6dca8431f2e00e8725e8cb0c0093ac2fa41d8c59cb60",
+    "alpha_zero_pixels": 71675,
+    "nontransparent_rgb_color_count": 253,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          136,
+          136,
+          136
+        ],
+        "pixels": 12308
+      },
+      {
+        "rgb": [
+          192,
+          200,
+          208
+        ],
+        "pixels": 10075
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          255
+        ],
+        "pixels": 2161
+      },
+      {
+        "rgb": [
+          191,
+          199,
+          207
+        ],
+        "pixels": 1871
+      },
+      {
+        "rgb": [
+          191,
+          191,
+          191
+        ],
+        "pixels": 689
+      },
+      {
+        "rgb": [
+          137,
+          137,
+          137
+        ],
+        "pixels": 593
+      },
+      {
+        "rgb": [
+          170,
+          170,
+          170
+        ],
+        "pixels": 456
+      },
+      {
+        "rgb": [
+          195,
+          203,
+          212
+        ],
+        "pixels": 446
+      }
+    ],
+    "line_width_px": 10.161,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "hex-border-0",
+        "center": [
+          210,
+          96.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      },
+      {
+        "label": "hex-border-1",
+        "center": [
+          112,
+          96.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": null,
+        "measured_width_px": 10.171
+      },
+      {
+        "label": "hex-border-2",
+        "center": [
+          308,
+          96.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": null,
+        "measured_width_px": 10.171
+      },
+      {
+        "label": "hex-border-3",
+        "center": [
+          161.0,
+          11.28336725882528
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.322
+      },
+      {
+        "label": "hex-border-4",
+        "center": [
+          259.0,
+          11.28336725882528
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.322
+      },
+      {
+        "label": "hex-border-5",
+        "center": [
+          161.0,
+          181.02434640057524
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      },
+      {
+        "label": "hex-border-6",
+        "center": [
+          259.0,
+          181.02434640057524
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "半径45px平顶正六边形，最近顶点间距8px；420×260画布两侧透明留白。描边几何宽10.25px补偿4×栅格量化，使最终FWHM不低于10px。网点直径3px、点距8px，属于点阵填充而非细线。"
+    ],
+    "svg_file": "identity-hex-flower.svg",
+    "svg_sha256": "73f621f5633b84d57fc379701601cd4890cb893992fd0603ec311551dbd5eb23",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            73,
+            91,
+            118,
+            101
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "4805c52f1c4c732ecbae6dca8431f2e00e8725e8cb0c0093ac2fa41d8c59cb60"
+    }
+  },
+  {
+    "file": "micro-tick-column.png",
+    "size": [
+      40,
+      260
+    ],
+    "sha256": "f7449d4d83793fac733a8c5c856953d1c581db454defad9c05baa536e90dce46",
+    "alpha_zero_pixels": 7784,
+    "nontransparent_rgb_color_count": 27,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          84,
+          162,
+          180
+        ],
+        "pixels": 560
+      },
+      {
+        "rgb": [
+          0,
+          255,
+          255
+        ],
+        "pixels": 320
+      },
+      {
+        "rgb": [
+          216,
+          138,
+          48
+        ],
+        "pixels": 296
+      },
+      {
+        "rgb": [
+          75,
+          150,
+          180
+        ],
+        "pixels": 240
+      },
+      {
+        "rgb": [
+          84,
+          161,
+          179
+        ],
+        "pixels": 224
+      },
+      {
+        "rgb": [
+          85,
+          165,
+          183
+        ],
+        "pixels": 208
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          0
+        ],
+        "pixels": 160
+      },
+      {
+        "rgb": [
+          210,
+          135,
+          45
+        ],
+        "pixels": 128
+      }
+    ],
+    "line_width_px": 10.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "tick-0-0",
+        "center": [
+          20,
+          77
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-0-1",
+        "center": [
+          20,
+          95
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-0-2",
+        "center": [
+          20,
+          113
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-0-3",
+        "center": [
+          20,
+          131
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-0-4",
+        "center": [
+          20,
+          165
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-0-5",
+        "center": [
+          20,
+          183
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      }
+    ],
+    "tileable": false,
+    "notes": [],
+    "svg_file": "micro-tick-column.svg",
+    "svg_sha256": "0cb82f6b266ee9921ee81a2e9fbda2202b08f704e6b4c123d825b9032e5f9633",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            72,
+            40,
+            82
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "f7449d4d83793fac733a8c5c856953d1c581db454defad9c05baa536e90dce46"
+    }
+  },
+  {
+    "file": "warning-triangle.png",
+    "size": [
+      120,
+      104
+    ],
+    "sha256": "a20571579c46236d49e15f881061b2dbcd2e71afd5387f77299adaa384162737",
+    "alpha_zero_pixels": 5803,
+    "nontransparent_rgb_color_count": 89,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          230,
+          120,
+          24
+        ],
+        "pixels": 4827
+      },
+      {
+        "rgb": [
+          20,
+          20,
+          20
+        ],
+        "pixels": 180
+      },
+      {
+        "rgb": [
+          229,
+          120,
+          24
+        ],
+        "pixels": 171
+      },
+      {
+        "rgb": [
+          234,
+          122,
+          24
+        ],
+        "pixels": 130
+      },
+      {
+        "rgb": [
+          216,
+          114,
+          24
+        ],
+        "pixels": 108
+      },
+      {
+        "rgb": [
+          255,
+          127,
+          0
+        ],
+        "pixels": 85
+      },
+      {
+        "rgb": [
+          16,
+          18,
+          20
+        ],
+        "pixels": 84
+      },
+      {
+        "rgb": [
+          21,
+          20,
+          20
+        ],
+        "pixels": 84
+      }
+    ],
+    "line_width_px": 12.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "warning-stem--0.04442799572107958",
+        "center": [
+          60.0,
+          48.0
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 12.0,
+        "color": [
+          20,
+          20,
+          20
+        ],
+        "background": [
+          230,
+          120,
+          24
+        ],
+        "measured_width_px": 12.0
+      },
+      {
+        "label": "warning-dot--0.04442799572107958",
+        "center": [
+          60.0,
+          75.0
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 12.0,
+        "color": [
+          20,
+          20,
+          20
+        ],
+        "background": [
+          230,
+          120,
+          24
+        ],
+        "measured_width_px": 12.0
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "感叹号用几何警告图标绘制，非字体文字，不声明text_cap_height_px。"
+    ],
+    "svg_file": "warning-triangle.svg",
+    "svg_sha256": "70829f33145c92f7357bdb938ef842834212a935db83c2e18eb7e1d35a0254c2",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            54,
+            0,
+            66,
+            35
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "a20571579c46236d49e15f881061b2dbcd2e71afd5387f77299adaa384162737"
+    }
+  },
+  {
+    "file": "identity-plaque-unlabelled.png",
+    "size": [
+      1108,
+      300
+    ],
+    "sha256": "d3d6d8b1012f7fd16a4ec7fb34928a2603f6d7c666ca9c4205f29988d84ce8b2",
+    "alpha_zero_pixels": 287987,
+    "nontransparent_rgb_color_count": 400,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          136,
+          136,
+          136
+        ],
+        "pixels": 12308
+      },
+      {
+        "rgb": [
+          192,
+          200,
+          208
+        ],
+        "pixels": 10075
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          255
+        ],
+        "pixels": 2161
+      },
+      {
+        "rgb": [
+          191,
+          199,
+          207
+        ],
+        "pixels": 1871
+      },
+      {
+        "rgb": [
+          84,
+          162,
+          180
+        ],
+        "pixels": 1120
+      },
+      {
+        "rgb": [
+          191,
+          191,
+          191
+        ],
+        "pixels": 689
+      },
+      {
+        "rgb": [
+          0,
+          255,
+          255
+        ],
+        "pixels": 642
+      },
+      {
+        "rgb": [
+          137,
+          137,
+          137
+        ],
+        "pixels": 593
+      }
+    ],
+    "line_width_px": 10.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "warning-stem-456",
+        "center": [
+          483.71281292110206,
+          41.0
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          20,
+          20,
+          20
+        ],
+        "background": [
+          230,
+          120,
+          24
+        ],
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "warning-dot-456",
+        "center": [
+          483.71281292110206,
+          58.0
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          20,
+          20,
+          20
+        ],
+        "background": [
+          230,
+          120,
+          24
+        ],
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-0",
+        "center": [
+          574,
+          97
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-1",
+        "center": [
+          574,
+          115
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-2",
+        "center": [
+          574,
+          133
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-3",
+        "center": [
+          574,
+          151
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-4",
+        "center": [
+          574,
+          185
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-554-5",
+        "center": [
+          574,
+          203
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "hex-border-0",
+        "center": [
+          830,
+          116.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      },
+      {
+        "label": "hex-border-1",
+        "center": [
+          732,
+          116.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": null,
+        "measured_width_px": 10.171
+      },
+      {
+        "label": "hex-border-2",
+        "center": [
+          928,
+          116.15385682970026
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": null,
+        "measured_width_px": 10.171
+      },
+      {
+        "label": "hex-border-3",
+        "center": [
+          781.0,
+          31.28336725882528
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.322
+      },
+      {
+        "label": "hex-border-4",
+        "center": [
+          879.0,
+          31.28336725882528
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.322
+      },
+      {
+        "label": "hex-border-5",
+        "center": [
+          781.0,
+          201.02434640057524
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      },
+      {
+        "label": "hex-border-6",
+        "center": [
+          879.0,
+          201.02434640057524
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.25,
+        "color": [
+          192,
+          200,
+          208
+        ],
+        "background": [
+          136,
+          136,
+          136
+        ],
+        "measured_width_px": 10.161
+      },
+      {
+        "label": "tick-1066-0",
+        "center": [
+          1086,
+          97
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-1066-1",
+        "center": [
+          1086,
+          115
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-1066-2",
+        "center": [
+          1086,
+          133
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-1066-3",
+        "center": [
+          1086,
+          151
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          84,
+          162,
+          180
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-1066-4",
+        "center": [
+          1086,
+          185
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "tick-1066-5",
+        "center": [
+          1086,
+          203
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 10.0,
+        "color": [
+          216,
+          138,
+          48
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "感叹号用几何警告图标绘制，非字体文字，不声明text_cap_height_px。",
+      "半径45px平顶正六边形，最近顶点间距8px；420×260画布两侧透明留白。描边几何宽10.25px补偿4×栅格量化，使最终FWHM不低于10px。网点直径3px、点距8px，属于点阵填充而非细线。",
+      "文字区x=0..520透明，右上角放48px警告图标；左右tick到六边花实际外缘均99px。小图标感叹号保留10px笔画。"
+    ],
+    "svg_file": "identity-plaque-unlabelled.svg",
+    "svg_sha256": "367a1db16c50d565009da0bcc94b635cd6c63f6c260c76b04333a8caa5ccf5c9",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            479,
+            8,
+            489,
+            49
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "d3d6d8b1012f7fd16a4ec7fb34928a2603f6d7c666ca9c4205f29988d84ce8b2"
+    }
+  },
+  {
+    "file": "front-chevrons.png",
+    "size": [
+      900,
+      120
+    ],
+    "sha256": "5a5aa2a3ff3f538fb9ce6ebff6e5938ca7d2e283b190dc319d3ab9a9f7996b3a",
+    "alpha_zero_pixels": 96220,
+    "nontransparent_rgb_color_count": 59,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          234,
+          138,
+          36
+        ],
+        "pixels": 7184
+      },
+      {
+        "rgb": [
+          236,
+          139,
+          36
+        ],
+        "pixels": 536
+      },
+      {
+        "rgb": [
+          232,
+          136,
+          35
+        ],
+        "pixels": 360
+      },
+      {
+        "rgb": [
+          232,
+          137,
+          36
+        ],
+        "pixels": 360
+      },
+      {
+        "rgb": [
+          247,
+          145,
+          38
+        ],
+        "pixels": 360
+      },
+      {
+        "rgb": [
+          255,
+          191,
+          63
+        ],
+        "pixels": 352
+      },
+      {
+        "rgb": [
+          255,
+          170,
+          0
+        ],
+        "pixels": 288
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          0
+        ],
+        "pixels": 288
+      }
+    ],
+    "line_width_px": 18.164,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "chevron-12-up",
+        "center": [
+          48.72792206135786,
+          36
+        ],
+        "normal": [
+          1,
+          -1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.193
+      },
+      {
+        "label": "chevron-12-down",
+        "center": [
+          48.72792206135786,
+          84
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.164
+      },
+      {
+        "label": "chevron-66-up",
+        "center": [
+          102.72792206135786,
+          36
+        ],
+        "normal": [
+          1,
+          -1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.193
+      },
+      {
+        "label": "chevron-66-down",
+        "center": [
+          102.72792206135786,
+          84
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.164
+      },
+      {
+        "label": "chevron-756-up",
+        "center": [
+          792.7279220613578,
+          36
+        ],
+        "normal": [
+          1,
+          -1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.193
+      },
+      {
+        "label": "chevron-756-down",
+        "center": [
+          792.7279220613578,
+          84
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.164
+      },
+      {
+        "label": "chevron-810-up",
+        "center": [
+          846.7279220613578,
+          36
+        ],
+        "normal": [
+          1,
+          -1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.193
+      },
+      {
+        "label": "chevron-810-down",
+        "center": [
+          846.7279220613578,
+          84
+        ],
+        "normal": [
+          1,
+          1
+        ],
+        "expected": 18.0,
+        "color": [
+          234,
+          138,
+          36
+        ],
+        "background": null,
+        "measured_width_px": 18.164
+      }
+    ],
+    "tileable": false,
+    "notes": [],
+    "svg_file": "front-chevrons.svg",
+    "svg_sha256": "c589a80f71178872eb1bf0fc7bbb704b3e2c287903841c51e1f701a07ba806bc",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            38,
+            51,
+            115,
+            69
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "5a5aa2a3ff3f538fb9ce6ebff6e5938ca7d2e283b190dc319d3ab9a9f7996b3a"
+    }
+  },
+  {
+    "file": "panel-notch-mark.png",
+    "size": [
+      80,
+      48
+    ],
+    "sha256": "58acb25d4bb03efabb620211d67919b4450c8bb2008f651e098e031f9ac5cab4",
+    "alpha_zero_pixels": 179,
+    "nontransparent_rgb_color_count": 30,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          200,
+          200,
+          200
+        ],
+        "pixels": 3503
+      },
+      {
+        "rgb": [
+          199,
+          199,
+          199
+        ],
+        "pixels": 21
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          255
+        ],
+        "pixels": 18
+      },
+      {
+        "rgb": [
+          191,
+          191,
+          191
+        ],
+        "pixels": 16
+      },
+      {
+        "rgb": [
+          198,
+          198,
+          198
+        ],
+        "pixels": 14
+      },
+      {
+        "rgb": [
+          204,
+          204,
+          204
+        ],
+        "pixels": 8
+      },
+      {
+        "rgb": [
+          206,
+          206,
+          206
+        ],
+        "pixels": 8
+      },
+      {
+        "rgb": [
+          201,
+          201,
+          201
+        ],
+        "pixels": 7
+      }
+    ],
+    "line_width_px": 30.885,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "solid-web-above-V",
+        "center": [
+          40,
+          15
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 30.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 30.885
+      }
+    ],
+    "tileable": false,
+    "notes": [],
+    "svg_file": "panel-notch-mark.svg",
+    "svg_sha256": "8cb806214e6cdfba281bb0a23161f8893eff7132a9fed08666972757c105a143",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            0,
+            80,
+            31
+          ],
+          "axis": "y",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "58acb25d4bb03efabb620211d67919b4450c8bb2008f651e098e031f9ac5cab4"
+    }
+  },
+  {
+    "file": "ruler-ticks.png",
+    "size": [
+      320,
+      80
+    ],
+    "sha256": "3d33249fcc82bee53475db0e0b8bc4461800bdb251a2184da1ab7d9d1976862c",
+    "alpha_zero_pixels": 20952,
+    "nontransparent_rgb_color_count": 10,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          200,
+          200,
+          200
+        ],
+        "pixels": 1748
+      },
+      {
+        "rgb": [
+          255,
+          255,
+          255
+        ],
+        "pixels": 788
+      },
+      {
+        "rgb": [
+          195,
+          195,
+          195
+        ],
+        "pixels": 676
+      },
+      {
+        "rgb": [
+          199,
+          199,
+          199
+        ],
+        "pixels": 648
+      },
+      {
+        "rgb": [
+          203,
+          203,
+          203
+        ],
+        "pixels": 620
+      },
+      {
+        "rgb": [
+          202,
+          202,
+          202
+        ],
+        "pixels": 56
+      },
+      {
+        "rgb": [
+          191,
+          191,
+          191
+        ],
+        "pixels": 28
+      },
+      {
+        "rgb": [
+          204,
+          204,
+          204
+        ],
+        "pixels": 28
+      }
+    ],
+    "line_width_px": 10.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "ruler-0",
+        "center": [
+          10,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-1",
+        "center": [
+          60,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-2",
+        "center": [
+          110,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-3",
+        "center": [
+          160,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-4",
+        "center": [
+          210,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-5",
+        "center": [
+          260,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      },
+      {
+        "label": "ruler-6",
+        "center": [
+          310,
+          25
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 10.0,
+        "color": [
+          200,
+          200,
+          200
+        ],
+        "background": null,
+        "measured_width_px": 10.0
+      }
+    ],
+    "tileable": false,
+    "notes": [],
+    "svg_file": "ruler-ticks.svg",
+    "svg_sha256": "d5e42f22d54b50e3de37cc77a38d30e7ec7f07ff754d3aa43a69a58502cf0f9f",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            5,
+            0,
+            15,
+            40
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "3d33249fcc82bee53475db0e0b8bc4461800bdb251a2184da1ab7d9d1976862c"
+    }
+  },
+  {
+    "file": "pixel-band-tile.png",
+    "size": [
+      1040,
+      1040
+    ],
+    "sha256": "2a03a57a9af73ed1b164106f70dec31e92978cce250737d7328c3379a49e26b4",
+    "alpha_zero_pixels": 0,
+    "nontransparent_rgb_color_count": 21,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          39,
+          39,
+          39
+        ],
+        "pixels": 271749
+      },
+      {
+        "rgb": [
+          33,
+          33,
+          33
+        ],
+        "pixels": 230218
+      },
+      {
+        "rgb": [
+          47,
+          47,
+          47
+        ],
+        "pixels": 213150
+      },
+      {
+        "rgb": [
+          54,
+          54,
+          54
+        ],
+        "pixels": 165123
+      },
+      {
+        "rgb": [
+          27,
+          27,
+          27
+        ],
+        "pixels": 157321
+      },
+      {
+        "rgb": [
+          46,
+          46,
+          46
+        ],
+        "pixels": 10684
+      },
+      {
+        "rgb": [
+          40,
+          40,
+          40
+        ],
+        "pixels": 8165
+      },
+      {
+        "rgb": [
+          34,
+          34,
+          34
+        ],
+        "pixels": 6329
+      }
+    ],
+    "line_width_px": 65.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "65px-cell",
+        "center": [
+          97.5,
+          97.5
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 65,
+        "color": [
+          47,
+          47,
+          47
+        ],
+        "background": [
+          54,
+          54,
+          54
+        ],
+        "background_right": [
+          27,
+          27,
+          27
+        ],
+        "measured_width_px": 65.0
+      }
+    ],
+    "tileable": true,
+    "notes": [
+      "格边周期滤波；同色邻格权重乘0.15，包含环绕邻格。"
+    ],
+    "tiling_check": {
+      "tileable": true,
+      "left_right_max_difference": 23,
+      "top_bottom_max_difference": 23,
+      "channels": "RGBA, 8-bit",
+      "matching_edge_pixels_required": false,
+      "independent_2x2_periodic_render_max_difference": 0,
+      "periodic_render_pass": true,
+      "method": "Full independent 2x2 modular geometry render vs 2x2 copies of delivered PNG; opposite-edge differences compare adjacent samples, not periodic failure."
+    },
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            845,
+            195,
+            910,
+            456
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              39,
+              39,
+              39
+            ]
+          }
+        }
+      },
+      "source_sha256": "2a03a57a9af73ed1b164106f70dec31e92978cce250737d7328c3379a49e26b4"
+    }
+  },
+  {
+    "file": "pixel-dissolve-cluster.png",
+    "size": [
+      1040,
+      1040
+    ],
+    "sha256": "292d968ec7cd42b8ffe3ac0c7df5dc245d78f37026f9d577d7bde6c6ee6601ed",
+    "alpha_zero_pixels": 803875,
+    "nontransparent_rgb_color_count": 64,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          20,
+          20,
+          20
+        ],
+        "pixels": 64584
+      },
+      {
+        "rgb": [
+          68,
+          68,
+          68
+        ],
+        "pixels": 54969
+      },
+      {
+        "rgb": [
+          33,
+          33,
+          33
+        ],
+        "pixels": 43248
+      },
+      {
+        "rgb": [
+          84,
+          84,
+          84
+        ],
+        "pixels": 43179
+      },
+      {
+        "rgb": [
+          47,
+          47,
+          47
+        ],
+        "pixels": 39595
+      },
+      {
+        "rgb": [
+          0,
+          0,
+          0
+        ],
+        "pixels": 7840
+      },
+      {
+        "rgb": [
+          69,
+          69,
+          69
+        ],
+        "pixels": 2930
+      },
+      {
+        "rgb": [
+          85,
+          85,
+          85
+        ],
+        "pixels": 2364
+      }
+    ],
+    "line_width_px": 64.991,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "65px-cell",
+        "center": [
+          357.5,
+          292.5
+        ],
+        "normal": [
+          1,
+          0
+        ],
+        "expected": 65,
+        "color": [
+          68,
+          68,
+          68
+        ],
+        "background": [
+          0,
+          0,
+          0
+        ],
+        "background_right": [
+          0,
+          0,
+          0
+        ],
+        "measured_width_px": 64.991
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "按任务分类为tileable_pattern，但tileable=false；消散簇不声明周期性，边界滤波不环绕。"
+    ],
+    "tiling_check": {
+      "tileable": false,
+      "left_right_max_difference": 242,
+      "top_bottom_max_difference": 238,
+      "channels": "RGBA, 8-bit",
+      "matching_edge_pixels_required": false,
+      "method": "Opposite-edge check; intentional left-bottom radial cluster is nonperiodic."
+    },
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            0,
+            130,
+            65,
+            391
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        }
+      },
+      "source_sha256": "292d968ec7cd42b8ffe3ac0c7df5dc245d78f37026f9d577d7bde6c6ee6601ed"
+    }
+  },
+  {
+    "file": "skirt-honey-tile.png",
+    "size": [
+      1008,
+      1164
+    ],
+    "sha256": "911b9c471e118ddaff9973219a9c72c72e1bcd781050d66233d814847d53fe6f",
+    "alpha_zero_pixels": 0,
+    "nontransparent_rgb_color_count": 113,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          42,
+          42,
+          42
+        ],
+        "pixels": 203114
+      },
+      {
+        "rgb": [
+          20,
+          20,
+          20
+        ],
+        "pixels": 145952
+      },
+      {
+        "rgb": [
+          30,
+          30,
+          30
+        ],
+        "pixels": 144645
+      },
+      {
+        "rgb": [
+          48,
+          48,
+          48
+        ],
+        "pixels": 142922
+      },
+      {
+        "rgb": [
+          24,
+          24,
+          24
+        ],
+        "pixels": 138063
+      },
+      {
+        "rgb": [
+          52,
+          52,
+          52
+        ],
+        "pixels": 135508
+      },
+      {
+        "rgb": [
+          36,
+          36,
+          36
+        ],
+        "pixels": 117958
+      },
+      {
+        "rgb": [
+          160,
+          160,
+          160
+        ],
+        "pixels": 30426
+      }
+    ],
+    "line_width_px": 7.812,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "honey-dark-gap",
+        "center": [
+          216,
+          582.0
+        ],
+        "normal": [
+          0,
+          1
+        ],
+        "expected": 8,
+        "color": [
+          20,
+          20,
+          20
+        ],
+        "background": [
+          42,
+          42,
+          42
+        ],
+        "measured_width_px": 7.812
+      }
+    ],
+    "tileable": true,
+    "notes": [
+      "1008=3×48×7；1164=round(√3×48×14)。单个六边形保持等边，仅周期中心纵向步距增加0.004418px；填充半径48−8/√3，暗缝约8px。196格中7格亮灰。",
+      "蜂窝8px缝按清单明确尺寸制作，低于通用10px细线要求，作为规格例外记录。"
+    ],
+    "tiling_check": {
+      "tileable": true,
+      "left_right_max_difference": 0,
+      "top_bottom_max_difference": 15,
+      "channels": "RGBA, 8-bit",
+      "matching_edge_pixels_required": false,
+      "independent_2x2_periodic_render_max_difference": 0,
+      "periodic_render_pass": true,
+      "method": "Full independent 2x2 modular geometry render vs 2x2 copies of delivered PNG; opposite-edge differences compare adjacent samples, not periodic failure."
+    },
+    "bright_cell_spacing_measurement": {
+      "seed": 4244,
+      "bright_cells": 7,
+      "total_cells": 196,
+      "density": 0.03571428571428571,
+      "bright_cell_indices": [
+        [
+          2,
+          0
+        ],
+        [
+          2,
+          7
+        ],
+        [
+          5,
+          10
+        ],
+        [
+          7,
+          0
+        ],
+        [
+          7,
+          6
+        ],
+        [
+          11,
+          11
+        ],
+        [
+          12,
+          4
+        ]
+      ],
+      "measured_centers_px": [
+        [
+          143.59746251441754,
+          1163.5402537485581
+        ],
+        [
+          143.59746251441754,
+          581.5402537485583
+        ],
+        [
+          359.59746251441754,
+          872.5402537485583
+        ],
+        [
+          503.6588451805843,
+          41.387163561076605
+        ],
+        [
+          503.6536529680365,
+          540.0315068493151
+        ],
+        [
+          791.6588451805843,
+          955.6128364389234
+        ],
+        [
+          863.6588451805843,
+          332.3871635610766
+        ]
+      ],
+      "minimum_wrapped_center_distance_px": 362.373085,
+      "minimum_wrapped_center_distance_steps": 4.358439,
+      "center_step_px": 83.14285714285714,
+      "method": "Final-PNG exact-160 polygon centroids in wrapped windows; shortest Euclidean displacement on the 1008x1164 torus / center pitch"
+    },
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            611,
+            0,
+            619,
+            33
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support",
+          "selector": {
+            "mode": "rgb_equal",
+            "rgb": [
+              20,
+              20,
+              20
+            ]
+          }
+        }
+      },
+      "source_sha256": "911b9c471e118ddaff9973219a9c72c72e1bcd781050d66233d814847d53fe6f"
+    }
+  },
+  {
+    "file": "warning-word-blowout.png",
+    "size": [
+      450,
+      91
+    ],
+    "sha256": "2bded5200808933326706de32a6f73113cfaa5e9803b3f7a730a5d066e01c458",
+    "alpha_zero_pixels": 26256,
+    "nontransparent_rgb_color_count": 312,
+    "top_8_nontransparent_colors": [
+      {
+        "rgb": [
+          230,
+          120,
+          24
+        ],
+        "pixels": 6481
+      },
+      {
+        "rgb": [
+          229,
+          119,
+          24
+        ],
+        "pixels": 1032
+      },
+      {
+        "rgb": [
+          229,
+          120,
+          24
+        ],
+        "pixels": 831
+      },
+      {
+        "rgb": [
+          255,
+          127,
+          0
+        ],
+        "pixels": 748
+      },
+      {
+        "rgb": [
+          255,
+          170,
+          0
+        ],
+        "pixels": 306
+      },
+      {
+        "rgb": [
+          230,
+          119,
+          24
+        ],
+        "pixels": 292
+      },
+      {
+        "rgb": [
+          242,
+          126,
+          25
+        ],
+        "pixels": 256
+      },
+      {
+        "rgb": [
+          255,
+          0,
+          0
+        ],
+        "pixels": 229
+      }
+    ],
+    "line_width_px": 11.0,
+    "line_width_measurement": "Minimum interior normal FWHM from final encoded PNG; excludes polygon tips and halftone dots",
+    "line_measurements": [
+      {
+        "label": "BLOW-OUT-bowl-normal-sections",
+        "measured_width_px": 11.0,
+        "method": "Minimum short cap-axis ink run recurring on at least 3 scanlines in B; rejects one-off rounded tips"
+      }
+    ],
+    "tileable": false,
+    "notes": [
+      "独立Bahnschrift Bold字层，橙色230/120/24，无字形拉伸；水平正放存储。PNG所有非零Alpha像素之外四边各12px透明留白；用于竖版中缝时在摆放参数中旋转90度。"
+    ],
+    "text_cap_height_px": 62,
+    "text_measurement_bounds_px": [
+      15,
+      14,
+      436,
+      76
+    ],
+    "text_cap_axis": "y, upright word",
+    "transparent_padding_px_ltrb": [
+      12,
+      12,
+      12,
+      12
+    ],
+    "svg_file": "warning-word-blowout.svg",
+    "svg_sha256": "e6d1d3c1b8a88baa243be7ac40b7cab7c0bb975fb8f6d7125e58883964ca3ff2",
+    "feature_region_measurement": {
+      "state": "passed",
+      "feature_regions": {
+        "line_width_px": {
+          "bounds_px": [
+            70,
+            0,
+            81,
+            45
+          ],
+          "axis": "x",
+          "measurement": "actual source ink run; perpendicular window retains native line support"
+        },
+        "text_cap_height_px": {
+          "bounds_px": [
+            118,
+            14,
+            162,
+            76
+          ],
+          "axis": "y",
+          "measurement": "connected opaque glyph in the frozen source"
+        }
+      },
+      "source_sha256": "2bded5200808933326706de32a6f73113cfaa5e9803b3f7a730a5d066e01c458"
+    }
+  }
+]
