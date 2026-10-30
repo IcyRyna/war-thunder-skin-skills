@@ -8,13 +8,16 @@ REQUIRED_ROLES = frozenset(policy()["graphic_roles"]["required"])
 
 def check_roles(placements, omissions=None):
     rules = policy()["graphic_roles"]
-    known = set(rules["required"] + rules["optional"])
+    restricted = rules.get("restricted", {})
+    known = set(rules["required"] + rules["optional"]) | set(restricted)
     observed, raw = set(), set()
     for placement in placements:
         role = placement.get("role")
         normalized = rules["aliases"].get(role, role)
         if normalized not in known:
             raise ValueError("Unknown graphic role: " + str(role))
+        if normalized in restricted:
+            require_text(placement.get("user_request"), "explicit user request for restricted role " + normalized)
         pixels = number(placement.get("pixels", 0), "role pixels", 0, 2**53, True)
         if pixels:
             raw.add(role)

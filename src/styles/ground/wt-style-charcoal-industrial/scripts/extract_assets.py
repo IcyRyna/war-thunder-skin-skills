@@ -47,7 +47,7 @@ def extract(source:Path,recipe:Path,out:Path):
 def main():
     p=argparse.ArgumentParser(description=__doc__)
     p.add_argument('--source',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
-    p.add_argument('--recipe',type=Path,default=Path(__file__).resolve().parents[1]/'references/extraction-recipe.json')
+    p.add_argument('--recipe',type=Path,required=True)
     a=p.parse_args();print(json.dumps(extract(a.source,a.recipe,a.out),indent=2))
 
 if __name__=='__main__':main()

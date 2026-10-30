@@ -63,7 +63,7 @@ def audit_layers(root,data,texture,coverage):
         expected=Image.merge("RGBA",(*color.split(),expected.getchannel("A")))
         union|=selected
         receipts.append({"id":identifier,"graphic_id":layer["graphic_id"],"role":graphic["role"],
-                         "pixels":int(selected.sum()),"layer_sha256":layer["rgba"]["sha256"]})
+                         "pixels":int(selected.sum()),"layer_sha256":layer["rgba"]["sha256"],"user_request":graphic.get("user_request")})
     supplied=load_mask(root,texture.get("decoration_mask"),"declared decoration union",shape)
     if not np.array_equal(union,supplied):raise ValueError("Decoration mask is not the actual qualified layer Alpha union")
     return union,np.array(expected),receipts

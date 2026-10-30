@@ -27,7 +27,7 @@
     },
     {
       "file": "scripts/azur_reference.py",
-      "sha256": "f7789c8f7cbd7167145c55b19b7490606702f0807e6f414a4926fbb816c73a99"
+      "sha256": "9bf73c7a960821c3e865366f0afba02605b1337c4bf1c21f0f83e885140e89a0"
     },
     {
       "file": "scripts/basecoat.py",
@@ -83,7 +83,7 @@
     },
     {
       "file": "scripts/decoration_proof.py",
-      "sha256": "b999f6e0dd3f8c68ed380760b8430acf73df986292fd0ac0a19ad2634e46e305"
+      "sha256": "7f9839a3a7bf1cea862f3b19fd6ffe566b5697a4a1ca06a5efd7442634781bb0"
     },
     {
       "file": "scripts/delivery_validate.py",
@@ -103,11 +103,11 @@
     },
     {
       "file": "scripts/extract_assets.py",
-      "sha256": "6cf634071da8ff897c74a2bb5128ac0cb1bccc70642a3a72679e0cb2c0b77c86"
+      "sha256": "2a2a6489b00b86bfe5f71ccf45934f4700d32f031123d19397d7dd1144806ecf"
     },
     {
       "file": "scripts/final_review.py",
-      "sha256": "8acb939cb659230d7fa5d5bbe909169a73276a9fe87bdc71319c45b8d1deb78a"
+      "sha256": "08a68074d41b4b3cad604711b0d919e1901adcce10cfaeb71c8c5793d84f6ef5"
     },
     {
       "file": "scripts/finish_hierarchy.py",
@@ -215,7 +215,7 @@
     },
     {
       "file": "scripts/reference_contract.py",
-      "sha256": "fb77f1c421ba45bacf88713f378292436afb6456296d65783c48bff4d03c8a08"
+      "sha256": "0a1a5835c08b054564c598bb743890d4b5e83a7cedf84034e1b6a08ec1678775"
     },
     {
       "file": "scripts/repair_binding.py",
@@ -231,7 +231,7 @@
     },
     {
       "file": "scripts/skill_contract.py",
-      "sha256": "72936418de7faf9cd2c5efb016b59cea56d2cb38f0c1b16217e7906ed3aea641"
+      "sha256": "45f1d96a7f9097f35d8f7c916385305fb4f5201ae1f59c1b1a3b5edfec4781aa"
     },
     {
       "file": "scripts/source_bindings.py",
@@ -283,11 +283,11 @@
     },
     {
       "file": "scripts/vehicle_review.py",
-      "sha256": "6e02eddcf428e04498cdb5cd49bfd778dc8382c0e619219492400fbccb627280"
+      "sha256": "06c21e259ff1e5c35bd76a547cb9cc96ee74b1e6de23a0ccc6d56f7be9930dcf"
     },
     {
       "file": "scripts/verify_package.py",
-      "sha256": "6c2cd9342db4d585c7c3ac931a4e6b8ce0bf299ea3a9183e8b18d3adf83798c7"
+      "sha256": "f9e7246dd83fdf45049b613bec3db57bb1a33262be10fe5524291a5a7f184d2e"
     },
     {
       "file": "scripts/verify_release.py",
@@ -302,15 +302,15 @@
       "sha256": "8d51ba356f998a64ab5538fb612a35913bade1b8c5df83464a5b01d9b0bb9c66"
     }
   ],
-  "release_skill_version": "0.1.6",
+  "release_skill_version": "0.2.0",
   "material_dependencies": {
     "numpy": "2.3.5",
     "Pillow": "12.2.0",
     "scipy": "1.18.0",
     "numba": "0.66.0"
   },
-  "local_amendment": "2026-10-29: separate Skill and production material pack; research media excluded; current image evidence linked to render receipts",
-  "candidate_id": "charcoal-0.1.6-release",
+  "local_amendment": "2026-10-30: references distilled from AZUR v29 runtime textures; decoration playbook; AZUR defaults enforced in machine rules; new AZUR v29 asset children",
+  "candidate_id": "charcoal-0.2.0-release",
   "preview_dependencies": {
     "moderngl": "5.12.0"
   },

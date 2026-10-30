@@ -1,0 +1,196 @@
+{
+  "schema_version": 1,
+  "skill_version": "0.2.0",
+  "primary_template": "Leclerc AZUR source/model/native UV",
+  "paint_space": "8-bit sRGB, not rendered RGB",
+  "source_product_sha256": "e5e1ca8a7ed23d47034c08a0397ee6576f68a9937be8e5c7d40523070a424d8d",
+  "main_paint_zones": [
+    {
+      "id": "A",
+      "name": "主炭灰",
+      "RGB": [
+        34,
+        34,
+        34
+      ],
+      "suggested_share": 0.6,
+      "use": "dominant connected armor planes"
+    },
+    {
+      "id": "B",
+      "name": "第二灰区",
+      "RGB": [
+        47,
+        47,
+        47
+      ],
+      "suggested_share": 0.3,
+      "use": "secondary geometric armor/roof/glacis blocks"
+    },
+    {
+      "id": "C",
+      "name": "提亮灰区",
+      "RGB": [
+        65,
+        65,
+        65
+      ],
+      "suggested_share": 0.1,
+      "use": "sparse readable lighter blocks"
+    }
+  ],
+  "share_status": "proposed starting composition, not measured AZUR area or an automatic acceptance threshold",
+  "share_basis": "visible painted armor, excluding optics/rubber/nets/holes; never whole UV canvas",
+  "spatial_checks": [
+    "Z1_glacis_front",
+    "Z2_turret_armor",
+    "Z3_side_skirt_band",
+    "Z4_roof_equipment",
+    "Z5_optical_housing",
+    "Z6_rear"
+  ],
+  "low_contrast_microblocks": {
+    "RGB": [
+      [
+        27,
+        27,
+        27
+      ],
+      [
+        33,
+        33,
+        33
+      ],
+      [
+        39,
+        39,
+        39
+      ],
+      [
+        47,
+        47,
+        47
+      ],
+      [
+        54,
+        54,
+        54
+      ]
+    ],
+    "azur_side_pitch_m": 0.065,
+    "status": "measured AZUR side strip recipe; other carriers redesign scale/density",
+    "separate_from_large_geometry": true
+  },
+  "material_focus": {
+    "role": "black metal fire-control housing",
+    "reference_C_RGB": [
+      26,
+      26,
+      26
+    ],
+    "scope": "local focus, not a fourth large paint zone; glass separate"
+  },
+  "accents": {
+    "roof_blowout_orange_RGB": [
+      230,
+      120,
+      24
+    ],
+    "front_name_amber_RGB": [
+      234,
+      138,
+      36
+    ],
+    "no_step_amber_RGB": [
+      216,
+      138,
+      54
+    ],
+    "rear_orange_yellow_RGB": [
+      211,
+      148,
+      39
+    ],
+    "rear_orange_RGB": [
+      209,
+      104,
+      24
+    ],
+    "identity_white_RGB": [
+      192,
+      200,
+      208
+    ],
+    "micro_cyan_RGB": [
+      84,
+      162,
+      180
+    ],
+    "micro_amber_RGB": [
+      216,
+      138,
+      48
+    ],
+    "scope": "measured from AZUR v29 runtime color textures (opaque ink); adapt saturation to target, no baked light"
+  },
+  "rear_warning": {
+    "default_required_for_S42": true,
+    "decal_role": "D06",
+    "both_sides_when_available": true,
+    "suggested_stripes_per_group": [
+      3,
+      5
+    ],
+    "adapt": [
+      "solid carrier",
+      "width",
+      "count",
+      "angle",
+      "spacing",
+      "edge margin",
+      "occlusion"
+    ],
+    "protect": [
+      "tail lamps",
+      "exhaust",
+      "grilles",
+      "towing points",
+      "open slats",
+      "net cutouts"
+    ],
+    "explicit_current_user_override_allowed": true
+  },
+  "pattern_scales": [
+    "large geometric paint zones",
+    "local low-contrast microblocks",
+    "honeycomb modular field"
+  ],
+  "not_a_texture_filter": true,
+  "independent_unseen_vehicle_validation": "not_run",
+  "candidate_id": "charcoal-0.2.0-release",
+  "identity_source": "VERSION.json",
+  "canonical_policy": "style-policy.json",
+  "honeycomb": {
+    "cell_gray_range": [
+      20,
+      52
+    ],
+    "bright_cell_gray": [
+      152,
+      168
+    ],
+    "bright_cell_every_cells": [
+      25,
+      30
+    ],
+    "turret_focus": "single front cheek plate, about twice the skirt cell size"
+  },
+  "large_shards": {
+    "light_gray": 64,
+    "dark_gray": [
+      20,
+      24
+    ],
+    "shape": "straight-edged triangles/trapezoids crossing panel seams; long curved zones on the barrel"
+  }
+}

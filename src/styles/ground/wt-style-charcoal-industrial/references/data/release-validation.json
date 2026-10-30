@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "release_id": "charcoal-0.2.0",
+  "tests_run": 292,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "asset_catalog_entries": 32,
+  "asset_scope": "independent companion; 14 new AZUR v29 children generated deterministically; original 18 production media bytes retained",
+  "scope": "engineering regressions, new-rule tests, 32-asset detail regions, independent install checks; no new whole-vehicle production or game validation",
+  "release_cli_check": "Chinese asset paths verified under cp950 stdout without -X utf8"
+}

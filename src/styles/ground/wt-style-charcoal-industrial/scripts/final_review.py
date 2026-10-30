@@ -70,7 +70,7 @@ def validate_final(root,data,textures,coverage,materials,native):
         result["final_protection"][name]=report
     actual_colors={p for p,row in rows.items() if row["role"]=="color"}
     if used_colors!=actual_colors:raise ValueError("Runtime color DDS has no complete final color audit")
-    result["final_graphics"]=check_roles([{"role":r["role"],"pixels":r["pixels"]} for r in graphic_receipts],data.get("graphic_omissions"))
+    result["final_graphics"]=check_roles([{"role":r["role"],"pixels":r["pixels"],"user_request":r.get("user_request")} for r in graphic_receipts],data.get("graphic_omissions"))
     groups={};reviewed_normal=set()
     for role,material in materials.items():
         state=material["state"]

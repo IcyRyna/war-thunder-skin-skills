@@ -1,6 +1,10 @@
-"""Verify the exact local candidate file set and current identity."""
-from candidate_package import verify
+"""Compatibility entry point: verify the installed Skill file set and identity."""
+from pathlib import Path
+from verify_release import verify as verify_release
 import json
+
+def verify(root=None):
+    return verify_release(Path(__file__).resolve().parents[1] if root is None else root)
 
 def main():
     report=verify()

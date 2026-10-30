@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "skill_id": "wt-style-charcoal-industrial",
-  "version": "0.1.6",
+  "version": "0.2.0",
   "status": "release",
   "files": [
     {
@@ -10,374 +10,264 @@
       "sha256": "83114685ac8558e1c730e336b04c853e5368cdc083995c5c5e784a95075a62ec"
     },
     {
-      "file": "references/asset-catalog.md",
-      "bytes": 1415,
-      "sha256": "06f9090ec60623c73b061389f6816db4154b2e496c39aa6a1b88dbc8ae12d975"
+      "file": "references/contracts/carrier-and-budget.md",
+      "bytes": 1165,
+      "sha256": "f24bbf6045bb6cdcb8a917752a403ffb4c190636ab0466307043b4fdf4d80e25"
     },
     {
-      "file": "references/asset-pack.md",
-      "bytes": 2143,
-      "sha256": "b60596d26c508c74c361b448ef756721bea99e5faa5383f9b7192516b5667cbe"
+      "file": "references/contracts/layout-native-checks.md",
+      "bytes": 4582,
+      "sha256": "e4a66d6aee668888027583ffca6a910737add85172f9c0401419beec82e374dd"
     },
     {
-      "file": "references/asset-use-and-adaptation.md",
-      "bytes": 5470,
-      "sha256": "81c6cd7a5a3d49b8a251550a27cde8c7b0884afb3f12b775db02662aa12872ad"
+      "file": "references/contracts/material-parameters.md",
+      "bytes": 7293,
+      "sha256": "93276026b4ddda186467376d6c4b67db713dd2b5cd421c435643c83b012f46ba"
     },
     {
-      "file": "references/azur-99a-lessons.md",
-      "bytes": 3018,
-      "sha256": "e8d01581b5f8f6f009481d4115a886fee5e767bde67683f1e1103afe4047e9e6"
+      "file": "references/contracts/native-model-deployment.md",
+      "bytes": 1759,
+      "sha256": "c546afa8ecf58c1c5d96d31ca4e631b458da86a16ecdab40d8c76805f0b4ce9f"
     },
     {
-      "file": "references/azur-art-direction.md",
-      "bytes": 8012,
-      "sha256": "63c6ca73bf8dcb593f26533ca4d801e052cb78520ab5aa02b6cefdfbee27cff5"
+      "file": "references/contracts/native-profile.md",
+      "bytes": 6228,
+      "sha256": "cabf03d0fcc5139777a966132cef11f7a3f271d655e807c77319188b2aa87826"
     },
     {
-      "file": "references/azur-primary-workflow.md",
-      "bytes": 6106,
-      "sha256": "05c46884dd39baef4228cd108ac580779af7b8518009a831df62bb152236dfed"
+      "file": "references/contracts/native-resource-checks.md",
+      "bytes": 1545,
+      "sha256": "c8f2594f84c2b4508926d096597c936049d7710cd943a87e9ebd1bfc164c572f"
     },
     {
-      "file": "references/azur-retained-evidence.json",
-      "bytes": 2981,
-      "sha256": "de8ef0d3d7001e288f326e0dd304b46ff64cbc3cc377a4cf5209d52592cf1dbb"
+      "file": "references/contracts/required-editor-and-blender.md",
+      "bytes": 5730,
+      "sha256": "53f06e1d27886435f05239fd3f172ed3cf758510d51f09ceb0af1e0a029dd98c"
     },
     {
-      "file": "references/azur-source-method.md",
-      "bytes": 839,
-      "sha256": "9d273a7a1c9a1038358712e3b9d130106aeffe9d6717c4a08fbb3db50e5320fd"
+      "file": "references/contracts/runtime-and-delivery-contract.md",
+      "bytes": 5541,
+      "sha256": "c34a97089393e46c7a4e3e74e1e2787ba62c3129607d455c707fe80a3caa0eea"
     },
     {
-      "file": "references/azur-style-recipe.json",
-      "bytes": 3331,
-      "sha256": "e8e9992b191b5a64f1461f133c9382947e97c3fa81f4c094ce2e6e8fe93f3e5e"
+      "file": "references/contracts/runtime-and-storage.md",
+      "bytes": 1881,
+      "sha256": "52ca12703b7489d3737af2f5b7f004458fb28f67341ae96df23168ce618b9da5"
     },
     {
-      "file": "references/azur015-measurements.json",
+      "file": "references/contracts/schema-3-contract.md",
+      "bytes": 8464,
+      "sha256": "8779549165f701f8f99ec9f7114c2c07ac989c86c47dc20f8b89a3045e32c1da"
+    },
+    {
+      "file": "references/contracts/scope-and-visual-audit.md",
+      "bytes": 3905,
+      "sha256": "63a38e81bb053625a3f65240702fde2066a52bf90c1d2f453a234e0666857805"
+    },
+    {
+      "file": "references/contracts/surface-coverage.md",
+      "bytes": 3650,
+      "sha256": "de54947e1e9f8986d97d9046867d3fc5d1e4bf2f9dade90cb6952b27a45620f6"
+    },
+    {
+      "file": "references/contracts/tool-execution-contract.md",
+      "bytes": 8689,
+      "sha256": "e87774f518377588514a4b5d696de1205a72482a1b7803a8231ad6d9a5db0ae2"
+    },
+    {
+      "file": "references/contracts/tool-integration.md",
+      "bytes": 2543,
+      "sha256": "c7a1840d8ca117b292ee2a630b13bc6633b002cfb6e080f02dc30aced8421b64"
+    },
+    {
+      "file": "references/contracts/uv-coverage.md",
+      "bytes": 2569,
+      "sha256": "c517cc6bd7a37fa00a3a3c34ecc08617e5fb665c0136b9a32b20761742a48267"
+    },
+    {
+      "file": "references/data/azur-retained-evidence.json",
+      "bytes": 2947,
+      "sha256": "2fc824091907470eefe7ebf5dcef0f0fcf459b443c21ac1b5e4eb8ca05f05dd0"
+    },
+    {
+      "file": "references/data/azur-style-recipe.json",
+      "bytes": 4140,
+      "sha256": "19b8bf4569a9a62df5ab223bea0bb69aa26bc210e52cbaca2b34bab84888b1f5"
+    },
+    {
+      "file": "references/data/azur015-measurements.json",
       "bytes": 9137,
       "sha256": "7960e085bd11bf2d6961bbaa8de35bf688accd8d84fd4b2bf00cb02f63ec6e69"
     },
     {
-      "file": "references/branch-lessons.md",
-      "bytes": 4299,
-      "sha256": "7ace2f891142de4479f8ed765c17f6de4086b3f71961ea506decb052f5044217"
-    },
-    {
-      "file": "references/candidate-workflow.md",
-      "bytes": 14770,
-      "sha256": "a549631be78652486b3eb12ff461af7404b02194a303483146a98e4a1772c02f"
-    },
-    {
-      "file": "references/carrier-and-budget.md",
-      "bytes": 1438,
-      "sha256": "30fcdfdafd988533b7f05161e2fac6f6f25fef1ffbdb1dc65ce1ca8c3c798e7c"
-    },
-    {
-      "file": "references/color-and-material.md",
-      "bytes": 3082,
-      "sha256": "0f875687bc218aabbc6abd2c3b72a682a0fe8879b0e729bc09ef5d0bf5dcbe4b"
-    },
-    {
-      "file": "references/consolidated-rules.md",
-      "bytes": 2311,
-      "sha256": "f2fe5576bb60b97d43f9a68d491e3fe33a3442efd2752505a2ce2ea2c7a93b0b"
-    },
-    {
-      "file": "references/decal-adaptation.json",
+      "file": "references/data/decal-adaptation.json",
       "bytes": 2605,
-      "sha256": "b517ed75390009a0cdb2fcfdb9967cbefe51a0bc68f0eac3049cabd38c2cf4ff"
+      "sha256": "b79cfa8bb1693edf142215b7523a0e354845d18052643e79f33672a03ffe98e8"
     },
     {
-      "file": "references/decal-adaptation.md",
-      "bytes": 3250,
-      "sha256": "a09340b0db12a120b375e6920973afcc3216be5a6a44b821134e2c36c25a3906"
+      "file": "references/data/decal-layouts.json",
+      "bytes": 1358,
+      "sha256": "268c09a9a139ef603368cb8ba8322e200c2746242ffd50d318fc3df25fea993b"
     },
     {
-      "file": "references/decal-layouts.json",
-      "bytes": 1178,
-      "sha256": "08640735cf2d99369fbd831ea7851bd8a7ff7f28253305694b81c558bfb6b108"
-    },
-    {
-      "file": "references/decoration-and-material-recipes.md",
-      "bytes": 13567,
-      "sha256": "5bd4161eafe17a839ab644f6b8a73956f973415bdb1b8990b5efd9954f5a9eec"
-    },
-    {
-      "file": "references/era-surface-coverage.md",
-      "bytes": 2263,
-      "sha256": "ed47f72e737b2ae4ae65c1d7ad18a879abffcb5bda17871e2405b0cd980fbef9"
-    },
-    {
-      "file": "references/existing-project-replay.md",
-      "bytes": 6694,
-      "sha256": "857f18e30cee44cef6f76c7d4a781f44a6a25d79204db73a105886cad71c2c1a"
-    },
-    {
-      "file": "references/extraction-and-regularization.md",
-      "bytes": 2604,
-      "sha256": "e43ec89963444bd6a01a3248a7afc7f9d53e9a5873526e44b29175801627d903"
-    },
-    {
-      "file": "references/extraction-and-repair.md",
-      "bytes": 2434,
-      "sha256": "b7b47d72efeff6cc15b2a7324309e13d68d4ee9862ae7547824084f2d46edb6d"
-    },
-    {
-      "file": "references/feature-region-measurements.json",
+      "file": "references/data/feature-region-measurements.json",
       "bytes": 10398,
       "sha256": "e313f38ad199e32308b5dd6048127c6f836c13711dfcb0170d90dc5eed7b1b3a"
     },
     {
-      "file": "references/finish-diagnosis.md",
-      "bytes": 2861,
-      "sha256": "ba89cdd56647c15f654b41a46075d41d5479bb72cbf3e3e6f7e7b32917d5b492"
-    },
-    {
-      "file": "references/game-corrections.md",
-      "bytes": 5115,
-      "sha256": "2c68ebd3ae4dafc48035439c1ab519cd54f56b6511926f6cd806b105116ed559"
-    },
-    {
-      "file": "references/generation-children.md",
-      "bytes": 3199,
-      "sha256": "436187125e7812711a5321b6b51cd82c872f82d827780deec62a9d798b151615"
-    },
-    {
-      "file": "references/github-publication.md",
-      "bytes": 3692,
-      "sha256": "1871cc66b19d9f4638212f207f4e8315315b93952481bf4096675dfcff25fda8"
-    },
-    {
-      "file": "references/hd-antislip-material.md",
-      "bytes": 1260,
-      "sha256": "7d7cb970ff2b20d1c25990f72635bea7b886cea0e86c161b7f6e171f17856eba"
-    },
-    {
-      "file": "references/image-input-workflow.md",
-      "bytes": 5657,
-      "sha256": "c6f6e51ad01d86160addf5d36132f5fd119e5148e396b278bd5f43aa7b2eb057"
-    },
-    {
-      "file": "references/layout-native-checks.md",
-      "bytes": 4630,
-      "sha256": "7eef59fe9948bf07bb3a8a31b164648bedb450c7221ab5a5232f58a13e44ab18"
-    },
-    {
-      "file": "references/local-repair.md",
-      "bytes": 1446,
-      "sha256": "157ac151bbc186580192666e2fd5f40b24479bf735409fad17fb066e10d6acdd"
-    },
-    {
-      "file": "references/material-and-alpha.md",
-      "bytes": 2860,
-      "sha256": "c2b859bd66a79c52ab5f0a67932be12ad60b1513c86ee0e39fc892ea70f9e854"
-    },
-    {
-      "file": "references/material-parameters.md",
-      "bytes": 8212,
-      "sha256": "d25f945e97aa0ae258513dc27d94fa9c7794fbf248dbe406dc814cc0e00dd2e9"
-    },
-    {
-      "file": "references/model-uv-method.md",
-      "bytes": 5326,
-      "sha256": "ac4e56f515b8b248899aed1cc0d8eaddd79c112cdc76c32741cb3480ffcc8231"
-    },
-    {
-      "file": "references/naming-contract.md",
-      "bytes": 2605,
-      "sha256": "27a0e9952d25760321814bba0b42b98f77b4210d93fdbaa83c703e42a685a582"
-    },
-    {
-      "file": "references/native-model-deployment.md",
-      "bytes": 1770,
-      "sha256": "5ce35dd5bead324276cc55aafc30b1fa01627918f0613784afc78810f3364874"
-    },
-    {
-      "file": "references/native-profile.md",
-      "bytes": 6502,
-      "sha256": "4a6edeefba53939a4febf36f84ef7b46d2484e139929ffcd562b810b431ae2b7"
-    },
-    {
-      "file": "references/native-resource-checks.md",
-      "bytes": 1553,
-      "sha256": "3f4ea0201d3f7f7b428d68ab71014ffcb5c32a7c3dd0cf1a6cae3e8722a60707"
-    },
-    {
-      "file": "references/native-skin-detail-reuse.md",
-      "bytes": 9416,
-      "sha256": "5d41369cf9c319ced874b89a8f2ff4ee271d990bfd156b9ca92337cfa1dbf597"
-    },
-    {
-      "file": "references/native-surface-corrections.md",
-      "bytes": 7355,
-      "sha256": "5a9125e43667d7c2d37be8fe0531865308368b190b6d86f668322337b5b716d5"
-    },
-    {
-      "file": "references/package-budget.md",
-      "bytes": 4720,
-      "sha256": "541200a43b8828a3ac7cec2b95d5e944985946d62465ed5f3b350ce9a44e6a1d"
-    },
-    {
-      "file": "references/palette-policy.json",
+      "file": "references/data/palette-policy.json",
       "bytes": 1099,
-      "sha256": "76e2fcfd2a0d0fb10e3a2d5b8b57ba4197c519cbe8ba162c99667313322795dd"
+      "sha256": "ca3bba2b6dba1a216d1f7221574541cc172d01e56767862ad5cdd21fa23689da"
     },
     {
-      "file": "references/part-layout-defaults.md",
-      "bytes": 9474,
-      "sha256": "287c6fd76e7a427b8dcca3a7e1de3eecf72a3a05ffa8282789f5920aa8240338"
-    },
-    {
-      "file": "references/primary-anchor.md",
-      "bytes": 3024,
-      "sha256": "175a17339746eb75a94fca6a2cef20d7a35d5ebe3b25dcca4bcd87a4400701e9"
-    },
-    {
-      "file": "references/production-assets.json",
+      "file": "references/data/production-assets.json",
       "bytes": 1840,
       "sha256": "9d4bd295b3c0df94d93822ba34866e65b4a902ed0e0208abdbe1af0681264396"
     },
     {
-      "file": "references/production-detail-checklist.md",
-      "bytes": 26660,
-      "sha256": "e30a9f349e0688b186b3be00e069dbd0246090ede06468dd3a6f85533122642f"
+      "file": "references/data/release-validation.json",
+      "bytes": 561,
+      "sha256": "f9b77b0e4a17bed5db714aaa515705c09c0c594ae69429ab785e2a5b08c005a0"
     },
     {
-      "file": "references/production.md",
-      "bytes": 1658,
-      "sha256": "1b8bd6579fc49b7b2e8d912570838fc55e08aaa312612bb4ae10de026eeb4c9c"
+      "file": "references/data/style-policy.json",
+      "bytes": 34614,
+      "sha256": "4c1e21e262361bef4ec49ffba0de4380069b3c20d5208586f1e860e215083aa6"
     },
     {
-      "file": "references/publication-templates/release-body.md",
-      "bytes": 864,
-      "sha256": "20fbb64ef8efbcb758abd47228e4124b046c8906b55719032d5b67838ace2d89"
+      "file": "references/data/vehicle-review.template.json",
+      "bytes": 27556,
+      "sha256": "edb075704515ca6bba6a275178f0871256b99544dc968cd2d2eff7602c3473fe"
     },
     {
-      "file": "references/publication-templates/skin-readme.md",
-      "bytes": 1320,
-      "sha256": "fe1dbc2241a69c5926cec0521d822a370d1dc3a126c6d13ab60488437d5b8b12"
+      "file": "references/data/workflow-requirements.json",
+      "bytes": 2712,
+      "sha256": "cc1a6f695475c7d10d2833ce40a6d6ab47593431b354836baba887795a9c04a2"
     },
     {
-      "file": "references/release-validation.json",
-      "bytes": 610,
-      "sha256": "58a5398ad8baff916cca9b64e9b357d85f6ef68860f7a5af75b71aedebfde84c"
+      "file": "references/delivery/github-publication.md",
+      "bytes": 3665,
+      "sha256": "c47b2b5b2553134fb1b0dfd6dd1662eacb0c5364deed0ba01c6e8959c56b1f49"
     },
     {
-      "file": "references/required-editor-and-blender.md",
-      "bytes": 5659,
-      "sha256": "2728719f215296b8ee889cce34dd305be28e15962b3a0fc3f61ee24cff63d38d"
+      "file": "references/delivery/naming-contract.md",
+      "bytes": 2578,
+      "sha256": "ba63a346d14a77c3d97f5db15f1128683a3e4d1adb766e96d67bc722d290bc9d"
     },
     {
-      "file": "references/review-contract.md",
-      "bytes": 1278,
-      "sha256": "3493941ade5734c71c2a2eb44b240402da9d06d2d3d6714a1cd8c0f04bd6314b"
+      "file": "references/delivery/package-budget.md",
+      "bytes": 4325,
+      "sha256": "2da2b56ad8bf3c0a5cf0a07c7e3a40445ad80464a59daa3391d3f6b033803f27"
     },
     {
-      "file": "references/runtime-and-delivery-contract.md",
-      "bytes": 5655,
-      "sha256": "d6fc09eb5c765271b0d4b58436894e576abedef08e78a92aa388b04bbef9d0c4"
+      "file": "references/delivery/publication-templates/release-body.md",
+      "bytes": 844,
+      "sha256": "f1e812110d74007aa16ae94d5d4a2ec7d266278e34e7aae7da05b7a97e79b4ab"
     },
     {
-      "file": "references/runtime-and-storage.md",
-      "bytes": 2447,
-      "sha256": "04da1764f7b614f8aa5de8bc683a1a50e62f7589a0b203b5d241a34b5ad39298"
+      "file": "references/delivery/publication-templates/skin-readme.md",
+      "bytes": 1292,
+      "sha256": "5338f01ed2813f98e96d31f64edc9e158cdb32e6436450e3128dfc0432699a1d"
     },
     {
-      "file": "references/schema-3-contract.md",
-      "bytes": 8546,
-      "sha256": "10bfd9cf1c86bbaa149226a35acd34f5186a100d0fa36256b0d43731e1a1d837"
+      "file": "references/delivery/validation.md",
+      "bytes": 2150,
+      "sha256": "c6314d9511225a3f2e8ef21863c67281085569b2d60d632fd1b6a7c9c98dc1d2"
     },
     {
-      "file": "references/scope-and-visual-audit.md",
-      "bytes": 5850,
-      "sha256": "132fd8661ce30fb497e3263608fcde1046485ccfc760b7b5fcae2867e4b45f4f"
+      "file": "references/README.md",
+      "bytes": 6368,
+      "sha256": "cb26034dd694fa3420f0271f5697cc4524787082876314248c7a832b72342ebd"
     },
     {
-      "file": "references/shape-mothers.md",
-      "bytes": 1632,
-      "sha256": "b5e364eb94476e7df94bd40f02e298e1360763ab420ce4dd8f3f85c1224cd7fe"
+      "file": "references/style/aesthetic-direction.md",
+      "bytes": 10085,
+      "sha256": "247ded20a609c014c32d12eefdd1e715936301481a333decec4f432384ad3928"
     },
     {
-      "file": "references/style-authoring.md",
-      "bytes": 2053,
-      "sha256": "1e889661bf8efc83e0d27db913acbc43aa0d4f5419dec74aec645cd5b34a60b1"
+      "file": "references/style/decals-and-text.md",
+      "bytes": 5306,
+      "sha256": "1daf6f7f425a4151bdd86f35a90f1ac1ab26683c137feab4e8d53d76213e6ecb"
     },
     {
-      "file": "references/style-policy.json",
-      "bytes": 34486,
-      "sha256": "65535024ab3c6a93dff6522956305eaa17d0c5ceb06f423ac09fbe89c8600bf2"
+      "file": "references/style/decoration-playbook.md",
+      "bytes": 11346,
+      "sha256": "842213a6a5d54c696493c949d2dac2e6b3b85c804802a36596384f8bab133f7d"
     },
     {
-      "file": "references/surface-coverage.md",
-      "bytes": 3690,
-      "sha256": "8c56ac96068044e18f2aa34c92957ec29cc57ad765ea0feeaedea018e6f76ead"
+      "file": "references/style/material-looks.md",
+      "bytes": 5419,
+      "sha256": "74fe2665b087beb0663befa0e8c14c5958901c2e09757ba1f72bc00a6e8c1838"
     },
     {
-      "file": "references/target-art-direction.md",
-      "bytes": 1275,
-      "sha256": "478dec10c01a15b280e3f6024b11d5a6b02f2a1642291ea6e975c8b384c23827"
+      "file": "references/style/part-recipes.md",
+      "bytes": 11321,
+      "sha256": "bc8cb51d79546e795792b295c3a4fa452965e20ee20048771c2da8a9170027da"
     },
     {
-      "file": "references/tool-execution-contract.md",
-      "bytes": 8796,
-      "sha256": "a9fb31af5ecc4f19e02f7739a0b6859adb2bacf6ee69010bdd91f49735cef1cc"
+      "file": "references/workflow/asset-catalog.md",
+      "bytes": 1502,
+      "sha256": "54b4fefa5bfba7ae76ceba7312a666b2b94797414aeefdaf48a55e1e7aeaed17"
     },
     {
-      "file": "references/tool-integration.md",
-      "bytes": 2775,
-      "sha256": "49a89899e82fd97a0d40b5b7613b770940eed290e8513d8cc03e640646a8bd71"
+      "file": "references/workflow/asset-pack.md",
+      "bytes": 2148,
+      "sha256": "a26c7b0bdba802d4bc8392dc1d7cd0f40d76eda2b57871fa2be65bfdd29ce423"
     },
     {
-      "file": "references/transfer-layout.md",
-      "bytes": 1749,
-      "sha256": "6f3c1d99eaff81fd039715d2a41a6ac2d1d9e0a5ff630b93f8606b1fedf42e11"
+      "file": "references/workflow/asset-use-and-adaptation.md",
+      "bytes": 5609,
+      "sha256": "0b662e90625e5fc348e1dc1ac860be2395804f5a9cabf7a917187c8d282c635d"
     },
     {
-      "file": "references/transparent-elements.md",
-      "bytes": 2048,
-      "sha256": "213329ea4a45a369086d8a3017f9e32af4f229aee9b7fdb5e7a01e3c3f2a8e6f"
+      "file": "references/workflow/existing-project-replay.md",
+      "bytes": 2138,
+      "sha256": "5e43e1e20ec2b7d5e7f39966562ebbf7991cb6efee3777c6d10b0504c7289b2d"
     },
     {
-      "file": "references/uv-coverage.md",
-      "bytes": 2587,
-      "sha256": "1a5a0bc9d3680c58a40b88976658ebf731b29e07315729c1503517d332289931"
+      "file": "references/workflow/extraction-and-regularization.md",
+      "bytes": 2461,
+      "sha256": "c814a772b86d764de3c89ce45cb217b36d1207297e3a01a806869dff055e94b9"
     },
     {
-      "file": "references/validation.md",
-      "bytes": 2149,
-      "sha256": "7dd3ec03ccf3703ed2779c2895dbd2ad60e57bf63c7e78023fb56387d5c0132b"
+      "file": "references/workflow/extraction-and-repair.md",
+      "bytes": 2125,
+      "sha256": "fe514e2cb5a4897cd869e0595a17a935a3fceeb0b8aa2d939dfc891bdd743163"
     },
     {
-      "file": "references/vehicle-cases.md",
-      "bytes": 2852,
-      "sha256": "8402f78511560d54f27a299161540f4356ea662858b6f74fc097421cdec0f8e1"
+      "file": "references/workflow/generation-children.md",
+      "bytes": 3155,
+      "sha256": "71434132eebf5b90a1256a4f767f8245ebcf80e14c0552792812a988c78a3f57"
     },
     {
-      "file": "references/vehicle-families/cn-turret-era.md",
-      "bytes": 1055,
-      "sha256": "ff986aae94e0bc8830ce48f71120298a48314d13a9482a23d1b2161146a7cc5d"
+      "file": "references/workflow/image-input-workflow.md",
+      "bytes": 5622,
+      "sha256": "bbf268df93ff1d44542802ee59dfe049deb42c87929f2ebb04f3378fc7c74593"
     },
     {
-      "file": "references/vehicle-review.template.json",
-      "bytes": 28102,
-      "sha256": "791da79361bd3f7b5f952351ae0666d1f5755d1cd01814046c67fd1a0e85f733"
+      "file": "references/workflow/local-repair.md",
+      "bytes": 1437,
+      "sha256": "015357ab1d5b9d4a5493d48f38c1aad30db37d651346832c70e4381e4f7e1cea"
     },
     {
-      "file": "references/vehicle-specific-decals.md",
-      "bytes": 359,
-      "sha256": "af1b3102643175f8a8b2bb68ac962fbf54ad69b1cbafadb547750571fd60139c"
+      "file": "references/workflow/native-skin-detail-reuse.md",
+      "bytes": 8961,
+      "sha256": "cf960129faebbc6b17c3e046d6bd3832b57abd1b84df2116b53fb189768b8b70"
     },
     {
-      "file": "references/visual-contract.md",
-      "bytes": 837,
-      "sha256": "8268d7e39a1cd3312b423417fd9cb66b7dcc117808c68da64ebe05357111aa7a"
+      "file": "references/workflow/production-contract.md",
+      "bytes": 13969,
+      "sha256": "754d86e95a4ac7897197e73cae97f4ebcc8a6403631d8e76bc13a349b119fc94"
     },
     {
-      "file": "references/workflow-requirements.json",
-      "bytes": 2715,
-      "sha256": "20ab401f88e51b4864d758e0c6967e83d7ef1ffbcbec3f6a6c72ee92de7c0b82"
+      "file": "references/workflow/production-detail-checklist.md",
+      "bytes": 26537,
+      "sha256": "64f0061ba1acf0e70ccd80c50dbc501d30e6175441d003dffa8893f06e3d3ba1"
+    },
+    {
+      "file": "references/workflow/troubleshooting.md",
+      "bytes": 4518,
+      "sha256": "6d95312914543a2a2734474d1af6bb2713b409927c7e8f8f25b56657d2553db1"
     },
     {
       "file": "requirements-preview.txt",
@@ -411,8 +301,8 @@
     },
     {
       "file": "scripts/azur_reference.py",
-      "bytes": 9758,
-      "sha256": "f7789c8f7cbd7167145c55b19b7490606702f0807e6f414a4926fbb816c73a99"
+      "bytes": 9763,
+      "sha256": "9bf73c7a960821c3e865366f0afba02605b1337c4bf1c21f0f83e885140e89a0"
     },
     {
       "file": "scripts/basecoat.py",
@@ -481,8 +371,8 @@
     },
     {
       "file": "scripts/decoration_proof.py",
-      "bytes": 4901,
-      "sha256": "b999f6e0dd3f8c68ed380760b8430acf73df986292fd0ac0a19ad2634e46e305"
+      "bytes": 4875,
+      "sha256": "7f9839a3a7bf1cea862f3b19fd6ffe566b5697a4a1ca06a5efd7442634781bb0"
     },
     {
       "file": "scripts/delivery_validate.py",
@@ -506,13 +396,13 @@
     },
     {
       "file": "scripts/extract_assets.py",
-      "bytes": 3076,
-      "sha256": "6cf634071da8ff897c74a2bb5128ac0cb1bccc70642a3a72679e0cb2c0b77c86"
+      "bytes": 3010,
+      "sha256": "2a2a6489b00b86bfe5f71ccf45934f4700d32f031123d19397d7dd1144806ecf"
     },
     {
       "file": "scripts/final_review.py",
-      "bytes": 13327,
-      "sha256": "8acb939cb659230d7fa5d5bbe909169a73276a9fe87bdc71319c45b8d1deb78a"
+      "bytes": 13191,
+      "sha256": "08a68074d41b4b3cad604711b0d919e1901adcce10cfaeb71c8c5793d84f6ef5"
     },
     {
       "file": "scripts/finish_hierarchy.py",
@@ -646,8 +536,8 @@
     },
     {
       "file": "scripts/reference_contract.py",
-      "bytes": 4680,
-      "sha256": "fb77f1c421ba45bacf88713f378292436afb6456296d65783c48bff4d03c8a08"
+      "bytes": 4898,
+      "sha256": "0a1a5835c08b054564c598bb743890d4b5e83a7cedf84034e1b6a08ec1678775"
     },
     {
       "file": "scripts/repair_binding.py",
@@ -666,8 +556,8 @@
     },
     {
       "file": "scripts/skill_contract.py",
-      "bytes": 5285,
-      "sha256": "72936418de7faf9cd2c5efb016b59cea56d2cb38f0c1b16217e7906ed3aea641"
+      "bytes": 5166,
+      "sha256": "45f1d96a7f9097f35d8f7c916385305fb4f5201ae1f59c1b1a3b5edfec4781aa"
     },
     {
       "file": "scripts/source_bindings.py",
@@ -731,13 +621,13 @@
     },
     {
       "file": "scripts/vehicle_review.py",
-      "bytes": 18875,
-      "sha256": "6e02eddcf428e04498cdb5cd49bfd778dc8382c0e619219492400fbccb627280"
+      "bytes": 18598,
+      "sha256": "06c21e259ff1e5c35bd76a547cb9cc96ee74b1e6de23a0ccc6d56f7be9930dcf"
     },
     {
       "file": "scripts/verify_package.py",
-      "bytes": 316,
-      "sha256": "6c2cd9342db4d585c7c3ac931a4e6b8ce0bf299ea3a9183e8b18d3adf83798c7"
+      "bytes": 471,
+      "sha256": "f9e7246dd83fdf45049b613bec3db57bb1a33262be10fe5524291a5a7f184d2e"
     },
     {
       "file": "scripts/verify_release.py",
@@ -756,18 +646,18 @@
     },
     {
       "file": "SKILL.md",
-      "bytes": 10511,
-      "sha256": "4c742a57111e1e5c45f200c7385ea7a8b9a9c663540d4a27759a802811e9ebc4"
+      "bytes": 8099,
+      "sha256": "81fb2fd8345829c0790c4736293b79b847ee367b43202eda57d438a3cb8fdb53"
     },
     {
       "file": "toolkit-lock.json",
-      "bytes": 11280,
-      "sha256": "00881758dc81480efcd1cca79db87fa1346de9eeda79dd61957424e095dfca9b"
+      "bytes": 11304,
+      "sha256": "17f3494be6b5bca6076454fcd0bc1a0010f35fef609ec77862ad8302e94a2104"
     },
     {
       "file": "VERSION.json",
-      "bytes": 1412,
-      "sha256": "3a524ea0022e1169563e686d97048c41728d89bb992b8915b9825da054fd2133"
+      "bytes": 2967,
+      "sha256": "48add87f94ce5abe30f87dea85edd2a0dbce32baf4de4d150245d2cee0147d9a"
     }
   ],
   "material_assets_embedded": false

@@ -197,7 +197,7 @@ def validate_manifest(path, stage="base"):
         role=item.get("layer_role")
         if role not in {"decal","honeycomb","antislip"} or coverage[item["coverage_id"]]["layer_role"]!=role:
             raise ValueError("Graphic must bind the same actual decoration role as native coverage")
-    graphic_report = check_roles([{"role": item["role"], "pixels": 1} for item in graphics],
+    graphic_report = check_roles([{"role": item["role"], "pixels": 1, "user_request": item.get("user_request")} for item in graphics],
                                  data.get("graphic_omissions"))
     materials = _unique(data.get("materials"), "role", "material")
     if set(materials) != set(rules["materials"]["roles"]):

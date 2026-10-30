@@ -157,7 +157,7 @@ def main():
     if args.out.exists():
         raise ValueError("Audit output must be new")
     validate_reference_policy()
-    evidence = read_json(ROOT / "references/azur-retained-evidence.json")
+    evidence = read_json(ROOT / "references/data/azur-retained-evidence.json")
     report = audit_archive(args.archive, evidence, args.fixtures_dir)
     args.out.parent.mkdir(parents=True, exist_ok=True)
     args.out.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")

@@ -20,7 +20,7 @@ def identity():
 
 
 def policy():
-    return read_json(ROOT / "references/style-policy.json")
+    return read_json(ROOT / "references/data/style-policy.json")
 
 
 def sha(path):

@@ -1,0 +1,31 @@
+{
+  "schema_version": 1,
+  "identity_source": "VERSION.json",
+  "selection": "explicit carrier geometry; retain user-selected artwork pixels when required",
+  "layouts": [
+    {
+      "id": "wide_identity",
+      "use": "宽首下/炮塔实板",
+      "structure": "首下：琥珀粗斜体车名与变体一行，两端»箭头，深色带；炮塔侧：三行斜体字＋橙三角＋蜂窝花＋两列青/琥珀短横",
+      "protect": "拖具、备用履带、板缝；不附无依据功能词"
+    },
+    {
+      "id": "equipment_plaque",
+      "use": "已核实装甲或设备承载板",
+      "structure": "技术词或无字主图、蜂窝徽记、警示三角、对齐黄青刻度",
+      "protect": "把手、螺栓与两侧方向；按实际字形行距重排"
+    },
+    {
+      "id": "roof_warning",
+      "use": "核实功能的顶部盖板",
+      "structure": "两组镜像斜条夹警示词：AZUR为黑底两列人字橙斜条、词竖排其间；横向盖板可改上下两排；整组占满真实盖板",
+      "protect": "先规划占地再排防滑；检查常用俯视可读性"
+    },
+    {
+      "id": "compact_micro_mark",
+      "use": "窄护罩/小实板",
+      "structure": "短黄青刻度或简洁无字图形",
+      "protect": "空间不足就减少元素，不压糊完整铭牌"
+    }
+  ]
+}
