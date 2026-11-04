@@ -4,6 +4,29 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "war-thunder-style-akamywek/v1.16",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16",
+      "published_at": "2026-11-04T16:44:17Z",
+      "draft": false,
+      "prerelease": false,
+      "validation": {
+        "package_files": 92,
+        "remote_download_sha256_equal": true,
+        "scripts_unchanged": true,
+        "art": "approved_no_character_examples",
+        "character_placement": "not_approved",
+        "game": "not_run"
+      },
+      "assets": [
+        {
+          "name": "war-thunder-style-akamywek-v1.16.skill.zip",
+          "bytes": 1399446,
+          "digest": "sha256:afcd000c391620b96d95b7041920948843152ac1aa4a9e7dae7d5c404d0f7616",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.16/war-thunder-style-akamywek-v1.16.skill.zip"
+        }
+      ]
+    },
+    {
       "tag": "wt-style-charcoal-industrial/v0.2.0",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.2.0",
       "published_at": "2026-10-30T06:12:32Z",
