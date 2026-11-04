@@ -1,0 +1,152 @@
+{
+  "purpose": "Measured F-2A mosaic distributions; fill objects use the existing vector_paint schema. Angles below are target-chart examples, not portable source-atlas angles.",
+  "wing": {
+    "sample_triangles": 75,
+    "source_cell_px": 170,
+    "source_total_gap_px": 8,
+    "source_atlas_angle_deg": 9.785,
+    "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.31,
+      "angle": 80,
+      "seed": 31,
+      "inset": 0.0272,
+      "levels": [
+        [
+          0.9098,
+          0.08
+        ],
+        [
+          0.95,
+          0.107
+        ],
+        [
+          0.9727,
+          0.32
+        ],
+        [
+          0.9913,
+          0.12
+        ],
+        [
+          1.0162,
+          0.227
+        ],
+        [
+          1.0582,
+          0.147
+        ]
+      ]
+    },
+    "angle_context": "J-16 verified right-wing x/z native frame; left-wing frame uses 100 degrees. Recalculate for other frames."
+  },
+  "dorsal": {
+    "sample_triangles": 28,
+    "source_cell_px": 133,
+    "source_total_gap_px": 9,
+    "source_atlas_angle_deg": -29.515,
+    "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.24,
+      "angle": 90,
+      "seed": 31,
+      "inset": 0.0391,
+      "levels": [
+        [
+          0.842,
+          0.107
+        ],
+        [
+          0.937,
+          0.214
+        ],
+        [
+          0.976,
+          0.179
+        ],
+        [
+          1.0148,
+          0.214
+        ],
+        [
+          1.0578,
+          0.214
+        ],
+        [
+          1.0983,
+          0.071
+        ]
+      ]
+    }
+  },
+  "nose_contrast_example": {
+    "note": "J-16 stations only; remeasure the nose and canopy stations on other aircraft.",
+    "contrast": {
+      "from": [
+        8.2,
+        0
+      ],
+      "to": [
+        12.4,
+        0
+      ],
+      "values": [
+        1,
+        0
+      ]
+    }
+  },
+  "cyan_wing_example": {
+    "target_color": "#219eaf",
+    "source_gap_color": "#aa2e39",
+    "method": "Preserve relative linear-light luminance of each measured shade; same weights. Recompute for another palette.",
+    "fill": {
+      "pattern": "tri-mosaic",
+      "color": "signature",
+      "cell": 0.31,
+      "angle": 80,
+      "seed": 31,
+      "inset": 0.0272,
+      "levels": [
+        [
+          0.91226,
+          0.08
+        ],
+        [
+          0.95136,
+          0.107
+        ],
+        [
+          0.97344,
+          0.32
+        ],
+        [
+          0.99154,
+          0.12
+        ],
+        [
+          1.02935,
+          0.227
+        ],
+        [
+          1.10732,
+          0.147
+        ]
+      ]
+    },
+    "angle_context": "J-16 verified right-wing x/z native frame; left-wing frame uses 100 degrees. Recalculate for other frames."
+  },
+  "wing_orientation_check": {
+    "view": "metric top, nose up, image x right/y down; edge family modulo 60 deg",
+    "reference_left_deg": 10,
+    "reference_right_deg": -10,
+    "j16_native_frame_example": {
+      "left_fill_angle_deg": 100,
+      "right_fill_angle_deg": 80,
+      "abs_z_control_fill_angle_deg": 80
+    },
+    "note": "These local fill angles are specific to the verified J-16 frames. Recompute for other UV bases; confirm both actual wings after rendering."
+  }
+}

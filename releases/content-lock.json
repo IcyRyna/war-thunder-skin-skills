@@ -361,23 +361,38 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.14",
-      "original_archive_sha256": "6e2b8018ead45d1d9ee3d0b5f0acf4a04df300822f4c1da6052697a0c9e73bf1",
+      "tag": "war-thunder-style-akamywek/v1.16",
+      "original_archive_sha256": "afcd000c391620b96d95b7041920948843152ac1aa4a9e7dae7d5c404d0f7616",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 15418,
-          "sha256": "d1f4c2a6705bd294e88902950cbebff9616bb054fdae888c15a7d29cbdc0569d"
+          "bytes": 18952,
+          "sha256": "530066cae701c416d63f92cca5f5968a864eb67b6c0ec7b0bbab16359a1206e5"
         },
         {
           "path": "agents/openai.yaml",
-          "bytes": 435,
-          "sha256": "557665c79310db580481d9828e77d7cd46f6f5d400337eae1fec060c59076c02"
+          "bytes": 662,
+          "sha256": "fdabde9eba2761699ccc766fbc2754e848fd5499c50677c8296398a8099c7334"
         },
         {
           "path": "diagrams/motif-library.svg",
           "bytes": 7179,
           "sha256": "7db5df44e55174e72ceb9bd51e4656dce17392d02b8d6edb2139f0351423f8ed"
+        },
+        {
+          "path": "examples/f2a-mosaic-profiles.json",
+          "bytes": 3260,
+          "sha256": "e1befd123146078a1208cc848d5f8b600acd9bdea6265e5e3e5a0444809fae10"
+        },
+        {
+          "path": "examples/j10c-approved-parameters.json",
+          "bytes": 1592,
+          "sha256": "230485b1b94c3c167dec3160d3ea4ec0aac6753d3f6313392e6c94df4dbd4ed5"
+        },
+        {
+          "path": "examples/j11b-approved-centreline.json",
+          "bytes": 264152,
+          "sha256": "7301b8be22644817e5ac45e90874dcab0f6fbd49e78abd14014c7caaf1a0d4b8"
         },
         {
           "path": "examples/j16-chen-full-livery_build_design.py",
@@ -396,13 +411,18 @@
         },
         {
           "path": "references/base-layout.md",
-          "bytes": 15537,
-          "sha256": "c3bbc0837f5b0ed1290cbd9d48d3411b88ffe579df04d3618a54bcb4a3ba8fd6"
+          "bytes": 16946,
+          "sha256": "e7728386f7595759a99f0789bd85d30eab7b321df2bfce0b3bf9e487b6326f8a"
+        },
+        {
+          "path": "references/centreline-approved.md",
+          "bytes": 4910,
+          "sha256": "5d8143eeed4b87573d6378a9e58b709902f640acac1831c6a63de65dacea9741"
         },
         {
           "path": "references/core/aesthetics.md",
-          "bytes": 16584,
-          "sha256": "e9688de07c3861230cbbfa96a634fa78eedf69bf4f49efef20f47e0f24ca1180"
+          "bytes": 16855,
+          "sha256": "761aec1fac0804848cdb45edbaad360df358f84149cc5974f0a1048d6f4e25ba"
         },
         {
           "path": "references/core/art-direction.md",
@@ -461,13 +481,13 @@
         },
         {
           "path": "references/core/materials-and-uv.md",
-          "bytes": 13165,
-          "sha256": "b630b7bf4eaa776646d5281a6afec8e4a0b764c91180013afb65fce4be91cede"
+          "bytes": 13141,
+          "sha256": "80748490c5e29d839ef67eb36b5e1169745806dfa65f4834eb3738bb48cc66e5"
         },
         {
           "path": "references/core/new-airframe.md",
-          "bytes": 14859,
-          "sha256": "dc5f3bf69ef4e1c8bcac448ce713c241558e6dc8f41981aa223ce50bb411f53f"
+          "bytes": 15352,
+          "sha256": "b07fcf5f28ae4bfaa3ae3d1dfffa2266a64bc05c730e6aeeccde5e29d14ce844"
         },
         {
           "path": "references/core/orthographic-workflow.md",
@@ -476,13 +496,13 @@
         },
         {
           "path": "references/core/overview.md",
-          "bytes": 11470,
-          "sha256": "c66696f1f80e2c2f8802ef4265c11504ac0937c2e634f272f80337a56b0ea599"
+          "bytes": 11803,
+          "sha256": "44ee92a8ec792e090fa676f85411d278a4e939a901de6887b3d143cf69552354"
         },
         {
           "path": "references/core/packaging-and-validation.md",
-          "bytes": 7604,
-          "sha256": "485e2f747d770eaecf126ac32357b9c24cb3aabe1a6b5382c7da9491e90de267"
+          "bytes": 7558,
+          "sha256": "12d84ca308e7fd8015a5ed1af46a669c733942d99cd9e91197b38ce46eae96f9"
         },
         {
           "path": "references/core/research-and-audit.md",
@@ -496,33 +516,73 @@
         },
         {
           "path": "references/core/taste-corrections.md",
-          "bytes": 12174,
-          "sha256": "1949ad199d9062d81be935d2bbaa4456ed457bbb22e2de934dfcc990db3f9bf5"
+          "bytes": 12549,
+          "sha256": "41cb22e4b674b342d73fc35ac322843cbc3db5cfd1e326ab749580f2c08471ad"
         },
         {
           "path": "references/core/uv-native-replica.md",
-          "bytes": 27765,
-          "sha256": "d2918b82013b771048df0eba3eb95121a239e9a8f084a2240bf12974c1037344"
+          "bytes": 27882,
+          "sha256": "e40473e06d9fdc5783179e72ca8f85e4f42e7d87795b6b22fabe7122a8e3ce1b"
+        },
+        {
+          "path": "references/current-approved-j10c.md",
+          "bytes": 5001,
+          "sha256": "e82ddd6ba1141a3e6d88676bb67f846429d561d3b04dcfbbab69ac6d909e4ff2"
+        },
+        {
+          "path": "references/current-approved-j16.md",
+          "bytes": 2332,
+          "sha256": "88f45744f3d3deadf58b9d40d0218fcbbe4cc924eae28d2106b78bf9b8a98177"
+        },
+        {
+          "path": "references/images/centreline-approved.png",
+          "bytes": 26819,
+          "sha256": "f72fb0ee0f69c0fddc1e79423a6b1d2d948168c14510a3a69653a7136137f9e9"
+        },
+        {
+          "path": "references/images/j10c-approved-lettering.png",
+          "bytes": 202806,
+          "sha256": "6388860a0afcfb777c7afcf88de99adc970dbc1bdaee6fade7a18e44e5268b3b"
+        },
+        {
+          "path": "references/images/j10c-approved-top.png",
+          "bytes": 127069,
+          "sha256": "d452f10d0a36778e6b63525ed658462bc1884e03d335317f7cb2b11c44c0a000"
+        },
+        {
+          "path": "references/images/j16-approved-aft.png",
+          "bytes": 157789,
+          "sha256": "0da766b1ac5ec42ee0a48b83872ba7499921edf1bb04c371f74c58011949b7ca"
+        },
+        {
+          "path": "references/images/j16-approved-top.png",
+          "bytes": 164570,
+          "sha256": "4d2253f5d0e0c2e05d74725c16baf4751181dcff911fe3f3f00afe4f0b1c798e"
+        },
+        {
+          "path": "references/mosaic-and-charcoal-detail.md",
+          "bytes": 10238,
+          "sha256": "5b074b19d87fda6664aabe07c2e9772e5ab5b3feaf2c49daaf881907bd8ce58b"
         },
         {
           "path": "references/motifs.md",
-          "bytes": 13378,
-          "sha256": "54e0d08caa5cfa8b2fb1f76d4cafd8dc1a5f10f4da9794c59cfee638ca71d16e"
+          "bytes": 12125,
+          "sha256": "dc2bb7686b43b10f0df54612e77a6a7df86c3a965e660340d8c55aa768708da9"
         },
         {
           "path": "references/palette.md",
-          "bytes": 3192,
-          "sha256": "0c6be7a4650ef43456c36520e8d833bc019049d6b09fd004cf3ece6a64fc6949"
+          "bytes": 6307,
+          "sha256": "7c236c9320f8cc9286fed17293d971d8b6baf5f858baab36c13854b36e15ca66"
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 8774,
-          "sha256": "970ea02c73df14ebc7a86ca5274d4f0853cb0d977c5b836629f6a11a7d6beba3"
+          "bytes": 8912,
+          "sha256": "3bc42d0feed80f3b61cae9f813f9150263f7c7228aed7bb968b62b482f581154"
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 2871,
-          "sha256": "b5b0df3feb87fe4ed61959d33db6368c146a4aac253159591dda9f253c5372e1"
+          "bytes": 4881,
+          "sha256": "891cf47d43829c965a7f84dc1770e63ba7ef36d34a2899c967e0dbea7b979c5e"
         },
         {
           "path": "scripts/airframe_setup.py",

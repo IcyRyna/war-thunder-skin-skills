@@ -61,7 +61,7 @@
       "id": "war-thunder-style-akamywek",
       "kind": "style",
       "status": "released_baseline",
-      "description": "Akamywek 风格飞机涂装，包含制作脚本、风格参考和设计示例。",
+      "description": "Akamywek 无人物飞机涂装：已认可中轴白形、双色渐变、原生 UV 与窄机身字组适配；人物放置仍待验证。",
       "source": "src/styles/aircraft/war-thunder-style-akamywek",
       "includes": [
         {
@@ -71,12 +71,12 @@
       ],
       "supplements": [],
       "baseline": {
-        "version": "1.14",
-        "tag": "war-thunder-style-akamywek/v1.14",
-        "package_sha256": "6e2b8018ead45d1d9ee3d0b5f0acf4a04df300822f4c1da6052697a0c9e73bf1",
-        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14",
-        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.14/war-thunder-style-akamywek-v1.14.skill.zip",
-        "package_bytes": 673113
+        "version": "1.16",
+        "tag": "war-thunder-style-akamywek/v1.16",
+        "package_sha256": "afcd000c391620b96d95b7041920948843152ac1aa4a9e7dae7d5c404d0f7616",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.16/war-thunder-style-akamywek-v1.16.skill.zip",
+        "package_bytes": 1399446
       },
       "documentation": "docs/skills/akamywek.md",
       "changelog": "docs/changelog/war-thunder-style-akamywek.md"

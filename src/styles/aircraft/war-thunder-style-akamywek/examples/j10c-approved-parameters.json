@@ -1,0 +1,98 @@
+{
+  "scope": "J-10C approved no-character parameter record; not a complete runnable design",
+  "skill_version": "1.16",
+  "model_axes": {
+    "nose": "+X",
+    "up": "+Y",
+    "right": "+Z"
+  },
+  "palette": {
+    "base": "#333334",
+    "signature": "#4b8891",
+    "signature_deep": "#326b76",
+    "tint": "#9ebdc0",
+    "gold": "#dfd44f",
+    "gold_deep": "#aaaf2e",
+    "accent": "#ececec"
+  },
+  "wing_gradient": {
+    "-1": {
+      "from": [
+        0,
+        -1.6
+      ],
+      "to": [
+        0,
+        -3.75
+      ],
+      "colors": [
+        "signature",
+        "gold"
+      ]
+    },
+    "1": {
+      "from": [
+        0,
+        1.6
+      ],
+      "to": [
+        0,
+        3.75
+      ],
+      "colors": [
+        "signature",
+        "gold"
+      ]
+    }
+  },
+  "lettering_changes": [
+    {
+      "id": "shoulder--1",
+      "before": [
+        0.72,
+        -1.15
+      ],
+      "after": [
+        0.72,
+        -0.87
+      ]
+    },
+    {
+      "id": "shoulder-sub--1",
+      "before": [
+        0.9,
+        -1.28
+      ],
+      "after": [
+        0.9,
+        -1.0
+      ]
+    },
+    {
+      "id": "shoulder-1",
+      "before": [
+        0.72,
+        1.15
+      ],
+      "after": [
+        0.72,
+        0.87
+      ]
+    },
+    {
+      "id": "shoulder-sub-1",
+      "before": [
+        0.9,
+        1.28
+      ],
+      "after": [
+        0.9,
+        1.0
+      ]
+    }
+  ],
+  "colour_png_sha256": "81e4e0829269e3b545f8d32c5ce05d477e679e8cf1947efee5c0b8f6c7096b77",
+  "visual_status": "approved_no_character",
+  "character_status": "not_approved",
+  "game_test": "not_run"
+}

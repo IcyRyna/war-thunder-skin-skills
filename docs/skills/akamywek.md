@@ -1,26 +1,23 @@
-> 此页记录旧 `war-thunder-style-akamywek` 1.14。当前版本见 [wt-style-akamywek 0.2.0](wt-style-akamywek.md)。
+# Akamywek 无人物飞机涂装
 
-# Akamywek 风格飞机涂装
+Skill ID：`war-thunder-style-akamywek` · 当前正式版本：**1.16**
 
-按 Akamywek 公开涂装整理的飞机痛涂 Skill，主要参考深炭底、单一签名色、白色几何焦点和三角马赛克的组合方式。
+以已认可的 1.14 无人物构形为基础，整理 J-16 与 J-10C 的实际制作经验。此版本线独立维护，不自动切换到 `wt-style-akamywek` 0.2.x。
 
-Skill ID：`war-thunder-style-akamywek` · 已发布版本：1.14
+[下载 1.16](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-style-akamywek.md)
 
-本页描述 1.14 正式包。仓库中的风格源码与飞机公共工具分开维护，通过构建器装配；原 Release 安装包仍可独立使用。
+## 这版确认的方法
 
-[下载](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) · [安装](../installation.md) · [更新记录](../changelog/war-thunder-style-akamywek.md)
+- 炭灰 `#333334`、中轴主白形与孔洞、独立小 V 和闭合细回声；保留机翼、鸭翼或平尾、垂尾的部位职责。
+- 签名色由当前参考决定。指定双色时，整块主翼色场连续渐变，三角马赛克贯穿其中，左右与跨部件方向一致。
+- 宽体主字与较细副字成组，按真实机身宽度收进炭灰通道；后机背左、中、右分别核对。
+- 每款飞机重新建立原生 UV 与米制 frame，检查雷达罩两半、座舱框、凸脊和独立控制面。
+- 无人物是完整成品。人物放置仍待验证，历史人物规则仅作研究参考，不自动进入下一阶段。
 
-## 风格内容
+安装包自带绘制脚本、方法参考、J-16 与 J-10C 已认可预览、参数记录。具体飞机坐标和青黄配色不作为所有作品的固定模板；公开包不含人物试作素材或游戏原始模型。
 
-- 深炭色和签名色构成大块分区，三角马赛克放在签名色区域内。
-- 机背的白色嵌套图形，与翼尖条纹、前缘带和尾面序列相互对应。
-- 图形按机体方向和真实 UV 绘制，保持线宽与间距关系。
-- 人物干净裁切后融入深色底，字标跟随各部位的构图。
+## 验证范围
 
-## 制作顺序
+Skill 元数据、链接、装配和包内文件已核对。实例的美术认可、贴图通道保护与模型预览分别记录；未执行游戏内验证。技术通过不替代作品认可。
 
-先完成不带人物的基本布局，检查色块、白色焦点、条纹和字标，再安排机翼、机身与垂尾的人物。模型检查包括 UV 接缝、遮挡、材质，以及游戏距离下的图形可读性。
-
-安装包自带制作脚本、参考资料和设计示例，可独立使用。目标机型与人物素材按项目准备，来源说明见[素材与参考](../credits.md)。
-
-[风格源码](../../src/styles/aircraft/war-thunder-style-akamywek/) · [候选构建](../maintaining.md) · [返回首页](../../README.md)
+[风格源码](../../src/styles/aircraft/war-thunder-style-akamywek/) · [维护指南](../maintaining.md) · [返回首页](../../README.md)
