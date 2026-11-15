@@ -4,6 +4,27 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "war-thunder-style-akamywek/v1.21",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21",
+      "published_at": "2026-11-15T05:24:26Z",
+      "draft": false,
+      "prerelease": false,
+      "validation": {
+        "package_files": 147,
+        "remote_download_sha256_equal": true,
+        "art": "F-15C Cyan full aircraft and Laevatain composition approved; HD portrait detail pending review",
+        "game": "not_run"
+      },
+      "assets": [
+        {
+          "name": "war-thunder-style-akamywek-v1.21.skill.zip",
+          "bytes": 5646115,
+          "digest": "sha256:263b98281eb1ad7593b7bc724cbb6758a34f4c0ccb396ddbd232e0831924e56f",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.21/war-thunder-style-akamywek-v1.21.skill.zip"
+        }
+      ]
+    },
+    {
       "tag": "war-thunder-style-akamywek/v1.16",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16",
       "published_at": "2026-11-04T16:44:17Z",
