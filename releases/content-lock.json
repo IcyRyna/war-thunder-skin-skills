@@ -361,18 +361,18 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.16",
-      "original_archive_sha256": "afcd000c391620b96d95b7041920948843152ac1aa4a9e7dae7d5c404d0f7616",
+      "tag": "war-thunder-style-akamywek/v1.21",
+      "original_archive_sha256": "263b98281eb1ad7593b7bc724cbb6758a34f4c0ccb396ddbd232e0831924e56f",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 18952,
-          "sha256": "530066cae701c416d63f92cca5f5968a864eb67b6c0ec7b0bbab16359a1206e5"
+          "bytes": 11884,
+          "sha256": "a3c267f50561687cdd5ed9c7d4301907d8f9cda253c88650221909abeb51117d"
         },
         {
           "path": "agents/openai.yaml",
-          "bytes": 662,
-          "sha256": "fdabde9eba2761699ccc766fbc2754e848fd5499c50677c8296398a8099c7334"
+          "bytes": 460,
+          "sha256": "f14179cede21559ebafa992ca14b0c5b30d909e01ee72e50d7d6d28cf026992e"
         },
         {
           "path": "diagrams/motif-library.svg",
@@ -388,6 +388,21 @@
           "path": "examples/j10c-approved-parameters.json",
           "bytes": 1592,
           "sha256": "230485b1b94c3c167dec3160d3ea4ec0aac6753d3f6313392e6c94df4dbd4ed5"
+        },
+        {
+          "path": "examples/j10c-si-acceptance.json",
+          "bytes": 1240,
+          "sha256": "a4ac1129e82261e83c434c171966f496346ac3331896ade2bc1e7e80d4319271"
+        },
+        {
+          "path": "examples/j10c-si-approved-centreline.json",
+          "bytes": 9123,
+          "sha256": "df746e61af09e7aa29418d9807de2a204a9b4e7d0a3ba3ec9a9d9f893be75ac3"
+        },
+        {
+          "path": "examples/j10c-si-approved-parameters.json",
+          "bytes": 5482,
+          "sha256": "c091dd40e177550dd699f91a4062ee385262841abcced352352be02223a0ca4c"
         },
         {
           "path": "examples/j11b-approved-centreline.json",
@@ -410,19 +425,24 @@
           "sha256": "2cfb001af8d91af596da802a1c6b0a8261a68fff7f12399557477230cfa77271"
         },
         {
+          "path": "references/aft-silhouette.md",
+          "bytes": 1976,
+          "sha256": "de6e1c44136168698e1d8cf46e39aacc5dbd0bfd035a5a3437e107a1790e112a"
+        },
+        {
           "path": "references/base-layout.md",
-          "bytes": 16946,
-          "sha256": "e7728386f7595759a99f0789bd85d30eab7b321df2bfce0b3bf9e487b6326f8a"
+          "bytes": 17284,
+          "sha256": "ce11e58eafb216ea99ae76e23c950cfe9fdab840bcededd265ad92fd4d41cb3c"
         },
         {
           "path": "references/centreline-approved.md",
-          "bytes": 4910,
-          "sha256": "5d8143eeed4b87573d6378a9e58b709902f640acac1831c6a63de65dacea9741"
+          "bytes": 5540,
+          "sha256": "fee38f0c6ad36c354261b407c37302e1d53fc1212db758524528e2e64881ea8d"
         },
         {
           "path": "references/core/aesthetics.md",
-          "bytes": 16855,
-          "sha256": "761aec1fac0804848cdb45edbaad360df358f84149cc5974f0a1048d6f4e25ba"
+          "bytes": 16816,
+          "sha256": "155cbeb95979bd2fb61e99627f751dacdb95343c2e9930d409220b8331bee2db"
         },
         {
           "path": "references/core/art-direction.md",
@@ -431,8 +451,8 @@
         },
         {
           "path": "references/core/assets-and-layout.md",
-          "bytes": 5613,
-          "sha256": "eb54775134fea140795ce2a262ea3521f2c18bf1c9f81cd6ef4de9b3742ea37b"
+          "bytes": 4124,
+          "sha256": "f0dfcafba73a2940540d2a407d543d7692492fc71af06efd7299a826ebdd2bb8"
         },
         {
           "path": "references/core/diagrams/character-integration.svg",
@@ -475,19 +495,34 @@
           "sha256": "9bf429bee1eb31adb9abdd4b7df325383827d738c3b3d6ee44a9c61c48c93543"
         },
         {
+          "path": "references/core/item-visibility.md",
+          "bytes": 3026,
+          "sha256": "b110f10a0fad7820a1c7589014271ecee77d0efa6ff42b5f87f260e0fcc02627"
+        },
+        {
+          "path": "references/core/lettering-review.md",
+          "bytes": 3573,
+          "sha256": "630df7dace92c379ae717803d8f8ca34b8d2df3b13dc76ba8bd6dbdfd0ad775a"
+        },
+        {
           "path": "references/core/linework-and-color.md",
-          "bytes": 13685,
-          "sha256": "3825befabf06013afa54ade3ed3880919f8c83634a40bd7033ce27c3f20af827"
+          "bytes": 13777,
+          "sha256": "2a6bcd1da78d3cec342489626e72fcc0f12ea92a4f11376ee353b8e5cb8be950"
         },
         {
           "path": "references/core/materials-and-uv.md",
-          "bytes": 13141,
-          "sha256": "80748490c5e29d839ef67eb36b5e1169745806dfa65f4834eb3738bb48cc66e5"
+          "bytes": 13499,
+          "sha256": "2764e2183b2ff7ddf85e5f9cac18f891d3f27d02044c7f36a758a4f7ccd94ca0"
+        },
+        {
+          "path": "references/core/native-checks.md",
+          "bytes": 5541,
+          "sha256": "476a3acb5f5ca8095f1c6c334bec9a8e7d3157c23ccf9bd6427e15af6d8df3f9"
         },
         {
           "path": "references/core/new-airframe.md",
-          "bytes": 15352,
-          "sha256": "b07fcf5f28ae4bfaa3ae3d1dfffa2266a64bc05c730e6aeeccde5e29d14ce844"
+          "bytes": 17415,
+          "sha256": "3dc27e1271fd56ec8fd4abd50e320a778f13ef7384fe70b581cee1c2704844fa"
         },
         {
           "path": "references/core/orthographic-workflow.md",
@@ -501,18 +536,18 @@
         },
         {
           "path": "references/core/packaging-and-validation.md",
-          "bytes": 7558,
-          "sha256": "12d84ca308e7fd8015a5ed1af46a669c733942d99cd9e91197b38ce46eae96f9"
+          "bytes": 10021,
+          "sha256": "5fc9b06cb14a3e6071289916e87681bf9f21076d360213d9e2d1e90f1d14c185"
         },
         {
           "path": "references/core/research-and-audit.md",
-          "bytes": 5992,
-          "sha256": "c5210e9b35f5cc5819b1dae857b1870600e2efb2d7dfee29c30ae8050850e46c"
+          "bytes": 6010,
+          "sha256": "9e3ec9f032c187802a504911a04319d5611cd9a7ecb6b10f09d36fa89c485b0a"
         },
         {
           "path": "references/core/resource-markings.md",
-          "bytes": 3664,
-          "sha256": "d5018e76dc4b55bc9ca16c3248c9ded09da9893036e66b91085b7885b1c16ba1"
+          "bytes": 5636,
+          "sha256": "4c51a024718a3e882b0b5b225286c091e132f6ded07c8def135c03e42c931878"
         },
         {
           "path": "references/core/taste-corrections.md",
@@ -521,13 +556,23 @@
         },
         {
           "path": "references/core/uv-native-replica.md",
-          "bytes": 27882,
-          "sha256": "e40473e06d9fdc5783179e72ca8f85e4f42e7d87795b6b22fabe7122a8e3ce1b"
+          "bytes": 28047,
+          "sha256": "2b6d92fcaa65672c9808f433261d6eb29dc7358ccb505e87c6c1090e525e3828"
+        },
+        {
+          "path": "references/core/view-scale.md",
+          "bytes": 2690,
+          "sha256": "caa93d91743c7a2590c8c1cd69f34499d851f5e4bdad2afc7b2287c309dc68ea"
+        },
+        {
+          "path": "references/current-approved-j10c-si.md",
+          "bytes": 7959,
+          "sha256": "e2265fe1f81e4fc17b447f9fd36ba16156ee29821d3618516aba19314764442f"
         },
         {
           "path": "references/current-approved-j10c.md",
-          "bytes": 5001,
-          "sha256": "e82ddd6ba1141a3e6d88676bb67f846429d561d3b04dcfbbab69ac6d909e4ff2"
+          "bytes": 7983,
+          "sha256": "1a5869dbc2810fe0e48cd8ff43fce901a115592a1dc04ea7e80a270b5d76e4ca"
         },
         {
           "path": "references/current-approved-j16.md",
@@ -535,9 +580,54 @@
           "sha256": "88f45744f3d3deadf58b9d40d0218fcbbe4cc924eae28d2106b78bf9b8a98177"
         },
         {
+          "path": "references/f15c-cyan.md",
+          "bytes": 1989,
+          "sha256": "53cb466b8461ded7da72c17c53a9eadc608668e62309cf83512949b19aba8490"
+        },
+        {
+          "path": "references/f15c-laevatain.md",
+          "bytes": 3356,
+          "sha256": "e531af88552ddb1856b2fb256f9a318c0124c31c10c92e029108a617c4894726"
+        },
+        {
+          "path": "references/f16c-copper.md",
+          "bytes": 2998,
+          "sha256": "1f4918ee3c9dfab87a661f52adb49c905330af6eddee4f6003aa92588dc82019"
+        },
+        {
           "path": "references/images/centreline-approved.png",
           "bytes": 26819,
           "sha256": "f72fb0ee0f69c0fddc1e79423a6b1d2d948168c14510a3a69653a7136137f9e9"
+        },
+        {
+          "path": "references/images/f15c-cyan-starboard.png",
+          "bytes": 258629,
+          "sha256": "64927ebfa5a5a4cfcf05c7ac46d4d24dfce0e21b5874a8e4b6313c9a18a7ea99"
+        },
+        {
+          "path": "references/images/f15c-cyan-top.png",
+          "bytes": 170623,
+          "sha256": "4886451a0478129f75f7c8ea825a4c2e23af586dc166a1ea534aed2793b0253f"
+        },
+        {
+          "path": "references/images/f15c-laevatain-eye-detail.png",
+          "bytes": 392871,
+          "sha256": "59754ca5f1856df8757b76499056e419c9bf75a2f4557ffee762f0589a222431"
+        },
+        {
+          "path": "references/images/f15c-laevatain-layout.png",
+          "bytes": 637391,
+          "sha256": "cd1f35dbeef6e3031b74b8ec43f8f2760cb4e720028ce8ba39c6568067edf96c"
+        },
+        {
+          "path": "references/images/f16c-copper-quarter.png",
+          "bytes": 214008,
+          "sha256": "71ff531047098c01b4a467c8b238c50e23d5157a78ceebf212c900fd466ed9e4"
+        },
+        {
+          "path": "references/images/f16c-copper-top.png",
+          "bytes": 101088,
+          "sha256": "82c018cdbcc3612cf888f33f9a8971d8e6c57648acf5353fe039f150ffb633ea"
         },
         {
           "path": "references/images/j10c-approved-lettering.png",
@@ -550,6 +640,66 @@
           "sha256": "d452f10d0a36778e6b63525ed658462bc1884e03d335317f7cb2b11c44c0a000"
         },
         {
+          "path": "references/images/j10c-bare-aft-crop.png",
+          "bytes": 2587,
+          "sha256": "564bd46d74ff715891cdeca3298bf83550b8879dc7fd10c64947813eb28b1c6a"
+        },
+        {
+          "path": "references/images/j10c-bare-corrected-pair.png",
+          "bytes": 69273,
+          "sha256": "5c1d655e080316f12a162b9a316ca6149b454658cccdad02dabf25cbcbd097b2"
+        },
+        {
+          "path": "references/images/j10c-mirage-jade-gold-layout.jpg",
+          "bytes": 118650,
+          "sha256": "b0891a98cd085eb5480405ba50791c4c6960683b2eabae402a16297c63863308"
+        },
+        {
+          "path": "references/images/j10c-si-aft-crop.png",
+          "bytes": 3569,
+          "sha256": "a10df5afcb07ee68b51ca89e1e25a91e2f49f3e87f2c9453b6b03dd1d91c5623"
+        },
+        {
+          "path": "references/images/j10c-si-approved-lower.png",
+          "bytes": 128947,
+          "sha256": "0323f41fa0ace724fd4cbebcf66e445db2a75213dfa03fe296721f40bc45e0a3"
+        },
+        {
+          "path": "references/images/j10c-si-approved-overall.png",
+          "bytes": 234138,
+          "sha256": "70eae9f6af02f06576fb4bb96a156491b5efc7fa27ccf1c856946dd59d6c84c9"
+        },
+        {
+          "path": "references/images/j10c-si-approved-wings.png",
+          "bytes": 669317,
+          "sha256": "a1980b30b7a5b147141085a375ead5fe81083e185fd716285309a9e80e48aa02"
+        },
+        {
+          "path": "references/images/j10c-si-intake-not-approved.png",
+          "bytes": 150317,
+          "sha256": "88b8e703b92e95123caa7be8bb3881a7161ae6282d9f82d77bcf9ac75d44a8ec"
+        },
+        {
+          "path": "references/images/j10c-si-no-character-fin.png",
+          "bytes": 74171,
+          "sha256": "d3c1409164f42ce3a15eff081173aa12144f3f19ffb383a043a5ce6abe22b870"
+        },
+        {
+          "path": "references/images/j11b-laevatain-astra-release.jpg",
+          "bytes": 186742,
+          "sha256": "50462bfaea8a8e27866224cbb8dc591425e5ddaa8c2feda0163e4c0a4c6c2b7e"
+        },
+        {
+          "path": "references/images/j11b-si-release.jpg",
+          "bytes": 120995,
+          "sha256": "a9134574e101d129f0add61a569b84f0360dae0464f9614e5a10db4129654d5f"
+        },
+        {
+          "path": "references/images/j15t-si-release.jpg",
+          "bytes": 141504,
+          "sha256": "2443751eb9a5b2f7820fceee80d1f66935fc1d6ada82fc08e8ca5a40d5b91b09"
+        },
+        {
           "path": "references/images/j16-approved-aft.png",
           "bytes": 157789,
           "sha256": "0da766b1ac5ec42ee0a48b83872ba7499921edf1bb04c371f74c58011949b7ca"
@@ -560,34 +710,89 @@
           "sha256": "4d2253f5d0e0c2e05d74725c16baf4751181dcff911fe3f3f00afe4f0b1c798e"
         },
         {
+          "path": "references/images/j16-si-release.jpg",
+          "bytes": 168179,
+          "sha256": "a9fbb6da334d373e1fe1cbe83b59dc20d4bcd70f45052cbdcd35bb07090ead5a"
+        },
+        {
+          "path": "references/images/mirage-amethyste-layout-review.jpg",
+          "bytes": 120293,
+          "sha256": "6f85677b9ccd7e506b2a192d19e606f40a845af1d874d61db94933790abca887"
+        },
+        {
+          "path": "references/images/mirage-amethyste-rejected-top.jpg",
+          "bytes": 106300,
+          "sha256": "3469837b9c339b383001d8152ea98c738dead545b7999700128995796770db3a"
+        },
+        {
+          "path": "references/images/mirage-amethyste-starboard.png",
+          "bytes": 207794,
+          "sha256": "a928cb50e5faf20c853f2a61e04a7fe9dcfbc7dae5ebdd85fc58e0795e35ce26"
+        },
+        {
+          "path": "references/j10c-si-history.md",
+          "bytes": 15363,
+          "sha256": "72df1d92fcca6dd5148b3cd1126b03d08486d3e1969b7a5c4d6a87690cb0221f"
+        },
+        {
+          "path": "references/mirage-amethyste.md",
+          "bytes": 5321,
+          "sha256": "fd6cc4b191850eaef2b4dbfea845fc887ad9f452f36a08204f4ed1d6aac1efa5"
+        },
+        {
+          "path": "references/mirage-jade-gold.md",
+          "bytes": 2033,
+          "sha256": "68fbba1e9c8bb3f73d61d594534c719ecfd3726a9f9cdd5097f7315b4fc6915c"
+        },
+        {
+          "path": "references/modern-jet-examples.md",
+          "bytes": 2903,
+          "sha256": "5231ad172c785ae3ad0c8df0d9c92b59faf2ed3f224de792c0e1a3fd3277c57e"
+        },
+        {
           "path": "references/mosaic-and-charcoal-detail.md",
-          "bytes": 10238,
-          "sha256": "5b074b19d87fda6664aabe07c2e9772e5ab5b3feaf2c49daaf881907bd8ce58b"
+          "bytes": 10903,
+          "sha256": "dd321ef1471a1bc7d63b2a41c6e5cd46bf519ac5d0f0c5603c862791cce5837d"
         },
         {
           "path": "references/motifs.md",
-          "bytes": 12125,
-          "sha256": "dc2bb7686b43b10f0df54612e77a6a7df86c3a965e660340d8c55aa768708da9"
+          "bytes": 12630,
+          "sha256": "898e353c5dd83404fe127e260d248ab0c5a645c0b1c8a837dfd7035a6d328611"
         },
         {
           "path": "references/palette.md",
-          "bytes": 6307,
-          "sha256": "7c236c9320f8cc9286fed17293d971d8b6baf5f858baab36c13854b36e15ca66"
+          "bytes": 7892,
+          "sha256": "fe00b578ebdf7214759abcb4b533177c7b6a6bd7a7f4ae30958f791167a7a9dd"
+        },
+        {
+          "path": "references/reviewed-works.md",
+          "bytes": 6885,
+          "sha256": "a87312154843f2022aa513c94286f45196e8a8a68fd111bbb5441ef8f9a7b77b"
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 8912,
-          "sha256": "3bc42d0feed80f3b61cae9f813f9150263f7c7228aed7bb968b62b482f581154"
+          "bytes": 9909,
+          "sha256": "1a6ddf81c10fd64bd8a7a4feacc88f12f7ae6e2a82be83fb5e2dd24ea7307d0f"
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 4881,
-          "sha256": "891cf47d43829c965a7f84dc1770e63ba7ef36d34a2899c967e0dbea7b979c5e"
+          "bytes": 5850,
+          "sha256": "bf801d5b819eca38753f1e0f158ad1ddeac6c0394177ff10410f8a257a757e70"
+        },
+        {
+          "path": "scripts/aircraft_markings.py",
+          "bytes": 7108,
+          "sha256": "ef138fe521cc790560aa571acde1f9487cb7e6cebee41a26738ba552585ad2d8"
         },
         {
           "path": "scripts/airframe_setup.py",
-          "bytes": 23042,
-          "sha256": "a4f95d19c51b17d362fcd579a19e73a4c8c14fcdc066f8ecfb6b196baba8c7c0"
+          "bytes": 25264,
+          "sha256": "e98958fbd017c5577dd259d41ca5514e0ba94e7337d56a9f585a69da0ca72d3b"
+        },
+        {
+          "path": "scripts/area_shares.py",
+          "bytes": 10716,
+          "sha256": "7b64cb75892e30300fb1c32995ffd5e27742c63716bec525e0cd73f96ac43785"
         },
         {
           "path": "scripts/arrangement.py",
@@ -615,9 +820,19 @@
           "sha256": "2b3565f660ee6570b354f18346b8816bcc454d47e250a5abbc8c1d2d3e22641a"
         },
         {
+          "path": "scripts/chart_diagnostics.py",
+          "bytes": 9160,
+          "sha256": "5073fd299d19e9c8c38bbf21603e1adcbf5446e6528c9fbf827a72704318cf88"
+        },
+        {
+          "path": "scripts/check_lettering.py",
+          "bytes": 18578,
+          "sha256": "8a439790f3e020d68ae59b84a3c15b4cf08b00c742686b1aec3a99868d46506e"
+        },
+        {
           "path": "scripts/coat_material.py",
-          "bytes": 5171,
-          "sha256": "c56852e7dd4b3816cc1a69369dccc9af4986ac0e81d59d28e6fff34a60700d6f"
+          "bytes": 6262,
+          "sha256": "f036011c7f8a8a97aad8883ab84e332f16d3526033ccbcdc596b2f9cc380c39f"
         },
         {
           "path": "scripts/compare_skin.py",
@@ -636,13 +851,13 @@
         },
         {
           "path": "scripts/design_lint.py",
-          "bytes": 23592,
-          "sha256": "3fa4e2d16f5722abddb1210e2d0892f2a6e60230e4f7355c0be4e3345f82b3ef"
+          "bytes": 26519,
+          "sha256": "b9d2efa514a0dd18b1aa302be27796b879189fb677a509cb7e79500de0c97b07"
         },
         {
           "path": "scripts/detail_sheet.py",
-          "bytes": 11154,
-          "sha256": "afaef3fb85dff2ba7d6af96267d91b694c78737ff960e72c0bb23c447a9a1599"
+          "bytes": 14364,
+          "sha256": "2735e99c5e2295a1eb38173e520c7b29861760ee20331c8752d6d866b52d8e9b"
         },
         {
           "path": "scripts/fetch_asset.py",
@@ -656,8 +871,18 @@
         },
         {
           "path": "scripts/inspect_skins.py",
-          "bytes": 34547,
-          "sha256": "3c4326102f200fab965848d5b93912e28cfb89381f503d5930182df196e2c8fe"
+          "bytes": 35453,
+          "sha256": "a108947f197891e137cd4beefe4cbd789715faef1f4e333be5061ab68328c83b"
+        },
+        {
+          "path": "scripts/item_visibility.py",
+          "bytes": 13555,
+          "sha256": "7e0e2e948d377f107a6c39d18145150e2972bc5c06b3164db5beb99887fe800e"
+        },
+        {
+          "path": "scripts/legacy_dds.py",
+          "bytes": 5918,
+          "sha256": "570c2227bb374f28454fef7959b56ceab639e9ff8f152e6dce7a581f245230f1"
         },
         {
           "path": "scripts/panel_lines.py",
@@ -676,8 +901,8 @@
         },
         {
           "path": "scripts/scene_preview.py",
-          "bytes": 47159,
-          "sha256": "d77b181e398aa8ea98930ee2af9d0d48848c62ca413c9016eb6d37bdf807076c"
+          "bytes": 49289,
+          "sha256": "ee6109a91e8317f62ec268f84f14bea59f29e3f69d94cad678cc8f2b92227e3e"
         },
         {
           "path": "scripts/structure_layer.py",
@@ -691,8 +916,8 @@
         },
         {
           "path": "scripts/surface_map.py",
-          "bytes": 17648,
-          "sha256": "42c8ad7bb90a1233aa9284dd7716b4d4332b43a6ed7996e51e8b15acb710d7b1"
+          "bytes": 23098,
+          "sha256": "54193080ad39c0257a2899b1f97bfbad96acda9fe01688ac82c8c1b059fa6dc6"
         },
         {
           "path": "scripts/surface_preview.py",
@@ -700,9 +925,14 @@
           "sha256": "48b6cbed0034a63c46b0389234129af5008e9ac4820ddbd3a1a5e4739f5a4214"
         },
         {
+          "path": "scripts/test_aircraft_markings.py",
+          "bytes": 2327,
+          "sha256": "d22402b956c3dfca91232050345b8c8b81e113bcb70d552c1bbc4069762af459"
+        },
+        {
           "path": "scripts/test_airframe_setup.py",
-          "bytes": 6835,
-          "sha256": "0021f9fef15b6b1ebfc4709411c97506dd9a2a484a47f0191e344461c758ad9b"
+          "bytes": 6865,
+          "sha256": "a8a9db1a329ce103fd8625e1f8379f83fd38f29f45a1784b26bbdf839bc47852"
         },
         {
           "path": "scripts/test_arrangement.py",
@@ -725,9 +955,34 @@
           "sha256": "4269e88d705ae2378c587eb29aba619ec7715435d3036bde69416449bac8c994"
         },
         {
+          "path": "scripts/test_audit_package.py",
+          "bytes": 3670,
+          "sha256": "99a85b0924b653739fa20e02e268e79b0c563710a531f7584aa21e6d87cbcb41"
+        },
+        {
+          "path": "scripts/test_audit_uv.py",
+          "bytes": 8560,
+          "sha256": "90a26705256b1903c4ef49cb9188ddd57d33a507099526759aa2d6e2a2f53729"
+        },
+        {
+          "path": "scripts/test_audit_view_scale.py",
+          "bytes": 7187,
+          "sha256": "94eff1db2f9c47afc4d94024bc2d7a42f1f50d0c3b76ec1c6a31e9ced3157a07"
+        },
+        {
+          "path": "scripts/test_candidate_regressions.py",
+          "bytes": 15350,
+          "sha256": "8118c842e6b05c0a572a04569a86cb1485c32ce4219eeee36ddb075e26c225d8"
+        },
+        {
+          "path": "scripts/test_check_lettering.py",
+          "bytes": 7394,
+          "sha256": "ef278319e09b4992cf69fee6c5c73f7fd1d8434574ee405a3fe5be31092c5972"
+        },
+        {
           "path": "scripts/test_cli_gates.py",
-          "bytes": 9607,
-          "sha256": "c28ce9a10d16b46f38cde1d5a72b3b03cb4d3f4f533bfe9c20d54840ac167e22"
+          "bytes": 9678,
+          "sha256": "215ed83fd61b68a5e2e86cf635ad47307bd71f973f016a64e48b00c5eac46eaa"
         },
         {
           "path": "scripts/test_coat_material.py",
@@ -741,18 +996,18 @@
         },
         {
           "path": "scripts/test_dds_variant.py",
-          "bytes": 11029,
-          "sha256": "2544bac7746af25baf93473d3a24db41a8a7d2631afccc7009c23c6023f51542"
+          "bytes": 11293,
+          "sha256": "afc0b3ce226eb12b1e3f7e8b73e67ce54560cccce380ffd3dfab9cbf75b62fac"
         },
         {
           "path": "scripts/test_design_lint.py",
-          "bytes": 9942,
-          "sha256": "6d6c3020177a595391c474e4bb709411760faa0f2bc05b9b9701ccebdf70416c"
+          "bytes": 10498,
+          "sha256": "fe82a92a0af2c64606698f32cd2a9327bf60a5489ce9612e4456a43455800d5c"
         },
         {
           "path": "scripts/test_detail_sheet.py",
-          "bytes": 2785,
-          "sha256": "4554df915d2b02d09864b5adbcf49d9a413a0a88d7b753bc1f9a2f8ac1a9aa00"
+          "bytes": 2796,
+          "sha256": "0284c57343d4e722fb92a182a5f1f3619c5c02823e4822f63eb6289ca7084fc9"
         },
         {
           "path": "scripts/test_finish_preview.py",
@@ -763,6 +1018,16 @@
           "path": "scripts/test_io_tools.py",
           "bytes": 10098,
           "sha256": "5eda4df95fca885d3023d875c25bb3e30763bad7bea2c8448f6165d633eb8baa"
+        },
+        {
+          "path": "scripts/test_item_visibility.py",
+          "bytes": 4402,
+          "sha256": "cf257067c1b5d73b736fedd2be5d84c99076967bed6f115362e8ec3dfa088918"
+        },
+        {
+          "path": "scripts/test_native_proof.py",
+          "bytes": 5670,
+          "sha256": "c1f9c6cfd3ee8791d6b4842d08f22ccdfd1c783eee1eff98ff0492fda3af4045"
         },
         {
           "path": "scripts/test_panel_lines.py",
@@ -801,8 +1066,8 @@
         },
         {
           "path": "scripts/test_surface_map.py",
-          "bytes": 7814,
-          "sha256": "bbf4f579d0e6032f8cfbc174371baa153d7c786d6e6adedaf471fd162c3ec1dc"
+          "bytes": 8994,
+          "sha256": "e371ad1e8802505a169ff1ca7c6992ac3e3224d6e96c4ad3d86734782b63bc86"
         },
         {
           "path": "scripts/test_surface_workflow.py",
@@ -820,9 +1085,19 @@
           "sha256": "d55870280bab95cfe208fa962b5bcc2a99dfc7eb65924f192c8025b5d4b521ae"
         },
         {
+          "path": "scripts/uv_ownership.py",
+          "bytes": 2324,
+          "sha256": "1f15629aa1a00b88c5566e58e23c2ba30c0440a4a3f04a7b3ea3062717aefce6"
+        },
+        {
           "path": "scripts/vector_paint.py",
-          "bytes": 68494,
-          "sha256": "fd8f682dbd98899292cf92cd0ec5b478201a3e0cc4830c1b3e584ec0c40dd466"
+          "bytes": 74439,
+          "sha256": "96b3f2a9432a78a0e4efd3011d709546c3ccd6004f1280c2ea2c9c1f61b40836"
+        },
+        {
+          "path": "scripts/verify_game_zip.py",
+          "bytes": 4770,
+          "sha256": "047d610f0a8de95d9544e4ac88254514c5adcb1a0a0ce4b804c6edc168a78d5b"
         }
       ]
     },

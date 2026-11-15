@@ -1,7 +1,4 @@
 interface:
-
-  display_name: "战雷痛涂·Akamywek 风格"
-
-  short_description: "无人物喷气机涂装：炭灰、指定色场与双色渐变、中轴白形、原生 UV 和字组适配"
-
-  default_prompt: "使用 $war-thunder-style-akamywek 为我指定的战雷喷气机制作涂装：使用 1.16，保留已认可的无人物色块与翼尾布局，统一 #333334 炭灰，采用已认可的中轴白形及我指定的签名色。先完成无人物基本布局；我要求无人物时以此为成品，按我指定的双色或渐变覆盖完整色场，文字按机身宽度内收。人物放置尚未验证，只有我另行要求时才研究。"
+  display_name: "战雷痛涂·Akamywek 1.21"
+  short_description: "按机型设计人物或无人物涂装，原生 UV 小样、整机实模与游戏包交付"
+  default_prompt: "使用 $war-thunder-style-akamywek 制作或修订指定战雷涂装，按目标机翼形选择已认可的参考，在本机原生 UV 上重画整机色场与主图形，结合题材选择人物或无人物布局，用模型小样比较构图，再交付游戏包。"

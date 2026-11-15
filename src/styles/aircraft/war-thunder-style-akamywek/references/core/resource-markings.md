@@ -23,6 +23,29 @@
 - 照作者的轮廓描出来，是**源轮廓临摹**，只能用于研究复刻，并照实标注。
 - 不要退回近似手绘飞机。
 
+## 从本机飞行几何取剪影
+
+`aircraft_markings.py` 从 `scene_preview.py prepare` 的 `geometry.npz` 中按节点取三角形，输出机体侧视、俯视透明 PNG 和可编辑轮廓 JSON。先从模型核实机头与上方的有符号轴，以及需要的蒙皮、舱盖、舵面、喷口。下面的名称是 F-16C 的例子。换机型先核对节点表，收起的起落架、挂载和辅助几何按本件图标选择。
+
+```powershell
+python -B scripts/aircraft_markings.py --geometry flight/geometry.npz --nose x --up y --node "fuse*" --node "wing*" --node "tail*" --node "slat*" --node "flaperon*" --node "elevator*" --node "rudder*" --node "nozzle*" --node "blister*" --node "airbrake*" --out marks
+```
+
+两个 PNG 的机鼻均向画面右侧，侧视的垂尾在上方，俯视的左翼在上方。JSON 中机鼻方向为局部 +X，纵向总长为 1，原始米数、几何 SHA-256 和读入节点随文件保存。透明 PNG 可直接作图像素材；选择矢量路径时，可从制作脚本调用下面的函数得到 `vector_paint.py` 可画的 `items`。可保留多块连通轮廓及孔洞，`length` 是最终图标长轴的米数。以下坐标仅说明轴向表达。
+
+```python
+import json
+from pathlib import Path
+from aircraft_markings import place_outline
+
+views = json.loads(Path("marks/outlines.json").read_text("utf8"))["views"]
+items = place_outline(views["side"], chart="dorsal", prefix="port-profile",
+                      center=(0.0, 0.0), nose=(1, 0), upper=(0, 1),
+                      length=0.6, fill="lettering")
+```
+
+`nose` 和 `upper` 都是该图表里的方向。两枚同朝前而垂尾向中线时，只反转左右各自的 `upper`，锚点分别落在本机可见蒙皮。在正俯视检查最终墨迹的机鼻与垂尾，因为曲面、物理共用 UV 或局部 frame 仍会改变显示结果。依赖 OpenCV、NumPy、Pillow 及本包的几何读取器。
+
 ## 放到原 UV
 
 - 用 `vector_paint.py` 的图像图层放透明 PNG：`source`、`chart`、`center`、米制 `width`、`rotation`，必要时 `flip`。俯视图和侧视图分别确认机头朝向、垂尾朝内还是朝外、左右镜像；`flip` 不是“左侧必开”的规则，要看实际模型。

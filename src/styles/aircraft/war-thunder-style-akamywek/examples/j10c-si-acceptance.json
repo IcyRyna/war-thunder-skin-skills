@@ -1,0 +1,24 @@
+{
+  "date": "2026-11-05",
+  "timezone": "Asia/Taipei",
+  "user_statement": "目前很满意，这些改动的总结都进skill了吧，做成1.20吧",
+  "art_status": "approved",
+  "skill_version": "1.20",
+  "scope": "Final combined J10C_Si livery after all graphic accents became pale jade with gold gradients",
+  "installed_files": {
+    "j_10c.blk": "cfaafac7057afc788e789fd86891bb6bed80ac278aa3f198c2fd5bd49efabcda",
+    "j_10c_jade_gradients.dds": "2659bf6834bbe25df04bbf17f14480bfcda128b20ef190b8db37029e7f3b32cc",
+    "j_10c_satin_n.tga": "86e9f168b1329a0d44c528376c72bc0fec17967c1bd76c67d75c535e7c26762a"
+  },
+  "colour_png_sha256": "086fa887a0f916951c3e7e2e76806463c52639479f0a9ec9f94ab8cbb9b79286",
+  "game_zip_sha256": "e05ce55651d6c437d72b4b604a5f59c4424b9c88b13b9ff7e4bc9628cc5dc84f",
+  "source_zip_sha256": "6c7720786d8e7f46717d436eb3e3ad05dcdcc5b07dc362abf9590f1e5dd8a4e9",
+  "previews": "local model renders, not game screenshots",
+  "legacy_dds_validation": {
+    "rgba_fixture_exact": true,
+    "overwrite_rejected": true,
+    "invalid_header_rejected": true,
+    "approved_8k_byte_identical": true,
+    "approved_dds_sha256": "2659bf6834bbe25df04bbf17f14480bfcda128b20ef190b8db37029e7f3b32cc"
+  }
+}

@@ -56,13 +56,16 @@ airframe_setup.py frames --geometry G --scene S --texture T --out design/frames.
 ## 4. 干净底色和机械件遮罩
 
 ```
-airframe_setup.py clean --geometry G --scene S --texture T --template 原厂贴图.tga --out WB/base [--skin-seed U V]
+airframe_setup.py clean --geometry G --scene S --texture T --template 原厂贴图.tga --out WB/base [--skin-seed U V] [--protect-node 已核实的节点名或模式]
 ```
 
-- 按岛判断，不按像素判断（否则星徽、编号的边会留下来）。原厂浅灰迷彩占 60% 以上的岛是蒙皮，整块刷底色；其余是机械件，保留原厂像素并写进 `mechanical-mask.png`（白色 = 保留），上色时传给 `vector_paint.py --protect`。
+- 灰色占比只作原厂蒙皮的初判。在同贴图同时承载喷口、挂钩、轮舱等区域时，用模型与节点确认后重复传入 `--protect-node`（支持显式通配符，不照抄别机的名称）。工具在目标 atlas 尺寸光栅化这些三角形，保护优先于刷底和 `--skin-seed`；未匹配目标贴图的节点时报错。保护罩用于颜色绘制及材质两条路径。同一个节点若含两种职责，不宜整节点保护，补画经原 UV 核实的局部罩。
+- 颜色初判按岛，不按像素（否则星徽、编号的边会留下来）。原厂浅灰迷彩占 60% 以上的岛是蒙皮，整块刷底色；其余是机械件，保留原厂像素并写进 `mechanical-mask.png`（白色 = 保留），上色时传给 `vector_paint.py --protect`。
 - 阈值先看 `islands.json` 里 `stock_stats_on_used` 的亮度和饱和度分布再定。J-10C 原厂蒙皮灰的中位亮度只有 128，第一次把下限设成 125，主翼被判成机械件。
 - 原厂颜色不像蒙皮、但设计要盖住的岛（深灰雷达罩），用 `--skin-seed` 指定。
 - 出图后在模型上逐个看剩下的浅灰小件（天线罩之类）：在蒙皮上就补 `--skin-seed`。
+
+在幻影 2000C-S5 的 LOD0 中，固定垂尾与机背属于同一个 `fuse` 节点；名为 `tail` 的部件只占约 0.10 m，是辅助盒。分配涂层前，结合节点包围尺寸、所用材质、原生岛与侧视可见面来识别固定垂尾。保护节点会覆盖该节点的全部纹素；混合承载的节点需要按区域或独占岛保护。
 
 ## 5. 平面形
 
@@ -73,7 +76,7 @@ airframe_setup.py clean --geometry G --scene S --texture T --template 原厂贴�
 ## 6. 设计稿
 
 - 写一个生成脚本（例如 `design/build_design.py`），输出 vector_paint 设计稿 JSON。设计源和生成脚本放任务 `design/`。
-- 每块 UV 岛一个图表：`island` 用 frames.json 的种子，`frame` 用拟合的仿射，`u`/`v` 写这块岛所在平面的两根轴。左侧图形写一次，右侧按 z → −z 镜像；上下两面用同一组图形。这样上下自动一致、左右自动镜像，在 atlas 上又都是直线。
+- 每块 UV 岛一个图表：`island` 用 frames.json 的种子，`frame` 用拟合的仿射，`u`/`v` 写这块岛所在平面的两根轴。选择左右对称的色场时，左侧画一次，右侧按 z → −z 镜像。上下共用色场的设计可复用同组图形；人物、腹饰、字标等按各面分工及真实共享纹素绘制。
 - 一个填充里只能写 `color` 或 `gradient` 其中之一。
 - 马赛克方向：`angle` 0° 时三角形有一条边沿设计 x 轴。要让一条边沿 atlas 竖直方向：机身展开图表（设计 y = atlas 竖直）写 90°；主翼图表（设计 z 大致对应 atlas 竖直）写 80–100°。
 - 字用 `images` 图层的 `text`，`text_pixels_per_metre` 设 1600 左右。每一侧从自己外侧读正：从这一侧看过去，屏幕右方和上方对应的设计轴，组成的坐标系是镜像的就 `flip`；上方对应负轴时再转 180°。J-10C：机身展开图表左侧 `flip`，右侧 `flip` 加 180°；垂尾左面 `flip`，右面不翻。推算后仍要渲染一次确认。
@@ -84,18 +87,22 @@ airframe_setup.py clean --geometry G --scene S --texture T --template 原厂贴�
 ## 7. 试画循环
 
 ```
-vector_paint.py --geometry G --design design/design.json --base WB/base/clean-base.png --protect WB/base/mechanical-mask.png --out WB/trial-N
-scene_preview.py render ...（颜色贴图换成 trial-N/composite.png，七个视图）
-airframe_setup.py shares --views WB/trial-N/views
+vector_paint.py --geometry G --design design/design.json --base WB/base/clean-base.png --protect WB/base/mechanical-mask.png --proof-width 1536 --out WB/trial-N
+scene_preview.py render ...（将材质绑定到 trial-N/composite.png，显式选择本次涉及的视角）
+airframe_setup.py shares --views WB/trial-N/views --palette palette.json
 design_lint.py --design design/design.json
 ```
 
+先将主设计、完整分辨率的底图和机械罩作为同一组输入。用 `--proof-width 1536` 在缩小的模型贴图上看整机色场、孔洞位置、凸件遮挡、两侧实际字向；矩形 atlas 选择能得到整数高度的宽度。图表米制参数、原始立绘和文字素材仍以该设计为准。小样可能吞掉比一个像素还窄的线或接缝，留到完整尺寸核查。确认构图后去掉 `--proof-width`，另选新输出目录烘焙原尺寸，再从游戏 ZIP 读取 DDS 复看同机位。
+
 - 收据里 `zero_hit_items` 必须为空。为空也要看每层的 `painted_texels`：某一层是 0、图元却都命中了，说明有别的图表在重画整张图（见第 1 节辅助件）。
-- **面积比**：和风格文件的验收范围比。超出时改图形，不改阈值。J-10C 一路的改法：翼根深色楔形放大一档 → 签名色降约 1.5%；白色焦点加大 → 白色从 2.7% 到 5.5%；补上漏画的升降副翼 → 签名色升 2%，再把楔形放大一档。
-- **design_lint**：`thin-white-line` 判“长于 1.5 m 且平均宽不到 6 cm 的白件”；`too-many-angles` 按 6° 聚类、镜像算两族。两者是风险提示，不是重写图形的指令。旧 J-10C 等宽切格只对应那次实验；当前中轴按[已认可白组](../centreline-approved.md)的独立母形、孔洞、小 V 与回声核查，不为消除提示而强制等宽或统一角度。
+- **面积比**记录本次相机可见范围的配色。复现指定作品并有同口径原图时才比较数值。独立跨机型作品先看本机色场的边界、方向和主次。旧 J-10C 试画曾这样调整：翼根深色楔形放大一档 → 签名色降约 1.5%；白色焦点加大 → 白色从 2.7% 到 5.5%；补上漏画的升降副翼 → 签名色升 2%，再把楔形放大一档。
+- **design_lint**：`thin-white-line` 判“长于 1.5 m 且平均宽不到 6 cm 的白件”；`too-many-angles` 按 6° 聚类、镜像算两族。两者是风险提示，不是重写图形的指令。旧 J-10C 等宽切格只对应那次实验；选用 F-2A 式中轴时，按[已认可白组](../centreline-approved.md)的独立母形、孔洞、小 V 与回声核查，不为消除提示而强制等宽或统一角度。
 - **surface_map 的局限**：它按图表的世界轴判断遮挡和陡峭，对 frame 图表会把侧面的字和细线误报成“被盖住”。frame 图表只看它的接缝项，可见性靠渲染和 1:1 判断。
 - **1:1**：在 Composa 里打开 8192 颜色图，`render` 的 `maxSide` 等于窗口宽就是 1:1，和参考作品同米制比例的窗口并排看。J-10C 在 1:1 下才看出三件事：背鳍条侧壁上 1–2 cm 的白细线（白楔画到了凸条侧壁上，通道半宽 0.11 → 0.135 m 后消失）；翼尖条纹在升降副翼接缝处错开约 10 px（主翼 frame 被翼根过渡区拉歪，改成只用平面部分拟合后对齐）；铰链缝的 1–2 px 暗线（铰链侧面占用的纹素，模型上就是铰链线，保留）。
 - **游戏距离近景**：1:1 只能看边缘干不干净，看不出图形在游戏里读成什么。用 `scene_preview.py render --camera` 的近景相机，按约 100 px/m 渲染机背、垂尾，例如 `{"eye": [-0.45, 1.0, 0.18], "up": [1, 0, 0], "zoom": 2.6, "target_world": [1.3, 0.9, 0.0], "width": 760, "height": 900}`（J-10C 机背）。这个距离下 1 cm 只剩 1 像素：J-10C v4 的 1 cm 平行回声线、0.9 cm 描边，在游戏里读成梳子和虚线，审查指出相关处理需要修订。该次旧稿采用白件 8 cm、切缝 7 cm、描边 1.2–1.5 cm 的修正量级；不是所有白形的统一下限。当前已认可主形、小 V 与细回声按各自角色保留，检查器提示不能自动覆盖成图。
+
+歼-10C 基础布局作为成品不在用户本轮认可范围。下列早期实验只用于复现工程问题；不因为面积、lint 或工具测试通过就改列正例。新作按[实际认可作品](../reviewed-works.md)选布局。
 
 ## 8. 窄而圆的机背
 
@@ -103,12 +110,12 @@ design_lint.py --design design/design.json
 
 - 有凸起背鳍条的机型（J-10C 约 0.13 m 宽），凸条连同两侧侧壁做深色通道，白色焦点拆成左右两半，尖点顶到通道边。
 - 背鳍条两侧真正朝上的只有约 0.25 m 宽，白片一往外就落到侧斜面上，俯视被压扁。缺口用 18° 族开宽，白色才有地方放。
-- **白色焦点按已认可中轴构造**（[主形、孔洞、小 V 与细回声](../centreline-approved.md)）：中央色场向后收尖，白形在外侧包围。各角色分别用多边形与 `holes` 表达；不把旧 J-10C 的等宽切格经验强制套入其他机型。`arrangement.py` 只在该区域确实适合等宽切格时使用。
+- **采用已认可中轴分支时的白色焦点**（[主形、孔洞、小 V 与细回声](../centreline-approved.md)）：中央色场向后收尖，白形在外侧包围。各角色分别用多边形与 `holes` 表达；不把旧 J-10C 的等宽切格经验强制套入其他机型。`arrangement.py` 只在该区域确实适合等宽切格时使用。
 - 回声和描边落在两侧弯曲面上时可能被压成断续细线，先检查 frame、覆盖顺序与实际观看尺度；不要仅因机背窄就删除已认可的细回声。
 - 使用 `arrangement.py` 切格并镜像时让两半各自只用本半边的线（`"halves": "separate"`，`region` + `cuts` 自动设置）。否则另一半的镜像线会把本半边的格子多切一刀，一个种子只填到一小块，白色就漏了。
 - 缺口变宽后两肩红色变短，肩部大字挪到缺口前方、座舱旁的红色上。
 
 ## 9. 安装和用户评价
 
-- 交付后按用户要求装进游戏的 `UserSkins/`，每个任务只用一个固定文件夹，更新时覆盖，不再新建 `_vN` 文件夹。复制后逐字节核对，写安装记录。
+- 交付前按当前项目约定从游戏 ZIP 装进游戏的 `UserSkins/`，每个任务只用一个固定文件夹，更新时覆盖，不再新建 `_vN` 文件夹。复制后逐字节核对，写安装记录。
 - 不启动游戏，除非用户明确要求。用户在游戏里的意见优先于离线检查：J-10C v4 的离线检查（lint、面积比、1:1）全部通过，游戏里仍然被指出白色太弱，所以才有第 7 节的“游戏距离近景”。

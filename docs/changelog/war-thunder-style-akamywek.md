@@ -1,11 +1,12 @@
 # Akamywek 风格飞机涂装 · 更新记录
 
-以炭灰、指定色场、中轴白形与三角马赛克构成的飞机涂装工作流。当前版本重点确认无人物方法，人物放置仍待验证。
+以炭灰、指定色场、中轴白形与三角马赛克构成的飞机涂装工作流。当前版本收录双发无人物整机范本、获认可的双翼人物布局及立绘清晰度修复对照。
 
-[当前版本 1.16](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16) · [功能介绍](../skills/akamywek.md)
+[当前版本 1.21](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21) · [功能介绍](../skills/akamywek.md)
 
 | 版本 | 更新内容 | 下载 |
 | --- | --- | --- |
+| 1.21 | 收录 F-15C「青锋」双发无人物范本与「莱万汀」双翼布局，对照双翼眼线、下巴与露肩方向，补充最终 DDS 的眼部清晰度检查。 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21) |
 | 1.16 | 汇总 J-16、J-10C 已认可无人物基线；整块双色渐变、窄机身文字内收、分岛覆盖与局部修改；人物放置标为未验证。未采用 1.15 候选。 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16) |
 | 1.14 | 完善人物素材准备、辅助生成与干净抠图流程。 补充三角翼与单垂尾的人物布局，更新随附制作工具和参考资料。 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.14) |
 | 1.13 | 完善嵌套 V 的整块切缝构造、镜像与游戏距离可读性检查。 增加白色图形、描边和切缝的尺度要求。 | [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.13) |

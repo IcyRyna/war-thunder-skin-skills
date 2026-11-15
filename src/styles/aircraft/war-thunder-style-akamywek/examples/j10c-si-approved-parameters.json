@@ -1,0 +1,268 @@
+{
+  "forward_colour": {
+    "scope": "Connected nose, forward dorsal field, canopy frame and painted forward accessories",
+    "old_main": [
+      75,
+      136,
+      145
+    ],
+    "old_deep": [
+      50,
+      107,
+      118
+    ],
+    "new_main": [
+      165,
+      198,
+      155
+    ],
+    "new_deep": [
+      137,
+      167,
+      128
+    ],
+    "chroma_definition": "max(B-R-1,0)",
+    "rgb_gain": [
+      1.2999999523162842,
+      0.8999999761581421,
+      0.15000000596046448
+    ],
+    "material_unchanged": true
+  },
+  "all_accents": {
+    "main_jade": "#a5c69b",
+    "deep_jade": "#89a780",
+    "gold_retained": "#dfd44f",
+    "rgb_gain": [
+      1.2999999523162842,
+      0.8999999761581421,
+      0.15000000596046448
+    ],
+    "chroma": "max(B-R-1,0)",
+    "gradient_rule": "Retain direction, extent, mosaic and warm endpoint; continuously transform teal contribution",
+    "character_exclusion": "All source portrait layers plus two-pixel edge guard"
+  },
+  "right_root": {
+    "charts": [
+      {
+        "id": "fuse_y+_r",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "fuse",
+          "wing_r",
+          "slat_r"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            2566.4,
+            7589.7
+          ]
+        ],
+        "frame": {
+          "origin": [
+            2951.49,
+            8387.95
+          ],
+          "x": [
+            -540.331,
+            0.047
+          ],
+          "y": [
+            -2.172,
+            -541.423
+          ]
+        }
+      },
+      {
+        "id": "elevon_r_y+_r",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "elevon_r"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            4786.7,
+            6455.2
+          ]
+        ],
+        "frame": {
+          "origin": [
+            3024.56,
+            8414.9
+          ],
+          "x": [
+            -539.199,
+            12.227
+          ],
+          "y": [
+            -12.309,
+            -539.337
+          ]
+        }
+      },
+      {
+        "id": "elevon1_r_y+_r",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "elevon1_r"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            4839.4,
+            7483.8
+          ]
+        ],
+        "frame": {
+          "origin": [
+            3014.52,
+            8411.35
+          ],
+          "x": [
+            -542.87,
+            12.102
+          ],
+          "y": [
+            -11.483,
+            -538.682
+          ]
+        }
+      }
+    ],
+    "clip_edge_metres": 0.92,
+    "transition_width_metres": {
+      "hair": 0.2,
+      "clothing": 0.3
+    },
+    "alpha_curve": "smoothstep t*t*(3-2*t)",
+    "base_rgb": [
+      51,
+      51,
+      52
+    ],
+    "scope": "Right wing portrait and continuation over elevons; root strip; source assets unchanged"
+  },
+  "left_root": {
+    "charts": [
+      {
+        "id": "fuse_y+_l",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "fuse",
+          "wing_l",
+          "slat_l"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            2546.4,
+            645.3
+          ]
+        ],
+        "frame": {
+          "origin": [
+            2931.92,
+            -152.82
+          ],
+          "x": [
+            -540.29,
+            -0.02
+          ],
+          "y": [
+            2.058,
+            -541.345
+          ]
+        }
+      },
+      {
+        "id": "elevon_l_y+_l",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "elevon_l"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            4766.8,
+            1779.8
+          ]
+        ],
+        "frame": {
+          "origin": [
+            3002.14,
+            -178.86
+          ],
+          "x": [
+            -539.993,
+            -11.874
+          ],
+          "y": [
+            12.182,
+            -539.336
+          ]
+        }
+      },
+      {
+        "id": "elevon1_l_y+_l",
+        "u": "x",
+        "v": "z",
+        "nodes": [
+          "elevon1_l"
+        ],
+        "materials": [
+          "j_10c_aircraft_normal_detail_lo"
+        ],
+        "island": [
+          [
+            4820.1,
+            751.2
+          ]
+        ],
+        "frame": {
+          "origin": [
+            2994.39,
+            -176.75
+          ],
+          "x": [
+            -542.968,
+            -12.207
+          ],
+          "y": [
+            11.143,
+            -538.696
+          ]
+        }
+      }
+    ],
+    "clip_edge_metres": -0.92,
+    "transition_width_metres": {
+      "hair": 0.2,
+      "clothing": 0.3
+    },
+    "alpha_curve": "smoothstep t*t*(3-2*t)",
+    "base_rgb": [
+      51,
+      51,
+      52
+    ],
+    "scope": "Complete left wing and both elevons; previous right-root transition retained without another fade"
+  },
+  "note": "Case parameters only; build fresh UV charts for another aircraft. Full source layers remain in the livery source archive."
+}

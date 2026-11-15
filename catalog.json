@@ -61,22 +61,154 @@
       "id": "war-thunder-style-akamywek",
       "kind": "style",
       "status": "released_baseline",
-      "description": "Akamywek 无人物飞机涂装：已认可中轴白形、双色渐变、原生 UV 与窄机身字组适配；人物放置仍待验证。",
+      "description": "Akamywek 喷气机无人物与人物涂装。按真实机型和原生 UV 安排机背、翼尾、人物朝向与有效清晰度。",
       "source": "src/styles/aircraft/war-thunder-style-akamywek",
       "includes": [
         {
-          "source": "toolkits/aircraft/scripts",
-          "target": "scripts"
+          "source": "toolkits/aircraft/scripts/arrangement.py",
+          "target": "scripts/arrangement.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/art_cutout.py",
+          "target": "scripts/art_cutout.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/artifact_io.py",
+          "target": "scripts/artifact_io.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/atlas_palette.py",
+          "target": "scripts/atlas_palette.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/build_skin.py",
+          "target": "scripts/build_skin.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/compare_skin.py",
+          "target": "scripts/compare_skin.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/composa_mcp.py",
+          "target": "scripts/composa_mcp.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/dds_variant.py",
+          "target": "scripts/dds_variant.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/fetch_asset.py",
+          "target": "scripts/fetch_asset.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/finish_preview.py",
+          "target": "scripts/finish_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/panel_lines.py",
+          "target": "scripts/panel_lines.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/replica_check.py",
+          "target": "scripts/replica_check.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/replica_measure.py",
+          "target": "scripts/replica_measure.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/structure_layer.py",
+          "target": "scripts/structure_layer.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/style_board.py",
+          "target": "scripts/style_board.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/surface_preview.py",
+          "target": "scripts/surface_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_arrangement.py",
+          "target": "scripts/test_arrangement.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_art_cutout.py",
+          "target": "scripts/test_art_cutout.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_artifact_io.py",
+          "target": "scripts/test_artifact_io.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_atlas_palette.py",
+          "target": "scripts/test_atlas_palette.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_coat_material.py",
+          "target": "scripts/test_coat_material.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_comparison.py",
+          "target": "scripts/test_comparison.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_finish_preview.py",
+          "target": "scripts/test_finish_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_io_tools.py",
+          "target": "scripts/test_io_tools.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_panel_lines.py",
+          "target": "scripts/test_panel_lines.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_projection_contract.py",
+          "target": "scripts/test_projection_contract.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_replica_check.py",
+          "target": "scripts/test_replica_check.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_replica_measure.py",
+          "target": "scripts/test_replica_measure.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_scene_preview.py",
+          "target": "scripts/test_scene_preview.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_structure_layer.py",
+          "target": "scripts/test_structure_layer.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_style_board.py",
+          "target": "scripts/test_style_board.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_surface_workflow.py",
+          "target": "scripts/test_surface_workflow.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/test_vector_paint.py",
+          "target": "scripts/test_vector_paint.py"
+        },
+        {
+          "source": "toolkits/aircraft/scripts/uv_frame.py",
+          "target": "scripts/uv_frame.py"
         }
       ],
       "supplements": [],
       "baseline": {
-        "version": "1.16",
-        "tag": "war-thunder-style-akamywek/v1.16",
-        "package_sha256": "afcd000c391620b96d95b7041920948843152ac1aa4a9e7dae7d5c404d0f7616",
-        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16",
-        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.16/war-thunder-style-akamywek-v1.16.skill.zip",
-        "package_bytes": 1399446
+        "version": "1.21",
+        "tag": "war-thunder-style-akamywek/v1.21",
+        "package_sha256": "263b98281eb1ad7593b7bc724cbb6758a34f4c0ccb396ddbd232e0831924e56f",
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.21/war-thunder-style-akamywek-v1.21.skill.zip",
+        "package_bytes": 5646115
       },
       "documentation": "docs/skills/akamywek.md",
       "changelog": "docs/changelog/war-thunder-style-akamywek.md"
@@ -277,7 +409,7 @@
     {
       "id": "wt-style-akamywek",
       "kind": "style",
-      "status": "released",
+      "status": "archived_read_only",
       "description": "Akamywek飞机线条与立绘布局：按单发、双发和鸭式分支，结合原生UV、分层编辑、Blender与按需生图素材；保留实际验证边界。",
       "source": "src/styles/aircraft/wt-style-akamywek",
       "includes": [

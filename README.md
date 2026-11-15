@@ -24,7 +24,7 @@
 | --- | --- | --- | --- |
 | 炭灰工业涂装 · 地面载具 | AZUR v29范本：大斜切碎片、蜂窝与数码纹样场、身份铭牌、人字警示与车尾斜条，三层装饰防止太素 | [0.2.0 · Skill/素材分包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.2.0) | [制作精髓与示例](docs/skills/charcoal-industrial.md) |
 | 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
-| Akamywek 风格 · 飞机 | 已认可无人物布局、双色渐变、字组内收和原生 UV 适配；人物仍待验证 | [1.16](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.16) | [方法与验证范围](docs/skills/akamywek.md) |
+| Akamywek 风格 · 飞机 | F-15C 双发无人物布局、双翼不同立绘的脸肩朝向、原生 UV 与最终 DDS 检查 | [1.21](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21) | [方法与验证范围](docs/skills/akamywek.md) |
 
 每个正式安装包都能独立使用，自带对应版本的说明、工具和必要素材。完整下载记录见[下载中心](releases/README.md)，旧终末地 1.4 等版本见[历史档案](docs/history/README.md)。
 

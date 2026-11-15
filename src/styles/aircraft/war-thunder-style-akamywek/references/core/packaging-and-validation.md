@@ -12,6 +12,17 @@
 
 ## DDS 与实际 mip
 
+先看 [J-10C 祀实机格式对照](../current-approved-j10c-si.md#dds紫边与材质)。本例带 DX10 扩展头的 RGBA8 DDS 加载失败；传统头 BGRA8 无压缩 DDS 可加载且紫边消失或明显减轻。下述旧 `dds_variant.py` 会产生 DX10 头，其离线校验通过不代表该游戏加载器兼容，不能据此覆盖现用可加载方案。
+
+1.20 提供不依赖外部编码器的同格式路径（Pillow、NumPy）：
+
+```powershell
+python -B scripts/legacy_dds.py export --input colour.png --out output/colour.dds
+python -B scripts/legacy_dds.py check --dds output/colour.dds --source colour.png
+```
+
+该工具保留8位RGBA并拒绝覆盖现有文件，验证传统头、掩码、单层与源像素；不自动安装或改变材质。选择格式仍按目标游戏的已验证兼容性。
+
 `dds_variant.py` 接受已检查 TGA／BLK 目录，`--texconv` 指向受支持的官方 DirectXTex。当前代码校验固定 May 2026 二进制与哈希，二进制不内置；缺依赖或版本不符明确失败。
 
 ```powershell
@@ -35,6 +46,16 @@ python scripts/inspect_skins.py preview textures/body.tga --out output/texture-c
 
 工具不查游戏资源库、不执行 include、不验证 UV、不自动修复。普通二维顶层预览上限8192²；DDS 数组／体／立方体不生成该预览。
 
+## 从最终 ZIP 验证安装
+
+`verify_game_zip.py` 直接读取最终游戏 ZIP，在系统临时目录检查 BLK 与实际成员。一个涂装目录、一份机型 BLK，只收 BLK 真正引用的 DDS/TGA；缺失目标、歧义映射、重复名、未引用贴图及附带说明均不通过。签收对象是 ZIP，不是可能含旧文件的构建目录。已按约定从 ZIP 安装后传实际 `UserSkins`，逐文件比 SHA-256，不写游戏目录，不移除其他既有文件。同机历史作品可能重用相同内部目录和 BLK 名（例如 J-10C 两个认可版都叫 `J10C_Si`，一个引用 TGA，另一个引用 DDS）。归档与对照以作品、ZIP SHA 和引用纹理区分，不能从文件夹名猜作品；确认本次实际安装对象，审计既有作品无须轮流覆盖安装。只交付候选 Skill 而没有新游戏包时无需安装 Skill。
+
+```powershell
+python -B scripts/verify_game_zip.py "当前涂装.zip" --user-skins "D:/WarThunder/UserSkins"
+```
+
+未压缩颜色 DDS 及原始 TGA 即使头部有效也必须包含足够的像素数据。静态长度下限不验证像素内容，RLE、非常见 DDS 格式等另作解码；对选定的传统头 BGRA8 仍用 `legacy_dds.py check --source` 核验完整合同。非游戏包（源码 ZIP、多涂装集合等）不使用此命令。
+
 ## 模型与实际效果
 
 按本次受影响部位选择模型视图，复用项目已有相机和显示比例；整套七视图仅在用户明确要求时生成。记录各表面实际检查视角、尺度和未检查范围，补看必需面并修复可离线确认的缺陷；能力限制可交受限候选，但不得标全通过。具体构图标准见 [美术设计](art-direction.md)。
@@ -43,13 +64,13 @@ python scripts/inspect_skins.py preview textures/body.tga --out output/texture-c
 
 发白与质感按 [材质检查](materials-and-uv.md#质感检查) 固定变量对照，实际环境图、投诉近景及输入收据随当前版保留。无人物机腹检查最终贴图的模型映射，必要时用 [人物遮罩诊断](orthographic-workflow.md#人物-uv-遮罩诊断)；底视源稿无人物不足以通过。
 
-安装效果与预览不同时，先读现用 checkpoint 和实际重建入口，核对加载模块／runtime、参数、BLK、贴图身份、尺寸与编码。公开源码或 Skill 已同步不证明任务私有 bundle 已用修复；新输出须绑定真实入口和当前输入。源码可能新于最后已建 SVG，不能用浮动源替代旧快照结论。
+安装效果与预览不同时，先读现用 checkpoint 和实际重建入口，核对加载模块／runtime、参数、BLK、贴图身份、尺寸与编码。公开源码或 Skill 已同步不证明任务私有 bundle 已用修复；新输出须绑定真实入口和当前输入。源码可能新于最后已建 SVG 或设计 JSON。交付包和源码包要互相绑定；回归以最终源码 ZIP 中和构建收据哈希一致的设计稿为准。活动目录同名稿若已被下一轮修改，不可将它与旧包直接判差。
 
 按用户约定做离线或游戏检查，未实机、未知透明度、活动／损伤状态和运行时过滤明确保留范围。交付说明给实际位置、安装方式、变更、检查与限制；发布与第三方发送按授权。
 
 ## 原尺寸检查
 
-8192 的颜色图缩到 1600 px 看，2 px 的线、断线、台阶锯齿、立绘边上的灰雾和原厂贴图碎片都看不出来；莱万汀 v3 就是这样带着脏线交付的。交付前在原尺寸下看每个部位：
+8192 的颜色图缩到 1600 px 看，2 px 的线、断线、台阶锯齿、立绘边上的灰雾和原厂贴图碎片都看不出来；莱万汀 v3 就是这样带着脏线交付的。交付前在原尺寸下看每个部位。如何区分 1:1 原图与已缩放的同米制参考，以及如何标定观察相机，见[两种尺度](view-scale.md)。
 
 ```powershell
 python -B scripts/detail_sheet.py --color output/paint/color.png --px-per-m 520 --region spine=3900,3300,480 --region wingtip=1200,5600,480 --auto 4 --ref F-2A=reference/f_2a.dds --ref-px-per-m 550 --ref-region spine=2700,3550,480 --out output/detail-v1
