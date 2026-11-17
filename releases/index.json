@@ -4,6 +4,27 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "war-thunder-style-akamywek/v1.30",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.30",
+      "published_at": "2026-11-17T16:57:56Z",
+      "draft": false,
+      "prerelease": false,
+      "validation": {
+        "package_files": 147,
+        "remote_download_sha256_equal": true,
+        "art": "F-15EX satin-metallic PBR, CFT integration, dark shroud & fin/tailplane spacing refined",
+        "game": "in_game_verified_f15ex_pre_fix_and_reinstalled"
+      },
+      "assets": [
+        {
+          "name": "war-thunder-style-akamywek-v1.30.skill.zip",
+          "bytes": 5657060,
+          "digest": "sha256:06eec6ea5dba9de6a1250a28c8aa26153985079856a4ec966de8dd13e03ba5c0",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.30/war-thunder-style-akamywek-v1.30.skill.zip"
+        }
+      ]
+    },
+    {
       "tag": "war-thunder-style-akamywek/v1.21",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.21",
       "published_at": "2026-11-15T05:24:26Z",
