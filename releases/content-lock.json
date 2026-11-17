@@ -361,13 +361,13 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.3",
-      "original_archive_sha256": "fdb6ec2a252993a77558f3a875d08c374c4cef6af3626373b87207c1512efb67",
+      "tag": "war-thunder-style-akamywek/v1.30",
+      "original_archive_sha256": "06eec6ea5dba9de6a1250a28c8aa26153985079856a4ec966de8dd13e03ba5c0",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 12882,
-          "sha256": "150aa5bfb80da9f0676c98f3f3d21e1a8c5670445e5e2a69347e41d98c82072b"
+          "bytes": 12939,
+          "sha256": "4d75bc86aea49fbbaadbe115888191767133e8f50fd9058f0693ae3aea1cd773"
         },
         {
           "path": "agents/openai.yaml",

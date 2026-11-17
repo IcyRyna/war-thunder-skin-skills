@@ -16,7 +16,7 @@
 | --- | --- |
 | [终末地历史封存](history/endfield-archived.md) | 旧 0.1.x／1.x，停止维护，仅作历史恢复 |
 | [通用飞机痛涂](skills/jet-liveries.md) | 人物、UV、材质与飞机交付 |
-| [Akamywek 喷气机涂装 1.3](skills/akamywek.md) | 缎面金属 PBR 预设、去波纹细节法线与文字徽记防逼挤检查 |
+| [Akamywek 喷气机涂装 1.30](skills/akamywek.md) | 缎面金属 PBR 预设、去波纹细节法线与文字徽记防逼挤检查 |
 | [历史五车型布局图解](skills/endfield-layout-guide.md) | 参考关系、部件分区与方向建议 |
 | [历史终末地 0.1.1 全览](skills/wt-style-endfield-0.1.1.md) | 逐条规则、可选预设和全部素材 |
 
