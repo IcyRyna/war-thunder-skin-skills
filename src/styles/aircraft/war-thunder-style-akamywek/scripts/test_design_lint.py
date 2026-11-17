@@ -152,6 +152,29 @@ class DesignLintTests(unittest.TestCase):
         self.assertEqual({h['where'] for h in renamed['hits'] if h['code'] == 'outline-frame'}, {lone['id']})
         self.assertEqual({h['where'] for h in renamed['hits'] if h['code'] == 'thin-white-line'}, {lone['id']})
 
+    def test_crowded_and_overlapping_placements_are_flagged(self):
+        (self.root / 'badge.png').write_bytes(b'badge')
+        design = dict(schema_version=1, charts=[dict(id='fin', u='x', v='y')], palette=dict(base='#333334', hi='#ececec', sig='#eab818'), layers=[
+            dict(name='rims', items=[
+                dict(id='leading-box', type='polygon', chart='fin', points=[[-6.66, 2.80], [-6.49, 2.80], [-6.53, 3.04], [-6.70, 3.04]], fill='hi'),
+            ]),
+            dict(name='type', images=[
+                dict(id='emblem-too-close', chart='fin', source='badge.png', center=[-6.88, 2.86], width=0.50),
+                dict(id='main-id', chart='fin', text='F-15EX', height=0.22, tracking=0.08, center=[-6.12, 1.38], color='hi'),
+                dict(id='sub-too-close', chart='fin', text='SUB', height=0.08, tracking=0.20, center=[-6.12, 1.48], color='hi'),
+            ])])
+        _, codes = self.lint(design)
+        self.assertIn('crowded-placement', codes)
+        self.assertIn('overlapping-placement', codes)
+        # Moving emblem aft and removing the overlapping sub-line resolves both warnings
+        design['layers'][1]['images'] = [
+            dict(id='emblem-clear', chart='fin', source='badge.png', center=[-7.10, 2.82], width=0.50),
+            dict(id='main-id', chart='fin', text='F-15EX', height=0.22, tracking=0.08, center=[-6.12, 1.38], color='hi'),
+        ]
+        _, clean_codes = self.lint(design)
+        self.assertNotIn('crowded-placement', clean_codes)
+        self.assertNotIn('overlapping-placement', clean_codes)
+
 
 if __name__ == '__main__':
     unittest.main()

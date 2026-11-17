@@ -25,6 +25,13 @@ from PIL import Image
 from artifact_io import ArtifactError, ArtifactTransaction
 
 Image.MAX_IMAGE_PIXELS = 8192 * 8192
+FLAT_DETAIL_RGBA = (198, 128, 255, 128)
+PRESETS = {
+    'dark': dict(r=173, b=0, structure=0.0, flat_g=None, flat_a=None),
+    'pale': dict(r=228, b=56, structure=0.0, flat_g=None, flat_a=None),
+    # Calibrated from [Bronya][Cy30][D-9A][SFW] (su_30sm_n.dds / n_n.dds): silky metallic reflection without mirror/glass blow-out.
+    'metallic-satin': dict(r=163, b=188, structure=0.0, flat_g=128, flat_a=128),
+}
 
 
 def flat_code(plane):
@@ -50,26 +57,34 @@ def protection_mask(path, size):
 
 
 def run(args):
+    preset = PRESETS[args.preset] if getattr(args, 'preset', None) else PRESETS['dark']
+    r_val = preset['r'] if getattr(args, 'r', None) is None else args.r
+    b_val = preset['b'] if getattr(args, 'b', None) is None else args.b
+    structure = preset['structure'] if getattr(args, 'structure', None) is None else args.structure
+    flat_g_opt = preset['flat_g'] if getattr(args, 'flat_g', None) is None else args.flat_g
+    flat_a_opt = preset['flat_a'] if getattr(args, 'flat_a', None) is None else args.flat_a
+    flat_detail_out = getattr(args, 'flat_detail_out', None)
+
     normal_path = args.normal.resolve()
     inputs = [normal_path] + ([args.protect.resolve()] if args.protect else [])
     out = args.out.resolve()
     if out.exists() and any(out.iterdir()):
         raise ArtifactError('--out must be a new or empty directory')
-    if not (0 <= args.r <= 255 and 0 <= args.b <= 255):
+    if not (0 <= r_val <= 255 and 0 <= b_val <= 255):
         raise ValueError('--r and --b are 0-255')
-    if not 0 <= args.structure <= 1:
+    if not 0 <= structure <= 1:
         raise ValueError('--structure is 0-1 (share of the original groove depth kept)')
-    if any(v is not None and not 0 <= v <= 255 for v in (args.flat_g, args.flat_a)):
+    if any(v is not None and not 0 <= v <= 255 for v in (flat_g_opt, flat_a_opt)):
         raise ValueError('--flat-g and --flat-a must be byte values')
     with Image.open(normal_path) as bitmap:
         original = np.asarray(bitmap.convert('RGBA'))
     h, w = original.shape[:2]
-    g0 = args.flat_g if args.flat_g is not None else flat_code(original[:, :, 1])
-    a0 = args.flat_a if args.flat_a is not None else flat_code(original[:, :, 3])
+    g0 = flat_g_opt if flat_g_opt is not None else flat_code(original[:, :, 1])
+    a0 = flat_a_opt if flat_a_opt is not None else flat_code(original[:, :, 3])
     coat = np.empty_like(original)
-    coat[:, :, 0], coat[:, :, 2] = args.r, args.b
+    coat[:, :, 0], coat[:, :, 2] = r_val, b_val
     for ch, flat in ((1, g0), (3, a0)):
-        keep = flat + args.structure * (original[:, :, ch].astype(np.float32) - flat)
+        keep = flat + structure * (original[:, :, ch].astype(np.float32) - flat)
         coat[:, :, ch] = np.clip(np.rint(keep), 0, 255).astype(np.uint8)
     protected = np.zeros((h, w), bool)
     mask_sampling = None
@@ -78,18 +93,29 @@ def run(args):
         coat[protected] = original[protected]
     names = {'R': 0, 'G': 1, 'B': 2, 'A': 3}
     outputs = [out / 'material.png'] + [out / f'material_{c}.png' for c in names] + [out / 'receipt.json']
+    detail_path = flat_detail_out.resolve() if flat_detail_out else None
+    if detail_path:
+        if detail_path.exists():
+            raise ArtifactError('--flat-detail-out target already exists')
+        outputs.append(detail_path)
     with ArtifactTransaction(outputs, inputs=inputs, label='coat-material') as transaction:
         staged = {p: transaction.stage(p) for p in outputs}
         Image.fromarray(coat, 'RGBA').save(staged[outputs[0]])
         for c, i in names.items():
             Image.fromarray(coat[:, :, i], 'L').save(staged[out / f'material_{c}.png'])
+        if detail_path:
+            detail_img = np.empty((512, 512, 4), dtype=np.uint8)
+            detail_img[:, :] = FLAT_DETAIL_RGBA
+            Image.fromarray(detail_img, 'RGBA').save(staged[detail_path])
         receipt = dict(schema_version=1, tool='coat_material.py', contract='R inverted roughness, B metallic, G/A normal (assumed; confirm per resource)',
                        inputs={str(p): hashlib.sha256(p.read_bytes()).hexdigest() for p in inputs}, size=[w, h],
-                       coat=dict(R=args.r, B=args.b, flat_G=g0, flat_A=a0, structure_kept=args.structure),
+                       preset=getattr(args, 'preset', None),
+                       coat=dict(R=r_val, B=b_val, flat_G=g0, flat_A=a0, structure_kept=structure),
                        protected_share=round(float(protected.mean()), 4),
                        protected_texels=int(protected.sum()), mask_sampling=mask_sampling,
+                       flat_detail_normal=str(detail_path) if detail_path else None,
                        scope='Material only; the color map is untouched. Check in game or with finish_preview.py in two environments.')
-        staged[outputs[-1]].write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
+        staged[outputs[5]].write_text(json.dumps(receipt, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         transaction.commit()
     return receipt
 
@@ -97,12 +123,14 @@ def run(args):
 def main(argv=None):
     parser = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     parser.add_argument('--normal', type=Path, required=True, help='Original packed material map (PNG/TGA): size and flat normal code')
-    parser.add_argument('--r', type=int, default=173, help='Coat smoothness R (default 173, the reference dark-coat value; 228 for a white/pale coat)')
-    parser.add_argument('--b', type=int, default=0, help='Coat metallic B (default 0; up to ~56 for a pale pearl coat)')
-    parser.add_argument('--structure', type=float, default=0., help='Share of the original G/A groove depth kept, 0-1 (default 0: flat)')
-    parser.add_argument('--flat-g', type=int, help='Flat code for G (default: most common G value of the original)')
-    parser.add_argument('--flat-a', type=int, help='Flat code for A (default: most common A value of the original)')
+    parser.add_argument('--preset', choices=sorted(PRESETS), help='Named finish preset: dark (R173/B0), pale (R228/B56), or metallic-satin (R163/B188 flat 128)')
+    parser.add_argument('--r', type=int, help='Coat smoothness R (default 173, the reference dark-coat value; 228 for pale; 163 for metallic-satin)')
+    parser.add_argument('--b', type=int, help='Coat metallic B (default 0; ~56 for pale; 188 for metallic-satin)')
+    parser.add_argument('--structure', type=float, help='Share of the original G/A groove depth kept, 0-1 (default 0: flat)')
+    parser.add_argument('--flat-g', type=int, help='Flat code for G (default: most common G value of the original, or preset flat_g)')
+    parser.add_argument('--flat-a', type=int, help='Flat code for A (default: most common A value of the original, or preset flat_a)')
     parser.add_argument('--protect', type=Path, help='Registered grayscale UV mask: nonzero preserves original RGBA. Integer downscale protects any covered source texel.')
+    parser.add_argument('--flat-detail-out', type=Path, help='Optional output PNG path for a 512x512 neutral flat detail normal (RGBA 198,128,255,128)')
     parser.add_argument('--out', type=Path, required=True, help='New or empty output directory')
     receipt = run(parser.parse_args(argv))
     print(json.dumps(dict(size=receipt['size'], coat=receipt['coat'], protected_share=receipt['protected_share'])))

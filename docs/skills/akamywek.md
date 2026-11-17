@@ -1,6 +1,6 @@
 # Akamywek 风格喷气机涂装
 
-`war-thunder-style-akamywek` **1.21** 用于在《战争雷霆》喷气机的原生 UV 上制作炭灰、签名色与锐角白形组成的涂装。可从整机无人物布局起步，也可在选定的布局上安排角色。[下载 1.21 安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.21/war-thunder-style-akamywek-v1.21.skill.zip) · [安装说明](../installation.md) · [版本记录](../changelog/war-thunder-style-akamywek.md)
+`war-thunder-style-akamywek` **1.3** 用于在《战争雷霆》喷气机的原生 UV 上制作炭灰、签名色与锐角白形组成的涂装。可从整机无人物布局起步，也可在选定的布局上安排角色。[下载 1.3 安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3/war-thunder-style-akamywek-v1.3.skill.zip) · [安装说明](../installation.md) · [版本记录](../changelog/war-thunder-style-akamywek.md)
 
 ## 先看对应作品
 
@@ -16,3 +16,8 @@
 已有的 J-16、J-10C 及 F-16C 案例分别展示双发宽机背、窄机身和单垂尾的处理。按目标机重新确定可绘制的蒙皮、活动面和共享 UV。机身、主翼、翼尖和平尾的色块按目标轮廓落位，三角马赛克和双色渐变沿对应机体表面接续。包内的原生绘制、机位标定、模型检查与封包脚本，可用于从设计稿一直复核到安装的 DDS。
 
 [风格源码](../../src/styles/aircraft/war-thunder-style-akamywek/) · [维护指南](../maintaining.md) · [返回首页](../../README.md)
+
+## 1.3 材质与排布更新
+
+- 新增缎面高金属清漆预设 `coat_material.py --preset metallic-satin`（`R=163, B=188, G/A=128, 128`）及 `--flat-detail-out` 中性平铺细节法线，消除高反光下的“水波纹”。
+- 在 `design_lint.py` 新增同图幅重叠与净距防逼挤检查（`overlapping-placement` / `crowded-placement`），结合 F-15EX 实机经验明确平尾内收、垂尾徽章居中与删减拥挤小副标原则。

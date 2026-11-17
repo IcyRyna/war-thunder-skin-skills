@@ -361,13 +361,13 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.21",
-      "original_archive_sha256": "263b98281eb1ad7593b7bc724cbb6758a34f4c0ccb396ddbd232e0831924e56f",
+      "tag": "war-thunder-style-akamywek/v1.3",
+      "original_archive_sha256": "fdb6ec2a252993a77558f3a875d08c374c4cef6af3626373b87207c1512efb67",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 11884,
-          "sha256": "a3c267f50561687cdd5ed9c7d4301907d8f9cda253c88650221909abeb51117d"
+          "bytes": 12882,
+          "sha256": "150aa5bfb80da9f0676c98f3f3d21e1a8c5670445e5e2a69347e41d98c82072b"
         },
         {
           "path": "agents/openai.yaml",
@@ -511,8 +511,8 @@
         },
         {
           "path": "references/core/materials-and-uv.md",
-          "bytes": 13499,
-          "sha256": "2764e2183b2ff7ddf85e5f9cac18f891d3f27d02044c7f36a758a4f7ccd94ca0"
+          "bytes": 15422,
+          "sha256": "2a58d0ae43e9c9bbfb077d866885e4e8076553b8ed8ccb235b66ddac9952004c"
         },
         {
           "path": "references/core/native-checks.md",
@@ -551,8 +551,8 @@
         },
         {
           "path": "references/core/taste-corrections.md",
-          "bytes": 12549,
-          "sha256": "41cb22e4b674b342d73fc35ac322843cbc3db5cfd1e326ab749580f2c08471ad"
+          "bytes": 12947,
+          "sha256": "ac17ffe4ab196313c9581b4a6d643d1a7ce70defe9b9c40ab17f37ce39ff9838"
         },
         {
           "path": "references/core/uv-native-replica.md",
@@ -771,13 +771,13 @@
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 9909,
-          "sha256": "1a6ddf81c10fd64bd8a7a4feacc88f12f7ae6e2a82be83fb5e2dd24ea7307d0f"
+          "bytes": 10308,
+          "sha256": "f4fcff24c095448dbdbf44ae1a41be9b2813f291da189b8e7bb7b9d44db475ec"
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 5850,
-          "sha256": "bf801d5b819eca38753f1e0f158ad1ddeac6c0394177ff10410f8a257a757e70"
+          "bytes": 6657,
+          "sha256": "e5652fefdb9ef395e421eef75ce2abe0b3e8b41812fed96027df44342b97d849"
         },
         {
           "path": "scripts/aircraft_markings.py",
@@ -831,8 +831,8 @@
         },
         {
           "path": "scripts/coat_material.py",
-          "bytes": 6262,
-          "sha256": "f036011c7f8a8a97aad8883ab84e332f16d3526033ccbcdc596b2f9cc380c39f"
+          "bytes": 8147,
+          "sha256": "aa766e30577fe6b1ac2b656ad2b95f825bf09da2d7a3e1375a3aded6c6906410"
         },
         {
           "path": "scripts/compare_skin.py",
@@ -851,8 +851,8 @@
         },
         {
           "path": "scripts/design_lint.py",
-          "bytes": 26519,
-          "sha256": "b9d2efa514a0dd18b1aa302be27796b879189fb677a509cb7e79500de0c97b07"
+          "bytes": 33644,
+          "sha256": "b863572e64fba08bcf1667c46e2ebaa9c2eddfd1b949b5371b65a84e0bf1a41f"
         },
         {
           "path": "scripts/detail_sheet.py",
@@ -986,8 +986,8 @@
         },
         {
           "path": "scripts/test_coat_material.py",
-          "bytes": 2798,
-          "sha256": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611"
+          "bytes": 3491,
+          "sha256": "7d969cd6f84aa2cd4bd76fc6016f8a77fa9f0c9bb52a244309d04e1bcdf20818"
         },
         {
           "path": "scripts/test_comparison.py",
@@ -1001,8 +1001,8 @@
         },
         {
           "path": "scripts/test_design_lint.py",
-          "bytes": 10498,
-          "sha256": "fe82a92a0af2c64606698f32cd2a9327bf60a5489ce9612e4456a43455800d5c"
+          "bytes": 12068,
+          "sha256": "8ac5bc0aa6cec758c11b2e22064484178dded56a95aa1cead7c24ae855205b00"
         },
         {
           "path": "scripts/test_detail_sheet.py",

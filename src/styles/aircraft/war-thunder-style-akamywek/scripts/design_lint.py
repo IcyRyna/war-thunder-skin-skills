@@ -424,6 +424,161 @@ def check_images(design, design_dir, report):
                        'Give every portrait position its own source image; find more official art if needed.')
 
 
+def _rot_aabb(cx, cy, w, h, rot_deg):
+    a = math.radians(rot_deg)
+    ca, sa = abs(math.cos(a)), abs(math.sin(a))
+    hw = 0.5 * (w * ca + h * sa)
+    hh = 0.5 * (w * sa + h * ca)
+    return (cx - hw, cy - hh, cx + hw, cy + hh)
+
+
+def _point_in_poly(x, y, pts):
+    inside = False
+    n = len(pts)
+    for i in range(n):
+        x0, y0 = pts[i]
+        x1, y1 = pts[(i + 1) % n]
+        if (y0 > y) != (y1 > y):
+            xi = x0 + (y - y0) * (x1 - x0) / (y1 - y0)
+            if x < xi:
+                inside = not inside
+    return inside
+
+
+def _pt_seg_dist(px, py, ax, ay, bx, by):
+    vx, vy = bx - ax, by - ay
+    l2 = vx * vx + vy * vy
+    if l2 <= 1e-12:
+        return math.hypot(px - ax, py - ay)
+    t = max(0.0, min(1.0, ((px - ax) * vx + (py - ay) * vy) / l2))
+    return math.hypot(px - (ax + t * vx), py - (ay + t * vy))
+
+
+def _seg_intersects(a0, a1, b0, b1):
+    def ccw(p, q, r):
+        return (r[1] - p[1]) * (q[0] - p[0]) > (q[1] - p[1]) * (r[0] - p[0])
+    return ccw(a0, b0, b1) != ccw(a1, b0, b1) and ccw(a0, a1, b0) != ccw(a0, a1, b1)
+
+
+def _box_poly_gap(box, pts):
+    u0, v0, u1, v1 = box
+    corners = [(u0, v0), (u1, v0), (u1, v1), (u0, v1)]
+    bedges = list(zip(pts, pts[1:] + pts[:1]))
+    cedges = list(zip(corners, corners[1:] + corners[:1]))
+    for x, y in pts:
+        if u0 <= x <= u1 and v0 <= y <= v1:
+            return 0.0
+    for cx, cy in corners:
+        if _point_in_poly(cx, cy, pts):
+            return 0.0
+    for ca, cb in cedges:
+        for pa, pb in bedges:
+            if _seg_intersects(ca, cb, pa, pb):
+                return 0.0
+    best = float('inf')
+    for pa, pb in bedges:
+        for cx, cy in corners:
+            best = min(best, _pt_seg_dist(cx, cy, pa[0], pa[1], pb[0], pb[1]))
+    for px, py in pts:
+        for ca, cb in cedges:
+            best = min(best, _pt_seg_dist(px, py, ca[0], ca[1], cb[0], cb[1]))
+    return best
+
+
+def check_spacing(design, design_dir, palette, report, min_clearance=0.04):
+    """Flag text or small emblems/decals that overlap or crowd adjacent placements or decorative shapes."""
+    aspect_cache = {}
+    placed = []
+    for layer in design.get('layers', []):
+        for spec in layer.get('images', []):
+            center = spec.get('center')
+            chart = spec.get('chart')
+            if not (isinstance(center, list) and len(center) == 2 and chart):
+                continue
+            cx, cy = float(center[0]), float(center[1])
+            rot = float(spec.get('rotation', 0))
+            where = spec.get('id', spec.get('source', '?'))
+            if 'text' in spec:
+                h = float(spec.get('height', 0))
+                txt = spec['text']
+                trk = float(spec.get('tracking', 0))
+                w = max(h * 0.65, h * (0.68 * len(txt) + trk * max(0, len(txt) - 1)))
+                box = _rot_aabb(cx, cy, w, h * 1.12, rot)
+                placed.append((chart, where, (cx, cy), box, 'text', h))
+            elif 'source' in spec:
+                w = float(spec.get('width', 0))
+                if 0 < w < 2.0:
+                    src_path = (design_dir / spec['source']).resolve()
+                    if src_path not in aspect_cache:
+                        ratio = 1.0
+                        if src_path.is_file():
+                            try:
+                                from PIL import Image
+                                with Image.open(src_path) as im:
+                                    ratio = im.size[1] / max(1, im.size[0])
+                            except Exception:
+                                pass
+                        aspect_cache[src_path] = ratio
+                    h = w * aspect_cache[src_path]
+                    box = _rot_aabb(cx, cy, w, h, rot)
+                    placed.append((chart, where, (cx, cy), box, 'decal', h))
+
+    # Pairwise check between placed text/decals on the same chart
+    for i in range(len(placed)):
+        c1, id1, p1, b1, _, _ = placed[i]
+        for j in range(i + 1, len(placed)):
+            c2, id2, p2, b2, _, _ = placed[j]
+            if c1 != c2 or (p1 == (0.0, 0.0) and p2 == (0.0, 0.0)):
+                continue
+            dx = max(0.0, max(b1[0], b2[0]) - min(b1[2], b2[2]))
+            dy = max(0.0, max(b1[1], b2[1]) - min(b1[3], b2[3]))
+            gap = math.hypot(dx, dy)
+            if gap == 0.0:
+                report.add('warn', 'overlapping-placement', f'{id1} / {id2} (chart {c1})',
+                           'bounding boxes overlap on the same chart',
+                           'Separate or trim competing lettering/decals so each keeps clear breathing room.')
+            elif gap < 0.025:
+                report.add('warn', 'crowded-placement', f'{id1} / {id2} (chart {c1})',
+                           f'only {gap * 100:.1f} cm apart on the same chart',
+                           'Increase spacing or remove the redundant secondary label.')
+
+    # Proximity check for decals and major lettering (>= 0.10 m) against substantial decorative polygons
+    base_rgb = hex_rgb(palette['base'], palette) if 'base' in palette else None
+    for layer in design.get('layers', []):
+        for item in layer.get('items', []):
+            if item.get('type') != 'polygon':
+                continue
+            chart = item.get('chart')
+            pts = [tuple(map(float, p)) for p in item.get('points', [])]
+            if len(pts) < 3 or not chart:
+                continue
+            colors = [hex_rgb(c, palette) for c in fill_colors(item.get('fill'))]
+            if base_rgb and colors and all(c == base_rgb for c in colors):
+                continue
+            xs = [p[0] for p in pts]
+            ys = [p[1] for p in pts]
+            span_u, span_v = max(xs) - min(xs), max(ys) - min(ys)
+            area = span_u * span_v
+            if min(span_u, span_v) < 0.06 or area >= 4.0:
+                continue
+            shape_id = item.get('id', '?')
+            for c_p, p_id, center_xy, box, kind, p_height in placed:
+                if c_p != chart or center_xy == (0.0, 0.0):
+                    continue
+                if kind == 'text' and p_height < 0.10:
+                    continue
+                if _point_in_poly(center_xy[0], center_xy[1], pts):
+                    edge_dist = min(_pt_seg_dist(center_xy[0], center_xy[1], a[0], a[1], b[0], b[1])
+                                    for a, b in zip(pts, pts[1:] + pts[:1]))
+                    if edge_dist >= 0.04:
+                        continue
+                gap = _box_poly_gap(box, pts)
+                if gap < min_clearance:
+                    report.add('warn', 'crowded-placement', f'{p_id} near {shape_id} (chart {chart})',
+                               f'only {gap * 100:.1f} cm from decorative edge (< {min_clearance * 100:.0f} cm clearance)',
+                               'Shift lettering/emblem away from adjacent stripes, sequences, or wing edges to leave clean dark backdrop.')
+
+
 def lint(design_path, intent=None):
     design_path = Path(design_path)
     design = json.loads(design_path.read_text(encoding='utf-8'))
@@ -437,6 +592,7 @@ def lint(design_path, intent=None):
     texts = check_text(design, palette, report)
     angles = check_shapes(design, report,intent)
     check_images(design, design_path.parent, report)
+    check_spacing(design, design_path.parent, palette, report)
     order = {'error': 0, 'warn': 1, 'info': 2}
     report.hits.sort(key=lambda h: order[h['level']])
     return dict(schema_version=1, design=str(design_path), errors=sum(h['level'] == 'error' for h in report.hits),
