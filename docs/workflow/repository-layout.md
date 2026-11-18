@@ -10,7 +10,7 @@
 | [`src/build/wt-skin-build/`](../../src/build/wt-skin-build/) | 中性工程流程候选 | 通过清单接入领域工具，不宣称已统一所有载具 |
 | [`src/styles/aircraft/`](../../src/styles/aircraft/) | 飞机风格说明与参考 | 公共脚本由构建器装入 |
 | [`src/styles/ground/`](../../src/styles/ground/) | 地面风格、领域专用工具和素材清单 | 大型素材从固定 Release 补齐 |
-| [`src/legacy/war-thunder-user-skins/`](../../src/legacy/war-thunder-user-skins/) | 3.14 兼容工作流与参考 | 保留旧 Skill ID 与包内运行路径 |
+| [`src/legacy/war-thunder-user-skins/`](../../src/legacy/war-thunder-user-skins/) | 已封存退役的 3.14 工作流源码与参考 | 保留旧 Skill ID 与历史字节以便追溯 |
 | [`toolkits/aircraft/scripts/`](../../toolkits/aircraft/scripts/) | 飞机公共脚本的唯一维护位置 | 不在各创作源码目录中手工维护副本 |
 | [`profiles/`](../../profiles/) | 通用 schema、合成示例与地面家族诊断参考 | 家族四视不代替生产 UV 或游戏验证 |
 | [`toolkits/ground/`](../../toolkits/ground/) | 十个公共脚本、固定依赖与技术回归 | 装入 0.1.1 后可独立运行 |

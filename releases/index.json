@@ -394,7 +394,10 @@
           "digest": "sha256:7e3736f5b8b5ce0e865f304aed04501ad422ec89908cc9a830a65408cf092644",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.14/war-thunder-user-skins-v3.14.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.13",
@@ -409,7 +412,10 @@
           "digest": "sha256:f5f42c6a7a89f678d0c62e3310adaecceb7ccd98c7a19a17ee5deca4b8aec4b3",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.13/war-thunder-user-skins-v3.13.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.12",
@@ -424,7 +430,10 @@
           "digest": "sha256:e5584c09d516951131efe12c6c6b0ed9a1808ddbdd1f1de680f27d8794c10805",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.12/war-thunder-user-skins-v3.12.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.11",
@@ -439,7 +448,10 @@
           "digest": "sha256:916eb5252e5e819442ad8c626443b49605300175e8e0970287e807eb4e3cb68c",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.11/war-thunder-user-skins-v3.11.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-tank-style-endfield/v1.2",
@@ -586,7 +598,10 @@
           "digest": "sha256:de89c8baf44f30a6a3486fcbd15a3df22dc1aab25972ed3025509a542d501d28",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.9/war-thunder-user-skins-v3.9.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.8",
@@ -601,7 +616,10 @@
           "digest": "sha256:ba887fa1c30c244657dfa5dd7b49a83cf9a1c27798eb0e1fde7d24891d551fe1",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.8/war-thunder-user-skins-v3.8.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.10",
@@ -616,7 +634,10 @@
           "digest": "sha256:6f27a85d570c94db3e3ce1b5caaafab6725e00d7333216e7bfc687df95b9eef4",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.10/war-thunder-user-skins-v3.10.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.9",
@@ -682,7 +703,10 @@
           "digest": "sha256:4beea463680bdad099b6923e0d4ab7a041b12b3ffa522b3594dba2852a44c96f",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.7/war-thunder-user-skins-v3.7.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.6",
@@ -697,7 +721,10 @@
           "digest": "sha256:0b596f815829963ecdc41868f86c4f1e609032321cc39b3a9f8462f315e9bf6b",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.6/war-thunder-user-skins-v3.6.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.5",
@@ -712,7 +739,10 @@
           "digest": "sha256:84f2514f20929802d2848432d47bfcb1007817134c4eb7fd4cf5e615c19d41b4",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.5/war-thunder-user-skins-v3.5.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.4",
@@ -727,7 +757,10 @@
           "digest": "sha256:35eab604fd38f72a1e3ef4b6c19e5f916896a026f6ea88a29c9bc41adc2e5859",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.4/war-thunder-user-skins-v3.4.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.3",
@@ -742,7 +775,10 @@
           "digest": "sha256:da34b1c25be236b7dcf93ae8e53e50ba7ca06a0776252bfdcda45a2b1ad9ecb5",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.3/war-thunder-user-skins-v3.3.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.2",
@@ -757,7 +793,10 @@
           "digest": "sha256:af2f9a6be91d4c3bc7b21ba47fd65ac051f88f66a3ba627794ab51d904b968e9",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.2/war-thunder-user-skins-v3.2.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.1",
@@ -772,7 +811,10 @@
           "digest": "sha256:f57a71be6e0355c43dc13532ebcb861904ffbf3a3130789eab312f12ee6c533c",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.1/war-thunder-user-skins-v3.1.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v3.0",
@@ -787,7 +829,10 @@
           "digest": "sha256:1302ee01dedf305892dd11fc1573fca05396c5583db04989b93a43298ce54582",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.0/war-thunder-user-skins-v3.0.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-user-skins/v2.x",
@@ -874,7 +919,10 @@
           "digest": "sha256:024f4b81751a1ee5e4302ff108a4ede562c3fae1b58e1aea3bb0f4d88f752208",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v2.x/war-thunder-user-skins-v2.9.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.7",
@@ -1105,7 +1153,10 @@
           "digest": "sha256:193b7f87268d5a8c4912c7131a43a60ce1ae7683acc33d297b55f019a7051a5f",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v1.x/war-thunder-user-skins-v1.9.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-18",
+      "maintenance": "closed"
     },
     {
       "tag": "wt-style-charcoal-industrial/v0.1.5",

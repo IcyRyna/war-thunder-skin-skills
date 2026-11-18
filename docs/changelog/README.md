@@ -11,7 +11,6 @@
 | Skill 名称 | ID | 最新正式版 | 状态说明 | 更新记录与发布 |
 | --- | --- | --- | --- | --- |
 | ✈ **Akamywek 风格飞机涂装** | `war-thunder-style-akamywek` | **1.3.1** | 实机验证缎面金属 PBR、三段喷口、内置宽体字体与 71 项终末地贴花库；另有补丁测试 [`1.3.1 RC2`](war-thunder-style-akamywek.md) | [更新记录](war-thunder-style-akamywek.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1) |
-| ✈ **喷气机通用痛涂工作流** | `war-thunder-user-skins` | **3.14** | 固定翼二次元通用基线（人物纯色抠图、多岛检测与全链路检查） | [更新记录](war-thunder-user-skins.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) |
 | 🛡 **炭灰工业涂装** | `wt-style-charcoal-industrial` | **0.2.0** | 以 AZUR v29 实测重写审美、三层装饰、32 项工业贴花与防滑素材拆分 | [更新记录](wt-style-charcoal-industrial.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.2.0) |
 
 ---
@@ -29,6 +28,7 @@
 
 | Skill 名称 | ID | 终版 / 状态 | 说明 | 归档档案 |
 | --- | --- | --- | --- | --- |
+| **喷气机通用痛涂工作流** | `war-thunder-user-skins` | **3.14** · 永久封存退役 | 2026-11-18 封存退役；新飞机涂装请使用 `war-thunder-style-akamywek` | [更新记录](war-thunder-user-skins.md) · [旧版说明](../skills/jet-liveries.md) |
 | **Akamywek 飞机布局（实验线）** | `wt-style-akamywek` | **0.2.0** · 已归档只读 | 早期四步语义实验分支；飞机涂装请使用 `war-thunder-style-akamywek` | [更新记录](wt-style-akamywek.md) |
 | **终末地坦克旧版** | `wt-style-endfield` | **0.1.1** · 永久封存 | 已被 0.2.0 候选重构替代 | [更新记录](wt-style-endfield.md) · [封存说明](../history/endfield-archived.md) |
 | **终末地初代坦克涂装** | `war-thunder-tank-style-endfield` | **1.4** · 永久封存 | 初代 62 MB 大包兼容线 | [更新记录](war-thunder-tank-style-endfield.md) |

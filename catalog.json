@@ -36,8 +36,8 @@
     {
       "id": "war-thunder-user-skins",
       "kind": "compatibility",
-      "status": "released_baseline",
-      "description": "用于二次元固定翼喷气机涂装的制作与修改，包含 UV、素材、材质和模型检查工具。",
+      "status": "archived_read_only",
+      "description": "（已封存退役）原二次元固定翼喷气机通用工作流 3.14，包含 UV、素材、材质和模型检查工具。",
       "source": "src/legacy/war-thunder-user-skins",
       "includes": [
         {
@@ -55,7 +55,13 @@
         "package_bytes": 628414
       },
       "documentation": "docs/skills/jet-liveries.md",
-      "changelog": "docs/changelog/war-thunder-user-skins.md"
+      "changelog": "docs/changelog/war-thunder-user-skins.md",
+      "archive": {
+        "date": "2026-11-18",
+        "maintenance": "closed",
+        "recommended_for_new_work": false,
+        "reason": "retired legacy workflow; historical source and release bytes retained"
+      }
     },
     {
       "id": "war-thunder-style-akamywek",

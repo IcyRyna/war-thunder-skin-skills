@@ -1,8 +1,10 @@
 # 喷气机涂装工作流 · 更新记录
 
-二次元固定翼喷气机涂装的完整制作流程，覆盖立绘、构图、原生 UV、材质、分层工程和游戏包交付。
+> **历史封存 · 停止维护**：`war-thunder-user-skins 3.14` 已于 2026-11-18 封存退役，仅供追溯与历史恢复；原 Git 标签与 `.skill.zip` 附件保留不变。
 
-[当前版本 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) · [功能介绍](../skills/jet-liveries.md)
+二次元固定翼喷气机涂装的历史制作工作流，覆盖立绘、构图、原生 UV、材质、分层工程和游戏包交付。
+
+[已封存终版 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) · [旧版说明](../skills/jet-liveries.md) · [历史归档](../history/README.md)
 
 | 版本 | 更新内容 | 下载 |
 | --- | --- | --- |

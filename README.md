@@ -28,7 +28,6 @@
 | Skill 包 | 版本与状态 | 适用场景与特点 | 立即获取与文档 |
 | --- | --- | --- | --- |
 | **Akamywek 风格飞机涂装**<br>`war-thunder-style-akamywek` | **v1.3.1**（推荐正式版）<br>[v1.3.1-rc2](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2)（补丁 Pre-release） | 炭灰 `#333334` + 指定签名色 + 无缝白 `V` + 翼尾人物/无人物布局；F-15EX 实机验证缎面金属 PBR、三段深枪灰喷口；内置 `Orbitron`/`Michroma` 宽体字体与 71 项终末地联名工业贴花（按题材选用）。 | [下载 1.3.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip) · [功能](docs/skills/akamywek.md) · [日志](docs/changelog/war-thunder-style-akamywek.md) |
-| **喷气机通用痛涂工作流**<br>`war-thunder-user-skins` | **v3.14**（正式兼容基底） | 通用二次元固定翼喷气机痛涂（不限定 Akamywek 画风）：角色纯色抠图、跨多岛 UV 检查、Composa 协同、材质预设与 DDS/BLK 封包。 | [下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.14/war-thunder-user-skins-v3.14.skill.zip) · [功能](docs/skills/jet-liveries.md) · [日志](docs/changelog/war-thunder-user-skins.md) |
 
 ### 🛡 地面载具 / 坦克（Ground）
 
@@ -88,7 +87,7 @@ war-thunder-skin-skills/
 ├── src/
 │   ├── styles/aircraft/        # 飞机风格 Skill 源码（Akamywek 1.3.1/RC2、旧版 0.2.0）
 │   ├── styles/ground/          # 地面风格 Skill 源码（炭灰工业 0.2.0、终末地 0.2.0/1.4）
-│   ├── legacy/                 # 兼容工作流源码（war-thunder-user-skins 3.14）
+│   ├── legacy/                 # 已封存退役源码（war-thunder-user-skins 3.14）
 │   ├── study/ & build/         # 研发与中性工程流源码候选
 ├── toolkits/
 │   ├── aircraft/scripts/       # 飞机公共脚本单一真源（由 repository.py 装配入包）
@@ -110,6 +109,7 @@ war-thunder-skin-skills/
 
 | 版本线 | 停更 / 封存说明 | 历史入口 |
 | --- | --- | --- |
+| `war-thunder-user-skins` **3.14** | 2026-11-18 封存退役；通用固定翼旧线，新飞机涂装统一使用 `war-thunder-style-akamywek` | [历史说明](docs/skills/jet-liveries.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) |
 | `wt-style-akamywek` **0.2.0** | 早期「四步映射」实验分支；现统一使用 `war-thunder-style-akamywek` 主线（`1.3.1`） | [历史说明](docs/skills/wt-style-akamywek.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0) |
 | `wt-style-endfield` **0.1.0 / 0.1.1** | 2026-10-25 永久封存；由 0.2.0 重构取代 | [封存范围](docs/history/endfield-archived.md) · [0.1.1 全览](docs/skills/wt-style-endfield-0.1.1.md) |
 | `war-thunder-tank-style-endfield` **1.0–1.4** | 初代终末地坦克线（62 MB 内嵌素材）；已停止维护 | [1.4 历史说明](docs/history/war-thunder-tank-style-endfield-v1.4.md) · [历史索引](docs/history/README.md) |

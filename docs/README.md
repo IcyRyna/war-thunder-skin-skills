@@ -23,7 +23,6 @@
 | 文档 | 当前版本 | 涵盖范围 |
 | --- | --- | --- |
 | [**Akamywek 风格飞机涂装**](skills/akamywek.md) | **1.3.1**（正式）<br>1.3.1 RC2（补丁） | 炭灰 + 签名色 + 无缝白 `V` + 三段式深枪灰喷口 + 缎面金属 PBR；F-15EX / J-16 / J-10C / F-16C 案例与终末地联名贴花库 |
-| [**通用二次元喷气机工作流**](skills/jet-liveries.md) | **3.14** | 不限风格的固定翼痛涂工作流：纯色人物抠图、原生 UV 绘制、模型对比与游戏封包 |
 
 ### 🛡 地面载具与工具（Ground & Workbench）
 
@@ -61,4 +60,4 @@
 | **研发运维** | [**仓库目录与装配结构**](workflow/repository-layout.md) | `src/`、`toolkits/`、`catalog.json`、`releases/` 的维护与装配契约 |
 | **研发运维** | [**证据记录与评测细则**](workflow/evidence-and-evaluation.md) | 实验字段、对照边界与技术/审美分离原则 |
 | **研发运维** | [**本地构建与发版维护**](maintaining.md) | `tools/repository.py` 检查/构建命令与发版校验清单 |
-| **历史封存** | [**已停更 / 历史版本归档**](history/README.md) | 封存的终末地 0.1.x / 1.4、`wt-style-akamywek 0.2.0`、`S42` 与旧版四视图（[A7V 五车型图解](skills/endfield-layout-guide.md) · [0.1.1 全览](skills/wt-style-endfield-0.1.1.md) · [终末地封存范围](history/endfield-archived.md)） |
+| **历史封存** | [**已停更 / 历史版本归档**](history/README.md) | 封存的 `war-thunder-user-skins 3.14`（[旧版说明](skills/jet-liveries.md)）、终末地 0.1.x / 1.4、`wt-style-akamywek 0.2.0`、`S42` 与旧版四视图（[A7V 五车型图解](skills/endfield-layout-guide.md) · [0.1.1 全览](skills/wt-style-endfield-0.1.1.md) · [终末地封存范围](history/endfield-archived.md)） |

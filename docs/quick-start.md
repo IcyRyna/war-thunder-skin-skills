@@ -11,7 +11,6 @@
 | 你的目标 | 推荐选择的包 | 对应说明 |
 | --- | --- | --- |
 | **做 Akamywek 风格喷气机涂装**<br><sub>含原教旨无人物、终末地工业联名变体、双翼人物</sub> | **`war-thunder-style-akamywek`**<br>正式版 **`1.3.1`** · 补丁测试 [`1.3.1 RC2`](../releases/README.md#二补丁与发布候选pre-release) | [Akamywek 功能介绍](skills/akamywek.md) |
-| **做通用二次元固定翼喷气机痛涂**<br><sub>不限定 Akamywek 画风</sub> | **`war-thunder-user-skins`**<br>正式版 **`3.14`** | [喷气机工作流](skills/jet-liveries.md) |
 | **做现代坦克 / 地面载具涂装**<br><sub>深炭灰斜切碎片、蜂窝格与高密度工业贴花</sub> | **`wt-style-charcoal-industrial`**<br>正式版 **`0.2.0`**（含独立 32 项素材包） | [炭灰工业功能介绍](skills/charcoal-industrial.md) |
 | **做终末地黑白黄地面工业涂装（试行）**<br><sub>Pre-release 重构版本</sub> | **`wt-style-endfield`**<br>发布候选 **`0.2.0`**（独立复现待回传） | [终末地 0.2.0 候选说明](skills/wt-style-endfield-0.2.0.md) |
 | **直接看车模 / 加贴花 / 局部改色 / AI 辅助预览** | **`wt-paint-workbench`**<br>Windows 绿色工作台 **`1.0.0`** | [在线预览与本地工作台](web-preview.md) |

@@ -10,6 +10,7 @@
 
 | 历史 Skill | 终版 | 归档状态 | 当前推荐替代 | 历史说明与原下载 |
 | --- | --- | --- | --- | --- |
+| `war-thunder-user-skins` | `3.14`（含 1.x–3.x） | 2026-11-18 封存退役 | 飞机主力 [Akamywek 1.3.1](../skills/akamywek.md) | [3.14 说明](../skills/jet-liveries.md) · [更新记录](../changelog/war-thunder-user-skins.md) |
 | `wt-style-endfield` | `0.1.1` / `0.1.0` | 2026-10-25 永久封存 | 地面候选 [终末地 0.2.0](../skills/wt-style-endfield-0.2.0.md) 或正式版 [炭灰工业 0.2.0](../skills/charcoal-industrial.md) | [封存说明](endfield-archived.md) · [0.1.1 全览](../skills/wt-style-endfield-0.1.1.md) · [0.1.0 展示](../skills/wt-style-endfield-0.1.0.md) |
 | `war-thunder-tank-style-endfield` | `1.4`（含 1.0–1.3） | 2026-10-25 永久封存（仅补齐历史资产校验） | 同上 | [1.4 历史说明](war-thunder-tank-style-endfield-v1.4.md) · [更新记录](../changelog/war-thunder-tank-style-endfield.md) |
 | `wt-style-akamywek` | `0.2.0` | 只读历史分支（四步实验线） | 飞机主力 [Akamywek 1.3.1](../skills/akamywek.md) | [0.2.0 说明](../skills/wt-style-akamywek.md) · [更新记录](../changelog/wt-style-akamywek.md) |

@@ -16,7 +16,6 @@
 下载 `.skill.zip` 后完整解压，确认保留 `<skill-id>/` 目录及内部 `SKILL.md`、`scripts/`、`references/`、`assets/`（若含）。目录名应与 Skill ID 一致，例如：
 
 - ✈ `war-thunder-style-akamywek/`（1.3.1 或 1.3.1 RC2）
-- ✈ `war-thunder-user-skins/`（3.14）
 - 🛡 `wt-style-charcoal-industrial/`（0.2.0）
 
 | AI 助手 | 默认全局 Skills 目录 | 说明 |
