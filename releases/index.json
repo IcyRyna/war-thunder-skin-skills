@@ -6,7 +6,7 @@
     {
       "tag": "war-thunder-style-akamywek/v1.3.1",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1",
-      "published_at": "2026-11-18T04:50:35Z",
+      "published_at": "2026-11-18T05:27:23Z",
       "draft": false,
       "prerelease": false,
       "validation": {
@@ -18,8 +18,8 @@
       "assets": [
         {
           "name": "war-thunder-style-akamywek-v1.3.1.skill.zip",
-          "bytes": 3974101,
-          "digest": "sha256:c914f1f8fa2ad51d651c0ba9482865538f66bc5af560b3338d34e3d62de8706d",
+          "bytes": 3980638,
+          "digest": "sha256:9a51ed161a04946d797d27acad06cc7a4640d778f28688ff2e9873a778ec868c",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip"
         }
       ]
