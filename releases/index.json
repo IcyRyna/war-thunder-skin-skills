@@ -6,20 +6,20 @@
     {
       "tag": "war-thunder-style-akamywek/v1.3.1",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1",
-      "published_at": "2026-11-18T05:27:23Z",
+      "published_at": "2026-11-18T06:08:53Z",
       "draft": false,
       "prerelease": false,
       "validation": {
-        "package_files": 140,
+        "package_files": 210,
         "remote_download_sha256_equal": true,
-        "art": "F-15EX replaces F-15C; Mirage and J-15T/J-11B examples pruned; bundled Orbitron/Michroma, seamless dorsal V, 3-stage dark titanium exhaust, edge/seam spacing checks",
+        "art": "Full Skill audit + bundled curated Endfield decal pack (SVG/factions/brands/professions/transparent UI presets) + F-15EX aligned stabilator/CFT refs",
         "game": "in_game_verified_f15ex_and_reinstalled"
       },
       "assets": [
         {
           "name": "war-thunder-style-akamywek-v1.3.1.skill.zip",
-          "bytes": 3980638,
-          "digest": "sha256:9a51ed161a04946d797d27acad06cc7a4640d778f28688ff2e9873a778ec868c",
+          "bytes": 5121020,
+          "digest": "sha256:1ed4e17b54e7a07f6d344e4a0c24991893fb3bf12418518c8ad793e0be6f87ef",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip"
         }
       ]
