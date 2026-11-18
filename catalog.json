@@ -201,10 +201,10 @@
       "baseline": {
         "version": "1.3.1",
         "tag": "war-thunder-style-akamywek/v1.3.1",
-        "package_sha256": "5ea2e5d727f4f8b9aa83a34f17108d0667413e1ab74aff519c3d94298a2e5aa6",
+        "package_sha256": "c914f1f8fa2ad51d651c0ba9482865538f66bc5af560b3338d34e3d62de8706d",
         "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1",
         "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip",
-        "package_bytes": 6350006
+        "package_bytes": 3974101
       },
       "documentation": "docs/skills/akamywek.md",
       "changelog": "docs/changelog/war-thunder-style-akamywek.md"

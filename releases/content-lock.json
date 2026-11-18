@@ -362,12 +362,12 @@
     {
       "id": "war-thunder-style-akamywek",
       "tag": "war-thunder-style-akamywek/v1.3.1",
-      "original_archive_sha256": "5ea2e5d727f4f8b9aa83a34f17108d0667413e1ab74aff519c3d94298a2e5aa6",
+      "original_archive_sha256": "c914f1f8fa2ad51d651c0ba9482865538f66bc5af560b3338d34e3d62de8706d",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 13571,
-          "sha256": "0e89546ef449dfcb261e11af69ac4580bb3fd6337a203a1a26703a534e5ac0e9"
+          "bytes": 12836,
+          "sha256": "6ed9e1d51399e148d03dbdad11a4f09818344e75ecfe1f7b90702f3b64890be2"
         },
         {
           "path": "agents/openai.yaml",
@@ -586,23 +586,13 @@
         },
         {
           "path": "references/current-approved-j10c.md",
-          "bytes": 7983,
-          "sha256": "1a5869dbc2810fe0e48cd8ff43fce901a115592a1dc04ea7e80a270b5d76e4ca"
+          "bytes": 7918,
+          "sha256": "e17dacf670415c8700259e050904526a7677313c6c6e5f4d8cd022f339822747"
         },
         {
           "path": "references/current-approved-j16.md",
           "bytes": 2332,
           "sha256": "88f45744f3d3deadf58b9d40d0218fcbbe4cc924eae28d2106b78bf9b8a98177"
-        },
-        {
-          "path": "references/f15c-cyan.md",
-          "bytes": 1989,
-          "sha256": "53cb466b8461ded7da72c17c53a9eadc608668e62309cf83512949b19aba8490"
-        },
-        {
-          "path": "references/f15c-laevatain.md",
-          "bytes": 3356,
-          "sha256": "e531af88552ddb1856b2fb256f9a318c0124c31c10c92e029108a617c4894726"
         },
         {
           "path": "references/f15ex-endfield.md",
@@ -618,26 +608,6 @@
           "path": "references/images/centreline-approved.png",
           "bytes": 26819,
           "sha256": "f72fb0ee0f69c0fddc1e79423a6b1d2d948168c14510a3a69653a7136137f9e9"
-        },
-        {
-          "path": "references/images/f15c-cyan-starboard.png",
-          "bytes": 258629,
-          "sha256": "64927ebfa5a5a4cfcf05c7ac46d4d24dfce0e21b5874a8e4b6313c9a18a7ea99"
-        },
-        {
-          "path": "references/images/f15c-cyan-top.png",
-          "bytes": 170623,
-          "sha256": "4886451a0478129f75f7c8ea825a4c2e23af586dc166a1ea534aed2793b0253f"
-        },
-        {
-          "path": "references/images/f15c-laevatain-eye-detail.png",
-          "bytes": 392871,
-          "sha256": "59754ca5f1856df8757b76499056e419c9bf75a2f4557ffee762f0589a222431"
-        },
-        {
-          "path": "references/images/f15c-laevatain-layout.png",
-          "bytes": 637391,
-          "sha256": "cd1f35dbeef6e3031b74b8ec43f8f2760cb4e720028ce8ba39c6568067edf96c"
         },
         {
           "path": "references/images/f15ex-endfield-belly.png",
@@ -690,11 +660,6 @@
           "sha256": "5c1d655e080316f12a162b9a316ca6149b454658cccdad02dabf25cbcbd097b2"
         },
         {
-          "path": "references/images/j10c-mirage-jade-gold-layout.jpg",
-          "bytes": 118650,
-          "sha256": "b0891a98cd085eb5480405ba50791c4c6960683b2eabae402a16297c63863308"
-        },
-        {
           "path": "references/images/j10c-si-aft-crop.png",
           "bytes": 3569,
           "sha256": "a10df5afcb07ee68b51ca89e1e25a91e2f49f3e87f2c9453b6b03dd1d91c5623"
@@ -725,21 +690,6 @@
           "sha256": "d3c1409164f42ce3a15eff081173aa12144f3f19ffb383a043a5ce6abe22b870"
         },
         {
-          "path": "references/images/j11b-laevatain-astra-release.jpg",
-          "bytes": 186742,
-          "sha256": "50462bfaea8a8e27866224cbb8dc591425e5ddaa8c2feda0163e4c0a4c6c2b7e"
-        },
-        {
-          "path": "references/images/j11b-si-release.jpg",
-          "bytes": 120995,
-          "sha256": "a9134574e101d129f0add61a569b84f0360dae0464f9614e5a10db4129654d5f"
-        },
-        {
-          "path": "references/images/j15t-si-release.jpg",
-          "bytes": 141504,
-          "sha256": "2443751eb9a5b2f7820fceee80d1f66935fc1d6ada82fc08e8ca5a40d5b91b09"
-        },
-        {
           "path": "references/images/j16-approved-aft.png",
           "bytes": 157789,
           "sha256": "0da766b1ac5ec42ee0a48b83872ba7499921edf1bb04c371f74c58011949b7ca"
@@ -755,34 +705,9 @@
           "sha256": "a9fbb6da334d373e1fe1cbe83b59dc20d4bcd70f45052cbdcd35bb07090ead5a"
         },
         {
-          "path": "references/images/mirage-amethyste-layout-review.jpg",
-          "bytes": 120293,
-          "sha256": "6f85677b9ccd7e506b2a192d19e606f40a845af1d874d61db94933790abca887"
-        },
-        {
-          "path": "references/images/mirage-amethyste-rejected-top.jpg",
-          "bytes": 106300,
-          "sha256": "3469837b9c339b383001d8152ea98c738dead545b7999700128995796770db3a"
-        },
-        {
-          "path": "references/images/mirage-amethyste-starboard.png",
-          "bytes": 207794,
-          "sha256": "a928cb50e5faf20c853f2a61e04a7fe9dcfbc7dae5ebdd85fc58e0795e35ce26"
-        },
-        {
           "path": "references/j10c-si-history.md",
           "bytes": 15363,
           "sha256": "72df1d92fcca6dd5148b3cd1126b03d08486d3e1969b7a5c4d6a87690cb0221f"
-        },
-        {
-          "path": "references/mirage-amethyste.md",
-          "bytes": 5321,
-          "sha256": "fd6cc4b191850eaef2b4dbfea845fc887ad9f452f36a08204f4ed1d6aac1efa5"
-        },
-        {
-          "path": "references/mirage-jade-gold.md",
-          "bytes": 2033,
-          "sha256": "68fbba1e9c8bb3f73d61d594534c719ecfd3726a9f9cdd5097f7315b4fc6915c"
         },
         {
           "path": "references/modern-jet-examples.md",
@@ -806,13 +731,13 @@
         },
         {
           "path": "references/reviewed-works.md",
-          "bytes": 7134,
-          "sha256": "2a651e956fe956899ddd87b1513ffdc8f88be7061150f35e1e4545307ff064d9"
+          "bytes": 3130,
+          "sha256": "f7c87f51f32a47cb72e717fcc643d2be6f896e6dbcefa5c2985dafb5ab1b6d41"
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 10308,
-          "sha256": "f4fcff24c095448dbdbf44ae1a41be9b2813f291da189b8e7bb7b9d44db475ec"
+          "bytes": 10319,
+          "sha256": "34e1e43954b30280c7c3cf607c21e0c590c991ead264a0a33c8fe7cd77a1ce86"
         },
         {
           "path": "references/type-and-decals.md",
