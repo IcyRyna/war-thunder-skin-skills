@@ -4,6 +4,29 @@
   "scope": "正式发布下载索引；内部研究备份不列入公开导航。",
   "releases": [
     {
+      "tag": "war-thunder-style-akamywek/v1.3.1-rc2",
+      "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2",
+      "published_at": "2026-11-18T10:09:57Z",
+      "draft": false,
+      "prerelease": true,
+      "validation": {
+        "package_files": 210,
+        "skill_unit_tests": "31_of_31_passed",
+        "remote_download_sha256_equal": true,
+        "based_on": "war-thunder-style-akamywek/v1.3.1",
+        "art": "Zero-regression engineering patch on 1.3.1 (decal relative fallback, Windows/offline test & STL/NumPy raycast fixes, Orbitron/Michroma example alignment, structured SKILL.md & repo UI refactor)",
+        "game": "inherited_from_v1.3.1_f15ex_in_game_verified"
+      },
+      "assets": [
+        {
+          "name": "war-thunder-style-akamywek-v1.3.1-rc2.skill.zip",
+          "bytes": 7178609,
+          "digest": "sha256:a7b26969b40699f47805cc83826478a53f93cde8640827c2523e8d1b52dbedfe",
+          "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1-rc2/war-thunder-style-akamywek-v1.3.1-rc2.skill.zip"
+        }
+      ]
+    },
+    {
       "tag": "war-thunder-style-akamywek/v1.3.1",
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1",
       "published_at": "2026-11-18T06:08:53Z",

@@ -1,88 +1,122 @@
-# 战争雷霆 · 涂装制作 Skills
+<div align="center">
 
-让 AI 助手按明确流程制作飞机与地面载具涂装：研究参考、安排图形、处理 UV 与材质，保存分层工程，并检查游戏交付。
+# War Thunder Skin Skills
 
-**[选择 Skill](#选择适合的-skill) · [三步开始](#三步开始) · [中文术语](docs/terminology.md) · [完整文档](docs/README.md) · [开发入口](#参与开发)**
+**面向《战争雷霆》玩家涂装与 AI 辅助制作的 Skill 仓库与本地工作台**
 
-## 每套涂装的在线 3D 预览
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![3D 预览作品集](https://img.shields.io/badge/3D_作品集-在线浏览-0ea5e9)](https://icyryna.github.io/war-thunder-liveries/)
+[![Akamywek](https://img.shields.io/badge/✈_Akamywek-v1.3.1_·_RC2-f59e0b)](releases/README.md)
+[![Charcoal](https://img.shields.io/badge/🛡_炭灰工业-v0.2.0-475569)](releases/README.md)
+[![Workbench](https://img.shields.io/badge/🛠_本地工作台-v1.0.0-10b981)](docs/web-preview.md)
 
-**[进入作品集，打开各套介绍与 3D 预览](https://icyryna.github.io/war-thunder-liveries/)** · [在线预览入口](https://icyryna.github.io/war-thunder-skin-skills/) · [本地编辑与导入](docs/web-preview.md)
+[按载具选包](#-一按载具与风格选包) · [3D 预览与本地工作台](#-二在线-3d-预览与本地涂装工作台) · [四步快速上手](#-三四步快速上手) · [候选与研发](#-四补丁发布候选与研发分支) · [文档与源码结构](#-五文档中心与仓库目录)
 
-点击作品标题，介绍页会自动载入该车型和该套涂装，可直接旋转、缩放和切换视角。F-2A、EMBT 等提供车型版本选择；原有下载、来源和评价保留。在线只提供 3D 展示、反射与凹凸、清晰度、视角及预览截图。自己的模型与涂装导入、独立装饰、文字、区域改色和工程导出均在本地工作台完成。
+</div>
 
-## 本地涂装工作台 · 双击启动
+---
 
-**[下载 Windows x64 本地版](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-paint-workbench/v1.0.0/wt-paint-workbench-windows-x64.zip)** · [使用说明](docs/web-preview.md) · [给 AI 的预览入口](toolkits/web-preview/给AI的说明.md)
+> [!IMPORTANT]
+> **新手先看这句：** 每个独立发行的 `.skill.zip` **自包含运行所需全部说明、脚本与内置素材**，直接下载即可用，不需要手动克隆整个仓库。仓库中的 `src/study`、`src/build` 与 `Pre-release` 标签属于研发或待验证候选，与下方推荐正式版严格区分。
 
-完整解压，双击 **启动工作台.cmd**。自带 Python，首次联网自动准备固定依赖，浏览器自动打开并查找战雷目录；之后可离线使用。无需预装 Python、Git 或 Blender。装饰校准、区域改色、部件分类、工程保存与颜色导出放在本地版，在线版保持纯预览。
+---
 
-**制作前先告诉 AI：可以在这个工作台预览和检查涂装，并提供工具的完整解压路径。** 包内附可复制提示词及命令行说明。
+## 一、按载具与风格选包
 
-## 选择适合的 Skill
+### ✈ 固定翼喷气机（Aircraft）
 
-| 中文名称 | 适合做什么 | 正式下载 | 中文解读 |
+| Skill 包 | 版本与状态 | 适用场景与特点 | 立即获取与文档 |
 | --- | --- | --- | --- |
-| 炭灰工业涂装 · 地面载具 | AZUR v29范本：大斜切碎片、蜂窝与数码纹样场、身份铭牌、人字警示与车尾斜条，三层装饰防止太素 | [0.2.0 · Skill/素材分包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-charcoal-industrial/v0.2.0) | [制作精髓与示例](docs/skills/charcoal-industrial.md) |
-| 通用飞机痛涂 | 固定翼喷气机的人物布局、几何图形、漆面与交付 | [3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-user-skins/v3.14) | [用途与工具](docs/skills/jet-liveries.md) |
-| Akamywek 风格 · 飞机 | F-15EX 缎面金属反光 PBR（R163/B188+平坦细节法线）、双发排版及防逼挤文字净距检查 | [1.3.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1) | [方法与验证范围](docs/skills/akamywek.md) |
+| **Akamywek 风格飞机涂装**<br>`war-thunder-style-akamywek` | **v1.3.1**（推荐正式版）<br>[v1.3.1-rc2](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2)（补丁 Pre-release） | 炭灰 `#333334` + 指定签名色 + 无缝白 `V` + 翼尾人物/无人物布局；F-15EX 实机验证缎面金属 PBR、三段深枪灰喷口；内置 `Orbitron`/`Michroma` 宽体字体与 71 项终末地联名工业贴花（按题材选用）。 | [下载 1.3.1](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip) · [功能](docs/skills/akamywek.md) · [日志](docs/changelog/war-thunder-style-akamywek.md) |
+| **喷气机通用痛涂工作流**<br>`war-thunder-user-skins` | **v3.14**（正式兼容基底） | 通用二次元固定翼喷气机痛涂（不限定 Akamywek 画风）：角色纯色抠图、跨多岛 UV 检查、Composa 协同、材质预设与 DDS/BLK 封包。 | [下载 3.14](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-user-skins/v3.14/war-thunder-user-skins-v3.14.skill.zip) · [功能](docs/skills/jet-liveries.md) · [日志](docs/changelog/war-thunder-user-skins.md) |
 
-每个正式安装包都能独立使用，自带对应版本的说明、工具和必要素材。完整下载记录见[下载中心](releases/README.md)，旧终末地 1.4 等版本见[历史档案](docs/history/README.md)。
+### 🛡 地面载具 / 坦克（Ground）
 
-## 三步开始
+| Skill 包 | 版本与状态 | 适用场景与特点 | 立即获取与文档 |
+| --- | --- | --- | --- |
+| **炭灰工业涂装**<br>`wt-style-charcoal-industrial` | **v0.2.0**（当前主力正式版） | 以勒克莱尔 AZUR v29 为实测范本：深浅大斜切碎片、侧裙亮格蜂窝、炮塔满铺数码与渐散簇、身份铭牌、黑底琥珀警示；Skill 与 32 项高分防滑/贴纸素材独立打包。 | [下载合集 / 分包](docs/skills/charcoal-industrial.md#-下载) · [功能](docs/skills/charcoal-industrial.md) · [日志](docs/changelog/wt-style-charcoal-industrial.md) |
 
-1. 按上表选择工作流，进入发布页，在 **Assets（附件）** 中下载 `.skill.zip`。
-2. 保留解压后的完整 Skill 文件夹，按[安装指南](docs/installation.md)放入所用助手的技能目录。
-3. 提供目标载具、原始贴图、人物或主题素材和参考图，明确需要游戏包、分层工程或预览图。
+---
 
-第一次使用可先读[中文快速上手](docs/quick-start.md)。安装包、开发源码和历史素材的区别也在那里说明。
+## 二、在线 3D 预览与本地涂装工作台
 
-## 终末地 0.2.0 · 发布候选
+无需启动游戏或手动配置 Blender，即可在浏览器中以 512–4K 清晰度、PBR 反射/金属度与接缝凹凸检查涂装效果。
 
-**[下载 0.2.0 发布候选（1.35 MB）](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-endfield/v0.2.0)** · [构图、素材与验证范围](docs/skills/wt-style-endfield-0.2.0.md)。内置23张透明PNG、22份可编辑SVG及固定工具，安装包低于18MB。独立复现待回传，游戏未实测；旧版继续封存。
+| 工具入口 | 定位与适用场景 | 核心能力 | 使用方式 |
+| --- | --- | --- | --- |
+| **[涂装作品集 · 在线 3D 预览](https://icyryna.github.io/war-thunder-liveries/)** | **纯展示与看效果** | 多视角切换、512–4K 切换、反射强度/接缝凹凸开关、保存高清预览图 | 浏览器直接打开（无编辑器功能） |
+| **[本地涂装工作台 v1.0.0](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-paint-workbench/v1.0.0/wt-paint-workbench-windows-x64.zip)** | **日常制作、导入与人工精调**（Windows x64 便携包） | 自动识别战雷目录导出 `.grp` 模型、直接打开涂装 ZIP/文件夹、加贴花/文字/框选改色、保存 AI 可接手的分层工程 | 解压后双击 **`启动工作台.cmd`**，首次联网自动准备依赖（详情见 [工具文档](docs/web-preview.md)） |
 
-## 终末地旧版已封存
+> [!TIP]
+> 让 AI 帮你做涂装前，请顺手把**本地工作台解压路径**告诉它——AI 可直接提取游戏原模型并生成可由你在网页端微调的分层工程（见 [AI 协同说明](toolkits/web-preview/给AI的说明.md)）。
 
-终末地 0.1.0、0.1.1 与旧 1.0–1.4 全部停止维护，移出当前推荐。原标签、源码和下载附件保留为历史恢复资料；新工作使用重建流程，另行审查发布。
+---
 
-[历史封存说明与下载](docs/history/endfield-archived.md)
+## 三、四步快速上手
 
-## 它会怎样完成一套涂装
+1. **选包下载**：前往上方推荐表或 [完整下载中心](releases/README.md)，按车型与画风下载 `.skill.zip` 安装包。
+2. **解压装入助手**：将 ZIP **完整解压**（保留外层 `<skill-id>/` 目录与其中的 `SKILL.md`、`scripts/`、`references/`、`assets/`），放进你所用 AI 助手的 Skills 目录（具体路径与依赖见 [安装指南](docs/installation.md)）。
+3. **准备输入与工作台**：确定目标机型，告知 AI 你的需求（风格分支、配色、是否带人物/联名贴花）以及本地工作台/原皮所在路径。
+4. **预览与实装验证**：使用模型预览与原尺寸局部检查构图、字向和材质通道；导出游览/游戏包后解压至游戏 `UserSkins` 目录，进游戏确认最终表现。
 
-| 阶段 | 主要工作 | 可检查的结果 |
-| --- | --- | --- |
-| 理解参考 | 分辨原作特征、素材来源与适用范围 | 参考记录、方向选择 |
-| 建立工程 | 核对模型、原生 UV、贴图与材质通道 | 输入配置、表面与图层关系 |
-| 制作设计 | 安排色块、人物、标识和局部细节 | 分层工程、整车与局部预览 |
-| 检查交付 | 检查纹理、配置引用和目标载具显示 | 游戏包、源码包、验证结果 |
+详细分流指引见 [**快速上手指南**](docs/quick-start.md) · 不懂术语先查 [**中文术语表**](docs/terminology.md)。
 
-结构检查、视觉评价和实机测试分别记录。某次检查通过，只说明对应检查项通过；具体适用车型和未执行项见各工作流说明。
+---
 
-## 参与开发
+## 四、补丁、发布候选与研发分支
 
-源码按职责分开，公共工具集中维护，独立包由构建器装配。
+以下内容尚未正式取代上方主力版本，或专为研究与重构测试设计——**状态、未验证范围与正式版严格分开：**
 
-| 位置 | 中文说明 |
-| --- | --- |
-| [`src/`](src/) | 研究、工程、风格与兼容工作流源码 |
-| [`toolkits/`](toolkits/) | 飞机和地面载具的公共工具 |
-| [`profiles/`](profiles/) | 载具资源与表面约束配置 |
-| [`evals/`](evals/) | 评测契约、检查器和测试 |
-| [`catalog.json`](catalog.json) | 包与源码、工具、素材的装配关系 |
-| [`docs/`](docs/README.md) | 中文说明、研发流程、安装和版本记录 |
+| 类别 | 模块 / 版本 | 当前状态 | 说明与边界 |
+| --- | --- | --- | --- |
+| **补丁试行** | `war-thunder-style-akamywek` **`1.3.1 RC2`** | **Pre-release** | 基于 `1.3.1` 的工程兼容性补丁（随包贴纸短路径自动回退、Windows/离线测试全通过、`SKILL.md` 条理化排版）；**保留原 `1.3.1` Release 不变以方便随时回退**。[查看 RC2 发布](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2) |
+| **地面候选** | `wt-style-endfield` **`0.2.0`** | **Pre-release** | 以 A7V / A7HU / EMBT 重建的终末地黑白黄工业涂装（内置 23 透明 PNG + 22 SVG）；**同 brief 独立复现待回传，游戏实测 `not_run`**。[查看候选详情](docs/skills/wt-style-endfield-0.2.0.md) |
+| **研发源码** | [`wt-skin-study`](src/study/wt-skin-study/) · [`wt-skin-build`](src/build/wt-skin-build/) | **Development** | 内部「研究 → 实验 → 规则 → 评测」工程基座与中性流程探索，无正式版本号。[查看研发流程](docs/workflow/README.md) |
 
-`wt-skin-study` 与 `wt-skin-build` 是开发候选，尚无正式版本。试用和修改候选前，先读[研发流程](docs/workflow/README.md)与[检查和构建指南](docs/maintaining.md)。
+---
 
-```bash
-python -B tools/repository.py list
-python -B tools/repository.py check
+## 五、文档中心与仓库目录
+
+<details>
+<summary><b>📂 点击展开：仓库源码分类与目录结构（开发者 / 维护者视图）</b></summary>
+
+```text
+war-thunder-skin-skills/
+├── catalog.json                # 唯一构建清单：声明包 ID、源码、公共脚本注入与基线校验
+├── docs/                       # 中文文档中心（入门 / 功能介绍 / 更新记录 / 维护 / 历史）
+├── releases/                   # 正式发行导航、index.json 与逐文件 content-lock.json
+├── src/
+│   ├── styles/aircraft/        # 飞机风格 Skill 源码（Akamywek 1.3.1/RC2、旧版 0.2.0）
+│   ├── styles/ground/          # 地面风格 Skill 源码（炭灰工业 0.2.0、终末地 0.2.0/1.4）
+│   ├── legacy/                 # 兼容工作流源码（war-thunder-user-skins 3.14）
+│   ├── study/ & build/         # 研发与中性工程流源码候选
+├── toolkits/
+│   ├── aircraft/scripts/       # 飞机公共脚本单一真源（由 repository.py 装配入包）
+│   ├── ground/                 # 地面领域脚本与技术回归
+│   └── web-preview/            # 本地涂装工作台 & 在线 3D 预览导出源码
+├── assets/                     # 共享精选素材库（终末地 / 炭灰 / 参考图）
+├── profiles/ & evals/          # 载具配置契约（schema/合成示例）与评测检查器
+└── tools/ & tests/             # repository.py 构建器、CI 校验脚本与仓库自测
 ```
 
-创作源码经装配后形成独立包，正式使用请选择 Release 的安装附件。
+常用运维命令见 [仓库维护与构建指南](docs/maintaining.md) 与 [仓库装配结构](docs/workflow/repository-layout.md)。
 
-## 作品、版本与许可
+</details>
 
-[涂装作品集](https://github.com/IcyRyna/war-thunder-liveries) · [版本记录](docs/changelog/README.md) · [素材来源](docs/credits.md) · [许可说明](docs/licensing.md)
+<details>
+<summary><b>🗄 点击展开：已停更 / 历史封存版本（仅供追溯与回退）</b></summary>
 
-自行编写的代码、Skill 指令和文档采用 [MIT](LICENSE)。参考图片、游戏资源和单独许可素材按来源记录及各自适用条款使用。
+这些版本已移出主力推荐列表，原 Git 标签、附件与校验值保持原样以便追溯：
 
-[发布资料整理说明](docs/distribution.md)
+| 版本线 | 停更 / 封存说明 | 历史入口 |
+| --- | --- | --- |
+| `wt-style-akamywek` **0.2.0** | 早期「四步映射」实验分支；现统一使用 `war-thunder-style-akamywek` 主线（`1.3.1`） | [历史说明](docs/skills/wt-style-akamywek.md) · [Release](https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/wt-style-akamywek/v0.2.0) |
+| `wt-style-endfield` **0.1.0 / 0.1.1** | 2026-10-25 永久封存；由 0.2.0 重构取代 | [封存范围](docs/history/endfield-archived.md) · [0.1.1 全览](docs/skills/wt-style-endfield-0.1.1.md) |
+| `war-thunder-tank-style-endfield` **1.0–1.4** | 初代终末地坦克线（62 MB 内嵌素材）；已停止维护 | [1.4 历史说明](docs/history/war-thunder-tank-style-endfield-v1.4.md) · [历史索引](docs/history/README.md) |
+| `wt-style-spectre42` **0.1.1** | 已更名为 `wt-style-charcoal-industrial`（现已迭代至 `0.2.0`） | [更名说明](docs/skills/spectre42.md) · [更新记录](docs/changelog/wt-style-spectre42.md) |
+
+</details>
+
+### 常用文档直达
+
+[文档总览](docs/README.md) · [下载中心](releases/README.md) · [全部更新记录](docs/changelog/README.md) · [素材来源](docs/credits.md) · [许可说明 (MIT & 第三方界限)](docs/licensing.md)

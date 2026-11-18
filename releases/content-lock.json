@@ -361,13 +361,13 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.3.1",
-      "original_archive_sha256": "1ed4e17b54e7a07f6d344e4a0c24991893fb3bf12418518c8ad793e0be6f87ef",
+      "tag": "war-thunder-style-akamywek/v1.3.1-rc2",
+      "original_archive_sha256": "a7b26969b40699f47805cc83826478a53f93cde8640827c2523e8d1b52dbedfe",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 13833,
-          "sha256": "0721749d90a8978a0bae258bcb23bf897a9e432972362b25b1d9679bc3fd590c"
+          "bytes": 14731,
+          "sha256": "d799c2429bff477e1f2a97d5757d180ab8633616f806b918243aa767a7999bca"
         },
         {
           "path": "agents/openai.yaml",
@@ -376,8 +376,8 @@
         },
         {
           "path": "assets/decals/endfield/CATALOG.md",
-          "bytes": 4240,
-          "sha256": "0ab7d974e99fdb57089434b63ab5a339eb3f77be33afb6d4cc70dfa2482c0f35"
+          "bytes": 4743,
+          "sha256": "f0ad9e943f46fea80ccda758072bf0caf20f1469dc2cd61f59431053622c5dd3"
         },
         {
           "path": "assets/decals/endfield/NOTICE.txt",
@@ -781,8 +781,8 @@
         },
         {
           "path": "examples/j16-chen-full-livery_build_design.py",
-          "bytes": 23934,
-          "sha256": "1b3959b95ab1f307d1f6320c0aee710fcff4f8c589a6e11fc935be2851254aa2"
+          "bytes": 23886,
+          "sha256": "ee16d4a33cd9ce8fdfd4d69382dcf395582c1e826c84a6a9491a1fda2c3f46e8"
         },
         {
           "path": "examples/j16-key-sequence.json",
@@ -1176,8 +1176,8 @@
         },
         {
           "path": "scripts/fetch_asset.py",
-          "bytes": 6618,
-          "sha256": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924"
+          "bytes": 7813,
+          "sha256": "027fd53ddf49031db9c5a9948a7f8e34c272be5d02b07a3aaac788197c7c6b4a"
         },
         {
           "path": "scripts/finish_preview.py",
@@ -1206,8 +1206,8 @@
         },
         {
           "path": "scripts/replica_check.py",
-          "bytes": 35824,
-          "sha256": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919"
+          "bytes": 36540,
+          "sha256": "c0f9ef178153b75228435e669d46cc6b034061d3145c91edfab2ad9c26cf76e9"
         },
         {
           "path": "scripts/replica_measure.py",
@@ -1291,8 +1291,8 @@
         },
         {
           "path": "scripts/test_check_lettering.py",
-          "bytes": 7394,
-          "sha256": "ef278319e09b4992cf69fee6c5c73f7fd1d8434574ee405a3fe5be31092c5972"
+          "bytes": 7434,
+          "sha256": "228afe246e45bf1fdf63e96d9791767ef0fc616c068b0176eaeb357543fbc392"
         },
         {
           "path": "scripts/test_cli_gates.py",
@@ -1391,8 +1391,8 @@
         },
         {
           "path": "scripts/test_vector_paint.py",
-          "bytes": 17492,
-          "sha256": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba"
+          "bytes": 18050,
+          "sha256": "a3606b733b297f0c96f11ed0af33d3043788b0d70f2d5431c53f5bdef7ff3cb3"
         },
         {
           "path": "scripts/uv_frame.py",
@@ -1406,8 +1406,8 @@
         },
         {
           "path": "scripts/vector_paint.py",
-          "bytes": 74544,
-          "sha256": "72825c928bcb2b11f2695c5faeddbd00d7a028ef0ea35385d7f70610632dcc8f"
+          "bytes": 75123,
+          "sha256": "c08aa1dbe0ec93beb7c2a932bd3701d03f5aea4a7a58cc70f3deb5622be85576"
         },
         {
           "path": "scripts/verify_game_zip.py",

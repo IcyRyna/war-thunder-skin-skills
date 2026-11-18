@@ -60,8 +60,8 @@
     {
       "id": "war-thunder-style-akamywek",
       "kind": "style",
-      "status": "released_baseline",
-      "description": "Akamywek 喷气机无人物与人物涂装。内置 Orbitron/Michroma 宽体几何字体、缎面金属 PBR（R163/B188+平坦细节法线+三段式深枪灰喷口）、无缝白 V 与防逼挤净距检查。",
+      "status": "release_candidate",
+      "description": "Akamywek 喷气机无人物与人物涂装（1.3.1 正式基线 + RC2 工程补丁）。内置 Orbitron/Michroma 宽体几何字体、71 项终末地联名贴花短路径回退、缎面金属 PBR（R163/B188+平坦细节法线+三段式深枪灰喷口）、无缝白 V 与防逼挤净距检查。",
       "source": "src/styles/aircraft/war-thunder-style-akamywek",
       "includes": [
         {
@@ -97,20 +97,12 @@
           "target": "scripts/dds_variant.py"
         },
         {
-          "source": "toolkits/aircraft/scripts/fetch_asset.py",
-          "target": "scripts/fetch_asset.py"
-        },
-        {
           "source": "toolkits/aircraft/scripts/finish_preview.py",
           "target": "scripts/finish_preview.py"
         },
         {
           "source": "toolkits/aircraft/scripts/panel_lines.py",
           "target": "scripts/panel_lines.py"
-        },
-        {
-          "source": "toolkits/aircraft/scripts/replica_check.py",
-          "target": "scripts/replica_check.py"
         },
         {
           "source": "toolkits/aircraft/scripts/replica_measure.py",
@@ -189,10 +181,6 @@
           "target": "scripts/test_surface_workflow.py"
         },
         {
-          "source": "toolkits/aircraft/scripts/test_vector_paint.py",
-          "target": "scripts/test_vector_paint.py"
-        },
-        {
           "source": "toolkits/aircraft/scripts/uv_frame.py",
           "target": "scripts/uv_frame.py"
         }
@@ -207,7 +195,17 @@
         "package_bytes": 5121020
       },
       "documentation": "docs/skills/akamywek.md",
-      "changelog": "docs/changelog/war-thunder-style-akamywek.md"
+      "changelog": "docs/changelog/war-thunder-style-akamywek.md",
+      "candidate_version": "1.3.1-rc2",
+      "release": {
+        "version": "1.3.1-rc2",
+        "tag": "war-thunder-style-akamywek/v1.3.1-rc2",
+        "prerelease": true,
+        "package_sha256": "a7b26969b40699f47805cc83826478a53f93cde8640827c2523e8d1b52dbedfe",
+        "package_bytes": 7178609,
+        "release_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2",
+        "package_url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1-rc2/war-thunder-style-akamywek-v1.3.1-rc2.skill.zip"
+      }
     },
     {
       "id": "war-thunder-tank-style-endfield",

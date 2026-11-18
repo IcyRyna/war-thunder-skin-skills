@@ -1,77 +1,60 @@
-# 安装指南
+# 安装与环境依赖
 
-## 选择正式版或候选
+[← 返回首页](../README.md) · [快速上手](quick-start.md) · [下载中心](../releases/README.md) · [本地涂装工作台](web-preview.md)
 
-| 目的 | 获取方式 |
-| --- | --- |
-| 使用已有正式工作流 | 从[当前推荐下载](../releases/README.md)进入对应 Release，下载 `.skill.zip` |
-| 检查新研究、工程模块或源码改动 | 按[维护指南](maintaining.md)构建 `dist/<skill-id>-candidate.zip`，先检查和审查完整包 |
+---
 
-仓库中的 `src/` 保存创作源码，公共脚本与部分大型素材由构建器装配。直接复制某个源码子目录可能缺少运行依赖。GitHub 自动提供的 Source code ZIP 用于获取源码；正式安装使用 Release 的独立附件。
+## 一、获取独立安装包
 
-`wt-skin-study` 与 `wt-skin-build` 目前是开发候选，没有正式发布版。需要试用候选时，使用与日常工作流隔离的测试位置，并避免同名 Skill 同时被发现；候选审查完成前不要替换正式安装。
+> [!IMPORTANT]
+> 请从 [Releases](https://github.com/IcyRyna/war-thunder-skin-skills/releases) 或 [下载中心](../releases/README.md) 下载名称以 **`.skill.zip`** 结尾的安装包。GitHub 页面自带的 `Source code (zip)` 是仓库开发目录快照，**不能直接当作完整 Skill 导入**（缺少构建器装配的公共脚本或精选素材布局）。
 
-## 下载正式安装包
+---
 
-从[当前推荐下载](../releases/README.md)选择工作流，进入对应 Release，在 **Assets** 中下载以 `.skill.zip` 结尾的独立安装包。解压后保留整个 Skill 文件夹，`SKILL.md`、`references/`、`scripts/` 和已有的 `assets/` 保持在同一层级。
+## 二、解压并放入 AI 助手目录
 
-```text
-war-thunder-user-skins/
-├── SKILL.md
-├── agents/
-├── references/
-├── scripts/
-└── assets/
-```
+下载 `.skill.zip` 后完整解压，确认保留 `<skill-id>/` 目录及内部 `SKILL.md`、`scripts/`、`references/`、`assets/`（若含）。目录名应与 Skill ID 一致，例如：
 
-Release 的独立安装包包含该版本的工具与素材，安装后不需要克隆本仓库或另装其他 Skill。
+- ✈ `war-thunder-style-akamywek/`（1.3.1 或 1.3.1 RC2）
+- ✈ `war-thunder-user-skins/`（3.14）
+- 🛡 `wt-style-charcoal-industrial/`（0.2.0）
 
-`wt-style-endfield` 0.1.1 的 `.skill.zip` 已含正常生产所需资源；同页 `.legacy-assets.zip` 另存全部 40 份旧素材，不必解压进 Skill。`.source.zip` 用于重建与开发，不是安装包。地面脚本依赖与固定工具身份见包内 `toolkit-lock.json`。
-
-## 放入 Skills 目录
-
-| 平台 | 个人使用 | 项目内使用 |
+| AI 助手 | 默认全局 Skills 目录 | 说明 |
 | --- | --- | --- |
-| Codex | `~/.agents/skills/<skill-id>/` | `<项目>/.agents/skills/<skill-id>/` |
-| Claude Code | `~/.claude/skills/<skill-id>/` | `<项目>/.claude/skills/<skill-id>/` |
+| **Codex** | `~/.agents/skills/` | 完整支持目录型 Skill 与脚本调用 |
+| **Claude Code** | `~/.claude/skills/` | 可放在全局目录或项目 `.claude/skills/` |
+| **Antigravity / Gemini CLI** | 对应全局或工作区 `skills/` | 解压为同名子目录后在对话引用 `<skill-id>` |
 
-Windows 下 `~` 表示用户主目录，可在资源管理器中使用 `%USERPROFILE%`。目录名保留安装包中的 Skill ID。若使用自定义 Skills 位置，将整个文件夹放入实际启用的目录。
+> [!TIP]
+> **`wt-style-charcoal-industrial` 0.2.0 素材定位**：若单独下载了 `wt-style-charcoal-industrial-v0.2.0.skill.zip` 与 `wt-charcoal-industrial-assets-v0.2.0.zip`，建议直接将 `wt-style-charcoal-industrial` 与 `wt-charcoal-industrial-assets` **放在同一上级目录下并排解压**（下载合集包 `bundle` 时已自动并排）；若放别处，可设置环境变量 `WT_CHARCOAL_ASSETS`。安装完可在目录内运行 `python -B scripts/verify_release.py` 自检。
 
-Codex 的本地发现路径依据 [OpenAI 官方 Skills 文档](https://learn.chatgpt.com/docs/build-skills#where-codex-loads-local-skills)；Claude Code 路径依据 [Claude 官方 Skills 文档](https://code.claude.com/docs/en/skills#choose-where-skills-load)。添加后可在助手的技能选择器中查找，未显示时重新打开会话或重启对应应用。
+---
 
-## 调用技能
+## 三、基础运行环境
 
-在 Codex 中明确指定 Skill，例如：
+### 1. 纯免配置用户（本地 3D 查看与改色）
 
-```text
-使用 $war-thunder-user-skins，为指定喷气机制作角色主题涂装。
+如果主要通过图形界面看模、导入现成涂装加层调色，直接下载 **[本地涂装工作台 `v1.0.0`](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/wt-paint-workbench/v1.0.0/wt-paint-workbench-windows-x64.zip)** 并双击 **`启动工作台.cmd`**，包内已集成 Python 运行时与依赖，无需本机额外安装环境。
+
+### 2. AI 制作主力脚本（Python 3.10+）
+
+各个飞机/地面 Skill 的底层绘图与净距校验脚本基于 **Python 3.10+**，标准核心依赖包括：
+
+```bash
+pip install numpy pillow scipy numba
 ```
 
-Claude Code 可用 `/war-thunder-user-skins` 调用，或在对话中说明需要使用的工作流。当前推荐正式包的 Skill ID 为：
+| 依赖类别 | 用途 | 可选 / 注意事项 |
+| --- | --- | --- |
+| `numpy` / `pillow` / `scipy` / `numba` | 原生 UV 矢量渲染、抗锯齿缩放、马赛克与 PBR 贴图生成 | **必需**；推荐配合 `python -B` 与系统 TEMP `NUMBA_CACHE_DIR` 运行 |
+| **内置字体（`assets/fonts/`）** | Akamywek 默认标配 `Orbitron-VF.ttf` 与 `Michroma-Regular.ttf` | **1.3.1+ 已随包内置**，自动优先加载，不再强制依赖本机系统字体或手配 `WT_SKIN_FONT` |
+| **Blender / Composa / Photoshop** | 真实 3D 模型场景导出、拼装跨部件检查与分层图编辑 | 按具体任务启用；工作台亦可承担便携 3D 与局部编辑检查 |
+| `requests` / `matplotlib` / `moderngl` | 远端拉取素材、多边形快速点检或离屏渲染 | **1.3.1 RC2 已为 `fetch_asset.py` 与 `replica_check.py` 补足标准库/NumPy 离线回退**；`moderngl` 仅离屏预览需要 |
 
-- `war-thunder-user-skins`
-- `war-thunder-style-akamywek`
-- `wt-style-endfield`
+---
 
-历史兼容包另见[历史版本](history/README.md)；旧包仍按其原 Skill ID 识别。
+## 四、安装后快速核对清单
 
-提供目标载具、原始模板或 DDS、参考图片与期望输出，会帮助助手选择对应的制作分支。
-
-## 运行环境
-
-阅读工作流不需要先安装图形处理依赖。执行工具时，按具体脚本准备环境：
-
-| 工具范围 | 环境 |
-| --- | --- |
-| Python 工具 | Python 3.10 或更高版本 |
-| 纹理读取、裁切、比较与绘制 | Pillow、NumPy |
-| 飞机几何、UV 运算和离线渲染 | Numba，并按脚本说明准备模型资源 |
-| 坦克离线预览 | ModernGL、可用的 OpenGL 3.3 上下文 |
-| 历史地面兼容工具的逐纹素表面转移（按需） | OpenCV、Numba、ModernGL、可用的 OpenGL 4.3 上下文 |
-| Composa 分层编辑器 | 已安装 Composa，并在编辑器中启用 `Help > Allow AI Control` |
-
-纹理、模型和字体等项目资源由具体制作任务提供。各工具的实际参数以安装包内脚本的 `--help` 为准；脚本输出保存在制作目录。
-
-## 更新与检查
-
-下载同一 Skill 的新版本，保留制作项目后替换其安装目录。打开新的会话并确认技能名称可见，再开始制作。校验文件随相应 Release 提供，可用于核对下载内容。
+- [ ] `SKILL.md` 位于 `<skills目录>/<skill-id>/SKILL.md` 根目录，没有多嵌套一层同名文件夹。
+- [ ] `python -B -c "import numpy, PIL, scipy, numba; print('OK')"` 返回 `OK`。
+- [ ] 如已下载本地涂装工作台 `wt-paint-workbench`，在发起涂装任务时把**完整解压路径**与目标战雷目录告知 AI 助手。

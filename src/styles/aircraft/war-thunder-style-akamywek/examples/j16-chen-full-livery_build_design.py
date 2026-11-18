@@ -324,8 +324,8 @@ def build():
                            fade={'from': [-3.8, 1.45], 'to': [-3.8, 1.05]}))
 
     # --- type -----------------------------------------------------------------------------
-    bold = dict(variation='Bold', font='C:/Windows/Fonts/bahnschrift.ttf')
-    light = dict(variation='Light', font='C:/Windows/Fonts/bahnschrift.ttf')
+    bold = dict(variation='Bold', font='Orbitron-VF.ttf')
+    light = dict(font='Michroma-Regular.ttf')
     # Wing name along the trailing edge (right: phi -18; left mirrored).
     decals.top('wing-name-r', 'wing-r', [-2.95, 4.55], -17.5, text='CHEN QIANYU', height=.30, color='white', tracking=.08, **bold)
     decals.top('wing-sub-r', 'wing-r', [-2.52, 4.22], -17.5, text='ARKNIGHTS : ENDFIELD', height=.11, color='sig_hi', tracking=.2, **light)

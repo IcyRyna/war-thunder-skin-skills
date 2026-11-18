@@ -859,7 +859,9 @@ def _paint(world, uvs, assignment, owners, axes, frames, protect, meta, floats, 
     return 0
 
 
-FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
+ASSET_DIR = Path(__file__).resolve().parent.parent / 'assets'
+DECAL_DIR = ASSET_DIR / 'decals'
+FONT_DIR = ASSET_DIR / 'fonts'
 
 
 def resolve_font(value, design_dir=None):
@@ -873,6 +875,16 @@ def resolve_font(value, design_dir=None):
         if candidate.is_file():
             return candidate
     raise ValueError(f'Font file not found: {value} (looked beside the design and in {FONT_DIR})')
+
+
+def resolve_source(value, design_dir=None):
+    """Resolve an image source beside the design file first, falling back to bundled Skill decals/assets."""
+    path = Path(value)
+    candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), DECAL_DIR / path, ASSET_DIR / path, path]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate.resolve()
+    return (Path(design_dir) / path).resolve() if design_dir else path.resolve()
 
 
 def render_text(spec, palette, px_per_m, design_dir=None):
@@ -935,7 +947,7 @@ def compile_images(design, palette, design_dir, px_per_m):
             if ('source' in spec) == ('text' in spec):
                 raise ValueError(f'{label}: give exactly one of source or text')
             if 'source' in spec:
-                path = (design_dir / spec['source']).resolve()
+                path = resolve_source(spec['source'], design_dir)
                 image = Image.open(path).convert('RGBA')
                 if 'crop' in spec:
                     box = [int(v) for v in spec['crop']]
