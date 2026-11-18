@@ -361,18 +361,33 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.30",
-      "original_archive_sha256": "06eec6ea5dba9de6a1250a28c8aa26153985079856a4ec966de8dd13e03ba5c0",
+      "tag": "war-thunder-style-akamywek/v1.3.1",
+      "original_archive_sha256": "5ea2e5d727f4f8b9aa83a34f17108d0667413e1ab74aff519c3d94298a2e5aa6",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 12939,
-          "sha256": "4d75bc86aea49fbbaadbe115888191767133e8f50fd9058f0693ae3aea1cd773"
+          "bytes": 13571,
+          "sha256": "0e89546ef449dfcb261e11af69ac4580bb3fd6337a203a1a26703a534e5ac0e9"
         },
         {
           "path": "agents/openai.yaml",
           "bytes": 460,
           "sha256": "f14179cede21559ebafa992ca14b0c5b30d909e01ee72e50d7d6d28cf026992e"
+        },
+        {
+          "path": "assets/fonts/Michroma-Regular.ttf",
+          "bytes": 64344,
+          "sha256": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
+        },
+        {
+          "path": "assets/fonts/OFL.txt",
+          "bytes": 4426,
+          "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819"
+        },
+        {
+          "path": "assets/fonts/Orbitron-VF.ttf",
+          "bytes": 38576,
+          "sha256": "f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd"
         },
         {
           "path": "diagrams/motif-library.svg",
@@ -436,8 +451,8 @@
         },
         {
           "path": "references/centreline-approved.md",
-          "bytes": 5540,
-          "sha256": "fee38f0c6ad36c354261b407c37302e1d53fc1212db758524528e2e64881ea8d"
+          "bytes": 5942,
+          "sha256": "ff429b3d773a218bc15f350c898263c4f91ea968ff8fe91f31f50cc6a6fe4966"
         },
         {
           "path": "references/core/aesthetics.md",
@@ -511,8 +526,8 @@
         },
         {
           "path": "references/core/materials-and-uv.md",
-          "bytes": 15422,
-          "sha256": "2a58d0ae43e9c9bbfb077d866885e4e8076553b8ed8ccb235b66ddac9952004c"
+          "bytes": 15533,
+          "sha256": "0e8f3c9771b1ba5a39d792e89c71c0abcba591716e4bbbae2cc81534124d6b15"
         },
         {
           "path": "references/core/native-checks.md",
@@ -590,6 +605,11 @@
           "sha256": "e531af88552ddb1856b2fb256f9a318c0124c31c10c92e029108a617c4894726"
         },
         {
+          "path": "references/f15ex-endfield.md",
+          "bytes": 3977,
+          "sha256": "fc9377ec5a0ad88b8c0ec65c929f803f34ff536a7e35a352d97b38c5464773fa"
+        },
+        {
           "path": "references/f16c-copper.md",
           "bytes": 2998,
           "sha256": "1f4918ee3c9dfab87a661f52adb49c905330af6eddee4f6003aa92588dc82019"
@@ -618,6 +638,26 @@
           "path": "references/images/f15c-laevatain-layout.png",
           "bytes": 637391,
           "sha256": "cd1f35dbeef6e3031b74b8ec43f8f2760cb4e720028ce8ba39c6568067edf96c"
+        },
+        {
+          "path": "references/images/f15ex-endfield-belly.png",
+          "bytes": 106473,
+          "sha256": "fee3a40e24c03157cd8ccbd7f6d5e10058ce6daaf14d4f65499e6e60d97948a9"
+        },
+        {
+          "path": "references/images/f15ex-endfield-dorsal-close.png",
+          "bytes": 222548,
+          "sha256": "85d642e79e042262bd7d1b181297f964b96bdc97ddda0bf488d71d132228f721"
+        },
+        {
+          "path": "references/images/f15ex-endfield-starboard-side.png",
+          "bytes": 148602,
+          "sha256": "fb7f3bc92d0edba18fdc72a33f2e43cb9a1bb84a391bd8dff7302788f95f1003"
+        },
+        {
+          "path": "references/images/f15ex-endfield-top.png",
+          "bytes": 161375,
+          "sha256": "f390c80df88617cbf3b6c046d6296c0ec1e94b650a985910d18b0aa7ebda3e8e"
         },
         {
           "path": "references/images/f16c-copper-quarter.png",
@@ -751,8 +791,8 @@
         },
         {
           "path": "references/mosaic-and-charcoal-detail.md",
-          "bytes": 10903,
-          "sha256": "dd321ef1471a1bc7d63b2a41c6e5cd46bf519ac5d0f0c5603c862791cce5837d"
+          "bytes": 11225,
+          "sha256": "09382c0bd104ca13007cbe104954b3eb425fa8166ae0970a1ac326e33a51873e"
         },
         {
           "path": "references/motifs.md",
@@ -766,8 +806,8 @@
         },
         {
           "path": "references/reviewed-works.md",
-          "bytes": 6885,
-          "sha256": "a87312154843f2022aa513c94286f45196e8a8a68fd111bbb5441ef8f9a7b77b"
+          "bytes": 7134,
+          "sha256": "2a651e956fe956899ddd87b1513ffdc8f88be7061150f35e1e4545307ff064d9"
         },
         {
           "path": "references/surfaces.md",
@@ -776,8 +816,8 @@
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 6657,
-          "sha256": "e5652fefdb9ef395e421eef75ce2abe0b3e8b41812fed96027df44342b97d849"
+          "bytes": 6605,
+          "sha256": "ab979cc60333bcd2831fcc13ec416935202cad073d3b55ca1f2030cdbb5a34ce"
         },
         {
           "path": "scripts/aircraft_markings.py",
@@ -831,8 +871,8 @@
         },
         {
           "path": "scripts/coat_material.py",
-          "bytes": 8147,
-          "sha256": "aa766e30577fe6b1ac2b656ad2b95f825bf09da2d7a3e1375a3aded6c6906410"
+          "bytes": 10072,
+          "sha256": "305b8b260a77cdffb56d5f9d40e347a3af4206d468895cfe40c5736ce50123f2"
         },
         {
           "path": "scripts/compare_skin.py",
@@ -851,8 +891,8 @@
         },
         {
           "path": "scripts/design_lint.py",
-          "bytes": 33644,
-          "sha256": "b863572e64fba08bcf1667c46e2ebaa9c2eddfd1b949b5371b65a84e0bf1a41f"
+          "bytes": 34914,
+          "sha256": "845bf8e13f45e1cf05e8a81ed166b4c92f7fc30c9d8f01b2847fc4d7090d1670"
         },
         {
           "path": "scripts/detail_sheet.py",
@@ -916,8 +956,8 @@
         },
         {
           "path": "scripts/surface_map.py",
-          "bytes": 23098,
-          "sha256": "54193080ad39c0257a2899b1f97bfbad96acda9fe01688ac82c8c1b059fa6dc6"
+          "bytes": 24300,
+          "sha256": "832bafd25a2946d922e20fc42a2ec6b96c97abdb157bc885c4fec6bdf0b47144"
         },
         {
           "path": "scripts/surface_preview.py",
@@ -986,8 +1026,8 @@
         },
         {
           "path": "scripts/test_coat_material.py",
-          "bytes": 3491,
-          "sha256": "7d969cd6f84aa2cd4bd76fc6016f8a77fa9f0c9bb52a244309d04e1bcdf20818"
+          "bytes": 4556,
+          "sha256": "81b32a19e0225881692155e726bab417baff8d9d1e065ba637224673f5f53967"
         },
         {
           "path": "scripts/test_comparison.py",
@@ -1001,8 +1041,8 @@
         },
         {
           "path": "scripts/test_design_lint.py",
-          "bytes": 12068,
-          "sha256": "8ac5bc0aa6cec758c11b2e22064484178dded56a95aa1cead7c24ae855205b00"
+          "bytes": 13064,
+          "sha256": "8ab298bc34714e38c97c7db0aa21bbd79e9ef997da0e5c05bd7c2ca08349020d"
         },
         {
           "path": "scripts/test_detail_sheet.py",
@@ -1066,8 +1106,8 @@
         },
         {
           "path": "scripts/test_surface_map.py",
-          "bytes": 8994,
-          "sha256": "e371ad1e8802505a169ff1ca7c6992ac3e3224d6e96c4ad3d86734782b63bc86"
+          "bytes": 10644,
+          "sha256": "b129ee3dc548541b542016c5ec0c0c223bc35e291ef356323367cccd8c21c494"
         },
         {
           "path": "scripts/test_surface_workflow.py",
@@ -1091,8 +1131,8 @@
         },
         {
           "path": "scripts/vector_paint.py",
-          "bytes": 74439,
-          "sha256": "96b3f2a9432a78a0e4efd3011d709546c3ccd6004f1280c2ea2c9c1f61b40836"
+          "bytes": 74544,
+          "sha256": "72825c928bcb2b11f2695c5faeddbd00d7a028ef0ea35385d7f70610632dcc8f"
         },
         {
           "path": "scripts/verify_game_zip.py",

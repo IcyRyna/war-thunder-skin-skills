@@ -60,6 +60,22 @@ class CoatMaterialTests(unittest.TestCase):
         self.assertEqual(d.shape, (512, 512, 4))
         self.assertTrue((d == np.array([198, 128, 255, 128], np.uint8)).all())
 
+    def test_exhaust_3stage_finish(self):
+        color = np.full((12, 12, 4), (160, 150, 140, 255), np.uint8)
+        packed = np.full((6, 6, 4), (120, 125, 165, 131), np.uint8)
+        cm_s = np.zeros((12, 12), bool); cm_s[:4, :] = True
+        cm_o = np.zeros((12, 12), bool); cm_o[4:8, :] = True
+        cm_i = np.zeros((12, 12), bool); cm_i[8:, :] = True
+        nm_s = np.zeros((6, 6), bool); nm_s[:2, :] = True
+        nm_o = np.zeros((6, 6), bool); nm_o[2:4, :] = True
+        nm_i = np.zeros((6, 6), bool); nm_i[4:, :] = True
+        coat_material.apply_exhaust_finish(color, packed, cm_s, cm_o, cm_i, nm_s, nm_o, nm_i)
+        self.assertLess(int(color[0, 0, 0]), 80)   # dark gunmetal shroud, not bright 160 silver
+        self.assertEqual((int(packed[0, 0, 0]), int(packed[0, 0, 2])), (150, 224))
+        self.assertEqual((int(packed[2, 0, 0]), int(packed[2, 0, 2])), (138, 240))
+        self.assertEqual((int(packed[4, 0, 0]), int(packed[4, 0, 2])), (86, 36))
+        self.assertTrue((packed[:, :, 1] == 125).all() and (packed[:, :, 3] == 131).all())
+
     def test_refuses_bad_input(self):
         with self.assertRaises(ValueError):
             coat_material.main(['--normal', str(self.root / 'n.png'), '--structure', '1.5', '--out', str(self.root / 'o')])

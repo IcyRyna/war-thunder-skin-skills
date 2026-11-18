@@ -32,6 +32,33 @@ PRESETS = {
     # Calibrated from [Bronya][Cy30][D-9A][SFW] (su_30sm_n.dds / n_n.dds): silky metallic reflection without mirror/glass blow-out.
     'metallic-satin': dict(r=163, b=188, structure=0.0, flat_g=128, flat_a=128),
 }
+# Verified 3-stage titanium/carbon-ceramic exhaust upgrade (keeps native G/A normal rivets/louvers, removes raw silver/tan stock shroud)
+EXHAUST_ZONES = {
+    'shroud': dict(gain=(0.35, 0.37, 0.42), lift=(4, 5, 8), rb=(150, 224)),      # Dark gunmetal titanium heat-shield barrels
+    'noz_outer': dict(gain=(0.62, 0.66, 0.74), lift=(6, 8, 13), rb=(138, 240)),  # Anodized dark titanium turkey-feather petals
+    'noz_inner': dict(gain=(0.38, 0.40, 0.45), lift=(4, 5, 8), rb=(86, 36)),     # Matte carbon-ceramic afterburner liner
+}
+
+
+def grade_metallic_zone(rgb_slice: np.ndarray, gain: tuple[float, float, float], lift: tuple[float, float, float]) -> np.ndarray:
+    """Convert raw warm silver/tan metal RGB pixels to cool smoked titanium/gunmetal preserving panel detail."""
+    f = rgb_slice.astype(np.float32)
+    luma = 0.299 * f[:, 0] + 0.587 * f[:, 1] + 0.114 * f[:, 2]
+    neutral = np.stack([luma * gain[0] + lift[0], luma * gain[1] + lift[1], luma * gain[2] + lift[2]], axis=1)
+    return np.clip(np.rint(neutral), 0, 255).astype(np.uint8)
+
+
+def apply_exhaust_finish(color_rgba: np.ndarray, packed_rgba: np.ndarray, shroud_color_mask: np.ndarray,
+                         noz_outer_color_mask: np.ndarray, noz_inner_color_mask: np.ndarray,
+                         shroud_n_mask: np.ndarray, noz_outer_n_mask: np.ndarray, noz_inner_n_mask: np.ndarray) -> None:
+    """Apply 3-stage titanium/ceramic albedo grading and R/B PBR values in-place while preserving stock G/A normals."""
+    for spec, cmask, nmask in (
+        (EXHAUST_ZONES['shroud'], shroud_color_mask, shroud_n_mask),
+        (EXHAUST_ZONES['noz_outer'], noz_outer_color_mask, noz_outer_n_mask),
+        (EXHAUST_ZONES['noz_inner'], noz_inner_color_mask, noz_inner_n_mask),
+    ):
+        color_rgba[cmask, :3] = grade_metallic_zone(color_rgba[cmask, :3], spec['gain'], spec['lift'])
+        packed_rgba[nmask, 0], packed_rgba[nmask, 2] = spec['rb']
 
 
 def flat_code(plane):

@@ -175,6 +175,18 @@ class DesignLintTests(unittest.TestCase):
         self.assertNotIn('crowded-placement', clean_codes)
         self.assertNotIn('overlapping-placement', clean_codes)
 
+    def test_bundled_orbitron_michroma_pair_is_clean(self):
+        design = dict(schema_version=1, charts=[CHART], palette=dict(base='#333334', hi='#ececec'), layers=[
+            dict(name='type', images=[
+                dict(id='main-L', chart='top', text='ENDFIELD', height=.22, font='Orbitron-VF.ttf', variation='Bold', tracking=.08, center=[0, 1], color='hi'),
+                dict(id='main-R', chart='top', text='F-15EX', height=.22, font='Orbitron-VF.ttf', variation='Bold', tracking=.08, center=[0, -1], color='hi'),
+                dict(id='sub-L', chart='top', text='PROTOCOL', height=.06, font='Michroma-Regular.ttf', tracking=.18, center=[0, 1.5], color='hi'),
+                dict(id='sub-R', chart='top', text='EAGLE II', height=.06, font='Michroma-Regular.ttf', tracking=.18, center=[0, -1.5], color='hi'),
+            ])])
+        result, codes = self.lint(design)
+        self.assertEqual(result['errors'], 0, result['hits'])
+        self.assertNotIn('too-many-fonts', codes)
+
 
 if __name__ == '__main__':
     unittest.main()

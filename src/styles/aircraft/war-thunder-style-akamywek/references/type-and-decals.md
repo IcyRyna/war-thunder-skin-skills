@@ -2,11 +2,10 @@
 
 ## 字体
 
-- 全大写的宽体或方形无衬线（类 Eurostile、Bank Gothic、Microgramma 的气质），粗、细两档。没有授权字体时，用系统里最接近的几何无衬线，加宽字距。
-- 作者字体尚未完成准确识别。Windows 的 Bahnschrift（`C:/Windows/Fonts/bahnschrift.ttf`）只是可用的备用字体，不是已核实的作者字体，也不等于已复现作者字形。用它时在 `vector_paint.py` 写 `font` 和 `variation`（`Bold` 做主名、`Light` 做副名），`tracking` 0.05–0.12 给主名、0.2–0.3 给副名。用户要求精确字形时先对照原图核验，不用备用字体冒充已识别字体。
-- J-16 同尺度对照中，Bahnschrift 主字显得过于常规且偏窄；本次采用 Orbitron Medium 的宽体方形字形作两肩主字、Bold 作机型标签，Michroma 作较细副字。它是经当前样张核对的替代选择，不是对作者字体身份的确认，也不把整个装饰改成其他科幻风格。字体及 OFL 许可一并放源码，其他机型仍按实际字组宽度和观看尺度核对。
-- 中文、日文字要显式指定字体并渲染确认；这个风格的主字默认用拉丁字母拼写。
-- Light 只给字高 8 cm 以上的副名；更小的技术字用 Regular 或 Bold，否则在游戏距离里消失。字体选择、字号层级和凑数字的通用纠偏见 [审美纠偏](core/taste-corrections.md#字体)。
+- 全大写的宽体或方形无衬线（类 Eurostile、Bank Gothic、Microgramma 的气质），粗、细两档。**Skill `assets/fonts/` 已内置 SIL OFL 字体 `Orbitron-VF.ttf`、`Michroma-Regular.ttf` 及 `OFL.txt`**，`vector_paint.py` 与 `design_lint.py` 均默认优先加载内置字体。
+- **默认拉丁配对**：主字与机型大标显式写 `Orbitron-VF.ttf`（`variation: "Bold"` 给 `F-15EX` / 两肩主字，或 `"Medium"`；`tracking` `0.05–0.10`）；较细副字、微字与技术标注显式写 `Michroma-Regular.ttf`（`tracking` `0.14–0.24`）。不要未加载内置 `assets/fonts/` 就静默回退到偏窄常规的 Windows `Bahnschrift`（`Bahnschrift` 仅在无内置字体或调试环境无法读取 `assets/fonts/` 时作备用）。
+- 中文、日文字要显式指定黑体/黑体变体（`C:/Windows/Fonts/msyhbd.ttc`、`Dengb.ttf`、`simhei.ttf`、`YuGothB.ttc`）并渲染确认；这个风格的主字默认用拉丁字母拼写。`design_lint.py` 已把 `Orbitron + Michroma` 视作一组拉丁字族（可再配一种中日文字体而不报 `too-many-fonts`）。
+- Light 只给字高 8 cm 以上的副名；更小的技术字用 Regular 或 Bold（`Michroma-Regular.ttf`），否则在游戏距离里消失。字体选择、字号层级和凑数字的通用纠偏见 [审美纠偏](core/taste-corrections.md#字体)。
 
 ## 字组
 

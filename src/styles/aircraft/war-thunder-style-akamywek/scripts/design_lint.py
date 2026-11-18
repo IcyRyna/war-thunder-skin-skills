@@ -23,8 +23,10 @@ from pathlib import Path
 import re
 import sys
 
-# Same default as vector_paint.py; WT_SKIN_FONT overrides it on both.
-DEFAULT_FONT = os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
+# Same default as vector_paint.py; prefer bundled Orbitron-VF.ttf, overridable via WT_SKIN_FONT.
+FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
+_BUNDLED_DEFAULT = FONT_DIR / 'Orbitron-VF.ttf'
+DEFAULT_FONT = os.environ.get('WT_SKIN_FONT') or (str(_BUNDLED_DEFAULT) if _BUNDLED_DEFAULT.is_file() else 'C:/Windows/Fonts/bahnschrift.ttf')
 # Stock UI faces, script and novelty faces, and thin serif CJK faces that vanish at viewing distance.
 DISCOURAGED_FONTS = {
     'arial': 'stock UI face', 'arialbd': 'stock UI face', 'arialbi': 'stock UI face', 'ariali': 'stock UI face',
@@ -41,7 +43,7 @@ FILLER = re.compile(r'\b(LOREM|IPSUM|SAMPLE|PLACEHOLDER|TEXT\s*HERE|YOUR\s+TEXT|
 CJK = re.compile(r'[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
 LIGHT = re.compile(r'thin|light|hairline|extralight|semilight', re.I)
 LIGHT_FILES = {'msyhl', 'dengl', 'segoeuil', 'segoeuisl', 'yugothl', 'arialn'}
-FAMILY_PREFIXES = ('msyh', 'deng', 'yugoth', 'meiryo', 'segoeui', 'arial', 'bahnschrift', 'simhei', 'simsun')
+FAMILY_PREFIXES = ('orbitron', 'michroma', 'msyh', 'deng', 'yugoth', 'meiryo', 'segoeui', 'arial', 'bahnschrift', 'simhei', 'simsun')
 
 
 def hex_rgb(value, palette):
@@ -179,7 +181,17 @@ def glyph_missing(font, ch):
     return probe.size == blank.size and bytes(probe) == bytes(blank)
 
 
-def check_text(design, palette, report):
+def _resolve_font_path(value, design_dir=None):
+    value = value or DEFAULT_FONT
+    path = Path(value)
+    candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), FONT_DIR / path, path]
+    for candidate in candidates:
+        if candidate.is_file():
+            return candidate
+    return candidates[0]
+
+
+def check_text(design, palette, report, design_dir=None):
     try:
         from PIL import ImageFont
     except ImportError:  # glyph checks need Pillow; the rest does not
@@ -193,26 +205,26 @@ def check_text(design, palette, report):
     fonts = {}
     for spec in texts:
         where, text = spec.get('id', '?'), spec['text']
-        font_path = spec.get('font', DEFAULT_FONT)
-        stem = Path(font_path).stem.lower()
+        font_path = _resolve_font_path(spec.get('font'), design_dir)
+        stem = font_path.stem.lower()
         families.add(next((p for p in FAMILY_PREFIXES if stem.startswith(p)), stem))
         styles.add((stem, spec.get('variation')))
         height = float(spec.get('height', 0))
         heights.append((height, where))
         if stem in DISCOURAGED_FONTS:
-            report.add('warn', 'stock-font', where, f'{Path(font_path).name}: {DISCOURAGED_FONTS[stem]}',
-                       'Use one geometric or square sans for the whole airframe (Bahnschrift for Latin; Microsoft YaHei Bold, '
+            report.add('warn', 'stock-font', where, f'{font_path.name}: {DISCOURAGED_FONTS[stem]}',
+                       'Use bundled Orbitron-VF.ttf + Michroma-Regular.ttf (or Bahnschrift fallback; Microsoft YaHei Bold, '
                        'DengXian Bold or SimHei for Chinese; Yu Gothic Bold or Meiryo Bold for Japanese).')
         if CJK.search(text) and 'font' not in spec:
             report.add('error', 'cjk-without-font', where, 'CJK text on the default Latin font',
                        'Give an explicit CJK font (C:/Windows/Fonts/msyhbd.ttc, Dengb.ttf, simhei.ttf, YuGothB.ttc).')
-        if not Path(font_path).is_file():
+        if not font_path.is_file():
             report.add('error', 'font-not-found', where, f'{font_path} does not exist, so vector_paint.py cannot render this text',
-                       'Point font at an installed .ttf/.ttc (or set WT_SKIN_FONT for the default) and rerun.')
+                       'Point font at bundled Orbitron-VF.ttf / Michroma-Regular.ttf or an installed .ttf/.ttc (or set WT_SKIN_FONT) and rerun.')
         elif ImageFont is not None:
-            key = (font_path, spec.get('variation'))
+            key = (str(font_path), spec.get('variation'))
             if key not in fonts:
-                fonts[key] = ImageFont.truetype(font_path, 48)
+                fonts[key] = ImageFont.truetype(str(font_path), 48)
                 if spec.get('variation'):
                     try:
                         fonts[key].set_variation_by_name(spec['variation'])
@@ -220,7 +232,7 @@ def check_text(design, palette, report):
                         pass
             missing = sorted({ch for ch in text if glyph_missing(fonts[key], ch)})
             if missing:
-                report.add('error', 'missing-glyphs', where, f'{Path(font_path).name} has no glyph for {"".join(missing)!r}: it renders as boxes',
+                report.add('error', 'missing-glyphs', where, f'{font_path.name} has no glyph for {"".join(missing)!r}: it renders as boxes',
                            'Pick a font that covers every character and render it once to check.')
         if FILLER.search(text):
             report.add('warn', 'filler-text', where, f'{text!r} is filler, not information',
@@ -232,12 +244,16 @@ def check_text(design, palette, report):
         if (LIGHT.search(str(spec.get('variation') or '')) or stem in LIGHT_FILES) and height < .08:
             report.add('warn', 'thin-small-type', where, f'light weight at {height:.2f} m cap height disappears in game',
                        'Small type uses Regular or Bold; keep Light for large sub-lines only.')
-    if len(families) > 2:
-        report.add('warn', 'too-many-fonts', 'design', f'{len(families)} font families: {sorted(families)}',
-                   'One family for the airframe (plus one CJK face when needed), two weights.')
+    eff_families = set(families)
+    if {'orbitron', 'michroma'}.issubset(eff_families):
+        eff_families -= {'orbitron', 'michroma'}
+        eff_families.add('orbitron+michroma')
+    if len(eff_families) > 2:
+        report.add('warn', 'too-many-fonts', 'design', f'{len(eff_families)} font families: {sorted(eff_families)}',
+                   'Use bundled Orbitron + Michroma for Latin (plus one CJK face when needed).')
     if len(styles) > 3:
         report.add('warn', 'too-many-styles', 'design', f'{len(styles)} font/weight combinations',
-                   'Two weights carry the hierarchy: Bold for names, Light or Regular for sub-lines.')
+                   'Two weights carry the hierarchy: Orbitron Bold/Medium for names, Michroma Regular for sub-lines.')
     # The size ladder is read within one surface: compare only placements on the same chart.
     per_chart = {}
     for (h, where), spec in zip(heights, texts):
@@ -254,9 +270,12 @@ def check_text(design, palette, report):
                 report.add('warn', 'near-equal-sizes', f'{w0[0]} / {w1[0]} (chart {chart})',
                            f'cap heights {h0:.2f} m and {h1:.2f} m differ by only {h1 / h0:.2f}x',
                            'Make sizes either equal or clearly different: name : sub-line : note about 1 : 1/3 : 1/8 (adjacent tiers >= 2x).')
-    if len(texts) > 16:
-        report.add('warn', 'too-much-text', 'design', f'{len(texts)} text placements',
-                   'Main name once per side and at most 5-6 lockups on the whole airframe; cluster technical text.')
+    # Collapse symmetrical left/right and upper/lower duplicates so twin-engine aft & wing-root lockups are not stripped.
+    logical_slots = {re.sub(r'\b(upper|lower)-(wing|tailplane)-[LR]\b', r'\2', re.sub(r'-(L|R)(\d*)$', r'-\2', str(s.get('id', i))))
+                     for i, s in enumerate(texts)}
+    if len(logical_slots) > 18 or len(texts) > 32:
+        report.add('warn', 'too-much-text', 'design', f'{len(texts)} text placements ({len(logical_slots)} unique slots)',
+                   'Main name once per side and cluster technical text without dropping required aft-deck or wing-root lockups.')
     return [dict(id=s.get('id'), text=s['text'], font=Path(s.get('font', DEFAULT_FONT)).name,
                  variation=s.get('variation'), height=s.get('height')) for s in texts]
 
@@ -589,7 +608,7 @@ def lint(design_path, intent=None):
         raise ValueError('Unknown art_intent options')
     pairs=palette_intent(intent,palette)
     families = check_colors(design, palette, report,pairs)
-    texts = check_text(design, palette, report)
+    texts = check_text(design, palette, report, design_path.parent)
     angles = check_shapes(design, report,intent)
     check_images(design, design_path.parent, report)
     check_spacing(design, design_path.parent, palette, report)

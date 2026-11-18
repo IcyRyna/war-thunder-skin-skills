@@ -1,6 +1,6 @@
 # Akamywek 风格喷气机涂装
 
-`war-thunder-style-akamywek` **1.30** 用于在《战争雷霆》喷气机的原生 UV 上制作炭灰、签名色与锐角白形组成的涂装。可从整机无人物布局起步，也可在选定的布局上安排角色。[下载 1.30 安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.30/war-thunder-style-akamywek-v1.30.skill.zip) · [安装说明](../installation.md) · [版本记录](../changelog/war-thunder-style-akamywek.md)
+`war-thunder-style-akamywek` **1.3.1** 用于在《战争雷霆》喷气机的原生 UV 上制作炭灰、签名色与锐角白形组成的涂装。可从整机无人物布局起步，也可在选定的布局上安排角色。[下载 1.3.1 安装包](https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip) · [安装说明](../installation.md) · [版本记录](../changelog/war-thunder-style-akamywek.md)
 
 ## 先看对应作品
 
@@ -17,7 +17,7 @@
 
 [风格源码](../../src/styles/aircraft/war-thunder-style-akamywek/) · [维护指南](../maintaining.md) · [返回首页](../../README.md)
 
-## 1.30 材质与排布更新
+## 1.3.1 材质与排布更新
 
 - 新增缎面高金属清漆预设 `coat_material.py --preset metallic-satin`（`R=163, B=188, G/A=128, 128`）及 `--flat-detail-out` 中性平铺细节法线，消除高反光下的“水波纹”。
 - 在 `design_lint.py` 新增同图幅重叠与净距防逼挤检查（`overlapping-placement` / `crowded-placement`），结合 F-15EX 实机经验明确平尾内收、垂尾徽章居中与删减拥挤小副标原则。

@@ -864,7 +864,9 @@ FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
 
 def resolve_font(value, design_dir=None):
     """Font path as written, relative to the design file, or a file name bundled in the Skill's assets/fonts."""
-    value = value or os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
+    if not value:
+        bundled = FONT_DIR / 'Orbitron-VF.ttf'
+        value = os.environ.get('WT_SKIN_FONT') or (str(bundled) if bundled.is_file() else 'C:/Windows/Fonts/bahnschrift.ttf')
     path = Path(value)
     candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), FONT_DIR / path, path]
     for candidate in candidates:
