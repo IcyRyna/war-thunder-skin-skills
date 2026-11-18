@@ -75,3 +75,12 @@
 | `scripts/finish_preview.py` | 两环境与法线隔离的近似材质对照；NumPy、Pillow、Numba |
 | `scripts/build_skin.py` | TGA／BLK 组装；Pillow、NumPy |
 | `scripts/dds_variant.py` | DDS 与实际 mip 验证；Pillow、NumPy、受支持的官方 texconv |
+| `scripts/legacy_dds.py` | 传统 DX9/BGRA8 无压缩单层 DDS 导出与 128B 头部回读核验；Pillow、NumPy |
+| `scripts/verify_game_zip.py` | 游戏投放 ZIP 结构、BLK 与实际引用 DDS 一致性门禁检查；Python 标准库 |
+| `scripts/check_lettering.py` | 从真实相机视角统计模型可见笔画长度、遮挡与字向可读性；NumPy、Pillow |
+| `scripts/item_visibility.py` | 保留与隐藏目标图元做单变量视觉比对，检查挂载件跨部件遮挡与细回声可见性；NumPy、Pillow |
+| `scripts/aircraft_markings.py` | 提取目标机真实几何侧视/俯视剪影外轮廓并落位至设计图表；NumPy |
+| `scripts/area_shares.py` | 面积占比统计辅助库（配合 `airframe_setup.py shares` 计算整机色域比例）；NumPy、Pillow |
+| `scripts/chart_diagnostics.py` | 检查图表 UV 覆盖异常、残差与投影拉伸告警诊断；NumPy |
+| `scripts/uv_ownership.py` | 计算原生三角形在共享 UV 纹素上的归属竞争（配合 `surface_map.py`）；NumPy |
+| `scripts/artifact_io.py` | 防覆写输入/输出收据、SHA-256 与可移植路径读写共用库；Python 标准库 |

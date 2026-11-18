@@ -362,17 +362,372 @@
     {
       "id": "war-thunder-style-akamywek",
       "tag": "war-thunder-style-akamywek/v1.3.1",
-      "original_archive_sha256": "9a51ed161a04946d797d27acad06cc7a4640d778f28688ff2e9873a778ec868c",
+      "original_archive_sha256": "1ed4e17b54e7a07f6d344e4a0c24991893fb3bf12418518c8ad793e0be6f87ef",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 12836,
-          "sha256": "6ed9e1d51399e148d03dbdad11a4f09818344e75ecfe1f7b90702f3b64890be2"
+          "bytes": 13833,
+          "sha256": "0721749d90a8978a0bae258bcb23bf897a9e432972362b25b1d9679bc3fd590c"
         },
         {
           "path": "agents/openai.yaml",
           "bytes": 460,
           "sha256": "f14179cede21559ebafa992ca14b0c5b30d909e01ee72e50d7d6d28cf026992e"
+        },
+        {
+          "path": "assets/decals/endfield/CATALOG.md",
+          "bytes": 4240,
+          "sha256": "0ab7d974e99fdb57089434b63ab5a339eb3f77be33afb6d4cc70dfa2482c0f35"
+        },
+        {
+          "path": "assets/decals/endfield/NOTICE.txt",
+          "bytes": 927,
+          "sha256": "9f9fa1e48ecc93075ddef48ea730729b8bb7cd5e1ac9afb80c2c08eefcda46f7"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_parts_tundra01_t0.png",
+          "bytes": 8119,
+          "sha256": "41544299802c14348ad5a747d2ea3211374b700775bfba419ec6e3edc5b8e0b8"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_parts_tundra01_t1.png",
+          "bytes": 8046,
+          "sha256": "97d706c591a5326007c114d055f68f84ce49e4d68c33fb0c82f1584f620dcaa4"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_tundra_suit_atk01.png",
+          "bytes": 5929,
+          "sha256": "35443044f840cfc191829782ca27fdcaeca2d0c7ac87e71d7049d1dc44247d65"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_atb01.png",
+          "bytes": 7790,
+          "sha256": "11c2f6acbb2959c810b88d667889a50c0590c261ac34e25e908b72c8e301aca6"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_attri01.png",
+          "bytes": 9384,
+          "sha256": "774238bba4371eedc8b46c8946ad7e5bab8ef83a477e838d3502a863114a34fc"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_fire_natr01.png",
+          "bytes": 11342,
+          "sha256": "426aea8a7749047836750bb576bb6bc0e7b9d49263a6001784f16e1196f9370e"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_agi_01.png",
+          "bytes": 6640,
+          "sha256": "70141f8f3066474111cf9fc42de5dadef3ca631a1ed177b1acd1dff4344f910f"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_atb_01.png",
+          "bytes": 7428,
+          "sha256": "d4b14aecb17b5be7b65df4e2db3ab018861625ae1790d435f371ddf966be5fcf"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_atkup.png",
+          "bytes": 18608,
+          "sha256": "8e69457ab43c36f687a2747d46faa1082ca3e79529abb2fa07105b8d48faaed6"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_attri_01.png",
+          "bytes": 27287,
+          "sha256": "ef69c076f9ceee0bc9fb56cddcebdb032a799baf091529bb9af4c691d28a3c41"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_criti_01.png",
+          "bytes": 6926,
+          "sha256": "a4daadc871d544f44814380ac301a09ba687b61e4744d6c9fa7aab168af51e37"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_critmulti.png",
+          "bytes": 5659,
+          "sha256": "a6c8bf68589aee3e7d5163cbd8210c3cdda259d224cec20bb13a6e2a31c6c738"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_crystup.png",
+          "bytes": 10566,
+          "sha256": "2037f773aa8167a26e57522f1b27d20d088eb2816185378fa506d824d562f8fa"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_defup.png",
+          "bytes": 5078,
+          "sha256": "10b13766e63466d81c9ab88345925c6fee3caa89f39a936a2c0e2b87235986ca"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_fire_natr_01.png",
+          "bytes": 11434,
+          "sha256": "5b64769c947912ad2d7da012174e19615cebbe95c8bbc2b380d396e1825b1069"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_fireup.png",
+          "bytes": 3827,
+          "sha256": "8ee8b88a8f0620cb05566180bfd6338bd5455f399dde35bfe850b11d7df2cd08"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_heal_01.png",
+          "bytes": 10327,
+          "sha256": "c3f3a85021975777092bc7b786aca637551090ed20712c2dae66363e3579874b"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_hpup.png",
+          "bytes": 9233,
+          "sha256": "9c6ad2d39cc3a209d26b18fe1bddc2ad2bd5be730ea92f2dbebb649081ea48fd"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_knockdownup.png",
+          "bytes": 12173,
+          "sha256": "32ad69bee2060b8df7b25866fa23c88ab13f0a60640272a3a6a46fa4c56f564a"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_penup.png",
+          "bytes": 4024,
+          "sha256": "2e6547b08a6988ad1770f1e78ac0f7482214665420c1ef3a0934961a796a62bd"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_phy_01.png",
+          "bytes": 4992,
+          "sha256": "b7da7cdf0a113fe5cfad01778e2a69e38e25fb48f9d97cea36e66b6588823165"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_poise_01.png",
+          "bytes": 4550,
+          "sha256": "950c0a8870f7e20144d5d8a4f821d8117b8523898f33e9d86830663e8fb2851b"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_pulse_cryst_01.png",
+          "bytes": 11185,
+          "sha256": "0df68a5d34a14b6c94d80b06dfb3dee6831aae25880122f1a79f4ca216267ba0"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_pulseup.png",
+          "bytes": 18747,
+          "sha256": "7592c9e6af204a9c09c0984245ceb824eefe6dabc4f6aeb9511f647dd6ad4b64"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_receivehealup.png",
+          "bytes": 12317,
+          "sha256": "4b5c31f03b9a24bcb35c08cdf644019623aa0d572bd86047ad0abfd3eaaab90a"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_str_01.png",
+          "bytes": 4754,
+          "sha256": "45f1a20287d3907d343202b9b1ec0324d032fb8f0c9a3a002be91d2311b2de36"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_will_01.png",
+          "bytes": 9608,
+          "sha256": "41003340f88aa070444a1266ca1488b59199986b39a8e3c32208d89d8a11fe71"
+        },
+        {
+          "path": "assets/decals/endfield/brands/icon_suit_wisd_01.png",
+          "bytes": 10883,
+          "sha256": "fa45e3bd70f9eff30dd5ff43d8294d85d90f39b84e790a15e896fa5653ed9adb"
+        },
+        {
+          "path": "assets/decals/endfield/factions/endfield-icon-en-white.png",
+          "bytes": 29151,
+          "sha256": "f3ad94a40be791e028e17e4e1258abe4d69e85018386490edadb8932d554e9f3"
+        },
+        {
+          "path": "assets/decals/endfield/factions/endfield-icon-zh-white.png",
+          "bytes": 61200,
+          "sha256": "d3534c6ac1a07bcbf80c06cf0d2200a374a75874dfc022fe53ef30a2cfdfbac3"
+        },
+        {
+          "path": "assets/decals/endfield/factions/endfield-industries-white.png",
+          "bytes": 156354,
+          "sha256": "749f6a865de2518d7322ce1a14c9d1c834f0a098354b08b90cb6cf74c33e3a32"
+        },
+        {
+          "path": "assets/decals/endfield/factions/endfield-logo-en-white.png",
+          "bytes": 21517,
+          "sha256": "1011e7bfc5a1056e124299ab0f0bfc9c6efc2e4001840b88e9d0a6871419c2cb"
+        },
+        {
+          "path": "assets/decals/endfield/factions/endfield-logo-zh-white.png",
+          "bytes": 35778,
+          "sha256": "79e5a8f31e4dad1c78849fd2f9c87429f095055876024c3745858f6695995ca7"
+        },
+        {
+          "path": "assets/decals/endfield/factions/has-white.png",
+          "bytes": 126936,
+          "sha256": "5aa7341d14ae383bc0e1de875d3fc6e93bec545c09d661b56d8ebc269c44ae14"
+        },
+        {
+          "path": "assets/decals/endfield/factions/rhodes-island-white.png",
+          "bytes": 72202,
+          "sha256": "06fb31e988d8a5128c37dccd44e1d45b42ef81948286c6a228dc4f31e403f386"
+        },
+        {
+          "path": "assets/decals/endfield/factions/tgcc-white.png",
+          "bytes": 89733,
+          "sha256": "3b93474307675cf4a8c219d0acd2fc5afc86dec1f36f116c4dc1f20388a528dd"
+        },
+        {
+          "path": "assets/decals/endfield/factions/uwst-white.png",
+          "bytes": 58889,
+          "sha256": "73cdb092f6e2d40c2c9ebe8952d8656c5257668991489974ffa0753210022f8b"
+        },
+        {
+          "path": "assets/decals/endfield/presets/aic_dijiang.png",
+          "bytes": 47221,
+          "sha256": "638549e913e0c21547027db67c81577549ea695c9454214842332b5516a08c12"
+        },
+        {
+          "path": "assets/decals/endfield/presets/caution_no_step.png",
+          "bytes": 14126,
+          "sha256": "4d70d569ab234636fc6e5012e6574bffb5ac04305ffe2dfa747e8ed512822386"
+        },
+        {
+          "path": "assets/decals/endfield/presets/originium_seal.png",
+          "bytes": 49456,
+          "sha256": "15e9ac5d0d054f8a9d1586e6592fc0b27cbc27024b963dd165c1d0fd79d0dcae"
+        },
+        {
+          "path": "assets/decals/endfield/presets/protocol_reclamation.png",
+          "bytes": 53521,
+          "sha256": "9ae14b0ab5a9d6bfe77f76b559e902aae4f5c81fe3375320f2298a5c53b4b54f"
+        },
+        {
+          "path": "assets/decals/endfield/presets/render_endfield_presets.py",
+          "bytes": 10174,
+          "sha256": "0e76c9a549cc84da85cd1313687a196576bdb905079e43a623daaad8520461be"
+        },
+        {
+          "path": "assets/decals/endfield/presets/talos_wiki_bar_dark.png",
+          "bytes": 15517,
+          "sha256": "e365236d3297730ebd27ff1a5e5f565266a5cf5e5783bd426bb5501e0c006c2d"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_0.png",
+          "bytes": 6788,
+          "sha256": "47b3b8708337ac0c31fc955ec7a548ee8d54f86450534eeaa0be416e9e0a2db7"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_1.png",
+          "bytes": 6704,
+          "sha256": "a0bcd1ad6634ab116377b4ae6b601320dd8808aebce37755587e4bd4de28ae51"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_2.png",
+          "bytes": 9645,
+          "sha256": "4fe011c4bd42c0aa7f0eb72e78adef62ff28a74aeb99c8396466332e800379de"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_3.png",
+          "bytes": 7538,
+          "sha256": "947f1bd9bc2b86695c13b32ca07c99d8a5b26f05446cde78842f91c6a1aece20"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_4.png",
+          "bytes": 2788,
+          "sha256": "92c1390362d060e3eb77ec78eb84bb0b034db31b9fcd70f5319a98187e6ac83f"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_5.png",
+          "bytes": 5341,
+          "sha256": "d5f426ec3324812afd439ec29e3ce30c1248a074a8575f77c920ea54b9c0f978"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_6.png",
+          "bytes": 6392,
+          "sha256": "b64df093720cd9b699b6558c3a9c3bc1e0071421cb8679715be6b0a138f442e3"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_7.png",
+          "bytes": 8634,
+          "sha256": "f64f0c5e60586edd688d8029f6831bd82b63546f306f5f3906ecda6e9a0da2b5"
+        },
+        {
+          "path": "assets/decals/endfield/professions/icon_profession_8.png",
+          "bytes": 7515,
+          "sha256": "258ac45cd16113e10848ebc87fa183260942c86bd4a62133e5c81dee3735e6c7"
+        },
+        {
+          "path": "assets/decals/endfield/svg/contour-a.svg",
+          "bytes": 73924,
+          "sha256": "82c1fe23d20b8aa5cba0088867153ac6a23f222a69f16a43b0d11ce2564885b0"
+        },
+        {
+          "path": "assets/decals/endfield/svg/contour-b.svg",
+          "bytes": 70129,
+          "sha256": "5993c89b4c66027a91af71063349aa99882fc73a44002af05bab07632450bcaa"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-en.svg",
+          "bytes": 3934,
+          "sha256": "e9c713dd59ff253e7d14643df9ed32c04ee234951c02ab1a7883372b0e490ed9"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-icon-en.svg",
+          "bytes": 4980,
+          "sha256": "5decd563a970c1e2fa681b6c54c1b23ff3d2932ba83e2bc7453e7b808f35774c"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-icon-ja.svg",
+          "bytes": 4243,
+          "sha256": "12f83572ccfc01c8ffc8152763979fb3e448bc624c325d5709aaa621fba8e612"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-icon-ko.svg",
+          "bytes": 5139,
+          "sha256": "c6f631d5457bb61316dfb5832fb139304ee7ed881681e660ffd05b7e4234a0fd"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-icon-zh.svg",
+          "bytes": 5133,
+          "sha256": "2b53dfc2ec17454431b25ee4c178a87586ff0e2d4024ca983a0dede84699b911"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-industries.svg",
+          "bytes": 23091,
+          "sha256": "3e2af120ec6c86d2132448e7fbd4264b50e7258276c1beabb2bf3fa666200025"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-logo-en.svg",
+          "bytes": 5405,
+          "sha256": "b1addab97d454bd029c1fa0b6b6535ec5855734f6efade13036853f78fa0efea"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-logo-ja.svg",
+          "bytes": 4573,
+          "sha256": "5c6c1e380cd920d7890021ff54d88e69d5742443994d433a47d6b3a30266c455"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-logo-ko.svg",
+          "bytes": 5626,
+          "sha256": "910f360df8aa5a341a8d0af21fed638693443b84ece5fd0e75410b5bf83feb60"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-logo-zh.svg",
+          "bytes": 5193,
+          "sha256": "0599157d1115981af55e4f8cdfae7daab73e01e51042e035ee68543b6802bfaa"
+        },
+        {
+          "path": "assets/decals/endfield/svg/endfield-zh.svg",
+          "bytes": 5389,
+          "sha256": "47726116ba89929da02981a56223ff40e14904238dec02d283477184f5bb543e"
+        },
+        {
+          "path": "assets/decals/endfield/svg/has.svg",
+          "bytes": 6895,
+          "sha256": "0da8a28c4bf7c77949d1de096293c051e8d00d4ed9d2cc079c6999ad1328939b"
+        },
+        {
+          "path": "assets/decals/endfield/svg/rhodes-island.svg",
+          "bytes": 109765,
+          "sha256": "bacc6716699f07212da4c8b7c7523307df45f567783870e0ea33bad6ece3d3f2"
+        },
+        {
+          "path": "assets/decals/endfield/svg/tgcc.svg",
+          "bytes": 3020,
+          "sha256": "96d7f0a4a743c6142fcdea67c2347dac0e200134da8e31c7d509fbfb8c518853"
+        },
+        {
+          "path": "assets/decals/endfield/svg/uwst.svg",
+          "bytes": 9344,
+          "sha256": "7694193c3a97ab872b385ad18426f9c90ee92b3dac3360ad27b5d92ad5852302"
         },
         {
           "path": "assets/fonts/Michroma-Regular.ttf",
@@ -546,8 +901,8 @@
         },
         {
           "path": "references/core/overview.md",
-          "bytes": 11803,
-          "sha256": "44ee92a8ec792e090fa676f85411d278a4e939a901de6887b3d143cf69552354"
+          "bytes": 12962,
+          "sha256": "c33f0d482cd932a48a6af838c3642e7a9578f8024d3d8f95986207f4550fdc80"
         },
         {
           "path": "references/core/packaging-and-validation.md",
@@ -566,8 +921,8 @@
         },
         {
           "path": "references/core/taste-corrections.md",
-          "bytes": 12947,
-          "sha256": "ac17ffe4ab196313c9581b4a6d643d1a7ce70defe9b9c40ab17f37ce39ff9838"
+          "bytes": 13029,
+          "sha256": "8916946d4fe8ee51859132907267d046802a2de2ce63a51e898c39c5f863a87b"
         },
         {
           "path": "references/core/uv-native-replica.md",
@@ -586,8 +941,8 @@
         },
         {
           "path": "references/current-approved-j10c.md",
-          "bytes": 7918,
-          "sha256": "e17dacf670415c8700259e050904526a7677313c6c6e5f4d8cd022f339822747"
+          "bytes": 7909,
+          "sha256": "385f90efdb3e66a9577798e51c019a7901f55a07e92428e9d194605d0a8ceac5"
         },
         {
           "path": "references/current-approved-j16.md",
@@ -596,8 +951,8 @@
         },
         {
           "path": "references/f15ex-endfield.md",
-          "bytes": 3977,
-          "sha256": "fc9377ec5a0ad88b8c0ec65c929f803f34ff536a7e35a352d97b38c5464773fa"
+          "bytes": 4383,
+          "sha256": "55c2c97075e7e077427f8a65681d75a3b238d5d7f64726b3d86fbaaac2312f2e"
         },
         {
           "path": "references/f16c-copper.md",
@@ -665,11 +1020,6 @@
           "sha256": "a10df5afcb07ee68b51ca89e1e25a91e2f49f3e87f2c9453b6b03dd1d91c5623"
         },
         {
-          "path": "references/images/j10c-si-approved-lower.png",
-          "bytes": 128947,
-          "sha256": "0323f41fa0ace724fd4cbebcf66e445db2a75213dfa03fe296721f40bc45e0a3"
-        },
-        {
           "path": "references/images/j10c-si-approved-overall.png",
           "bytes": 234138,
           "sha256": "70eae9f6af02f06576fb4bb96a156491b5efc7fa27ccf1c856946dd59d6c84c9"
@@ -731,18 +1081,18 @@
         },
         {
           "path": "references/reviewed-works.md",
-          "bytes": 3130,
-          "sha256": "f7c87f51f32a47cb72e717fcc643d2be6f896e6dbcefa5c2985dafb5ab1b6d41"
+          "bytes": 3396,
+          "sha256": "a153873d0c22c7cec193a8929edfbaffb634a2186bd502fab19bbc02adf1a980"
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 10319,
-          "sha256": "34e1e43954b30280c7c3cf607c21e0c590c991ead264a0a33c8fe7cd77a1ce86"
+          "bytes": 10313,
+          "sha256": "24377d1a76d5e976588b0b81d56c2d54a8aec2630aa749867a8a55ce4d9268d5"
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 6605,
-          "sha256": "ab979cc60333bcd2831fcc13ec416935202cad073d3b55ca1f2030cdbb5a34ce"
+          "bytes": 7416,
+          "sha256": "c0351c04bc49739d07f621e87ab50c2a095ac78727de9d8aae6b8a93c2cce36c"
         },
         {
           "path": "scripts/aircraft_markings.py",

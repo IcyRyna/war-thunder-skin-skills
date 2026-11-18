@@ -30,7 +30,7 @@
 
 | 默认倾向 | 为什么难看 | 改成 |
 | --- | --- | --- |
-| 不写字体，用库或编辑器默认（Arial、DejaVu、Segoe UI） | 办公文档味 | 显式写字体。拉丁字母用几何或方形无衬线：Windows 自带 Bahnschrift（`C:/Windows/Fonts/bahnschrift.ttf`，可变字体，`variation` 取 `Bold`、`SemiBold`、`Light`）。中文用微软雅黑粗体 `msyhbd.ttc`、等线粗体 `Dengb.ttf` 或黑体 `simhei.ttf`；日文用 `YuGothB.ttc` 或 `meiryob.ttc` |
+| 不写字体，用库或编辑器默认（Arial、DejaVu、Segoe UI） | 办公文档味 | 显式写字体。本 Skill 默认自带并加载 `assets/fonts/Orbitron-VF.ttf`（`variation` 取 `Bold`/`Medium` 作主标与大字）配 `assets/fonts/Michroma-Regular.ttf` 作副字与技术标（仅无内置字体环境才备选 `C:/Windows/Fonts/bahnschrift.ttf`）。中文用微软雅黑粗体 `msyhbd.ttc`、等线粗体 `Dengb.ttf` 或黑体 `simhei.ttf`；日文用 `YuGothB.ttc` 或 `meiryob.ttc` |
 | Impact、Arial Black、科幻装饰字、手写体、书法体、斜体 | 表情包、页游广告 | 同上。要力量感就用 Bold 加宽字距，不用压扁的海报字 |
 | 宋体、细明体 | 细笔画在游戏距离消失 | 黑体类 |
 | 每组字换一种字体 | 散 | 全机一个字族、两档字重（Bold 做主名，Light 或 Regular 做副行）；有中日文时另加一款黑体 |

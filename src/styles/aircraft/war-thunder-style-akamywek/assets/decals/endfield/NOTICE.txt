@@ -1,0 +1,15 @@
+Arknights: Endfield Decal Asset Provenance & Usage Notice
+========================================================
+
+All Arknights: Endfield names, factions, emblems, logos, and original graphic designs
+remain the intellectual property of Shanghai Hypergryph Network Technology Co., Ltd.
+(Hypergryph / Gryphline). These assets are bundled strictly for non-commercial fan livery
+creation in War Thunder.
+
+Sources collected and verified:
+- svg/ (official wordmarks & icons): Yue-plus/endfield_icons
+- svg/ (has.svg, rhodes-island.svg, tgcc.svg, uwst.svg, endfield-en/zh.svg): Naptie/endfield-docmaker
+- svg/ (contour-a.svg, contour-b.svg): hhikr/endfield-ui-skill
+- brands/ & professions/: curated transparent white PNGs from 555me/EndfieldAssets
+- presets/ & presets/render_endfield_presets.py: procedural PNGs generated from bundled OFL fonts
+  (Orbitron-VF.ttf, Michroma-Regular.ttf) using transparent charcoal-friendly masks.
