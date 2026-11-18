@@ -362,7 +362,7 @@
     {
       "id": "war-thunder-style-akamywek",
       "tag": "war-thunder-style-akamywek/v1.3.1",
-      "original_archive_sha256": "c914f1f8fa2ad51d651c0ba9482865538f66bc5af560b3338d34e3d62de8706d",
+      "original_archive_sha256": "9a51ed161a04946d797d27acad06cc7a4640d778f28688ff2e9873a778ec868c",
       "files": [
         {
           "path": "SKILL.md",
@@ -611,23 +611,23 @@
         },
         {
           "path": "references/images/f15ex-endfield-belly.png",
-          "bytes": 106473,
-          "sha256": "fee3a40e24c03157cd8ccbd7f6d5e10058ce6daaf14d4f65499e6e60d97948a9"
+          "bytes": 114919,
+          "sha256": "767e1db4223b6bf0c372ea64a127405a4e394f9bf764231dae7db879cd3c5d08"
         },
         {
           "path": "references/images/f15ex-endfield-dorsal-close.png",
-          "bytes": 222548,
-          "sha256": "85d642e79e042262bd7d1b181297f964b96bdc97ddda0bf488d71d132228f721"
+          "bytes": 221288,
+          "sha256": "64ebc25e4c55bd270a3e0aa928d256afb643e981148e088226af12cb85dd5eda"
         },
         {
           "path": "references/images/f15ex-endfield-starboard-side.png",
-          "bytes": 148602,
-          "sha256": "fb7f3bc92d0edba18fdc72a33f2e43cb9a1bb84a391bd8dff7302788f95f1003"
+          "bytes": 148597,
+          "sha256": "abae47e7431ed9eb0a5d3e1952d229ce5d2ee3cc39b481ef93f8ed4aa4e12c51"
         },
         {
           "path": "references/images/f15ex-endfield-top.png",
-          "bytes": 161375,
-          "sha256": "f390c80df88617cbf3b6c046d6296c0ec1e94b650a985910d18b0aa7ebda3e8e"
+          "bytes": 160962,
+          "sha256": "01694278f96d8675f0517231e35cbdc06c10d7f09a92d1b25a98b7af399518ac"
         },
         {
           "path": "references/images/f16c-copper-quarter.png",
