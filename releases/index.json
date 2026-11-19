@@ -8,7 +8,7 @@
       "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/tag/war-thunder-style-akamywek/v1.3.1-rc2",
       "published_at": "2026-11-18T10:09:57Z",
       "draft": false,
-      "prerelease": true,
+      "prerelease": false,
       "validation": {
         "package_files": 210,
         "skill_unit_tests": "31_of_31_passed",
@@ -24,7 +24,10 @@
           "digest": "sha256:a7b26969b40699f47805cc83826478a53f93cde8640827c2523e8d1b52dbedfe",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1-rc2/war-thunder-style-akamywek-v1.3.1-rc2.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-19",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.3.1",
@@ -45,7 +48,10 @@
           "digest": "sha256:1ed4e17b54e7a07f6d344e4a0c24991893fb3bf12418518c8ad793e0be6f87ef",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.3.1/war-thunder-style-akamywek-v1.3.1.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-19",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.30",
@@ -66,7 +72,10 @@
           "digest": "sha256:06eec6ea5dba9de6a1250a28c8aa26153985079856a4ec966de8dd13e03ba5c0",
           "url": "https://github.com/IcyRyna/war-thunder-skin-skills/releases/download/war-thunder-style-akamywek/v1.30/war-thunder-style-akamywek-v1.30.skill.zip"
         }
-      ]
+      ],
+      "archived": true,
+      "archived_at": "2026-11-19",
+      "maintenance": "closed"
     },
     {
       "tag": "war-thunder-style-akamywek/v1.21",

@@ -361,388 +361,18 @@
     },
     {
       "id": "war-thunder-style-akamywek",
-      "tag": "war-thunder-style-akamywek/v1.3.1-rc2",
-      "original_archive_sha256": "a7b26969b40699f47805cc83826478a53f93cde8640827c2523e8d1b52dbedfe",
+      "tag": "war-thunder-style-akamywek/v1.21",
+      "original_archive_sha256": "263b98281eb1ad7593b7bc724cbb6758a34f4c0ccb396ddbd232e0831924e56f",
       "files": [
         {
           "path": "SKILL.md",
-          "bytes": 14731,
-          "sha256": "d799c2429bff477e1f2a97d5757d180ab8633616f806b918243aa767a7999bca"
+          "bytes": 11884,
+          "sha256": "a3c267f50561687cdd5ed9c7d4301907d8f9cda253c88650221909abeb51117d"
         },
         {
           "path": "agents/openai.yaml",
           "bytes": 460,
           "sha256": "f14179cede21559ebafa992ca14b0c5b30d909e01ee72e50d7d6d28cf026992e"
-        },
-        {
-          "path": "assets/decals/endfield/CATALOG.md",
-          "bytes": 4743,
-          "sha256": "f0ad9e943f46fea80ccda758072bf0caf20f1469dc2cd61f59431053622c5dd3"
-        },
-        {
-          "path": "assets/decals/endfield/NOTICE.txt",
-          "bytes": 927,
-          "sha256": "9f9fa1e48ecc93075ddef48ea730729b8bb7cd5e1ac9afb80c2c08eefcda46f7"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_parts_tundra01_t0.png",
-          "bytes": 8119,
-          "sha256": "41544299802c14348ad5a747d2ea3211374b700775bfba419ec6e3edc5b8e0b8"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_parts_tundra01_t1.png",
-          "bytes": 8046,
-          "sha256": "97d706c591a5326007c114d055f68f84ce49e4d68c33fb0c82f1584f620dcaa4"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_tundra_suit_atk01.png",
-          "bytes": 5929,
-          "sha256": "35443044f840cfc191829782ca27fdcaeca2d0c7ac87e71d7049d1dc44247d65"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_atb01.png",
-          "bytes": 7790,
-          "sha256": "11c2f6acbb2959c810b88d667889a50c0590c261ac34e25e908b72c8e301aca6"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_attri01.png",
-          "bytes": 9384,
-          "sha256": "774238bba4371eedc8b46c8946ad7e5bab8ef83a477e838d3502a863114a34fc"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_pack_wuling_suit_fire_natr01.png",
-          "bytes": 11342,
-          "sha256": "426aea8a7749047836750bb576bb6bc0e7b9d49263a6001784f16e1196f9370e"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_agi_01.png",
-          "bytes": 6640,
-          "sha256": "70141f8f3066474111cf9fc42de5dadef3ca631a1ed177b1acd1dff4344f910f"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_atb_01.png",
-          "bytes": 7428,
-          "sha256": "d4b14aecb17b5be7b65df4e2db3ab018861625ae1790d435f371ddf966be5fcf"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_atkup.png",
-          "bytes": 18608,
-          "sha256": "8e69457ab43c36f687a2747d46faa1082ca3e79529abb2fa07105b8d48faaed6"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_attri_01.png",
-          "bytes": 27287,
-          "sha256": "ef69c076f9ceee0bc9fb56cddcebdb032a799baf091529bb9af4c691d28a3c41"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_criti_01.png",
-          "bytes": 6926,
-          "sha256": "a4daadc871d544f44814380ac301a09ba687b61e4744d6c9fa7aab168af51e37"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_critmulti.png",
-          "bytes": 5659,
-          "sha256": "a6c8bf68589aee3e7d5163cbd8210c3cdda259d224cec20bb13a6e2a31c6c738"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_crystup.png",
-          "bytes": 10566,
-          "sha256": "2037f773aa8167a26e57522f1b27d20d088eb2816185378fa506d824d562f8fa"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_defup.png",
-          "bytes": 5078,
-          "sha256": "10b13766e63466d81c9ab88345925c6fee3caa89f39a936a2c0e2b87235986ca"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_fire_natr_01.png",
-          "bytes": 11434,
-          "sha256": "5b64769c947912ad2d7da012174e19615cebbe95c8bbc2b380d396e1825b1069"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_fireup.png",
-          "bytes": 3827,
-          "sha256": "8ee8b88a8f0620cb05566180bfd6338bd5455f399dde35bfe850b11d7df2cd08"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_heal_01.png",
-          "bytes": 10327,
-          "sha256": "c3f3a85021975777092bc7b786aca637551090ed20712c2dae66363e3579874b"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_hpup.png",
-          "bytes": 9233,
-          "sha256": "9c6ad2d39cc3a209d26b18fe1bddc2ad2bd5be730ea92f2dbebb649081ea48fd"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_knockdownup.png",
-          "bytes": 12173,
-          "sha256": "32ad69bee2060b8df7b25866fa23c88ab13f0a60640272a3a6a46fa4c56f564a"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_penup.png",
-          "bytes": 4024,
-          "sha256": "2e6547b08a6988ad1770f1e78ac0f7482214665420c1ef3a0934961a796a62bd"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_phy_01.png",
-          "bytes": 4992,
-          "sha256": "b7da7cdf0a113fe5cfad01778e2a69e38e25fb48f9d97cea36e66b6588823165"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_poise_01.png",
-          "bytes": 4550,
-          "sha256": "950c0a8870f7e20144d5d8a4f821d8117b8523898f33e9d86830663e8fb2851b"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_pulse_cryst_01.png",
-          "bytes": 11185,
-          "sha256": "0df68a5d34a14b6c94d80b06dfb3dee6831aae25880122f1a79f4ca216267ba0"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_pulseup.png",
-          "bytes": 18747,
-          "sha256": "7592c9e6af204a9c09c0984245ceb824eefe6dabc4f6aeb9511f647dd6ad4b64"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_receivehealup.png",
-          "bytes": 12317,
-          "sha256": "4b5c31f03b9a24bcb35c08cdf644019623aa0d572bd86047ad0abfd3eaaab90a"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_str_01.png",
-          "bytes": 4754,
-          "sha256": "45f1a20287d3907d343202b9b1ec0324d032fb8f0c9a3a002be91d2311b2de36"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_will_01.png",
-          "bytes": 9608,
-          "sha256": "41003340f88aa070444a1266ca1488b59199986b39a8e3c32208d89d8a11fe71"
-        },
-        {
-          "path": "assets/decals/endfield/brands/icon_suit_wisd_01.png",
-          "bytes": 10883,
-          "sha256": "fa45e3bd70f9eff30dd5ff43d8294d85d90f39b84e790a15e896fa5653ed9adb"
-        },
-        {
-          "path": "assets/decals/endfield/factions/endfield-icon-en-white.png",
-          "bytes": 29151,
-          "sha256": "f3ad94a40be791e028e17e4e1258abe4d69e85018386490edadb8932d554e9f3"
-        },
-        {
-          "path": "assets/decals/endfield/factions/endfield-icon-zh-white.png",
-          "bytes": 61200,
-          "sha256": "d3534c6ac1a07bcbf80c06cf0d2200a374a75874dfc022fe53ef30a2cfdfbac3"
-        },
-        {
-          "path": "assets/decals/endfield/factions/endfield-industries-white.png",
-          "bytes": 156354,
-          "sha256": "749f6a865de2518d7322ce1a14c9d1c834f0a098354b08b90cb6cf74c33e3a32"
-        },
-        {
-          "path": "assets/decals/endfield/factions/endfield-logo-en-white.png",
-          "bytes": 21517,
-          "sha256": "1011e7bfc5a1056e124299ab0f0bfc9c6efc2e4001840b88e9d0a6871419c2cb"
-        },
-        {
-          "path": "assets/decals/endfield/factions/endfield-logo-zh-white.png",
-          "bytes": 35778,
-          "sha256": "79e5a8f31e4dad1c78849fd2f9c87429f095055876024c3745858f6695995ca7"
-        },
-        {
-          "path": "assets/decals/endfield/factions/has-white.png",
-          "bytes": 126936,
-          "sha256": "5aa7341d14ae383bc0e1de875d3fc6e93bec545c09d661b56d8ebc269c44ae14"
-        },
-        {
-          "path": "assets/decals/endfield/factions/rhodes-island-white.png",
-          "bytes": 72202,
-          "sha256": "06fb31e988d8a5128c37dccd44e1d45b42ef81948286c6a228dc4f31e403f386"
-        },
-        {
-          "path": "assets/decals/endfield/factions/tgcc-white.png",
-          "bytes": 89733,
-          "sha256": "3b93474307675cf4a8c219d0acd2fc5afc86dec1f36f116c4dc1f20388a528dd"
-        },
-        {
-          "path": "assets/decals/endfield/factions/uwst-white.png",
-          "bytes": 58889,
-          "sha256": "73cdb092f6e2d40c2c9ebe8952d8656c5257668991489974ffa0753210022f8b"
-        },
-        {
-          "path": "assets/decals/endfield/presets/aic_dijiang.png",
-          "bytes": 47221,
-          "sha256": "638549e913e0c21547027db67c81577549ea695c9454214842332b5516a08c12"
-        },
-        {
-          "path": "assets/decals/endfield/presets/caution_no_step.png",
-          "bytes": 14126,
-          "sha256": "4d70d569ab234636fc6e5012e6574bffb5ac04305ffe2dfa747e8ed512822386"
-        },
-        {
-          "path": "assets/decals/endfield/presets/originium_seal.png",
-          "bytes": 49456,
-          "sha256": "15e9ac5d0d054f8a9d1586e6592fc0b27cbc27024b963dd165c1d0fd79d0dcae"
-        },
-        {
-          "path": "assets/decals/endfield/presets/protocol_reclamation.png",
-          "bytes": 53521,
-          "sha256": "9ae14b0ab5a9d6bfe77f76b559e902aae4f5c81fe3375320f2298a5c53b4b54f"
-        },
-        {
-          "path": "assets/decals/endfield/presets/render_endfield_presets.py",
-          "bytes": 10174,
-          "sha256": "0e76c9a549cc84da85cd1313687a196576bdb905079e43a623daaad8520461be"
-        },
-        {
-          "path": "assets/decals/endfield/presets/talos_wiki_bar_dark.png",
-          "bytes": 15517,
-          "sha256": "e365236d3297730ebd27ff1a5e5f565266a5cf5e5783bd426bb5501e0c006c2d"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_0.png",
-          "bytes": 6788,
-          "sha256": "47b3b8708337ac0c31fc955ec7a548ee8d54f86450534eeaa0be416e9e0a2db7"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_1.png",
-          "bytes": 6704,
-          "sha256": "a0bcd1ad6634ab116377b4ae6b601320dd8808aebce37755587e4bd4de28ae51"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_2.png",
-          "bytes": 9645,
-          "sha256": "4fe011c4bd42c0aa7f0eb72e78adef62ff28a74aeb99c8396466332e800379de"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_3.png",
-          "bytes": 7538,
-          "sha256": "947f1bd9bc2b86695c13b32ca07c99d8a5b26f05446cde78842f91c6a1aece20"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_4.png",
-          "bytes": 2788,
-          "sha256": "92c1390362d060e3eb77ec78eb84bb0b034db31b9fcd70f5319a98187e6ac83f"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_5.png",
-          "bytes": 5341,
-          "sha256": "d5f426ec3324812afd439ec29e3ce30c1248a074a8575f77c920ea54b9c0f978"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_6.png",
-          "bytes": 6392,
-          "sha256": "b64df093720cd9b699b6558c3a9c3bc1e0071421cb8679715be6b0a138f442e3"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_7.png",
-          "bytes": 8634,
-          "sha256": "f64f0c5e60586edd688d8029f6831bd82b63546f306f5f3906ecda6e9a0da2b5"
-        },
-        {
-          "path": "assets/decals/endfield/professions/icon_profession_8.png",
-          "bytes": 7515,
-          "sha256": "258ac45cd16113e10848ebc87fa183260942c86bd4a62133e5c81dee3735e6c7"
-        },
-        {
-          "path": "assets/decals/endfield/svg/contour-a.svg",
-          "bytes": 73924,
-          "sha256": "82c1fe23d20b8aa5cba0088867153ac6a23f222a69f16a43b0d11ce2564885b0"
-        },
-        {
-          "path": "assets/decals/endfield/svg/contour-b.svg",
-          "bytes": 70129,
-          "sha256": "5993c89b4c66027a91af71063349aa99882fc73a44002af05bab07632450bcaa"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-en.svg",
-          "bytes": 3934,
-          "sha256": "e9c713dd59ff253e7d14643df9ed32c04ee234951c02ab1a7883372b0e490ed9"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-icon-en.svg",
-          "bytes": 4980,
-          "sha256": "5decd563a970c1e2fa681b6c54c1b23ff3d2932ba83e2bc7453e7b808f35774c"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-icon-ja.svg",
-          "bytes": 4243,
-          "sha256": "12f83572ccfc01c8ffc8152763979fb3e448bc624c325d5709aaa621fba8e612"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-icon-ko.svg",
-          "bytes": 5139,
-          "sha256": "c6f631d5457bb61316dfb5832fb139304ee7ed881681e660ffd05b7e4234a0fd"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-icon-zh.svg",
-          "bytes": 5133,
-          "sha256": "2b53dfc2ec17454431b25ee4c178a87586ff0e2d4024ca983a0dede84699b911"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-industries.svg",
-          "bytes": 23091,
-          "sha256": "3e2af120ec6c86d2132448e7fbd4264b50e7258276c1beabb2bf3fa666200025"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-logo-en.svg",
-          "bytes": 5405,
-          "sha256": "b1addab97d454bd029c1fa0b6b6535ec5855734f6efade13036853f78fa0efea"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-logo-ja.svg",
-          "bytes": 4573,
-          "sha256": "5c6c1e380cd920d7890021ff54d88e69d5742443994d433a47d6b3a30266c455"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-logo-ko.svg",
-          "bytes": 5626,
-          "sha256": "910f360df8aa5a341a8d0af21fed638693443b84ece5fd0e75410b5bf83feb60"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-logo-zh.svg",
-          "bytes": 5193,
-          "sha256": "0599157d1115981af55e4f8cdfae7daab73e01e51042e035ee68543b6802bfaa"
-        },
-        {
-          "path": "assets/decals/endfield/svg/endfield-zh.svg",
-          "bytes": 5389,
-          "sha256": "47726116ba89929da02981a56223ff40e14904238dec02d283477184f5bb543e"
-        },
-        {
-          "path": "assets/decals/endfield/svg/has.svg",
-          "bytes": 6895,
-          "sha256": "0da8a28c4bf7c77949d1de096293c051e8d00d4ed9d2cc079c6999ad1328939b"
-        },
-        {
-          "path": "assets/decals/endfield/svg/rhodes-island.svg",
-          "bytes": 109765,
-          "sha256": "bacc6716699f07212da4c8b7c7523307df45f567783870e0ea33bad6ece3d3f2"
-        },
-        {
-          "path": "assets/decals/endfield/svg/tgcc.svg",
-          "bytes": 3020,
-          "sha256": "96d7f0a4a743c6142fcdea67c2347dac0e200134da8e31c7d509fbfb8c518853"
-        },
-        {
-          "path": "assets/decals/endfield/svg/uwst.svg",
-          "bytes": 9344,
-          "sha256": "7694193c3a97ab872b385ad18426f9c90ee92b3dac3360ad27b5d92ad5852302"
-        },
-        {
-          "path": "assets/fonts/Michroma-Regular.ttf",
-          "bytes": 64344,
-          "sha256": "b62301163788bc5b7f8fcac0b74b184e34e1827e577b499ecb724da065098f87"
-        },
-        {
-          "path": "assets/fonts/OFL.txt",
-          "bytes": 4426,
-          "sha256": "ab609b0e110d622435ff337cdf233288556e011bbf9bd0550be98846c0630819"
-        },
-        {
-          "path": "assets/fonts/Orbitron-VF.ttf",
-          "bytes": 38576,
-          "sha256": "f42db2dd16e642258e35782916eceb1dcdbea06fb958d77ad71dc5963587e8fd"
         },
         {
           "path": "diagrams/motif-library.svg",
@@ -781,8 +411,8 @@
         },
         {
           "path": "examples/j16-chen-full-livery_build_design.py",
-          "bytes": 23886,
-          "sha256": "ee16d4a33cd9ce8fdfd4d69382dcf395582c1e826c84a6a9491a1fda2c3f46e8"
+          "bytes": 23934,
+          "sha256": "1b3959b95ab1f307d1f6320c0aee710fcff4f8c589a6e11fc935be2851254aa2"
         },
         {
           "path": "examples/j16-key-sequence.json",
@@ -806,8 +436,8 @@
         },
         {
           "path": "references/centreline-approved.md",
-          "bytes": 5942,
-          "sha256": "ff429b3d773a218bc15f350c898263c4f91ea968ff8fe91f31f50cc6a6fe4966"
+          "bytes": 5540,
+          "sha256": "fee38f0c6ad36c354261b407c37302e1d53fc1212db758524528e2e64881ea8d"
         },
         {
           "path": "references/core/aesthetics.md",
@@ -881,8 +511,8 @@
         },
         {
           "path": "references/core/materials-and-uv.md",
-          "bytes": 15533,
-          "sha256": "0e8f3c9771b1ba5a39d792e89c71c0abcba591716e4bbbae2cc81534124d6b15"
+          "bytes": 13499,
+          "sha256": "2764e2183b2ff7ddf85e5f9cac18f891d3f27d02044c7f36a758a4f7ccd94ca0"
         },
         {
           "path": "references/core/native-checks.md",
@@ -901,8 +531,8 @@
         },
         {
           "path": "references/core/overview.md",
-          "bytes": 12962,
-          "sha256": "c33f0d482cd932a48a6af838c3642e7a9578f8024d3d8f95986207f4550fdc80"
+          "bytes": 11803,
+          "sha256": "44ee92a8ec792e090fa676f85411d278a4e939a901de6887b3d143cf69552354"
         },
         {
           "path": "references/core/packaging-and-validation.md",
@@ -921,8 +551,8 @@
         },
         {
           "path": "references/core/taste-corrections.md",
-          "bytes": 13029,
-          "sha256": "8916946d4fe8ee51859132907267d046802a2de2ce63a51e898c39c5f863a87b"
+          "bytes": 12549,
+          "sha256": "41cb22e4b674b342d73fc35ac322843cbc3db5cfd1e326ab749580f2c08471ad"
         },
         {
           "path": "references/core/uv-native-replica.md",
@@ -941,8 +571,8 @@
         },
         {
           "path": "references/current-approved-j10c.md",
-          "bytes": 7909,
-          "sha256": "385f90efdb3e66a9577798e51c019a7901f55a07e92428e9d194605d0a8ceac5"
+          "bytes": 7983,
+          "sha256": "1a5869dbc2810fe0e48cd8ff43fce901a115592a1dc04ea7e80a270b5d76e4ca"
         },
         {
           "path": "references/current-approved-j16.md",
@@ -950,9 +580,14 @@
           "sha256": "88f45744f3d3deadf58b9d40d0218fcbbe4cc924eae28d2106b78bf9b8a98177"
         },
         {
-          "path": "references/f15ex-endfield.md",
-          "bytes": 4383,
-          "sha256": "55c2c97075e7e077427f8a65681d75a3b238d5d7f64726b3d86fbaaac2312f2e"
+          "path": "references/f15c-cyan.md",
+          "bytes": 1989,
+          "sha256": "53cb466b8461ded7da72c17c53a9eadc608668e62309cf83512949b19aba8490"
+        },
+        {
+          "path": "references/f15c-laevatain.md",
+          "bytes": 3356,
+          "sha256": "e531af88552ddb1856b2fb256f9a318c0124c31c10c92e029108a617c4894726"
         },
         {
           "path": "references/f16c-copper.md",
@@ -965,24 +600,24 @@
           "sha256": "f72fb0ee0f69c0fddc1e79423a6b1d2d948168c14510a3a69653a7136137f9e9"
         },
         {
-          "path": "references/images/f15ex-endfield-belly.png",
-          "bytes": 114919,
-          "sha256": "767e1db4223b6bf0c372ea64a127405a4e394f9bf764231dae7db879cd3c5d08"
+          "path": "references/images/f15c-cyan-starboard.png",
+          "bytes": 258629,
+          "sha256": "64927ebfa5a5a4cfcf05c7ac46d4d24dfce0e21b5874a8e4b6313c9a18a7ea99"
         },
         {
-          "path": "references/images/f15ex-endfield-dorsal-close.png",
-          "bytes": 221288,
-          "sha256": "64ebc25e4c55bd270a3e0aa928d256afb643e981148e088226af12cb85dd5eda"
+          "path": "references/images/f15c-cyan-top.png",
+          "bytes": 170623,
+          "sha256": "4886451a0478129f75f7c8ea825a4c2e23af586dc166a1ea534aed2793b0253f"
         },
         {
-          "path": "references/images/f15ex-endfield-starboard-side.png",
-          "bytes": 148597,
-          "sha256": "abae47e7431ed9eb0a5d3e1952d229ce5d2ee3cc39b481ef93f8ed4aa4e12c51"
+          "path": "references/images/f15c-laevatain-eye-detail.png",
+          "bytes": 392871,
+          "sha256": "59754ca5f1856df8757b76499056e419c9bf75a2f4557ffee762f0589a222431"
         },
         {
-          "path": "references/images/f15ex-endfield-top.png",
-          "bytes": 160962,
-          "sha256": "01694278f96d8675f0517231e35cbdc06c10d7f09a92d1b25a98b7af399518ac"
+          "path": "references/images/f15c-laevatain-layout.png",
+          "bytes": 637391,
+          "sha256": "cd1f35dbeef6e3031b74b8ec43f8f2760cb4e720028ce8ba39c6568067edf96c"
         },
         {
           "path": "references/images/f16c-copper-quarter.png",
@@ -1015,9 +650,19 @@
           "sha256": "5c1d655e080316f12a162b9a316ca6149b454658cccdad02dabf25cbcbd097b2"
         },
         {
+          "path": "references/images/j10c-mirage-jade-gold-layout.jpg",
+          "bytes": 118650,
+          "sha256": "b0891a98cd085eb5480405ba50791c4c6960683b2eabae402a16297c63863308"
+        },
+        {
           "path": "references/images/j10c-si-aft-crop.png",
           "bytes": 3569,
           "sha256": "a10df5afcb07ee68b51ca89e1e25a91e2f49f3e87f2c9453b6b03dd1d91c5623"
+        },
+        {
+          "path": "references/images/j10c-si-approved-lower.png",
+          "bytes": 128947,
+          "sha256": "0323f41fa0ace724fd4cbebcf66e445db2a75213dfa03fe296721f40bc45e0a3"
         },
         {
           "path": "references/images/j10c-si-approved-overall.png",
@@ -1040,6 +685,21 @@
           "sha256": "d3c1409164f42ce3a15eff081173aa12144f3f19ffb383a043a5ce6abe22b870"
         },
         {
+          "path": "references/images/j11b-laevatain-astra-release.jpg",
+          "bytes": 186742,
+          "sha256": "50462bfaea8a8e27866224cbb8dc591425e5ddaa8c2feda0163e4c0a4c6c2b7e"
+        },
+        {
+          "path": "references/images/j11b-si-release.jpg",
+          "bytes": 120995,
+          "sha256": "a9134574e101d129f0add61a569b84f0360dae0464f9614e5a10db4129654d5f"
+        },
+        {
+          "path": "references/images/j15t-si-release.jpg",
+          "bytes": 141504,
+          "sha256": "2443751eb9a5b2f7820fceee80d1f66935fc1d6ada82fc08e8ca5a40d5b91b09"
+        },
+        {
           "path": "references/images/j16-approved-aft.png",
           "bytes": 157789,
           "sha256": "0da766b1ac5ec42ee0a48b83872ba7499921edf1bb04c371f74c58011949b7ca"
@@ -1055,9 +715,34 @@
           "sha256": "a9fbb6da334d373e1fe1cbe83b59dc20d4bcd70f45052cbdcd35bb07090ead5a"
         },
         {
+          "path": "references/images/mirage-amethyste-layout-review.jpg",
+          "bytes": 120293,
+          "sha256": "6f85677b9ccd7e506b2a192d19e606f40a845af1d874d61db94933790abca887"
+        },
+        {
+          "path": "references/images/mirage-amethyste-rejected-top.jpg",
+          "bytes": 106300,
+          "sha256": "3469837b9c339b383001d8152ea98c738dead545b7999700128995796770db3a"
+        },
+        {
+          "path": "references/images/mirage-amethyste-starboard.png",
+          "bytes": 207794,
+          "sha256": "a928cb50e5faf20c853f2a61e04a7fe9dcfbc7dae5ebdd85fc58e0795e35ce26"
+        },
+        {
           "path": "references/j10c-si-history.md",
           "bytes": 15363,
           "sha256": "72df1d92fcca6dd5148b3cd1126b03d08486d3e1969b7a5c4d6a87690cb0221f"
+        },
+        {
+          "path": "references/mirage-amethyste.md",
+          "bytes": 5321,
+          "sha256": "fd6cc4b191850eaef2b4dbfea845fc887ad9f452f36a08204f4ed1d6aac1efa5"
+        },
+        {
+          "path": "references/mirage-jade-gold.md",
+          "bytes": 2033,
+          "sha256": "68fbba1e9c8bb3f73d61d594534c719ecfd3726a9f9cdd5097f7315b4fc6915c"
         },
         {
           "path": "references/modern-jet-examples.md",
@@ -1066,8 +751,8 @@
         },
         {
           "path": "references/mosaic-and-charcoal-detail.md",
-          "bytes": 11225,
-          "sha256": "09382c0bd104ca13007cbe104954b3eb425fa8166ae0970a1ac326e33a51873e"
+          "bytes": 10903,
+          "sha256": "dd321ef1471a1bc7d63b2a41c6e5cd46bf519ac5d0f0c5603c862791cce5837d"
         },
         {
           "path": "references/motifs.md",
@@ -1081,18 +766,18 @@
         },
         {
           "path": "references/reviewed-works.md",
-          "bytes": 3396,
-          "sha256": "a153873d0c22c7cec193a8929edfbaffb634a2186bd502fab19bbc02adf1a980"
+          "bytes": 6885,
+          "sha256": "a87312154843f2022aa513c94286f45196e8a8a68fd111bbb5441ef8f9a7b77b"
         },
         {
           "path": "references/surfaces.md",
-          "bytes": 10313,
-          "sha256": "24377d1a76d5e976588b0b81d56c2d54a8aec2630aa749867a8a55ce4d9268d5"
+          "bytes": 9909,
+          "sha256": "1a6ddf81c10fd64bd8a7a4feacc88f12f7ae6e2a82be83fb5e2dd24ea7307d0f"
         },
         {
           "path": "references/type-and-decals.md",
-          "bytes": 7416,
-          "sha256": "c0351c04bc49739d07f621e87ab50c2a095ac78727de9d8aae6b8a93c2cce36c"
+          "bytes": 5850,
+          "sha256": "bf801d5b819eca38753f1e0f158ad1ddeac6c0394177ff10410f8a257a757e70"
         },
         {
           "path": "scripts/aircraft_markings.py",
@@ -1146,8 +831,8 @@
         },
         {
           "path": "scripts/coat_material.py",
-          "bytes": 10072,
-          "sha256": "305b8b260a77cdffb56d5f9d40e347a3af4206d468895cfe40c5736ce50123f2"
+          "bytes": 6262,
+          "sha256": "f036011c7f8a8a97aad8883ab84e332f16d3526033ccbcdc596b2f9cc380c39f"
         },
         {
           "path": "scripts/compare_skin.py",
@@ -1166,8 +851,8 @@
         },
         {
           "path": "scripts/design_lint.py",
-          "bytes": 34914,
-          "sha256": "845bf8e13f45e1cf05e8a81ed166b4c92f7fc30c9d8f01b2847fc4d7090d1670"
+          "bytes": 26519,
+          "sha256": "b9d2efa514a0dd18b1aa302be27796b879189fb677a509cb7e79500de0c97b07"
         },
         {
           "path": "scripts/detail_sheet.py",
@@ -1176,8 +861,8 @@
         },
         {
           "path": "scripts/fetch_asset.py",
-          "bytes": 7813,
-          "sha256": "027fd53ddf49031db9c5a9948a7f8e34c272be5d02b07a3aaac788197c7c6b4a"
+          "bytes": 6618,
+          "sha256": "f0601fdeb92657b5e64211e15b143b502177f1c74f50a8e5491ceb75b13ae924"
         },
         {
           "path": "scripts/finish_preview.py",
@@ -1206,8 +891,8 @@
         },
         {
           "path": "scripts/replica_check.py",
-          "bytes": 36540,
-          "sha256": "c0f9ef178153b75228435e669d46cc6b034061d3145c91edfab2ad9c26cf76e9"
+          "bytes": 35824,
+          "sha256": "fde5fb943cf50333458a8573e7c67895ca2fd67f75bfa0bdb1a1b4b145e5e919"
         },
         {
           "path": "scripts/replica_measure.py",
@@ -1231,8 +916,8 @@
         },
         {
           "path": "scripts/surface_map.py",
-          "bytes": 24300,
-          "sha256": "832bafd25a2946d922e20fc42a2ec6b96c97abdb157bc885c4fec6bdf0b47144"
+          "bytes": 23098,
+          "sha256": "54193080ad39c0257a2899b1f97bfbad96acda9fe01688ac82c8c1b059fa6dc6"
         },
         {
           "path": "scripts/surface_preview.py",
@@ -1291,8 +976,8 @@
         },
         {
           "path": "scripts/test_check_lettering.py",
-          "bytes": 7434,
-          "sha256": "228afe246e45bf1fdf63e96d9791767ef0fc616c068b0176eaeb357543fbc392"
+          "bytes": 7394,
+          "sha256": "ef278319e09b4992cf69fee6c5c73f7fd1d8434574ee405a3fe5be31092c5972"
         },
         {
           "path": "scripts/test_cli_gates.py",
@@ -1301,8 +986,8 @@
         },
         {
           "path": "scripts/test_coat_material.py",
-          "bytes": 4556,
-          "sha256": "81b32a19e0225881692155e726bab417baff8d9d1e065ba637224673f5f53967"
+          "bytes": 2798,
+          "sha256": "b72cd004dba3e39b7b521655f1269ec05bd8c8fe79934531f0b9259e4668a611"
         },
         {
           "path": "scripts/test_comparison.py",
@@ -1316,8 +1001,8 @@
         },
         {
           "path": "scripts/test_design_lint.py",
-          "bytes": 13064,
-          "sha256": "8ab298bc34714e38c97c7db0aa21bbd79e9ef997da0e5c05bd7c2ca08349020d"
+          "bytes": 10498,
+          "sha256": "fe82a92a0af2c64606698f32cd2a9327bf60a5489ce9612e4456a43455800d5c"
         },
         {
           "path": "scripts/test_detail_sheet.py",
@@ -1381,8 +1066,8 @@
         },
         {
           "path": "scripts/test_surface_map.py",
-          "bytes": 10644,
-          "sha256": "b129ee3dc548541b542016c5ec0c0c223bc35e291ef356323367cccd8c21c494"
+          "bytes": 8994,
+          "sha256": "e371ad1e8802505a169ff1ca7c6992ac3e3224d6e96c4ad3d86734782b63bc86"
         },
         {
           "path": "scripts/test_surface_workflow.py",
@@ -1391,8 +1076,8 @@
         },
         {
           "path": "scripts/test_vector_paint.py",
-          "bytes": 18050,
-          "sha256": "a3606b733b297f0c96f11ed0af33d3043788b0d70f2d5431c53f5bdef7ff3cb3"
+          "bytes": 17492,
+          "sha256": "e42a53c1b74ac7d48ff44833c394c107733ed8044bdc0c2a80bdd9f0991cbbba"
         },
         {
           "path": "scripts/uv_frame.py",
@@ -1406,8 +1091,8 @@
         },
         {
           "path": "scripts/vector_paint.py",
-          "bytes": 75123,
-          "sha256": "c08aa1dbe0ec93beb7c2a932bd3701d03f5aea4a7a58cc70f3deb5622be85576"
+          "bytes": 74439,
+          "sha256": "96b3f2a9432a78a0e4efd3011d709546c3ccd6004f1280c2ea2c9c1f61b40836"
         },
         {
           "path": "scripts/verify_game_zip.py",

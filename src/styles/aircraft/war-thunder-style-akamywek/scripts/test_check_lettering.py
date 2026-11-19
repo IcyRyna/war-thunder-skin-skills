@@ -96,7 +96,7 @@ class LetteringTests(unittest.TestCase):
         geo = self.fixture()
         self.review(geo, target='unmasked')
         mask = np.zeros((256,256), np.uint8)
-        mask[:, :(123 if 'DejaVuSans' in self.font else 125)] = 255
+        mask[:, :123] = 255
         protect = self.root/'protect.png'
         Image.fromarray(mask).save(protect)
         art, plan = self.root/'art.json', self.root/'plan.json'

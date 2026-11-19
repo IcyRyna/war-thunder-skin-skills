@@ -36,24 +36,18 @@ RGB 预览先分离 alpha；数据通道独立按数值处理，避免预乘和�
 | --- | --- | --- | --- | --- |
 | F-2A、Su-30、幻影、阵风（深底） | 173 | 0 | 125 | 约 127，带一层别的机型的结构残影 |
 | Su-33（白底） | 228 | 56 | 133 | 同上 |
-| `[Bronya][Cy30][D-9A][SFW]`（缎面金属反光） | 163 | 188 | 128 | 128（完全展平；座舱内衬另用哑光 `R=68, B=0`） |
 
-A 的残影起伏和原机法线差不多大（82% 的纹素正好是 127），但只有这一个方向，而且对不上本机 UV；G 是常量。加上高光滑度，他的飞机任何光照下都是干净色面，转到反光角度才看到细纹。当用户明确要求**金属质感 + 清晰环境反光**时，选用实机验证的缎面金属预设（`--preset metallic-satin`，即 `R=163, B=188, G=128, A=128, --structure 0.0`）：74% 金属度提供明显金属漆光泽，64% 光滑度形成顺滑缎面反射而不会像 R≥240 那样变成镜面玻璃球。原厂 J-10C 材质图的漆面 R 也集中在 156–173。我们四架交付（J-16 陈千语、J-10C 庄方宜、莱万汀、诀）都偏离了这一点：R 只有 108–160（比原厂还哑），局部还留着原机 R 的起伏当“旧化”，人物区另降到 88，陈千语和庄方宜保留了原机两个方向的全强度 G/A。游戏里的结果是漆面发灰发暗，舱线在所有光照下都显出凹凸。
+A 的残影起伏和原机法线差不多大（82% 的纹素正好是 127），但只有这一个方向，而且对不上本机 UV；G 是常量。加上高光滑度，他的飞机任何光照下都是干净色面，转到反光角度才看到细纹。原厂 J-10C 材质图的漆面 R 也集中在 156–173。我们四架交付（J-16 陈千语、J-10C 庄方宜、莱万汀、诀）都偏离了这一点：R 只有 108–160（比原厂还哑），局部还留着原机 R 的起伏当“旧化”，人物区另降到 88，陈千语和庄方宜保留了原机两个方向的全强度 G/A。游戏里的结果是漆面发灰发暗，舱线在所有光照下都显出凹凸。
 
 做法：
 
 ```powershell
-# 默认非金属亮漆：
 python -B scripts/coat_material.py --normal template/j_10c_n.tga --out output/material
-# 用户要求金属反光时，改用 satin-metallic 预设并导出平坦细节法线：
-python -B scripts/coat_material.py --preset metallic-satin --normal template/f_15ex_n.png --protect design/mechanical-mask.png --flat-detail-out output/detail_lo_n.png --out output/material
 python -B scripts/build_skin.py --template template --paint "j_10c_c*=paint.png" --channel "j_10c_n*:R=output/material/material_R.png" --channel "j_10c_n*:G=output/material/material_G.png" --channel "j_10c_n*:B=output/material/material_B.png" --channel "j_10c_n*:A=output/material/material_A.png" --out output/skin
 ```
 
-- 默认深底涂装用 R=173、B=0；白或浅色大面为主的涂装用 R≈228、B≈56；**金属反光支线使用 `--preset metallic-satin`（R=163、B=188）**。人物印刷和字与涂层同值，不另降光滑度；不要保留原机 R 的局部起伏。
-- G/A 默认压平（工具取原图各通道的众数当平值；`metallic-satin` 固定用 `128, 128` 零结构起伏）。想让舱线在反光里隐约出现，用 `--structure 0.2–0.4` 保留一部分原机凹槽；原样保留（1.0）就是用户否定过的效果。
-- **平铺细节法线防波纹（Detail Normal）**：检查原机 `LOD0/materials.json` 槽位 4 是否绑定了 `aircraft_normal_detail_lo_n*` 等平铺细节法线。原厂贴图内常带有 Perlin 蒙皮鼓包噪点（G/A 在 89–169 之间起伏），在高光滑/高金属反光下会满机呈现晃眼“水波纹”。使用 `--flat-detail-out` 生成常值 `RGBA=(198, 128, 255, 128)` 的 512² 贴图并在 BLK 中显式 `replace_tex` 替换，即可保持机身光滑平整。
-- **独立挂件与三段式尾喷口/机腹护罩改质**：保形油箱（CFT，如 `f_15ex_fuel_tank_opt_c*` 2:1 非正方 UV 与 `f_15e_fuel_tank_opt_n*`）须先清干净原皮 `< 3000 px` 碎块再随机身共用同一套清漆参数；发动机尾喷口及前方机腹/机背裸金属护罩严禁留原皮黄褐或大块发亮银灰“原皮感”，直接调用 `coat_material.apply_exhaust_finish`（对应 `EXHAUST_ZONES`：`shroud` 深枪灰钛 `R=150, B=224`、`noz_outer` 深阳极钛 `R=138, B=240`、`noz_inner` 哑光碳陶 `R=86, B=36`），在保留原厂 `G/A` 铆钉法线的同时完成整套金属质感统一。
+- 深底涂装用 R=173、B=0；白或浅色大面为主的涂装用 R≈228、B≈56。人物印刷和字与涂层同值，不另降光滑度；不要保留原机 R 的局部起伏。
+- G/A 默认压平（工具取原图各通道的众数当平值）。想让舱线在反光里隐约出现，用 `--structure 0.2–0.4` 保留一部分原机凹槽；原样保留（1.0）就是用户否定过的效果。
 - 作者连喷口、座舱内部也用同一张图。本机喷口等需保留的部分若与蒙皮共用资源，应在颜色及材质两条路径使用同 UV 的机械遮罩，取包内解码与原材质逐通道比较。`coat_material.py --protect` 对非零纹素保护；遮罩按整数倍缩小时只要覆盖区内一个源纹素受保护，就保留整枚材质纹素，避免细边被最近邻漏掉。宽高比不同、非整数缩放或使用不同 UV 的材质需提供已登记的原尺寸材质罩。
 - 偏离这些值要有理由，并在两种环境下固定 RGB 做单变量对照；下文“已确认反粗糙度时”一段的对照方法仍然适用。
 

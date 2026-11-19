@@ -25,7 +25,7 @@ from pathlib import Path
 
 import numpy as np
 from PIL import Image, ImageDraw
-from scipy.ndimage import binary_erosion, distance_transform_edt
+from scipy.ndimage import binary_erosion
 
 from artifact_io import ArtifactError, ArtifactTransaction
 from inspect_skins import load_font
@@ -222,8 +222,6 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         gy,gx=np.indices(grid.shape,dtype=np.float64)
         mapping=(lo[0]+(gx+.5)/scale,hi[1]-(gy+.5)/scale)
     grid=np.pad(grid,((header,0),(0,0)),constant_values=OFF)
-    body_grid = grid[header:]
-    dist_m = distance_transform_edt(~((body_grid == OFF) | (body_grid == HIDDEN) | (body_grid == SEAM))) / scale
     rgb = Image.fromarray(np.asarray(COLORS, np.uint8)[grid], 'RGB')
     pen = ImageDraw.Draw(rgb)
     for u in range(math.ceil(lo[0]), math.floor(hi[0]) + 1):
@@ -240,7 +238,7 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         rim=mask & ~binary_erosion(mask)
         outline=Image.fromarray((rim*255).astype(np.uint8))
         rgb.paste((20,20,20),(0,header,width,height),outline)
-        inside = body_grid[mask]
+        inside = grid[header:][mask]
         if not inside.size:
             if kind == 'focus':
                 scores.append(dict(id=label,kind=kind,footprint_pixels=0,seam_pixels=0,
@@ -253,19 +251,11 @@ def render_chart(chart, index, geometry, assignment, axes, classes, shapes, scal
         visible = float(np.isin(inside, (FLAT, CURVING, PROTECTED)).mean())
         if kind == 'polygon' and visible < MIN_VISIBLE:
             risk = max(risk, 1 - visible)
-        # Measure geometric margin to surface edges/seams for text and small decals/emblems (< 2.0 m)
-        ys, xs = np.nonzero(mask)
-        span_m = float(max(int(xs.max() - xs.min() + 1) / scale, int(ys.max() - ys.min() + 1) / scale))
-        is_small_decal = bool(kind == 'image' and span_m < 2.0)
-        edge_clearance_m = round(float(dist_m[mask].min()), 3) if (kind == 'text' or is_small_decal) else None
         # Preserve the historical pixel-count indicator for old reports. Its units
         # depend on strip width; physical area is the invariant measurement.
-        rec = dict(id=label, kind=kind, footprint_pixels=int(inside.size), seam_pixels=seam_px,
-                   seam_area_m2=seam_px/scale**2, risky_share=round(risk,3),ground=counts,
-                   seam_length_m=round(seam_px/scale,2), is_decal=is_small_decal)
-        if edge_clearance_m is not None:
-            rec['edge_clearance_m'] = edge_clearance_m
-        scores.append(rec)
+        scores.append(dict(id=label, kind=kind, footprint_pixels=int(inside.size), seam_pixels=seam_px,
+                           seam_area_m2=seam_px/scale**2, risky_share=round(risk,3),ground=counts,
+                           seam_length_m=round(seam_px/scale,2)))
     pen.text((6, 4), f'chart {chart["id"]}  u={chart["u"]} v={chart["v"]}  (metres)', fill=(0, 0, 0), font=font)
     x = 6
     for name, color in zip(NAMES, COLORS):
@@ -315,7 +305,7 @@ def run(args):
             raise ValueError('--view-from must be perpendicular to the chart projection plane')
         views[name] = direction
     outputs = [out / f'{c["id"]}.png' for c in charts] + [out / 'surface-map.json']
-    report = dict(schema_version=2, atlas_size=size, coordinate_system='world projection in metres; native frame evaluated at carrier UV', tool='surface_map.py', design=str(design_path), charts={}, risky_items=[], seam_items=[], edge_items=[], warnings=warnings,
+    report = dict(schema_version=2, atlas_size=size, coordinate_system='world projection in metres; native frame evaluated at carrier UV', tool='surface_map.py', design=str(design_path), charts={}, risky_items=[], seam_items=[], warnings=warnings,
                   classes=dict(flat='projection keeps >= 80% of area', curving='50-80%', steep='< 50%, lines and patterns streak',
                                **{'lost-to-earlier-chart': 'texel shared with an earlier chart, which wins it; reorder charts or move the item'},
                                **{'shared-within-chart': 'overlapping triangle interiors in this chart; author on the winning surface or split the chart to choose its priority'},
@@ -339,9 +329,7 @@ def run(args):
             report['seam_items'] += [dict(chart=chart['id'], id=s['id'], kind=s['kind'],
                                          seam_pixels=s['seam_pixels'], seam_area_m2=s['seam_area_m2'],
                                          seam_length_m=s['seam_length_m'])
-                                     for s in scores if (s['kind']=='focus' and s['seam_pixels']>0) or (s.get('is_decal') and s['seam_pixels']>0) or (s['kind']!='image' and s['seam_length_m']>=getattr(args,'seam_report',.1))]
-            report['edge_items'] += [dict(chart=chart['id'], id=s['id'], kind=s['kind'], edge_clearance_m=s['edge_clearance_m'])
-                                     for s in scores if s.get('edge_clearance_m') is not None and s['edge_clearance_m'] < 0.05]
+                                     for s in scores if (s['kind']=='focus' and s['seam_pixels']>0) or (s['kind']!='image' and s['seam_length_m']>=getattr(args,'seam_report',.1))]
         report['risky_items'].sort(key=lambda s: -s['risky_share'])
         staged[out / 'surface-map.json'].write_text(json.dumps(report, ensure_ascii=False, indent=2) + '\n', encoding='utf-8')
         transaction.commit()
@@ -366,8 +354,6 @@ def main(argv=None):
         print(f"RISK {item['chart']:12} {item['id']:28} {item['risky_share']:.0%} on {item['ground']}")
     for item in report['seam_items']:
         print(f"SEAM {item['chart']:12} {item['id']:28} overlaps {item['seam_pixels']} projected seam pixels")
-    for item in report['edge_items']:
-        print(f"EDGE {item['chart']:12} {item['id']:28} only {item['edge_clearance_m']*100:.1f} cm from surface boundary or seam")
     if not report['risky_items']:
         print('No item over the risk threshold.')
 

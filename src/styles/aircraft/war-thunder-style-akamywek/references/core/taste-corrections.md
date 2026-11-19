@@ -30,7 +30,7 @@
 
 | 默认倾向 | 为什么难看 | 改成 |
 | --- | --- | --- |
-| 不写字体，用库或编辑器默认（Arial、DejaVu、Segoe UI） | 办公文档味 | 显式写字体。本 Skill 默认自带并加载 `assets/fonts/Orbitron-VF.ttf`（`variation` 取 `Bold`/`Medium` 作主标与大字）配 `assets/fonts/Michroma-Regular.ttf` 作副字与技术标（仅无内置字体环境才备选 `C:/Windows/Fonts/bahnschrift.ttf`）。中文用微软雅黑粗体 `msyhbd.ttc`、等线粗体 `Dengb.ttf` 或黑体 `simhei.ttf`；日文用 `YuGothB.ttc` 或 `meiryob.ttc` |
+| 不写字体，用库或编辑器默认（Arial、DejaVu、Segoe UI） | 办公文档味 | 显式写字体。拉丁字母用几何或方形无衬线：Windows 自带 Bahnschrift（`C:/Windows/Fonts/bahnschrift.ttf`，可变字体，`variation` 取 `Bold`、`SemiBold`、`Light`）。中文用微软雅黑粗体 `msyhbd.ttc`、等线粗体 `Dengb.ttf` 或黑体 `simhei.ttf`；日文用 `YuGothB.ttc` 或 `meiryob.ttc` |
 | Impact、Arial Black、科幻装饰字、手写体、书法体、斜体 | 表情包、页游广告 | 同上。要力量感就用 Bold 加宽字距，不用压扁的海报字 |
 | 宋体、细明体 | 细笔画在游戏距离消失 | 黑体类 |
 | 每组字换一种字体 | 散 | 全机一个字族、两档字重（Bold 做主名，Light 或 Regular 做副行）；有中日文时另加一款黑体 |
@@ -56,7 +56,6 @@
 | 小字用细体（字高 8 cm 以下用 Light） | 小字用 Regular 或 Bold；Light 只给大副行 |
 | 左右两侧的字按同一方向写 | 两侧都要从各自外侧读正：设计稿里左侧通常要 `flip`。先用带方向标记的试写（如 `R→`）渲染确认 |
 | 字压在弯折、格栅、舱门或左右共用 UV 的部位 | 只放 `surface_map.py` 的灰色平整区；共用 UV 处另一侧显示同一块像素，字会反 |
-| 文字/徽章与相邻方格列、白色斜带、翼尖外缘或活动面铰链缝逼得太近 | 至少与相邻图案、铰链缝或翼缘保持 **≥ 0.08–0.15 m（或徽章宽度 ≥ 20%）** 纯底色留白；平尾字向内中段收进，垂尾徽章居中于方格与后缘之间，不硬塞小字副标（`design_lint.py` 自动报警 `crowded-placement` / `overlapping-placement`） |
 | 拉丁字母逐字竖排堆叠 | 拉丁字只整行旋转 90°；逐字竖排只用于中日文 |
 
 ## 配色

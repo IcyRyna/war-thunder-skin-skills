@@ -15,7 +15,7 @@
 
 下载 `.skill.zip` 后完整解压，确认保留 `<skill-id>/` 目录及内部 `SKILL.md`、`scripts/`、`references/`、`assets/`（若含）。目录名应与 Skill ID 一致，例如：
 
-- ✈ `war-thunder-style-akamywek/`（1.3.1 或 1.3.1 RC2）
+- ✈ `war-thunder-style-akamywek/`（1.21）
 - 🛡 `wt-style-charcoal-industrial/`（0.2.0）
 
 | AI 助手 | 默认全局 Skills 目录 | 说明 |
@@ -46,9 +46,9 @@ pip install numpy pillow scipy numba
 | 依赖类别 | 用途 | 可选 / 注意事项 |
 | --- | --- | --- |
 | `numpy` / `pillow` / `scipy` / `numba` | 原生 UV 矢量渲染、抗锯齿缩放、马赛克与 PBR 贴图生成 | **必需**；推荐配合 `python -B` 与系统 TEMP `NUMBA_CACHE_DIR` 运行 |
-| **内置字体（`assets/fonts/`）** | Akamywek 默认标配 `Orbitron-VF.ttf` 与 `Michroma-Regular.ttf` | **1.3.1+ 已随包内置**，自动优先加载，不再强制依赖本机系统字体或手配 `WT_SKIN_FONT` |
+| **系统字体 / `WT_SKIN_FONT`** | 字标与机型标识渲染字体 | 按制作项目准备宽体几何字体，可通过 `WT_SKIN_FONT` 显式指定路径 |
 | **Blender / Composa / Photoshop** | 真实 3D 模型场景导出、拼装跨部件检查与分层图编辑 | 按具体任务启用；工作台亦可承担便携 3D 与局部编辑检查 |
-| `requests` / `matplotlib` / `moderngl` | 远端拉取素材、多边形快速点检或离屏渲染 | **1.3.1 RC2 已为 `fetch_asset.py` 与 `replica_check.py` 补足标准库/NumPy 离线回退**；`moderngl` 仅离屏预览需要 |
+| `requests` / `matplotlib` / `moderngl` | 远端拉取素材、多边形快速点检或离屏渲染 | 按具体脚本需要准备；`moderngl` 仅离屏预览需要 |
 
 ---
 

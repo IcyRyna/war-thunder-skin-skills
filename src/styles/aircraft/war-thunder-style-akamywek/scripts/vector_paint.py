@@ -859,32 +859,18 @@ def _paint(world, uvs, assignment, owners, axes, frames, protect, meta, floats, 
     return 0
 
 
-ASSET_DIR = Path(__file__).resolve().parent.parent / 'assets'
-DECAL_DIR = ASSET_DIR / 'decals'
-FONT_DIR = ASSET_DIR / 'fonts'
+FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
 
 
 def resolve_font(value, design_dir=None):
     """Font path as written, relative to the design file, or a file name bundled in the Skill's assets/fonts."""
-    if not value:
-        bundled = FONT_DIR / 'Orbitron-VF.ttf'
-        value = os.environ.get('WT_SKIN_FONT') or (str(bundled) if bundled.is_file() else 'C:/Windows/Fonts/bahnschrift.ttf')
+    value = value or os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
     path = Path(value)
     candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), FONT_DIR / path, path]
     for candidate in candidates:
         if candidate.is_file():
             return candidate
     raise ValueError(f'Font file not found: {value} (looked beside the design and in {FONT_DIR})')
-
-
-def resolve_source(value, design_dir=None):
-    """Resolve an image source beside the design file first, falling back to bundled Skill decals/assets."""
-    path = Path(value)
-    candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), DECAL_DIR / path, ASSET_DIR / path, path]
-    for candidate in candidates:
-        if candidate.is_file():
-            return candidate.resolve()
-    return (Path(design_dir) / path).resolve() if design_dir else path.resolve()
 
 
 def render_text(spec, palette, px_per_m, design_dir=None):
@@ -947,7 +933,7 @@ def compile_images(design, palette, design_dir, px_per_m):
             if ('source' in spec) == ('text' in spec):
                 raise ValueError(f'{label}: give exactly one of source or text')
             if 'source' in spec:
-                path = resolve_source(spec['source'], design_dir)
+                path = (design_dir / spec['source']).resolve()
                 image = Image.open(path).convert('RGBA')
                 if 'crop' in spec:
                     box = [int(v) for v in spec['crop']]

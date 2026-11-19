@@ -23,10 +23,8 @@ from pathlib import Path
 import re
 import sys
 
-# Same default as vector_paint.py; prefer bundled Orbitron-VF.ttf, overridable via WT_SKIN_FONT.
-FONT_DIR = Path(__file__).resolve().parent.parent / 'assets' / 'fonts'
-_BUNDLED_DEFAULT = FONT_DIR / 'Orbitron-VF.ttf'
-DEFAULT_FONT = os.environ.get('WT_SKIN_FONT') or (str(_BUNDLED_DEFAULT) if _BUNDLED_DEFAULT.is_file() else 'C:/Windows/Fonts/bahnschrift.ttf')
+# Same default as vector_paint.py; WT_SKIN_FONT overrides it on both.
+DEFAULT_FONT = os.environ.get('WT_SKIN_FONT', 'C:/Windows/Fonts/bahnschrift.ttf')
 # Stock UI faces, script and novelty faces, and thin serif CJK faces that vanish at viewing distance.
 DISCOURAGED_FONTS = {
     'arial': 'stock UI face', 'arialbd': 'stock UI face', 'arialbi': 'stock UI face', 'ariali': 'stock UI face',
@@ -43,7 +41,7 @@ FILLER = re.compile(r'\b(LOREM|IPSUM|SAMPLE|PLACEHOLDER|TEXT\s*HERE|YOUR\s+TEXT|
 CJK = re.compile(r'[\u3040-\u30ff\u3400-\u4dbf\u4e00-\u9fff\uac00-\ud7af\uff00-\uffef]')
 LIGHT = re.compile(r'thin|light|hairline|extralight|semilight', re.I)
 LIGHT_FILES = {'msyhl', 'dengl', 'segoeuil', 'segoeuisl', 'yugothl', 'arialn'}
-FAMILY_PREFIXES = ('orbitron', 'michroma', 'msyh', 'deng', 'yugoth', 'meiryo', 'segoeui', 'arial', 'bahnschrift', 'simhei', 'simsun')
+FAMILY_PREFIXES = ('msyh', 'deng', 'yugoth', 'meiryo', 'segoeui', 'arial', 'bahnschrift', 'simhei', 'simsun')
 
 
 def hex_rgb(value, palette):
@@ -181,17 +179,7 @@ def glyph_missing(font, ch):
     return probe.size == blank.size and bytes(probe) == bytes(blank)
 
 
-def _resolve_font_path(value, design_dir=None):
-    value = value or DEFAULT_FONT
-    path = Path(value)
-    candidates = [path] if path.is_absolute() else [*([Path(design_dir) / path] if design_dir else []), FONT_DIR / path, path]
-    for candidate in candidates:
-        if candidate.is_file():
-            return candidate
-    return candidates[0]
-
-
-def check_text(design, palette, report, design_dir=None):
+def check_text(design, palette, report):
     try:
         from PIL import ImageFont
     except ImportError:  # glyph checks need Pillow; the rest does not
@@ -205,26 +193,26 @@ def check_text(design, palette, report, design_dir=None):
     fonts = {}
     for spec in texts:
         where, text = spec.get('id', '?'), spec['text']
-        font_path = _resolve_font_path(spec.get('font'), design_dir)
-        stem = font_path.stem.lower()
+        font_path = spec.get('font', DEFAULT_FONT)
+        stem = Path(font_path).stem.lower()
         families.add(next((p for p in FAMILY_PREFIXES if stem.startswith(p)), stem))
         styles.add((stem, spec.get('variation')))
         height = float(spec.get('height', 0))
         heights.append((height, where))
         if stem in DISCOURAGED_FONTS:
-            report.add('warn', 'stock-font', where, f'{font_path.name}: {DISCOURAGED_FONTS[stem]}',
-                       'Use bundled Orbitron-VF.ttf + Michroma-Regular.ttf (or Bahnschrift fallback; Microsoft YaHei Bold, '
+            report.add('warn', 'stock-font', where, f'{Path(font_path).name}: {DISCOURAGED_FONTS[stem]}',
+                       'Use one geometric or square sans for the whole airframe (Bahnschrift for Latin; Microsoft YaHei Bold, '
                        'DengXian Bold or SimHei for Chinese; Yu Gothic Bold or Meiryo Bold for Japanese).')
         if CJK.search(text) and 'font' not in spec:
             report.add('error', 'cjk-without-font', where, 'CJK text on the default Latin font',
                        'Give an explicit CJK font (C:/Windows/Fonts/msyhbd.ttc, Dengb.ttf, simhei.ttf, YuGothB.ttc).')
-        if not font_path.is_file():
+        if not Path(font_path).is_file():
             report.add('error', 'font-not-found', where, f'{font_path} does not exist, so vector_paint.py cannot render this text',
-                       'Point font at bundled Orbitron-VF.ttf / Michroma-Regular.ttf or an installed .ttf/.ttc (or set WT_SKIN_FONT) and rerun.')
+                       'Point font at an installed .ttf/.ttc (or set WT_SKIN_FONT for the default) and rerun.')
         elif ImageFont is not None:
-            key = (str(font_path), spec.get('variation'))
+            key = (font_path, spec.get('variation'))
             if key not in fonts:
-                fonts[key] = ImageFont.truetype(str(font_path), 48)
+                fonts[key] = ImageFont.truetype(font_path, 48)
                 if spec.get('variation'):
                     try:
                         fonts[key].set_variation_by_name(spec['variation'])
@@ -232,7 +220,7 @@ def check_text(design, palette, report, design_dir=None):
                         pass
             missing = sorted({ch for ch in text if glyph_missing(fonts[key], ch)})
             if missing:
-                report.add('error', 'missing-glyphs', where, f'{font_path.name} has no glyph for {"".join(missing)!r}: it renders as boxes',
+                report.add('error', 'missing-glyphs', where, f'{Path(font_path).name} has no glyph for {"".join(missing)!r}: it renders as boxes',
                            'Pick a font that covers every character and render it once to check.')
         if FILLER.search(text):
             report.add('warn', 'filler-text', where, f'{text!r} is filler, not information',
@@ -244,16 +232,12 @@ def check_text(design, palette, report, design_dir=None):
         if (LIGHT.search(str(spec.get('variation') or '')) or stem in LIGHT_FILES) and height < .08:
             report.add('warn', 'thin-small-type', where, f'light weight at {height:.2f} m cap height disappears in game',
                        'Small type uses Regular or Bold; keep Light for large sub-lines only.')
-    eff_families = set(families)
-    if {'orbitron', 'michroma'}.issubset(eff_families):
-        eff_families -= {'orbitron', 'michroma'}
-        eff_families.add('orbitron+michroma')
-    if len(eff_families) > 2:
-        report.add('warn', 'too-many-fonts', 'design', f'{len(eff_families)} font families: {sorted(eff_families)}',
-                   'Use bundled Orbitron + Michroma for Latin (plus one CJK face when needed).')
+    if len(families) > 2:
+        report.add('warn', 'too-many-fonts', 'design', f'{len(families)} font families: {sorted(families)}',
+                   'One family for the airframe (plus one CJK face when needed), two weights.')
     if len(styles) > 3:
         report.add('warn', 'too-many-styles', 'design', f'{len(styles)} font/weight combinations',
-                   'Two weights carry the hierarchy: Orbitron Bold/Medium for names, Michroma Regular for sub-lines.')
+                   'Two weights carry the hierarchy: Bold for names, Light or Regular for sub-lines.')
     # The size ladder is read within one surface: compare only placements on the same chart.
     per_chart = {}
     for (h, where), spec in zip(heights, texts):
@@ -270,12 +254,9 @@ def check_text(design, palette, report, design_dir=None):
                 report.add('warn', 'near-equal-sizes', f'{w0[0]} / {w1[0]} (chart {chart})',
                            f'cap heights {h0:.2f} m and {h1:.2f} m differ by only {h1 / h0:.2f}x',
                            'Make sizes either equal or clearly different: name : sub-line : note about 1 : 1/3 : 1/8 (adjacent tiers >= 2x).')
-    # Collapse symmetrical left/right and upper/lower duplicates so twin-engine aft & wing-root lockups are not stripped.
-    logical_slots = {re.sub(r'\b(upper|lower)-(wing|tailplane)-[LR]\b', r'\2', re.sub(r'-(L|R)(\d*)$', r'-\2', str(s.get('id', i))))
-                     for i, s in enumerate(texts)}
-    if len(logical_slots) > 18 or len(texts) > 32:
-        report.add('warn', 'too-much-text', 'design', f'{len(texts)} text placements ({len(logical_slots)} unique slots)',
-                   'Main name once per side and cluster technical text without dropping required aft-deck or wing-root lockups.')
+    if len(texts) > 16:
+        report.add('warn', 'too-much-text', 'design', f'{len(texts)} text placements',
+                   'Main name once per side and at most 5-6 lockups on the whole airframe; cluster technical text.')
     return [dict(id=s.get('id'), text=s['text'], font=Path(s.get('font', DEFAULT_FONT)).name,
                  variation=s.get('variation'), height=s.get('height')) for s in texts]
 
@@ -443,161 +424,6 @@ def check_images(design, design_dir, report):
                        'Give every portrait position its own source image; find more official art if needed.')
 
 
-def _rot_aabb(cx, cy, w, h, rot_deg):
-    a = math.radians(rot_deg)
-    ca, sa = abs(math.cos(a)), abs(math.sin(a))
-    hw = 0.5 * (w * ca + h * sa)
-    hh = 0.5 * (w * sa + h * ca)
-    return (cx - hw, cy - hh, cx + hw, cy + hh)
-
-
-def _point_in_poly(x, y, pts):
-    inside = False
-    n = len(pts)
-    for i in range(n):
-        x0, y0 = pts[i]
-        x1, y1 = pts[(i + 1) % n]
-        if (y0 > y) != (y1 > y):
-            xi = x0 + (y - y0) * (x1 - x0) / (y1 - y0)
-            if x < xi:
-                inside = not inside
-    return inside
-
-
-def _pt_seg_dist(px, py, ax, ay, bx, by):
-    vx, vy = bx - ax, by - ay
-    l2 = vx * vx + vy * vy
-    if l2 <= 1e-12:
-        return math.hypot(px - ax, py - ay)
-    t = max(0.0, min(1.0, ((px - ax) * vx + (py - ay) * vy) / l2))
-    return math.hypot(px - (ax + t * vx), py - (ay + t * vy))
-
-
-def _seg_intersects(a0, a1, b0, b1):
-    def ccw(p, q, r):
-        return (r[1] - p[1]) * (q[0] - p[0]) > (q[1] - p[1]) * (r[0] - p[0])
-    return ccw(a0, b0, b1) != ccw(a1, b0, b1) and ccw(a0, a1, b0) != ccw(a0, a1, b1)
-
-
-def _box_poly_gap(box, pts):
-    u0, v0, u1, v1 = box
-    corners = [(u0, v0), (u1, v0), (u1, v1), (u0, v1)]
-    bedges = list(zip(pts, pts[1:] + pts[:1]))
-    cedges = list(zip(corners, corners[1:] + corners[:1]))
-    for x, y in pts:
-        if u0 <= x <= u1 and v0 <= y <= v1:
-            return 0.0
-    for cx, cy in corners:
-        if _point_in_poly(cx, cy, pts):
-            return 0.0
-    for ca, cb in cedges:
-        for pa, pb in bedges:
-            if _seg_intersects(ca, cb, pa, pb):
-                return 0.0
-    best = float('inf')
-    for pa, pb in bedges:
-        for cx, cy in corners:
-            best = min(best, _pt_seg_dist(cx, cy, pa[0], pa[1], pb[0], pb[1]))
-    for px, py in pts:
-        for ca, cb in cedges:
-            best = min(best, _pt_seg_dist(px, py, ca[0], ca[1], cb[0], cb[1]))
-    return best
-
-
-def check_spacing(design, design_dir, palette, report, min_clearance=0.04):
-    """Flag text or small emblems/decals that overlap or crowd adjacent placements or decorative shapes."""
-    aspect_cache = {}
-    placed = []
-    for layer in design.get('layers', []):
-        for spec in layer.get('images', []):
-            center = spec.get('center')
-            chart = spec.get('chart')
-            if not (isinstance(center, list) and len(center) == 2 and chart):
-                continue
-            cx, cy = float(center[0]), float(center[1])
-            rot = float(spec.get('rotation', 0))
-            where = spec.get('id', spec.get('source', '?'))
-            if 'text' in spec:
-                h = float(spec.get('height', 0))
-                txt = spec['text']
-                trk = float(spec.get('tracking', 0))
-                w = max(h * 0.65, h * (0.68 * len(txt) + trk * max(0, len(txt) - 1)))
-                box = _rot_aabb(cx, cy, w, h * 1.12, rot)
-                placed.append((chart, where, (cx, cy), box, 'text', h))
-            elif 'source' in spec:
-                w = float(spec.get('width', 0))
-                if 0 < w < 2.0:
-                    src_path = (design_dir / spec['source']).resolve()
-                    if src_path not in aspect_cache:
-                        ratio = 1.0
-                        if src_path.is_file():
-                            try:
-                                from PIL import Image
-                                with Image.open(src_path) as im:
-                                    ratio = im.size[1] / max(1, im.size[0])
-                            except Exception:
-                                pass
-                        aspect_cache[src_path] = ratio
-                    h = w * aspect_cache[src_path]
-                    box = _rot_aabb(cx, cy, w, h, rot)
-                    placed.append((chart, where, (cx, cy), box, 'decal', h))
-
-    # Pairwise check between placed text/decals on the same chart
-    for i in range(len(placed)):
-        c1, id1, p1, b1, _, _ = placed[i]
-        for j in range(i + 1, len(placed)):
-            c2, id2, p2, b2, _, _ = placed[j]
-            if c1 != c2 or (p1 == (0.0, 0.0) and p2 == (0.0, 0.0)):
-                continue
-            dx = max(0.0, max(b1[0], b2[0]) - min(b1[2], b2[2]))
-            dy = max(0.0, max(b1[1], b2[1]) - min(b1[3], b2[3]))
-            gap = math.hypot(dx, dy)
-            if gap == 0.0:
-                report.add('warn', 'overlapping-placement', f'{id1} / {id2} (chart {c1})',
-                           'bounding boxes overlap on the same chart',
-                           'Separate or trim competing lettering/decals so each keeps clear breathing room.')
-            elif gap < 0.025:
-                report.add('warn', 'crowded-placement', f'{id1} / {id2} (chart {c1})',
-                           f'only {gap * 100:.1f} cm apart on the same chart',
-                           'Increase spacing or remove the redundant secondary label.')
-
-    # Proximity check for decals and major lettering (>= 0.10 m) against substantial decorative polygons
-    base_rgb = hex_rgb(palette['base'], palette) if 'base' in palette else None
-    for layer in design.get('layers', []):
-        for item in layer.get('items', []):
-            if item.get('type') != 'polygon':
-                continue
-            chart = item.get('chart')
-            pts = [tuple(map(float, p)) for p in item.get('points', [])]
-            if len(pts) < 3 or not chart:
-                continue
-            colors = [hex_rgb(c, palette) for c in fill_colors(item.get('fill'))]
-            if base_rgb and colors and all(c == base_rgb for c in colors):
-                continue
-            xs = [p[0] for p in pts]
-            ys = [p[1] for p in pts]
-            span_u, span_v = max(xs) - min(xs), max(ys) - min(ys)
-            area = span_u * span_v
-            if min(span_u, span_v) < 0.06 or area >= 4.0:
-                continue
-            shape_id = item.get('id', '?')
-            for c_p, p_id, center_xy, box, kind, p_height in placed:
-                if c_p != chart or center_xy == (0.0, 0.0):
-                    continue
-                if kind == 'text' and p_height < 0.10:
-                    continue
-                if _point_in_poly(center_xy[0], center_xy[1], pts):
-                    edge_dist = min(_pt_seg_dist(center_xy[0], center_xy[1], a[0], a[1], b[0], b[1])
-                                    for a, b in zip(pts, pts[1:] + pts[:1]))
-                    if edge_dist >= 0.04:
-                        continue
-                gap = _box_poly_gap(box, pts)
-                if gap < min_clearance:
-                    report.add('warn', 'crowded-placement', f'{p_id} near {shape_id} (chart {chart})',
-                               f'only {gap * 100:.1f} cm from decorative edge (< {min_clearance * 100:.0f} cm clearance)',
-                               'Shift lettering/emblem away from adjacent stripes, sequences, or wing edges to leave clean dark backdrop.')
-
-
 def lint(design_path, intent=None):
     design_path = Path(design_path)
     design = json.loads(design_path.read_text(encoding='utf-8'))
@@ -608,10 +434,9 @@ def lint(design_path, intent=None):
         raise ValueError('Unknown art_intent options')
     pairs=palette_intent(intent,palette)
     families = check_colors(design, palette, report,pairs)
-    texts = check_text(design, palette, report, design_path.parent)
+    texts = check_text(design, palette, report)
     angles = check_shapes(design, report,intent)
     check_images(design, design_path.parent, report)
-    check_spacing(design, design_path.parent, palette, report)
     order = {'error': 0, 'warn': 1, 'info': 2}
     report.hits.sort(key=lambda h: order[h['level']])
     return dict(schema_version=1, design=str(design_path), errors=sum(h['level'] == 'error' for h in report.hits),

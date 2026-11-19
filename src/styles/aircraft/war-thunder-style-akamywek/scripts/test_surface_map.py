@@ -135,28 +135,6 @@ class SeamTests(unittest.TestCase):
             self.assertNotIn('beside', listed)
             self.assertGreater(report['charts']['top']['area_share']['seam'], 0)
 
-    def test_small_decal_and_text_edge_clearance(self):
-        with tempfile.TemporaryDirectory() as temp:
-            root = Path(temp)
-            t, u = quad(-2, 2, -1, 1, 1.0, True, (.0, .0, .4, .4))
-            np.savez(root / 'g.npz', triangles=np.asarray(t, np.float32), uvs=np.asarray(u, np.float32),
-                     node_ids=np.zeros(len(t), np.int32), names=np.asarray(['body']))
-            from PIL import Image
-            Image.new('RGBA', (64, 64), (255, 255, 255, 255)).save(root / 'emblem.png')
-            charts = [dict(id='top', u='x', v='z', nodes=['body'], normal={'axis': 'y', 'min': .5}, facing='y')]
-            design = dict(schema_version=1, charts=charts, layers=[dict(name='l', images=[
-                dict(id='emblem-edge', chart='top', source='emblem.png', center=[-1.85, 0.0], width=0.4),
-                dict(id='emblem-safe', chart='top', source='emblem.png', center=[0.0, 0.0], width=0.4),
-                dict(id='txt-edge', chart='top', text='F-15EX', height=0.2, center=[1.85, 0.85], color='#ffffff'),
-            ])])
-            (root / 'd.json').write_text(json.dumps(design), encoding='utf-8')
-            report = surface_map.run(surface_map.argparse.Namespace(geometry=root / 'g.npz', design=root / 'd.json', protect=None,
-                                                                    chart=[], scale=50., threshold=.15, seam_report=.1, out=root / 'o'))
-            edge_ids = {e['id'] for e in report['edge_items']}
-            self.assertIn('emblem-edge', edge_ids)
-            self.assertIn('txt-edge', edge_ids)
-            self.assertNotIn('emblem-safe', edge_ids)
-
 
 if __name__ == '__main__':
     unittest.main()
